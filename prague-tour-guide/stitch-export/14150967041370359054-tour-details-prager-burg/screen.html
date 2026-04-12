@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#f0f3ff",
+              "surface-tint": "#b91c1c",
+              "secondary": "#735c00",
+              "tertiary": "#3c475b",
+              "inverse-on-surface": "#ecf1ff",
+              "surface": "#f9f9ff",
+              "on-background": "#111c2d",
+              "primary-fixed-dim": "#ffb4ab",
+              "on-surface-variant": "#5b403d",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "background": "#f9f9ff",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#111c2d",
+              "surface-bright": "#f9f9ff",
+              "surface-dim": "#cfdaf2",
+              "primary": "#93000b",
+              "outline": "#8f6f6c",
+              "secondary-container": "#fed01b",
+              "on-primary": "#ffffff",
+              "outline-variant": "#e4beb9",
+              "on-secondary-fixed": "#231b00",
+              "secondary-fixed-dim": "#eec200",
+              "surface-container": "#e7eeff",
+              "surface-container-highest": "#d8e3fb",
+              "tertiary-container": "#545f73",
+              "on-secondary-fixed-variant": "#574500",
+              "primary-container": "#b91c1c",
+              "primary-fixed": "#ffdad6",
+              "surface-container-high": "#dee8ff",
+              "on-tertiary-container": "#ced9f1",
+              "on-primary-container": "#ffcdc7",
+              "tertiary-fixed-dim": "#bcc7de",
+              "on-primary-fixed": "#410002",
+              "inverse-surface": "#263143",
+              "on-surface": "#111c2d",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#93000b",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#d8e3fb",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#3c475a",
+              "secondary-fixed": "#ffe083",
+              "inverse-primary": "#ffb4ab",
+              "on-secondary-container": "#6f5900",
+              "surface-variant": "#d8e3fb"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Noto Serif", "serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 max-w-full mx-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="text-2xl font-headline font-bold text-primary">Zuza Prague Tours</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 font-label text-sm leading-relaxed transition-colors hover:text-primary" href="#">Startseite</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label text-sm leading-relaxed font-semibold" href="#">Touren</a>
+<a class="text-slate-500 font-label text-sm leading-relaxed transition-colors hover:text-primary" href="#">Über uns</a>
+<a class="text-slate-500 font-label text-sm leading-relaxed transition-colors hover:text-primary" href="#">Blog</a>
+<a class="text-slate-500 font-label text-sm leading-relaxed transition-colors hover:text-primary" href="#">Kontakt</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold hover:opacity-80 transition-opacity duration-300 active:scale-95">
+        Tour buchen
+    </button>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[819px] w-full overflow-hidden">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="Prager Burg bei Sonnenuntergang" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDItpHu_pjI53s_TBHLcyIouZmqTTLBkIIIBEw-FiNiC1rg04MFaH0zP8dcsWSw-_JV82jo16vpFgByKRS0WZDCfeTOkUEuOBQlR4T0RpiB6lntcVMjGvdhgWri1I0l_0khPfqRKndZpFw8iMFRDeZyOsMDe18QDbozZEYDHVlIaYGv-2qZK-AH94w8-a0e4coEI_gldP1o1s6GF-MMq9Z9DBzLThMPDGSDWzK5HgWXM2QQIAPh74-Sj5xeE5YaCjyd-FlcrduBAgs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+</div>
+<div class="relative h-full container mx-auto px-8 flex flex-col justify-end pb-24">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6">Exklusives Erlebnis</span>
+<h1 class="font-headline text-5xl md:text-7xl text-surface-container-lowest mb-6 leading-tight text-shadow-sm">Prager Burg &amp; <br/><span class="text-secondary-container">Versteckte Schätze</span></h1>
+<div class="flex flex-wrap gap-6 text-surface-container-lowest font-medium">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span>4 Stunden</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Max. 6 Personen</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (124 Bewertungen)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<section class="container mx-auto px-8 py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Details -->
+<div class="lg:col-span-8 space-y-20">
+<!-- Overview -->
+<div class="space-y-6">
+<h2 class="font-headline text-3xl text-primary">Die Goldene Stadt enthüllt</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                        Spazieren Sie durch den größten antiken Burgkomplex der Welt, ohne das Gefühl zu haben, in einer Menschenmenge zu sein. Wir verzichten auf Standard-Skripte und tauchen tief ein in die Legenden der Alchemisten, die Realität königlicher Intrigen und die stillen Ecken, an denen Touristen normalerweise direkt vorbeilaufen.
+                    </p>
+</div>
+<!-- Itinerary -->
+<div class="space-y-8">
+<h3 class="font-headline text-2xl border-l-4 border-secondary pl-4">Die Reise</h3>
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<div class="flex-none">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">01</div>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Die Königlichen Höfe</h4>
+<p class="text-on-surface-variant">Beginnen Sie im Ersten Hof, wo die Geschichte der tschechischen Könige durch beeindruckende Barockarchitektur und den Wachwechsel lebendig wird.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="flex-none">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">02</div>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Veitsdom</h4>
+<p class="text-on-surface-variant">Erkunden Sie das gotische Meisterwerk. Wir finden das versteckte Mucha-Glasfenster und besprechen den 600-jährigen Bauprozess.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="flex-none">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">03</div>
+</div>
+<div>
+<h4 class="font-bold text-xl mb-2">Das Gässchen der Alchemisten</h4>
+<p class="text-on-surface-variant">Ein privater Zugang zum Goldenen Gässchen. Erfahren Sie mehr über die echten Wissenschaftler und Mystiker, die in diesen winzigen, farbenfrohen Häusern lebten.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery -->
+<div class="space-y-8">
+<h3 class="font-headline text-2xl">Visuelle Geschichten</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="col-span-2 row-span-2">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Veitsdom Innendetails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRwZaMuwS7917kZSD6X6PxtmJCcyZbi6sL1_71UvEp3lmRozXWvomOlff8OJpmgkA-2FHg5IbPVIc0aObPJB7oUUpNPpRNiRHFopIdLz3VQIymwndecZcRHMPIIexQBcwudjLSCrDPLRXooHHaO887hZtfX8aVpW3YyV8iXCKeBjWIB6Xp9giDzhvidnjyxfA1jaSwjrQSwEaDo1whxyO1oFTuxPwAL9yJQFlzuIq_st9sdJ0rT3UxD_4QRgowDkrvygU2Nk4Xalo"/>
+</div>
+<div class="h-48">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Goldenes Gässchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKxchk5PlqHLiSssn61MPTmVUsjbATPpnOZ8VqgHnID3JawQ9E7MFDoNOvG4-cHucHqmp5LGao9bTkyFJfFHFOUK8n4eS-6en_3d_eHmGDG3hRurdvaznQJz6VPPJGG3ijorK73LflgcjOcnum6Rhn2OkhmZPP72P-uGjsDQYHbQ861JKQ71KZUysYmEUG6n_gNNM6PlRNuahwM1nkKbNzhSBYAbqP6cjOVhv8su0qiA8Aor8ygTM8PmKKWsjyvvTBHY6XGwDtSeI"/>
+</div>
+<div class="h-48">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Prager Altstadt Panorama" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7vzjSw2xxYlN8Ha8LeTEhAT6du96UG2T6CLhmc6slI6TPAAVsJN3lMpRV0GrD9GaG7_I35KSlWk8NeSQ9k3eE2cg-zz3r0wkdcSOSvcHVHdXiqkSmunxyGdBujdFjfQSfQVMuL3XTGMY2S6wOBzlJ4NVDRnuRy3l1XN_LXUv6YAI5k01wYP0SCTIneWKfJesEMQ91f3m1baNGY5_TWTvzc_wPKoWLBzIThjBogaKEwT03AGtdA0qBgUgDDfCEqli5OzySZ81zo1c"/>
+</div>
+</div>
+</div>
+<!-- Meet the Guide -->
+<div class="bg-surface-container-low rounded-lg p-10 flex flex-col md:flex-row gap-10 items-center">
+<div class="w-32 h-32 md:w-48 md:h-48 rounded-lg overflow-hidden flex-none border-4 border-surface-container-lowest shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Porträt von Zuzana" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFZT_leZ0YmzVKlmsRuDrGtHUN5L4Qqr43LgOv6mehn1YrnZhjmRprfOAA19VPaMG8I5wdT3xwwwciocrQvjFIOfIErcA8ME3gdlkLEzr4RehmSqc45RiunThQNjpo9Uk8HUL9ADQyRrh86cgPEdDQD1-hEj034sBuEtJwxY6l9s-qf4YrFlQl0Q2wNAkKbXvY9IQxZwG-rLoDERhWPYjizCn9HRQIKadQKPY6xo-yVn4jJCyvnIaI9Y8DPsNOtBTcXrJIg83Qj_0"/>
+</div>
+<div class="space-y-4">
+<span class="font-label text-secondary font-bold tracking-widest text-xs uppercase">Ihre Expertin</span>
+<h3 class="font-headline text-3xl">Lernen Sie Zuzana kennen</h3>
+<p class="text-on-surface-variant leading-relaxed italic">
+                            "Prag ist nicht nur eine Stadt aus Stein; es ist eine Stadt der Geschichten. Da ich mein ganzes Leben hier verbracht habe, zeige ich Ihnen nicht nur die Denkmäler, ich stelle Ihnen die Seele meiner Heimat vor."
+                        </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-lowest px-4 py-2 rounded-lg text-sm font-semibold text-primary">10+ Jahre Erfahrung</div>
+<div class="bg-surface-container-lowest px-4 py-2 rounded-lg text-sm font-semibold text-primary">Zertifizierte Historikerin</div>
+</div>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="space-y-8">
+<h3 class="font-headline text-2xl">Was unsere Gäste sagen</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-8 bg-surface-container-lowest rounded-lg shadow-sm space-y-4">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic">"Zuzana führte uns an Orte, die wir alleine nie gefunden hätten. Der Name 'Versteckte Schätze' ist absolut passend!"</p>
+<div class="font-bold text-sm">— Marcus &amp; Elena, San Francisco</div>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-lg shadow-sm space-y-4">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic">"Die perfekte Mischung aus Geschichte und lokalen Anekdoten. Zuzanas Leidenschaft für Prag ist ansteckend."</p>
+<div class="font-bold text-sm">— Sarah T., London</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar & Booking -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Booking Card -->
+<div class="sticky top-28 bg-surface-container-lowest rounded-lg shadow-lg overflow-hidden border border-outline-variant/15">
+<div class="bg-primary p-8 text-on-primary">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-sm opacity-80 block mb-1">Ab</span>
+<span class="text-4xl font-headline">€145</span>
+</div>
+<span class="text-sm opacity-80">pro Gruppe</span>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<div class="space-y-4">
+<h4 class="font-bold text-lg">Datum &amp; Zeit wählen</h4>
+<div class="space-y-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">calendar_today</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none rounded-lg text-sm focus:ring-2 focus:ring-secondary/40" placeholder="Datum auswählen" type="text"/>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">schedule</span>
+<select class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none rounded-lg text-sm focus:ring-2 focus:ring-secondary/40 appearance-none">
+<option>Vormittags-Tour (09:00)</option>
+<option>Nachmittags-Tour (14:00)</option>
+</select>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold text-lg shadow-md hover:opacity-90 transition-all active:scale-[0.98]">
+                            Tour buchen
+                        </button>
+<p class="text-center text-xs text-on-surface-variant px-4">Sichere Zahlung via Stripe. Kostenlose Stornierung bis 24h vor Tourbeginn.</p>
+<div class="pt-6 border-t border-outline-variant/20 space-y-4">
+<h5 class="font-bold text-sm uppercase tracking-wider text-secondary">Was enthalten ist</h5>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-green-600 text-lg">check_circle</span>
+<span>Zertifizierte lokale Historikerin</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-green-600 text-lg">check_circle</span>
+<span>Eintrittskarten für die Burg (ohne Anstehen)</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-green-600 text-lg">check_circle</span>
+<span>Traditionelles Gebäck &amp; Kaffeepause</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant opacity-50">
+<span class="material-symbols-outlined text-error text-lg">cancel</span>
+<span>Hotel Abholung/Rückbringung</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-slate-200/50 bg-slate-50">
+<div class="md:col-span-1">
+<span class="text-xl font-headline text-primary mb-4 block">Zuza Prague Tours</span>
+<p class="text-slate-500 font-label text-sm leading-relaxed">Seit 2014 kuratieren wir tiefgreifende Erlebnisse im Herzen Europas.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-primary font-label text-sm">Navigation</h4>
+<div class="flex flex-col gap-2">
+<a class="text-slate-500 font-label text-sm transition-all duration-200 hover:text-primary underline-offset-4 hover:underline" href="#">Kontaktinfo</a>
+<a class="text-slate-500 font-label text-sm transition-all duration-200 hover:text-primary underline-offset-4 hover:underline" href="#">TripAdvisor Bewertungen</a>
+<a class="text-slate-500 font-label text-sm transition-all duration-200 hover:text-primary underline-offset-4 hover:underline" href="#">Instagram</a>
+<a class="text-slate-500 font-label text-sm transition-all duration-200 hover:text-primary underline-offset-4 hover:underline" href="#">Zertifizierungen</a>
+</div>
+</div>
+<div class="md:col-span-2 flex flex-col items-start md:items-end justify-between">
+<div class="text-right">
+<p class="text-slate-500 font-label text-sm leading-relaxed">© 2024 Zuza Prague Tours. Alle Rechte vorbehalten.</p>
+</div>
+</div>
+</footer>
+</body></html>

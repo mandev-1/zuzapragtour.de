@@ -1,0 +1,392 @@
+// Blog post data structure for API-driven content
+export interface BlogPost {
+  id: string;
+  slug: string;
+  slugDe?: string;
+  titleKey: string;
+  excerptKey: string;
+  dateKey: string;
+  date: string; // ISO format for sorting
+  image: string;
+  contentKey?: string; // For full blog post content
+  author: string;
+  tags: string[];
+  tagsDe?: string[];
+  language: 'de' | 'en' | 'both';
+}
+
+// This will be replaced by API/CMS data in the future
+export const blogPosts: BlogPost[] = [
+  {
+    id: '14',
+    slug: 'top-places-to-visit-in-prague-right-now',
+    slugDe: 'top-orte-in-prag-jetzt-besuchen',
+    titleKey: 'blog.post14.title',
+    excerptKey: 'blog.post14.excerpt',
+    dateKey: 'blog.post14.date',
+    date: '2025-10-26',
+    image: '/images/blog-ots-terasa.png',
+    contentKey: 'blog.post14.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Things to do in Prague now',
+      'Top places in Prague',
+      'Prague rooftops',
+      'Nightlife Prague 2025',
+      'Craft beer Prague',
+      'Rooftop bars Prague',
+      'Charles Bridge',
+      'Old Town Square',
+      'Petřín Gardens',
+      'Riegrovy Sady',
+      'National Gallery Prague',
+      'Museum of Decorative Arts',
+      'Parks in Prague',
+      'Where to go in Prague',
+      'Visit Prague'
+    ],
+    tagsDe: [
+      'Was tun in Prag jetzt',
+      'Top Orte in Prag',
+      'Prager Rooftops',
+      'Nachtleben Prag 2025',
+      'Craft Beer Prag',
+      'Dachbars Prag',
+      'Karlsbrücke',
+      'Altstädter Ring',
+      'Petřín-Gärten',
+      'Riegrovy Sady',
+      'Nationalgalerie Prag',
+      'Museum für Kunstgewerbe',
+      'Parks in Prag',
+      'Wohin in Prag',
+      'Prag besuchen'
+    ],
+    language: 'both',
+  },
+  {
+    id: '13',
+    slug: 'prettiest-winter-views-in-prague',
+    slugDe: 'prag-schoenste-orte-aussichten-im-winter',
+    titleKey: 'blog.post13.title',
+    excerptKey: 'blog.post13.excerpt',
+    dateKey: 'blog.post13.date',
+    date: '2025-10-25',
+    image: '/images/blog-winter-ots.png',
+    contentKey: 'blog.post13.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Winter in Prague',
+      'Prettiest views Prague',
+      'Old Town Prague',
+      'Charles Bridge',
+      'Photography spots',
+      'Itinerary',
+      'Things to do in Prague',
+      'Where to go in Prague',
+      'Visit Prague in winter'
+    ],
+    tagsDe: [
+      'Prag im Winter',
+      'Schönste Aussichtspunkte Prag',
+      'Altstadt Prag',
+      'Karlsbrücke',
+      'Fotospots',
+      'Reiseroute',
+      'Was tun in Prag',
+      'Wohin in Prag',
+      'Prag im Winter besuchen'
+    ],
+    language: 'both',
+  },
+  {
+    id: '1',
+    slug: 'best-time-to-visit-prague',
+    slugDe: 'beste-reisezeit-prag',
+    titleKey: 'blog.post1.title',
+    excerptKey: 'blog.post1.excerpt',
+    dateKey: 'blog.post1.date',
+    date: '2024-01-15',
+    image: '/images/blog-best-time-min.jpg',
+    contentKey: 'blog.post1.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['Travel Tips', 'Seasons', 'Planning'],
+    tagsDe: ['Reisetipps', 'Jahreszeiten', 'Planung'],
+    language: 'both',
+  },
+  {
+    id: '2',
+    slug: 'hidden-gems-of-prague',
+    slugDe: 'prag-geheimtipps-versteckte-orte',
+    titleKey: 'blog.post2.title',
+    excerptKey: 'blog.post2.excerpt',
+    dateKey: 'blog.post2.date',
+    date: '2024-01-08',
+    image: '/images/blog-hidden-gems-min.jpg',
+    contentKey: 'blog.post2.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['Hidden Gems', 'Local Tips', 'Off the Beaten Path'],
+    tagsDe: ['Geheimtipps', 'Lokale Tipps', 'Abseits der Touristenpfade'],
+    language: 'both',
+  },
+  {
+    id: '3',
+    slug: 'prague-at-night-magical-experience',
+    titleKey: 'blog.post3.title',
+    excerptKey: 'blog.post3.excerpt',
+    dateKey: 'blog.post3.date',
+    date: '2024-01-01',
+    image: '/images/blog-night-prague-min.jpg',
+    contentKey: 'blog.post3.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['Night Tours', 'Prague Nightlife', 'Photography'],
+    tagsDe: ['Nachtführungen', 'Prager Nachtleben', 'Fotografie'],
+    language: 'both',
+  },
+  {
+    id: '4',
+    slug: 'jewish-quarter-history-and-heritage',
+    titleKey: 'blog.post4.title',
+    excerptKey: 'blog.post4.excerpt',
+    dateKey: 'blog.post4.date',
+    date: '2023-12-20',
+    image: '/images/blog-jewish-quarter-min.jpg',
+    contentKey: 'blog.post4.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['History', 'Jewish Quarter', 'Culture'],
+    tagsDe: ['Geschichte', 'Jüdisches Viertel', 'Kultur'],
+    language: 'both',
+  },
+  {
+    id: '5',
+    slug: 'top-21-instagrammable-places-in-prague',
+    titleKey: 'blog.post5.title',
+    excerptKey: 'blog.post5.excerpt',
+    dateKey: 'blog.post5.date',
+    date: '2025-10-12',
+    image: '/images/charles-bridge-2-min.jpg',
+    contentKey: 'blog.post5.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['Photography', 'Instagram', 'Viewpoints', 'Itinerary'],
+    tagsDe: ['Fotografie', 'Instagram', 'Aussichtspunkte', 'Reiseroute'],
+    language: 'both',
+  },
+  {
+    id: '6',
+    slug: 'vaclav-havel-tour-prague',
+    titleKey: 'blog.post6.title',
+    excerptKey: 'blog.post6.excerpt',
+    dateKey: 'blog.post6.date',
+    date: '2025-10-18',
+    image: '/images/blog-havel.jpg',
+    contentKey: 'blog.post6.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['History', 'Velvet Revolution', 'Culture', 'Havel'],
+    tagsDe: ['Geschichte', 'Samtene Revolution', 'Kultur', 'Havel'],
+    language: 'both',
+  },
+  {
+    id: '7',
+    slug: 'klementinum-baroque-library-prague',
+    titleKey: 'blog.post7.title',
+    excerptKey: 'blog.post7.excerpt',
+    dateKey: 'blog.post7.date',
+    date: '2025-10-18',
+    image: '/images/klementinum-library.jpg',
+    contentKey: 'blog.post7.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['Klementinum', 'Library', 'History', 'Old Town'],
+    tagsDe: ['Klementinum', 'Bibliothek', 'Geschichte', 'Altstadt'],
+    language: 'both',
+  },
+  {
+    id: '8',
+    slug: 'klementinum-astronomical-tower-meridian-room',
+    titleKey: 'blog.post8.title',
+    excerptKey: 'blog.post8.excerpt',
+    dateKey: 'blog.post8.date',
+    date: '2025-10-18',
+    image: '/images/klementinum-tower.jpg',
+    contentKey: 'blog.post8.content',
+    author: 'Ing. Zuzana Manová',
+    tags: ['Klementinum', 'Astronomy', 'Views', 'Old Town'],
+    tagsDe: ['Klementinum', 'Astronomie', 'Aussichten', 'Altstadt'],
+    language: 'both',
+  },
+  {
+    id: '9',
+    slug: 'what-to-do-in-prague-in-november-2025',
+    titleKey: 'blog.post9.title',
+    excerptKey: 'blog.post9.excerpt',
+    dateKey: 'blog.post9.date',
+    date: '2025-10-16',
+    image: '/images/old-town-square.jpg',
+    contentKey: 'blog.post9.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Prague in November',
+      'Things to do in Prague',
+      'Prague events November',
+      'Things to do in Prague now',
+      'Prague November weather',
+      'Prague itinerary',
+      'Visit Prague',
+      'Prague travel guide'
+    ],
+    tagsDe: [
+      'Prag im November',
+      'Was tun in Prag',
+      'Prag Events November',
+      'Aktivitäten in Prag',
+      'Prag November Wetter',
+      'Prag Reiseroute',
+      'Prag besuchen',
+      'Prag Reiseführer'
+    ],
+    language: 'both',
+  },
+  {
+    id: '10',
+    slug: 'top-prague-gardens-to-visit',
+    titleKey: 'blog.post10.title',
+    excerptKey: 'blog.post10.excerpt',
+    dateKey: 'blog.post10.date',
+    date: '2025-10-18',
+    image: '/images/blog-gardens.jpg',
+    contentKey: 'blog.post10.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Prague gardens',
+      'Prettiest Prague gardens',
+      'Must-visit Prague',
+      'Prague Castle viewpoints',
+      'Vrtba Garden',
+      'Wallenstein Garden',
+      'Royal Garden',
+      'Palace Gardens below Prague Castle',
+      'Hidden gems Prague',
+      'Prague photo spots',
+      'Visit Prague'
+    ],
+    tagsDe: [
+      'Prager Gärten',
+      'Schönste Prager Gärten',
+      'Must-See Prag',
+      'Burg Aussichtspunkte',
+      'Vrtba-Garten',
+      'Wallenstein-Garten',
+      'Königlicher Garten',
+      'Palastgärten unter der Burg',
+      'Versteckte Schätze Prag',
+      'Prag Fotospots',
+      'Prag besuchen'
+    ],
+    language: 'both',
+  },
+  {
+    id: '11',
+    slug: 'strahov-monastery-prague',
+    titleKey: 'blog.post11.title',
+    excerptKey: 'blog.post11.excerpt',
+    dateKey: 'blog.post11.date',
+    date: '2025-10-19',
+    image: '/images/strahov-monastery.jpg',
+    contentKey: 'blog.post11.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Strahov Monastery',
+      'Prague viewpoints',
+      'Baroque libraries',
+      'Petřín',
+      'Prague Castle area',
+      'Old Town views',
+      'Visit Prague',
+      'Prague itinerary',
+      'Photography'
+    ],
+    tagsDe: [
+      'Strahover Kloster',
+      'Prager Aussichtspunkte',
+      'Barockbibliotheken',
+      'Petřín',
+      'Burggebiet',
+      'Altstadtblicke',
+      'Prag besuchen',
+      'Prag Reiseroute',
+      'Fotografie'
+    ],
+    language: 'both',
+  },
+  {
+    id: '12',
+    slug: 'franz-kafka-places-in-prague',
+    slugDe: 'franz-kafka-orte-in-prag',
+    titleKey: 'blog.post12.title',
+    excerptKey: 'blog.post12.excerpt',
+    dateKey: 'blog.post12.date',
+    date: '2025-10-19',
+    image: '/images/blog-kafka.jpg',
+    contentKey: 'blog.post12.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Kafka', 'Franz Kafka', 'Kafka in Prague', 'Kafka itinerary', 'Kafka walking route',
+      'Kafka Museum Prague', 'Golden Lane Kafka', 'Old Town Prague', 'Jewish Quarter Prague',
+      'Prague literary walk', 'Prague culture', 'Visit Prague'
+    ],
+    tagsDe: [
+      'Kafka', 'Franz Kafka', 'Kafka in Prag', 'Kafka Route', 'Kafka Rundgang',
+      'Kafka Museum Prag', 'Goldenes Gässchen Kafka', 'Altstadt Prag', 'Jüdisches Viertel Prag',
+      'Literarischer Spaziergang', 'Prager Kultur', 'Prag besuchen'
+    ],
+    language: 'both',
+  },
+];
+
+// API endpoint structure (for future implementation)
+export const BlogAPI = {
+  // GET /api/blog - Get all blog posts
+  getAllPosts: async (): Promise<BlogPost[]> => {
+    // This will be replaced with actual API call
+    return blogPosts;
+  },
+
+  // GET /api/blog/:slug - Get single blog post by slug
+  getPostBySlug: async (slug: string): Promise<BlogPost | null> => {
+    // This will be replaced with actual API call
+    const post = blogPosts.find((p) => p.slug === slug);
+    return post || null;
+  },
+
+  // POST /api/blog - Create new blog post (requires authentication)
+  createPost: async (post: Omit<BlogPost, 'id'>): Promise<BlogPost> => {
+    // This will be replaced with actual API call
+    // For now, this is just a placeholder
+    const newPost: BlogPost = {
+      ...post,
+      id: String(blogPosts.length + 1),
+    };
+    return newPost;
+  },
+
+  // PUT /api/blog/:id - Update blog post (requires authentication)
+  updatePost: async (id: string, post: Partial<BlogPost>): Promise<BlogPost | null> => {
+    // This will be replaced with actual API call
+    return null;
+  },
+
+  // DELETE /api/blog/:id - Delete blog post (requires authentication)
+  deletePost: async (id: string): Promise<boolean> => {
+    // This will be replaced with actual API call
+    return false;
+  },
+};
+
+// Helper function to generate blog post JSON files
+export const exportBlogPostToJSON = (post: BlogPost): string => {
+  return JSON.stringify(post, null, 2);
+};
+
+// Helper function to import blog post from JSON
+export const importBlogPostFromJSON = (json: string): BlogPost => {
+  return JSON.parse(json) as BlogPost;
+};
