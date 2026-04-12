@@ -1,19 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Contact from '../components/Contact';
 import { useLanguage } from '../context/LanguageContext';
 
 const ContactPage: React.FC = () => {
   const { language } = useLanguage();
-  useEffect(() => {
-    if (window.location.hash === '#contact-title') {
-      const el = document.getElementById('contact-title');
-      if (el) {
-        // Minor timeout ensures layout is ready before scrolling
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
-      }
-    }
-  }, []);
 
   const title =
     language === 'de'
@@ -31,7 +22,7 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <html lang={language} />
-        <title id="contact-title">{title}</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
   <link rel="canonical" href="https://zuzapragtour.de/contact" />

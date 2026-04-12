@@ -9,9 +9,9 @@ const Tours: React.FC = () => {
 
   type TourCard = {
     id: number;
-    titleKey: any;
-    descriptionKey: any;
-    durationKey: any;
+    titleKey: string;
+    descriptionKey: string;
+    durationKey: string;
     image: string;
     highlightKeys: readonly string[];
   };
@@ -19,163 +19,135 @@ const Tours: React.FC = () => {
   const toursData: TourCard[] = [
     {
       id: 1,
-      titleKey: 'tour.castle.title' as const,
-      descriptionKey: 'tour.castle.description' as const,
-      durationKey: 'tour.castle.duration' as const,
+      titleKey: 'tour.castle.title',
+      descriptionKey: 'tour.castle.description',
+      durationKey: 'tour.castle.duration',
       image: '/images/prague-castle.jpg',
-      highlightKeys: ['tour.castle.h1', 'tour.castle.h2', 'tour.castle.h3', 'tour.castle.h4'] as const,
+      highlightKeys: ['tour.castle.h1', 'tour.castle.h2', 'tour.castle.h3', 'tour.castle.h4'],
     },
     {
       id: 2,
-      titleKey: 'tour.oldtown.title' as const,
-      descriptionKey: 'tour.oldtown.description' as const,
-      durationKey: 'tour.oldtown.duration' as const,
+      titleKey: 'tour.oldtown.title',
+      descriptionKey: 'tour.oldtown.description',
+      durationKey: 'tour.oldtown.duration',
       image: '/images/blog-jewish-quarter-2-min.jpg',
-      highlightKeys: ['tour.oldtown.h1', 'tour.oldtown.h2', 'tour.oldtown.h3', 'tour.oldtown.h4'] as const,
+      highlightKeys: ['tour.oldtown.h1', 'tour.oldtown.h2', 'tour.oldtown.h3', 'tour.oldtown.h4'],
     },
     {
       id: 3,
-      titleKey: 'tour.hidden.title' as const,
-      descriptionKey: 'tour.hidden.description' as const,
-      durationKey: 'tour.hidden.duration' as const,
+      titleKey: 'tour.hidden.title',
+      descriptionKey: 'tour.hidden.description',
+      durationKey: 'tour.hidden.duration',
       image: '/images/blog-hidden-gems-min.jpg',
-      highlightKeys: ['tour.hidden.h1', 'tour.hidden.h2', 'tour.hidden.h3', 'tour.hidden.h4'] as const,
+      highlightKeys: ['tour.hidden.h1', 'tour.hidden.h2', 'tour.hidden.h3', 'tour.hidden.h4'],
     },
     {
       id: 4,
-      titleKey: 'tour.german.title' as const,
-      descriptionKey: 'tour.german.description' as const,
-      durationKey: 'tour.german.duration' as const,
+      titleKey: 'tour.german.title',
+      descriptionKey: 'tour.german.description',
+      durationKey: 'tour.german.duration',
       image: '/images/prague-castle-cathedral.jpg',
-      highlightKeys: ['tour.german.h1', 'tour.german.h2', 'tour.german.h3', 'tour.german.h4'] as const,
+      highlightKeys: ['tour.german.h1', 'tour.german.h2', 'tour.german.h3', 'tour.german.h4'],
     },
     {
       id: 5,
-      titleKey: 'tour.custom.title' as const,
-      descriptionKey: 'tour.custom.description' as const,
-      durationKey: 'tour.custom.duration' as const,
+      titleKey: 'tour.custom.title',
+      descriptionKey: 'tour.custom.description',
+      durationKey: 'tour.custom.duration',
       image: '/images/blog-night-prague-min.jpg',
-      highlightKeys: ['tour.custom.h1', 'tour.custom.h2', 'tour.custom.h3', 'tour.custom.h4'] as const,
+      highlightKeys: ['tour.custom.h1', 'tour.custom.h2', 'tour.custom.h3', 'tour.custom.h4'],
     },
     {
       id: 6,
-      titleKey: 'tour.havel.title' as const,
-      descriptionKey: 'tour.havel.description' as const,
-      durationKey: 'tour.havel.duration' as const,
+      titleKey: 'tour.havel.title',
+      descriptionKey: 'tour.havel.description',
+      durationKey: 'tour.havel.duration',
       image: '/images/havel-tour.jpg',
-      highlightKeys: ['tour.havel.h1', 'tour.havel.h2', 'tour.havel.h3', 'tour.havel.h4'] as const,
+      highlightKeys: ['tour.havel.h1', 'tour.havel.h2', 'tour.havel.h3', 'tour.havel.h4'],
     },
   ];
 
   return (
-    <div className="tours">
-      <div className="tours-header">
-        <h1>{t('tours.header.title')}</h1>
-        <p>{t('tours.header.subtitle')}</p>
+    <div className="bg-surface pb-16">
+      <div className="border-b border-outline-variant/15 bg-surface-container-low py-16 text-center">
+        <h1 className="mb-4 font-headline text-4xl text-primary md:text-5xl">{t('tours.header.title')}</h1>
+        <p className="mx-auto max-w-2xl text-lg text-on-surface-variant">{t('tours.header.subtitle')}</p>
       </div>
 
-      <div className="container">
-        <div className="tours-grid">
-          {toursData.map((tour, index) => (
-            <motion.div
-              key={tour.id}
-              className="tour-card"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-                {(() => {
-                  const dest = `/book?tour=${encodeURIComponent(t(tour.titleKey))}#contact-title`;
-                  return (
-                    <div
-                      className="tour-card-image"
-                      role="button"
-                      tabIndex={0}
-                      onClick={() => navigate(dest)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          navigate(dest);
-                        }
-                      }}
-                    >
-                      <img src={tour.image} alt={t(tour.titleKey)} loading="lazy" />
-                    </div>
-                  );
-                })()}
-              <div className="tour-card-header">
-                <h3>{t(tour.titleKey)}</h3>
-                <div className="tour-meta">
-                  <span className="tour-duration">⏱️ {t(tour.durationKey)}</span>
-                </div>
-              </div>
-              <p className="tour-description">{t(tour.descriptionKey)}</p>
-              <div className="tour-highlights">
-                <h4>{t('tour.highlights')}</h4>
-                <ul>
-                  {tour.highlightKeys.map((key, idx) => (
-                    <li key={idx}>✓ {t(key as any)}</li>
-                  ))}
-                </ul>
-              </div>
-              {(() => {
-                const dest = `/book?tour=${encodeURIComponent(t(tour.titleKey))}#contact-title`;
-                return (
-                  <div
-                    className="tour-footer"
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => navigate(dest)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        navigate(dest);
-                      }
-                    }}
-                  >
-                <p className="tour-price">{t('tour.price')}</p>
-                <Link
-                  to={dest}
-                  className="btn btn-primary btn-small"
-                  onClick={(e) => e.stopPropagation()}
+      <div className="mx-auto max-w-6xl px-8 py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+          {toursData.map((tour, index) => {
+            const dest = `/book?tour=${encodeURIComponent(t(tour.titleKey as any))}#contact-title`;
+            return (
+              <motion.article
+                key={tour.id}
+                className="flex flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-md transition-shadow hover:shadow-lg"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <div
+                  role="button"
+                  tabIndex={0}
+                  className="relative h-56 cursor-pointer overflow-hidden"
+                  onClick={() => navigate(dest)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      navigate(dest);
+                    }
+                  }}
                 >
-                  {t('tour.bookNow')}
-                </Link>
+                  <img src={tour.image} alt={t(tour.titleKey as any)} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h2 className="mb-2 font-headline text-xl text-primary">{t(tour.titleKey as any)}</h2>
+                  <div className="mb-3 flex items-center gap-2 font-label text-sm text-on-surface-variant">
+                    <span className="material-symbols-outlined text-lg">schedule</span>
+                    {t(tour.durationKey as any)}
                   </div>
-                );
-              })()}
-            </motion.div>
-          ))}
+                  <p className="mb-4 flex-1 text-on-surface-variant">{t(tour.descriptionKey as any)}</p>
+                  <h3 className="mb-2 font-label text-sm font-bold uppercase tracking-wide text-secondary">{t('tour.highlights')}</h3>
+                  <ul className="mb-6 space-y-2">
+                    {tour.highlightKeys.map((key) => (
+                      <li key={key} className="flex items-start gap-2 text-sm text-on-surface-variant">
+                        <span className="material-symbols-outlined text-lg text-green-700">check_circle</span>
+                        <span>{t(key as any)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-auto flex flex-col gap-3 border-t border-outline-variant/20 pt-4 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="font-headline text-lg font-semibold text-primary">{t('tour.price')}</p>
+                    <Link
+                      to={dest}
+                      className="rounded-lg bg-primary px-5 py-2.5 text-center font-semibold text-on-primary hover:opacity-90"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {t('tour.bookNow')}
+                    </Link>
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
 
-      <section className="tour-info">
-        <div className="container">
-          <motion.div
-            className="info-grid"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="info-card">
-              <h3>👥 {t('tourinfo.groups.title')}</h3>
-              <p>{t('tourinfo.groups.desc')}</p>
+      <section className="mx-auto max-w-6xl px-8 pb-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { icon: 'groups', title: t('tourinfo.groups.title'), desc: t('tourinfo.groups.desc') },
+            { icon: 'translate', title: t('tourinfo.languages.title'), desc: t('tourinfo.languages.desc') },
+            { icon: 'event_available', title: t('tourinfo.booking.title'), desc: t('tourinfo.booking.desc') },
+            { icon: 'partly_cloudy_day', title: t('tourinfo.weather.title'), desc: t('tourinfo.weather.desc') },
+          ].map((item) => (
+            <div key={item.title} className="rounded-xl bg-surface-container-low p-6">
+              <span className="material-symbols-outlined mb-2 text-2xl text-primary">{item.icon}</span>
+              <h3 className="mb-2 font-headline text-lg text-on-surface">{item.title}</h3>
+              <p className="text-sm text-on-surface-variant">{item.desc}</p>
             </div>
-            <div className="info-card">
-              <h3>🗣️ {t('tourinfo.languages.title')}</h3>
-              <p>{t('tourinfo.languages.desc')}</p>
-            </div>
-            <div className="info-card">
-              <h3>📅 {t('tourinfo.booking.title')}</h3>
-              <p>{t('tourinfo.booking.desc')}</p>
-            </div>
-            <div className="info-card">
-              <h3>🌦️ {t('tourinfo.weather.title')}</h3>
-              <p>{t('tourinfo.weather.desc')}</p>
-            </div>
-          </motion.div>
+          ))}
         </div>
       </section>
     </div>

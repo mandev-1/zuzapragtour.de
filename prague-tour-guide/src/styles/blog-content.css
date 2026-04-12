@@ -1,0 +1,109 @@
+/* Styles for blog post HTML (dangerouslySetInnerHTML) and shared article chrome */
+
+.blog-inline-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.blog-inline-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.image-credit {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #5b403d;
+}
+
+.did-you-know {
+  margin: 2rem 0;
+  padding: 1.25rem 1.25rem 1.25rem 3.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fffdf5;
+  border-left: 6px solid #fed01b;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.did-you-know::before {
+  content: '💡';
+  position: absolute;
+  left: 0.9rem;
+  top: 1rem;
+  font-size: 1.2rem;
+}
+
+.did-you-know h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.did-you-know p {
+  margin: 0;
+}
+
+.blog-content {
+  line-height: 1.8;
+  color: #111c2d;
+}
+
+.blog-content .lead {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #735c00;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.blog-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #93000b;
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+.blog-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111c2d;
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-cta-box {
+  background: linear-gradient(135deg, rgba(254, 208, 27, 0.12), rgba(147, 0, 11, 0.06));
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  margin: 3rem 0;
+  border: 1px solid rgba(143, 111, 108, 0.2);
+}
+
+.blog-cta-box h3 {
+  color: #93000b;
+  margin-bottom: 1rem;
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+.blog-cta-box .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}

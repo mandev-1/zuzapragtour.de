@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import ToursPage from './pages/ToursPage';
 import ContactPage from './pages/ContactPage';
@@ -12,16 +13,15 @@ import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
-import './styles/App.css';
-
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <LanguageProvider>
         <Router>
-          <div className="App">
+          <ScrollToTop />
+          <div className="App flex min-h-screen flex-col">
             <Header />
-            <main className="main-content">
+            <main className="main-content flex-1 pt-20">
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/tours" element={<ToursPage />} />

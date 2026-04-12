@@ -4,47 +4,119 @@
 
   <url>
     <loc>https://zuzapragtour.de/</loc>
-    <lastmod>2025-10-25</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://zuzapragtour.de/privacy</loc>
-    <lastmod>2025-10-18</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://zuzapragtour.de/terms</loc>
-    <lastmod>2025-10-18</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://zuzapragtour.de/tours</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zuzapragtour.de/contact</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zuzapragtour.de/blog</loc>
-    <lastmod>2025-10-25</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zuzapragtour.de/book</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://zuzapragtour.de/blog/dan-brown-secret-of-secrets-prague</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-secret-of-secrets-prague.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/best-day-trips-from-prague</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-day-trips.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/prague-castle-complete-guide</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-prague-castle.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/prague-food-guide</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-food-prague.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/autumn-in-prague</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-autumn-prague.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/summer-in-prague</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-summer-prague.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/spring-in-prague</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-spring-prague.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://zuzapragtour.de/blog/top-places-to-visit-in-prague-right-now</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-ots-terasa.png</image:loc>
+    </image:image>
+  </url>
   <url>
     <loc>https://zuzapragtour.de/blog/prettiest-winter-views-in-prague</loc>
     <lastmod>2025-10-25</lastmod>

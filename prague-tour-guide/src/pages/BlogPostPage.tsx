@@ -5,17 +5,120 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
 
+function extractHeadings(html: string): { id: string; text: string }[] {
+  const matches = Array.from(html.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi));
+  return matches.map((m, i) => ({
+    id: `heading-${i}`,
+    text: m[1].replace(/<[^>]+>/g, '').trim(),
+  }));
+}
+
+/** Add stable ids to h2 for TOC; preserve existing attributes (e.g. class). */
+function injectHeadingIds(html: string): string {
+  let i = 0;
+  return html.replace(/<h2([^>]*)>/gi, (_match, attrs: string) => {
+    if (/\bid\s*=/.test(attrs)) {
+      return `<h2${attrs}>`;
+    }
+    const id = `heading-${i++}`;
+    return `<h2 id="${id}"${attrs}>`;
+  });
+}
+
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, language } = useLanguage();
+  const [activeHeading, setActiveHeading] = React.useState('');
+  const [readProgress, setReadProgress] = React.useState(0);
+  const [copied, setCopied] = React.useState(false);
+  const articleRef = React.useRef<HTMLElement>(null);
 
-  // Find the blog post by slug
   const post = blogPosts.find((p: any) => p.slug === slug || p.slugDe === slug);
 
-  // If post not found, redirect to blog page
+  const rawContent = post?.contentKey ? t(post.contentKey as any) : '';
+  const processedContent = React.useMemo(() => injectHeadingIds(rawContent), [rawContent]);
+  const headings = React.useMemo(() => extractHeadings(rawContent), [rawContent]);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      const el = articleRef.current;
+      if (!el) return;
+      const { top, height } = el.getBoundingClientRect();
+      const scrolled = Math.max(0, -top);
+      const total = height - window.innerHeight;
+      setReadProgress(total > 0 ? Math.min(100, (scrolled / total) * 100) : 0);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [post?.id]);
+
+  React.useEffect(() => {
+    if (!headings.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length) {
+          const sorted = [...visible].sort(
+            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+          );
+          setActiveHeading(sorted[0].target.id);
+        }
+      },
+      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+    );
+    headings.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [headings]);
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
+
+  const slugForUrl =
+    language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug;
+  const postAbsoluteUrl = `https://zuzapragtour.de/blog/${slugForUrl}`;
+  const currentTags = language === 'de' && post.tagsDe ? post.tagsDe : post.tags;
+
+  const jsonLdImage =
+    post.id === '12' || post.id === '13'
+      ? [
+          `https://zuzapragtour.de${post.image}`,
+          post.id === '12'
+            ? 'https://zuzapragtour.de/images/blog-kafka-2.jpg'
+            : 'https://zuzapragtour.de/images/blog-winter-cathedral.png',
+        ]
+      : `https://zuzapragtour.de${post.image}`;
+
+  const pinterestShare = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
+    postAbsoluteUrl
+  )}&description=${encodeURIComponent(t(post.titleKey as any))}`;
+
+  const handleNativeShare = async () => {
+    const title = t(post.titleKey as any);
+    try {
+      if (typeof navigator !== 'undefined' && navigator.share) {
+        await navigator.share({ title, url: postAbsoluteUrl });
+        return;
+      }
+      await navigator.clipboard.writeText(postAbsoluteUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      try {
+        await navigator.clipboard.writeText(postAbsoluteUrl);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 2000);
+      } catch {
+        /* ignore */
+      }
+    }
+  };
+
+  const related = blogPosts.filter((p) => p.id !== post.id).slice(0, 3);
 
   return (
     <>
@@ -25,23 +128,22 @@ const BlogPostPage: React.FC = () => {
         <meta name="description" content={t(post.excerptKey as any)} />
         <meta
           name="keywords"
-          content={`${(language === 'de' && post.tagsDe ? post.tagsDe : post.tags).join(', ')}, ${
-            language === 'de' ? 'Prag Touren, Prag Reiseführer' : 'Prague tours, Prague guide'
-          }${
+          content={`${currentTags.join(', ')}, ${
             language === 'de'
-              ? ', geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'
-              : ''
+              ? 'Prag Touren, Prag Reiseführer, geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'
+              : 'Prague tours, Prague guide'
           }`}
         />
-  <link rel="canonical" href={`https://zuzapragtour.de/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`} />
+        <link rel="canonical" href={`https://zuzapragtour.de/blog/${slugForUrl}`} />
         <meta property="og:title" content={`${t(post.titleKey as any)} | Zuza Prague Tours`} />
         <meta property="og:description" content={t(post.excerptKey as any)} />
-  <meta property="og:url" content={`https://zuzapragtour.de/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`} />
+        <meta property="og:url" content={`https://zuzapragtour.de/blog/${slugForUrl}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content={`https://zuzapragtour.de${post.image}`} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
-        {(language === 'de' && post.tagsDe ? post.tagsDe : post.tags).map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
+        {currentTags.map((tag: string, i: number) => (
+          <meta key={i} property="article:tag" content={tag} />
         ))}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -52,23 +154,13 @@ const BlogPostPage: React.FC = () => {
             datePublished: post.date,
             dateModified: post.date,
             inLanguage: language,
-            author: {
-              '@type': 'Person',
-              name: post.author,
-            },
+            author: { '@type': 'Person', name: post.author },
+            image: jsonLdImage,
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': `https://zuzapragtour.de/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`,
+              '@id': `https://zuzapragtour.de/blog/${slugForUrl}`,
             },
-            image: post.id === '12' || post.id === '13'
-              ? [
-                  `https://zuzapragtour.de${post.image}`,
-                  post.id === '12'
-                    ? 'https://zuzapragtour.de/images/blog-kafka-2.jpg'
-                    : 'https://zuzapragtour.de/images/blog-winter-cathedral.png'
-                ]
-              : `https://zuzapragtour.de${post.image}`,
-            url: `https://zuzapragtour.de/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`,
+            url: `https://zuzapragtour.de/blog/${slugForUrl}`,
           })}
         </script>
         <script type="application/ld+json">
@@ -80,21 +172,21 @@ const BlogPostPage: React.FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('nav.home' as any),
-                item: 'https://zuzapragtour.de/'
+                item: 'https://zuzapragtour.de/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: t('nav.blog' as any),
-                item: 'https://zuzapragtour.de/blog'
+                item: 'https://zuzapragtour.de/blog',
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: t(post.titleKey as any),
-                item: `https://zuzapragtour.de/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`
-              }
-            ]
+                item: `https://zuzapragtour.de/blog/${slugForUrl}`,
+              },
+            ],
           })}
         </script>
         {post.slug === 'what-to-do-in-prague-in-november-2025' && (
@@ -114,8 +206,8 @@ const BlogPostPage: React.FC = () => {
                     text:
                       language === 'de'
                         ? 'Ja—weniger Menschen, gute Verfügbarkeiten und viele Konzerte & Ausstellungen. Warme Kleidung und bequeme Schuhe sind empfehlenswert.'
-                        : 'Yes—fewer crowds, better availability, and lots of concerts & exhibitions. Dress warm and wear comfortable shoes.'
-                  }
+                        : 'Yes—fewer crowds, better availability, and lots of concerts & exhibitions. Dress warm and wear comfortable shoes.',
+                  },
                 },
                 {
                   '@type': 'Question',
@@ -128,8 +220,8 @@ const BlogPostPage: React.FC = () => {
                     text:
                       language === 'de'
                         ? 'Klassik- und Jazzkonzerte, Galerien & Museen, Abendspaziergänge an der Moldau und gemütliche Cafés. Events finden Sie im verlinkten Novemberkalender.'
-                        : 'Classical and jazz concerts, galleries & museums, evening riverside walks, and cozy cafés. See the linked November events calendar for what’s on.'
-                  }
+                        : 'Classical and jazz concerts, galleries & museums, evening riverside walks, and cozy cafés. See the linked November events calendar for what’s on.',
+                  },
                 },
                 {
                   '@type': 'Question',
@@ -142,179 +234,290 @@ const BlogPostPage: React.FC = () => {
                     text:
                       language === 'de'
                         ? 'Meist kühl (5–10°C) mit frühem Sonnenuntergang. Schichten, Regenjacke und rutschfeste Schuhe sind sinnvoll.'
-                        : 'Generally cool (5–10°C) with early sunsets. Pack layers, a rain jacket, and good shoes for cobblestones.'
-                  }
-                }
-              ]
+                        : 'Generally cool (5–10°C) with early sunsets. Pack layers, a rain jacket, and good shoes for cobblestones.',
+                  },
+                },
+              ],
             })}
           </script>
         )}
       </Helmet>
 
-      <article className="blog-post">
-        <div className="blog-post-header">
-          <div className="container">
-            <Link to="/blog" className="back-link">
-              ← {t('blog.backToBlog')}
-            </Link>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1>{t(post.titleKey as any)}</h1>
-              <div className="blog-post-meta">
-                <span className="blog-post-date">{t(post.dateKey as any)}</span>
-                <span className="blog-post-author">By {post.author}</span>
-              </div>
-              <div className="blog-post-tags">
-                {(language === 'de' && post.tagsDe ? post.tagsDe : post.tags).map((tag, index) => (
-                  <span key={index} className="tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+      <div className="pointer-events-none fixed left-0 top-20 z-30 h-0.5 w-full bg-primary/20">
+        <div
+          className="h-full bg-primary transition-all duration-75"
+          style={{ width: `${readProgress}%` }}
+        />
+      </div>
+
+      <article className="min-h-screen bg-white" ref={articleRef}>
+        {/* Tag strip (Stitch: pill row under site header) */}
+        <section className="border-b border-stone-100 bg-stone-50/70 py-4">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-2 px-6">
+            {currentTags.map((tag: string, i: number) => (
+              <span
+                key={i}
+                className="rounded-full bg-stone-200/90 px-3 py-1 font-label text-xs font-medium text-on-surface"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
-        </div>
+        </section>
 
-        <div className="blog-post-content">
-          <div className="container">
-            <motion.div
-              className="content-wrapper"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {/* Featured Image */}
-              <div className="blog-featured-image">
-                <img 
-                  src={post.image} 
-                  alt={t(post.titleKey as any)}
-                  loading="eager"
-                />
-                {post.image === '/images/klementinum-tower.jpg' && (
-                  <div className="image-credit">Photo: Roman Boed</div>
-                )}
+        <div
+          className={`mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:items-start lg:gap-10 ${
+            headings.length > 1
+              ? 'lg:grid-cols-[220px_minmax(0,1fr)_280px]'
+              : 'lg:grid-cols-[minmax(0,1fr)_280px]'
+          }`}
+        >
+          {/* TOC — desktop */}
+          {headings.length > 1 && (
+            <aside className="sticky top-28 hidden lg:block">
+              <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+                <h2 className="font-headline text-base font-bold text-on-surface">{t('blog.tocTitle' as any)}</h2>
+                <nav className="mt-3">
+                  <ol className="list-decimal space-y-2 pl-4 text-sm text-stone-700">
+                    {headings.map((h, i) => (
+                      <li key={h.id}>
+                        <a
+                          href={`#${h.id}`}
+                          className={
+                            activeHeading === h.id
+                              ? 'font-semibold text-primary hover:underline'
+                              : 'text-stone-700 hover:text-primary hover:underline'
+                          }
+                        >
+                          {h.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
               </div>
+            </aside>
+          )}
 
-              {/* This will be replaced with actual content from API/CMS */}
-              <div className="blog-content">
-                {post.contentKey ? (
-                  <div dangerouslySetInnerHTML={{ __html: t(post.contentKey as any) }} />
-                ) : (
-                  <>
-                    <p className="lead">{t(post.excerptKey as any)}</p>
-                    
-                    <h2>Full Content Coming Soon</h2>
-                    <p>
-                      This blog post is currently being written. Check back soon for the complete article!
-                    </p>
-                    
-                    <div className="blog-cta-box">
-                      <h3>Ready to Explore Prague?</h3>
-                      <p>
-                        Don't wait to discover Prague's wonders! Book a personalized tour with Ing. Zuzana Manová.
-                      </p>
-                      <div className="cta-buttons">
-                        <Link to="/contact#contact-title" className="btn btn-primary">
-                          {t('hero.contactMe')}
-                        </Link>
-                        <Link to="/tours" className="btn btn-outline">
-                          {t('hero.exploreTours')}
-                        </Link>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
+          {/* Main column */}
+          <motion.div
+            className="min-w-0"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+          >
+            {headings.length > 1 && (
+              <details className="mb-6 rounded-lg border border-stone-200 bg-white p-4 shadow-sm lg:hidden">
+                <summary className="cursor-pointer font-headline text-base font-bold text-on-surface">
+                  {t('blog.tocTitle' as any)}
+                </summary>
+                <nav className="mt-3">
+                  <ol className="list-decimal space-y-2 pl-4 text-sm text-stone-700">
+                    {headings.map((h) => (
+                      <li key={h.id}>
+                        <a href={`#${h.id}`} className="text-primary hover:underline">
+                          {h.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              </details>
+            )}
 
-              <div className="blog-post-footer">
-                <div className="share-section">
-                  <h3>Share This Post</h3>
-                  <div className="share-buttons">
-                    <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=https://zuzapragtour.de/blog/${post.slug}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="share-btn facebook"
-                    >
-                      📘 Facebook
-                    </a>
-                    <a
-                      href={`https://twitter.com/intent/tweet?url=https://zuzapragtour.de/blog/${post.slug}&text=${encodeURIComponent(t(post.titleKey as any))}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="share-btn twitter"
-                    >
-                      🐦 Twitter
-                    </a>
-                    <a
-                      href={`https://wa.me/?text=${encodeURIComponent(t(post.titleKey as any))} https://zuzapragtour.de/blog/${post.slug}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="share-btn whatsapp"
-                    >
-                      💬 WhatsApp
-                    </a>
-                  </div>
+            <nav className="mb-4 flex flex-wrap items-center gap-2 font-label text-xs text-stone-500">
+              <Link to="/" className="hover:text-primary">
+                {t('nav.home' as any)}
+              </Link>
+              <span>›</span>
+              <Link to="/blog" className="hover:text-primary">
+                {t('nav.blog' as any)}
+              </Link>
+              <span>›</span>
+              <span className="line-clamp-1 text-stone-600">{t(post.titleKey as any)}</span>
+            </nav>
+
+            <h1 className="font-headline text-2xl font-bold leading-snug text-on-surface md:text-3xl lg:text-[2rem]">
+              {t(post.titleKey as any)}
+            </h1>
+
+            <div className="mt-4 flex flex-wrap items-center gap-2 font-label text-sm text-stone-600">
+              <div className="flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 font-label text-xs font-bold text-primary">
+                  ZM
                 </div>
-
-                <div className="author-box">
-                  <h3>{t('blog.aboutBox.title')}</h3>
-                  <div className="author-info">
-                    <div className="author-avatar">ZM</div>
-                    <div>
-                      <h4>{post.author}</h4>
-                      <p>
-                        {t('about.intro')}
-                      </p>
-                      <Link to="/contact#contact-title" className="btn btn-small btn-outline">
-                        {t('about.cta')}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <span className="font-medium text-on-surface">{post.author}</span>
               </div>
-            </motion.div>
-          </div>
-        </div>
-
-        <div className="related-posts">
-          <div className="container">
-            <h2>More Prague Insights</h2>
-            <div className="blog-grid">
-              {blogPosts
-                .filter((p) => p.id !== post.id)
-                .slice(0, 3)
-                .map((relatedPost, index) => (
-                  <motion.div
-                    key={relatedPost.id}
-                    className="blog-card"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="blog-card-image">
-                      <img 
-                        src={relatedPost.image} 
-                        alt={t(relatedPost.titleKey as any)}
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="blog-card-content">
-                      <span className="blog-date">{t(relatedPost.dateKey as any)}</span>
-                      <h3>{t(relatedPost.titleKey as any)}</h3>
-                      <p>{t(relatedPost.excerptKey as any)}</p>
-                      <Link to={`/blog/${language === 'de' && (relatedPost as any).slugDe ? (relatedPost as any).slugDe : relatedPost.slug}`} className="blog-read-more">
-                        {t('blog.readMore')} →
-                      </Link>
-                    </div>
-                  </motion.div>
-                ))}
+              <span className="text-stone-400">·</span>
+              <span>{t(post.dateKey as any)}</span>
+              {language === 'en' && (post as any).slugDe && (
+                <>
+                  <span className="text-stone-400">·</span>
+                  <Link to={`/blog/${(post as any).slugDe}`} className="text-primary hover:underline">
+                    DE
+                  </Link>
+                </>
+              )}
+              {language === 'de' && (
+                <>
+                  <span className="text-stone-400">·</span>
+                  <Link to={`/blog/${post.slug}`} className="text-primary hover:underline">
+                    EN
+                  </Link>
+                </>
+              )}
             </div>
-          </div>
+
+            <figure className="mt-8 overflow-hidden rounded-xl border border-stone-200/80 shadow-sm">
+              <img
+                src={post.image}
+                alt={t(post.titleKey as any)}
+                className="h-auto max-h-[28rem] w-full object-cover"
+                loading="eager"
+              />
+              {post.image === '/images/klementinum-tower.jpg' && (
+                <figcaption className="px-4 py-2 font-label text-xs text-on-surface-variant">
+                  Photo: Roman Boed
+                </figcaption>
+              )}
+            </figure>
+
+            <div className="blog-content mt-8">
+              {post.contentKey ? (
+                <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+              ) : (
+                <>
+                  <p className="lead">{t(post.excerptKey as any)}</p>
+                  <div className="blog-cta-box">
+                    <h3>{language === 'de' ? 'Bereit, Prag zu erkunden?' : 'Ready to explore Prague?'}</h3>
+                    <p>
+                      {language === 'de'
+                        ? 'Entdecken Sie Prag mit Ing. Zuzana Manová — persönlich, zertifiziert, unvergesslich.'
+                        : 'Discover Prague with Ing. Zuzana Manová — personal, certified, unforgettable.'}
+                    </p>
+                    <div className="cta-buttons">
+                      <Link to="/contact#contact-title" className="btn btn-primary">
+                        {t('hero.contactMe' as any)}
+                      </Link>
+                      <Link to="/tours" className="btn btn-outline">
+                        {t('hero.exploreTours' as any)}
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-2">
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postAbsoluteUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-[#1877f2] px-4 py-2 font-label text-xs font-semibold text-white hover:opacity-90"
+              >
+                Facebook
+              </a>
+              <a
+                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postAbsoluteUrl)}&text=${encodeURIComponent(t(post.titleKey as any))}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-[#1da1f2] px-4 py-2 font-label text-xs font-semibold text-white hover:opacity-90"
+              >
+                Twitter
+              </a>
+              <a
+                href={pinterestShare}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-[#e60023] px-4 py-2 font-label text-xs font-semibold text-white hover:opacity-90"
+              >
+                Pinterest
+              </a>
+              <a
+                href={`https://wa.me/?text=${encodeURIComponent(`${t(post.titleKey as any)} ${postAbsoluteUrl}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-[#25d366] px-4 py-2 font-label text-xs font-semibold text-white hover:opacity-90"
+              >
+                WhatsApp
+              </a>
+              <button
+                type="button"
+                onClick={handleNativeShare}
+                className="rounded-md bg-stone-500 px-4 py-2 font-label text-xs font-semibold text-white hover:opacity-90"
+              >
+                {copied ? '✓' : t('blog.shareMore' as any)}
+              </button>
+            </div>
+
+            {related.length > 0 && (
+              <section className="mt-14 border-t border-stone-200 pt-10">
+                <h2 className="font-headline text-xl font-bold text-on-surface">{t('blog.related' as any)}</h2>
+                <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                  {related.map((rel, i) => (
+                    <motion.div
+                      key={rel.id}
+                      initial={{ opacity: 0, y: 12 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.35, delay: i * 0.06 }}
+                      viewport={{ once: true }}
+                    >
+                      <Link
+                        to={`/blog/${language === 'de' && (rel as any).slugDe ? (rel as any).slugDe : rel.slug}`}
+                        className="group flex gap-3 rounded-lg border border-stone-200 bg-white p-3 shadow-sm transition hover:border-primary/30 hover:bg-stone-50"
+                      >
+                        <img
+                          src={rel.image}
+                          alt=""
+                          className="h-14 w-14 shrink-0 rounded-md object-cover"
+                          loading="lazy"
+                        />
+                        <div className="min-w-0">
+                          <p className="line-clamp-3 font-label text-xs font-semibold leading-snug text-on-surface group-hover:text-primary">
+                            {t(rel.titleKey as any)}
+                          </p>
+                          <p className="mt-1 font-label text-[11px] text-stone-500">{t(rel.dateKey as any)}</p>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </motion.div>
+
+          {/* Right sidebar — Stitch: featured tour + newsletter */}
+          <aside className="space-y-6 lg:sticky lg:top-28">
+            <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+              <img
+                src="/images/old-town-square.jpg"
+                alt=""
+                className="h-28 w-full rounded-md object-cover"
+                loading="lazy"
+              />
+              <h3 className="font-headline mt-3 text-lg font-bold leading-snug text-on-surface">
+                {t('blog.featuredTour.title' as any)}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">{t('blog.featuredTour.desc' as any)}</p>
+              <Link
+                to="/book#contact-title"
+                className="mt-4 inline-block rounded-full bg-primary px-5 py-2.5 text-center font-label text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+              >
+                {t('blog.featuredTour.cta' as any)}
+              </Link>
+            </div>
+
+            <div className="rounded-lg border border-stone-200 bg-stone-100/90 p-4">
+              <h3 className="font-headline text-lg font-bold text-on-surface">{t('blog.newsletter.title' as any)}</h3>
+              <p className="mt-1 text-sm text-stone-600">{t('blog.newsletter.blurb' as any)}</p>
+              <Link
+                to="/contact#contact-title"
+                className="mt-4 block w-full rounded-full bg-primary py-2.5 text-center font-label text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+              >
+                {t('blog.newsletter.cta' as any)}
+              </Link>
+            </div>
+          </aside>
         </div>
       </article>
     </>

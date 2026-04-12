@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Contact from '../components/Contact';
 import { useLocation } from 'react-router-dom';
@@ -10,13 +10,6 @@ const BookPage: React.FC = () => {
   const { language } = useLanguage();
   const query = useQuery();
   const selectedTour = useMemo(() => query.get('tour') || '', [query]);
-
-  useEffect(() => {
-    if (window.location.hash === '#contact-title') {
-      const el = document.getElementById('contact-title');
-      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
-    }
-  }, []);
 
   const pageTitle = language === 'de'
     ? 'Tour buchen – Zuza Prague Tours'

@@ -187,6 +187,14 @@ export const translations = {
     en: 'Contact Me',
     de: 'Kontaktieren Sie mich',
   },
+  'hero.sendEnquiry': {
+    en: 'Send enquiry',
+    de: 'Anfrage senden',
+  },
+  'hero.responsePromise': {
+    en: 'I usually reply within 24 hours.',
+    de: 'Ich antworte in der Regel innerhalb von 24 Stunden.',
+  },
 
   // Features
   'features.historic.title': {
@@ -251,6 +259,14 @@ export const translations = {
     en: 'Ing. Zuzana Manová - 40 Years of Excellence',
     de: 'Ing. Zuzana Manová - 40 Jahre Ehrfahrung',
   },
+  'about.badge.line1': {
+    en: 'Certified Expert,',
+    de: 'Zertifizierte Expertin,',
+  },
+  'about.badge.line2': {
+    en: '40+ Years Experience',
+    de: '40+ Jahre Erfahrung',
+  },
   'about.credential1': {
     en: 'Certified Tour Guide with Special Jewish Quarter Certification',
     de: 'Zertifizierte Reiseführerin mit Sonderzertifizierung für das Jüdische Viertel',
@@ -284,6 +300,103 @@ export const translations = {
   'cta.whatsapp': {
     en: 'WhatsApp',
     de: 'WhatsApp',
+  },
+
+  'home.badge': {
+    en: 'Personal · Certified · Local',
+    de: 'Persönlich · Zertifiziert · Lokal',
+  },
+  'home.hero.line1': {
+    en: 'Discover Prague',
+    de: 'Entdecken Sie Prag',
+  },
+  'home.hero.line2': {
+    en: 'with Zuzana',
+    de: 'mit Zuzana',
+  },
+  'home.meta1': {
+    en: '40+ years of experience',
+    de: 'Über 40 Jahre Erfahrung',
+  },
+  'home.meta2': {
+    en: 'Small groups & private tours',
+    de: 'Kleine Gruppen & Privattouren',
+  },
+  'home.meta3': {
+    en: '4.9 · 312 reviews on TripAdvisor',
+    de: '4,9 · 312 Bewertungen auf TripAdvisor',
+  },
+  'home.hero.noPressure': {
+    en: 'No commitment · Personal quote',
+    de: 'Unverbindlich anfragen · Persönliches Angebot',
+  },
+  'home.hero.imageAlt': {
+    en: 'View of Charles Bridge in Prague at dusk',
+    de: 'Blick auf die Karlsbrücke in Prag bei Abenddämmerung',
+  },
+  'home.tours.teaser.title': {
+    en: 'Popular tours',
+    de: 'Beliebte Touren',
+  },
+  'home.tours.teaser.viewAll': {
+    en: 'View all tours',
+    de: 'Alle Touren ansehen',
+  },
+  'home.reviews.groupTitle': {
+    en: 'Guest reviews',
+    de: 'Bewertungen von Gästen',
+  },
+  'home.tripadvisor.sectionTitle': {
+    en: 'Recent reviews on TripAdvisor',
+    de: 'Aktuelle Bewertungen auf TripAdvisor',
+  },
+  'home.tripadvisor.viewAll': {
+    en: 'All reviews on TripAdvisor',
+    de: 'Alle Bewertungen auf TripAdvisor',
+  },
+  'home.tourhq.sectionTitle': {
+    en: 'Reviews on TourHQ',
+    de: 'Aktuelle Bewertungen auf TourHQ',
+  },
+  'home.tourhq.cardText': {
+    en: 'Read verified reviews and see Zuzana\'s full guide profile on TourHQ.',
+    de: 'Lesen Sie verifizierte Bewertungen und sehen Sie Zuzanas vollständiges Guide-Profil auf TourHQ.',
+  },
+  'home.tourhq.viewProfile': {
+    en: 'View profile on TourHQ',
+    de: 'Profil auf TourHQ öffnen',
+  },
+  'home.section.story.title': {
+    en: 'Prague, told with passion',
+    de: 'Prag, erzählt mit Leidenschaft',
+  },
+  'home.gallery.title': {
+    en: 'Moments from the city',
+    de: 'Momente aus der Stadt',
+  },
+  'home.testimonials.title': {
+    en: 'What our guests say',
+    de: 'Was unsere Gäste sagen',
+  },
+  'home.testimonial1.quote': {
+    en: "Zuzana took us to places we would never have found alone. Her stories made the stones come alive.",
+    de: 'Zuzana führte uns an Orte, die wir alleine nie gefunden hätten. Ihre Geschichten haben die Steine lebendig gemacht.',
+  },
+  'home.testimonial1.author': {
+    en: '— Guests from Germany',
+    de: '— Gäste aus Deutschland',
+  },
+  'home.testimonial2.quote': {
+    en: 'The perfect mix of history and local anecdotes. Her love for Prague is contagious.',
+    de: 'Die perfekte Mischung aus Geschichte und lokalen Anekdoten. Ihre Liebe zu Prag ist ansteckend.',
+  },
+  'home.testimonial2.author': {
+    en: '— Guests from the UK',
+    de: '— Gäste aus dem UK',
+  },
+  'nav.about': {
+    en: 'About',
+    de: 'Über mich',
   },
 
   // Tours Page
@@ -497,6 +610,14 @@ export const translations = {
     en: 'Book Now',
     de: 'Jetzt buchen',
   },
+  'tour.sendEnquiry': {
+    en: 'Send enquiry',
+    de: 'Anfrage senden',
+  },
+  'tour.badge.popular': {
+    en: 'Popular',
+    de: 'Beliebt',
+  },
 
   // Tour Info
   'tourinfo.groups.title': {
@@ -600,6 +721,16 @@ export const translations = {
     de: 'Per WhatsApp buchen',
   },
 
+  // Jewish Quarter credential callout (booking page)
+  'contact.jewish.credential.title': {
+    en: 'Certified Jewish Quarter Guide',
+    de: 'Zertifizierte Führerin für das Jüdische Viertel',
+  },
+  'contact.jewish.credential.text': {
+    en: 'Zuzana holds official certification from the Jewish Museum in Prague — the institution that administers the historic synagogues, the Old Jewish Cemetery, and the Quarter\'s memorial sites. She knows the history behind every stone, every name, and every story that the Quarter still carries.',
+    de: 'Zuzana besitzt die offizielle Zertifizierung des Jüdischen Museums in Prag — der Institution, die die historischen Synagogen, den Alten Jüdischen Friedhof und die Gedenkstätten des Viertels verwaltet. Sie kennt die Geschichte hinter jedem Stein, jedem Namen und jeder Geschichte, die das Viertel noch heute bewahrt.',
+  },
+
   // Contact Form
   'form.title': {
     en: 'Send a Message',
@@ -661,6 +792,34 @@ export const translations = {
     en: 'Experience Prague through the eyes of a certified local expert',
     de: 'Erleben Sie Prag mit einer zertifizierten lokalen Expertin',
   },
+  'footer.cta.eyebrow': {
+    en: 'Certified expert · 40 years experience',
+    de: 'Zertifizierte Expertin · 40 Jahre Erfahrung',
+  },
+  'footer.cta.title': {
+    en: 'Ready to discover Prague?',
+    de: 'Bereit, Prag zu entdecken?',
+  },
+  'footer.certified': {
+    en: 'Certified Prague tour guide',
+    de: 'Zertifizierte Prager Reiseführerin',
+  },
+  'footer.reviewCount': {
+    en: '312 reviews',
+    de: '312 Bewertungen',
+  },
+  'footer.tripadvisor.trustLine': {
+    en: '4.9 ★ TripAdvisor',
+    de: '4,9 ★ TripAdvisor',
+  },
+  'footer.tourhq.badge': {
+    en: 'TourHQ verified',
+    de: 'TourHQ verifiziert',
+  },
+  'footer.tourhq.sub': {
+    en: 'Profile & reviews',
+    de: 'Profil & Bewertungen',
+  },
   'footer.contact': {
     en: 'Contact',
     de: 'Kontakt',
@@ -709,9 +868,49 @@ export const translations = {
     en: 'Back to Blog',
     de: 'Zurück zum Blog',
   },
+  'blog.share': {
+    en: 'Share this post',
+    de: 'Diesen Beitrag teilen',
+  },
+  'blog.related': {
+    en: 'More Prague insights',
+    de: 'Mehr Prag-Impulse',
+  },
   'blog.aboutBox.title': {
     en: 'About Zuza Prague Tours',
     de: 'Über Zuza Prague Tours',
+  },
+  'blog.tocTitle': {
+    en: 'Table of contents',
+    de: 'Inhalt',
+  },
+  'blog.featuredTour.title': {
+    en: 'Featured tour: Prague highlights',
+    de: 'Empfohlene Tour: Prag‑Highlights',
+  },
+  'blog.featuredTour.desc': {
+    en: 'Private walking tours tailored to your pace — Old Town, Castle, hidden corners.',
+    de: 'Private Stadtführungen in Ihrem Tempo — Altstadt, Burg, versteckte Winkel.',
+  },
+  'blog.featuredTour.cta': {
+    en: 'Book now',
+    de: 'Jetzt buchen',
+  },
+  'blog.newsletter.title': {
+    en: 'Stay in touch',
+    de: 'Bleiben Sie in Kontakt',
+  },
+  'blog.newsletter.blurb': {
+    en: 'Ask a question or tell us when you are visiting — we will get back to you.',
+    de: 'Stellen Sie eine Frage oder nennen Sie Ihr Reisedatum — wir melden uns.',
+  },
+  'blog.newsletter.cta': {
+    en: 'Contact us',
+    de: 'Kontakt aufnehmen',
+  },
+  'blog.shareMore': {
+    en: 'Share',
+    de: 'Teilen',
   },
 
   // Blog Posts
