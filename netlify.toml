@@ -8,9 +8,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-[edge_functions]
-  directory = "netlify/edge-functions"
-
 # Run the ingest function every 10 minutes
 [[scheduled]]
   path = "/.netlify/functions/ingest"

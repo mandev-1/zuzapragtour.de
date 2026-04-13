@@ -56,3 +56,9 @@ You have your contact info on the left, which is great, but it’s a bit passive
 By making these changes, you shift the page from being a "Contact Form" to being a "Booking Engine."
 
 
+
+
+
+#### REDO https://www.bing.com/webmasters/urlinspection?siteUrl=https%3A%2F%2Fzuzapragtour.de%2F&urlToInspect=https%253A%252F%252Fzuzapragtour.de%252Ftours BING WEBMASTER TOOLS
+
+
