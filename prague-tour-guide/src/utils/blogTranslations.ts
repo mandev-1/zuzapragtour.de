@@ -22,82 +22,82 @@ export const blogTranslations = {
   },
   'blog.post14.content': {
     en: `<h2>Top Places to Visit in Prague Right Now (2025)</h2>
-<p class="lead">Prague rewards every hour of the day—sunrise on <strong>Charles Bridge</strong>, quiet lawns in <strong>Petřín Gardens</strong>, design museums on rainy afternoons, and glowing rooftops and pubs after dark. This guide brings together <em>iconic landmarks</em>, <em>green escapes</em>, <em>art & design</em>, and <em>2025 nightlife</em> so you can choose what fits your time, mood, and weather—today.</p>
+<p class=”lead”>Prague works at any hour. Sunrise on <strong>Charles Bridge</strong>, quiet lawns in <strong>Petřín Gardens</strong>, design museums when it rains, glowing rooftops after dark. I always tell guests: plan your day by the light, not by a checklist. Here’s how I’d do it now.</p>
 
-<h3>How to Use This Guide</h3>
+<h3>A few practical notes before you start</h3>
 <ul>
-  <li><strong>Map your day by light:</strong> go for icons at sunrise, parks late morning, museums in the afternoon, rooftops at sunset, and cozy bars at night.</li>
-  <li><strong>Walkable clusters:</strong> Old Town (Staré Město), Lesser Town (Malá Strana), Castle area (Hradčany/Petřín), and Vinohrady/Žižkov (for parks and beer).</li>
-  <li><strong>Reservations:</strong> recommended for rooftops and cocktail bars (Fri–Sat). Bring a light layer year‑round—stone streets hold cool air.</li>
+  <li><strong>Plan by light:</strong> icons at sunrise, parks late morning, museums in the afternoon, rooftops at sunset, bars at night.</li>
+  <li><strong>Walk in clusters:</strong> Old Town (Staré Město), Lesser Town (Malá Strana), the Castle ridge (Hradčany/Petřín), and Vinohrady/Žižkov for parks and decent beer.</li>
+  <li><strong>Rooftops and cocktail bars:</strong> book ahead on Fridays and Saturdays. Bring a layer. Stone streets stay cold even in July.</li>
 </ul>
 
 <hr />
-<h2>1) Prague’s Classics—See Them Right Now, but Smartly</h2>
+<h2>1) The Classics — Worth It, If You Time Them Right</h2>
 <h3>Charles Bridge (Karlův most)</h3>
-<p>Nothing replaces the feeling of stepping onto Charles Bridge at blue hour. Come early to admire <strong>statues, towers, and castle views</strong> without the midday throng. From the <em>Old Town Bridge Tower</em> side, look toward the Castle for that picture‑perfect diagonal of arches and spires.</p>
+<p>The bridge at blue hour is something I never get tired of showing people. Come early to see <strong>statues, towers, and castle views</strong> without the midday crowds. From the <em>Old Town Bridge Tower</em> side, look toward the Castle for that long diagonal of arches and spires. It’s the photograph everyone takes for a reason.</p>
 
 <h3>Old Town Square (Staroměstské náměstí)</h3>
-<p>At the northwest corner, the <strong>Astronomical Clock</strong> plays on the hour. Early mornings give you pastel façades and soft reflections in cobblestones; late evenings bring a glow that’s just as magical. Explore the radiating lanes—Ungelt courtyard, Týn Church, and passages toward <em>Pařížská</em>.</p>
+<p>At the northwest corner, the <strong>Astronomical Clock</strong> performs on the hour. Early mornings give you pastel façades and soft light on the cobblestones. Late evenings are just as good. Wander the side lanes — Ungelt courtyard, Týn Church, the passages toward <em>Pařížská</em> are all within a few minutes’ walk.</p>
 
 <h3>Prague Castle Courtyards & St. Vitus Vistas</h3>
-<p>Castle courtyards are free to enter, perfect in the late afternoon when the city below warms to amber. The <strong>III. Courtyard</strong> frames St. Vitus Cathedral; the South Gardens and terraces give a sweep of rooftops and river. Combine with a walk down through the <em>Lesser Town</em> to Kampa.</p>
+<p>The courtyards are free to enter. Late afternoon is my preferred time, when the city below turns amber. The <strong>III. Courtyard</strong> frames St. Vitus Cathedral beautifully; the South Gardens give you a long sweep of rooftops and the river. Walk down through <em>Lesser Town</em> to Kampa to finish it properly.</p>
 
 <hr />
-<h2>2) Green Escapes with City Views</h2>
+<h2>2) Green Spaces Worth Seeking Out</h2>
 <h3>Petřín Gardens (Petřínské sady)</h3>
-<p>Petřín is Prague’s gentle hillside—orchards, viewpoints, and winding paths. From the Lookout Tower area, you’ll find <strong>castle‑and‑river panoramas</strong>. In spring: blossoms; in summer: shade; in autumn: gold; in winter: stillness. It’s easy to pair with Strahov and the Castle ridge.</p>
+<p>Petřín is Prague’s gentle hillside — orchards, viewpoints, winding paths. Near the Lookout Tower you get <strong>castle-and-river panoramas</strong> that work in every season. Spring blossoms, summer shade, autumn gold, winter stillness. It connects easily to Strahov and the Castle ridge.</p>
 
 <h3>Riegrovy Sady (Vinohrady)</h3>
-<p>Beloved by locals for <strong>sunset views</strong> toward the Castle. Find the meadow on the western edge for that famous skyline. Bring a picnic, or start here before heading to Vinohrady’s cafés and beer spots.</p>
+<p>Locals come here for <strong>sunset views</strong> toward the Castle. The meadow on the western edge has that famous skyline. Bring a picnic or use it as a starting point before heading into Vinohrady’s cafés and beer spots.</p>
 
 <h3>Letná Park (Letenské sady)</h3>
-<p>Letná’s “Stalin” lookout gives you <strong>multiple bridges in one frame</strong>. Photographers love the blue‑hour streaks; families love the open paths and playgrounds. A classic stop on any viewpoint‑hunting day.</p>
+<p>From the old “Stalin” lookout you get <strong>several bridges in one frame</strong>. Photographers love the blue-hour light trails; families love the open paths. Good for any viewpoint day.</p>
 
 <h3>Vojan Gardens & Kampa Corners</h3>
-<p>Close to the river, <strong>Vojan Gardens</strong> remains a pocket of calm with peacocks. Under the bridge arches on <strong>Kampa</strong>, winter willows frame one of the city’s most romantic angles.</p>
+<p><strong>Vojan Gardens</strong>, close to the river, is genuinely calm — peacocks and all. Under the bridge arches on <strong>Kampa</strong>, winter willows frame one of the quieter romantic views in the city.</p>
 
 <hr />
-<h2>3) Art, Design, and Rainy‑Day Bliss</h2>
+<h2>3) Art, Design, and What to Do When It Rains</h2>
 <h3>National Gallery Prague (Trade Fair Palace)</h3>
-<p>For modern and contemporary art, head to the <strong>Trade Fair Palace</strong> (Veletržní palác). Big spaces, bold collections, and rotating exhibitions make it the perfect cool‑weather anchor. Check current shows and plan 90–120 minutes.</p>
+<p>For modern and contemporary art, the <strong>Trade Fair Palace</strong> (Veletržní palác) is the right choice. Big spaces, good rotating exhibitions. Plan 90 to 120 minutes, check what’s showing before you go.</p>
 
 <h3>Museum of Decorative Arts (Uměleckoprůmyslové museum)</h3>
-<p>A treasure for lovers of <strong>design, photography, glass, posters, and fashion</strong>. Beautifully displayed and easy to pair with the riverbanks and Old Town loop.</p>
+<p>One thing I love about this museum: it covers <strong>design, photography, glass, posters, and fashion</strong> all in one building, and it’s always well laid out. Easy to combine with the riverbank and the Old Town loop.</p>
 
-<h3>Rudolfinum & DOX (bonus picks)</h3>
-<p><strong>Rudolfinum</strong> hosts art shows beside the Philharmonic; <strong>DOX</strong> in Holešovice adds architecture and contemporary edge. On rainy days, these spaces keep your plan inspired.</p>
+<h3>Rudolfinum & DOX (worth knowing about)</h3>
+<p><strong>Rudolfinum</strong> runs art exhibitions beside the Philharmonic; <strong>DOX</strong> in Holešovice focuses on architecture and contemporary work. Both are good wet-weather options.</p>
 
 <hr />
 <h2>4) Rooftops and Golden Evenings</h2>
-<p>Prague rooftops shine at sunset. Book ahead on weekends; dress for a breeze even in summer.</p>
+<p>Prague rooftops are at their best at sunset. Book ahead on weekends and bring something warm even in summer.</p>
 <h3>Terasa U Prince (Old Town Square)</h3>
-<p>One of the city’s most iconic open‑air terraces above the Old Town Square, with <strong>360° angles</strong> on towers and spires.</p>
+<p>Open-air terrace directly above the Old Town Square, with <strong>views in every direction</strong> — towers, spires, the whole skyline.</p>
 <div class="blog-inline-image"><img src="/images/blog-ots-terasa.png" alt="Terasa U Prince – Old Town Square rooftop view" loading="lazy" /><div class="image-credit">Image by Nan Palmero from San Antonio, TX, USA</div></div>
 <p><a href="https://menu.terasauprince.com/section:snidane/snidanove-menu" target="_blank" rel="noopener">To find the latest menu from U Prince, go to https://menu.terasauprince.com/section:snidane/snidanove-menu</a></p>
-<p><em>Pro tip:</em> Arrive a little before sunset for the color shift into blue hour. If the terrace is full, try again later in the evening—tables often turn.</p>
+<p><em>Tip:</em> Get there a little before sunset for the color shift into blue hour. If the terrace is full, try again later — tables turn over regularly.</p>
 
-<h3>Other Views to Consider</h3>
+<h3>Other Views Worth Knowing</h3>
 <ul>
-  <li>Hotel and gallery rooftops around <strong>Wenceslas Square</strong> for neon‑and‑spire contrasts.</li>
-  <li>Lookouts by the river (Legion Bridge, Mánes Bridge) if rooftop reservations are tight.</li>
+  <li>Hotel and gallery rooftops around <strong>Wenceslas Square</strong> for the neon-and-spire contrast.</li>
+  <li>River lookouts from Legion Bridge or Mánes Bridge if rooftop reservations are tight.</li>
 </ul>
 
 <hr />
-<h2>5) Nightlife in 2025—Cocktails, Craft Beer, and Late Nights</h2>
-<p>Prague’s nights are diverse: <strong>rooftop bars</strong> for skyline photos, <strong>hidden speakeasies</strong> for mixology, <strong>craft beer pubs</strong> for tasting local microbrews, and clubs that go late. A few ground rules:</p>
+<h2>5) Nightlife in 2025 — Cocktails, Craft Beer, and Late Nights</h2>
+<p>Prague nights cover a lot of ground: <strong>rooftop bars</strong> for skyline photos, <strong>hidden speakeasies</strong> for proper cocktails, <strong>craft beer pubs</strong> for local microbrews, and clubs that run until dawn. A few practical things:</p>
 <ul>
-  <li><strong>Reservations:</strong> recommended for cocktail bars and rooftops on weekends.</li>
-  <li><strong>Hours:</strong> many bars run to 02:00, and clubs to dawn—always check the latest schedules.</li>
-  <li><strong>Early evenings:</strong> best for craft beer if you prefer calmer tasting flights.</li>
-  <li><strong>Transport:</strong> Metro and trams run late; night trams cover the small hours. Taxis and ride‑hailing work well—confirm the price before you hop in.</li>
-  <li><strong>Safety & courtesy:</strong> keep valuables close; be mindful in residential streets after midnight.</li>
+  <li><strong>Reservations:</strong> worth it for cocktail bars and rooftops on weekends.</li>
+  <li><strong>Hours:</strong> many bars run to 02:00, clubs later. Always check before you go.</li>
+  <li><strong>Early evenings:</strong> better for craft beer if you want a quieter tasting experience.</li>
+  <li><strong>Transport:</strong> Metro and trams run late; night trams cover the small hours. Taxis and ride-hailing work fine. Agree on the price before you get in.</li>
+  <li><strong>Common sense:</strong> keep valuables close; keep your voice down in residential streets after midnight.</li>
 </ul>
 
-<h3>Cocktail & Rooftop Ideas</h3>
-<p>Alongside Terasa U Prince, you’ll find stylish hotel rooftops, view‑driven lounges along the river, and speakeasy‑style bars scattered through the center. Dress code trends casual‑smart; bar teams appreciate reservations and punctuality.</p>
+<h3>Cocktails and Rooftop Ideas</h3>
+<p>Beyond Terasa U Prince, there are good hotel rooftops, river-view lounges, and a handful of proper speakeasies scattered through the centre. Casual-smart is the right dress code. Bar staff appreciate punctuality if you’ve reserved.</p>
 
-<h3>Craft Beer & Classic Pubs</h3>
-<p>Czech beer is a culture—explore <strong>rotating taps from microbreweries</strong>, seasonal styles, and flights. Spots around <em>Vinohrady, Žižkov</em> and the Old Town lanes serve both beginners and aficionados. Many pubs keep food simple: cheese plates, pickled snacks, and hearty Czech classics nearby.</p>
+<h3>Craft Beer and Classic Pubs</h3>
+<p>Czech beer is serious here, and I mean that as a compliment. Explore <strong>rotating taps from microbreweries</strong>, seasonal styles, and tasting flights. Around <em>Vinohrady and Žižkov</em> you’ll find places that work for both beginners and people who actually read tap lists. Food is usually simple: cheese, pickled things, something hearty nearby.</p>
 
 <div class="blog-cta-box">
   <h3>Plan a Night Out That Fits You</h3>
@@ -109,123 +109,123 @@ export const blogTranslations = {
   </div>
 
 <hr />
-<h2>6) River Walks and Easy Loops</h2>
+<h2>6) River Walks</h2>
 <h3>Střelecký Island (Střelecký ostrov)</h3>
-<p>The calmest middle‑of‑the‑river perch for reflections of bridges and theatres. Great at golden hour and on warm nights.</p>
+<p>A quiet island in the middle of the river, good for bridge and theatre reflections. Works best at golden hour or on warm evenings.</p>
 
 <h3>Náplavka and Quays</h3>
-<p>Seasonal barge cafés and long stone quays make for a slow sunset stroll. If crowds peak on weekends, go earlier; weekday evenings are mellow.</p>
+<p>Barge cafés, long stone quays, slow sunset walks. Weekends get crowded from late afternoon. Come earlier or try a weekday evening.</p>
 
 <h3>Kaprova → Rudolfinum → Mánes Bridge</h3>
-<p>A classic camera‑friendly path: elegant façades, tram lines, and the castle rising behind the Philharmonic.</p>
+<p>A classic stretch for photographers: good facades, tram lines, and the Castle sitting above the Philharmonic roof.</p>
 
 <hr />
-<h2>7) Putting It All Together—Sample Day & Night</h2>
+<h2>7) How I’d Put a Day Together</h2>
 <ul>
-  <li><strong>Sunrise:</strong> Charles Bridge + Old Town corners</li>
+  <li><strong>Sunrise:</strong> Charles Bridge, then a wander through the Old Town lanes</li>
   <li><strong>Late morning:</strong> Petřín or Letná for views</li>
-  <li><strong>Afternoon (rainy option):</strong> National Gallery or Museum of Decorative Arts</li>
-  <li><strong>Sunset:</strong> Terasa U Prince (reserve ahead)</li>
-  <li><strong>Night:</strong> cocktail bar or craft‑beer loop; end with river reflections</li>
-  </ul>
+  <li><strong>Afternoon (if it rains):</strong> National Gallery or the Museum of Decorative Arts</li>
+  <li><strong>Sunset:</strong> Terasa U Prince — reserve ahead</li>
+  <li><strong>Night:</strong> a cocktail bar or craft-beer pub, then down to the river for the reflections</li>
+</ul>
 
-<h3>Practical Notes</h3>
+<h3>A Few Practical Things</h3>
 <ul>
-  <li><strong>Cashless works everywhere</strong>, but a few small pubs prefer cash.</li>
-  <li><strong>Weekends</strong> fill fast—consider Mon–Thu for maximum calm.</li>
-  <li><strong>Season</strong> matters: winter light is cinematic; summer calls for shade and later sunsets.</li>
-  <li><strong>Respect the city:</strong> residential quiet hours begin around 22:00—keep voices low in courtyards and narrow lanes.</li>
-  </ul>
+  <li><strong>Card payments</strong> work almost everywhere, but a few small pubs still prefer cash.</li>
+  <li><strong>Weekends</strong> fill up quickly. Monday to Thursday is noticeably calmer.</li>
+  <li><strong>Season matters:</strong> winter light is genuinely beautiful here; summer means later sunsets and better terrace weather.</li>
+  <li><strong>Be considerate:</strong> residential quiet starts around 22:00 — keep voices down in courtyards and narrow lanes.</li>
+</ul>
 
 <div class="did-you-know"><h4>Further Resources</h4>
-  <p>For curated lists and what’s on right now, see established nightlife and rooftop guides, community threads, and events calendars maintained in 2025 by local media and travelers.</p>
+  <p>For what’s on right now, the most reliable sources are local media event calendars and community threads updated through 2025.</p>
 </div>
 
 <div class="blog-cta-box">
-  <h3>Want a plan tailored to today’s weather and your energy?</h3>
-  <p>I’ll build a <strong>walkable day‑to‑night route</strong>—icons, parks, a museum stop, and a finale on a rooftop or in a great pub—timed to the light and your pace.</p>
+  <h3>Want a plan built around today’s weather and your energy?</h3>
+  <p>I’ll put together a <strong>walkable day-to-night route</strong> — landmarks, parks, a museum stop if the weather calls for it, and a proper finish on a rooftop or in a good pub. Timed to the light and your pace.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Custom%20Private%20Tour#contact-title">Book a custom private tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Contact me</a>
   </div>
 </div>`,
     de: `<h2>Top‑Orte, die Sie jetzt in Prag besuchen sollten (2025)</h2>
-<p class="lead">Prag lohnt sich zu jeder Stunde—Sonnenaufgang auf der <strong>Karlsbrücke</strong>, ruhige Wiesen in den <strong>Petřín‑Gärten</strong>, Designmuseen bei Regen und leuchtende Rooftops und Pubs nach Einbruch der Dunkelheit. Dieser Guide bündelt <em>Ikonen</em>, <em>grüne Oasen</em>, <em>Kunst & Design</em> und <em>Nachtleben 2025</em>, damit Sie je nach Zeit, Wetter und Stimmung <strong>heute</strong> die passenden Orte finden.</p>
+<p class=”lead”>Prag funktioniert zu jeder Stunde. Sonnenaufgang auf der <strong>Karlsbrücke</strong>, ruhige Wiesen in den <strong>Petřín‑Gärten</strong>, Designmuseen bei Regen, leuchtende Rooftops nach Einbruch der Dunkelheit. Ich sage meinen Gästen immer: Planen Sie den Tag nach dem Licht, nicht nach einer Liste.</p>
 
-<h3>So nutzen Sie diesen Guide</h3>
+<h3>Einige praktische Hinweise vorab</h3>
 <ul>
-  <li><strong>Plan nach Licht:</strong> Ikonen im Sonnenaufgang, Parks am späten Vormittag, Museen am Nachmittag, Rooftops zum Sonnenuntergang, gemütliche Bars am Abend.</li>
-  <li><strong>Begehbare Cluster:</strong> Altstadt (Staré Město), Kleinseite (Malá Strana), Burg/Strahov/Petřín sowie Vinohrady/Žižkov (für Parks & Bier).</li>
-  <li><strong>Reservieren:</strong> empfohlen für Rooftops & Cocktailbars (Fr–Sa). Leichte Jacke einplanen—Stein speichert Kühle.</li>
+  <li><strong>Plan nach Licht:</strong> Ikonen bei Sonnenaufgang, Parks am späten Vormittag, Museen am Nachmittag, Rooftops zum Sonnenuntergang, Bars am Abend.</li>
+  <li><strong>In Clustern laufen:</strong> Altstadt (Staré Město), Kleinseite (Malá Strana), Burgrücken (Hradčany/Petřín) sowie Vinohrady/Žižkov für Parks und ordentliches Bier.</li>
+  <li><strong>Rooftops und Cocktailbars:</strong> am Wochenende reservieren. Eine Schicht einplanen. Kopfsteinpflaster bleibt auch im Juli kühl.</li>
 </ul>
 
 <hr />
-<h2>1) Prager Klassiker—jetzt sehen, aber clever</h2>
+<h2>1) Die Klassiker — lohnenswert, wenn man sie richtig timed</h2>
 <h3>Karlsbrücke (Karlův most)</h3>
-<p>Nichts ersetzt das Gefühl, zur Blauen Stunde auf der Karlsbrücke zu stehen. Früh kommen und <strong>Statuen, Türme, Schlossblick</strong> ohne Mittagsandrang genießen. Vom <em>Altstädter Brückenturm</em> aus entsteht die perfekte Diagonale aus Bögen und Spitzen.</p>
+<p>Die Brücke zur Blauen Stunde ist etwas, das ich nie satt bekomme. Früh kommen für <strong>Statuen, Türme und Schlossblick</strong> ohne Mittagsandrang. Vom <em>Altstädter Brückenturm</em> aus entsteht diese lange Diagonale aus Bögen und Spitzen. Das Foto, das alle machen, hat seinen Grund.</p>
 
 <h3>Altstädter Ring (Staroměstské náměstí)</h3>
-<p>An der Nordwestecke spielt die <strong>Astronomische Uhr</strong> zur vollen Stunde. Frühmorgens schimmern Pastellfassaden; am späten Abend leuchtet der Platz. Erkunden Sie die abzweigenden Gassen—Ungelt‑Hof, Teynkirche, Passagen zur <em>Pařížská</em>.</p>
+<p>An der Nordwestecke spielt die <strong>Astronomische Uhr</strong> zur vollen Stunde. Frühmorgens schimmern Pastellfassaden im sanften Licht. Abends ist es genauso gut. Die Seitengassen lohnen sich: Ungelt-Hof, Teynkirche, Passagen zur <em>Pařížská</em> liegen alle nur ein paar Minuten entfernt.</p>
 
-<h3>Burg‑Höfe & Veitsdom‑Blicke</h3>
-<p>Die Burghöfe sind frei zugänglich—ideal am späten Nachmittag, wenn die Stadt im warmen Licht liegt. Der <strong>III. Burghof</strong> rahmt den Veitsdom; die Südgärten bieten weite Dächer‑ und Flussblicke. Abstieg über die <em>Kleinseite</em> nach Kampa ist ein Klassiker.</p>
+<h3>Burghöfe & Veitsdom-Blicke</h3>
+<p>Die Burghöfe sind frei zugänglich. Später Nachmittag ist meine bevorzugte Zeit, wenn die Stadt unten amber wird. Der <strong>III. Burghof</strong> rahmt den Veitsdom schön ein; die Südgärten bieten einen weiten Bogen über Dächer und Fluss. Abstieg über <em>Kleinseite</em> nach Kampa macht den Abschluss.</p>
 
 <hr />
-<h2>2) Grüne Oasen mit Aussicht</h2>
-<h3>Petřín‑Gärten (Petřínské sady)</h3>
-<p>Der sanfte Hügel Prags—Obstgärten, Aussichtspunkte, Serpentinen. Beim Aussichtsturm finden Sie <strong>Schloss‑und‑Flusspanoramen</strong>. Frühling: Blüte, Sommer: Schatten, Herbst: Gold, Winter: Stille. Gut kombinierbar mit Strahov und dem Burgrücken.</p>
+<h2>2) Grüne Orte, die sich lohnen</h2>
+<h3>Petřín-Gärten (Petřínské sady)</h3>
+<p>Petřín ist Prags sanfter Hügel — Obstgärten, Aussichtspunkte, Serpentinen. Beim Aussichtsturm gibt es <strong>Schloss-und-Flusspanoramen</strong>, die in jeder Jahreszeit funktionieren. Verbindet sich gut mit Strahov und dem Burgrücken.</p>
 
 <h3>Riegrovy Sady (Vinohrady)</h3>
-<p>Von Einheimischen geliebt für <strong>Sonnenuntergänge</strong> Richtung Burg. Auf der Westwiese liegt der bekannte Skyline‑Blick. Picknick möglich, danach in Vinohrady in Cafés und Bierlokale wechseln.</p>
+<p>Einheimische kommen hierher für <strong>Sonnenuntergangsblicke</strong> Richtung Burg. Die Wiese am Westrand hat diesen bekannten Skyline-Blick. Picknick mitbringen oder danach in Vinohrady in Cafés und Bierkneipen wechseln.</p>
 
-<h3>Letná‑Park (Letenské sady)</h3>
-<p>Am „Stalin“‑Aussichtspunkt bekommen Sie <strong>mehrere Brücken im Bild</strong>. Fotografen mögen die Blaue Stunde; Familien die Wege und Spielplätze. Ein Muss für Aussichtssammler.</p>
+<h3>Letná-Park (Letenské sady)</h3>
+<p>Vom alten „Stalin”-Aussichtspunkt bekommt man <strong>mehrere Brücken im Bild</strong>. Fotografen mögen die Blaue Stunde; Familien die offenen Wege. Gut für jeden Aussichtstag.</p>
 
-<h3>Vojan‑Garten & Kampa‑Ecken</h3>
-<p>Nahe der Moldau ist der <strong>Vojan‑Garten</strong> eine ruhige Tasche mit Pfauen. Unter den Brückenbögen auf <strong>Kampa</strong> rahmen Weiden einen der romantischsten Blicke der Stadt.</p>
+<h3>Vojan-Garten & Kampa-Ecken</h3>
+<p>Der <strong>Vojan-Garten</strong> nahe der Moldau ist ruhig — mit Pfauen. Unter den Brückenbögen auf <strong>Kampa</strong> rahmen Winterweiden einen der stilleren romantischen Blicke der Stadt.</p>
 
 <hr />
-<h2>3) Kunst, Design & Regentage</h2>
+<h2>3) Kunst, Design und was man bei Regen macht</h2>
 <h3>Nationalgalerie Prag (Messepalast)</h3>
-<p>Für moderne & zeitgenössische Kunst zum <strong>Messepalast</strong> (Veletržní palác). Weitläufige Räume, starke Sammlungen, wechselnde Ausstellungen—ideal als Anker bei kühlem Wetter. 90–120 Min einplanen.</p>
+<p>Für moderne und zeitgenössische Kunst ist der <strong>Messepalast</strong> (Veletržní palác) die richtige Wahl. Große Räume, gute Wechselausstellungen. 90 bis 120 Minuten einplanen, vorher prüfen was läuft.</p>
 
 <h3>Museum für Kunstgewerbe (Uměleckoprůmyslové museum)</h3>
-<p>Ein Schatz für <strong>Design, Fotografie, Glas, Plakate, Mode</strong>. Schön inszeniert und gut mit den Moldauufern & der Altstadt zu verbinden.</p>
+<p>Was ich an diesem Museum mag: es zeigt <strong>Design, Fotografie, Glas, Plakate und Mode</strong> unter einem Dach, und die Inszenierung ist immer gut. Gut kombinierbar mit dem Moldauufer und der Altstadt-Runde.</p>
 
-<h3>Rudolfinum & DOX (Bonus)</h3>
-<p><strong>Rudolfinum</strong> zeigt Ausstellungen neben der Philharmonie; <strong>DOX</strong> in Holešovice bringt Architektur und Gegenwartskunst. Bei Regen bleiben Ihre Pläne inspiriert.</p>
+<h3>Rudolfinum & DOX (gut zu wissen)</h3>
+<p><strong>Rudolfinum</strong> zeigt Ausstellungen neben der Philharmonie; <strong>DOX</strong> in Holešovice fokussiert auf Architektur und Gegenwartskunst. Beides gute Optionen bei schlechtem Wetter.</p>
 
 <hr />
-<h2>4) Rooftops und Goldene Stunde</h2>
-<p>Prager Dachterrassen glänzen zum Sonnenuntergang. Am Wochenende reservieren; auch im Sommer eine leichte Jacke mitnehmen.</p>
+<h2>4) Rooftops und die Goldene Stunde</h2>
+<p>Prager Dachterrassen sind zum Sonnenuntergang am besten. Am Wochenende vorher reservieren, auch im Sommer etwas Warmes mitnehmen.</p>
 <h3>Terasa U Prince (Altstädter Ring)</h3>
-<p>Eine der ikonischen offenen Terrassen über dem Altstädter Ring mit <strong>Rundumblicken</strong> auf Türme und Spitzen.</p>
+<p>Offene Terrasse direkt über dem Altstädter Ring, mit <strong>Blicken in alle Richtungen</strong> — Türme, Spitzen, die ganze Skyline.</p>
 <div class="blog-inline-image"><img src="/images/blog-ots-terasa.png" alt="Terasa U Prince – Rooftop am Altstädter Ring" loading="lazy" /><div class="image-credit">Image by Nan Palmero from San Antonio, TX, USA</div></div>
 <p><a href="https://menu.terasauprince.com/section:snidane/snidanove-menu" target="_blank" rel="noopener">To find the latest menu from U Prince, go to https://menu.terasauprince.com/section:snidane/snidanove-menu</a></p>
-<p><em>Tipp:</em> Ein wenig vor Sonnenuntergang ankommen, den Farbwechsel in die Blaue Stunde mitnehmen. Wenn voll: später am Abend wiederkommen—Tische drehen oft.</p>
+<p><em>Tipp:</em> Etwas vor Sonnenuntergang ankommen und den Farbwechsel in die Blaue Stunde mitnehmen. Wenn voll: später wiederkommen — Tische drehen regelmäßig.</p>
 
 <h3>Weitere Blickpunkte</h3>
 <ul>
-  <li>Hotel‑ und Galerie‑Rooftops rund um den <strong>Wenzelsplatz</strong> für Neon‑/Turm‑Kontraste.</li>
-  <li>Uferblicke (Legions‑, Mánes‑Brücke), falls Rooftop‑Reservierungen knapp sind.</li>
+  <li>Hotel- und Galerie-Rooftops rund um den <strong>Wenzelsplatz</strong> für den Neon-und-Turm-Kontrast.</li>
+  <li>Uferblicke von der Legions- oder Mánes-Brücke, falls Rooftop-Reservierungen knapp sind.</li>
 </ul>
 
 <hr />
-<h2>5) Nachtleben 2025—Cocktails, Craft Beer, lange Nächte</h2>
-<p>Prags Abende sind vielfältig: <strong>Rooftop‑Bars</strong> für Skyline‑Fotos, <strong>Speakeasies</strong> für Mixology, <strong>Craft‑Beer‑Pubs</strong> für lokale Mikrobrauereien, Clubs bis spät. Grundregeln:</p>
+<h2>5) Nachtleben 2025 — Cocktails, Craft Beer, lange Nächte</h2>
+<p>Prager Abende haben viele Richtungen: <strong>Rooftop-Bars</strong> für Skyline-Fotos, <strong>Speakeasies</strong> für ordentliche Cocktails, <strong>Craft-Beer-Pubs</strong> für lokale Mikrobrauereien, Clubs bis zum Morgen. Einige praktische Punkte:</p>
 <ul>
-  <li><strong>Reservierungen:</strong> für Cocktailbars & Rooftops am Wochenende sinnvoll.</li>
-  <li><strong>Zeiten:</strong> viele Bars bis 02:00, Clubs bis in die Morgenstunden—aktuelle Öffnungszeiten prüfen.</li>
-  <li><strong>Früher Abend:</strong> ideal für Craft Beer, wenn Sie es ruhiger mögen.</li>
-  <li><strong>Transport:</strong> Metro & Tram fahren spät; Nachttrams decken die kleinen Stunden ab. Taxis/Ridesharing funktionieren—Preis vorab klären.</li>
-  <li><strong>Sicherheit & Rücksicht:</strong> Wertsachen nah am Körper; in Wohnstraßen nach Mitternacht leise sein.</li>
+  <li><strong>Reservierungen:</strong> lohnen sich für Cocktailbars und Rooftops am Wochenende.</li>
+  <li><strong>Zeiten:</strong> viele Bars bis 02:00, Clubs länger. Immer vorher prüfen.</li>
+  <li><strong>Früher Abend:</strong> besser für Craft Beer, wenn man es ruhiger mag.</li>
+  <li><strong>Transport:</strong> Metro und Tram fahren spät; Nachttrams decken die kleinen Stunden ab. Taxis und Ridesharing funktionieren. Preis vorher vereinbaren.</li>
+  <li><strong>Allgemein:</strong> Wertsachen nah am Körper; in Wohnstraßen nach Mitternacht bitte leise.</li>
 </ul>
 
-<h3>Cocktail & Rooftop‑Ideen</h3>
-<p>Neben der Terasa U Prince finden Sie stilvolle Hotel‑Dächer, Fluss‑Lounges mit Blick und versteckte Bars in der Innenstadt. Dresscode meist casual‑smart; Pünktlichkeit bei Reservierungen kommt gut an.</p>
+<h3>Cocktails und Rooftop-Ideen</h3>
+<p>Neben der Terasa U Prince gibt es gute Hotel-Dächer, Fluss-Lounges mit Aussicht und ein paar echte Speakeasies in der Innenstadt. Casual-smart ist der richtige Dresscode. Pünktlichkeit bei Reservierungen kommt gut an.</p>
 
-<h3>Craft Beer & klassische Pubs</h3>
-<p>Tschechisches Bier ist Kultur—probieren Sie <strong>wechselnde Zapfhähne</strong>, Saisonales und Tasting‑Flights. In <em>Vinohrady, Žižkov</em> und Altstadtgassen gibt es Orte für Einsteiger und Kenner. Viele Pubs halten das Essen einfach: Käse, Eingelegtes; deftige Küche gibt es oft ums Eck.</p>
+<h3>Craft Beer und klassische Pubs</h3>
+<p>Tschechisches Bier wird hier ernst genommen, und ich meine das als Kompliment. Probieren Sie <strong>wechselnde Zapfhähne</strong>, Saisonales und Tasting-Flights. In <em>Vinohrady und Žižkov</em> gibt es Orte, die für Einsteiger und Kenner funktionieren. Essen ist meistens einfach: Käse, Eingelegtes, etwas Herzhaftes in der Nähe.</p>
 
 <div class="blog-cta-box">
   <h3>Ein Abend nach Ihrem Geschmack</h3>
@@ -237,41 +237,41 @@ export const blogTranslations = {
   </div>
 
 <hr />
-<h2>6) Flussspaziergänge & leichte Runden</h2>
-<h3>Střelecký‑Insel (Střelecký ostrov)</h3>
-<p>Die ruhigste Inselposition für Spiegelungen von Brücken und Theatern. Schön zur Goldenen Stunde und an warmen Abenden.</p>
+<h2>6) Flussspaziergänge</h2>
+<h3>Střelecký-Insel (Střelecký ostrov)</h3>
+<p>Eine ruhige Insel in der Mitte des Flusses, gut für Brücken- und Theaterreflexionen. Am besten zur Goldenen Stunde oder an warmen Abenden.</p>
 
 <h3>Náplavka und Kais</h3>
-<p>Saisonale Barschiffe und lange Steinquais laden zum gemächlichen Sonnenuntergang. Bei Wochenendandrang früher gehen; werktags abends ist es entspannt.</p>
+<p>Barschiffe, lange Steinquais, gemächliche Sonnenuntergangsspaziergänge. Wochenenden werden ab dem späten Nachmittag voll. Früher kommen oder werktags abends.</p>
 
-<h3>Kaprova → Rudolfinum → Mánes‑Brücke</h3>
-<p>Eine klassische Fotostrecke: elegante Fassaden, Tramlinien und die Burg hinter der Philharmonie.</p>
+<h3>Kaprova → Rudolfinum → Mánes-Brücke</h3>
+<p>Eine klassische Strecke für Fotografen: gute Fassaden, Tramlinien und die Burg über dem Philharmoniedach.</p>
 
 <hr />
-<h2>7) Alles verbinden—Beispieltag & ‑abend</h2>
+<h2>7) So würde ich einen Tag zusammenstellen</h2>
 <ul>
-  <li><strong>Sonnenaufgang:</strong> Karlsbrücke + Altstadt‑Ecken</li>
-  <li><strong>Später Vormittag:</strong> Petřín oder Letná</li>
+  <li><strong>Sonnenaufgang:</strong> Karlsbrücke, dann durch die Altstadtgassen</li>
+  <li><strong>Später Vormittag:</strong> Petřín oder Letná für Aussichten</li>
   <li><strong>Nachmittag (bei Regen):</strong> Nationalgalerie oder Museum für Kunstgewerbe</li>
-  <li><strong>Sonnenuntergang:</strong> Terasa U Prince (vorher reservieren)</li>
-  <li><strong>Abend:</strong> Cocktailbar oder Craft‑Beer‑Runde; Abschluss mit Flussblick</li>
-  </ul>
+  <li><strong>Sonnenuntergang:</strong> Terasa U Prince — vorher reservieren</li>
+  <li><strong>Abend:</strong> eine Cocktailbar oder Craft-Beer-Kneipe, dann runter zum Fluss für die Reflexionen</li>
+</ul>
 
-<h3>Praktisches</h3>
+<h3>Ein paar praktische Dinge</h3>
 <ul>
-  <li><strong>Cashless</strong> funktioniert fast überall; wenige kleine Pubs bevorzugen Bargeld.</li>
-  <li><strong>Wochenenden</strong> sind schnell voll—Mo–Do bringt Ruhe.</li>
-  <li><strong>Jahreszeit</strong> zählt: Winterlicht ist filmisch; Sommer braucht Schatten und spätere Sonnenuntergänge.</li>
-  <li><strong>Stadt respektieren:</strong> Nachtruhe ab ca. 22:00—in Höfen und engen Gassen bitte leise.</li>
-  </ul>
+  <li><strong>Kartenzahlung</strong> funktioniert fast überall; wenige kleine Pubs bevorzugen Bargeld.</li>
+  <li><strong>Wochenenden</strong> füllen sich schnell. Montag bis Donnerstag ist spürbar ruhiger.</li>
+  <li><strong>Jahreszeit zählt:</strong> Winterlicht ist hier wirklich schön; Sommer bedeutet spätere Sonnenuntergänge und besseres Terrassenwetter.</li>
+  <li><strong>Rücksicht nehmen:</strong> Nachtruhe beginnt um 22:00 — in Höfen und engen Gassen bitte leise.</li>
+</ul>
 
 <div class="did-you-know"><h4>Weiterführende Ressourcen</h4>
-  <p>Für aktuelle Listen und Termine: Nightlife‑, Rooftop‑Guides, Community‑Threads und Eventkalender, die 2025 von lokalen Medien und Reisenden gepflegt werden.</p>
+  <p>Was gerade läuft findet man am zuverlässigsten in lokalen Medien-Eventkalendern und Community-Threads aus 2025.</p>
 </div>
 
 <div class="blog-cta-box">
-  <h3>Route passend zu Wetter & Energie?</h3>
-  <p>Ich stelle eine <strong>bequeme Day‑to‑Night‑Tour</strong> zusammen—Ikonen, Parks, Museumsstopp und Finale auf dem Rooftop oder im Pub—abgestimmt auf Licht und Ihr Tempo.</p>
+  <h3>Route passend zu heutigem Wetter und Ihrer Energie?</h3>
+  <p>Ich stelle eine <strong>begehbare Day-to-Night-Route</strong> zusammen — Sehenswürdigkeiten, Parks, ein Museumsstopp wenn das Wetter es verlangt, und ein guter Abschluss auf einem Rooftop oder in einer ordentlichen Kneipe. Abgestimmt auf das Licht und Ihr Tempo.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Individuelle%20Privattour#contact-title">Individuelle Privattour buchen</a>
     <a class="btn btn-outline" href="/contact#contact-title">Kontakt aufnehmen</a>
@@ -310,55 +310,55 @@ export const blogTranslations = {
   },
   'blog.post1.content': {
     en: `<h2>When Is the Best Time to Visit Prague?</h2>
-<p>Prague is beautiful year-round, but the <strong>best time to visit</strong> depends on your interests: blooming <em>spring gardens</em>, lively <em>summer evenings</em>, colorful <em>autumn foliage</em>, or romantic <em>winter markets</em>. As a certified local guide, I help you plan the perfect season and itinerary—no crowds, maximum charm.</p>
+<p>People ask me this constantly, and my honest answer: every season has something real going for it. It depends what you’re after. <strong>Spring</strong> is quieter and the light is beautiful. <strong>Summer</strong> is busy but the evenings are long. <strong>Autumn</strong> is probably my personal favourite. <strong>Winter</strong> gets cold but the Christmas markets are genuinely worth it.</p>
 <h3>Spring (March–May)</h3>
 <ul>
-  <li>Cherry blossoms in Petřín and quiet mornings on <a href="/tours">Charles Bridge</a></li>
-  <li>Mild weather for <strong>Old Town & Jewish Quarter</strong> walks</li>
-  <li>Fewer crowds than summer</li>
-  </ul>
+  <li>Cherry blossoms on Petřín in April, and quiet mornings on <a href="/tours">Charles Bridge</a> before the tour groups arrive</li>
+  <li>Good weather for <strong>Old Town and Jewish Quarter</strong> walks without overheating</li>
+  <li>Noticeably fewer crowds than summer</li>
+</ul>
 <h3>Summer (June–August)</h3>
 <ul>
-  <li>Long golden evenings and open-air concerts</li>
-  <li>Perfect for <a href="/tours">Prague Castle</a> courtyards and river views</li>
-  <li>Book in advance—peak season</li>
+  <li>Long golden evenings, open-air concerts, and sunset rooftops</li>
+  <li>Good for <a href="/tours">Prague Castle</a> courtyards and river walks — just come early or late to avoid the midday rush</li>
+  <li>Book accommodation in advance. Peak season fills fast.</li>
 </ul>
 <h3>Autumn (September–November)</h3>
 <ul>
-  <li>Warm colors in royal gardens and vineyards of Letná</li>
-  <li>Still pleasant temperatures and thinner crowds</li>
+  <li>Amber and red foliage in Stromovka and on Petřín hill — October is the best month here in my view</li>
+  <li>Comfortable temperatures and the crowds thin after mid-October</li>
 </ul>
 <h3>Winter (December–February)</h3>
 <ul>
-  <li>Magical <strong>Christmas markets</strong> and snowy rooftops</li>
-  <li>Great for museums and cozy cafés</li>
+  <li><strong>Christmas markets</strong> on Old Town Square and the Castle district — not to be missed</li>
+  <li>Snow-dusted courtyards are almost empty. Good for museums and warm cafés between walks.</li>
 </ul>
-<p class="lead">Want a seasonal, private route tailored to you? <a href="/contact#contact-title">Contact me</a> and I’ll plan your <strong>perfect Prague tour</strong>.</p>`,
+<p class="lead">Want a seasonal private route that works around when you’re actually here? <a href="/contact#contact-title">Contact me</a> and I’ll plan something that fits your time and interests.</p>`,
     de: `<h2>Wann ist die beste Reisezeit für Prag?</h2>
-<p>Prag ist das ganze Jahr über wunderschön. Die <strong>beste Reisezeit</strong> hängt davon ab, was Sie suchen: blühende <em>Frühlingsgärten</em>, lebendige <em>Sommerabende</em>, farbenfroher <em>Herbst</em> oder romantische <em>Wintermärkte</em>. Als zertifizierte lokale Führerin plane ich mit Ihnen die ideale Saison—ohne Menschenmengen, mit maximalem Charme.</p>
+<p>Diese Frage bekomme ich ständig, und meine ehrliche Antwort: Jede Jahreszeit hat etwas Echtes zu bieten. Es kommt darauf an, was Sie suchen. <strong>Frühling</strong> ist ruhiger und das Licht ist schön. <strong>Sommer</strong> ist belebter, aber die Abende sind lang. <strong>Herbst</strong> ist persönlich mein Favorit. <strong>Winter</strong> ist kalt, aber die Weihnachtsmärkte sind es wirklich wert.</p>
 <h3>Frühling (März–Mai)</h3>
 <ul>
-  <li>Kirschblüten auf dem Petřín und ruhige Morgen auf der <a href="/tours">Karlsbrücke</a></li>
-  <li>Angenehm für die <strong>Altstadt & das Jüdische Viertel</strong></li>
-  <li>Weniger Menschen als im Sommer</li>
+  <li>Kirschblüten auf dem Petřín im April, ruhige Morgen auf der <a href="/tours">Karlsbrücke</a> bevor die Reisegruppen ankommen</li>
+  <li>Gutes Wetter für <strong>Altstadt- und Jüdisches-Viertel</strong>-Spaziergänge ohne Überhitzung</li>
+  <li>Spürbar weniger Besucher als im Sommer</li>
 </ul>
 <h3>Sommer (Juni–August)</h3>
 <ul>
-  <li>Lange goldene Abende und Open-Air-Konzerte</li>
-  <li>Ideal für die <a href="/tours">Prager Burg</a> und Flussblicke</li>
-  <li>Frühzeitig buchen—Hochsaison</li>
+  <li>Lange goldene Abende, Open-Air-Konzerte und Sonnenuntergangs-Rooftops</li>
+  <li>Gut für <a href="/tours">Prager Burg</a> und Flussspaziergänge — früh oder spät kommen um den Mittagsandrang zu vermeiden</li>
+  <li>Unterkunft im Voraus buchen. Hochsaison füllt sich schnell.</li>
 </ul>
 <h3>Herbst (September–November)</h3>
 <ul>
-  <li>Warme Farben in Schlossgärten und auf der Letná</li>
-  <li>Angenehme Temperaturen, weniger Gedränge</li>
+  <li>Amber- und rotes Laub in der Stromovka und auf dem Petřín — Oktober ist meiner Meinung nach der beste Monat hier</li>
+  <li>Angenehme Temperaturen, Besucher werden nach Mitte Oktober weniger</li>
 </ul>
 <h3>Winter (Dezember–Februar)</h3>
 <ul>
-  <li>Magische <strong>Weihnachtsmärkte</strong> und verschneite Dächer</li>
-  <li>Perfekt für Museen und gemütliche Cafés</li>
+  <li><strong>Weihnachtsmärkte</strong> am Altstädter Ring und im Burgareal — nicht verpassen</li>
+  <li>Schneebedeckte Höfe sind fast leer. Gut für Museen und warme Cafés zwischen den Spaziergängen.</li>
 </ul>
-<p class="lead">Wünschen Sie eine saisonale Privattour? <a href="/contact#contact-title">Kontaktieren Sie mich</a>—ich plane Ihre <strong>perfekte Prag-Führung</strong>.</p>`
+<p class="lead">Wünschen Sie eine saisonale Privattour, die zu Ihrem Aufenthalt passt? <a href="/contact#contact-title">Kontaktieren Sie mich</a> und ich plane etwas, das Ihrer Zeit und Ihren Interessen entspricht.</p>`
   },
 
   // Post 2 (Hidden Gems) — abbreviated header and excerpt; content intact in base file previously
@@ -375,52 +375,52 @@ export const blogTranslations = {
     de: '8. Januar 2024',
   },
   'blog.post2.content': {
-    en: `<h2>Hidden Prague—Truly Walkable</h2>
-<p>Here is a realistic, walkable selection of <strong>quiet courtyards</strong>, <strong>baroque gardens</strong>, and <strong>classic cafés</strong>—ideal for a 2–3 hour loop across Old Town and Lesser Town.</p>
-<h3>Courtyards & Passages (Old Town)</h3>
+    en: `<h2>Hidden Prague — Realistic and Walkable</h2>
+<p>Most of my favourite spots are in Old Town and Lesser Town, within walking distance of each other. This is a 2 to 3 hour loop I'd actually do with you — not a list of places you'd need a car to connect.</p>
+<h3>Courtyards and Passages (Old Town)</h3>
 <ul>
-  <li><strong>Ungelt (Týn Courtyard)</strong>: medieval trade court tucked behind Týn Church.</li>
-  <li><strong>Clam-Gallas Palace</strong>: baroque courtyard; check for seasonal access.</li>
-  <li><strong>Franciscan Garden</strong>: a calm green pocket near Wenceslas Square.</li>
-  <li><strong>Passage to Platýz</strong>: vintage décor and quiet arcades.</li>
-  </ul>
-<h3>Gems in Lesser Town (Malá Strana)</h3>
+  <li><strong>Ungelt (Týn Courtyard)</strong>: a medieval trade court behind Týn Church. Most tourists walk past the entrance without noticing it.</li>
+  <li><strong>Clam-Gallas Palace</strong>: baroque courtyard, seasonal access — worth checking ahead.</li>
+  <li><strong>Franciscan Garden</strong>: a genuinely calm green space five minutes from Wenceslas Square. Good for a sit-down in the middle of the day.</li>
+  <li><strong>Passage to Platýz</strong>: old décor and quiet arcades. Easy to miss.</li>
+</ul>
+<h3>Lesser Town (Malá Strana)</h3>
 <ul>
-  <li><strong>Vrtba Garden</strong> (seasonal): terraced baroque garden with top views.</li>
-  <li><strong>Wallenstein Garden</strong>: peacocks, dripstone wall, Senate arcades.</li>
-  <li><strong>Kampa backstreets</strong>: mill wheels, hidden riverside nooks.</li>
-  </ul>
-<h3>Classic Cafés with Character</h3>
+  <li><strong>Vrtba Garden</strong> (seasonal): terraced baroque garden with city views. One of the best kept secrets in central Prague.</li>
+  <li><strong>Wallenstein Garden</strong>: peacocks, a dripstone wall, and Senate arcades. Surprisingly few people know this is free.</li>
+  <li><strong>Kampa backstreets</strong>: mill wheels and quiet corners along the Čertovka channel.</li>
+</ul>
+<h3>Cafés Worth Sitting In</h3>
 <ul>
-  <li><strong>Café Louvre</strong> (1902): literary haunt; billiard room, pastries.</li>
-  <li><strong>Café Slavia</strong>: National Theatre vista; art-deco vibe.</li>
-  <li><strong>New Scene (Nová scéna) café</strong>: glass façade, modernist feel.</li>
-  </ul>
-<h3>Loop Itinerary Idea</h3>
-<p>Start at Old Town Square → Ungelt → Clam-Gallas → Charles Bridge (side views) → Vrtba/Wallenstein → Kampa → finish at National Theatre with a coffee. <em>Want a curated route?</em> <a href="/book?tour=Hidden%20Prague#contact-title">Book a private Hidden Prague tour</a>.</p>`,
-    de: `<h2>Verstecktes Prag – wirklich begehbar</h2>
-<p>Hier eine realistische, gut gehbare Auswahl an <strong>stillen Innenhöfen, barocken Gärten, Traditions-Cafés</strong> und Aussichtspunkten—ideal als 2–3‑Stunden-Runde durch Altstadt und Kleinseite.</p>
-<h3>Höfe & Passagen (Altstadt)</h3>
+  <li><strong>Café Louvre</strong> (1902): billiard room, decent pastries, the kind of literary atmosphere that isn't faked.</li>
+  <li><strong>Café Slavia</strong>: views across to the National Theatre, art-deco interior. Havel used to come here.</li>
+  <li><strong>Nová scéna café</strong>: glass façade, modernist feel, usually less crowded than the older cafés.</li>
+</ul>
+<h3>How I'd Do the Loop</h3>
+<p>Old Town Square → Ungelt → Clam-Gallas → Charles Bridge side views → Vrtba or Wallenstein → Kampa → finish at the National Theatre with a coffee. <em>Want me to take you?</em> <a href="/book?tour=Hidden%20Prague#contact-title">Book a private Hidden Prague tour</a>.</p>`,
+    de: `<h2>Verstecktes Prag — realistisch und begehbar</h2>
+<p>Die meisten meiner Lieblingsecken liegen in der Altstadt und Kleinseite, zu Fuß miteinander verbunden. Das ist eine 2- bis 3-stündige Runde, die ich wirklich mit Ihnen gehen würde — keine Liste von Orten, für die man ein Auto bräuchte.</p>
+<h3>Höfe und Passagen (Altstadt)</h3>
 <ul>
-  <li><strong>Ungelt (Týn-Hof)</strong>: mittelalterlicher Handelshof hinter der Teynkirche.</li>
-  <li><strong>Palais Clam-Gallas</strong>: barocker Innenhof; saisonale Zugänge prüfen.</li>
-  <li><strong>Franziskanergarten</strong>: grüne Ruheoase nahe Wenzelsplatz.</li>
-  <li><strong>Passage zum Platýz</strong>: Vintage-Details und stille Arkaden.</li>
-  </ul>
-<h3>Schätze in der Kleinseite (Malá Strana)</h3>
+  <li><strong>Ungelt (Týn-Hof)</strong>: ein mittelalterlicher Handelshof hinter der Teynkirche. Die meisten Touristen gehen am Eingang vorbei ohne ihn zu bemerken.</li>
+  <li><strong>Palais Clam-Gallas</strong>: barocker Innenhof, saisonaler Zugang — vorher prüfen lohnt sich.</li>
+  <li><strong>Franziskanergarten</strong>: ein wirklich ruhiger grüner Platz, fünf Minuten vom Wenzelsplatz. Gut für eine Pause in der Tagesmitte.</li>
+  <li><strong>Passage zum Platýz</strong>: alte Details und stille Arkaden. Leicht zu übersehen.</li>
+</ul>
+<h3>Kleinseite (Malá Strana)</h3>
 <ul>
-  <li><strong>Vrtba-Garten</strong> (saisonal): terrassierter Barockgarten mit Top-Blicken.</li>
-  <li><strong>Wallenstein-Garten</strong>: Pfauen, Tropfsteinwand, Arkaden am Senat.</li>
-  <li><strong>Kampa-Hintergassen</strong>: Mühlräder, ruhige Plätze am Wasser.</li>
-  </ul>
-<h3>Traditions-Cafés mit Charakter</h3>
+  <li><strong>Vrtba-Garten</strong> (saisonal): terrassierter Barockgarten mit Stadtblicken. Eines der am besten gehüteten Geheimnisse im Prager Zentrum.</li>
+  <li><strong>Wallenstein-Garten</strong>: Pfauen, Tropfsteinwand und Senatsarkaden. Überraschend wenige wissen, dass der Eintritt kostenlos ist.</li>
+  <li><strong>Kampa-Hintergassen</strong>: Mühlräder und stille Ecken entlang des Čertovka-Kanals.</li>
+</ul>
+<h3>Cafés, in denen es sich lohnt zu sitzen</h3>
 <ul>
-  <li><strong>Café Louvre</strong> (1902): Literaten; Billardzimmer, Patisserie.</li>
-  <li><strong>Café Slavia</strong>: Blick aufs Nationaltheater; Art-Déco-Atmosphäre.</li>
-  <li><strong>Café der Neuen Szene</strong>: Glasfassade, modernistisches Flair.</li>
-  </ul>
-<h3>Routenidee</h3>
-<p>Start am Altstädter Ring → Ungelt → Clam-Gallas → Karlsbrücke (Seitenblicke) → Vrtba/Wallenstein → Kampa → Abschluss am Nationaltheater mit Kaffee. <em>Wunschroute?</em> <a href="/book?tour=Verstecktes%20Prag#contact-title">Private Tour buchen</a>.</p>`
+  <li><strong>Café Louvre</strong> (1902): Billardzimmer, ordentliche Patisserie, eine literarische Atmosphäre die nicht gespielt wirkt.</li>
+  <li><strong>Café Slavia</strong>: Blick auf das Nationaltheater, Art-Déco-Interieur. Havel kam früher hierher.</li>
+  <li><strong>Café Nová scéna</strong>: Glasfassade, modernistisches Flair, meist weniger voll als die älteren Cafés.</li>
+</ul>
+<h3>So würde ich die Runde angehen</h3>
+<p>Altstädter Ring → Ungelt → Clam-Gallas → Karlsbrücke (Seitenblicke) → Vrtba oder Wallenstein → Kampa → Abschluss am Nationaltheater mit Kaffee. <em>Soll ich Sie führen?</em> <a href="/book?tour=Verstecktes%20Prag#contact-title">Private Tour buchen</a>.</p>`
   },
 
   // Post 3 (Night Prague)
@@ -437,32 +437,32 @@ export const blogTranslations = {
     de: '1. Januar 2024',
   },
   'blog.post3.content': {
-    en: `<h2>Why Prague Shines After Dark</h2>
-<p>At night, Prague transforms—<strong>illuminated bridges</strong>, glowing church facades, and quiet cobblestones. My evening routes avoid crowds and highlight the most atmospheric viewpoints for photography and romance.</p>
-<h3>Golden Hour to Blue Hour</h3>
+    en: `<h2>Prague After Dark</h2>
+<p>The city changes completely at night. The tour groups leave, the light softens, and suddenly <strong>the bridges, the church facades, and the cobblestones</strong> look the way they do in films. I’ve been walking these routes at night for decades and I still find things to notice.</p>
+<h3>The Hour Before Dark</h3>
 <ul>
-  <li>Charles Bridge silhouettes and Vltava reflections</li>
-  <li>Prague Castle skyline from riverside spots</li>
+  <li>Charles Bridge silhouettes and Vltava reflections — best just before the lights come on fully</li>
+  <li>Prague Castle skyline from the riverbank spots, where you get the whole ridge in one frame</li>
 </ul>
-<h3>Evening Walk Highlights</h3>
+<h3>After Dark</h3>
 <ul>
-  <li>Lesser Town lanterns and hidden alleys</li>
-  <li>Old Town’s architectural details under soft light</li>
+  <li>Lesser Town lanterns and the quiet alleys behind Malostranské náměstí — a different place after 21:00</li>
+  <li>Old Town architectural details in soft light that daytime visitors miss entirely</li>
 </ul>
-<p class="lead">Book a private <a href="/tours">night tour</a>—I’ll plan safe, stunning viewpoints and insider photo spots.</p>`,
-    de: `<h2>Warum Prag nachts glänzt</h2>
-<p>Nachts verwandelt sich Prag—<strong>beleuchtete Brücken</strong>, leuchtende Kirchenfassaden und stille Kopfsteinpflaster. Meine Abendrouten meiden Menschenmengen und zeigen die stimmungsvollsten Ausblicke für Fotos und Romantik.</p>
-<h3>Goldene Stunde bis Blaue Stunde</h3>
+<p class="lead">Book a private <a href="/tours">night tour</a> — I’ll show you the viewpoints worth the walk and the photo spots that aren’t on any list yet.</p>`,
+    de: `<h2>Prag nach Einbruch der Dunkelheit</h2>
+<p>Die Stadt verändert sich völlig bei Nacht. Die Reisegruppen gehen, das Licht wird weicher, und plötzlich sehen <strong>die Brücken, die Kirchenfassaden und das Kopfsteinpflaster</strong> aus wie im Film. Ich laufe diese Routen seit Jahrzehnten nachts und entdecke immer noch etwas Neues.</p>
+<h3>Die Stunde vor der Dunkelheit</h3>
 <ul>
-  <li>Silhouetten auf der Karlsbrücke und Vltava-Reflexe</li>
-  <li>Schloss-Skyline von Flussufern</li>
+  <li>Karlsbrücken-Silhouetten und Vltava-Reflexionen — am besten kurz bevor die Beleuchtung voll angeht</li>
+  <li>Schloss-Skyline von den Flussuferstellen, wo man den ganzen Burgrücken in einem Bild hat</li>
 </ul>
-<h3>Highlights des Abendspaziergangs</h3>
+<h3>Nach Einbruch der Dunkelheit</h3>
 <ul>
-  <li>Laternen in der Kleinseite und versteckte Gassen</li>
-  <li>Architekturdetails der Altstadt im sanften Licht</li>
+  <li>Laternen der Kleinseite und die stillen Gassen hinter dem Malostranské náměstí — ein anderer Ort nach 21:00 Uhr</li>
+  <li>Architekturdetails der Altstadt im sanften Licht, die Tagesbesucher völlig verpassen</li>
 </ul>
-<p class="lead">Buchen Sie eine private <a href="/tours">Nacht-Tour</a>—mit sicheren, eindrucksvollen Aussichtspunkten und Insider-Fotospots.</p>`
+<p class="lead">Buchen Sie eine private <a href="/tours">Nachttour</a> — ich zeige Ihnen die Aussichtspunkte, die den Weg wert sind, und die Fotospots, die noch auf keiner Liste stehen.</p>`
   },
 
   // Post 4 (Jewish Quarter)
@@ -479,24 +479,24 @@ export const blogTranslations = {
     de: '20. Dezember 2023',
   },
   'blog.post4.content': {
-    en: `<h2>The Jewish Quarter: Memory and Heritage</h2>
-<p>Prague’s <strong>Jewish Quarter (Josefov)</strong> is among Europe’s most significant Jewish heritage sites. With my <em>special certification</em>, I guide you through synagogues, the Old Jewish Cemetery, and the community’s powerful history with accuracy and respect.</p>
-<h3>Highlights</h3>
+    en: `<h2>The Jewish Quarter: Memory and History</h2>
+<p>Josefov is one of the most important Jewish heritage sites in Europe, and it’s also one of the places where I feel the weight of guiding most strongly. I hold a <em>special certification</em> for this area, and I take the responsibility seriously — both the history and the way it’s told.</p>
+<h3>What to See</h3>
 <ul>
-  <li>Pinkas Synagogue and the memorial inscriptions</li>
-  <li>Old-New Synagogue—Europe’s oldest active synagogue</li>
-  <li>Old Jewish Cemetery’s layered centuries</li>
+  <li>Pinkas Synagogue: the walls are inscribed with the names of over 77,000 Bohemian and Moravian Jewish victims of the Holocaust. Nothing prepares you for the scale of it.</li>
+  <li>Old-New Synagogue: Europe’s oldest active synagogue, built around 1270. Still in use today.</li>
+  <li>The Old Jewish Cemetery: burials stacked twelve deep over centuries. The crowded tombstones are not a design choice — they reflect a community that ran out of space.</li>
 </ul>
-<p class="lead">For a thoughtful, historically grounded visit, <a href="/contact#contact-title">contact me</a>—I tailor tours to your interests and timeframe.</p>`,
-    de: `<h2>Das Jüdische Viertel: Erinnerung und Erbe</h2>
-<p>Prags <strong>Jüdisches Viertel (Josefov)</strong> zählt zu den bedeutendsten Stätten jüdischen Erbes in Europa. Mit meiner <em>Sonderzertifizierung</em> führe ich Sie durch Synagogen, den Alten Jüdischen Friedhof und die bewegende Geschichte der Gemeinde—präzise und respektvoll.</p>
-<h3>Höhepunkte</h3>
+<p class="lead">For a visit that does justice to the history, <a href="/contact#contact-title">contact me</a>. I tailor the pace and depth to what you’re looking for.</p>`,
+    de: `<h2>Das Jüdische Viertel: Erinnerung und Geschichte</h2>
+<p>Josefov ist eines der bedeutendsten jüdischen Erbe-Stätten Europas, und es ist auch einer der Orte, an dem ich das Gewicht des Führens am stärksten spüre. Ich habe eine <em>Sonderzertifizierung</em> für diesen Bereich, und ich nehme die Verantwortung ernst — sowohl die Geschichte als auch die Art, wie sie erzählt wird.</p>
+<h3>Was zu sehen ist</h3>
 <ul>
-  <li>Pinkas-Synagoge und die Gedenkinschriften</li>
-  <li>Altneu-Synagoge—älteste aktive Synagoge Europas</li>
-  <li>Jahrhunderte im Alten Jüdischen Friedhof</li>
+  <li>Pinkas-Synagoge: Die Wände tragen die Namen von über 77.000 böhmischen und mährischen jüdischen Holocaust-Opfern. Die Dimension überrascht jeden, der zum ersten Mal davor steht.</li>
+  <li>Altneu-Synagoge: Die älteste aktive Synagoge Europas, um 1270 erbaut. Wird bis heute genutzt.</li>
+  <li>Alter Jüdischer Friedhof: Bestattungen über Jahrhunderte hinweg zwölf Schichten tief. Die gedrängten Grabsteine sind keine Gestaltungsentscheidung — sie zeigen, dass der Gemeinde der Platz ausging.</li>
 </ul>
-<p class="lead">Für einen einfühlsamen, fundierten Besuch <a href="/contact#contact-title">kontaktieren Sie mich</a>—ich passe die Führung an Ihre Interessen und Ihre Zeit an.</p>`
+<p class="lead">Für einen Besuch, der der Geschichte gerecht wird, <a href="/contact#contact-title">kontaktieren Sie mich</a>. Ich passe Tempo und Tiefe an das an, was Sie suchen.</p>`
   },
 
   // Post 5 (21 Instagrammable)
@@ -513,8 +513,8 @@ export const blogTranslations = {
     de: '12. Oktober 2025',
   },
   'blog.post5.content': {
-    en: `<h2>Prague’s Most Photogenic Spots</h2>
-<p>Here are <strong>21 tried-and-true locations</strong> I use on tours and photo walks. Arrive early, mind the light, and always respect local spaces.</p>
+    en: `<h2>Prague’s Best Photo Spots</h2>
+<p>These are <strong>21 locations I actually use</strong> on tours and photo walks. Not a random roundup — these are places where the light, the angle, or the access makes a difference. Arrive early, watch the light, and don’t climb on things or block people trying to get past.</p>
 <ol>
   <li><h3>Charles Bridge (Statues & Towers)</h3><p>Best at dawn from the Old Town tower towards the Castle.</p></li>
   <li><h3>Prague Castle Viewpoints</h3><p>Lookouts by St. Wenceslas Vineyard and Hradčanské náměstí.</p></li>
@@ -538,9 +538,9 @@ export const blogTranslations = {
   <li><h3>St. Nicholas Church (Mala Strana)</h3><p>Domes and curves—inside and out.</p></li>
   <li><h3>Štefánik Bridge Lookout</h3><p>Multiple bridges in one frame at sunset.</p></li>
   </ol>
-<p class="lead">Want me to map a sunrise-to-night photo route just for you? <a href="/contact#contact-title">Message me</a>—I’ll tailor a private tour.</p>`,
-    de: `<h2>Prags fotogenste Orte</h2>
-<p>Hier sind <strong>21 erprobte Spots</strong>, die ich auf Führungen und Fotowalks nutze. Früh ankommen, auf Licht achten und Orte respektieren.</p>
+<p class="lead">Want a sunrise-to-night photo route planned around your schedule? <a href="/contact#contact-title">Message me</a> and I’ll put together a private tour.</p>`,
+    de: `<h2>Prags beste Fotospots</h2>
+<p>Das sind <strong>21 Orte, die ich wirklich nutze</strong> — auf Führungen und Fotowalks. Keine zufällige Zusammenstellung: Das sind Orte, bei denen Licht, Winkel oder Zugang einen Unterschied machen. Früh ankommen, Licht beachten, nicht auf Dinge steigen oder Leute blockieren.</p>
 <ol>
   <li><h3>Karlsbrücke (Statuen & Türme)</h3><p>Am besten bei Sonnenaufgang vom Altstädter Turm Richtung Schloss.</p></li>
   <li><h3>Burg-Aussichtspunkte</h3><p>Blicke beim Wenzelsweinberg und auf dem Hradschin-Platz.</p></li>
@@ -564,7 +564,7 @@ export const blogTranslations = {
   <li><h3>St.-Nikolaus (Kleinseite)</h3><p>Kuppeln und Kurven—innen wie außen.</p></li>
   <li><h3>Štefánik-Brücke</h3><p>Mehrere Brücken im Bild bei Sonnenuntergang.</p></li>
   </ol>
-<p class="lead">Möchten Sie eine maßgeschneiderte Foto-Route von Sonnenaufgang bis Nacht? <a href="/contact#contact-title">Schreiben Sie mir</a>—ich plane eine private Tour.</p>`
+<p class="lead">Möchten Sie eine Foto-Route von Sonnenaufgang bis Nacht, die zu Ihrem Plan passt? <a href="/contact#contact-title">Schreiben Sie mir</a> und ich stelle eine private Tour zusammen.</p>`
   },
 
   // Post 6 (Havel) — abbreviated header and excerpt; content remains as authored
@@ -582,11 +582,11 @@ export const blogTranslations = {
   },
   'blog.post6.content': {
     en: `<h2>Prague Through Havel’s Eyes</h2>
-<p>Václav Havel—<strong>playwright, dissident, and later president</strong>—left a living map across Prague. This tour traces places where <em>art, civic courage, and history</em> intersect.</p>
-<h3>Rašín Embankment: Beginnings and Symbols</h3>
-<p>We begin at <strong>Rašínovo nábřeží</strong>, near Havel’s former residence. Here, you’ll notice symbolic details: a <em>female relief</em>, motifs of the <em>communist past</em>, and a <em>globe on the roof</em>—a nod to Havel’s global reach.</p>
+<p>Václav Havel — <strong>playwright, dissident, later president</strong> — left a living map across Prague. This tour follows places where art, civic courage, and history ran into each other. I find new things to say on it every time I lead it.</p>
+<h3>Rašín Embankment: Where It Starts</h3>
+<p>We begin at <strong>Rašínovo nábřeží</strong>, near Havel’s former residence. Look at the building: a <em>female relief</em>, traces of the <em>communist past</em>, and a <em>globe on the roof</em>. Once you know what you’re looking for, it’s hard to walk past without stopping.</p>
 <h3>Quiet Refuge by the River</h3>
-<p>At the <strong>Vltava restaurant</strong>, Havel often sat in the back, facing the wall—an echo of surveillance times. It was a space for <em>thinking and writing</em>, away from the stage of politics.</p>
+<p>At the <strong>Vltava restaurant</strong>, Havel often sat in the back, facing the wall. A habit from surveillance times. It was where he went to <em>think and write</em>, away from politics and public rooms.</p>
 <div class="blog-inline-image"><img src="/images/blog-havel-2.jpg" alt="Václav Havel tour – riverside reflections" loading="lazy" /></div>
 <h3>Café Slavia and Olga</h3>
 <p>We visit the legendary <strong>Café Slavia</strong>—a center of intellectual life. Here Havel met artists, politicians, and his great love, <em>Olga</em>. Their bond, rooted in everyday humanity, anchored Havel’s extraordinary public life.</p>
@@ -594,14 +594,14 @@ export const blogTranslations = {
 <p>We explore Havel’s creative ground at <strong>Divadlo Na zábradlí</strong> and the difficult chapters of <em>interrogations and prison</em> near <strong>Bartolomějská</strong> (today’s Unitas Hotel).</p>
 <h3>From Civic Forum to the Castle</h3>
 <p>At <strong>Laterna magika</strong>, the <em>Civic Forum</em> held daily briefings during the Velvet Revolution. On <strong>Wenceslas Square</strong> and <strong>Národní</strong>, we recall 17 November. Finally, we reflect in the <strong>Prague Castle</strong> courtyards—symbols reshaped by a playwright-president.</p>
-<h3>Why This Route Matters</h3>
-<p>Beyond plaques and dates, we seek the <strong>citizen Havel</strong>—humorous, open, speaking with all walks of life. This is a city walk about <em>holding onto humanity under pressure</em>.</p>
+<h3>What This Route Is Actually About</h3>
+<p>Beyond plaques and dates, what I want to show is the <strong>citizen Havel</strong> — humorous, genuinely open, comfortable talking to anyone. This is a walk about what it means to hold onto your humanity when the system is designed to wear it down.</p>
 <p class="lead">Want the full route or to explore some places on your own? <a href="/book?tour=V%C3%A1clav%20Havel%20Tour:%20Sites%20of%20Freedom#contact-title">Message me</a> and I’ll tailor it to your time and interests.</p>
 <p><em>Further reading:</em> <a href="https://www.pragerzeitung.cz/typisch-havel/" target="_blank" rel="noopener">Prager Zeitung: Typisch Havel</a></p>`,
     de: `<h2>Auf den Spuren von Václav Havel</h2>
-<p>In Prag finden sich vielerorts Erinnerungen an Václav Havel—<strong>Dichter, Dissident und später Präsident</strong>. Diese Führung verbindet Orte, an denen sich <em>Kunst, Zivilcourage und Geschichte</em> berühren.</p>
-<h3>Rašín-Ufer: Anfänge und Symbole</h3>
-<p>Wir beginnen am <strong>Rašínovo nábřeží</strong>, beim ehemaligen Wohnhaus Havels. Hier begegnen uns Zeichen seines Lebens: ein <em>Frauenrelief</em>, Spuren der <em>kommunistischen Vergangenheit</em> und eine <em>Erdkugel auf dem Dach</em>—ein Sinnbild seines weltweiten Einflusses.</p>
+<p>Václav Havel — <strong>Dramatiker, Dissident, später Präsident</strong> — hat eine lebendige Karte über Prag hinterlassen. Diese Führung folgt Orten, an denen Kunst, Zivilcourage und Geschichte aufeinandertrafen. Ich entdecke bei jeder Führung etwas Neues daran.</p>
+<h3>Rašín-Ufer: Wo es beginnt</h3>
+<p>Wir beginnen am <strong>Rašínovo nábřeží</strong>, beim ehemaligen Wohnhaus Havels. Schauen Sie sich das Gebäude an: ein <em>Frauenrelief</em>, Spuren der <em>kommunistischen Vergangenheit</em>, eine <em>Erdkugel auf dem Dach</em>. Wenn man einmal weiß, wonach man sucht, ist es schwer vorbeizugehen ohne anzuhalten.</p>
 <h3>Ruhiger Zufluchtsort am Fluss</h3>
 <p>Im Restaurant <strong>Vltava</strong> saß Havel oft hinten rechts, mit dem Blick zur Wand—ein Reflex aus Zeiten der Überwachung. Ein Ort zum <em>Nachdenken und Schreiben</em>, fern der politischen Bühne.</p>
 <div class="blog-inline-image"><img src="/images/blog-havel-2.jpg" alt="Václav-Havel-Tour – Blick ans Flussufer" loading="lazy" /></div>
@@ -611,8 +611,8 @@ export const blogTranslations = {
 <p>Wir sprechen über Havels kreatives Umfeld im <strong>Divadlo Na zábradlí</strong> und über die dunklen Kapitel—<em>Verhöre und Haft</em> in der Nähe der <strong>Bartolomějská</strong> (heutiges Unitas-Hotel).</p>
 <h3>Vom Bürgerforum zur Burg</h3>
 <p>In der <strong>Laterna magika</strong> gab das <em>Bürgerforum</em> tägliche Pressebriefings während der Samtenen Revolution. Auf dem <strong>Wenzelsplatz</strong> und an der <strong>Nationalallee (Národní)</strong> erinnern wir an den 17. November. Abschließend betrachten wir in den Höfen der <strong>Prager Burg</strong> neu gedeutete Symbole—ein Dramatiker als Präsident.</p>
-<h3>Warum diese Route bewegt</h3>
-<p>Neben Daten und Tafeln geht es um den <strong>Bürger Havel</strong>: humorvoll, offen, im Gespräch mit allen Gesellschaftsschichten. Dieser Stadtspaziergang handelt davon, <em>Menschlichkeit unter Druck zu bewahren</em>.</p>
+<h3>Worum es bei dieser Route wirklich geht</h3>
+<p>Neben Daten und Tafeln möchte ich den <strong>Bürger Havel</strong> zeigen: humorvoll, wirklich offen, im Gespräch mit jedem. Das ist ein Spaziergang darüber, was es bedeutet, die eigene Menschlichkeit zu bewahren, wenn das System darauf ausgelegt ist, sie zu zermürben.</p>
 <p class="lead">Möchten Sie die vollständige Route oder einzelne Orte auch selbst erkunden? <a href="/book?tour=V%C3%A1clav%20Havel%20Tour:%20Orte%20der%20Freiheit#contact-title">Schreiben Sie mir</a>—ich passe die Tour an Ihre Zeit und Interessen an.</p>
 <p><em>Weiterlesen:</em> <a href="https://www.pragerzeitung.cz/typisch-havel/" target="_blank" rel="noopener">Prager Zeitung: Typisch Havel</a></p>`
   },
@@ -631,46 +631,46 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post7.content': {
-    en: `<h2>Klementinum: A Baroque Treasure</h2>
-<p>Hidden in the heart of Prague’s Old Town, the <strong>Klementinum</strong> houses a <em>Baroque Library Hall</em> that many consider <strong>one of the most beautiful libraries</strong> in the world. Frescoed ceilings, antique globes, oak bookcases—it’s a postcard of knowledge and art.</p>
+    en: `<h2>Klementinum: The Baroque Library</h2>
+<p>Right in the middle of the Old Town, the <strong>Klementinum</strong> has a <em>Baroque Library Hall</em> that people consistently call one of the most beautiful libraries they’ve ever seen. Frescoed ceilings, antique globes, oak bookcases stacked to the ceiling. I’ve brought guests here hundreds of times and the reaction is always the same.</p>
 <h3>What You’ll See</h3>
 <ul>
-  <li><strong>Baroque Library Hall:</strong> A museum-like space with historical volumes, celestial globes, and allegorical frescoes.</li>
-  <li><strong>Astronomical Tower:</strong> Panoramic views over Prague and the Vltava.</li>
-  <li><strong>Meridian Room:</strong> A fascinating look at timekeeping before modern technology.</li>
-  </ul>
-<div class="did-you-know"><h4>Did you know?</h4><p>The Klementinum once hosted one of Central Europe’s oldest weather stations—continuous measurements began here centuries ago.</p></div>
+  <li><strong>Baroque Library Hall:</strong> Historical volumes, celestial globes, and allegorical ceiling frescoes. Access is by guided tour only.</li>
+  <li><strong>Astronomical Tower:</strong> Views over Prague and the Vltava. Worth the climb.</li>
+  <li><strong>Meridian Room:</strong> Where they used sunlight to set the time before modern clocks. Small room, genuine curiosity.</li>
+</ul>
+<div class="did-you-know"><h4>Did you know?</h4><p>The Klementinum ran one of Central Europe’s oldest weather stations — continuous measurements going back centuries. The longest climate record in the region.</p></div>
 <div class="blog-inline-image"><img src="/images/klementinum-library-2.jpg" alt="Klementinum Baroque Library—mid view" loading="lazy" /></div>
-<h3>How to Visit</h3>
-<p>Visits run by guided tour with fixed time slots. Capacity is limited and <strong>photos may be restricted</strong>—please check current rules. I can help <a href="/contact#contact-title">book tickets</a> and combine the Klementinum with a <a href="/tours">tailored Old Town route</a>.</p>
+<h3>Practical Notes</h3>
+<p>Visits are guided tours with fixed time slots. Capacity is limited and <strong>photography rules change</strong> — check before you go. I can help with <a href="/contact#contact-title">tickets</a> and combine the Klementinum into a <a href="/tours">longer Old Town route</a>.</p>
 <h3>Tips</h3>
 <ul>
-  <li>Arrive 10–15 minutes early for your slot.</li>
-  <li>Bring binoculars to enjoy ceiling details.</li>
-  <li>Consider sunset timing for the Astronomical Tower.</li>
-  </ul>
-<p><strong>Official resource:</strong> <a href="https://prague.eu/en/objevujte/the-clementinum-astronomical-tower-and-baroque-library/" target="_blank" rel="noopener">Prague.eu — Klementinum Astronomical Tower & Baroque Library</a>. Read more there and you can even book a city-guided tour.</p>
-<p class="lead">Want a private walk that ends at the Klementinum with tower views? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Request a bespoke route</a>.</p>`,
-    de: `<h2>Klementinum: Ein barockes Juwel</h2>
-<p>Mitten in der Prager Altstadt befindet sich das <strong>Klementinum</strong> mit seinem <em>Barocksaal</em>, den viele als <strong>eine der schönsten Bibliotheken</strong> der Welt ansehen. Fresken, historische Globen, Eichenregale—ein Postkartenmotiv von Wissen und Kunst.</p>
+  <li>Arrive 10–15 minutes before your slot.</li>
+  <li>Binoculars help for the ceiling frescoes — details are worth seeing up close.</li>
+  <li>Late afternoon timing gives you the Astronomical Tower in better light.</li>
+</ul>
+<p><strong>Official resource:</strong> <a href="https://prague.eu/en/objevujte/the-clementinum-astronomical-tower-and-baroque-library/" target="_blank" rel="noopener">Prague.eu — Klementinum Astronomical Tower & Baroque Library</a>. Current opening hours and booking there.</p>
+<p class="lead">Want a private walk that ends at the Klementinum with tower views? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Ask about a route</a>.</p>`,
+    de: `<h2>Klementinum: Die Barockbibliothek</h2>
+<p>Mitten in der Prager Altstadt hat das <strong>Klementinum</strong> einen <em>Barockbibliothekssaal</em>, den Menschen konsequent als eine der schönsten Bibliotheken bezeichnen, die sie je gesehen haben. Freskendecke, antike Globen, Eichenregale bis zur Decke. Ich bringe Gäste seit Jahrzehnten hierher und die Reaktion ist jedes Mal dieselbe.</p>
 <h3>Was Sie sehen</h3>
 <ul>
-  <li><strong>Barocksaal:</strong> Museumsartiger Raum mit historischen Bänden, Himmelsgloben und allegorischen Fresken.</li>
-  <li><strong>Astronomischer Turm:</strong> Panorama über Prag und die Moldau.</li>
-  <li><strong>Meridianzimmer:</strong> Spannender Blick auf die Zeitmessung vor der Moderne.</li>
-  </ul>
-<div class="did-you-know"><h4>Wussten Sie schon?</h4><p>Im Klementinum befindet sich eine der ältesten Wetterstationen Mitteleuropas—kontinuierliche Messungen begannen hier bereits vor Jahrhunderten.</p></div>
+  <li><strong>Barockbibliothekssaal:</strong> Historische Bände, Himmelsgloben und allegorische Deckenfresken. Zugang nur per Führung.</li>
+  <li><strong>Astronomischer Turm:</strong> Panorama über Prag und die Moldau. Der Aufstieg lohnt sich.</li>
+  <li><strong>Meridianzimmer:</strong> Wo man mit Sonnenlicht die Zeit stellte, bevor es moderne Uhren gab. Kleiner Raum, echte Kuriosität.</li>
+</ul>
+<div class="did-you-know"><h4>Wussten Sie schon?</h4><p>Das Klementinum betrieb eine der ältesten Wetterstationen Mitteleuropas — kontinuierliche Messungen über Jahrhunderte. Der längste Klimadatensatz der Region.</p></div>
 <div class="blog-inline-image"><img src="/images/klementinum-library-2.jpg" alt="Klementinum Barockbibliothek—Mitte" loading="lazy" /></div>
-<h3>Besuch</h3>
-<p>Besichtigungen erfolgen per Führung mit festen Zeitfenstern. Die Kapazität ist begrenzt und <strong>Fotografie kann eingeschränkt</strong> sein—bitte aktuelle Regeln prüfen. Gern helfe ich bei der <a href="/contact#contact-title">Ticketbuchung</a> und kombiniere das Klementinum mit einer <a href="/tours">maßgeschneiderten Altstadtroute</a>.</p>
+<h3>Praktische Hinweise</h3>
+<p>Besichtigungen sind Führungen mit festen Zeitfenstern. Die Kapazität ist begrenzt und <strong>Fotoregeln ändern sich</strong> — vorher prüfen. Gern helfe ich bei <a href="/contact#contact-title">Tickets</a> und kombiniere das Klementinum in eine <a href="/tours">längere Altstadtroute</a>.</p>
 <h3>Tipps</h3>
 <ul>
-  <li>10–15 Minuten vor dem Termin eintreffen.</li>
-  <li>Ein Fernglas für Deckendetails mitnehmen.</li>
-  <li>Für den Turm ggf. Sonnenuntergang einplanen.</li>
-  </ul>
-<p><strong>Offizielle Ressource:</strong> <a href="https://prague.eu/de/objevujte/astronomischer-turm-und-barocke-bibliothek-des-klementinums/" target="_blank" rel="noopener">Prague.eu — Astronomischer Turm & Barockbibliothek</a>. Dort können Sie mehr lesen und auch eine Stadtführung buchen.</p>
-<p class="lead">Möchten Sie einen privaten Spaziergang mit Abschluss im Klementinum und Turmblick? <a href="/book?tour=Individuelle%20Privattour#contact-title">Buchungsanfrage senden</a>.</p>`
+  <li>10–15 Minuten vor dem Termin ankommen.</li>
+  <li>Fernglas hilft für die Deckenfresken — Details lohnen den näheren Blick.</li>
+  <li>Später Nachmittag gibt dem Astronomischen Turm besseres Licht.</li>
+</ul>
+<p><strong>Offizielle Ressource:</strong> <a href="https://prague.eu/de/objevujte/astronomischer-turm-und-barocke-bibliothek-des-klementinums/" target="_blank" rel="noopener">Prague.eu — Astronomischer Turm & Barockbibliothek</a>. Aktuelle Öffnungszeiten und Buchung dort.</p>
+<p class="lead">Möchten Sie einen privaten Spaziergang mit Abschluss im Klementinum und Turmblick? <a href="/book?tour=Individuelle%20Privattour#contact-title">Route anfragen</a>.</p>`
   },
 
   // Post 8 (Klementinum Tower)

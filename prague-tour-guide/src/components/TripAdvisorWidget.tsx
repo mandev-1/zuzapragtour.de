@@ -66,16 +66,30 @@ const TripAdvisorWidget: React.FC = () => {
           className="TA_selfserveprop flex min-h-[120px] justify-center"
         />
       </div>
-      <p className="mt-6 text-center font-label text-sm text-on-surface-variant">
+
+      {/* Static badge — always visible regardless of third-party script status */}
+      <div className="mt-6 flex flex-col items-center gap-1 border-t border-outline-variant/20 pt-5">
         <a
           href={TRIPADVISOR_LISTING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold text-primary underline-offset-4 hover:underline"
+          aria-label={t('home.tripadvisor.viewAll')}
+          className="flex flex-col items-center gap-1 no-underline"
         >
-          {t('home.tripadvisor.viewAll')}
+          <span className="text-2xl leading-none text-primary" aria-hidden="true">
+            ★★★★★
+          </span>
+          <span className="font-semibold text-on-surface">
+            {t('home.tripadvisor.badge.rating')}
+          </span>
+          <span className="font-label text-sm text-on-surface-variant">
+            {t('home.tripadvisor.badge.reviewCount')}
+          </span>
+          <span className="mt-1 font-label text-xs font-semibold text-primary underline-offset-4 hover:underline">
+            {t('home.tripadvisor.viewAll')}
+          </span>
         </a>
-      </p>
+      </div>
     </div>
   );
 };

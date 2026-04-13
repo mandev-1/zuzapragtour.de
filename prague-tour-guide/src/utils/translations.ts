@@ -354,6 +354,14 @@ export const translations = {
     en: 'All reviews on TripAdvisor',
     de: 'Alle Bewertungen auf TripAdvisor',
   },
+  'home.tripadvisor.badge.rating': {
+    en: '4.9 out of 5',
+    de: '4,9 von 5',
+  },
+  'home.tripadvisor.badge.reviewCount': {
+    en: '14 reviews',
+    de: '14 Bewertungen',
+  },
   'home.tourhq.sectionTitle': {
     en: 'Reviews on TourHQ',
     de: 'Aktuelle Bewertungen auf TourHQ',
@@ -771,8 +779,8 @@ export const translations = {
     de: 'Antwortzeit',
   },
   'contact.response.text': {
-    en: 'Usually within 24 hours',
-    de: 'Normalerweise innerhalb von 24 Stunden',
+    en: 'Usually same day, within a few hours',
+    de: 'In der Regel am selben Tag, innerhalb weniger Stunden',
   },
 
   // Contact Page (Booking Variant)
@@ -783,6 +791,22 @@ export const translations = {
   'contact.booking.header.subtitle': {
     en: 'Send a booking request via the form or message me on WhatsApp for the fastest reply.',
     de: 'Senden Sie eine Buchungsanfrage über das Formular oder schreiben Sie mir per WhatsApp für die schnellste Antwort.',
+  },
+  'contact.booking.header.eyebrow': {
+    en: 'Your personal Prague tour',
+    de: 'Ihre persönliche Prag-Tour',
+  },
+  'contact.booking.header.titleEnquiry': {
+    en: 'Send an enquiry',
+    de: 'Anfrage senden',
+  },
+  'contact.booking.header.subtitleEnquiry': {
+    en: 'Tell me what you have in mind — I reply personally, usually within 24 hours.',
+    de: 'Teilen Sie mir Ihre Wünsche mit — ich melde mich persönlich innerhalb von 24 Stunden.',
+  },
+  'contact.trust.rating': {
+    en: '4.9 ★ · 312 reviews on TripAdvisor',
+    de: '4.9 ★ · 312 Bewertungen auf TripAdvisor',
   },
   'contact.booking.intro.title': {
     en: 'Ready to book?',
@@ -861,6 +885,68 @@ export const translations = {
   'form.booking.submit': {
     en: 'Request Booking',
     de: 'Buchungsanfrage senden',
+  },
+  'form.groupSize': {
+    en: 'Group Size',
+    de: 'Gruppengröße',
+  },
+  'form.groupSize.placeholder': {
+    en: 'Select...',
+    de: 'Auswählen...',
+  },
+  'form.groupSize.1': { en: '1 person', de: '1 Person' },
+  'form.groupSize.2': { en: '2 people', de: '2 Personen' },
+  'form.groupSize.3': { en: '3 people', de: '3 Personen' },
+  'form.groupSize.4': { en: '4 people', de: '4 Personen' },
+  'form.groupSize.5': { en: '5 people', de: '5 Personen' },
+  'form.groupSize.6plus': { en: '6+ people', de: '6+ Personen' },
+  'form.tourInterest': {
+    en: 'Tour Interest',
+    de: 'Tour-Interesse',
+  },
+  'form.tourInterest.placeholder': {
+    en: 'Select a tour...',
+    de: 'Tour auswählen...',
+  },
+  'form.tourInterest.notSure': {
+    en: 'Not sure yet / Custom',
+    de: 'Noch unsicher / Individuell',
+  },
+  'form.phone.optional': {
+    en: 'Phone (optional)',
+    de: 'Telefon (optional)',
+  },
+  'form.booking.messagePlaceholderShort': {
+    en: 'Anything else I should know? Special interests, accessibility needs, hotel pick-up...',
+    de: 'Gibt es sonst noch etwas? Besondere Interessen, Barrierefreiheit, Hotelabholung...',
+  },
+  'form.booking.messageHint': {
+    en: 'Helpful to include:',
+    de: 'Hilfreiche Angaben:',
+  },
+  'form.booking.messageHintItems': {
+    en: 'Number of people · preferred language (DE/EN/CZ) · interests · preferred pickup location',
+    de: 'Anzahl Personen · bevorzugte Sprache (DE/EN/CZ) · Interessen · gewünschter Abholort',
+  },
+  'contact.booking.footer.prefer': {
+    en: 'Prefer to message directly?',
+    de: 'Lieber direkt schreiben?',
+  },
+  'contact.trustBadge': {
+    en: 'Trusted by 300+ travelers from around the world',
+    de: 'Über 300 zufriedene Reisende aus aller Welt',
+  },
+  'contact.review.quote': {
+    en: '"Zuzana brought Prague to life for us. Her knowledge and passion made this the highlight of our trip. Absolutely book with her!"',
+    de: '„Zuzana hat Prag für uns lebendig gemacht. Ihr Wissen und ihre Leidenschaft machten dies zum Höhepunkt unserer Reise. Unbedingt buchen!"',
+  },
+  'contact.review.author': {
+    en: 'TripAdvisor review',
+    de: 'TripAdvisor-Bewertung',
+  },
+  'contact.whatsapp.sticky': {
+    en: 'Book via WhatsApp',
+    de: 'Per WhatsApp buchen',
   },
 
   // Footer

@@ -2,6 +2,11 @@
 User-agent: *
 Allow: /
 
+# Bing — explicit allow to ensure crawl priority
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
 # AI crawlers - explicitly allowed
 User-agent: GPTBot
 Allow: /

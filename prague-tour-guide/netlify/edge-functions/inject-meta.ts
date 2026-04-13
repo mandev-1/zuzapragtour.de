@@ -59,10 +59,7 @@ export default async function handler(
   const url = new URL(request.url);
   const meta = lookupMeta(url.pathname);
 
-  if (!meta) {
-    return;
-  }
-
+  // Always fetch the response so we can inject at minimum a canonical
   const response = await context.next();
   const contentType = response.headers.get("content-type") || "";
   if (!contentType.includes("text/html")) {
@@ -70,6 +67,28 @@ export default async function handler(
   }
 
   let html = await response.text();
+
+  // When there's no route-meta entry, just ensure the canonical matches the
+  // actual URL being served — prevents Google flagging the SPA shell as a
+  // duplicate of every other page.
+  if (!meta) {
+    const fallbackCanonical = `https://zuzapragtour.de${url.pathname.replace(/\/$/, "") || "/"}`;
+    if (html.includes('rel="canonical"')) {
+      html = rewriteTag(
+        html,
+        /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
+        `<link rel="canonical" href="${escapeHtml(fallbackCanonical)}" />`
+      );
+    } else {
+      html = html.replace(
+        "</head>",
+        `  <link rel="canonical" href="${escapeHtml(fallbackCanonical)}" />\n</head>`
+      );
+    }
+    const fallbackHeaders = new Headers(response.headers);
+    fallbackHeaders.delete("content-length");
+    return new Response(html, { status: response.status, headers: fallbackHeaders });
+  }
 
   const safeTitle = escapeHtml(meta.title);
   const safeDesc = escapeHtml(meta.description);
