@@ -688,7 +688,7 @@ export const blogTranslations = {
   },
   'blog.post8.content': {
     en: `<h2>From Baroque Science to Skyline Vistas</h2>
-<p>The <strong>Astronomical Tower</strong> at the Klementinum blends baroque science with breathtaking views. After the climb, the reward is a <em>360° panorama</em>—Prague Castle, Charles Bridge, Old Town roofs.</p>
+<p>The <strong>Astronomical Tower</strong> at the Klementinum pairs baroque science with something genuinely hard to forget. After the climb, you get a <em>360° panorama</em>: Prague Castle, Charles Bridge, Old Town roofs spread out below you.</p>
 <div class="blog-inline-image"><img src="/images/klementinum-tower-2.jpg" alt="Klementinum Astronomical Tower—panoramic view" loading="lazy" /></div>
 <h3>The Meridian Room</h3>
 <p>Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It’s a rare window into how cities coordinated daily life.</p>
@@ -701,7 +701,7 @@ export const blogTranslations = {
 </ul>
 <p class="lead">Want a tailor-made circuit with timed entries and great light? <a href="/contact#contact-title">Message me</a>.</p>`,
     de: `<h2>Von barocker Wissenschaft zum Skyline-Blick</h2>
-<p>Der <strong>Astronomische Turm</strong> des Klementinums verbindet barocke Wissenschaft mit atemberaubender Aussicht. Nach dem Aufstieg wartet ein <em>360°-Panorama</em>—Burg, Karlsbrücke, Altstadtdächer.</p>
+<p>Der <strong>Astronomische Turm</strong> des Klementinums verbindet barocke Wissenschaft mit einer Aussicht, die man nicht schnell vergisst. Nach dem Aufstieg liegt ein <em>360°-Panorama</em> vor einem: Burg, Karlsbrücke, Altstadtdächer.</p>
 <div class="blog-inline-image"><img src="/images/klementinum-tower-2.jpg" alt="Astronomischer Turm im Klementinum—Panoramablick" loading="lazy" /></div>
 <h3>Das Meridianzimmer</h3>
 <p>Vor Atomuhren stellte man die Zeit hier mit einer <strong>Meridianlinie</strong> und einem Sonnenstrahl ein. Ein seltenes Fenster in die Koordination des städtischen Alltags.</p>
@@ -729,36 +729,36 @@ export const blogTranslations = {
     de: '16. Oktober 2025',
   },
   'blog.post9.content': {
-    en: `<h2>Prague in November—Calm, Cultural, Cozy</h2>
-<p>November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city rich with <em>music and exhibitions</em>. Here’s a grounded plan for enjoying the month without rushing.</p>
+    en: `<h2>Prague in November: Calm, Cultural, Cozy</h2>
+<p>November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city full of <em>music and exhibitions</em>. Here’s a grounded plan for enjoying the month without rushing.</p>
 <h3>What to Do</h3>
 <ul>
   <li>Evening concerts: classical and jazz (Rudolfinum, small clubs)</li>
-  <li>Galleries & museums: avoid cold spells while seeing the best works</li>
-  <li>Evening river walks and bridges—dress warm!</li>
+  <li>Galleries and museums: avoid cold spells while seeing the best works</li>
+  <li>Evening river walks and bridges. Dress warm.</li>
 </ul>
-<div class="did-you-know"><h4>Did you know?</h4><p>Some of Prague’s most atmospheric nights happen in late autumn—mist on the river and lantern-lit streets.</p></div>
-<h3>Weather & What to Wear</h3>
+<div class="did-you-know"><h4>Did you know?</h4><p>Some of Prague’s most atmospheric nights happen in late autumn. Mist on the river, lantern-lit streets. I always suggest at least one evening walk, even in November.</p></div>
+<h3>Weather and What to Wear</h3>
 <ul>
   <li>Expect 5–10°C with early sunsets.</li>
   <li>Layers, rain jacket, and good shoes for cobblestones.</li>
 </ul>
-<p class="lead">Want a calm schedule with maps and ticket timings? <a href="/contact#contact-title">Ask me</a>—I’ll tailor your November.</p>`,
-    de: `<h2>Prag im November—ruhig, kulturell, gemütlich</h2>
-<p>Im November hat Prag <strong>weniger Menschen</strong>, <strong>gute Verfügbarkeiten</strong> und reichlich <em>Musik & Ausstellungen</em>. Hier ein realistischer Plan, der ohne Hektik auskommt.</p>
+<p class="lead">Want a calm schedule with maps and ticket timings? <a href="/contact#contact-title">Ask me</a> and I’ll tailor your November.</p>`,
+    de: `<h2>Prag im November: ruhig, kulturell, gemütlich</h2>
+<p>Im November hat Prag <strong>weniger Menschen</strong>, <strong>gute Verfügbarkeiten</strong> und reichlich <em>Musik und Ausstellungen</em>. Hier ein realistischer Plan, der ohne Hektik auskommt.</p>
 <h3>Was tun?</h3>
 <ul>
   <li>Abendkonzerte: Klassik und Jazz (Rudolfinum, kleine Clubs)</li>
-  <li>Galerien & Museen: Kälte meiden und die besten Werke sehen</li>
-  <li>Abendliche Flussspaziergänge und Brücken—warm anziehen!</li>
+  <li>Galerien und Museen: Kälte meiden und die besten Werke sehen</li>
+  <li>Abendliche Flussspaziergänge und Brücken. Warm anziehen.</li>
 </ul>
-<div class="did-you-know"><h4>Wussten Sie schon?</h4><p>Manche der stimmungsvollsten Nächte Prags gibt es im Spätherbst—Nebel über dem Fluss, Laternen in Gassen.</p></div>
-<h3>Wetter & Kleidung</h3>
+<div class="did-you-know"><h4>Wussten Sie schon?</h4><p>Manche der stimmungsvollsten Nächte Prags gibt es im Spätherbst. Nebel über dem Fluss, Laternen in Gassen. Ich empfehle immer mindestens einen Abendspaziergang, auch im November.</p></div>
+<h3>Wetter und Kleidung</h3>
 <ul>
   <li>Erwarten Sie 5–10°C mit frühem Sonnenuntergang.</li>
   <li>Schichten, Regenjacke und gute Schuhe fürs Kopfsteinpflaster.</li>
 </ul>
-<p class="lead">Wünschen Sie einen ruhigen Plan mit Karten und Ticketzeiten? <a href="/contact#contact-title">Fragen Sie mich</a>—ich gestalte Ihren November.</p>`
+<p class="lead">Wünschen Sie einen ruhigen Plan mit Karten und Ticketzeiten? <a href="/contact#contact-title">Fragen Sie mich</a> und ich gestalte Ihren November.</p>`
   },
 
   // Post 10 (Gardens)

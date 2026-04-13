@@ -326,19 +326,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="border-t border-outline-variant/20 bg-primary py-16 text-on-primary">
-        <div className="mx-auto max-w-4xl px-8 text-center">
-          <h2 className="mb-3 font-headline text-3xl">{t('cta.title')}</h2>
-          <p className="mb-2 text-lg opacity-95">{t('cta.subtitle')}</p>
-          <p className="mb-8 font-label text-sm opacity-70">{t('hero.responsePromise')}</p>
-          <Link
-            to="/book#contact-title"
-            className="inline-block rounded-lg bg-surface-container-lowest px-8 py-4 font-label text-base font-semibold text-primary shadow-md transition-opacity hover:opacity-95 active:scale-95"
-          >
-            {t('hero.sendEnquiry')}
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };
