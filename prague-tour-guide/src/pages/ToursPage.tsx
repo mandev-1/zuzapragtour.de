@@ -49,13 +49,13 @@ const ToursPage: React.FC = () => {
 
   const description =
     language === 'de'
-      ? 'Wählen Sie zwischen Führungen Prager Burg, Altstadt-Rundgängen, Erkundungen des Jüdischen Viertels oder stellen Sie Ihre individuelle Prag-Tour zusammen. Kleine Gruppen, lokale Expertin, persönlicher Service. Geführte Tour Prag für Deutsche – private Prag-Touren mit deutschem Guide.'
-      : "Choose from Prague Castle tours, Old Town walking tours, Jewish Quarter explorations, or create your custom Prague experience. Small groups, expert local guide, personalized service.";
+      ? 'Deutschsprachige Prag-Touren mit zertifizierter Expertin: Prager Burg, Altstadt, Jüdisches Viertel oder individuelle Privattour. Spezialistin mit über 40 Jahren Erfahrung. Kleine Gruppen, persönlicher Service.'
+      : "Choose from Prague Castle tours, Old Town walking tours, Jewish Quarter explorations, or create your custom Prague experience. Small groups, certified expert guide, personalized service.";
 
   const keywords =
     language === 'de'
-      ? 'Prag Führung, Prager Burg Tour, Altstadt Prag Führung, Jüdisches Viertel Tour, Prag Stadtführung, private Prag Tour, individuelle Prag Tour, Prag Sehenswürdigkeiten, geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'
-      : 'Prague Castle tour, Old Town Prague tour, Jewish Quarter tour, Prague walking tours, private Prague tours, custom Prague tours, Prague sightseeing tours';
+      ? 'Prag Expertin, Prag Spezialistin, deutschsprachige Stadtführung Prag, Prag Führung deutsch, Prager Burg Tour, Altstadt Prag Führung, Jüdisches Viertel Tour, Prag Stadtführung, private Prag Tour, individuelle Prag Tour, geführte Tour Prag für Deutsche'
+      : 'Prague Castle tour, Old Town Prague tour, Jewish Quarter tour, Prague walking tours, private Prague tours, custom Prague tours, Prague expert guide, Prague specialist';
 
   const tourSchema = getTouristTripSchema(toursForSchema);
 
@@ -91,7 +91,11 @@ const ToursPage: React.FC = () => {
     <>
       <Helmet>
         <html lang={language} />
-        <title>Prague Tours - Castle, Old Town & Custom Tours | Zuza Prague Tours</title>
+        <title>
+          {language === 'de'
+            ? 'Prag-Touren – Deutschsprachige Expertin für Burg, Altstadt & mehr | Zuza Prague Tours'
+            : 'Prague Tours – Castle, Old Town & Custom Tours | Zuza Prague Tours'}
+        </title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href="https://zuzapragtour.de/tours" />

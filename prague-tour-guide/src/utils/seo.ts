@@ -27,7 +27,7 @@ export function getHomePageSchema() {
         name: NAP.businessName,
         alternateName: 'Zuza Prag Tours',
         description:
-          'Private certified tour guide service in Prague. German- and English-speaking guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Run by Ing. Zuzana Manová since 1986.',
+          'Expert and specialist tour guide service in Prague. German- and English-speaking certified guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Deutschsprachige Prag-Expertin Ing. Zuzana Manová since 1986.',
         url: NAP.url,
         telephone: NAP.phone,
         email: NAP.email,

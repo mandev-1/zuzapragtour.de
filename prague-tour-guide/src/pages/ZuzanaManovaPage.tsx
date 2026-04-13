@@ -18,13 +18,13 @@ const ZuzanaManovaPage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Zuzana Manová – Private Stadtführerin in Prag | Zuza Prague Tours'
-      : 'Zuzana Manová – Private Prague Tour Guide | Zuza Prague Tours';
+      ? 'Zuzana Manová – Deutschsprachige Prag-Expertin & Spezialistin | Zuza Prague Tours'
+      : 'Zuzana Manová – Private Prague Tour Guide & Expert | Zuza Prague Tours';
 
   const description =
     language === 'de'
-      ? 'Ing. Zuzana Manová führt seit 1986 Besucher durch Prag. Zertifizierte Stadtführerin, akkreditiert beim Jüdischen Museum. Deutsche und englische Privatführungen.'
-      : 'Ing. Zuzana Manová has been guiding visitors through Prague since 1986. Certified tour guide, accredited by the Jewish Museum. Private tours in German and English.';
+      ? 'Ing. Zuzana Manová – Ihre deutschsprachige Prag-Expertin und Spezialistin seit 1986. Zertifizierte Stadtführerin, akkreditiert beim Jüdischen Museum. Private Führungen auf Deutsch und Englisch.'
+      : 'Ing. Zuzana Manová – certified Prague expert and specialist guide since 1986. Accredited by the Jewish Museum. Private tours in German and English.';
 
   const personSchema = {
     '@context': 'https://schema.org',
@@ -33,11 +33,11 @@ const ZuzanaManovaPage: React.FC = () => {
     givenName: 'Zuzana',
     familyName: 'Manova',
     honorificPrefix: 'Ing.',
-    jobTitle: language === 'de' ? 'Zertifizierte Stadtführerin in Prag' : 'Certified Tour Guide in Prague',
+    jobTitle: language === 'de' ? 'Deutschsprachige Prag-Expertin & zertifizierte Stadtführerin' : 'Certified Expert Tour Guide in Prague',
     description:
       language === 'de'
-        ? 'Professionelle Prager Stadtführerin seit 1986 mit über 40 Jahren Erfahrung.'
-        : 'Professional Prague tour guide since 1986 with 40+ years of experience.',
+        ? 'Deutschsprachige Prag-Expertin und Spezialistin für Stadtführungen seit 1986 mit über 40 Jahren Erfahrung.'
+        : 'Professional Prague expert and specialist tour guide since 1986 with 40+ years of experience.',
     url: 'https://zuzapragtour.de/zuzana-manova',
     image: 'https://zuzapragtour.de/images/zuzana-portrait.jpg',
     telephone: NAP.phone,

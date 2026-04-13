@@ -215,11 +215,11 @@ export const translations = {
   },
   'features.expert.title': {
     en: 'Certified Expert',
-    de: 'Zertifizierte Expertin',
+    de: 'Zertifizierte Expertin & Spezialistin',
   },
   'features.expert.desc': {
     en: '40 years of experience with deep knowledge and engaging stories',
-    de: '40 Jahre Erfahrung mit tiefem Wissen und fesselnden Geschichten',
+    de: 'Deutschsprachige Prag-Expertin mit 40 Jahren Erfahrung, tiefem Wissen und fesselnden Geschichten',
   },
   'features.gems.title': {
     en: 'Hidden Gems',
@@ -236,12 +236,12 @@ export const translations = {
     de: 'Ihre Prager Führerin',
   },
   'about.intro': {
-    en: "I'm Ing. Zuzana Manová. I've been guiding people through Prague since 1986. Forty years of watching this city change, keep its secrets, and surprise me. I still learn something new most weeks.",
-    de: 'Ich bin Ing. Zuzana Manová. Seit 1986 führe ich Menschen durch Prag. Vierzig Jahre, in denen ich zugesehen habe, wie sich diese Stadt verändert, ihre Geheimnisse bewahrt und mich überrascht. Die meisten Wochen lerne ich noch etwas Neues.',
+    en: "I'm Ing. Zuzana Manová, a certified Prague expert guide. I've been guiding people through Prague since 1986. Forty years of watching this city change, keep its secrets, and surprise me. I still learn something new most weeks.",
+    de: 'Ich bin Ing. Zuzana Manová – deutschsprachige Prag-Expertin und zertifizierte Stadtführerin. Seit 1986 führe ich Besucher durch Prag. Vierzig Jahre, in denen ich zugesehen habe, wie sich diese Stadt verändert, ihre Geheimnisse bewahrt und mich überrascht. Die meisten Wochen lerne ich noch etwas Neues.',
   },
   'about.expertise': {
-    en: "I hold the standard Czech guide certification and a separate accreditation from the Jewish Museum in Prague for the Jewish Quarter. Over the years I've walked these streets with school groups, families, corporate boards, film crews, and the occasional diplomat. The tour I give a retired couple from Munich is not the same tour I give a group of architecture students from London, and that's the point.",
-    de: 'Ich habe die reguläre tschechische Stadtführer-Zertifizierung und eine zusätzliche Akkreditierung des Jüdischen Museums in Prag für das Jüdische Viertel. Im Laufe der Jahre bin ich mit Schulklassen, Familien, Vorständen, Filmteams und dem einen oder anderen Diplomaten durch diese Straßen gegangen. Die Tour, die ich einem Rentnerpaar aus München gebe, ist nicht dieselbe wie die für eine Gruppe Architekturstudenten aus London. Genau darum geht es.',
+    en: "I hold the standard Czech guide certification and a specialist accreditation from the Jewish Museum in Prague for the Jewish Quarter. Over the years I've walked these streets with school groups, families, corporate boards, film crews, and the occasional diplomat. The tour I give a retired couple from Munich is not the same tour I give a group of architecture students from London, and that's the point.",
+    de: 'Als Spezialistin für Prager Geschichte und Kultur besitze ich die offizielle tschechische Stadtführer-Zertifizierung und eine zusätzliche Akkreditierung des Jüdischen Museums in Prag als Expertin für das Jüdische Viertel. Im Laufe der Jahre bin ich mit Schulklassen, Familien, Vorständen, Filmteams und dem einen oder anderen Diplomaten durch diese Straßen gegangen. Die deutschsprachige Führung, die ich einem Rentnerpaar aus München gebe, ist nicht dieselbe wie die für eine Gruppe Architekturstudenten aus London. Genau darum geht es.',
   },
   'about.promise': {
     en: "Tell me what you're curious about and I'll build the walk around that. If you don't know yet, even better. I have forty years of opinions about where to take you.",
@@ -303,8 +303,8 @@ export const translations = {
   },
 
   'home.badge': {
-    en: 'Personal · Certified · Local',
-    de: 'Persönlich · Zertifiziert · Lokal',
+    en: 'Personal · Certified Expert · Local',
+    de: 'Persönlich · Zertifizierte Expertin · Deutschsprachig',
   },
   'home.hero.line1': {
     en: 'Discover Prague',
@@ -952,7 +952,7 @@ export const translations = {
   // Footer
   'footer.tagline': {
     en: 'Experience Prague through the eyes of a certified local expert',
-    de: 'Erleben Sie Prag mit einer zertifizierten lokalen Expertin',
+    de: 'Erleben Sie Prag mit Ihrer deutschsprachigen Expertin und Spezialistin für Prag-Führungen',
   },
   'footer.cta.eyebrow': {
     en: 'Certified expert · 40 years experience',
@@ -963,8 +963,8 @@ export const translations = {
     de: 'Bereit, Prag zu entdecken?',
   },
   'footer.certified': {
-    en: 'Certified Prague tour guide',
-    de: 'Zertifizierte Prager Reiseführerin',
+    en: 'Certified Prague expert guide',
+    de: 'Zertifizierte Prag-Expertin & Spezialistin',
   },
   'footer.reviewCount': {
     en: '312 reviews',
@@ -1777,12 +1777,12 @@ export const translations = {
   // ────── Zuzana Manová personal page ──────
 
   'zm.hero.h1': {
-    en: 'Zuzana Manová – Private Prague Tour Guide',
-    de: 'Zuzana Manová – Private Stadtführerin in Prag',
+    en: 'Zuzana Manová – Private Prague Expert Guide',
+    de: 'Zuzana Manová – Ihre deutschsprachige Prag-Expertin',
   },
   'zm.hero.subtitle': {
-    en: 'Certified tour guide with 40 years of experience. I show you Prague through the eyes of someone who grew up with its streets, its revolutions, and its stories.',
-    de: 'Zertifizierte Stadtführerin mit 40 Jahren Erfahrung. Ich zeige Ihnen Prag durch die Augen einer Pragerin – mit Geschichten, die Sie in keinem Reiseführer finden.',
+    en: 'Certified expert guide and Jewish Quarter specialist with 40 years of experience. I show you Prague through the eyes of someone who grew up with its streets, its revolutions, and its stories.',
+    de: 'Zertifizierte Expertin und Spezialistin für das Jüdische Viertel mit 40 Jahren Erfahrung. Ich zeige Ihnen Prag durch die Augen einer Pragerin – mit Geschichten, die Sie in keinem Reiseführer finden.',
   },
   'zm.bio.title': {
     en: 'About Zuzana Manová',
@@ -1801,20 +1801,20 @@ export const translations = {
     de: 'Als akkreditierte Führerin am Jüdischen Museum in Prag halte ich eine Spezialisierungszertifizierung, die mir ermöglicht, tiefgehende Führungen durch das Jüdische Viertel anzubieten – vom Alten Jüdischen Friedhof bis zu den Synagogen – mit dem Kontext und der Sensibilität, die das Thema verdient. Ich führe auf Deutsch und Englisch.',
   },
   'zm.cred.1.title': {
-    en: 'Certified Tour Guide',
-    de: 'Zertifizierte Stadtführerin',
+    en: 'Certified Expert Guide',
+    de: 'Zertifizierte Expertin',
   },
   'zm.cred.1.desc': {
-    en: 'Licensed by the Czech Republic since 1986. Over 40 years of guiding experience in Prague.',
-    de: 'Lizenziert in der Tschechischen Republik seit 1986. Über 40 Jahre Führungserfahrung in Prag.',
+    en: 'Licensed expert guide in the Czech Republic since 1986. Over 40 years of professional guiding experience in Prague.',
+    de: 'Zertifizierte Prag-Expertin seit 1986. Über 40 Jahre professionelle Erfahrung als deutschsprachige Stadtführerin.',
   },
   'zm.cred.2.title': {
-    en: 'Jewish Museum Accredited',
-    de: 'Jüdisches Museum akkreditiert',
+    en: 'Jewish Quarter Specialist',
+    de: 'Spezialistin Jüdisches Viertel',
   },
   'zm.cred.2.desc': {
-    en: 'Specialist accreditation for the Jewish Quarter, including all synagogues and the Old Jewish Cemetery.',
-    de: 'Spezialisierte Akkreditierung für das Jüdische Viertel, einschließlich aller Synagogen und des Alten Jüdischen Friedhofs.',
+    en: 'Specialist accreditation from the Jewish Museum in Prague for in-depth tours of all synagogues and the Old Jewish Cemetery.',
+    de: 'Akkreditierte Spezialistin des Jüdischen Museums in Prag für tiefgehende Führungen durch alle Synagogen und den Alten Jüdischen Friedhof.',
   },
   'zm.cred.3.title': {
     en: 'German & English',

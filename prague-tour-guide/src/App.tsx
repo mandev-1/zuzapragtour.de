@@ -14,6 +14,7 @@ import BlogPostPage from './pages/BlogPostPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import ZuzanaManovaPage from './pages/ZuzanaManovaPage';
+import BlogPromo from './components/BlogPromo';
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -36,6 +37,7 @@ const App: React.FC = () => {
               </Routes>
             </main>
             <Footer />
+            <BlogPromo />
           </div>
         </Router>
       </LanguageProvider>

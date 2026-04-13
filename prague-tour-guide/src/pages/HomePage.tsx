@@ -9,18 +9,18 @@ const HomePage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Zuzana Manová | Private Prag-Stadtführungen – ZuzaPragTour'
+      ? 'Zuzana Manová | Deutschsprachige Prag-Expertin & Stadtführerin – ZuzaPragTour'
       : 'Zuzana Manová | Private Prague Tours – ZuzaPragTour';
 
   const description =
     language === 'de'
-      ? 'Zuzana Manová – Ihre private Stadtführerin in Prag seit 1986. Zertifizierte Führungen auf Deutsch durch Altstadt, Karlsbrücke und Prager Burg. Über 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!'
-      : 'Zuzana Manová – your private Prague tour guide since 1986. Certified tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. 40+ years of experience. Book your personal tour today!';
+      ? 'Zuzana Manová – deutschsprachige Prag-Expertin & Spezialistin für private Stadtführungen seit 1986. Zertifizierte Führungen durch Altstadt, Karlsbrücke, Prager Burg & Jüdisches Viertel. Über 40 Jahre Erfahrung. Jetzt buchen!'
+      : 'Zuzana Manová – your private Prague tour guide since 1986. Certified expert tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. 40+ years of experience. Book your personal tour today!';
 
   const keywords =
     language === 'de'
-      ? 'Prag Reiseführerin, Prag Tour, Prager Burg Führung, Altstadt Prag Tour, Jüdisches Viertel Prag, private Prag Touren, Prag Stadtführung, Prag Sehenswürdigkeiten, geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'
-      : 'Prague tour guide, Prague tours, Prague Castle tour, Old Town Prague, Jewish Quarter Prague, private Prague tours, Prague walking tours, Prague sightseeing, Czech Republic tours';
+      ? 'Prag Expertin, Prag Spezialistin, deutschsprachige Stadtführerin Prag, Prag Reiseführerin deutsch, Prag Tour deutsch, Prager Burg Führung, Altstadt Prag Tour, Jüdisches Viertel Prag, private Prag Touren, Prag Stadtführung, geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'
+      : 'Prague tour guide, Prague expert guide, Prague tours, Prague Castle tour, Old Town Prague, Jewish Quarter Prague, private Prague tours, Prague walking tours, Prague specialist guide, Czech Republic tours';
 
   const homeSchema = getHomePageSchema();
 

@@ -45,12 +45,12 @@ function generate() {
 
   const staticRoutes = {
     '/': {
-      title: 'Zuzana Manová | Private Prag-Stadtf\u00fchrungen \u2013 ZuzaPragTour',
+      title: 'Zuzana Manová | Deutschsprachige Prag-Expertin & Stadtf\u00fchrerin \u2013 ZuzaPragTour',
       description:
-        'Zuzana Manová \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen auf Deutsch durch Altstadt, Karlsbr\u00fccke und Prager Burg. \u00dcber 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!',
-      ogTitle: 'Zuzana Manová | Private Prag-Stadtf\u00fchrungen',
+        'Zuzana Manová \u2013 deutschsprachige Prag-Expertin & Spezialistin f\u00fcr private Stadtf\u00fchrungen seit 1986. Zertifizierte F\u00fchrungen durch Altstadt, Karlsbr\u00fccke, Prager Burg & J\u00fcdisches Viertel. \u00dcber 40 Jahre Erfahrung. Jetzt buchen!',
+      ogTitle: 'Zuzana Manová | Deutschsprachige Prag-Expertin & Stadtf\u00fchrerin',
       ogDescription:
-        'Zuzana Manová \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen durch Altstadt, Karlsbr\u00fccke und Prager Burg.',
+        'Zuzana Manová \u2013 deutschsprachige Prag-Expertin & Spezialistin f\u00fcr Stadtf\u00fchrungen seit 1986.',
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/`,
       canonical: `${SITE}/`,
@@ -102,12 +102,12 @@ function generate() {
       ogType: 'website',
     },
     '/zuzana-manova': {
-      title: 'Zuzana Manová \u2013 Private Stadtf\u00fchrerin in Prag | Zuza Prague Tours',
+      title: 'Zuzana Manová \u2013 Deutschsprachige Prag-Expertin & Spezialistin | Zuza Prague Tours',
       description:
-        'Ing. Zuzana Manová f\u00fchrt seit 1986 Besucher durch Prag. Zertifizierte Stadtf\u00fchrerin, akkreditiert beim J\u00fcdischen Museum. Deutsche und englische Privatf\u00fchrungen.',
-      ogTitle: 'Zuzana Manová \u2013 Private Stadtf\u00fchrerin in Prag',
+        'Ing. Zuzana Manová \u2013 Ihre deutschsprachige Prag-Expertin und Spezialistin seit 1986. Zertifizierte Stadtf\u00fchrerin, akkreditiert beim J\u00fcdischen Museum. Private F\u00fchrungen auf Deutsch und Englisch.',
+      ogTitle: 'Zuzana Manová \u2013 Deutschsprachige Prag-Expertin & Spezialistin',
       ogDescription:
-        '\u00dcber 40 Jahre Erfahrung als Prager Stadtf\u00fchrerin. Private Touren auf Deutsch und Englisch.',
+        'Deutschsprachige Prag-Expertin mit \u00fcber 40 Jahren Erfahrung. Spezialistin f\u00fcr Stadtf\u00fchrungen auf Deutsch und Englisch.',
       ogImage: `${SITE}/images/zuzana-portrait.jpg`,
       ogUrl: `${SITE}/zuzana-manova`,
       canonical: `${SITE}/zuzana-manova`,
