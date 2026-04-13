@@ -45,12 +45,12 @@ function generate() {
 
   const staticRoutes = {
     '/': {
-      title: 'Zuzana Manova | Private Prag-Stadtf\u00fchrungen \u2013 ZuzaPragTour',
+      title: 'Zuzana Manová | Private Prag-Stadtf\u00fchrungen \u2013 ZuzaPragTour',
       description:
-        'Zuzana Manova \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen auf Deutsch durch Altstadt, Karlsbr\u00fccke und Prager Burg. \u00dcber 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!',
-      ogTitle: 'Zuzana Manova | Private Prag-Stadtf\u00fchrungen',
+        'Zuzana Manová \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen auf Deutsch durch Altstadt, Karlsbr\u00fccke und Prager Burg. \u00dcber 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!',
+      ogTitle: 'Zuzana Manová | Private Prag-Stadtf\u00fchrungen',
       ogDescription:
-        'Zuzana Manova \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen durch Altstadt, Karlsbr\u00fccke und Prager Burg.',
+        'Zuzana Manová \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen durch Altstadt, Karlsbr\u00fccke und Prager Burg.',
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/`,
       canonical: `${SITE}/`,
@@ -102,10 +102,10 @@ function generate() {
       ogType: 'website',
     },
     '/zuzana-manova': {
-      title: 'Zuzana Manova \u2013 Private Stadtf\u00fchrerin in Prag | Zuza Prague Tours',
+      title: 'Zuzana Manová \u2013 Private Stadtf\u00fchrerin in Prag | Zuza Prague Tours',
       description:
-        'Ing. Zuzana Manova f\u00fchrt seit 1986 Besucher durch Prag. Zertifizierte Stadtf\u00fchrerin, akkreditiert beim J\u00fcdischen Museum. Deutsche und englische Privatf\u00fchrungen.',
-      ogTitle: 'Zuzana Manova \u2013 Private Stadtf\u00fchrerin in Prag',
+        'Ing. Zuzana Manová f\u00fchrt seit 1986 Besucher durch Prag. Zertifizierte Stadtf\u00fchrerin, akkreditiert beim J\u00fcdischen Museum. Deutsche und englische Privatf\u00fchrungen.',
+      ogTitle: 'Zuzana Manová \u2013 Private Stadtf\u00fchrerin in Prag',
       ogDescription:
         '\u00dcber 40 Jahre Erfahrung als Prager Stadtf\u00fchrerin. Private Touren auf Deutsch und Englisch.',
       ogImage: `${SITE}/images/zuzana-portrait.jpg`,

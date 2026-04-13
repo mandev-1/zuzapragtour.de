@@ -3,7 +3,7 @@ const GUIDE_ID = 'https://zuzapragtour.de/#guide';
 
 export const NAP = {
   businessName: 'Zuza Prague Tours',
-  personName: 'Ing. Zuzana Manova',
+  personName: 'Ing. Zuzana Manová',
   phone: '+420 721 231 933',
   email: 'zuzanamanova@email.cz',
   url: 'https://zuzapragtour.de',
@@ -27,7 +27,7 @@ export function getHomePageSchema() {
         name: NAP.businessName,
         alternateName: 'Zuza Prag Tours',
         description:
-          'Private certified tour guide service in Prague. German- and English-speaking guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Run by Ing. Zuzana Manova since 1986.',
+          'Private certified tour guide service in Prague. German- and English-speaking guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Run by Ing. Zuzana Manová since 1986.',
         url: NAP.url,
         telephone: NAP.phone,
         email: NAP.email,
@@ -146,12 +146,12 @@ export function getFAQSchema(faqs: FAQItem[]) {
 }
 
 export const defaultMeta = {
-  title: 'Zuza Prague Tours - Expert Prague Tour Guide | Zuzana Manova',
+  title: 'Zuza Prague Tours - Expert Prague Tour Guide | Zuzana Manová',
   description:
     'Discover Prague with Zuzana, your local expert tour guide. Private and small group tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. Book today!',
   keywords:
-    'Prague tour guide, Prague tours, Prague Castle, Old Town Prague, Jewish Quarter, private tours, walking tours, Prague sightseeing, Czech Republic tours, Zuzana Manova',
-  author: 'Zuzana Manova',
+    'Prague tour guide, Prague tours, Prague Castle, Old Town Prague, Jewish Quarter, private tours, walking tours, Prague sightseeing, Czech Republic tours, Zuzana Manová',
+  author: 'Zuzana Manová',
   ogType: 'website',
   ogImage: 'https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg',
   twitterCard: 'summary_large_image',
@@ -159,7 +159,7 @@ export const defaultMeta = {
 
 export const getPageTitle = (pageName: string) => {
   const titles: { [key: string]: string } = {
-    home: 'Zuza Prague Tours - Expert Prague Tour Guide | Zuzana Manova',
+    home: 'Zuza Prague Tours - Expert Prague Tour Guide | Zuzana Manová',
     tours: 'Prague Tours - Castle, Old Town & Custom Tours | Zuza Prague Tours',
     contact: 'Contact Zuzana - Book Your Prague Tour | +420 721 231 933',
   };

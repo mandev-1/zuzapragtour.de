@@ -9,148 +9,162 @@ export const blogTranslations = {
 
   // Post 24 (new)
   'blog.post24.title': {
-    en: 'How to choose a Prague tour guide (and avoid the tourist traps)',
-    de: 'Wie man den besten Prag-Stadtführer wählt (und Touristenfallen vermeidet)',
+    en: 'How to choose the right Prague tour guide for you',
+    de: 'So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis',
   },
   'blog.post24.excerpt': {
-    en: 'Not all guides are the same. Here is what to look for, what to ask, and what the agencies will not tell you.',
-    de: 'Nicht alle Stadtführer sind gleich. Worauf man achten sollte, welche Fragen man stellen muss und was die Agenturen verschweigen.',
+    en: 'A friendly, honest guide to finding the perfect guide – what to look for, what to ask, and how to make your Prague visit truly personal.',
+    de: 'Ein freundlicher, ehrlicher Leitfaden, um den perfekten Guide zu finden – worauf man achten sollte, welche Fragen man stellen kann und wie Ihr Prag-Besuch wirklich persönlich wird.',
   },
   'blog.post24.date': {
     en: 'April 13, 2026',
     de: '13. April 2026',
   },
   'blog.post24.content': {
-    en: `<h2>How to choose a Prague tour guide (and avoid the tourist traps)</h2>
+    en: `<h2>How to choose the right Prague tour guide for you</h2>
 
-<p class="lead">I have been guiding visitors through Prague since 1986. In that time I have watched the industry change completely. There are more guides now than ever, more agencies, more online listings. Some are excellent. Many are not. Here is what I would tell a friend who asked me how to find a good one.</p>
+<p class="lead">Prague is one of those cities that gets better the more you know about it. A good guide makes that happen — they turn a walk past beautiful buildings into a walk <em>through</em> stories, memories, and little secrets that make you fall in love with the place. I have been doing this since 1986, and I still discover new things. Here is my friendly advice on finding the guide who will make your visit truly special.</p>
 
-<h2>Private guide or group tour?</h2>
-<p>This is the first question and most people get it backwards. They assume a group tour is the safe, cheap option. It can be. But "cheap" and "good value" are different things.</p>
-<p>Group tours in Prague typically cost 15-25 EUR per person for 2-3 hours. You walk with 15-30 strangers at whatever pace the slowest person sets. The guide follows a fixed script. You cannot ask them to skip the Astronomical Clock because you saw it yesterday, or to spend extra time in the Jewish Quarter because that is what you came for.</p>
-<p>A private guide costs more per hour but you split that among your group. A family of four or a couple travelling with friends often pays only slightly more than group tickets, and you get a tour shaped around what you actually want to see. You set the start time. You choose the pace. If it rains, you duck into a cafe and pick up where you left off.</p>
-<p>If budget is genuinely tight, a group tour is fine. Just know what you are getting.</p>
+<div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:1.5rem 0;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/xgNK3ntJQ8Y" title="Prague city guide — what to see and do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<p><em>A lovely introduction to what makes Prague so magical — and why the right guide can make all the difference.</em></p>
 
-<h2>The certification question</h2>
-<p>In the Czech Republic, tour guides can get an official certification. It is not mandatory. Anyone can stand in Old Town Square with an umbrella and walk tourists around. That is part of the problem.</p>
-<p>A certified guide has passed exams on Czech history, art history, architecture, and practical guiding skills. They carry a license card issued by the relevant authority. You can ask to see it. A good guide will not mind.</p>
-<p>There is a second, more specific credential for the Jewish Quarter. The Jewish Museum in Prague has its own accreditation program. Guides who hold it have studied Jewish history in Prague in depth and are recognised by the museum itself. If the Jewish Quarter is important to your visit, ask whether the guide has this accreditation. Most do not.</p>
+<h2>Private guide or group tour? Both can be wonderful</h2>
+<p>Group tours are a great way to get your bearings. You walk with a lively group, hear the highlights, and get a feel for the city — usually for 15–25 EUR per person. They are social, fun, and perfect if you have just arrived and want an overview.</p>
+<p>A private guide is a different experience. The tour is shaped around <em>you</em>: your pace, your interests, your questions. If you want to linger in the Jewish Quarter because the history moves you, we do that. If your children are getting tired and you want to sit in a garden for ten minutes, we do that too. You set the start time, and if it rains, we simply duck into a cafe and carry on when the sun comes back.</p>
+<p>For families, couples, or small groups of friends, a private guide often works out to only a little more per person — and the experience is incomparably more personal.</p>
 
-<h2>Language matters more than you think</h2>
-<p>Plenty of guides speak English. Fewer speak German well. Even fewer speak either language at a level where they can tell stories, handle questions, explain historical context, and still sound natural.</p>
-<p>If you are a German-speaking visitor, check whether the guide actually conducts tours in German regularly or whether it is listed as a "can do" afterthought. There is a big difference between someone who guides in German every week and someone who took a B2 exam five years ago. Ask them a question in German before you book. How they respond tells you everything.</p>
-<p>Same applies to English. If the guide's listing reads like it was written by a translation tool, the tour will probably feel the same way.</p>
-
-<h2>Experience: how much is enough?</h2>
-<p>I am biased here, obviously. I have been doing this for 40 years. But I do not think you need a guide with decades of experience. What you need is someone who knows the city beyond the Wikipedia version.</p>
-<p>Ask them something specific. "What is your favourite building in Mala Strana and why?" or "Where do you go for lunch near the Castle?" If they give you a genuine, personal answer, they probably know the city. If they give you a brochure answer, they probably do not.</p>
-<p>Newer guides can be wonderful. They tend to be enthusiastic and they have often studied something specific, like architecture or Jewish studies or Czech literature. The ones to avoid are the ones who got into guiding because it looked like easy money and learned everything from a script.</p>
-
-<h2>What the agencies will not tell you</h2>
-<p>Most booking platforms and tour agencies in Prague operate on commission. You pay 60 EUR for a tour, the agency takes 20-40%, and the guide gets the rest. That creates two problems.</p>
-<p>First, the best guides tend to leave the agencies. They do not need them. They have their own clients, their own TripAdvisor page, their own reputation. The guides who stay on agency rosters are often newer or less established.</p>
-<p>Second, when you book through an agency, you often do not know who your guide will be until the day before. Sometimes not until the morning of. The agency picks whoever is available. You might get someone excellent. You might get a student filling in for the weekend. The agency does not really care which, as long as the slot is filled.</p>
-<p>If a specific guide matters to you, book with them directly. It is almost always cheaper and you know exactly who is showing up.</p>
-
-<h2>Reviews: what to actually look for</h2>
-<p>TripAdvisor, Google, GetYourGuide, TourHQ: all useful, but read them carefully.</p>
-<p>Ignore the star rating for a moment and read what people say. Look for:</p>
+<h2>What makes a guide truly great</h2>
+<p>The best guides are the ones who genuinely love their city. You can feel it in the way they talk, the little detours they suggest, the stories they share that are not in any guidebook.</p>
+<p>Here are some signs you have found someone special:</p>
 <ul>
-<li>Mentions of the guide by name (means it was personal, not interchangeable)</li>
-<li>Specific details about what they saw or learned (means the reviewer paid attention, which usually means the tour was good)</li>
-<li>Repeat visitors or people who extended the tour (strongest signal there is)</li>
-</ul>
-<p>Be skeptical of reviews that sound generic: "Great tour, very knowledgeable, would recommend." Those could be about anyone, anywhere. The reviews that matter are the ones where someone writes three paragraphs about a story the guide told them about the Velvet Revolution or a church they had never heard of.</p>
-
-<h2>Red flags</h2>
-<p>After 40 years I have seen most of the tricks. Watch for these:</p>
-<ul>
-<li><strong>No clear pricing.</strong> If the website says "contact us for a quote" without any indication of cost, they are probably adjusting the price based on where you are from. A good guide publishes their rates.</li>
-<li><strong>"Free" walking tours.</strong> These are tip-based. The guide works for tips. That means the tour is designed to entertain, not to inform. It also means the guide spends the first ten minutes explaining the tipping system and the last ten minutes reminding you. Some are decent. Most are forgettable.</li>
-<li><strong>Unusually cheap.</strong> A 3-hour private tour of Prague for 40 EUR means either the guide is brand new or they are cutting corners. A certified, experienced guide in Prague charges somewhere between 100 and 200 EUR for a half-day tour, depending on the group size and content. That is the real range.</li>
-<li><strong>No photos of the guide.</strong> If the listing shows stock photos of Prague but not the actual person who will be guiding you, ask yourself why. You are hiring a person, not a city.</li>
-<li><strong>Claims to cover everything.</strong> "See all of Prague in 2 hours!" No. You cannot. Not well. A good guide is honest about what fits in the time and suggests priorities based on your interests.</li>
+<li><strong>They ask about you first.</strong> Before the tour even starts, they want to know what you are interested in, what you have already seen, what excited you about Prague.</li>
+<li><strong>They tell personal stories.</strong> Not just facts from a textbook, but moments from their own life in the city — the corner where they played as a child, the cafe where they celebrated after the Velvet Revolution.</li>
+<li><strong>They are flexible.</strong> A wonderful guide adjusts the route on the fly. If something catches your eye, they know the story behind it.</li>
+<li><strong>They have credentials they are proud of.</strong> In the Czech Republic, guides can earn an official certification through exams in history, architecture, and art. For the Jewish Quarter, the <a href="https://www.jewishmuseum.cz" target="_blank" rel="noopener noreferrer">Jewish Museum in Prague</a> offers its own specialist accreditation. These qualifications mean the guide has invested in their craft.</li>
 </ul>
 
-<h2>What to ask before you book</h2>
-<p>Five questions. Send them by email or WhatsApp. The answers tell you almost everything you need to know.</p>
+<h2>Language is part of the magic</h2>
+<p>A tour in your own language is simply a richer experience. You catch the humour, the nuance, the emotion behind the stories. If you are a German-speaking visitor, look for a guide who conducts tours in German regularly — someone for whom it is a living, breathing part of their work, not just a line on a CV.</p>
+<p>A quick way to tell? Send them a message in your language before you book. The warmth and fluency of their reply will tell you everything.</p>
+
+<h2>Experience and passion go hand in hand</h2>
+<p>I have been guiding for 40 years, but some of the best tours I have ever heard about were given by younger guides who are deeply passionate about a specific subject — Czech architecture, Kafka, Jewish heritage, the art scene. What matters is not the number of years but whether the guide truly <em>knows</em> the city and cares about sharing it.</p>
+<p>Try asking a simple question: "What is your favourite spot in Prague and why?" A guide who lights up and gives you a personal, enthusiastic answer is someone who will make your day wonderful.</p>
+
+<h2>Booking directly: a warm recommendation</h2>
+<p>Booking platforms and agencies can be convenient, and there are good guides on all of them. But if you find a guide you like — through their website, reviews, or a recommendation — reaching out directly has some lovely advantages:</p>
+<ul>
+<li>You know exactly who will be guiding you (no last-minute substitutions)</li>
+<li>You can discuss your interests and tailor the tour in advance</li>
+<li>It is often more affordable, since there is no middleman</li>
+<li>You start building a personal connection before you even arrive in Prague</li>
+</ul>
+
+<h2>Reading reviews with joy</h2>
+<p>Reviews are a wonderful way to find your guide. When reading TripAdvisor, Google, or <a href="https://www.tourhq.com/guide/CZ56896/zuzana-manova" target="_blank" rel="noopener noreferrer">TourHQ</a> reviews, look for the ones that make you smile:</p>
+<ul>
+<li>People who mention the guide by name — that means it was personal</li>
+<li>Specific stories about what they saw or learned — the sign of a tour that left a real impression</li>
+<li>Visitors who extended the tour or came back for a second one — the highest compliment a guide can receive</li>
+</ul>
+<p>The best reviews are not the ones that say "great tour, would recommend." They are the ones where someone writes a whole paragraph about a story the guide told them at the Charles Bridge, or a hidden courtyard they would never have found on their own.</p>
+
+<h2>A few helpful things to ask</h2>
+<p>Before you book, a short message can tell you a lot. Here are five friendly questions:</p>
 <ol>
-<li><strong>Are you a certified guide?</strong> Not a dealbreaker if they are not, but you should know.</li>
-<li><strong>Do you guide personally, or will you send someone else?</strong> Important. Some "guides" are actually agencies with a personal-sounding name.</li>
-<li><strong>Can we adjust the route?</strong> The answer should be yes. If it is no, they are running a group tour with fewer people.</li>
-<li><strong>What is included in the price?</strong> Entrance fees, transport, tips: know what you are paying for.</li>
-<li><strong>What happens if it rains / we are late / we want to extend?</strong> Flexibility tells you whether this person is professional or just filling hours.</li>
+<li><strong>Will you be guiding personally?</strong> The loveliest tours are with the person you have been communicating with.</li>
+<li><strong>Can we shape the route together?</strong> A great guide will say yes enthusiastically.</li>
+<li><strong>What is included in the price?</strong> Entrance fees, transport, meeting point — good to know upfront.</li>
+<li><strong>What happens if it rains?</strong> Flexibility is the mark of a guide who genuinely cares about your experience.</li>
+<li><strong>What do you personally love most about Prague?</strong> Their answer will tell you whether this is someone who will make your visit unforgettable.</li>
 </ol>
 
-<h2>My honest take</h2>
-<p>I run a one-person operation. I guide every tour myself. I have a Czech Republic guide certification and a Jewish Museum accreditation. I speak German and English fluently because I use both every week, not because it says so on a certificate.</p>
-<p>I am not the cheapest guide in Prague and I am not trying to be. I charge a fair rate for what I offer, which is four decades of knowing this city, its history, its corners, and its stories. I publish my prices. I answer my own emails. When you book with me, you get me.</p>
-<p>But that is my pitch. What matters is that you find a guide who fits what <em>you</em> want from your visit. Use the advice above, ask the questions, and trust your gut. The good ones are easy to spot once you know what to look for.</p>`,
-    de: `<h2>Wie man den besten Prag-Stadtführer wählt (und Touristenfallen vermeidet)</h2>
+<h2>A little about me</h2>
+<p>I am <a href="/zuzana-manova">Zuzana Manová</a>, and I have been sharing Prague with visitors since 1986 — through Communism, the Velvet Revolution, and all the wonderful changes since. I hold the Czech Republic guide certification and a specialist accreditation from the Jewish Museum in Prague. I guide in German and English, both of which I use every single week.</p>
+<p>Every tour I give is private and personal. I love getting to know the people I guide — where they are from, what they are curious about, what surprises them. I have walked these streets thousands of times, and they still fill me with joy. I would love to share that with you.</p>
 
-<p class="lead">Ich führe seit 1986 Besucher durch Prag. In dieser Zeit hat sich die Branche komplett verändert. Es gibt heute mehr Stadtführer als je zuvor, mehr Agenturen, mehr Online-Portale. Einige davon sind hervorragend. Viele nicht. Hier ist, was ich einem Freund raten würde, der mich fragt, wie man einen guten findet.</p>
+<div class="blog-cta-box">
+  <h3>Ready to explore Prague together?</h3>
+  <p>I would be delighted to hear from you. Tell me about your visit and I will suggest the perfect route.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Send me a message</a>
+    <a class="btn btn-outline" href="/tours">Explore my tours</a>
+  </div>
+</div>`,
+    de: `<h2>So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis</h2>
 
-<h2>Privatführung oder Gruppenrundgang?</h2>
-<p>Das ist die erste Frage und die meisten Leute beantworten sie falsch. Sie denken, eine Gruppenführung sei die sichere, günstige Option. Kann sie sein. Aber "günstig" und "gutes Preis-Leistungs-Verhältnis" sind zwei verschiedene Dinge.</p>
-<p>Gruppenführungen in Prag kosten typischerweise 15-25 EUR pro Person für 2-3 Stunden. Man läuft mit 15-30 Fremden im Tempo des Langsamsten. Der Guide folgt einem festen Skript. Man kann ihn nicht bitten, die Astronomische Uhr auszulassen, weil man sie gestern schon gesehen hat, oder mehr Zeit im Jüdischen Viertel zu verbringen, weil man genau dafür gekommen ist.</p>
-<p>Ein privater Guide kostet mehr pro Stunde, aber man teilt den Preis auf die eigene Gruppe auf. Eine vierköpfige Familie oder ein Paar, das mit Freunden reist, zahlt oft nur wenig mehr als Gruppentickets und bekommt eine Tour, die auf die eigenen Interessen zugeschnitten ist. Man bestimmt die Startzeit. Man bestimmt das Tempo. Wenn es regnet, geht man in ein Cafe und macht danach weiter.</p>
-<p>Wenn das Budget wirklich knapp ist, ist eine Gruppenführung in Ordnung. Man sollte nur wissen, was man bekommt.</p>
+<p class="lead">Prag ist eine dieser Städte, die immer schöner wird, je mehr man über sie erfährt. Ein guter Stadtführer macht genau das möglich – er verwandelt einen Spaziergang an schönen Gebäuden vorbei in einen Spaziergang <em>durch</em> Geschichten, Erinnerungen und kleine Geheimnisse, die einen dazu bringen, sich in die Stadt zu verlieben. Ich mache das seit 1986, und ich entdecke immer noch Neues. Hier ist mein freundlicher Rat, wie Sie den Guide finden, der Ihren Besuch wirklich besonders macht.</p>
 
-<h2>Die Frage der Zertifizierung</h2>
-<p>In Tschechien können Stadtführer eine offizielle Zertifizierung erwerben. Sie ist nicht verpflichtend. Jeder kann sich auf den Altstädter Ring stellen, einen Regenschirm hochhalten und Touristen herumführen. Das ist Teil des Problems.</p>
-<p>Ein zertifizierter Guide hat Prüfungen in tschechischer Geschichte, Kunstgeschichte, Architektur und praktischer Fremdenführung bestanden. Er trägt einen Ausweis der zuständigen Behörde bei sich. Man kann danach fragen. Ein guter Guide hat damit kein Problem.</p>
-<p>Es gibt eine zweite, spezifischere Qualifikation für das Jüdische Viertel. Das Jüdische Museum in Prag hat ein eigenes Akkreditierungsprogramm. Guides, die dieses besitzen, haben die jüdische Geschichte Prags vertieft studiert und sind vom Museum selbst anerkannt. Wenn das Jüdische Viertel für Ihren Besuch wichtig ist, fragen Sie, ob der Guide diese Akkreditierung hat. Die meisten haben sie nicht.</p>
+<div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:1.5rem 0;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/xgNK3ntJQ8Y" title="Prag Stadtführer — was man sehen und erleben kann" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+<p><em>Eine wunderbare Einführung in das, was Prag so magisch macht — und warum der richtige Guide den Unterschied ausmacht.</em></p>
 
-<h2>Sprache ist wichtiger als man denkt</h2>
-<p>Viele Guides sprechen Englisch. Deutlich weniger sprechen gut Deutsch. Noch weniger sprechen eine der beiden Sprachen auf einem Niveau, auf dem sie Geschichten erzählen, Fragen beantworten, historische Zusammenhänge erklären und dabei natürlich klingen können.</p>
-<p>Wenn Sie deutschsprachig sind, prüfen Sie, ob der Guide tatsächlich regelmäßig auf Deutsch führt oder ob Deutsch nur als "kann ich auch" auf der Liste steht. Es gibt einen großen Unterschied zwischen jemandem, der jede Woche auf Deutsch führt, und jemandem, der vor fünf Jahren eine B2-Prüfung abgelegt hat. Stellen Sie dem Guide vor der Buchung eine Frage auf Deutsch. Die Antwort sagt Ihnen alles.</p>
-<p>Dasselbe gilt für Englisch. Wenn der Eintrag des Guides klingt, als wäre er von einem Übersetzungstool geschrieben, wird sich die Tour wahrscheinlich genauso anfühlen.</p>
+<h2>Privatführung oder Gruppenrundgang? Beides kann wunderbar sein</h2>
+<p>Gruppenführungen sind eine großartige Möglichkeit, sich zu orientieren. Man läuft mit einer lebhaften Gruppe, hört die Highlights und bekommt ein Gefühl für die Stadt — meist für 15–25 EUR pro Person. Sie sind gesellig, machen Spaß und sind perfekt, wenn man gerade angekommen ist und einen Überblick möchte.</p>
+<p>Ein privater Guide ist ein anderes Erlebnis. Die Tour wird ganz auf <em>Sie</em> zugeschnitten: Ihr Tempo, Ihre Interessen, Ihre Fragen. Wenn Sie im Jüdischen Viertel verweilen möchten, weil die Geschichte Sie berührt, machen wir das. Wenn Ihre Kinder müde werden und Sie zehn Minuten in einem Garten sitzen wollen, machen wir auch das. Sie bestimmen die Startzeit, und wenn es regnet, gehen wir einfach in ein Cafe und machen weiter, wenn die Sonne zurückkommt.</p>
+<p>Für Familien, Paare oder kleine Freundesgruppen ist ein privater Guide pro Person oft nur wenig teurer — und das Erlebnis ist unvergleichlich persönlicher.</p>
 
-<h2>Erfahrung: Wie viel ist genug?</h2>
-<p>Ich bin hier natürlich befangen. Ich mache das seit 40 Jahren. Aber ich glaube nicht, dass man einen Guide mit jahrzehntelanger Erfahrung braucht. Was man braucht, ist jemand, der die Stadt jenseits der Wikipedia-Version kennt.</p>
-<p>Stellen Sie eine konkrete Frage. "Was ist Ihr Lieblingsgebäude auf der Kleinseite und warum?" oder "Wo gehen Sie in der Nähe der Burg zum Mittagessen?" Wenn Sie eine ehrliche, persönliche Antwort bekommen, kennt die Person die Stadt wahrscheinlich. Wenn Sie eine Prospekt-Antwort bekommen, eher nicht.</p>
-<p>Neuere Guides können wunderbar sein. Sie sind oft begeistert und haben häufig etwas Bestimmtes studiert, wie Architektur, Judaistik oder tschechische Literatur. Diejenigen, die man meiden sollte, sind die, die ins Guiding eingestiegen sind, weil es nach leichtem Geld aussah, und alles aus einem Skript gelernt haben.</p>
-
-<h2>Was die Agenturen Ihnen nicht sagen</h2>
-<p>Die meisten Buchungsplattformen und Touragenturen in Prag arbeiten auf Provisionsbasis. Sie zahlen 60 EUR für eine Tour, die Agentur nimmt 20-40%, und der Guide bekommt den Rest. Das schafft zwei Probleme.</p>
-<p>Erstens: Die besten Guides verlassen irgendwann die Agenturen. Sie brauchen sie nicht. Sie haben eigene Kunden, eine eigene TripAdvisor-Seite, einen eigenen Ruf. Die Guides, die auf den Agentur-Listen bleiben, sind oft neuer oder weniger etabliert.</p>
-<p>Zweitens: Wenn Sie über eine Agentur buchen, wissen Sie oft bis zum Vortag nicht, wer Ihr Guide sein wird. Manchmal nicht bis zum Morgen des Tages. Die Agentur wählt aus, wer gerade verfügbar ist. Vielleicht bekommen Sie jemand Hervorragenden. Vielleicht einen Studenten, der am Wochenende einspringt. Der Agentur ist es ziemlich egal, solange der Termin besetzt ist.</p>
-<p>Wenn Ihnen ein bestimmter Guide wichtig ist, buchen Sie direkt bei ihm. Es ist fast immer günstiger und Sie wissen genau, wer auftaucht.</p>
-
-<h2>Bewertungen: Worauf man wirklich achten sollte</h2>
-<p>TripAdvisor, Google, GetYourGuide, TourHQ: alle nützlich, aber lesen Sie genau.</p>
-<p>Ignorieren Sie die Sternebewertung für einen Moment und lesen Sie, was die Leute schreiben. Achten Sie auf:</p>
+<h2>Was einen Guide wirklich großartig macht</h2>
+<p>Die besten Guides sind diejenigen, die ihre Stadt aufrichtig lieben. Man spürt es in der Art, wie sie erzählen, in den kleinen Umwegen, die sie vorschlagen, in den Geschichten, die in keinem Reiseführer stehen.</p>
+<p>Hier sind einige Zeichen, dass Sie jemand Besonderes gefunden haben:</p>
 <ul>
-<li>Nennung des Guides beim Namen (bedeutet, es war persönlich, nicht austauschbar)</li>
-<li>Konkrete Details darüber, was sie gesehen oder gelernt haben (bedeutet, der Rezensent hat aufgepasst, was normalerweise heißt, die Tour war gut)</li>
-<li>Wiederholungsbesucher oder Leute, die die Tour verlängert haben (das stärkste Signal überhaupt)</li>
-</ul>
-<p>Seien Sie skeptisch bei Bewertungen, die generisch klingen: "Tolle Tour, sehr sachkundig, kann ich empfehlen." Das könnte über jeden und überall geschrieben sein. Die Bewertungen, die zählen, sind die, in denen jemand drei Absätze über eine Geschichte schreibt, die der Guide über die Samtene Revolution erzählt hat, oder über eine Kirche, von der er noch nie gehört hatte.</p>
-
-<h2>Warnsignale</h2>
-<p>Nach 40 Jahren habe ich die meisten Tricks gesehen. Achten Sie auf Folgendes:</p>
-<ul>
-<li><strong>Keine klare Preisangabe.</strong> Wenn auf der Website "Kontaktieren Sie uns für ein Angebot" steht, ohne jegliche Kostenangabe, wird der Preis wahrscheinlich an Ihre Herkunft angepasst. Ein guter Guide veröffentlicht seine Preise.</li>
-<li><strong>"Kostenlose" Stadtführungen.</strong> Diese basieren auf Trinkgeld. Der Guide arbeitet für Trinkgeld. Das bedeutet, die Tour ist auf Unterhaltung ausgelegt, nicht auf Information. Es bedeutet auch, dass der Guide die ersten zehn Minuten damit verbringt, das Trinkgeld-System zu erklären, und die letzten zehn Minuten damit, daran zu erinnern. Manche sind passabel. Die meisten sind vergesslich.</li>
-<li><strong>Ungewöhnlich billig.</strong> Eine dreistündige Privatführung durch Prag für 40 EUR bedeutet, dass der Guide entweder ganz neu ist oder an Qualität spart. Ein zertifizierter, erfahrener Guide in Prag verlangt zwischen 100 und 200 EUR für eine Halbtagestour, je nach Gruppengröße und Inhalt. Das ist die realistische Preisspanne.</li>
-<li><strong>Keine Fotos des Guides.</strong> Wenn das Inserat Stockfotos von Prag zeigt, aber nicht die Person, die Sie führen wird, fragen Sie sich warum. Sie buchen eine Person, keine Stadt.</li>
-<li><strong>Behauptungen, alles abzudecken.</strong> "Sehen Sie ganz Prag in 2 Stunden!" Nein. Das geht nicht. Nicht gut. Ein guter Guide ist ehrlich darüber, was in die Zeit passt, und schlägt Prioritäten vor, die auf Ihren Interessen basieren.</li>
+<li><strong>Sie fragen zuerst nach Ihnen.</strong> Noch bevor die Tour beginnt, möchten sie wissen, was Sie interessiert, was Sie schon gesehen haben, was Sie an Prag begeistert.</li>
+<li><strong>Sie erzählen persönliche Geschichten.</strong> Nicht nur Fakten aus einem Lehrbuch, sondern Momente aus ihrem eigenen Leben in der Stadt — die Ecke, an der sie als Kind gespielt haben, das Cafe, in dem sie nach der Samtenen Revolution gefeiert haben.</li>
+<li><strong>Sie sind flexibel.</strong> Ein wunderbarer Guide passt die Route spontan an. Wenn etwas Ihre Aufmerksamkeit erregt, kennt er die Geschichte dahinter.</li>
+<li><strong>Sie haben Qualifikationen, auf die sie stolz sind.</strong> In Tschechien können Guides eine offizielle Zertifizierung durch Prüfungen in Geschichte, Architektur und Kunst erwerben. Für das Jüdische Viertel bietet das <a href="https://www.jewishmuseum.cz" target="_blank" rel="noopener noreferrer">Jüdische Museum in Prag</a> eine eigene Spezial-Akkreditierung an. Diese Qualifikationen bedeuten, dass der Guide in sein Handwerk investiert hat.</li>
 </ul>
 
-<h2>Was man vor der Buchung fragen sollte</h2>
-<p>Fünf Fragen. Per E-Mail oder WhatsApp senden. Die Antworten verraten Ihnen fast alles, was Sie wissen müssen.</p>
+<h2>Sprache ist Teil der Magie</h2>
+<p>Eine Tour in der eigenen Sprache ist einfach ein reicheres Erlebnis. Man versteht den Humor, die Nuancen, die Emotionen hinter den Geschichten. Wenn Sie deutschsprachig sind, suchen Sie einen Guide, der regelmäßig auf Deutsch führt — jemanden, für den es ein lebendiger, alltäglicher Teil der Arbeit ist, nicht nur eine Zeile im Lebenslauf.</p>
+<p>Ein schneller Test: Schreiben Sie dem Guide vor der Buchung eine Nachricht auf Deutsch. Die Wärme und Natürlichkeit der Antwort verraten Ihnen alles.</p>
+
+<h2>Erfahrung und Leidenschaft gehören zusammen</h2>
+<p>Ich führe seit 40 Jahren, aber einige der besten Touren, von denen ich gehört habe, wurden von jüngeren Guides gegeben, die sich leidenschaftlich für ein bestimmtes Thema begeistern — tschechische Architektur, Kafka, jüdisches Erbe, die Kunstszene. Entscheidend ist nicht die Anzahl der Jahre, sondern ob der Guide die Stadt wirklich <em>kennt</em> und sie mit Freude teilt.</p>
+<p>Versuchen Sie eine einfache Frage: „Was ist Ihr Lieblingsort in Prag und warum?" Ein Guide, dessen Augen aufleuchten und der Ihnen eine persönliche, begeisterte Antwort gibt, ist jemand, der Ihren Tag wunderbar machen wird.</p>
+
+<h2>Direktbuchung: eine herzliche Empfehlung</h2>
+<p>Buchungsplattformen und Agenturen können praktisch sein, und es gibt gute Guides auf allen. Aber wenn Sie einen Guide gefunden haben, der Ihnen gefällt — über seine Website, Bewertungen oder eine Empfehlung — hat die direkte Kontaktaufnahme einige schöne Vorteile:</p>
+<ul>
+<li>Sie wissen genau, wer Sie führen wird (keine kurzfristigen Vertretungen)</li>
+<li>Sie können Ihre Interessen besprechen und die Tour im Voraus anpassen</li>
+<li>Es ist oft günstiger, da kein Vermittler dazwischen steht</li>
+<li>Sie beginnen eine persönliche Verbindung aufzubauen, noch bevor Sie in Prag ankommen</li>
+</ul>
+
+<h2>Bewertungen mit Freude lesen</h2>
+<p>Bewertungen sind eine wunderbare Möglichkeit, Ihren Guide zu finden. Wenn Sie Rezensionen auf TripAdvisor, Google oder <a href="https://www.tourhq.com/guide/CZ56896/zuzana-manova" target="_blank" rel="noopener noreferrer">TourHQ</a> lesen, achten Sie auf die, die Sie zum Lächeln bringen:</p>
+<ul>
+<li>Menschen, die den Guide namentlich erwähnen — das bedeutet, es war persönlich</li>
+<li>Konkrete Geschichten darüber, was sie gesehen oder gelernt haben — das Zeichen einer Tour, die echten Eindruck hinterlassen hat</li>
+<li>Besucher, die die Tour verlängert oder ein zweites Mal gebucht haben — das schönste Kompliment, das ein Guide bekommen kann</li>
+</ul>
+<p>Die besten Bewertungen sind nicht die, die sagen „Tolle Tour, kann ich empfehlen." Es sind die, in denen jemand einen ganzen Absatz über eine Geschichte schreibt, die der Guide an der Karlsbrücke erzählt hat, oder über einen versteckten Innenhof, den er allein nie gefunden hätte.</p>
+
+<h2>Ein paar hilfreiche Fragen vor der Buchung</h2>
+<p>Eine kurze Nachricht vor der Buchung kann Ihnen viel verraten. Hier sind fünf freundliche Fragen:</p>
 <ol>
-<li><strong>Sind Sie ein zertifizierter Stadtführer?</strong> Kein Ausschlusskriterium, wenn nicht, aber man sollte es wissen.</li>
-<li><strong>Führen Sie persönlich, oder schicken Sie jemand anderen?</strong> Wichtig. Manche "Guides" sind eigentlich Agenturen mit einem persönlich klingenden Namen.</li>
-<li><strong>Können wir die Route anpassen?</strong> Die Antwort sollte Ja sein. Wenn nicht, handelt es sich um eine Gruppenführung mit weniger Teilnehmern.</li>
-<li><strong>Was ist im Preis enthalten?</strong> Eintrittsgelder, Transport, Trinkgelder: Man sollte wissen, wofür man zahlt.</li>
-<li><strong>Was passiert bei Regen / Verspätung / Verlängerungswunsch?</strong> Flexibilität zeigt, ob die Person professionell arbeitet oder nur Stunden füllt.</li>
+<li><strong>Führen Sie persönlich?</strong> Die schönsten Touren sind mit der Person, mit der man im Kontakt war.</li>
+<li><strong>Können wir die Route gemeinsam gestalten?</strong> Ein toller Guide wird begeistert Ja sagen.</li>
+<li><strong>Was ist im Preis enthalten?</strong> Eintrittsgelder, Transport, Treffpunkt — gut, das vorher zu wissen.</li>
+<li><strong>Was passiert bei Regen?</strong> Flexibilität ist das Zeichen eines Guides, dem Ihr Erlebnis wirklich am Herzen liegt.</li>
+<li><strong>Was lieben Sie persönlich am meisten an Prag?</strong> Die Antwort verrät Ihnen, ob dies jemand ist, der Ihren Besuch unvergesslich machen wird.</li>
 </ol>
 
-<h2>Mein ehrlicher Standpunkt</h2>
-<p>Ich betreibe ein Ein-Personen-Unternehmen. Ich führe jede Tour selbst. Ich habe eine tschechische Stadtführer-Zertifizierung und eine Akkreditierung des Jüdischen Museums. Ich spreche fließend Deutsch und Englisch, weil ich beides jede Woche benutze, nicht weil es auf einem Zertifikat steht.</p>
-<p>Ich bin nicht der günstigste Guide in Prag und versuche es auch nicht zu sein. Ich berechne einen fairen Preis für das, was ich biete: vier Jahrzehnte Kenntnis dieser Stadt, ihrer Geschichte, ihrer Winkel und ihrer Geschichten. Ich veröffentliche meine Preise. Ich beantworte meine E-Mails selbst. Wenn Sie bei mir buchen, bekommen Sie mich.</p>
-<p>Aber das ist mein Angebot. Was zählt, ist, dass Sie einen Guide finden, der zu dem passt, was <em>Sie</em> von Ihrem Besuch erwarten. Nutzen Sie die Tipps oben, stellen Sie die Fragen und vertrauen Sie Ihrem Bauchgefühl. Die guten Guides sind leicht zu erkennen, wenn man weiß, worauf man achten muss.</p>`,
+<h2>Ein wenig über mich</h2>
+<p>Ich bin <a href="/zuzana-manova">Zuzana Manová</a>, und ich teile Prag mit Besuchern seit 1986 — durch den Kommunismus, die Samtene Revolution und all die wunderbaren Veränderungen seither. Ich besitze die tschechische Stadtführer-Zertifizierung und eine Spezial-Akkreditierung des Jüdischen Museums in Prag. Ich führe auf Deutsch und Englisch, beides nutze ich jede einzelne Woche.</p>
+<p>Jede Tour, die ich gebe, ist privat und persönlich. Ich lerne gerne die Menschen kennen, die ich führe — woher sie kommen, was sie neugierig macht, was sie überrascht. Ich bin tausende Male durch diese Straßen gegangen, und sie erfüllen mich immer noch mit Freude. Ich würde das gerne mit Ihnen teilen.</p>
+
+<div class="blog-cta-box">
+  <h3>Bereit, Prag gemeinsam zu entdecken?</h3>
+  <p>Ich freue mich, von Ihnen zu hören. Erzählen Sie mir von Ihrem Besuch und ich schlage die perfekte Route vor.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prag%20Tour#contact-title">Schreiben Sie mir</a>
+    <a class="btn btn-outline" href="/tours">Meine Touren entdecken</a>
+  </div>
+</div>`,
   },
 
   // Post 25 (new)

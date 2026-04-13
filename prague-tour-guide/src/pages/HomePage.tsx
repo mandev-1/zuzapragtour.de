@@ -9,13 +9,13 @@ const HomePage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Zuzana Manova | Private Prag-Stadtführungen – ZuzaPragTour'
-      : 'Zuzana Manova | Private Prague Tours – ZuzaPragTour';
+      ? 'Zuzana Manová | Private Prag-Stadtführungen – ZuzaPragTour'
+      : 'Zuzana Manová | Private Prague Tours – ZuzaPragTour';
 
   const description =
     language === 'de'
-      ? 'Zuzana Manova – Ihre private Stadtführerin in Prag seit 1986. Zertifizierte Führungen auf Deutsch durch Altstadt, Karlsbrücke und Prager Burg. Über 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!'
-      : 'Zuzana Manova – your private Prague tour guide since 1986. Certified tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. 40+ years of experience. Book your personal tour today!';
+      ? 'Zuzana Manová – Ihre private Stadtführerin in Prag seit 1986. Zertifizierte Führungen auf Deutsch durch Altstadt, Karlsbrücke und Prager Burg. Über 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!'
+      : 'Zuzana Manová – your private Prague tour guide since 1986. Certified tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. 40+ years of experience. Book your personal tour today!';
 
   const keywords =
     language === 'de'

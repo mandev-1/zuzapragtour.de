@@ -18,18 +18,18 @@ const ZuzanaManovaPage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Zuzana Manova – Private Stadtführerin in Prag | Zuza Prague Tours'
-      : 'Zuzana Manova – Private Prague Tour Guide | Zuza Prague Tours';
+      ? 'Zuzana Manová – Private Stadtführerin in Prag | Zuza Prague Tours'
+      : 'Zuzana Manová – Private Prague Tour Guide | Zuza Prague Tours';
 
   const description =
     language === 'de'
-      ? 'Ing. Zuzana Manova führt seit 1986 Besucher durch Prag. Zertifizierte Stadtführerin, akkreditiert beim Jüdischen Museum. Deutsche und englische Privatführungen.'
-      : 'Ing. Zuzana Manova has been guiding visitors through Prague since 1986. Certified tour guide, accredited by the Jewish Museum. Private tours in German and English.';
+      ? 'Ing. Zuzana Manová führt seit 1986 Besucher durch Prag. Zertifizierte Stadtführerin, akkreditiert beim Jüdischen Museum. Deutsche und englische Privatführungen.'
+      : 'Ing. Zuzana Manová has been guiding visitors through Prague since 1986. Certified tour guide, accredited by the Jewish Museum. Private tours in German and English.';
 
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Ing. Zuzana Manova',
+    name: 'Ing. Zuzana Manová',
     givenName: 'Zuzana',
     familyName: 'Manova',
     honorificPrefix: 'Ing.',
@@ -139,7 +139,7 @@ const ZuzanaManovaPage: React.FC = () => {
             >
               <img
                 src="/images/zuzana-portrait.jpg"
-                alt="Zuzana Manova, private Prague tour guide"
+                alt="Zuzana Manová, private Prague tour guide"
                 className="h-80 w-64 rounded-2xl object-cover object-[center_20%] shadow-lg ring-2 ring-primary/10 sm:h-96 sm:w-72"
               />
             </motion.div>

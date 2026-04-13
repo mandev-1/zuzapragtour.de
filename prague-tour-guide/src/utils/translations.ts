@@ -307,12 +307,12 @@ export const translations = {
     de: 'Persönlich · Zertifiziert · Lokal',
   },
   'home.hero.line1': {
-    en: 'Zuzana Manova –',
-    de: 'Zuzana Manova –',
+    en: 'Discover Prague',
+    de: 'Entdecken Sie Prag',
   },
   'home.hero.line2': {
-    en: 'Private Prague Tour Guide',
-    de: 'Private Stadtführerin in Prag',
+    en: 'with Zuzana Manová',
+    de: 'mit Zuzana Manová',
   },
   'home.meta1': {
     en: '40+ years of experience',
@@ -1774,23 +1774,23 @@ export const translations = {
 <p class="lead">Möchten Sie eine ruhige <strong>Strahov + Burg</strong>-Route mit den besten Aussichtspunkten? <a href="/book?tour=Individuelle%20Privattour#contact-title">Private Tour buchen</a>—ich passe den Spaziergang an Ihr Tempo an.</p>`
   },
 
-  // ────── Zuzana Manova personal page ──────
+  // ────── Zuzana Manová personal page ──────
 
   'zm.hero.h1': {
-    en: 'Zuzana Manova – Private Prague Tour Guide',
-    de: 'Zuzana Manova – Private Stadtführerin in Prag',
+    en: 'Zuzana Manová – Private Prague Tour Guide',
+    de: 'Zuzana Manová – Private Stadtführerin in Prag',
   },
   'zm.hero.subtitle': {
     en: 'Certified tour guide with 40 years of experience. I show you Prague through the eyes of someone who grew up with its streets, its revolutions, and its stories.',
     de: 'Zertifizierte Stadtführerin mit 40 Jahren Erfahrung. Ich zeige Ihnen Prag durch die Augen einer Pragerin – mit Geschichten, die Sie in keinem Reiseführer finden.',
   },
   'zm.bio.title': {
-    en: 'About Zuzana Manova',
-    de: 'Über Zuzana Manova',
+    en: 'About Zuzana Manová',
+    de: 'Über Zuzana Manová',
   },
   'zm.bio.p1': {
-    en: 'My name is Zuzana Manova and I have been a professional tour guide in Prague since 1986. I studied at the Czech Technical University (Ing.) and spent years working as an engineer before the Velvet Revolution in 1989 opened new possibilities. I pivoted to what I had always been passionate about: sharing my city with visitors from around the world.',
-    de: 'Mein Name ist Zuzana Manova und ich bin seit 1986 professionelle Stadtführerin in Prag. Ich habe an der Tschechischen Technischen Universität studiert (Ing.) und als Ingenieurin gearbeitet, bevor die Samtene Revolution 1989 neue Möglichkeiten eröffnete. Seitdem widme ich mich dem, was mich schon immer begeistert hat: meine Stadt mit Besuchern aus aller Welt zu teilen.',
+    en: 'My name is Zuzana Manová and I have been a professional tour guide in Prague since 1986. I studied at the Czech Technical University (Ing.) and spent years working as an engineer before the Velvet Revolution in 1989 opened new possibilities. I pivoted to what I had always been passionate about: sharing my city with visitors from around the world.',
+    de: 'Mein Name ist Zuzana Manová und ich bin seit 1986 professionelle Stadtführerin in Prag. Ich habe an der Tschechischen Technischen Universität studiert (Ing.) und als Ingenieurin gearbeitet, bevor die Samtene Revolution 1989 neue Möglichkeiten eröffnete. Seitdem widme ich mich dem, was mich schon immer begeistert hat: meine Stadt mit Besuchern aus aller Welt zu teilen.',
   },
   'zm.bio.p2': {
     en: 'Prague is not just where I work – it is where I grew up, where I lived through Communism, where I joined the revolution, and where I raised my family. When I guide you through the Old Town, across the Charles Bridge, or up to Prague Castle, I am sharing four decades of personal memories alongside centuries of history.',
@@ -1825,12 +1825,12 @@ export const translations = {
     de: 'Fließend in beiden Sprachen mit muttersprachlichem Tschechisch – kein Dolmetscher nötig.',
   },
   'zm.offer.title': {
-    en: 'What Zuzana Manova Offers',
-    de: 'Was Zuzana Manova anbietet',
+    en: 'What Zuzana Manová Offers',
+    de: 'Was Zuzana Manová anbietet',
   },
   'zm.offer.p1': {
-    en: 'Every tour with Zuzana Manova is private and tailored to your interests. Whether you have three hours or a full day, I design the route around what matters to you: architecture, history, food, hidden courtyards, or a bit of everything.',
-    de: 'Jede Tour mit Zuzana Manova ist privat und auf Ihre Interessen zugeschnitten. Ob Sie drei Stunden oder einen ganzen Tag haben – ich gestalte die Route nach Ihren Wünschen: Architektur, Geschichte, Essen, versteckte Innenhöfe oder von allem etwas.',
+    en: 'Every tour with Zuzana Manová is private and tailored to your interests. Whether you have three hours or a full day, I design the route around what matters to you: architecture, history, food, hidden courtyards, or a bit of everything.',
+    de: 'Jede Tour mit Zuzana Manová ist privat und auf Ihre Interessen zugeschnitten. Ob Sie drei Stunden oder einen ganzen Tag haben – ich gestalte die Route nach Ihren Wünschen: Architektur, Geschichte, Essen, versteckte Innenhöfe oder von allem etwas.',
   },
   'zm.offer.p2': {
     en: 'I do not use scripts or rush through a checklist. My tours are conversations – and the best ones happen when you ask the questions you genuinely want answered.',
@@ -1853,52 +1853,52 @@ export const translations = {
     de: 'Individuelle Privattour',
   },
   'zm.faq.title': {
-    en: 'Frequently Asked Questions about Zuzana Manova',
-    de: 'Häufig gestellte Fragen zu Zuzana Manova',
+    en: 'Frequently Asked Questions about Zuzana Manová',
+    de: 'Häufig gestellte Fragen zu Zuzana Manová',
   },
   'zm.faq.q1': {
-    en: 'Who is Zuzana Manova?',
-    de: 'Wer ist Zuzana Manova?',
+    en: 'Who is Zuzana Manová?',
+    de: 'Wer ist Zuzana Manová?',
   },
   'zm.faq.a1': {
-    en: 'Zuzana Manova (Ing.) is a certified Prague tour guide who has been leading private tours since 1986. She is a native Praguer with accreditation from the Jewish Museum in Prague and offers tours in German and English.',
-    de: 'Zuzana Manova (Ing.) ist eine zertifizierte Prager Stadtführerin, die seit 1986 private Führungen anbietet. Sie ist gebürtige Pragerin mit Akkreditierung am Jüdischen Museum in Prag und führt auf Deutsch und Englisch.',
+    en: 'Zuzana Manová (Ing.) is a certified Prague tour guide who has been leading private tours since 1986. She is a native Praguer with accreditation from the Jewish Museum in Prague and offers tours in German and English.',
+    de: 'Zuzana Manová (Ing.) ist eine zertifizierte Prager Stadtführerin, die seit 1986 private Führungen anbietet. Sie ist gebürtige Pragerin mit Akkreditierung am Jüdischen Museum in Prag und führt auf Deutsch und Englisch.',
   },
   'zm.faq.q2': {
-    en: 'What languages does Zuzana Manova speak?',
-    de: 'Welche Sprachen spricht Zuzana Manova?',
+    en: 'What languages does Zuzana Manová speak?',
+    de: 'Welche Sprachen spricht Zuzana Manová?',
   },
   'zm.faq.a2': {
-    en: 'Zuzana Manova offers tours in German and English. She is a native Czech speaker and communicates fluently in all three languages during tours.',
-    de: 'Zuzana Manova bietet Führungen auf Deutsch und Englisch an. Sie ist tschechische Muttersprachlerin und kommuniziert fließend in allen drei Sprachen während der Touren.',
+    en: 'Zuzana Manová offers tours in German and English. She is a native Czech speaker and communicates fluently in all three languages during tours.',
+    de: 'Zuzana Manová bietet Führungen auf Deutsch und Englisch an. Sie ist tschechische Muttersprachlerin und kommuniziert fließend in allen drei Sprachen während der Touren.',
   },
   'zm.faq.q3': {
-    en: 'How can I book a tour with Zuzana Manova?',
-    de: 'Wie kann ich eine Tour mit Zuzana Manova buchen?',
+    en: 'How can I book a tour with Zuzana Manová?',
+    de: 'Wie kann ich eine Tour mit Zuzana Manová buchen?',
   },
   'zm.faq.a3': {
     en: 'You can send a tour inquiry through the booking form on this website, call +420 721 231 933, or send a WhatsApp message. Zuzana typically responds within a few hours.',
     de: 'Sie können eine Touranfrage über das Buchungsformular auf dieser Website senden, unter +420 721 231 933 anrufen oder eine WhatsApp-Nachricht schicken. Zuzana antwortet in der Regel innerhalb weniger Stunden.',
   },
   'zm.faq.q4': {
-    en: 'Is Zuzana Manova a certified tour guide?',
-    de: 'Ist Zuzana Manova eine zertifizierte Stadtführerin?',
+    en: 'Is Zuzana Manová a certified tour guide?',
+    de: 'Ist Zuzana Manová eine zertifizierte Stadtführerin?',
   },
   'zm.faq.a4': {
-    en: 'Yes. Zuzana Manova holds an official Czech Republic tour guide license and is additionally accredited by the Jewish Museum in Prague for specialized tours of the Jewish Quarter.',
-    de: 'Ja. Zuzana Manova besitzt eine offizielle Stadtführerlizenz der Tschechischen Republik und ist zusätzlich beim Jüdischen Museum in Prag für spezialisierte Führungen durch das Jüdische Viertel akkreditiert.',
+    en: 'Yes. Zuzana Manová holds an official Czech Republic tour guide license and is additionally accredited by the Jewish Museum in Prague for specialized tours of the Jewish Quarter.',
+    de: 'Ja. Zuzana Manová besitzt eine offizielle Stadtführerlizenz der Tschechischen Republik und ist zusätzlich beim Jüdischen Museum in Prag für spezialisierte Führungen durch das Jüdische Viertel akkreditiert.',
   },
   'zm.faq.q5': {
-    en: 'What makes Zuzana Manova different from other Prague tour guides?',
-    de: 'Was unterscheidet Zuzana Manova von anderen Prager Stadtführern?',
+    en: 'What makes Zuzana Manová different from other Prague tour guides?',
+    de: 'Was unterscheidet Zuzana Manová von anderen Prager Stadtführern?',
   },
   'zm.faq.a5': {
-    en: 'With over 40 years of experience, Zuzana Manova brings personal stories from living through Communism and the Velvet Revolution. Her tours are private, unhurried, and adapted to each visitor. She is one of the longest-serving licensed guides in Prague.',
-    de: 'Mit über 40 Jahren Erfahrung bringt Zuzana Manova persönliche Geschichten aus der Zeit des Kommunismus und der Samtenen Revolution ein. Ihre Touren sind privat, ohne Zeitdruck und auf jeden Besucher zugeschnitten. Sie ist eine der am längsten tätigen lizenzierten Stadtführerinnen in Prag.',
+    en: 'With over 40 years of experience, Zuzana Manová brings personal stories from living through Communism and the Velvet Revolution. Her tours are private, unhurried, and adapted to each visitor. She is one of the longest-serving licensed guides in Prague.',
+    de: 'Mit über 40 Jahren Erfahrung bringt Zuzana Manová persönliche Geschichten aus der Zeit des Kommunismus und der Samtenen Revolution ein. Ihre Touren sind privat, ohne Zeitdruck und auf jeden Besucher zugeschnitten. Sie ist eine der am längsten tätigen lizenzierten Stadtführerinnen in Prag.',
   },
   'zm.cta.title': {
-    en: 'Discover Prague with Zuzana Manova',
-    de: 'Entdecken Sie Prag mit Zuzana Manova',
+    en: 'Discover Prague with Zuzana Manová',
+    de: 'Entdecken Sie Prag mit Zuzana Manová',
   },
   'zm.cta.subtitle': {
     en: 'Four decades of stories, one unforgettable tour.',
