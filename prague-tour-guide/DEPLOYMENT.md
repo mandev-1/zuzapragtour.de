@@ -14,7 +14,6 @@ A modern, SEO-optimized React website for Prague tour guide services by Zuzana M
 - **Contact Forms** with WhatsApp integration
 
 
- yo
 ## 📱 Pages
 
 1. **Home** - Hero section, features, about preview, and call-to-action
