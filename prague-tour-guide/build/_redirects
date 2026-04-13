@@ -1,0 +1,4 @@
+/* /index.html 200
+
+# Redirect legacy plural domain to singular
+https://zuzapragtours.de/* https://zuzapragtour.de/:splat 301!

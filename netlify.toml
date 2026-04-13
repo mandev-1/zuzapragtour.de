@@ -1,0 +1,62 @@
+# Netlify config for CRA app + Scheduled Functions
+[build]
+  base = "prague-tour-guide"
+  publish = "build"
+  command = "npm run build"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Run the ingest function every 10 minutes
+[[scheduled]]
+  path = "/.netlify/functions/ingest"
+  schedule = "*/10 * * * *"
+
+# HTML pages — tell every crawler (including Bingbot) to index and follow
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+
+# Serve llms.txt files with correct content type and no caching
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+# Serve static text files before SPA fallback
+[[redirects]]
+  from = "/llms.txt"
+  to = "/llms.txt"
+  status = 200
+
+[[redirects]]
+  from = "/llms-full.txt"
+  to = "/llms-full.txt"
+  status = 200
+
+[[redirects]]
+  from = "/0ba5d917a5ee483c9c875df26cd223d0.txt"
+  to = "/0ba5d917a5ee483c9c875df26cd223d0.txt"
+  status = 200
+
+# www → non-www canonical redirect (prevents duplicate-content issues)
+[[redirects]]
+  from = "https://www.zuzapragtour.de/*"
+  to = "https://zuzapragtour.de/:splat"
+  status = 301
+  force = true
+
+# SPA fallback: serve index.html for all client-side routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
