@@ -7,6 +7,660 @@ export const blogTranslations = {
     de: 'Prag Reiseblog',
   },
 
+  // Post 24 (new)
+  'blog.post24.title': {
+    en: 'How to choose a Prague tour guide (and avoid the tourist traps)',
+    de: 'Wie man den besten Prag-Stadtführer wählt (und Touristenfallen vermeidet)',
+  },
+  'blog.post24.excerpt': {
+    en: 'Not all guides are the same. Here is what to look for, what to ask, and what the agencies will not tell you.',
+    de: 'Nicht alle Stadtführer sind gleich. Worauf man achten sollte, welche Fragen man stellen muss und was die Agenturen verschweigen.',
+  },
+  'blog.post24.date': {
+    en: 'April 13, 2026',
+    de: '13. April 2026',
+  },
+  'blog.post24.content': {
+    en: `<h2>How to choose a Prague tour guide (and avoid the tourist traps)</h2>
+
+<p class="lead">I have been guiding visitors through Prague since 1986. In that time I have watched the industry change completely. There are more guides now than ever, more agencies, more online listings. Some are excellent. Many are not. Here is what I would tell a friend who asked me how to find a good one.</p>
+
+<h2>Private guide or group tour?</h2>
+<p>This is the first question and most people get it backwards. They assume a group tour is the safe, cheap option. It can be. But "cheap" and "good value" are different things.</p>
+<p>Group tours in Prague typically cost 15-25 EUR per person for 2-3 hours. You walk with 15-30 strangers at whatever pace the slowest person sets. The guide follows a fixed script. You cannot ask them to skip the Astronomical Clock because you saw it yesterday, or to spend extra time in the Jewish Quarter because that is what you came for.</p>
+<p>A private guide costs more per hour but you split that among your group. A family of four or a couple travelling with friends often pays only slightly more than group tickets, and you get a tour shaped around what you actually want to see. You set the start time. You choose the pace. If it rains, you duck into a cafe and pick up where you left off.</p>
+<p>If budget is genuinely tight, a group tour is fine. Just know what you are getting.</p>
+
+<h2>The certification question</h2>
+<p>In the Czech Republic, tour guides can get an official certification. It is not mandatory. Anyone can stand in Old Town Square with an umbrella and walk tourists around. That is part of the problem.</p>
+<p>A certified guide has passed exams on Czech history, art history, architecture, and practical guiding skills. They carry a license card issued by the relevant authority. You can ask to see it. A good guide will not mind.</p>
+<p>There is a second, more specific credential for the Jewish Quarter. The Jewish Museum in Prague has its own accreditation program. Guides who hold it have studied Jewish history in Prague in depth and are recognised by the museum itself. If the Jewish Quarter is important to your visit, ask whether the guide has this accreditation. Most do not.</p>
+
+<h2>Language matters more than you think</h2>
+<p>Plenty of guides speak English. Fewer speak German well. Even fewer speak either language at a level where they can tell stories, handle questions, explain historical context, and still sound natural.</p>
+<p>If you are a German-speaking visitor, check whether the guide actually conducts tours in German regularly or whether it is listed as a "can do" afterthought. There is a big difference between someone who guides in German every week and someone who took a B2 exam five years ago. Ask them a question in German before you book. How they respond tells you everything.</p>
+<p>Same applies to English. If the guide's listing reads like it was written by a translation tool, the tour will probably feel the same way.</p>
+
+<h2>Experience: how much is enough?</h2>
+<p>I am biased here, obviously. I have been doing this for 40 years. But I do not think you need a guide with decades of experience. What you need is someone who knows the city beyond the Wikipedia version.</p>
+<p>Ask them something specific. "What is your favourite building in Mala Strana and why?" or "Where do you go for lunch near the Castle?" If they give you a genuine, personal answer, they probably know the city. If they give you a brochure answer, they probably do not.</p>
+<p>Newer guides can be wonderful. They tend to be enthusiastic and they have often studied something specific, like architecture or Jewish studies or Czech literature. The ones to avoid are the ones who got into guiding because it looked like easy money and learned everything from a script.</p>
+
+<h2>What the agencies will not tell you</h2>
+<p>Most booking platforms and tour agencies in Prague operate on commission. You pay 60 EUR for a tour, the agency takes 20-40%, and the guide gets the rest. That creates two problems.</p>
+<p>First, the best guides tend to leave the agencies. They do not need them. They have their own clients, their own TripAdvisor page, their own reputation. The guides who stay on agency rosters are often newer or less established.</p>
+<p>Second, when you book through an agency, you often do not know who your guide will be until the day before. Sometimes not until the morning of. The agency picks whoever is available. You might get someone excellent. You might get a student filling in for the weekend. The agency does not really care which, as long as the slot is filled.</p>
+<p>If a specific guide matters to you, book with them directly. It is almost always cheaper and you know exactly who is showing up.</p>
+
+<h2>Reviews: what to actually look for</h2>
+<p>TripAdvisor, Google, GetYourGuide, TourHQ: all useful, but read them carefully.</p>
+<p>Ignore the star rating for a moment and read what people say. Look for:</p>
+<ul>
+<li>Mentions of the guide by name (means it was personal, not interchangeable)</li>
+<li>Specific details about what they saw or learned (means the reviewer paid attention, which usually means the tour was good)</li>
+<li>Repeat visitors or people who extended the tour (strongest signal there is)</li>
+</ul>
+<p>Be skeptical of reviews that sound generic: "Great tour, very knowledgeable, would recommend." Those could be about anyone, anywhere. The reviews that matter are the ones where someone writes three paragraphs about a story the guide told them about the Velvet Revolution or a church they had never heard of.</p>
+
+<h2>Red flags</h2>
+<p>After 40 years I have seen most of the tricks. Watch for these:</p>
+<ul>
+<li><strong>No clear pricing.</strong> If the website says "contact us for a quote" without any indication of cost, they are probably adjusting the price based on where you are from. A good guide publishes their rates.</li>
+<li><strong>"Free" walking tours.</strong> These are tip-based. The guide works for tips. That means the tour is designed to entertain, not to inform. It also means the guide spends the first ten minutes explaining the tipping system and the last ten minutes reminding you. Some are decent. Most are forgettable.</li>
+<li><strong>Unusually cheap.</strong> A 3-hour private tour of Prague for 40 EUR means either the guide is brand new or they are cutting corners. A certified, experienced guide in Prague charges somewhere between 100 and 200 EUR for a half-day tour, depending on the group size and content. That is the real range.</li>
+<li><strong>No photos of the guide.</strong> If the listing shows stock photos of Prague but not the actual person who will be guiding you, ask yourself why. You are hiring a person, not a city.</li>
+<li><strong>Claims to cover everything.</strong> "See all of Prague in 2 hours!" No. You cannot. Not well. A good guide is honest about what fits in the time and suggests priorities based on your interests.</li>
+</ul>
+
+<h2>What to ask before you book</h2>
+<p>Five questions. Send them by email or WhatsApp. The answers tell you almost everything you need to know.</p>
+<ol>
+<li><strong>Are you a certified guide?</strong> Not a dealbreaker if they are not, but you should know.</li>
+<li><strong>Do you guide personally, or will you send someone else?</strong> Important. Some "guides" are actually agencies with a personal-sounding name.</li>
+<li><strong>Can we adjust the route?</strong> The answer should be yes. If it is no, they are running a group tour with fewer people.</li>
+<li><strong>What is included in the price?</strong> Entrance fees, transport, tips: know what you are paying for.</li>
+<li><strong>What happens if it rains / we are late / we want to extend?</strong> Flexibility tells you whether this person is professional or just filling hours.</li>
+</ol>
+
+<h2>My honest take</h2>
+<p>I run a one-person operation. I guide every tour myself. I have a Czech Republic guide certification and a Jewish Museum accreditation. I speak German and English fluently because I use both every week, not because it says so on a certificate.</p>
+<p>I am not the cheapest guide in Prague and I am not trying to be. I charge a fair rate for what I offer, which is four decades of knowing this city, its history, its corners, and its stories. I publish my prices. I answer my own emails. When you book with me, you get me.</p>
+<p>But that is my pitch. What matters is that you find a guide who fits what <em>you</em> want from your visit. Use the advice above, ask the questions, and trust your gut. The good ones are easy to spot once you know what to look for.</p>`,
+    de: `<h2>Wie man den besten Prag-Stadtführer wählt (und Touristenfallen vermeidet)</h2>
+
+<p class="lead">Ich führe seit 1986 Besucher durch Prag. In dieser Zeit hat sich die Branche komplett verändert. Es gibt heute mehr Stadtführer als je zuvor, mehr Agenturen, mehr Online-Portale. Einige davon sind hervorragend. Viele nicht. Hier ist, was ich einem Freund raten würde, der mich fragt, wie man einen guten findet.</p>
+
+<h2>Privatführung oder Gruppenrundgang?</h2>
+<p>Das ist die erste Frage und die meisten Leute beantworten sie falsch. Sie denken, eine Gruppenführung sei die sichere, günstige Option. Kann sie sein. Aber "günstig" und "gutes Preis-Leistungs-Verhältnis" sind zwei verschiedene Dinge.</p>
+<p>Gruppenführungen in Prag kosten typischerweise 15-25 EUR pro Person für 2-3 Stunden. Man läuft mit 15-30 Fremden im Tempo des Langsamsten. Der Guide folgt einem festen Skript. Man kann ihn nicht bitten, die Astronomische Uhr auszulassen, weil man sie gestern schon gesehen hat, oder mehr Zeit im Jüdischen Viertel zu verbringen, weil man genau dafür gekommen ist.</p>
+<p>Ein privater Guide kostet mehr pro Stunde, aber man teilt den Preis auf die eigene Gruppe auf. Eine vierköpfige Familie oder ein Paar, das mit Freunden reist, zahlt oft nur wenig mehr als Gruppentickets und bekommt eine Tour, die auf die eigenen Interessen zugeschnitten ist. Man bestimmt die Startzeit. Man bestimmt das Tempo. Wenn es regnet, geht man in ein Cafe und macht danach weiter.</p>
+<p>Wenn das Budget wirklich knapp ist, ist eine Gruppenführung in Ordnung. Man sollte nur wissen, was man bekommt.</p>
+
+<h2>Die Frage der Zertifizierung</h2>
+<p>In Tschechien können Stadtführer eine offizielle Zertifizierung erwerben. Sie ist nicht verpflichtend. Jeder kann sich auf den Altstädter Ring stellen, einen Regenschirm hochhalten und Touristen herumführen. Das ist Teil des Problems.</p>
+<p>Ein zertifizierter Guide hat Prüfungen in tschechischer Geschichte, Kunstgeschichte, Architektur und praktischer Fremdenführung bestanden. Er trägt einen Ausweis der zuständigen Behörde bei sich. Man kann danach fragen. Ein guter Guide hat damit kein Problem.</p>
+<p>Es gibt eine zweite, spezifischere Qualifikation für das Jüdische Viertel. Das Jüdische Museum in Prag hat ein eigenes Akkreditierungsprogramm. Guides, die dieses besitzen, haben die jüdische Geschichte Prags vertieft studiert und sind vom Museum selbst anerkannt. Wenn das Jüdische Viertel für Ihren Besuch wichtig ist, fragen Sie, ob der Guide diese Akkreditierung hat. Die meisten haben sie nicht.</p>
+
+<h2>Sprache ist wichtiger als man denkt</h2>
+<p>Viele Guides sprechen Englisch. Deutlich weniger sprechen gut Deutsch. Noch weniger sprechen eine der beiden Sprachen auf einem Niveau, auf dem sie Geschichten erzählen, Fragen beantworten, historische Zusammenhänge erklären und dabei natürlich klingen können.</p>
+<p>Wenn Sie deutschsprachig sind, prüfen Sie, ob der Guide tatsächlich regelmäßig auf Deutsch führt oder ob Deutsch nur als "kann ich auch" auf der Liste steht. Es gibt einen großen Unterschied zwischen jemandem, der jede Woche auf Deutsch führt, und jemandem, der vor fünf Jahren eine B2-Prüfung abgelegt hat. Stellen Sie dem Guide vor der Buchung eine Frage auf Deutsch. Die Antwort sagt Ihnen alles.</p>
+<p>Dasselbe gilt für Englisch. Wenn der Eintrag des Guides klingt, als wäre er von einem Übersetzungstool geschrieben, wird sich die Tour wahrscheinlich genauso anfühlen.</p>
+
+<h2>Erfahrung: Wie viel ist genug?</h2>
+<p>Ich bin hier natürlich befangen. Ich mache das seit 40 Jahren. Aber ich glaube nicht, dass man einen Guide mit jahrzehntelanger Erfahrung braucht. Was man braucht, ist jemand, der die Stadt jenseits der Wikipedia-Version kennt.</p>
+<p>Stellen Sie eine konkrete Frage. "Was ist Ihr Lieblingsgebäude auf der Kleinseite und warum?" oder "Wo gehen Sie in der Nähe der Burg zum Mittagessen?" Wenn Sie eine ehrliche, persönliche Antwort bekommen, kennt die Person die Stadt wahrscheinlich. Wenn Sie eine Prospekt-Antwort bekommen, eher nicht.</p>
+<p>Neuere Guides können wunderbar sein. Sie sind oft begeistert und haben häufig etwas Bestimmtes studiert, wie Architektur, Judaistik oder tschechische Literatur. Diejenigen, die man meiden sollte, sind die, die ins Guiding eingestiegen sind, weil es nach leichtem Geld aussah, und alles aus einem Skript gelernt haben.</p>
+
+<h2>Was die Agenturen Ihnen nicht sagen</h2>
+<p>Die meisten Buchungsplattformen und Touragenturen in Prag arbeiten auf Provisionsbasis. Sie zahlen 60 EUR für eine Tour, die Agentur nimmt 20-40%, und der Guide bekommt den Rest. Das schafft zwei Probleme.</p>
+<p>Erstens: Die besten Guides verlassen irgendwann die Agenturen. Sie brauchen sie nicht. Sie haben eigene Kunden, eine eigene TripAdvisor-Seite, einen eigenen Ruf. Die Guides, die auf den Agentur-Listen bleiben, sind oft neuer oder weniger etabliert.</p>
+<p>Zweitens: Wenn Sie über eine Agentur buchen, wissen Sie oft bis zum Vortag nicht, wer Ihr Guide sein wird. Manchmal nicht bis zum Morgen des Tages. Die Agentur wählt aus, wer gerade verfügbar ist. Vielleicht bekommen Sie jemand Hervorragenden. Vielleicht einen Studenten, der am Wochenende einspringt. Der Agentur ist es ziemlich egal, solange der Termin besetzt ist.</p>
+<p>Wenn Ihnen ein bestimmter Guide wichtig ist, buchen Sie direkt bei ihm. Es ist fast immer günstiger und Sie wissen genau, wer auftaucht.</p>
+
+<h2>Bewertungen: Worauf man wirklich achten sollte</h2>
+<p>TripAdvisor, Google, GetYourGuide, TourHQ: alle nützlich, aber lesen Sie genau.</p>
+<p>Ignorieren Sie die Sternebewertung für einen Moment und lesen Sie, was die Leute schreiben. Achten Sie auf:</p>
+<ul>
+<li>Nennung des Guides beim Namen (bedeutet, es war persönlich, nicht austauschbar)</li>
+<li>Konkrete Details darüber, was sie gesehen oder gelernt haben (bedeutet, der Rezensent hat aufgepasst, was normalerweise heißt, die Tour war gut)</li>
+<li>Wiederholungsbesucher oder Leute, die die Tour verlängert haben (das stärkste Signal überhaupt)</li>
+</ul>
+<p>Seien Sie skeptisch bei Bewertungen, die generisch klingen: "Tolle Tour, sehr sachkundig, kann ich empfehlen." Das könnte über jeden und überall geschrieben sein. Die Bewertungen, die zählen, sind die, in denen jemand drei Absätze über eine Geschichte schreibt, die der Guide über die Samtene Revolution erzählt hat, oder über eine Kirche, von der er noch nie gehört hatte.</p>
+
+<h2>Warnsignale</h2>
+<p>Nach 40 Jahren habe ich die meisten Tricks gesehen. Achten Sie auf Folgendes:</p>
+<ul>
+<li><strong>Keine klare Preisangabe.</strong> Wenn auf der Website "Kontaktieren Sie uns für ein Angebot" steht, ohne jegliche Kostenangabe, wird der Preis wahrscheinlich an Ihre Herkunft angepasst. Ein guter Guide veröffentlicht seine Preise.</li>
+<li><strong>"Kostenlose" Stadtführungen.</strong> Diese basieren auf Trinkgeld. Der Guide arbeitet für Trinkgeld. Das bedeutet, die Tour ist auf Unterhaltung ausgelegt, nicht auf Information. Es bedeutet auch, dass der Guide die ersten zehn Minuten damit verbringt, das Trinkgeld-System zu erklären, und die letzten zehn Minuten damit, daran zu erinnern. Manche sind passabel. Die meisten sind vergesslich.</li>
+<li><strong>Ungewöhnlich billig.</strong> Eine dreistündige Privatführung durch Prag für 40 EUR bedeutet, dass der Guide entweder ganz neu ist oder an Qualität spart. Ein zertifizierter, erfahrener Guide in Prag verlangt zwischen 100 und 200 EUR für eine Halbtagestour, je nach Gruppengröße und Inhalt. Das ist die realistische Preisspanne.</li>
+<li><strong>Keine Fotos des Guides.</strong> Wenn das Inserat Stockfotos von Prag zeigt, aber nicht die Person, die Sie führen wird, fragen Sie sich warum. Sie buchen eine Person, keine Stadt.</li>
+<li><strong>Behauptungen, alles abzudecken.</strong> "Sehen Sie ganz Prag in 2 Stunden!" Nein. Das geht nicht. Nicht gut. Ein guter Guide ist ehrlich darüber, was in die Zeit passt, und schlägt Prioritäten vor, die auf Ihren Interessen basieren.</li>
+</ul>
+
+<h2>Was man vor der Buchung fragen sollte</h2>
+<p>Fünf Fragen. Per E-Mail oder WhatsApp senden. Die Antworten verraten Ihnen fast alles, was Sie wissen müssen.</p>
+<ol>
+<li><strong>Sind Sie ein zertifizierter Stadtführer?</strong> Kein Ausschlusskriterium, wenn nicht, aber man sollte es wissen.</li>
+<li><strong>Führen Sie persönlich, oder schicken Sie jemand anderen?</strong> Wichtig. Manche "Guides" sind eigentlich Agenturen mit einem persönlich klingenden Namen.</li>
+<li><strong>Können wir die Route anpassen?</strong> Die Antwort sollte Ja sein. Wenn nicht, handelt es sich um eine Gruppenführung mit weniger Teilnehmern.</li>
+<li><strong>Was ist im Preis enthalten?</strong> Eintrittsgelder, Transport, Trinkgelder: Man sollte wissen, wofür man zahlt.</li>
+<li><strong>Was passiert bei Regen / Verspätung / Verlängerungswunsch?</strong> Flexibilität zeigt, ob die Person professionell arbeitet oder nur Stunden füllt.</li>
+</ol>
+
+<h2>Mein ehrlicher Standpunkt</h2>
+<p>Ich betreibe ein Ein-Personen-Unternehmen. Ich führe jede Tour selbst. Ich habe eine tschechische Stadtführer-Zertifizierung und eine Akkreditierung des Jüdischen Museums. Ich spreche fließend Deutsch und Englisch, weil ich beides jede Woche benutze, nicht weil es auf einem Zertifikat steht.</p>
+<p>Ich bin nicht der günstigste Guide in Prag und versuche es auch nicht zu sein. Ich berechne einen fairen Preis für das, was ich biete: vier Jahrzehnte Kenntnis dieser Stadt, ihrer Geschichte, ihrer Winkel und ihrer Geschichten. Ich veröffentliche meine Preise. Ich beantworte meine E-Mails selbst. Wenn Sie bei mir buchen, bekommen Sie mich.</p>
+<p>Aber das ist mein Angebot. Was zählt, ist, dass Sie einen Guide finden, der zu dem passt, was <em>Sie</em> von Ihrem Besuch erwarten. Nutzen Sie die Tipps oben, stellen Sie die Fragen und vertrauen Sie Ihrem Bauchgefühl. Die guten Guides sind leicht zu erkennen, wenn man weiß, worauf man achten muss.</p>`,
+  },
+
+  // Post 25 (new)
+  'blog.post25.title': {
+    en: 'Every museum in Prague worth your time (and a few that are not)',
+    de: 'Alle Museen in Prag, die sich lohnen (und ein paar, die es nicht tun)',
+  },
+  'blog.post25.excerpt': {
+    en: 'An honest, exhaustive list of Prague museums with ticket links, prices, and which ones the Visitor Pass covers.',
+    de: 'Eine ehrliche, vollständige Liste der Prager Museen mit Ticket-Links, Preisen und welche der Visitor Pass abdeckt.',
+  },
+  'blog.post25.date': {
+    en: 'April 13, 2026',
+    de: '13. April 2026',
+  },
+  'blog.post25.content': {
+    en: `<h2>Every museum in Prague worth your time (and a few that are not)</h2>
+
+<p class="lead">Prague has more museums than most visitors expect. Some are world-class. Some are tourist traps charging 300 CZK for a dark room with wax figures. After 40 years of guiding people through this city, I have opinions about which are which. This is my honest, complete list.</p>
+
+<p>If you are visiting several museums, check out my <a href="/blog/prague-visitor-pass-honest-review">Prague Visitor Pass review</a>. Many of the museums below are included, and the pass often pays for itself by day two.</p>
+
+<p>I have marked museums covered by the <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> with <strong>(PVP)</strong>.</p>
+
+<h2>The national institutions</h2>
+
+<h3>National Museum (Národní muzeum)</h3>
+<p>The big neo-Renaissance building at the top of Wenceslas Square. It reopened in 2018 after a decade of renovation. The main building covers Czech natural history, prehistory, and has a spectacular atrium. The connected New Building (formerly the Federal Assembly) hosts rotating exhibitions that tend to be more interesting than the permanent ones. <strong>(PVP)</strong></p>
+<p>Worth it for the building alone, especially the main hall and the panoramic terrace on the top floor.</p>
+<ul>
+<li>Tickets and hours: <a href="https://www.nm.cz/en/visit-us" target="_blank" rel="noopener noreferrer">nm.cz</a></li>
+<li>Adults 250 CZK, combined ticket (both buildings) 350 CZK</li>
+</ul>
+
+<h3>National Gallery Prague (Národní galerie)</h3>
+<p>Not one museum but six locations across the city. The most important:</p>
+<ul>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/veletrzni-palac" target="_blank" rel="noopener noreferrer">Veletrzni palac (Trade Fair Palace)</a> in Holesovice. The big one. Czech and international modern art from the 19th century to now. Mucha's Slav Epic is here. Allow 2-3 hours. <strong>(PVP)</strong></li>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/klaster-sv-anezky-ceske" target="_blank" rel="noopener noreferrer">Convent of St Agnes (Klaster sv. Anezky Ceske)</a>. Medieval Czech art in a 13th century convent. Quieter and worth visiting for the building as much as the collection. <strong>(PVP)</strong></li>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/schwarzenbersky-palac" target="_blank" rel="noopener noreferrer">Schwarzenberg Palace</a>. Baroque art near Prague Castle. Combined it with a Castle visit. <strong>(PVP)</strong></li>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/salmovsky-palac" target="_blank" rel="noopener noreferrer">Salm Palace</a>. 19th century Czech art. Next door to Schwarzenberg. <strong>(PVP)</strong></li>
+</ul>
+<p>Tickets and all locations: <a href="https://www.ngprague.cz/en" target="_blank" rel="noopener noreferrer">ngprague.cz</a>. Adults 300 CZK per building or 500 CZK for all locations (valid 10 days).</p>
+
+<h3>National Technical Museum (Narodni technicke muzeum)</h3>
+<p>Overlooking Letna Park. Trains, planes, vintage cars, a photography hall, a printing workshop, a mining tunnel in the basement. Kids love it. Adults who like machines love it. I have taken sceptical clients here who ended up staying two hours. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.ntm.cz/en" target="_blank" rel="noopener noreferrer">ntm.cz</a></li>
+<li>Adults 290 CZK</li>
+</ul>
+
+<h2>Jewish Museum and the Jewish Quarter</h2>
+
+<p>The <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jewish Museum in Prague</a> manages six sites in Josefov. I have a <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jewish Museum accreditation</a> myself. This is the part of Prague I know best, and it is the part most visitors find most moving. <strong>(PVP)</strong></p>
+<ul>
+<li><strong>Old Jewish Cemetery</strong>. 12,000 tombstones layered over centuries in a small space. There is nowhere else like it.</li>
+<li><strong>Pinkas Synagogue</strong>. The walls are covered with the names of 77,297 Czech and Moravian Jews murdered in the Holocaust. People go quiet when they walk in. It is that kind of place.</li>
+<li><strong>Spanish Synagogue</strong>. Moorish Revival interior from 1868. Probably the most photogenic synagogue in Europe.</li>
+<li><strong>Maisel Synagogue</strong>. History of Jews in Bohemia and Moravia.</li>
+<li><strong>Klausen Synagogue</strong>. Jewish traditions and customs exhibition.</li>
+<li><strong>Old-New Synagogue</strong> (Staronova synagoga). Built around 1270, still an active synagogue. Separate ticket from the rest.</li>
+</ul>
+<p>Full ticket (all sites except Old-New Synagogue) 500 CZK. Old-New Synagogue 200 CZK separately. Combined 700 CZK.</p>
+<p>Buy tickets at <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">jewishmuseum.cz</a>. Go early or late to avoid the worst crowds.</p>
+
+<h2>City of Prague Museum and branches</h2>
+
+<p>The <a href="https://www.muzeumprahy.cz/en/" target="_blank" rel="noopener noreferrer">Museum of the City of Prague</a> runs the main museum on Na Poříčí plus several smaller sites. The main museum has Langweil's model of Prague from the 1830s, a room-sized miniature of the old city before the Jewish Quarter was demolished. <strong>(PVP)</strong></p>
+
+<p>Branches worth knowing about:</p>
+<ul>
+<li><a href="https://www.muzeumprahy.cz/en/petrin-lookout-tower/" target="_blank" rel="noopener noreferrer">Petrin Lookout Tower</a>. Not a museum exactly, but run by the same organization. Best views in Prague. <strong>(PVP)</strong></li>
+<li><a href="https://www.muzeumprahy.cz/en/powder-tower/" target="_blank" rel="noopener noreferrer">Powder Tower (Prasna brana)</a>. Gothic gate at the edge of Old Town. Climb it for the view. <strong>(PVP)</strong></li>
+<li><a href="https://www.muzeumprahy.cz/en/old-town-bridge-tower/" target="_blank" rel="noopener noreferrer">Old Town Bridge Tower</a>. The tower at the Old Town end of Charles Bridge. <strong>(PVP)</strong></li>
+<li><a href="https://www.muzeumprahy.cz/en/muller-villa/" target="_blank" rel="noopener noreferrer">Muller Villa</a>. Adolf Loos villa from 1930. Reserve ahead, visits are guided only.</li>
+</ul>
+
+<h2>Prague Castle collections</h2>
+
+<p>Inside the Castle complex:</p>
+<ul>
+<li><strong>Prague Castle Picture Gallery</strong>. Remnants of Rudolf II's collection. Titian, Rubens, Veronese. Small but worthwhile. <strong>(PVP)</strong></li>
+<li><strong>The Story of Prague Castle</strong>. Permanent exhibition in the Old Royal Palace basement. Goes back to the 9th century. <strong>(PVP)</strong></li>
+<li><a href="https://www.lobkowicz.cz/en" target="_blank" rel="noopener noreferrer">Lobkowicz Palace</a>. Private collection, separate from the Castle ticket. Beethoven and Mozart manuscripts, Bruegel, Canaletto. The audio guide is narrated by the family themselves, which gives it a personal feel. Adults 395 CZK.</li>
+</ul>
+<p>Castle tickets and circuits: <a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank" rel="noopener noreferrer">hrad.cz</a></p>
+
+<h2>Music and literature</h2>
+
+<h3>Kafka Museum</h3>
+<p>On the Mala Strana riverbank. Covers Kafka's life, manuscripts, first editions. The courtyard has David Cerny's peeing statues. Whether you find them funny or tasteless probably says something about you. Worth a visit if Kafka means something to you. Skippable if he does not.</p>
+<ul>
+<li>Tickets: <a href="https://kafkamuseum.cz/en/" target="_blank" rel="noopener noreferrer">kafkamuseum.cz</a></li>
+<li>Adults 260 CZK</li>
+</ul>
+
+<h3>Dvorak Museum (Villa Amerika)</h3>
+<p>Small Baroque villa on Ke Karlovu street. Dvorak's personal belongings, manuscripts, the piano he composed on. Fifteen minutes is enough unless you really love Dvorak, in which case you will want longer. <strong>(PVP)</strong></p>
+<ul>
+<li>Part of the <a href="https://www.nm.cz/en/visit-us/buildings/czech-museum-of-music-dvorak-museum" target="_blank" rel="noopener noreferrer">Czech Museum of Music</a></li>
+<li>Adults 100 CZK</li>
+</ul>
+
+<h3>Smetana Museum</h3>
+<p>Right on the river next to Charles Bridge. Bedrich Smetana's life and work. Small, focused, rarely crowded. The views from the terrace are excellent. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.nm.cz/en/visit-us/buildings/czech-museum-of-music-bedrich-smetana-museum" target="_blank" rel="noopener noreferrer">nm.cz (Smetana Museum)</a></li>
+<li>Adults 100 CZK</li>
+</ul>
+
+<h3>Czech Museum of Music</h3>
+<p>In a former Baroque church on Karmelitska. Historical instruments, including a collection of keyboard instruments going back centuries. The building is part of the appeal. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.nm.cz/en/visit-us/buildings/czech-museum-of-music" target="_blank" rel="noopener noreferrer">nm.cz (Czech Museum of Music)</a></li>
+<li>Adults 200 CZK</li>
+</ul>
+
+<h3>Mucha Museum</h3>
+<p>Alphonse Mucha's Art Nouveau posters and paintings. Small private museum on Panska street near Wenceslas Square. If you like Mucha you will enjoy it. If you do not know his work, you have seen it without knowing, he designed the Sarah Bernhardt posters that are on half the tote bags in Paris.</p>
+<ul>
+<li>Tickets: <a href="https://www.mucha.cz/en" target="_blank" rel="noopener noreferrer">mucha.cz</a></li>
+<li>Adults 350 CZK</li>
+</ul>
+<p>Note: Mucha's Slav Epic cycle, his life's work of 20 large canvases, is at the <a href="https://www.ngprague.cz/en/objekt-detail/veletrzni-palac" target="_blank" rel="noopener noreferrer">Veletrzni palac</a>. That is the bigger deal.</p>
+
+<h2>Contemporary art and design</h2>
+
+<h3>DOX Centre for Contemporary Art</h3>
+<p>In Holesovice. Industrial building converted into one of the best contemporary art spaces in Central Europe. Rotating exhibitions, usually thought-provoking, occasionally weird. The rooftop airship (Gulliver) is a venue for readings and talks. Worth a trip even if you are not an "art person."</p>
+<ul>
+<li>Tickets: <a href="https://www.dox.cz/en" target="_blank" rel="noopener noreferrer">dox.cz</a></li>
+<li>Adults 290 CZK</li>
+</ul>
+
+<h3>Kampa Museum</h3>
+<p>Modern Central European art in the Sovovy Mlyny (Sova's Mills) building on Kampa Island. Czech and Slovak abstract art, a good Kupka collection. The building sits on the Vltava and the location is beautiful.</p>
+<ul>
+<li>Tickets: <a href="https://www.museumkampa.cz/en/" target="_blank" rel="noopener noreferrer">museumkampa.cz</a></li>
+<li>Adults 250 CZK</li>
+</ul>
+
+<h3>Museum of Decorative Arts (UPM)</h3>
+<p>Next to the Old Jewish Cemetery. Furniture, glass, ceramics, fashion, graphic design. The Czech glass collection is exceptional. The building is a neo-Renaissance gem from the 1890s. Often overlooked. I think it is one of the best museums in Prague. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.upm.cz/en/" target="_blank" rel="noopener noreferrer">upm.cz</a></li>
+<li>Adults 300 CZK</li>
+</ul>
+
+<h3>Prague City Gallery (GHMP)</h3>
+<p>Runs several spaces around the city. The most visited:</p>
+<ul>
+<li><a href="https://www.ghmp.cz/en/municipal-library/" target="_blank" rel="noopener noreferrer">Municipal Library</a> (2nd floor). Free. The main draw is David Cerny's "Head of Franz Kafka" sculpture outside, but the gallery itself hosts solid temporary shows.</li>
+<li><a href="https://www.ghmp.cz/en/house-of-photography/" target="_blank" rel="noopener noreferrer">House of Photography</a>. Czech and international photography exhibitions.</li>
+<li><a href="https://www.ghmp.cz/en/colloredo-mansfeld-palace/" target="_blank" rel="noopener noreferrer">Colloredo-Mansfeld Palace</a>. Baroque palace used for contemporary exhibitions.</li>
+</ul>
+<p>All locations: <a href="https://www.ghmp.cz/en/" target="_blank" rel="noopener noreferrer">ghmp.cz</a></p>
+
+<h2>History and specialist museums</h2>
+
+<h3>Museum of Communism</h3>
+<p>On V Celnici street (it moved from its old location). Covers life under the communist regime from 1948 to 1989. Propaganda posters, reconstructed interrogation rooms, footage from the Velvet Revolution. Better than I expected it to be.</p>
+<ul>
+<li>Tickets: <a href="https://muzeumkomunismu.cz/en/" target="_blank" rel="noopener noreferrer">muzeumkomunismu.cz</a></li>
+<li>Adults 380 CZK</li>
+</ul>
+
+<h3>Naprstek Museum</h3>
+<p>Asian, African, and American cultures. Part of the National Museum system. On Betlemske namesti in Old Town. Small, eclectic, and often empty. Good on a rainy afternoon. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.nm.cz/en/visit-us/buildings/naprstek-museum" target="_blank" rel="noopener noreferrer">nm.cz (Naprstek Museum)</a></li>
+<li>Adults 200 CZK</li>
+</ul>
+
+<h3>Army Museum Zizkov</h3>
+<p>Czech military history from the Hussite Wars through both World Wars to the present. Free admission. The World War I and II sections are well done. On U Pamatniku street below the Zizkov TV tower. <strong>(PVP)</strong></p>
+<ul>
+<li>Info: <a href="https://www.vhu.cz/en/" target="_blank" rel="noopener noreferrer">vhu.cz</a></li>
+<li>Free</li>
+</ul>
+
+<h3>Strahov Monastery Library</h3>
+<p>Two Baroque library halls, the Theological Hall and the Philosophical Hall. You view them from the doorway (you cannot walk inside). Still worth it, the halls are among the most beautiful rooms in Prague. The monastery also has a small gallery. Separate from the <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a>.</p>
+<ul>
+<li>Tickets: <a href="https://www.strahovskyklaster.cz/en" target="_blank" rel="noopener noreferrer">strahovskyklaster.cz</a></li>
+<li>Adults 150 CZK (library), 120 CZK (gallery)</li>
+</ul>
+
+<h3>Klementinum</h3>
+<p>Baroque library hall and astronomical tower. Guided tours only, about 50 minutes. The library room is stunning, and the tower gives you one of the best views of Old Town rooftops. Book ahead in summer. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">klementinum.com</a></li>
+<li>Adults 300 CZK</li>
+</ul>
+
+<h2>Instagram-worthy and immersive experiences</h2>
+
+<p>Some of these are museums in the traditional sense. Some are not. I include them because visitors keep asking about them, and some are genuinely good.</p>
+
+<h3>Illusion Art Museum</h3>
+<p>On Staromestske namesti (Old Town Square). Interactive optical illusions, trick rooms, infinity mirrors. Obviously designed for photos. If you have kids or just want something lighthearted between the heavy history, it works. Do not expect depth.</p>
+<ul>
+<li>Tickets: <a href="https://www.illusionartmuseum.com/" target="_blank" rel="noopener noreferrer">illusionartmuseum.com</a></li>
+<li>Adults 289 CZK</li>
+</ul>
+
+<h3>Speculum Alchemiae</h3>
+<p>Underground laboratory beneath a house in Old Town. Supposedly an alchemist's workshop discovered during flood renovations in 2002. Part history, part theatre. The guides play it up. Whether any of it is "real" is debatable, but the underground tunnels and the atmosphere are fun. Good for a rainy day with older kids or adults who enjoy a bit of mystery.</p>
+<ul>
+<li>Tickets: <a href="https://www.speculumalchemiae.cz/en" target="_blank" rel="noopener noreferrer">speculumalchemiae.cz</a></li>
+<li>Adults 250 CZK</li>
+</ul>
+
+<h3>Veletrzni palac (for the building)</h3>
+<p>I mentioned it above for the National Gallery collection, but the building itself is one of the best examples of functionalist architecture in Europe. Built in 1928 as a trade fair palace. The open atrium with glass and concrete is worth photographing even if you skip the art. Which you should not.</p>
+
+<h3>Spanish Synagogue interior</h3>
+<p>The Moorish Revival ceiling and walls of the <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Spanish Synagogue</a> are extraordinary. Gold, red, green geometric patterns on every surface. If you take one photo in the Jewish Quarter, take it here.</p>
+
+<h3>David Cerny sculptures (free, outdoor)</h3>
+<p>Not a museum, but a walking trail of sorts. The rotating head of Kafka at the Municipal Library. The peeing statues at Kafka Museum. The babies crawling up the Zizkov TV Tower. The hanging man on Husova street. You will stumble into these around the city. All free, all designed for your camera.</p>
+
+<h3>Convent of St Agnes</h3>
+<p>The oldest Gothic building in Prague. The <a href="https://www.ngprague.cz/en/objekt-detail/klaster-sv-anezky-ceske" target="_blank" rel="noopener noreferrer">medieval art collection</a> here is good, but the building, the cloisters, the light in the afternoon, is the real reason to go. One of the most peaceful places in Prague. Almost nobody visits.</p>
+
+<h3>Signal Festival (October)</h3>
+<p>Annual light art festival that turns buildings, bridges, and public spaces into light installations. Not a museum, but it is the most photogenic event in Prague each year. Free. Check <a href="https://www.signalfestival.com/en" target="_blank" rel="noopener noreferrer">signalfestival.com</a> for dates.</p>
+
+<h2>The ones I would skip</h2>
+
+<p>I am going to be direct here.</p>
+<ul>
+<li><strong>Madame Tussauds Prague.</strong> If you have been to any other Tussauds, you have been to this one. Overpriced. 340 CZK to stand next to wax.</li>
+<li><strong>Lego Museum.</strong> It is large and kids enjoy it. But 300 CZK for Lego when there are real museums nearby feels wrong.</li>
+<li><strong>Sex Machines Museum.</strong> It exists. I have never taken a client there and I never will.</li>
+<li><strong>Most "experience" museums along Karlova street.</strong> The stretch between Old Town Square and Charles Bridge is lined with places called "Museum of..." something. Chocolate Museum, Torture Museum, Ghosts and Legends, Alchemy Museum (not to be confused with Speculum Alchemiae above). They charge 200-350 CZK and deliver about fifteen minutes of content in a basement. Save your money.</li>
+</ul>
+
+<h2>How the Prague Visitor Pass fits in</h2>
+
+<p>I wrote a <a href="/blog/prague-visitor-pass-honest-review">separate article on the Prague Visitor Pass</a>, but the short version: the <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">pass</a> covers the National Museum, all National Gallery locations, the Jewish Quarter, the City of Prague Museum branches, the National Technical Museum, Klementinum, Prague Castle, Prague Zoo, and more.</p>
+
+<p>If you plan to visit three or more of the <strong>(PVP)</strong> marked museums above plus use public transport, the pass saves money. I have done the arithmetic in the other article. For a 3-day visit with moderate museum interest, you save roughly 500-1000 CZK.</p>
+
+<p>Buy it at <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">praguevisitorpass.eu</a> before you arrive.</p>
+
+<h2>Practical tips</h2>
+<ul>
+<li>Monday is closing day for many museums. Check before you go.</li>
+<li>The first Wednesday or Thursday of the month is free entry at several National Museum sites. Worth checking the schedule.</li>
+<li>Student and senior discounts are standard. Bring an ID.</li>
+<li>Most museums close ticket sales 30-60 minutes before closing time.</li>
+<li>Klementinum and Strahov Library get crowded between 11:00 and 14:00. Go at opening or after 15:00.</li>
+</ul>
+
+<div class="blog-cta-box">
+  <h3>Want a guided museum tour?</h3>
+  <p>I can build a half-day or full-day route around the museums that interest you, skip the queues, and tell you the stories that the signs leave out. Especially in the Jewish Quarter, where I hold an accreditation from the Jewish Museum itself.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Custom%20Prague%20Tour#contact-title">Book a custom tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>`,
+    de: `<h2>Alle Museen in Prag, die sich lohnen (und ein paar, die es nicht tun)</h2>
+
+<p class="lead">Prag hat mehr Museen als die meisten Besucher erwarten. Einige sind Weltklasse. Einige sind Touristenfallen, die 300 CZK für einen dunklen Raum mit Wachsfiguren verlangen. Nach 40 Jahren als Stadtführerin habe ich eine Meinung dazu, was was ist. Hier ist meine ehrliche, vollständige Liste.</p>
+
+<p>Wenn Sie mehrere Museen besuchen wollen, schauen Sie sich meinen <a href="/blog/prague-visitor-pass-ehrliche-bewertung">Prague Visitor Pass Artikel</a> an. Viele der unten genannten Museen sind im Pass enthalten, und er rechnet sich oft schon am zweiten Tag.</p>
+
+<p>Museen, die im <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> enthalten sind, habe ich mit <strong>(PVP)</strong> markiert.</p>
+
+<h2>Die großen Nationalen</h2>
+
+<h3>Nationalmuseum (Narodni muzeum)</h3>
+<p>Das große Neorenaissance-Gebäude am oberen Ende des Wenzelsplatzes. 2018 nach zehn Jahren Renovierung wiedereröffnet. Das Hauptgebäude zeigt tschechische Naturkunde, Urgeschichte und hat ein spektakuläres Atrium. Das verbundene Neue Gebäude (ehemals Bundesversammlung) zeigt Wechselausstellungen, die meist interessanter sind als die Dauerausstellung. <strong>(PVP)</strong></p>
+<p>Allein wegen des Gebäudes sehenswert, besonders die Haupthalle und die Panoramaterrasse im obersten Stock.</p>
+<ul>
+<li>Tickets und Zeiten: <a href="https://www.nm.cz/en/visit-us" target="_blank" rel="noopener noreferrer">nm.cz</a></li>
+<li>Erwachsene 250 CZK, Kombiticket (beide Gebäude) 350 CZK</li>
+</ul>
+
+<h3>Nationalgalerie Prag (Narodni galerie)</h3>
+<p>Nicht ein Museum, sondern sechs Standorte in der ganzen Stadt. Die wichtigsten:</p>
+<ul>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/veletrzni-palac" target="_blank" rel="noopener noreferrer">Veletrzni palac (Messepalast)</a> in Holesovice. Der Große. Tschechische und internationale moderne Kunst vom 19. Jahrhundert bis heute. Muchas Slawisches Epos ist hier. 2-3 Stunden einplanen. <strong>(PVP)</strong></li>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/klaster-sv-anezky-ceske" target="_blank" rel="noopener noreferrer">Agneskloster (Klaster sv. Anezky Ceske)</a>. Mittelalterliche tschechische Kunst in einem Kloster aus dem 13. Jahrhundert. Ruhiger und lohnt sich ebenso wegen des Gebäudes wie der Sammlung. <strong>(PVP)</strong></li>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/schwarzenbersky-palac" target="_blank" rel="noopener noreferrer">Schwarzenberg-Palais</a>. Barockkunst nahe der Prager Burg. Lässt sich gut mit einem Burgbesuch kombinieren. <strong>(PVP)</strong></li>
+<li><a href="https://www.ngprague.cz/en/objekt-detail/salmovsky-palac" target="_blank" rel="noopener noreferrer">Salm-Palais</a>. Tschechische Kunst des 19. Jahrhunderts. Direkt neben dem Schwarzenberg-Palais. <strong>(PVP)</strong></li>
+</ul>
+<p>Tickets und alle Standorte: <a href="https://www.ngprague.cz/en" target="_blank" rel="noopener noreferrer">ngprague.cz</a>. Erwachsene 300 CZK pro Gebäude oder 500 CZK für alle Standorte (10 Tage gültig).</p>
+
+<h3>Nationales Technisches Museum (Narodni technicke muzeum)</h3>
+<p>Mit Blick auf den Letna-Park. Züge, Flugzeuge, Oldtimer, eine Fotohalle, eine Druckwerkstatt, ein Bergbaustollen im Keller. Kinder lieben es. Erwachsene, die Maschinen mögen, lieben es auch. Ich habe skeptische Gäste hierher mitgenommen, die am Ende zwei Stunden geblieben sind. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.ntm.cz/en" target="_blank" rel="noopener noreferrer">ntm.cz</a></li>
+<li>Erwachsene 290 CZK</li>
+</ul>
+
+<h2>Jüdisches Museum und das Jüdische Viertel</h2>
+
+<p>Das <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jüdische Museum in Prag</a> betreibt sechs Stätten in Josefov. Ich habe selbst eine <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Akkreditierung des Jüdischen Museums</a>. Das ist der Teil von Prag, den ich am besten kenne, und der Teil, der die meisten Besucher am tiefsten berührt. <strong>(PVP)</strong></p>
+<ul>
+<li><strong>Alter Jüdischer Friedhof</strong>. 12.000 Grabsteine über Jahrhunderte geschichtet auf kleinem Raum. Es gibt keinen vergleichbaren Ort.</li>
+<li><strong>Pinkas-Synagoge</strong>. Die Wände sind bedeckt mit den Namen von 77.297 tschechischen und mährischen Juden, die im Holocaust ermordet wurden. Die Besucher werden still, wenn sie eintreten. So ein Ort ist das.</li>
+<li><strong>Spanische Synagoge</strong>. Maurische Innenarchitektur von 1868. Wahrscheinlich die fotogenste Synagoge Europas.</li>
+<li><strong>Maisel-Synagoge</strong>. Geschichte der Juden in Böhmen und Mähren.</li>
+<li><strong>Klausen-Synagoge</strong>. Ausstellung über jüdische Traditionen und Bräuche.</li>
+<li><strong>Altneu-Synagoge</strong> (Staronova synagoga). Erbaut um 1270, immer noch eine aktive Synagoge. Separates Ticket.</li>
+</ul>
+<p>Vollticket (alle Stätten außer Altneu-Synagoge) 500 CZK. Altneu-Synagoge 200 CZK separat. Kombi 700 CZK.</p>
+<p>Tickets unter <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">jewishmuseum.cz</a>. Früh oder spät gehen, um die schlimmsten Massen zu vermeiden.</p>
+
+<h2>Museum der Stadt Prag und Zweigstellen</h2>
+
+<p>Das <a href="https://www.muzeumprahy.cz/en/" target="_blank" rel="noopener noreferrer">Museum der Stadt Prag</a> betreibt das Hauptmuseum auf Na Poříčí sowie mehrere kleinere Standorte. Im Hauptmuseum steht Langweils Modell von Prag aus den 1830er Jahren, ein raumgroßes Miniaturmodell der alten Stadt, bevor das Jüdische Viertel abgerissen wurde. <strong>(PVP)</strong></p>
+
+<p>Zweigstellen, die man kennen sollte:</p>
+<ul>
+<li><a href="https://www.muzeumprahy.cz/en/petrin-lookout-tower/" target="_blank" rel="noopener noreferrer">Petřín-Aussichtsturm</a>. Streng genommen kein Museum, aber von derselben Organisation betrieben. Beste Aussicht in Prag. <strong>(PVP)</strong></li>
+<li><a href="https://www.muzeumprahy.cz/en/powder-tower/" target="_blank" rel="noopener noreferrer">Pulverturm (Prasna brana)</a>. Gotisches Tor am Rand der Altstadt. Hochsteigen lohnt sich wegen der Aussicht. <strong>(PVP)</strong></li>
+<li><a href="https://www.muzeumprahy.cz/en/old-town-bridge-tower/" target="_blank" rel="noopener noreferrer">Altstädter Brückenturm</a>. Der Turm am Altstadtende der Karlsbrücke. <strong>(PVP)</strong></li>
+<li><a href="https://www.muzeumprahy.cz/en/muller-villa/" target="_blank" rel="noopener noreferrer">Müller-Villa</a>. Adolf-Loos-Villa von 1930. Vorher reservieren, Besichtigungen nur mit Führung.</li>
+</ul>
+
+<h2>Sammlungen der Prager Burg</h2>
+
+<p>Innerhalb des Burgkomplexes:</p>
+<ul>
+<li><strong>Gemäldegalerie der Prager Burg</strong>. Reste der Sammlung Rudolfs II. Tizian, Rubens, Veronese. Klein, aber lohnenswert. <strong>(PVP)</strong></li>
+<li><strong>Die Geschichte der Prager Burg</strong>. Dauerausstellung im Keller des Alten Königspalastes. Geht zurück bis ins 9. Jahrhundert. <strong>(PVP)</strong></li>
+<li><a href="https://www.lobkowicz.cz/en" target="_blank" rel="noopener noreferrer">Lobkowicz-Palais</a>. Privatsammlung, separates Ticket. Beethoven- und Mozart-Handschriften, Bruegel, Canaletto. Der Audioguide wird von der Familie selbst gesprochen, was dem Ganzen eine persönliche Note gibt. Erwachsene 395 CZK.</li>
+</ul>
+<p>Burgtickets und Rundgänge: <a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank" rel="noopener noreferrer">hrad.cz</a></p>
+
+<h2>Musik und Literatur</h2>
+
+<h3>Kafka-Museum</h3>
+<p>Am Moldauufer auf der Kleinseite. Zeigt Kafkas Leben, Manuskripte, Erstausgaben. Im Hof stehen David Cernys pinkelnde Statuen. Ob man die lustig oder geschmacklos findet, sagt wahrscheinlich etwas über einen selbst aus. Lohnt sich, wenn Kafka einem etwas bedeutet. Kann man auslassen, wenn nicht.</p>
+<ul>
+<li>Tickets: <a href="https://kafkamuseum.cz/en/" target="_blank" rel="noopener noreferrer">kafkamuseum.cz</a></li>
+<li>Erwachsene 260 CZK</li>
+</ul>
+
+<h3>Dvorak-Museum (Villa Amerika)</h3>
+<p>Kleine Barockvilla in der Straße Ke Karlovu. Dvoraks persönliche Gegenstände, Manuskripte, das Klavier, auf dem er komponiert hat. Fünfzehn Minuten reichen, es sei denn, man ist ein echter Dvorak-Fan. <strong>(PVP)</strong></p>
+<ul>
+<li>Teil des <a href="https://www.nm.cz/en/visit-us/buildings/czech-museum-of-music-dvorak-museum" target="_blank" rel="noopener noreferrer">Tschechischen Musikmuseums</a></li>
+<li>Erwachsene 100 CZK</li>
+</ul>
+
+<h3>Smetana-Museum</h3>
+<p>Direkt an der Moldau neben der Karlsbrücke. Leben und Werk von Bedrich Smetana. Klein, fokussiert, selten überfüllt. Die Aussicht von der Terrasse ist ausgezeichnet. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.nm.cz/en/visit-us/buildings/czech-museum-of-music-bedrich-smetana-museum" target="_blank" rel="noopener noreferrer">nm.cz (Smetana-Museum)</a></li>
+<li>Erwachsene 100 CZK</li>
+</ul>
+
+<h3>Tschechisches Musikmuseum</h3>
+<p>In einer ehemaligen Barockkirche in der Karmelitska. Historische Instrumente, darunter eine Sammlung von Tasteninstrumenten über Jahrhunderte. Das Gebäude ist Teil des Reizes. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.nm.cz/en/visit-us/buildings/czech-museum-of-music" target="_blank" rel="noopener noreferrer">nm.cz (Tschechisches Musikmuseum)</a></li>
+<li>Erwachsene 200 CZK</li>
+</ul>
+
+<h3>Mucha-Museum</h3>
+<p>Alphonse Muchas Jugendstil-Plakate und -Gemälde. Kleines privates Museum in der Panska-Straße nahe dem Wenzelsplatz. Wer Mucha mag, wird es genießen. Wer sein Werk nicht kennt: man hat es gesehen, ohne es zu wissen. Er hat die Sarah-Bernhardt-Plakate entworfen, die auf der Hälfte aller Stoffbeutel in Paris abgebildet sind.</p>
+<ul>
+<li>Tickets: <a href="https://www.mucha.cz/en" target="_blank" rel="noopener noreferrer">mucha.cz</a></li>
+<li>Erwachsene 350 CZK</li>
+</ul>
+<p>Hinweis: Muchas Slawisches Epos, sein Lebenswerk aus 20 großformatigen Gemälden, ist im <a href="https://www.ngprague.cz/en/objekt-detail/veletrzni-palac" target="_blank" rel="noopener noreferrer">Veletrzni palac</a> zu sehen. Das ist die eigentliche Attraktion.</p>
+
+<h2>Zeitgenössische Kunst und Design</h2>
+
+<h3>DOX Zentrum für Gegenwartskunst</h3>
+<p>In Holesovice. Industriegebäude, umgebaut zu einem der besten Räume für zeitgenössische Kunst in Mitteleuropa. Wechselausstellungen, meist zum Nachdenken anregend, manchmal merkwürdig. Das Dach-Luftschiff (Gulliver) ist ein Veranstaltungsort für Lesungen und Vorträge. Lohnt sich auch, wenn man kein "Kunstmensch" ist.</p>
+<ul>
+<li>Tickets: <a href="https://www.dox.cz/en" target="_blank" rel="noopener noreferrer">dox.cz</a></li>
+<li>Erwachsene 290 CZK</li>
+</ul>
+
+<h3>Kampa Museum</h3>
+<p>Moderne mitteleuropäische Kunst im Gebäude Sovovy Mlyny (Eulen-Mühlen) auf der Kampa-Insel. Tschechische und slowakische abstrakte Kunst, eine gute Kupka-Sammlung. Das Gebäude liegt direkt an der Moldau und die Lage ist wunderschön.</p>
+<ul>
+<li>Tickets: <a href="https://www.museumkampa.cz/en/" target="_blank" rel="noopener noreferrer">museumkampa.cz</a></li>
+<li>Erwachsene 250 CZK</li>
+</ul>
+
+<h3>Kunstgewerbemuseum (UPM)</h3>
+<p>Neben dem Alten Jüdischen Friedhof. Möbel, Glas, Keramik, Mode, Grafikdesign. Die tschechische Glassammlung ist außergewöhnlich. Das Gebäude ist ein Neorenaissance-Juwel aus den 1890er Jahren. Oft übersehen. Ich halte es für eines der besten Museen in Prag. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.upm.cz/en/" target="_blank" rel="noopener noreferrer">upm.cz</a></li>
+<li>Erwachsene 300 CZK</li>
+</ul>
+
+<h3>Galerie der Hauptstadt Prag (GHMP)</h3>
+<p>Betreibt mehrere Räume in der Stadt. Die meistbesuchten:</p>
+<ul>
+<li><a href="https://www.ghmp.cz/en/municipal-library/" target="_blank" rel="noopener noreferrer">Stadtbibliothek</a> (2. OG). Eintritt frei. Die Hauptattraktion ist David Cernys "Kafka-Kopf"-Skulptur draußen, aber die Galerie selbst zeigt solide Wechselausstellungen.</li>
+<li><a href="https://www.ghmp.cz/en/house-of-photography/" target="_blank" rel="noopener noreferrer">Haus der Fotografie</a>. Tschechische und internationale Fotoausstellungen.</li>
+<li><a href="https://www.ghmp.cz/en/colloredo-mansfeld-palace/" target="_blank" rel="noopener noreferrer">Colloredo-Mansfeld-Palais</a>. Barockpalast mit zeitgenössischen Ausstellungen.</li>
+</ul>
+<p>Alle Standorte: <a href="https://www.ghmp.cz/en/" target="_blank" rel="noopener noreferrer">ghmp.cz</a></p>
+
+<h2>Geschichte und Spezialmuseen</h2>
+
+<h3>Museum des Kommunismus</h3>
+<p>In der Straße V Celnici (von seinem alten Standort umgezogen). Das Leben unter dem kommunistischen Regime von 1948 bis 1989. Propagandaplakate, nachgebaute Verhörräume, Aufnahmen der Samtenen Revolution. Besser als ich erwartet hatte.</p>
+<ul>
+<li>Tickets: <a href="https://muzeumkomunismu.cz/en/" target="_blank" rel="noopener noreferrer">muzeumkomunismu.cz</a></li>
+<li>Erwachsene 380 CZK</li>
+</ul>
+
+<h3>Naprstek-Museum</h3>
+<p>Asiatische, afrikanische und amerikanische Kulturen. Teil des Nationalen Museumssystems. Am Betlemske namesti in der Altstadt. Klein, vielseitig und oft leer. Gut für einen regnerischen Nachmittag. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.nm.cz/en/visit-us/buildings/naprstek-museum" target="_blank" rel="noopener noreferrer">nm.cz (Naprstek-Museum)</a></li>
+<li>Erwachsene 200 CZK</li>
+</ul>
+
+<h3>Armeemuseum Zizkov</h3>
+<p>Tschechische Militärgeschichte von den Hussitenkriegen über beide Weltkriege bis heute. Eintritt frei. Die Abteilungen zum Ersten und Zweiten Weltkrieg sind gut gemacht. In der Straße U Pamatniku unterhalb des Zizkov-Fernsehturms. <strong>(PVP)</strong></p>
+<ul>
+<li>Info: <a href="https://www.vhu.cz/en/" target="_blank" rel="noopener noreferrer">vhu.cz</a></li>
+<li>Eintritt frei</li>
+</ul>
+
+<h3>Bibliothek des Klosters Strahov</h3>
+<p>Zwei barocke Bibliothekssäle, der Theologische Saal und der Philosophische Saal. Man betrachtet sie vom Eingang aus (man kann nicht hineingehen). Trotzdem lohnend: die Säle gehören zu den schönsten Räumen in Prag. Das Kloster hat auch eine kleine Galerie. Nicht im <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> enthalten.</p>
+<ul>
+<li>Tickets: <a href="https://www.strahovskyklaster.cz/en" target="_blank" rel="noopener noreferrer">strahovskyklaster.cz</a></li>
+<li>Erwachsene 150 CZK (Bibliothek), 120 CZK (Galerie)</li>
+</ul>
+
+<h3>Klementinum</h3>
+<p>Barocker Bibliothekssaal und Astronomieturm. Nur mit Führung, ca. 50 Minuten. Der Bibliothekssaal ist atemberaubend, und der Turm bietet eine der besten Aussichten auf die Altstadtdächer. Im Sommer vorher buchen. <strong>(PVP)</strong></p>
+<ul>
+<li>Tickets: <a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">klementinum.com</a></li>
+<li>Erwachsene 300 CZK</li>
+</ul>
+
+<h2>Instagram-tauglich und immersive Erlebnisse</h2>
+
+<p>Einige davon sind Museen im traditionellen Sinn. Andere nicht. Ich nehme sie auf, weil Besucher immer wieder danach fragen und manche wirklich gut sind.</p>
+
+<h3>Illusion Art Museum</h3>
+<p>Am Staromestske namesti (Altstädter Ring). Interaktive optische Täuschungen, Trickräume, Unendlichkeitsspiegel. Offensichtlich für Fotos gemacht. Mit Kindern oder als leichte Abwechslung zwischen der schweren Geschichte funktioniert es. Keine Tiefe erwarten.</p>
+<ul>
+<li>Tickets: <a href="https://www.illusionartmuseum.com/" target="_blank" rel="noopener noreferrer">illusionartmuseum.com</a></li>
+<li>Erwachsene 289 CZK</li>
+</ul>
+
+<h3>Speculum Alchemiae</h3>
+<p>Unterirdisches Labor unter einem Haus in der Altstadt. Angeblich eine Alchemistenwerkstatt, die bei Hochwasser-Renovierungen 2002 entdeckt wurde. Teils Geschichte, teils Theater. Die Guides spielen es hoch. Ob davon etwas "echt" ist, darüber lässt sich streiten. Aber die unterirdischen Gänge und die Atmosphäre machen Spaß. Gut für einen Regentag mit älteren Kindern oder Erwachsenen, die ein bisschen Geheimnis mögen.</p>
+<ul>
+<li>Tickets: <a href="https://www.speculumalchemiae.cz/en" target="_blank" rel="noopener noreferrer">speculumalchemiae.cz</a></li>
+<li>Erwachsene 250 CZK</li>
+</ul>
+
+<h3>Veletrzni palac (wegen des Gebäudes)</h3>
+<p>Ich habe es oben schon wegen der Nationalgalerie-Sammlung erwähnt, aber das Gebäude selbst ist eines der besten Beispiele funktionalistischer Architektur in Europa. 1928 als Messepalast erbaut. Das offene Atrium aus Glas und Beton lohnt sich auch ohne Kunst zum Fotografieren. Wobei man die Kunst nicht auslassen sollte.</p>
+
+<h3>Spanische Synagoge (Innenraum)</h3>
+<p>Die maurische Decke und die Wände der <a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Spanischen Synagoge</a> sind außergewöhnlich. Gold, Rot, Grün, geometrische Muster auf jeder Fläche. Wenn man ein Foto im Jüdischen Viertel macht, dann hier.</p>
+
+<h3>David-Cerny-Skulpturen (kostenlos, draußen)</h3>
+<p>Kein Museum, aber eine Art Wanderroute. Der rotierende Kafka-Kopf bei der Stadtbibliothek. Die pinkelnden Statuen beim Kafka-Museum. Die Babys, die den Zizkov-Fernsehturm hochklettern. Der hängende Mann in der Husova-Straße. Man stolpert in der Stadt darüber. Alles kostenlos, alles für die Kamera gemacht.</p>
+
+<h3>Agneskloster</h3>
+<p>Das älteste gotische Gebäude in Prag. Die <a href="https://www.ngprague.cz/en/objekt-detail/klaster-sv-anezky-ceske" target="_blank" rel="noopener noreferrer">mittelalterliche Kunstsammlung</a> hier ist gut. Aber das Gebäude, die Kreuzgänge, das Licht am Nachmittag: das ist der eigentliche Grund zu kommen. Einer der friedlichsten Orte in Prag. Fast niemand besucht ihn.</p>
+
+<h3>Signal Festival (Oktober)</h3>
+<p>Jährliches Lichtkunst-Festival, das Gebäude, Brücken und öffentliche Räume in Lichtinstallationen verwandelt. Kein Museum, aber das fotogenste Event in Prag jedes Jahr. Kostenlos. Termine unter <a href="https://www.signalfestival.com/en" target="_blank" rel="noopener noreferrer">signalfestival.com</a>.</p>
+
+<h2>Die, die ich auslassen würde</h2>
+
+<p>Ich sage es direkt.</p>
+<ul>
+<li><strong>Madame Tussauds Prag.</strong> Wer schon ein anderes Tussauds kennt, kennt auch dieses. Überteuert. 340 CZK, um neben Wachs zu stehen.</li>
+<li><strong>Lego-Museum.</strong> Es ist groß und Kinder mögen es. Aber 300 CZK für Lego, wenn nebenan echte Museen sind, fühlt sich falsch an.</li>
+<li><strong>Sex Machines Museum.</strong> Existiert. Ich habe noch nie einen Gast dorthin gebracht und werde es auch nicht tun.</li>
+<li><strong>Die meisten "Erlebnis"-Museen entlang der Karlova-Straße.</strong> Die Strecke zwischen Altstädter Ring und Karlsbrücke ist gesäumt von Orten, die "Museum of..." heißen. Schokoladenmuseum, Foltermuseum, Geister und Legenden, Alchemie-Museum (nicht zu verwechseln mit dem Speculum Alchemiae oben). Sie verlangen 200-350 CZK und bieten etwa fünfzehn Minuten Inhalt in einem Keller. Sparen Sie sich das Geld.</li>
+</ul>
+
+<h2>Wie der Prague Visitor Pass reinpasst</h2>
+
+<p>Ich habe einen <a href="/blog/prague-visitor-pass-ehrliche-bewertung">eigenen Artikel zum Prague Visitor Pass</a> geschrieben, aber die Kurzfassung: Der <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Pass</a> umfasst das Nationalmuseum, alle Standorte der Nationalgalerie, das Jüdische Viertel, die Zweigstellen des Stadtmuseums, das Nationale Technische Museum, Klementinum, Prager Burg, Prager Zoo und mehr.</p>
+
+<p>Wenn Sie drei oder mehr der oben mit <strong>(PVP)</strong> markierten Museen besuchen und den Nahverkehr nutzen wollen, spart der Pass Geld. Die Rechnung habe ich im anderen Artikel aufgemacht. Bei einem 3-Tage-Besuch mit mäßigem Museumsinteresse spart man ungefähr 500-1000 CZK.</p>
+
+<p>Kaufen Sie ihn auf <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">praguevisitorpass.eu</a> bevor Sie anreisen.</p>
+
+<h2>Praktische Tipps</h2>
+<ul>
+<li>Montag ist Schließtag bei vielen Museen. Vorher prüfen.</li>
+<li>Am ersten Mittwoch oder Donnerstag im Monat ist in mehreren Standorten des Nationalmuseums der Eintritt frei. Lohnt sich, den Kalender zu prüfen.</li>
+<li>Studenten- und Seniorenrabatte sind Standard. Ausweis mitbringen.</li>
+<li>Die meisten Museen verkaufen die letzten Tickets 30-60 Minuten vor Schließung.</li>
+<li>Klementinum und Strahov-Bibliothek sind zwischen 11:00 und 14:00 am vollsten. Zur Öffnung oder nach 15:00 gehen.</li>
+</ul>
+
+<div class="blog-cta-box">
+  <h3>Lust auf eine geführte Museumstour?</h3>
+  <p>Ich kann eine Halbtages- oder Ganztagesroute rund um die Museen zusammenstellen, die Sie interessieren, Warteschlangen umgehen und Ihnen die Geschichten erzählen, die auf den Schildern fehlen. Besonders im Jüdischen Viertel, wo ich eine Akkreditierung des Jüdischen Museums selbst besitze.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Individuelle%20Prag%20Tour#contact-title">Individuelle Tour buchen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>`,
+  },
+
   // Post 14 (Top places to visit right now)
   'blog.post14.title': {
     en: 'Top Places to Visit in Prague Right Now (2025): Icons, Parks, Art, and Nightlife',
@@ -1139,10 +1793,14 @@ export const blogTranslations = {
   'blog.post23.content': {
     en: `<h2>The Prague Visitor Pass: why I tell every client to get one</h2>
 
-<p class="lead">I have been guiding people through Prague since the mid-1980s. Every week someone asks me whether the Prague Visitor Pass is worth the money. The short answer: yes, almost always. The longer answer takes about five minutes and a bit of arithmetic, which is what this article is.</p>
+<p class="lead">I have been guiding people through Prague since the mid-1980s. Every week someone asks me whether the <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> is worth the money. The short answer: yes, almost always. The longer answer takes about five minutes and a bit of arithmetic, which is what this article is.</p>
 
 <h2>What the pass actually is</h2>
-<p>The <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> is the city's official tourist card. You buy it for 48, 72, or 120 hours and it gives you free entry (or a discount) to more than 70 attractions, plus unlimited public transport across Prague, including the airport bus. It comes as a physical card or an e-Pass on your phone.</p>
+<p>The <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> is the city's official tourist card. You buy it for 48, 72, or 120 hours and it gives you free entry (or a discount) to more than 70 attractions, plus unlimited public transport across Prague, including the airport bus. It comes as a physical card or an e-Pass on your phone. <a href="https://www.praguecitytourism.cz/en" target="_blank" rel="noopener noreferrer">Prague City Tourism</a> put together a good video overview if you want the quick version:</p>
+
+<div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:1.5rem 0;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/wVxJrR02gKs" title="Prague Visitor Pass overview by Prague City Tourism" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
 
 <p>Current prices in Czech crowns:</p>
 <table>
@@ -1158,14 +1816,14 @@ export const blogTranslations = {
 <h2>The maths that convinced me</h2>
 <p>Here is what a typical 3-day visitor pays without the pass, buying tickets individually:</p>
 <ul>
-  <li>Prague Castle circuit (long tour): 400 CZK</li>
-  <li>Old Town Hall and Astronomical Clock tower: 300 CZK</li>
-  <li>Jewish Quarter (full ticket): 500 CZK</li>
-  <li>Prague Zoo: 350 CZK</li>
-  <li>Vyšehrad casemates: 150 CZK</li>
+  <li><a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank" rel="noopener noreferrer">Prague Castle</a> circuit (long tour): 400 CZK</li>
+  <li><a href="https://www.staromestskaradnicepraha.cz/en" target="_blank" rel="noopener noreferrer">Old Town Hall</a> and Astronomical Clock tower: 300 CZK</li>
+  <li><a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jewish Quarter</a> (full ticket): 500 CZK</li>
+  <li><a href="https://www.zoopraha.cz/en" target="_blank" rel="noopener noreferrer">Prague Zoo</a>: 350 CZK</li>
+  <li><a href="https://www.praha-vysehrad.cz/en" target="_blank" rel="noopener noreferrer">Vyšehrad</a> casemates: 150 CZK</li>
   <li>One of the seven Prague towers: 150-250 CZK</li>
   <li>A river cruise: 400 CZK</li>
-  <li>Museum of the City of Prague: 200 CZK</li>
+  <li><a href="https://www.muzeumprahy.cz/en/" target="_blank" rel="noopener noreferrer">Museum of the City of Prague</a>: 200 CZK</li>
   <li>72-hour public transport pass: 330 CZK</li>
 </ul>
 <p>That adds up to somewhere around 2 800-3 000 CZK. The 72-hour Visitor Pass costs 3 300 CZK and includes all of the above plus another 60-odd venues you can walk into on a whim. If you squeeze in one more museum or gallery, you are ahead. And you skip ticket queues at the Old Town Hall, which alone is worth something on a Saturday morning in June.</p>
@@ -1173,34 +1831,34 @@ export const blogTranslations = {
 <p>The 120-hour pass makes sense for people adding a day trip to Kutna Hora. More on that below.</p>
 
 <h2>The public transport angle</h2>
-<p>This is the part people underestimate. A 72-hour public transport pass in Prague costs 330 CZK on its own. The Visitor Pass includes unlimited transport for its entire validity, including the Airport Express bus (which otherwise costs 150 CZK return). So you are effectively getting 330-480 CZK of transport thrown in. That changes the break-even calculation a lot.</p>
+<p>This is the part people underestimate. A 72-hour <a href="https://www.dpp.cz/en/fares/fare-pricelist" target="_blank" rel="noopener noreferrer">public transport pass</a> in Prague costs 330 CZK on its own. The Visitor Pass includes unlimited transport for its entire validity, including the Airport Express bus (which otherwise costs 150 CZK return). So you are effectively getting 330-480 CZK of transport thrown in. That changes the break-even calculation a lot.</p>
 <p>It also means you stop thinking about whether a tram ride is "worth it" and just hop on. Prague is more pleasant when you are not trying to walk everywhere to save money.</p>
 
 <h2>The Kutna Hora trick</h2>
-<p>The pass now covers a day trip to Kutna Hora, including transport there and back. Kutna Hora is a UNESCO town about an hour east of Prague by train. It has the Sedlec Ossuary (the bone church), the Cathedral of St Barbara, and the Czech Museum of Silver. Normally you would pay for the train plus individual entries. With the 120-hour pass all of that is included. If a Kutna Hora trip was already on your list, the 5-day pass pays for itself comfortably.</p>
+<p>The pass now covers a day trip to <a href="https://www.kutnahora.cz/en" target="_blank" rel="noopener noreferrer">Kutna Hora</a>, including transport there and back. Kutna Hora is a UNESCO town about an hour east of Prague by train. It has the <a href="https://www.sedlec.info/en/" target="_blank" rel="noopener noreferrer">Sedlec Ossuary</a> (the bone church), the <a href="https://www.khfarnost.cz/cathedral-of-st-barbara" target="_blank" rel="noopener noreferrer">Cathedral of St Barbara</a>, and the <a href="https://www.cms-kh.cz/en" target="_blank" rel="noopener noreferrer">Czech Museum of Silver</a>. Normally you would pay for the train plus individual entries. With the 120-hour pass all of that is included. If a Kutna Hora trip was already on your list, the 5-day pass pays for itself comfortably.</p>
 
 <h2>What is actually included</h2>
-<p>I am not going to list all 70+ venues. But the ones my clients use most:</p>
+<p>I am not going to list all 70+ venues (the <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">full list is on the official site</a>). But the ones my clients use most:</p>
 <ul>
-  <li>Prague Castle (full circuit)</li>
-  <li>Old Town Hall with Astronomical Clock tower access</li>
-  <li>Seven Prague towers (Petrin, Powder Gate, etc.)</li>
-  <li>The Klementinum tour</li>
-  <li>Jewish Quarter sites</li>
-  <li>Prague Zoo</li>
-  <li>Vyšehrad</li>
-  <li>Museum of the City of Prague and its branches</li>
+  <li><a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank" rel="noopener noreferrer">Prague Castle</a> (full circuit)</li>
+  <li><a href="https://www.staromestskaradnicepraha.cz/en" target="_blank" rel="noopener noreferrer">Old Town Hall</a> with Astronomical Clock tower access</li>
+  <li>Seven Prague towers (<a href="https://www.muzeumprahy.cz/en/petrin-lookout-tower/" target="_blank" rel="noopener noreferrer">Petrin Lookout Tower</a>, <a href="https://www.muzeumprahy.cz/en/powder-tower/" target="_blank" rel="noopener noreferrer">Powder Gate</a>, etc.)</li>
+  <li><a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">The Klementinum</a> tour</li>
+  <li><a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jewish Quarter sites</a></li>
+  <li><a href="https://www.zoopraha.cz/en" target="_blank" rel="noopener noreferrer">Prague Zoo</a></li>
+  <li><a href="https://www.praha-vysehrad.cz/en" target="_blank" rel="noopener noreferrer">Vyšehrad</a></li>
+  <li><a href="https://www.muzeumprahy.cz/en/" target="_blank" rel="noopener noreferrer">Museum of the City of Prague</a> and its branches</li>
   <li>River cruise on the Vltava</li>
   <li>Historic Tram 42 ride</li>
-  <li>Guided walking tours from Prague City Tourism</li>
+  <li>Guided walking tours from <a href="https://www.praguecitytourism.cz/en" target="_blank" rel="noopener noreferrer">Prague City Tourism</a></li>
 </ul>
 <p>You can visit each venue once. There is no daily limit on how many you visit.</p>
 
 <h2>Where to buy it</h2>
 <p>Four options:</p>
 <ul>
-  <li>Online at <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">prague.eu</a> (e-Pass delivered to your phone)</li>
-  <li>The Prague City Tourism information centres around town</li>
+  <li>Online at <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">praguevisitorpass.eu</a> (e-Pass delivered to your phone)</li>
+  <li>The <a href="https://www.praguecitytourism.cz/en" target="_blank" rel="noopener noreferrer">Prague City Tourism</a> information centres around town</li>
   <li>The priority counter at Old Town Hall</li>
   <li>The mobile app</li>
 </ul>
@@ -1227,10 +1885,14 @@ export const blogTranslations = {
 </div>`,
     de: `<h2>Der Prague Visitor Pass: warum ich jedem Gast dazu rate</h2>
 
-<p class="lead">Ich führe Menschen durch Prag seit Mitte der 1980er Jahre. Jede Woche fragt mich jemand, ob sich der Prague Visitor Pass lohnt. Kurze Antwort: ja, fast immer. Die längere Antwort braucht etwa fünf Minuten und etwas Kopfrechnen. Genau darum geht es in diesem Artikel.</p>
+<p class="lead">Ich führe Menschen durch Prag seit Mitte der 1980er Jahre. Jede Woche fragt mich jemand, ob sich der <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> lohnt. Kurze Antwort: ja, fast immer. Die längere Antwort braucht etwa fünf Minuten und etwas Kopfrechnen. Genau darum geht es in diesem Artikel.</p>
 
 <h2>Was der Pass eigentlich ist</h2>
-<p>Der <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> ist die offizielle Touristenkarte der Stadt. Man kauft ihn für 48, 72 oder 120 Stunden und bekommt freien Eintritt (oder Ermäßigung) in mehr als 70 Attraktionen, dazu unbegrenzte Nutzung der öffentlichen Verkehrsmittel in ganz Prag, einschließlich Flughafenbus. Es gibt ihn als physische Karte oder als e-Pass auf dem Handy.</p>
+<p>Der <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> ist die offizielle Touristenkarte der Stadt. Man kauft ihn für 48, 72 oder 120 Stunden und bekommt freien Eintritt (oder Ermäßigung) in mehr als 70 Attraktionen, dazu unbegrenzte Nutzung der öffentlichen Verkehrsmittel in ganz Prag, einschließlich Flughafenbus. Es gibt ihn als physische Karte oder als e-Pass auf dem Handy. <a href="https://www.praguecitytourism.cz/de" target="_blank" rel="noopener noreferrer">Prague City Tourism</a> hat ein gutes Video dazu gemacht:</p>
+
+<div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:1.5rem 0;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/wVxJrR02gKs" title="Prague Visitor Pass Überblick von Prague City Tourism" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
 
 <p>Aktuelle Preise in tschechischen Kronen:</p>
 <table>
@@ -1246,14 +1908,14 @@ export const blogTranslations = {
 <h2>Die Rechnung, die mich überzeugt hat</h2>
 <p>Was ein typischer 3-Tage-Besucher ohne Pass zahlt, wenn er Tickets einzeln kauft:</p>
 <ul>
-  <li>Prager Burg (große Runde): 400 CZK</li>
-  <li>Altstädter Rathaus und Astronomische Uhr (Turmaufstieg): 300 CZK</li>
-  <li>Jüdisches Viertel (Vollticket): 500 CZK</li>
-  <li>Prager Zoo: 350 CZK</li>
-  <li>Vyšehrad-Kasematten: 150 CZK</li>
+  <li><a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank" rel="noopener noreferrer">Prager Burg</a> (große Runde): 400 CZK</li>
+  <li><a href="https://www.staromestskaradnicepraha.cz/en" target="_blank" rel="noopener noreferrer">Altstädter Rathaus</a> und Astronomische Uhr (Turmaufstieg): 300 CZK</li>
+  <li><a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jüdisches Viertel</a> (Vollticket): 500 CZK</li>
+  <li><a href="https://www.zoopraha.cz/en" target="_blank" rel="noopener noreferrer">Prager Zoo</a>: 350 CZK</li>
+  <li><a href="https://www.praha-vysehrad.cz/en" target="_blank" rel="noopener noreferrer">Vyšehrad</a>-Kasematten: 150 CZK</li>
   <li>Einer der sieben Prager Türme: 150-250 CZK</li>
   <li>Flussrundfahrt: 400 CZK</li>
-  <li>Museum der Stadt Prag: 200 CZK</li>
+  <li><a href="https://www.muzeumprahy.cz/en/" target="_blank" rel="noopener noreferrer">Museum der Stadt Prag</a>: 200 CZK</li>
   <li>72-Stunden-Fahrschein: 330 CZK</li>
 </ul>
 <p>Zusammen sind das rund 2 800-3 000 CZK. Der 72-Stunden-Visitor-Pass kostet 3 300 CZK und beinhaltet all das oben plus rund 60 weitere Orte, in die man einfach reinspazieren kann. Wenn man ein Museum oder eine Galerie mehr mitnimmt, hat man schon gespart. Und man umgeht die Ticketschlange am Altstädter Rathaus, was an einem Samstagmorgen im Juni allein schon Gold wert ist.</p>
@@ -1261,34 +1923,34 @@ export const blogTranslations = {
 <p>Der 120-Stunden-Pass lohnt sich besonders für Leute, die einen Tagesausflug nach Kutna Hora planen. Dazu gleich mehr.</p>
 
 <h2>Der Nahverkehr-Faktor</h2>
-<p>Diesen Teil unterschätzen die meisten. Ein 72-Stunden-Fahrschein für Prags Nahverkehr kostet allein 330 CZK. Der Visitor Pass enthält unbegrenzte Fahrten für die gesamte Gültigkeitsdauer, einschließlich Airport Express (der sonst 150 CZK hin und zurück kostet). Man bekommt also effektiv 330-480 CZK Transportwert obendrauf. Das verschiebt die Rechnung erheblich.</p>
+<p>Diesen Teil unterschätzen die meisten. Ein 72-Stunden-<a href="https://www.dpp.cz/en/fares/fare-pricelist" target="_blank" rel="noopener noreferrer">Fahrschein</a> für Prags Nahverkehr kostet allein 330 CZK. Der Visitor Pass enthält unbegrenzte Fahrten für die gesamte Gültigkeitsdauer, einschließlich Airport Express (der sonst 150 CZK hin und zurück kostet). Man bekommt also effektiv 330-480 CZK Transportwert obendrauf. Das verschiebt die Rechnung erheblich.</p>
 <p>Außerdem hört man auf zu überlegen, ob sich eine Tramfahrt "lohnt", und steigt einfach ein. Prag ist angenehmer, wenn man nicht versucht, überall hinzulaufen um Geld zu sparen.</p>
 
 <h2>Der Kutna-Hora-Trick</h2>
-<p>Der Pass deckt jetzt auch einen Tagesausflug nach Kutna Hora ab, inklusive Hin- und Rückfahrt. Kutna Hora ist eine UNESCO-Stadt, etwa eine Stunde östlich von Prag mit dem Zug. Dort gibt es das Sedlec-Beinhaus (die Knochenkirche), die Barbarakathedrale und das Tschechische Silbermuseum. Normalerweise zahlt man Zugfahrt plus Einzeleintritte. Mit dem 120-Stunden-Pass ist alles drin. Wenn Kutna Hora ohnehin auf der Liste stand, rechnet sich der 5-Tage-Pass locker.</p>
+<p>Der Pass deckt jetzt auch einen Tagesausflug nach <a href="https://www.kutnahora.cz/en" target="_blank" rel="noopener noreferrer">Kutna Hora</a> ab, inklusive Hin- und Rückfahrt. Kutna Hora ist eine UNESCO-Stadt, etwa eine Stunde östlich von Prag mit dem Zug. Dort gibt es das <a href="https://www.sedlec.info/en/" target="_blank" rel="noopener noreferrer">Sedlec-Beinhaus</a> (die Knochenkirche), die <a href="https://www.khfarnost.cz/cathedral-of-st-barbara" target="_blank" rel="noopener noreferrer">Barbarakathedrale</a> und das <a href="https://www.cms-kh.cz/en" target="_blank" rel="noopener noreferrer">Tschechische Silbermuseum</a>. Normalerweise zahlt man Zugfahrt plus Einzeleintritte. Mit dem 120-Stunden-Pass ist alles drin. Wenn Kutna Hora ohnehin auf der Liste stand, rechnet sich der 5-Tage-Pass locker.</p>
 
 <h2>Was tatsächlich enthalten ist</h2>
-<p>Ich zähle hier nicht alle 70+ Orte auf. Aber die, die meine Gäste am häufigsten nutzen:</p>
+<p>Ich zähle hier nicht alle 70+ Orte auf (die <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">vollständige Liste gibt es auf der offiziellen Seite</a>). Aber die, die meine Gäste am häufigsten nutzen:</p>
 <ul>
-  <li>Prager Burg (vollständige Runde)</li>
-  <li>Altstädter Rathaus mit Turmzugang</li>
-  <li>Sieben Prager Türme (Petřín, Pulverturm usw.)</li>
-  <li>Klementinum-Führung</li>
-  <li>Jüdisches Viertel</li>
-  <li>Prager Zoo</li>
-  <li>Vyšehrad</li>
-  <li>Museum der Stadt Prag und seine Zweigstellen</li>
+  <li><a href="https://www.hrad.cz/en/prague-castle-for-visitors" target="_blank" rel="noopener noreferrer">Prager Burg</a> (vollständige Runde)</li>
+  <li><a href="https://www.staromestskaradnicepraha.cz/en" target="_blank" rel="noopener noreferrer">Altstädter Rathaus</a> mit Turmzugang</li>
+  <li>Sieben Prager Türme (<a href="https://www.muzeumprahy.cz/en/petrin-lookout-tower/" target="_blank" rel="noopener noreferrer">Petřín-Aussichtsturm</a>, <a href="https://www.muzeumprahy.cz/en/powder-tower/" target="_blank" rel="noopener noreferrer">Pulverturm</a> usw.)</li>
+  <li><a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">Klementinum</a>-Führung</li>
+  <li><a href="https://www.jewishmuseum.cz/en/info/visit/" target="_blank" rel="noopener noreferrer">Jüdisches Viertel</a></li>
+  <li><a href="https://www.zoopraha.cz/en" target="_blank" rel="noopener noreferrer">Prager Zoo</a></li>
+  <li><a href="https://www.praha-vysehrad.cz/en" target="_blank" rel="noopener noreferrer">Vyšehrad</a></li>
+  <li><a href="https://www.muzeumprahy.cz/en/" target="_blank" rel="noopener noreferrer">Museum der Stadt Prag</a> und seine Zweigstellen</li>
   <li>Flussrundfahrt auf der Moldau</li>
   <li>Historische Straßenbahn Linie 42</li>
-  <li>Geführte Stadtrundgänge von Prague City Tourism</li>
+  <li>Geführte Stadtrundgänge von <a href="https://www.praguecitytourism.cz/de" target="_blank" rel="noopener noreferrer">Prague City Tourism</a></li>
 </ul>
 <p>Jede Attraktion kann einmal besucht werden. Es gibt kein Tageslimit für die Anzahl der Besuche.</p>
 
 <h2>Wo man ihn kauft</h2>
 <p>Vier Möglichkeiten:</p>
 <ul>
-  <li>Online auf <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">prague.eu</a> (e-Pass direkt aufs Handy)</li>
-  <li>Die Touristeninformationszentren von Prague City Tourism</li>
+  <li>Online auf <a href="https://praguevisitorpass.eu/" target="_blank" rel="noopener noreferrer">praguevisitorpass.eu</a> (e-Pass direkt aufs Handy)</li>
+  <li>Die Touristeninformationszentren von <a href="https://www.praguecitytourism.cz/de" target="_blank" rel="noopener noreferrer">Prague City Tourism</a></li>
   <li>Der Priority-Schalter im Altstädter Rathaus</li>
   <li>Die Handy-App</li>
 </ul>
