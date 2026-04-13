@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
 
+function thumbOf(src: string): string {
+  const dir = src.substring(0, src.lastIndexOf('/'));
+  const file = src.substring(src.lastIndexOf('/') + 1).replace(/\.png$/i, '.jpg');
+  return `${dir}/thumbs/${file}`;
+}
+
 const Blog: React.FC = () => {
   const { t, language } = useLanguage();
   const sortedPosts = React.useMemo(() => {
@@ -33,7 +39,7 @@ const Blog: React.FC = () => {
                 className="block"
               >
                 <div className="h-52 overflow-hidden">
-                  <img src={post.image} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                  <img src={thumbOf(post.image)} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
                 </div>
               </Link>
               <div className="flex flex-1 flex-col p-6">
