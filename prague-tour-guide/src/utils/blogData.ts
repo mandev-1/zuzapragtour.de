@@ -18,6 +18,52 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '23',
+    slug: 'prague-visitor-pass-honest-review',
+    slugDe: 'prague-visitor-pass-ehrliche-bewertung',
+    titleKey: 'blog.post23.title',
+    excerptKey: 'blog.post23.excerpt',
+    dateKey: 'blog.post23.date',
+    date: '2026-04-13',
+    image: '/images/old-town-square.jpg',
+    contentKey: 'blog.post23.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Prague Visitor Pass', 'Prague tourist card', 'Prague money saving', 'Prague public transport',
+      'Prague Castle tickets', 'Prague Jewish Quarter', 'Prague Zoo', 'Kutná Hora day trip',
+      'Prague travel tips', 'Prague budget guide',
+    ],
+    tagsDe: [
+      'Prague Visitor Pass', 'Prag Touristenkarte', 'Prag Geld sparen', 'Prag öffentliche Verkehrsmittel',
+      'Prager Burg Tickets', 'Prager Judenviertel', 'Prager Zoo', 'Kutná Hora Tagesausflug',
+      'Prag Reisetipps', 'Prag Budget Ratgeber',
+    ],
+    language: 'both',
+  },
+  {
+    id: '22',
+    slug: 'prague-imax-kafka-grave-vinohrady-guide',
+    slugDe: 'prag-imax-kafka-grab-vinohrady-guide',
+    titleKey: 'blog.post22.title',
+    excerptKey: 'blog.post22.excerpt',
+    dateKey: 'blog.post22.date',
+    date: '2026-04-13',
+    image: '/images/atriumflora-b.jpg',
+    contentKey: 'blog.post22.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'IMAX Prague', 'Cinema City Flora', 'Franz Kafka grave', 'Prague Vinohrady',
+      'Jiřák farmers market', 'Prague things to do', 'Prague Žižkov', 'New Jewish Cemetery Prague',
+      'Christopher Nolan Odyssey', 'Leonardo DiCaprio Prague', 'Prague film locations',
+    ],
+    tagsDe: [
+      'IMAX Prag', 'Cinema City Flora', 'Franz Kafka Grab', 'Prag Vinohrady',
+      'Jiřák Bauernmarkt', 'Prag Aktivitäten', 'Prag Žižkov', 'Neuer Jüdischer Friedhof Prag',
+      'Christopher Nolan Odyssey', 'Leonardo DiCaprio Prag', 'Prag Drehorte',
+    ],
+    language: 'both',
+  },
+  {
     id: '21',
     slug: 'dan-brown-secret-of-secrets-prague',
     slugDe: 'dan-brown-geheimnis-der-geheimnisse-prag',

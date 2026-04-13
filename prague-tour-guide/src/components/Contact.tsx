@@ -235,6 +235,32 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
           </div>
         </motion.div>
       </div>
+
+      <section className="mx-auto max-w-3xl px-8 pb-16">
+        <h2 className="mb-8 text-center font-headline text-3xl text-primary">{t('contact.faq.title')}</h2>
+        <div className="space-y-6">
+          {([
+            { q: 'contact.faq.q1', a: 'contact.faq.a1' },
+            { q: 'contact.faq.q2', a: 'contact.faq.a2' },
+            { q: 'contact.faq.q3', a: 'contact.faq.a3' },
+          ] as const).map(({ q, a }) => (
+            <details
+              key={q}
+              className="group rounded-xl border border-outline-variant/20 bg-surface-container-lowest"
+            >
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-headline text-lg text-on-surface">
+                {t(q as any)}
+                <span className="material-symbols-outlined text-primary transition-transform group-open:rotate-180">
+                  expand_more
+                </span>
+              </summary>
+              <p className="px-6 pb-5 leading-relaxed text-on-surface-variant">
+                {t(a as any)}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

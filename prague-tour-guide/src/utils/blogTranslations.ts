@@ -987,140 +987,498 @@ export const blogTranslations = {
     de: '25. Oktober 2025',
   },
   'blog.post13.content': {
-    en: `<h2>Wintry Prague Through a Local’s Eyes—A Magical Walk Among the City’s Prettiest Views</h2>
-<p class="lead">Imagine the winter sun rising over Charles Bridge, the city cloaked in a gentle mist. As I step out on frosty cobblestones, lanterns glow softly and each breath forms clouds in the air. Join me on a cozy, step-by-step stroll through Prague’s loveliest winter corners—places where historic beauty meets seasonal enchantment.</p>
+    en: `<h2>Winter Prague through a local's eyes: 12 views worth the cold</h2>
+<p class="lead">The winter sun comes up low over <a href="https://www.prague.eu/en/object/places/93/charles-bridge" target="_blank" rel="noopener noreferrer">Charles Bridge</a>, the city sits in mist, and the cobblestones are cold enough to feel through your shoes. I have walked these streets in every kind of January weather for forty years. Here are the spots I keep going back to.</p>
 <hr />
 <ol>
   <li>
-    <h3>1. Charles Bridge (From Old Town Tower to Castle)</h3>
-    <p>The city’s classic view: standing where the bridge begins, looking toward Prague Castle. In winter’s low sun or blue dusk, statues seem to come alive. I always recommend arriving early—locals cross in silence, and the chill is worth it for the scene.</p>
+    <h3>1. Charles Bridge (from the Old Town Tower toward the Castle)</h3>
+    <p>Standing where the bridge begins, looking toward Prague Castle. In winter's low sun or blue dusk the statues cast long shadows. Get there early. Locals cross in silence, and the cold is worth it.</p>
   </li>
   <li>
-    <h3>2. Old Town Square (Astronomical Clock Corners)</h3>
-    <p>Pastel buildings shimmer in the winter light. At the northwest corner, you’ll see the Astronomical Clock with spires and gentle crowds—a tableau made for photography.</p>
+    <h3>2. Old Town Square (the Astronomical Clock corners)</h3>
+    <p>Pastel buildings in winter light, the <a href="https://www.prague.eu/en/object/places/3129/astronomical-clock" target="_blank" rel="noopener noreferrer">Astronomical Clock</a> at the northwest corner. Fewer people than summer, better photographs.</p>
   </li>
   <li>
-    <h3>3. Kaprova Street to Rudolfinum</h3>
-    <p>Follow lamplight and tram tracks past elegant facades. I love capturing the castle on wintry diagonals, where Old Town reveals its grandeur.</p>
+    <h3>3. Kaprova Street to the Rudolfinum</h3>
+    <p>Follow the lamplight and tram tracks past long facades. The Castle appears at angles you do not expect from this direction.</p>
   </li>
   <li>
-    <h3>4. Střelecký Ostrov (Shooter’s Island)</h3>
-    <p>On this quiet island, the calm Vltava mirrors bridges and theatres. Early or late, water reflections are perfect for dreamy winter shots.</p>
+    <h3>4. Střelecký Ostrov (Shooter's Island)</h3>
+    <p>A quiet island where the Vltava mirrors bridges and theatre rooftops. The water reflections are best early or late, when the light is low.</p>
   </li>
   <li>
-    <h3>5. Národní Divadlo (National Theatre) Riverside</h3>
-    <p>The riverbank here glows gold at dusk. Steam rises from trams and cafés on Národní Street—a truly cinematic Prague winter moment.</p>
+    <h3>5. Národní Divadlo (National Theatre) riverside</h3>
+    <p>The riverbank here turns gold at dusk. Steam rises from trams on Národní Street. If you photograph Prague in winter, this is a shot you will want.</p>
   </li>
   <li>
-    <h3>6. Letná “Stalin” Lookout (Letenská pláň)</h3>
-    <p>A little beyond Old Town: the panorama of bridges and city layers is unbeatable. At dusk, light trails mix with winter haze.</p>
+    <h3>6. Letna lookout (Letenská pláň)</h3>
+    <p>A little beyond Old Town. The panorama of bridges and city layers from up here has no competition. At dusk the light trails from traffic mix with the winter haze.</p>
   </li>
 
   <div class="blog-inline-image"><img src="/images/blog-winter-cathedral.png" alt="St. Vitus Cathedral — III. Courtyard (winter)" loading="lazy" /><div class="image-credit">St. Vitus Cathedral — III. Courtyard</div></div>
 
   <li>
-    <h3>7. Rudolfinum Embankment</h3>
-    <p>Blue hour brings magical castle reflections framed by bridge arches and balustrades. Try long exposures in the cold air.</p>
+    <h3>7. Rudolfinum embankment</h3>
+    <p>Blue hour here gives you the Castle reflected in the river, framed by bridge arches. Long exposures work well if your hands can take the cold.</p>
   </li>
   <li>
-    <h3>8. Kampa Sides of Charles Bridge</h3>
-    <p>Step under the arches for willow-framed winter scenes. It’s quiet, perfect for romantic snapshots and old-time street views.</p>
+    <h3>8. Kampa side of Charles Bridge</h3>
+    <p>Step under the arches for willow-framed winter scenes. Quiet, and the kind of view that looks like it belongs in a different century.</p>
   </li>
   <li>
-    <h3>9. Old Town Bridge Tower (Upper Terrace)</h3>
-    <p>If open, climb the tower for a postcard’s symmetry—bridge, river, castle. Remember extra layers; winter wind bites up high.</p>
+    <h3>9. Old Town Bridge Tower (upper terrace)</h3>
+    <p>If open, climb it for the symmetry: bridge, river, Castle. Bring extra layers. The wind is real up there.</p>
   </li>
   <li>
     <h3>10. Pařížská Street to the Týn Church</h3>
-    <p>Here, upscale shops meet neo-Gothic spires. At night, drizzle and puddles make for stunning reflections.</p>
+    <p>High-end shops and neo-Gothic spires. At night, rain and puddles make for good reflections along the whole stretch.</p>
   </li>
   <li>
-    <h3>11. Clárov (By Mánes Bridge)</h3>
-    <p>A secret riverbank for uncrowded castle views, especially magical at sunrise or in gentle snowfall.</p>
+    <h3>11. Clárov (by Mánes Bridge)</h3>
+    <p>A riverbank spot for Castle views without the crowds. Works well at sunrise or when it snows lightly.</p>
   </li>
   <li>
-    <h3>12. Josefov Passages (near Kaprova)</h3>
-    <p>Explore quiet passages and courtyards, glowing with warm windows and winter decor—pure Prague magic.</p>
+    <h3>12. Josefov passages (near Kaprova)</h3>
+    <p>Quiet passages and courtyards in the <a href="https://www.jewishmuseum.cz/en/" target="_blank" rel="noopener noreferrer">Jewish Quarter</a>. Warm window light, winter decorations, and very few people.</p>
   </li>
 </ol>
-<h3>Practical Winter Tips</h3>
+<h3>Practical winter tips</h3>
 <ul>
-  <li>Aim for sunrise and blue hour; midday light is colder and less dramatic.</li>
-  <li>Wear gloves for your camera and non-slip shoes.</li>
-  <li>Take breaks at Café Louvre or Café Slavia.</li>
-  <li>Respect icy spots and always step aside for locals.</li>
+  <li>Aim for sunrise and blue hour. Midday light is flat and cold.</li>
+  <li>Gloves that work with your camera. Non-slip shoes. Both non-negotiable.</li>
+  <li>Take breaks at <a href="https://www.cafelouvre.cz/en/" target="_blank" rel="noopener noreferrer">Café Louvre</a> or <a href="https://www.cafeslavia.cz/en/" target="_blank" rel="noopener noreferrer">Café Slavia</a>.</li>
+  <li>Watch for ice, and let locals pass. They are walking faster because they know where it is slippery.</li>
 </ul>
 <div class="blog-cta-box">
-  <h3>Ready for a gorgeous winter walk?</h3>
-  <p>Let me show you my favorite Prague angles—with stories, photos, and warm café stops. <a href="/book?tour=Winter%20Old%20Town%20Views#contact-title">Book your private winter tour</a>.</p>
+  <h3>A winter walk with stories and warm stops</h3>
+  <p>I will show you the angles I keep coming back to after forty winters here, with café breaks timed to when your hands need them. <a href="/book?tour=Winter%20Old%20Town%20Views#contact-title">Book a private winter tour</a>.</p>
 </div>`,
-    de: `<h2>Prag im Winter aus Sicht einer Einheimischen—Ein Magischer Spaziergang durch die schönsten Ecken</h2>
-<p class="lead">Stellen Sie sich vor: Die Wintersonne erhebt sich über der Karlsbrücke, die Stadt liegt im Nebel. Auf frostigen Pflastersteinen leuchten Laternen und jeder Atemzug wird zu Wolken. Begleiten Sie mich auf einen gemütlichen Spaziergang zu Prags schönsten Winterplätzen—wo historische Pracht auf winterliche Zauber trifft.</p>
+    de: `<h2>Prag im Winter aus Sicht einer Einheimischen: 12 Blickwinkel, die die Kälte wert sind</h2>
+<p class="lead">Die Wintersonne geht flach über der <a href="https://www.prague.eu/en/object/places/93/charles-bridge" target="_blank" rel="noopener noreferrer">Karlsbrücke</a> auf, die Stadt sitzt im Nebel, und die Pflastersteine sind kalt genug, um sie durch die Schuhe zu spüren. Ich bin diese Straßen in jedem Januar-Wetter seit vierzig Jahren gegangen. Hier sind die Orte, zu denen ich immer wiederkomme.</p>
 <hr />
 <ol>
   <li>
-    <h3>1. Karlsbrücke (Vom Altstädter Brückenturm zur Burg)</h3>
-    <p>Der klassische Blick: Am Beginn der Brücke Richtung Prager Burg stehen. Im Sonnenuntergang oder der blauen Stunde wirken Statuen lebendig. Früh kommen lohnt sich—die Kälte ist es wert.</p>
+    <h3>1. Karlsbrücke (vom Altstadter Brückenturm zur Burg)</h3>
+    <p>Am Beginn der Brücke stehen, Richtung Prager Burg schauen. In der tiefen Wintersonne oder der blauen Stunde werfen die Statuen lange Schatten. Früh kommen. Einheimische gehen schweigend vorbei, und die Kälte lohnt sich.</p>
   </li>
   <li>
-    <h3>2. Altstädter Ring (Ecken der astronomischen Uhr)</h3>
-    <p>Pastellfarbene Gebäude leuchten im Winterlicht. An der Nordwestecke sieht man die astronomische Uhr und die sanften Menschenmengen—perfekt für Fotos.</p>
+    <h3>2. Altstädter Ring (Ecken der Astronomischen Uhr)</h3>
+    <p>Pastellfarbene Gebäude im Winterlicht, die <a href="https://www.prague.eu/en/object/places/3129/astronomical-clock" target="_blank" rel="noopener noreferrer">Astronomische Uhr</a> an der Nordwestecke. Weniger Menschen als im Sommer, bessere Fotos.</p>
   </li>
   <li>
     <h3>3. Kaprovastraße zum Rudolfinum</h3>
-    <p>Laternen und Straßenbahnschienen führen an eleganten Fassaden vorbei. Ich liebe es, das Schloss auf winterlichen Diagonalen einzufangen—so zeigt die Altstadt ihre Größe.</p>
+    <p>Laternen und Straßenbahnschienen entlang langer Fassaden folgen. Die Burg taucht aus Winkeln auf, die man aus dieser Richtung nicht erwartet.</p>
   </li>
   <li>
     <h3>4. Schützeninsel (Střelecký Ostrov)</h3>
-    <p>Hier, auf der ruhigen Insel, spiegelt der Vltava Brücken und Theater. Reflektionen sind am Morgen oder Abend besonders schön.</p>
+    <p>Eine ruhige Insel, auf der die Moldau Brücken und Theaterdächer spiegelt. Wasserreflexionen sind fruh oder spat am besten, wenn das Licht flach ist.</p>
   </li>
   <li>
-    <h3>5. Nationaltheater Ufer (Národní Divadlo)</h3>
-    <p>Am Flussufer leuchtet alles golden bei Dämmerung. Dampf steigt von Straßenbahnen und Cafés auf Národní—ein wirklich filmreifer Wintermoment.</p>
+    <h3>5. Nationaltheater-Ufer (Národní Divadlo)</h3>
+    <p>Am Flussufer wird es bei Dämmerung golden. Dampf steigt von den Straßenbahnen auf der Národní-Straße auf. Wenn Sie Prag im Winter fotografieren, ist das ein Bild, das Sie wollen.</p>
   </li>
   <li>
-    <h3>6. Letná „Stalin“-Aussichtspunkt (Letenská pláň)</h3>
-    <p>Ein wenig außerhalb der Altstadt, aber: Das Panorama aus Brücken und Stadtlagen ist unvergleichlich schön—bei Dämmerung vermischen sich Lichtspuren mit dem Winternebel.</p>
+    <h3>6. Letna-Aussichtspunkt (Letenská pláň)</h3>
+    <p>Ein Stuck außerhalb der Altstadt. Das Panorama aus Brücken und Stadtschichten von hier oben hat keine Konkurrenz. Bei Dämmerung mischen sich die Lichtspüren des Verkehrs mit dem Winternebel.</p>
   </li>
 
-  <div class="blog-inline-image"><img src="/images/blog-winter-cathedral.png" alt="Veitsdom — III. Burghof (Winter)" loading="lazy" /><div class="image-credit">Veitsdom — III. Burghof</div></div>
+  <div class="blog-inline-image"><img src="/images/blog-winter-cathedral.png" alt="Veitsdom -- III. Burghof (Winter)" loading="lazy" /><div class="image-credit">Veitsdom -- III. Burghof</div></div>
 
   <li>
     <h3>7. Rudolfinum-Kai</h3>
-    <p>Zur blauen Stunde erscheinen magische Schloss-Reflexionen, eingerahmt von Brückenbögen und Balustraden. Probieren Sie Langzeitbelichtungen in der Kälte!</p>
+    <p>Zur blauen Stunde sehen Sie hier die Burg im Fluss gespiegelt, eingerahmt von Brückenbögen. Langzeitbelichtungen funktionieren gut, wenn die Hände die Kälte aushalten.</p>
   </li>
   <li>
-    <h3>8. Kampa-Seiten der Karlsbrücke</h3>
-    <p>Unter den Bögen findet man weidenumrahmte Winteransichten. Ruhig und romantisch, ideal für Fotos und alte Straßenblicke.</p>
+    <h3>8. Kampa-Seite der Karlsbrücke</h3>
+    <p>Unter den Bögen finden Sie weidenumrahmte Winteransichten. Ruhig, und die Art Blick, der in ein anderes Jahrhundert zu gehören scheint.</p>
   </li>
   <li>
-    <h3>9. Altstädter Brückenturm (obere Terrasse)</h3>
-    <p>Bei geöffnetem Aufstieg liefert die Terrasse eine Postkarten-Symmetrie—Brücke, Fluss, Burg. Warme Kleidung nicht vergessen—der Winterwind ist stark hier oben.</p>
+    <h3>9. Altstadter Brückenturm (obere Terrasse)</h3>
+    <p>Wenn geöffnet, hochsteigen für die Symmetrie: Brücke, Fluss, Burg. Extra Schichten mitbringen. Der Wind da oben ist echt.</p>
   </li>
   <li>
     <h3>10. Pařížská Straße zur Teynkirche</h3>
-    <p>Exklusive Läden treffen auf neugotische Türme. Im Regen und bei Nacht entstehen wunderschöne Spiegelungen in Pfützen.</p>
+    <p>Exklusive Läden und neugotische Türme. Bei Nacht und Regen entstehen gute Spiegelungen über die ganze Strecke.</p>
   </li>
   <li>
     <h3>11. Clárov (bei der Mánes-Brücke)</h3>
-    <p>Ein geheimer Flussufer für Burgblicke ohne Menschenmassen—zauberhaft bei Sonnenaufgang oder leichtem Schnee.</p>
+    <p>Ein Flussufer für Burgblicke ohne Menschenmassen. Funktioniert gut bei Sonnenaufgang oder leichtem Schnee.</p>
   </li>
   <li>
     <h3>12. Josefov-Passagen (nahe Kaprova)</h3>
-    <p>Entdecken Sie ruhige Passagen und Innenhöfe, die mit warmem Fensterlicht und Winterdekoration leuchten—reiner Prager Zauber.</p>
+    <p>Ruhige Passagen und Innenhöfe im <a href="https://www.jewishmuseum.cz/en/" target="_blank" rel="noopener noreferrer">Jüdischen Viertel</a>. Warmes Fensterlicht, Winterdekoration und sehr wenige Menschen.</p>
   </li>
 </ol>
 <h3>Praktische Wintertipps</h3>
 <ul>
-  <li>Morgens und zur blauen Stunde fotografieren; mittags ist das Licht kälter und weniger dramatisch.</li>
-  <li>Handschuhe für die Kamera und rutschfeste Schuhe tragen.</li>
-  <li>Pausen im Café Louvre oder im Café Slavia einlegen.</li>
-  <li>Auf glatte Stellen achten und Einheimischen Vorrang lassen.</li>
+  <li>Morgens und zur blauen Stunde fotografieren. Mittagslicht ist flach und kalt.</li>
+  <li>Handschuhe, die mit der Kamera funktionieren. Rutschfeste Schuhe. Beides nicht verhandelbar.</li>
+  <li>Pausen im <a href="https://www.cafelouvre.cz/en/" target="_blank" rel="noopener noreferrer">Café Louvre</a> oder im <a href="https://www.cafeslavia.cz/en/" target="_blank" rel="noopener noreferrer">Café Slavia</a> einlegen.</li>
+  <li>Auf Eis achten und Einheimische vorbeilassen. Die gehen schneller, weil sie wissen, wo es glatt ist.</li>
 </ul>
 <div class="blog-cta-box">
-  <h3>Bereit für einen wunderschönen Winterspaziergang?</h3>
-  <p>Lassen Sie sich von mir die schönsten Prager Winterwinkel zeigen – mit Geschichten, Fotos und gemütlichen Cafépausen. <a href="/book?tour=Winter%20Altstadt%20Ausblicke#contact-title">Private Wintertour anfragen</a>.</p>
+  <h3>Ein Winterspaziergang mit Geschichten und warmen Stopps</h3>
+  <p>Ich zeige Ihnen die Blickwinkel, zu denen ich nach vierzig Wintern hier immer wieder zurückkomme, mit Cafépausen, wenn Ihre Hände sie brauchen. <a href="/book?tour=Winter%20Altstadt%20Ausblicke#contact-title">Private Wintertour anfragen</a>.</p>
 </div>`
+  },
+
+  // ─── Post 23: Prague Visitor Pass — honest review ─────────────────────────
+  'blog.post23.title': {
+    en: 'The Prague Visitor Pass: why I tell every client to get one',
+    de: 'Der Prague Visitor Pass: warum ich jedem Gast dazu rate',
+  },
+  'blog.post23.excerpt': {
+    en: 'After 40 years of guiding in Prague I have watched tourists overpay for individual tickets hundreds of times. The Prague Visitor Pass fixes most of that. Here is the honest maths.',
+    de: 'Nach 40 Jahren als Stadtführerin in Prag habe ich hunderte Male zugesehen, wie Touristen für Einzeltickets zu viel bezahlen. Der Prague Visitor Pass löst das meiste davon. Hier die ehrliche Rechnung.',
+  },
+  'blog.post23.date': {
+    en: 'April 13, 2026',
+    de: '13. April 2026',
+  },
+  'blog.post23.content': {
+    en: `<h2>The Prague Visitor Pass: why I tell every client to get one</h2>
+
+<p class="lead">I have been guiding people through Prague since the mid-1980s. Every week someone asks me whether the Prague Visitor Pass is worth the money. The short answer: yes, almost always. The longer answer takes about five minutes and a bit of arithmetic, which is what this article is.</p>
+
+<h2>What the pass actually is</h2>
+<p>The <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> is the city's official tourist card. You buy it for 48, 72, or 120 hours and it gives you free entry (or a discount) to more than 70 attractions, plus unlimited public transport across Prague, including the airport bus. It comes as a physical card or an e-Pass on your phone.</p>
+
+<p>Current prices in Czech crowns:</p>
+<table>
+  <thead><tr><th></th><th>48 h</th><th>72 h</th><th>120 h</th></tr></thead>
+  <tbody>
+    <tr><td>Adults</td><td>2 700 CZK</td><td>3 300 CZK</td><td>3 900 CZK</td></tr>
+    <tr><td>Students (15-25)</td><td>2 050 CZK</td><td>2 500 CZK</td><td>2 900 CZK</td></tr>
+    <tr><td>Children</td><td>1 350 CZK</td><td>1 650 CZK</td><td>1 950 CZK</td></tr>
+  </tbody>
+</table>
+<p>At current rates that is roughly 108 EUR / 132 EUR / 156 EUR for an adult. Keep those numbers in mind.</p>
+
+<h2>The maths that convinced me</h2>
+<p>Here is what a typical 3-day visitor pays without the pass, buying tickets individually:</p>
+<ul>
+  <li>Prague Castle circuit (long tour): 400 CZK</li>
+  <li>Old Town Hall and Astronomical Clock tower: 300 CZK</li>
+  <li>Jewish Quarter (full ticket): 500 CZK</li>
+  <li>Prague Zoo: 350 CZK</li>
+  <li>Vyšehrad casemates: 150 CZK</li>
+  <li>One of the seven Prague towers: 150-250 CZK</li>
+  <li>A river cruise: 400 CZK</li>
+  <li>Museum of the City of Prague: 200 CZK</li>
+  <li>72-hour public transport pass: 330 CZK</li>
+</ul>
+<p>That adds up to somewhere around 2 800-3 000 CZK. The 72-hour Visitor Pass costs 3 300 CZK and includes all of the above plus another 60-odd venues you can walk into on a whim. If you squeeze in one more museum or gallery, you are ahead. And you skip ticket queues at the Old Town Hall, which alone is worth something on a Saturday morning in June.</p>
+<p>If you are only in Prague for 48 hours and plan to see the Castle, the Jewish Quarter, and use public transport, you still break even or come out ahead on the 2 700 CZK card.</p>
+<p>The 120-hour pass makes sense for people adding a day trip to Kutna Hora. More on that below.</p>
+
+<h2>The public transport angle</h2>
+<p>This is the part people underestimate. A 72-hour public transport pass in Prague costs 330 CZK on its own. The Visitor Pass includes unlimited transport for its entire validity, including the Airport Express bus (which otherwise costs 150 CZK return). So you are effectively getting 330-480 CZK of transport thrown in. That changes the break-even calculation a lot.</p>
+<p>It also means you stop thinking about whether a tram ride is "worth it" and just hop on. Prague is more pleasant when you are not trying to walk everywhere to save money.</p>
+
+<h2>The Kutna Hora trick</h2>
+<p>The pass now covers a day trip to Kutna Hora, including transport there and back. Kutna Hora is a UNESCO town about an hour east of Prague by train. It has the Sedlec Ossuary (the bone church), the Cathedral of St Barbara, and the Czech Museum of Silver. Normally you would pay for the train plus individual entries. With the 120-hour pass all of that is included. If a Kutna Hora trip was already on your list, the 5-day pass pays for itself comfortably.</p>
+
+<h2>What is actually included</h2>
+<p>I am not going to list all 70+ venues. But the ones my clients use most:</p>
+<ul>
+  <li>Prague Castle (full circuit)</li>
+  <li>Old Town Hall with Astronomical Clock tower access</li>
+  <li>Seven Prague towers (Petrin, Powder Gate, etc.)</li>
+  <li>The Klementinum tour</li>
+  <li>Jewish Quarter sites</li>
+  <li>Prague Zoo</li>
+  <li>Vyšehrad</li>
+  <li>Museum of the City of Prague and its branches</li>
+  <li>River cruise on the Vltava</li>
+  <li>Historic Tram 42 ride</li>
+  <li>Guided walking tours from Prague City Tourism</li>
+</ul>
+<p>You can visit each venue once. There is no daily limit on how many you visit.</p>
+
+<h2>Where to buy it</h2>
+<p>Four options:</p>
+<ul>
+  <li>Online at <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">prague.eu</a> (e-Pass delivered to your phone)</li>
+  <li>The Prague City Tourism information centres around town</li>
+  <li>The priority counter at Old Town Hall</li>
+  <li>The mobile app</li>
+</ul>
+<p>I would buy online before arriving so you do not waste part of your first morning standing in a queue. The e-Pass works fine at every venue I have tested it at.</p>
+
+<h2>When it is not worth it</h2>
+<p>I want to be honest about this. If you are in Prague for one day, only plan to walk the Old Town and cross the Charles Bridge, and do not want to enter any paid attractions, the pass will not pay for itself. Same if you are here purely for restaurants and nightlife. But that describes maybe one in twenty of my clients.</p>
+<p>For almost everyone else spending two or more days and visiting even a handful of indoor sites, the card saves money. Often a lot of it.</p>
+
+<h2>A small environmental note</h2>
+<p>If you get the physical card and do not want to keep it as a souvenir, you can drop it into a return box at the Old Town Hall or the airport tourist centre. They reuse them. I appreciate that.</p>
+
+<h2>My recommendation</h2>
+<p>Buy the pass. Seriously. I have watched too many people pay 500 CZK at the Jewish Quarter, then 400 CZK at the Castle, then 300 CZK at Old Town Hall, then 330 CZK for a transport ticket, then 400 CZK for a river cruise, and by the end of day two they have spent more than the 72-hour card would have cost. They also waited in more queues.</p>
+<p>Get the card, put it on your phone, and stop thinking about ticket prices. Prague is better when you wander into places because they look interesting, not because you already calculated whether the entry fee is justified.</p>
+
+<div class="blog-cta-box">
+  <h3>Want help planning your Prague days?</h3>
+  <p>I can help you work out which pass duration makes sense for your trip and build a walking route that gets the most out of it. Drop me a line.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Custom%20Prague%20Tour#contact-title">Book a custom tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>`,
+    de: `<h2>Der Prague Visitor Pass: warum ich jedem Gast dazu rate</h2>
+
+<p class="lead">Ich führe Menschen durch Prag seit Mitte der 1980er Jahre. Jede Woche fragt mich jemand, ob sich der Prague Visitor Pass lohnt. Kurze Antwort: ja, fast immer. Die längere Antwort braucht etwa fünf Minuten und etwas Kopfrechnen. Genau darum geht es in diesem Artikel.</p>
+
+<h2>Was der Pass eigentlich ist</h2>
+<p>Der <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> ist die offizielle Touristenkarte der Stadt. Man kauft ihn für 48, 72 oder 120 Stunden und bekommt freien Eintritt (oder Ermäßigung) in mehr als 70 Attraktionen, dazu unbegrenzte Nutzung der öffentlichen Verkehrsmittel in ganz Prag, einschließlich Flughafenbus. Es gibt ihn als physische Karte oder als e-Pass auf dem Handy.</p>
+
+<p>Aktuelle Preise in tschechischen Kronen:</p>
+<table>
+  <thead><tr><th></th><th>48 h</th><th>72 h</th><th>120 h</th></tr></thead>
+  <tbody>
+    <tr><td>Erwachsene</td><td>2 700 CZK</td><td>3 300 CZK</td><td>3 900 CZK</td></tr>
+    <tr><td>Studenten (15-25)</td><td>2 050 CZK</td><td>2 500 CZK</td><td>2 900 CZK</td></tr>
+    <tr><td>Kinder</td><td>1 350 CZK</td><td>1 650 CZK</td><td>1 950 CZK</td></tr>
+  </tbody>
+</table>
+<p>Zum aktuellen Kurs sind das ungefähr 108 EUR / 132 EUR / 156 EUR für Erwachsene. Behalten Sie diese Zahlen im Kopf.</p>
+
+<h2>Die Rechnung, die mich überzeugt hat</h2>
+<p>Was ein typischer 3-Tage-Besucher ohne Pass zahlt, wenn er Tickets einzeln kauft:</p>
+<ul>
+  <li>Prager Burg (große Runde): 400 CZK</li>
+  <li>Altstädter Rathaus und Astronomische Uhr (Turmaufstieg): 300 CZK</li>
+  <li>Jüdisches Viertel (Vollticket): 500 CZK</li>
+  <li>Prager Zoo: 350 CZK</li>
+  <li>Vyšehrad-Kasematten: 150 CZK</li>
+  <li>Einer der sieben Prager Türme: 150-250 CZK</li>
+  <li>Flussrundfahrt: 400 CZK</li>
+  <li>Museum der Stadt Prag: 200 CZK</li>
+  <li>72-Stunden-Fahrschein: 330 CZK</li>
+</ul>
+<p>Zusammen sind das rund 2 800-3 000 CZK. Der 72-Stunden-Visitor-Pass kostet 3 300 CZK und beinhaltet all das oben plus rund 60 weitere Orte, in die man einfach reinspazieren kann. Wenn man ein Museum oder eine Galerie mehr mitnimmt, hat man schon gespart. Und man umgeht die Ticketschlange am Altstädter Rathaus, was an einem Samstagmorgen im Juni allein schon Gold wert ist.</p>
+<p>Wer nur 48 Stunden in Prag ist und die Burg, das Jüdische Viertel und öffentliche Verkehrsmittel nutzen will, kommt mit der 2 700 CZK-Karte mindestens auf Null raus oder spart.</p>
+<p>Der 120-Stunden-Pass lohnt sich besonders für Leute, die einen Tagesausflug nach Kutna Hora planen. Dazu gleich mehr.</p>
+
+<h2>Der Nahverkehr-Faktor</h2>
+<p>Diesen Teil unterschätzen die meisten. Ein 72-Stunden-Fahrschein für Prags Nahverkehr kostet allein 330 CZK. Der Visitor Pass enthält unbegrenzte Fahrten für die gesamte Gültigkeitsdauer, einschließlich Airport Express (der sonst 150 CZK hin und zurück kostet). Man bekommt also effektiv 330-480 CZK Transportwert obendrauf. Das verschiebt die Rechnung erheblich.</p>
+<p>Außerdem hört man auf zu überlegen, ob sich eine Tramfahrt "lohnt", und steigt einfach ein. Prag ist angenehmer, wenn man nicht versucht, überall hinzulaufen um Geld zu sparen.</p>
+
+<h2>Der Kutna-Hora-Trick</h2>
+<p>Der Pass deckt jetzt auch einen Tagesausflug nach Kutna Hora ab, inklusive Hin- und Rückfahrt. Kutna Hora ist eine UNESCO-Stadt, etwa eine Stunde östlich von Prag mit dem Zug. Dort gibt es das Sedlec-Beinhaus (die Knochenkirche), die Barbarakathedrale und das Tschechische Silbermuseum. Normalerweise zahlt man Zugfahrt plus Einzeleintritte. Mit dem 120-Stunden-Pass ist alles drin. Wenn Kutna Hora ohnehin auf der Liste stand, rechnet sich der 5-Tage-Pass locker.</p>
+
+<h2>Was tatsächlich enthalten ist</h2>
+<p>Ich zähle hier nicht alle 70+ Orte auf. Aber die, die meine Gäste am häufigsten nutzen:</p>
+<ul>
+  <li>Prager Burg (vollständige Runde)</li>
+  <li>Altstädter Rathaus mit Turmzugang</li>
+  <li>Sieben Prager Türme (Petřín, Pulverturm usw.)</li>
+  <li>Klementinum-Führung</li>
+  <li>Jüdisches Viertel</li>
+  <li>Prager Zoo</li>
+  <li>Vyšehrad</li>
+  <li>Museum der Stadt Prag und seine Zweigstellen</li>
+  <li>Flussrundfahrt auf der Moldau</li>
+  <li>Historische Straßenbahn Linie 42</li>
+  <li>Geführte Stadtrundgänge von Prague City Tourism</li>
+</ul>
+<p>Jede Attraktion kann einmal besucht werden. Es gibt kein Tageslimit für die Anzahl der Besuche.</p>
+
+<h2>Wo man ihn kauft</h2>
+<p>Vier Möglichkeiten:</p>
+<ul>
+  <li>Online auf <a href="https://prague.eu/en/objevujte/prague-visitor-pass/" target="_blank" rel="noopener noreferrer">prague.eu</a> (e-Pass direkt aufs Handy)</li>
+  <li>Die Touristeninformationszentren von Prague City Tourism</li>
+  <li>Der Priority-Schalter im Altstädter Rathaus</li>
+  <li>Die Handy-App</li>
+</ul>
+<p>Ich würde online kaufen, bevor Sie ankommen, damit Sie nicht am ersten Morgen in einer Schlange stehen. Der e-Pass funktioniert an allen Orten, an denen ich ihn getestet habe.</p>
+
+<h2>Wann er sich nicht lohnt</h2>
+<p>Ich will ehrlich sein. Wenn Sie nur einen Tag in Prag sind, nur durch die Altstadt spazieren und die Karlsbrücke überqueren wollen und keine Innenräume besichtigen, zahlt sich der Pass nicht aus. Genauso, wenn Sie nur wegen Restaurants und Nachtleben hier sind. Aber das trifft vielleicht auf einen von zwanzig meiner Gäste zu.</p>
+<p>Für fast alle anderen, die zwei oder mehr Tage bleiben und auch nur eine Handvoll Sehenswürdigkeiten von innen sehen, spart die Karte Geld. Oft ziemlich viel.</p>
+
+<h2>Ein kleiner Umwelthinweis</h2>
+<p>Wer die physische Karte bekommt und sie nicht als Andenken behalten will, kann sie in eine Rückgabebox am Altstädter Rathaus oder im Touristenzentrum am Flughafen werfen. Sie werden wiederverwendet. Finde ich gut.</p>
+
+<h2>Meine Empfehlung</h2>
+<p>Kaufen Sie den Pass. Im Ernst. Ich habe zu oft zugesehen, wie Leute 500 CZK im Jüdischen Viertel zahlen, dann 400 CZK auf der Burg, dann 300 CZK am Altstädter Rathaus, dann 330 CZK für einen Fahrschein, dann 400 CZK für eine Flussrundfahrt, und am Ende des zweiten Tages haben sie mehr ausgegeben als die 72-Stunden-Karte gekostet hätte. Sie haben auch in mehr Schlangen gestanden.</p>
+<p>Holen Sie sich die Karte, laden Sie sie aufs Handy, und hören Sie auf, über Eintrittspreise nachzudenken. Prag ist besser, wenn man in Orte reingeht, weil sie interessant aussehen, und nicht, weil man vorher ausgerechnet hat, ob der Eintritt gerechtfertigt ist.</p>
+
+<div class="blog-cta-box">
+  <h3>Hilfe bei der Planung Ihrer Prag-Tage?</h3>
+  <p>Ich kann Ihnen helfen herauszufinden, welche Pass-Dauer für Ihre Reise sinnvoll ist, und eine Laufroute zusammenstellen, die das Beste daraus macht. Schreiben Sie mir.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Individuelle%20Prag%20Tour#contact-title">Individuelle Tour buchen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>`,
+  },
+
+  // ─── Post 22: Prague IMAX, Kafka's Grave & the Vinohrady Neighbourhood ───
+  'blog.post22.title': {
+    en: 'IMAX Prague, Kafka\'s Grave & the Best Farmers\' Market in Town: A Vinohrady Half-Day',
+    de: 'IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady',
+  },
+  'blog.post22.excerpt': {
+    en: 'The only IMAX in the Czech Republic, Franz Kafka\'s final resting place, and a farmers\' market that even drew Leonardo DiCaprio — all within walking distance in Prague\'s Vinohrady and Žižkov neighbourhoods.',
+    de: 'Das einzige IMAX der Tschechischen Republik, Franz Kafkas letzte Ruhestätte und ein Bauernmarkt, der sogar Leonardo DiCaprio anzog — alles zu Fuß erreichbar in Prags Vierteln Vinohrady und Žižkov.',
+  },
+  'blog.post22.date': {
+    en: 'April 13, 2026',
+    de: '13. April 2026',
+  },
+  'blog.post22.content': {
+    en: `<h2>IMAX Prague, Kafka's Grave & the Best Farmers' Market in Town: A Vinohrady Half-Day</h2>
+
+<p class="lead">Most visitors to Prague never leave the triangle between the Castle, Old Town Square and Charles Bridge. That is a mistake. One metro stop east of the centre sits a neighbourhood cluster — Vinohrady and Žižkov — that packs a blockbuster cinema, one of the most important literary graves in Europe, and the city's finest open-air market into a single unhurried morning or afternoon. Here is how to do it.</p>
+
+<div class="blog-inline-image"><img src="/images/atriumflora-b.jpg" alt="IMAX Cinema City Flora, Prague" loading="lazy" /><p class="image-credit">Photo: <a href="https://www.ocflora.cz/" target="_blank" rel="noopener noreferrer">Atrium Flora</a></p></div>
+
+<h2>Stop 1 — IMAX at Cinema City Flora</h2>
+<p>The <strong>IMAX screen at Palác Flora</strong> (Vinohradská 151, Prague 3) is the only IMAX in the Czech Republic. The screen measures 25 × 14 metres, the projection is dual-laser digital, and the Dolby sound system fills a purpose-built auditorium on the top floor of the Flora shopping centre. Metro stop: <strong>Flora</strong>, line A — you step off the escalator and you are practically at the ticket counter.</p>
+
+<h3>What's coming to IMAX Prague in 2026</h3>
+<p>The 2026 slate is stacked. Highlights worth booking ahead for:</p>
+<ul>
+  <li><strong>The Odyssey</strong> (July 17) — Christopher Nolan's next epic, shot on 70 mm IMAX film. Prague has already launched pre-sales; this will sell out.</li>
+  <li><strong>The Mandalorian & Grogu</strong> (May 22) — Star Wars on the big screen again.</li>
+  <li><strong>Toy Story 5</strong> (June 19) — Pixar's return to the franchise.</li>
+  <li><strong>Sunrise on the Reaping</strong> (November 20) — the new Hunger Games prequel.</li>
+  <li><strong>Avengers: Doomsday</strong> (December 18) — the Marvel event of the year.</li>
+</ul>
+<p>Check <a href="https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB" target="_blank" rel="noopener noreferrer">Cinema City Flora</a> for the latest schedule and tickets. Weekday afternoon screenings are quieter; weekends fill fast.</p>
+
+<h3>Practical details</h3>
+<ul>
+  <li><strong>Hours:</strong> Mon–Fri 13:30–22:30 · Sat–Sun 10:30–22:30</li>
+  <li><strong>Parking:</strong> 3 hours free in the OC Flora garage (validate at the box office)</li>
+  <li><strong>Accessibility:</strong> Full wheelchair access including parking; assistance dogs welcome</li>
+</ul>
+
+<h2>Stop 2 — Franz Kafka's Grave</h2>
+<p>From the Flora shopping centre, walk east along Izraelská for about 15 minutes (or take the metro one stop to <strong>Želivského</strong>) to reach the <strong>New Jewish Cemetery</strong> (<em>Nový židovský hřbitov</em>, Izraelská 1, Prague 3). This is where <strong>Franz Kafka</strong> was buried in 1924, alongside his parents Hermann and Julie.</p>
+<p>The grave — <strong>plot 21-14-21</strong> — is marked by a slender, hexagonal cubist-style granite tombstone that stands out among the rows. Turn right after the main gate and follow the outside fence; the grave is on the left. Signs point the way, but the quiet of the cemetery makes finding it part of the experience.</p>
+
+<h3>What to know before you visit</h3>
+<ul>
+  <li><strong>Admission:</strong> Free</li>
+  <li><strong>Closed:</strong> Saturdays and Jewish holidays</li>
+  <li><strong>Head covering:</strong> Men are expected to cover their heads; coverings are usually available at the entrance</li>
+  <li><strong>Tradition:</strong> Visitors leave a small stone on the grave as a mark of respect — not flowers</li>
+</ul>
+<p>Across from Kafka's tombstone you will find a memorial plaque to <strong>Max Brod</strong>, his closest friend and the man who defied Kafka's instruction to burn his manuscripts — the reason <em>The Trial</em>, <em>The Castle</em>, and <em>Amerika</em> exist at all. The cemetery also holds the graves of writers <strong>Ota Pavel</strong> and <strong>Jiří Orten</strong>.</p>
+
+<h2>Stop 3 — The Farmers' Market at Jiřího z Poděbrad</h2>
+<p>Head back west to <strong>Náměstí Jiřího z Poděbrad</strong> (locals call it "Jiřák"), one metro stop from Flora on line A. The square hosts Prague's best-loved <strong>farmers' market</strong>, running Wednesday to Saturday from spring through autumn.</p>
+
+<h3>Market hours</h3>
+<ul>
+  <li><strong>Wednesday – Friday:</strong> 8:00 – 18:00</li>
+  <li><strong>Saturday:</strong> 8:00 – 14:00</li>
+  <li><strong>Closed:</strong> Sunday – Tuesday</li>
+</ul>
+
+<p>The stalls sell seasonal Czech produce — fresh vegetables, artisan cheeses, smoked meats, honey, pastries, fermented goods, and hot food to eat on the spot. The market's own rule is locally sourced, low-waste: they hand out textile bags instead of plastic.</p>
+
+<h3>The Hollywood connection</h3>
+<p>In spring 2026, <strong>Leonardo DiCaprio</strong> was in Prague for the filming of Martin Scorsese's <em>What Happens at Night</em> — a 35-day Czech shoot that wrapped in early April. DiCaprio co-stars alongside <strong>Jennifer Lawrence</strong> and <strong>Mads Mikkelsen</strong> in the adaptation of Peter Cameron's novel. During his stay he kept a low profile, but locals insist he was spotted browsing the Jiřák stalls. The market's own social media played along: <em>"Sometimes Leonardo DiCaprio passes by."</em> Whether or not he bought the syrečky, the fact that the rumour is plausible says something about the kind of neighbourhood this is — quietly excellent, not interested in impressing tourists, and very good at feeding people.</p>
+<p>DiCaprio was also seen at the <strong>Estates Theatre</strong> (where Mozart premiered <em>Don Giovanni</em>), took a private tour of the <em>Amadeus</em> filming locations, and spent Easter at <strong>Karlštejn Castle</strong>. Scorsese's production used locations across Prague, Žatec, Úštěk, and Ratboř.</p>
+
+<h2>Putting It Together: A Suggested Route</h2>
+<ol>
+  <li><strong>Morning</strong> — Metro to <strong>Jiřího z Poděbrad</strong> (line A). Browse the farmers' market, grab coffee and a trdelník or langos.</li>
+  <li><strong>Late morning</strong> — Walk or ride one stop to <strong>Flora</strong>. Check IMAX showtimes; if a film fits your schedule, book it now.</li>
+  <li><strong>Midday</strong> — Continue east to the <strong>New Jewish Cemetery</strong> (15 min walk or one metro stop to Želivského). Visit Kafka's grave.</li>
+  <li><strong>Afternoon</strong> — Return to Flora for your IMAX screening, or head back to the centre. The whole loop takes 3–4 hours at a comfortable pace.</li>
+</ol>
+
+<h2>Why This Neighbourhood Matters</h2>
+<p>Vinohrady and Žižkov are where Prague lives when it is not performing for visitors. The architecture is Art Nouveau and Cubist, the cafés are unhurried, the parks (Riegrovy sady, Havlíčkovy sady) have the best sunset views in the city, and the prices are noticeably lower than in the tourist core. Adding this loop to a Prague trip — IMAX, Kafka, market — gives you a version of the city that most visitors never see.</p>
+
+<div class="blog-cta-box">
+  <h3>Want a guide for this part of Prague?</h3>
+  <p>I can build a private walking tour that takes in the Vinohrady and Žižkov neighbourhoods — Kafka's grave, the market, the Cubist architecture, Riegrovy sady, and the stories behind the streets. It pairs well with an Old Town morning or a Castle afternoon.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Custom%20Prague%20Tour#contact-title">Book a custom tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>`,
+    de: `<h2>IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady</h2>
+
+<p class="lead">Die meisten Prag-Besucher verlassen das Dreieck zwischen Burg, Altstädter Ring und Karlsbrücke nie. Das ist ein Fehler. Eine Metrostation östlich des Zentrums liegt ein Viertel-Cluster — Vinohrady und Žižkov —, das ein Blockbuster-Kino, eines der wichtigsten Literaturgräber Europas und den besten Freiluftmarkt der Stadt in einen einzigen entspannten Vor- oder Nachmittag packt. So geht's.</p>
+
+<div class="blog-inline-image"><img src="/images/atriumflora-b.jpg" alt="IMAX Cinema City Flora, Prag" loading="lazy" /><p class="image-credit">Foto: <a href="https://www.ocflora.cz/" target="_blank" rel="noopener noreferrer">Atrium Flora</a></p></div>
+
+<h2>Stopp 1 — IMAX im Cinema City Flora</h2>
+<p>Die <strong>IMAX-Leinwand im Palác Flora</strong> (Vinohradská 151, Prag 3) ist das einzige IMAX der Tschechischen Republik. Die Leinwand misst 25 × 14 Meter, die Projektion ist digital mit Dual-Laser, und das Dolby-Soundsystem füllt einen eigens gebauten Saal im Obergeschoss des Flora-Einkaufszentrums. Metrostation: <strong>Flora</strong>, Linie A — Sie steigen von der Rolltreppe und stehen praktisch am Kartenschalter.</p>
+
+<h3>Was 2026 im IMAX Prag läuft</h3>
+<p>Der Spielplan 2026 ist vollgepackt. Highlights, für die sich eine Vorbestellung lohnt:</p>
+<ul>
+  <li><strong>The Odyssey</strong> (17. Juli) — Christopher Nolans nächstes Epos, gedreht auf 70-mm-IMAX-Film. Prag hat bereits den Vorverkauf gestartet; das wird ausverkauft sein.</li>
+  <li><strong>The Mandalorian & Grogu</strong> (22. Mai) — Star Wars zurück auf der großen Leinwand.</li>
+  <li><strong>Toy Story 5</strong> (19. Juni) — Pixars Rückkehr zur Reihe.</li>
+  <li><strong>Sunrise on the Reaping</strong> (20. November) — das neue Hunger-Games-Prequel.</li>
+  <li><strong>Avengers: Doomsday</strong> (18. Dezember) — das Marvel-Event des Jahres.</li>
+</ul>
+<p>Aktuelle Spielzeiten und Tickets finden Sie bei <a href="https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB" target="_blank" rel="noopener noreferrer">Cinema City Flora</a>. Nachmittagsvorstellungen unter der Woche sind ruhiger; Wochenenden füllen sich schnell.</p>
+
+<h3>Praktische Infos</h3>
+<ul>
+  <li><strong>Öffnungszeiten:</strong> Mo–Fr 13:30–22:30 · Sa–So 10:30–22:30</li>
+  <li><strong>Parken:</strong> 3 Stunden gratis in der OC-Flora-Tiefgarage (an der Kasse entwerten)</li>
+  <li><strong>Barrierefreiheit:</strong> Voller Rollstuhlzugang einschließlich Parkhaus; Assistenzhunde willkommen</li>
+</ul>
+
+<h2>Stopp 2 — Franz Kafkas Grab</h2>
+<p>Vom Flora-Einkaufszentrum gehen Sie etwa 15 Minuten östlich die Izraelská entlang (oder fahren eine Metrostation bis <strong>Želivského</strong>) zum <strong>Neuen Jüdischen Friedhof</strong> (<em>Nový židovský hřbitov</em>, Izraelská 1, Prag 3). Hier wurde <strong>Franz Kafka</strong> 1924 begraben, neben seinen Eltern Hermann und Julie.</p>
+<p>Das Grab — <strong>Feld 21-14-21</strong> — ist mit einem schlanken, sechseckigen kubistischen Granitgrabstein markiert, der aus den Reihen herausragt. Nach dem Haupttor rechts abbiegen und dem Außenzaun folgen; das Grab liegt links. Schilder weisen den Weg, aber die Stille des Friedhofs macht das Suchen zum Teil des Erlebnisses.</p>
+
+<h3>Was Sie vor dem Besuch wissen sollten</h3>
+<ul>
+  <li><strong>Eintritt:</strong> Kostenlos</li>
+  <li><strong>Geschlossen:</strong> Samstags und an jüdischen Feiertagen</li>
+  <li><strong>Kopfbedeckung:</strong> Männer sollten den Kopf bedecken; am Eingang gibt es meist Leihkäppchen</li>
+  <li><strong>Tradition:</strong> Besucher legen einen kleinen Stein auf das Grab als Zeichen des Respekts — keine Blumen</li>
+</ul>
+<p>Gegenüber von Kafkas Grabstein finden Sie eine Gedenktafel für <strong>Max Brod</strong>, seinen engsten Freund und den Mann, der Kafkas Anweisung missachtete, seine Manuskripte zu verbrennen — der Grund, warum <em>Der Prozess</em>, <em>Das Schloss</em> und <em>Amerika</em> überhaupt existieren. Der Friedhof beherbergt auch die Gräber der Schriftsteller <strong>Ota Pavel</strong> und <strong>Jiří Orten</strong>.</p>
+
+<h2>Stopp 3 — Der Bauernmarkt am Jiřího z Poděbrad</h2>
+<p>Gehen Sie zurück Richtung Westen zum <strong>Náměstí Jiřího z Poděbrad</strong> (die Einheimischen sagen „Jiřák"), eine Metrostation von Flora auf Linie A. Der Platz beherbergt Prags beliebtesten <strong>Bauernmarkt</strong>, der von Mittwoch bis Samstag vom Frühling bis Herbst läuft.</p>
+
+<h3>Marktzeiten</h3>
+<ul>
+  <li><strong>Mittwoch – Freitag:</strong> 8:00 – 18:00</li>
+  <li><strong>Samstag:</strong> 8:00 – 14:00</li>
+  <li><strong>Geschlossen:</strong> Sonntag – Dienstag</li>
+</ul>
+
+<p>Die Stände bieten saisonale tschechische Produkte — frisches Gemüse, handwerklichen Käse, Räucherfleisch, Honig, Gebäck, Fermentiertes und heißes Essen zum Sofort-Genießen. Die Marktregel: regional, möglichst abfallarm — statt Plastik gibt es Stoffbeutel.</p>
+
+<h3>Die Hollywood-Verbindung</h3>
+<p>Im Frühjahr 2026 war <strong>Leonardo DiCaprio</strong> in Prag für die Dreharbeiten zu Martin Scorseses <em>What Happens at Night</em> — ein 35-tägiger Dreh in Tschechien, der Anfang April abgeschlossen wurde. DiCaprio spielt neben <strong>Jennifer Lawrence</strong> und <strong>Mads Mikkelsen</strong> in der Verfilmung von Peter Camerons Roman. Während seines Aufenthalts hielt er sich bedeckt, doch Einheimische behaupten, ihn an den Jiřák-Ständen gesehen zu haben. Die Social-Media-Seite des Marktes spielte mit: <em>„Manchmal kommt Leonardo DiCaprio vorbei."</em> Ob er den Syrečky gekauft hat oder nicht — dass das Gerücht plausibel klingt, sagt etwas über die Art dieses Viertels: leise ausgezeichnet, nicht an Touristen-Beeindruckung interessiert und sehr gut im Sattmachen.</p>
+<p>DiCaprio wurde auch im <strong>Ständetheater</strong> gesichtet (wo Mozart <em>Don Giovanni</em> uraufführte), machte eine private Tour zu den <em>Amadeus</em>-Drehorten und verbrachte Ostern auf <strong>Burg Karlštejn</strong>. Scorseses Produktion nutzte Drehorte in Prag, Žatec, Úštěk und Ratboř.</p>
+
+<h2>So planen Sie die Route</h2>
+<ol>
+  <li><strong>Vormittag</strong> — Metro zum <strong>Jiřího z Poděbrad</strong> (Linie A). Über den Bauernmarkt schlendern, Kaffee und Trdelník oder Langoš holen.</li>
+  <li><strong>Später Vormittag</strong> — Zu Fuß oder eine Station bis <strong>Flora</strong>. IMAX-Programm prüfen; passt ein Film, gleich buchen.</li>
+  <li><strong>Mittag</strong> — Weiter östlich zum <strong>Neuen Jüdischen Friedhof</strong> (15 Min. zu Fuß oder eine Metrostation bis Želivského). Kafkas Grab besuchen.</li>
+  <li><strong>Nachmittag</strong> — Zurück zu Flora für die IMAX-Vorstellung oder ins Zentrum. Die ganze Runde dauert bei gemütlichem Tempo 3–4 Stunden.</li>
+</ol>
+
+<h2>Warum dieses Viertel zählt</h2>
+<p>Vinohrady und Žižkov sind das Prag, das lebt, wenn es nicht für Besucher auftritt. Die Architektur ist Jugendstil und Kubismus, die Cafés sind ungehetzt, die Parks (Riegrovy sady, Havlíčkovy sady) haben die besten Sonnenuntergangspanoramen der Stadt, und die Preise liegen merklich unter dem touristischen Kern. Diese Runde — IMAX, Kafka, Markt — zu einer Prag-Reise hinzuzufügen, gibt Ihnen eine Version der Stadt, die die meisten Besucher nie sehen.</p>
+
+<div class="blog-cta-box">
+  <h3>Möchten Sie eine Führerin für diesen Teil Prags?</h3>
+  <p>Ich kann einen privaten Rundgang durch die Viertel Vinohrady und Žižkov zusammenstellen — Kafkas Grab, den Markt, die kubistische Architektur, Riegrovy sady und die Geschichten hinter den Straßen. Passt gut zu einem Altstadtmorgen oder einem Burgnachmittag.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Individuelle%20Prag%20Tour#contact-title">Individuelle Tour buchen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>`,
   },
 
   // ─── Post 21: Dan Brown – The Secret of Secrets & Prague ─────────────────
@@ -1139,26 +1497,26 @@ export const blogTranslations = {
   'blog.post21.content': {
     en: `<h2>Dan Brown's The Secret of Secrets: 10,000 Pages, One Book — and Why Prague Was Always Part of the Story</h2>
 
-<p class="lead">Dan Brown reportedly spent years writing what would become <em>The Secret of Secrets</em> — drafting, discarding, rebuilding — accumulating over 10,000 pages of research and narrative before the final published book arrived at somewhere under 700. In Czech, readers held it in their hands at around 687 pages. That gap — ten thousand pages of obsession condensed into one — is, in a way, the most Dan Brown thing he has ever done. Prague is not wallpaper in this novel: it is part of the machinery.</p>
+<p class="lead">Dan Brown reportedly spent years writing what would become <em>The Secret of Secrets</em>, drafting and discarding and rebuilding, accumulating over 10,000 pages of research before the final book landed at somewhere under 700. The Czech edition runs about 687 pages. Ten thousand pages of obsession, boiled down to one book. Prague is not wallpaper in this novel. It is part of the machinery.</p>
 
 <h2>Where the book takes place in Prague</h2>
 <p><em>The Secret of Secrets</em> moves through places that already carry coded history. The plot turns on sites you can still stand in front of today:</p>
-<p><strong>Prague Castle &amp; Hradčany</strong> — In the late 1500s Rudolf II turned the Castle hill into one of Europe's great alchemical courts; Tycho Brahe, Kepler, Dee and Kelley all walked these stones. The novel uses that court as a hinge for hidden knowledge and power.</p>
-<p><strong>Old Town &amp; the Astronomical Clock</strong> — The Orloj on Old Town Square does not simply tell the hour; it layers Babylonian, Czech, sidereal and modern time on one face. In Brown's world, a device like that is never innocent decoration.</p>
-<p><strong>The Jewish Quarter &amp; the Golem legend</strong> — Rabbi Loew, the Old Jewish Cemetery, the lanes behind the stone: the Golem story is one of Europe's oldest "code" myths — a creature animated by Hebrew letters. That is the kind of premise Langdon thrillers are built on.</p>
-<p><strong>The Klementinum</strong> — The Baroque library hall, the manuscript stacks, the Astronomical Tower's uninterrupted weather record since 1775: rooms that look like scenery but behave like vaults.</p>
-<p>Below we go deeper into why these places matter — and who Brown is as a writer. If you would rather walk them while they still feel like a reader's secret than recognise them from someone else's screen grab, start with a tour on the ground.</p>
+<p><strong><a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Prague Castle</a> &amp; Hradčany</strong>. In the late 1500s Rudolf II turned the Castle hill into one of Europe's great alchemical courts. Tycho Brahe, Kepler, Dee and Kelley all walked these stones. The novel uses that court as a hinge for hidden knowledge and power.</p>
+<p><strong>Old Town &amp; the <a href="https://www.prague.eu/en/object/places/3129/astronomical-clock" target="_blank" rel="noopener noreferrer">Astronomical Clock</a></strong>. The Orloj on Old Town Square does not simply tell the hour; it layers Babylonian, Czech, sidereal and modern time on one face. In Brown's world, a device like that is never decoration.</p>
+<p><strong>The <a href="https://www.jewishmuseum.cz/en/" target="_blank" rel="noopener noreferrer">Jewish Quarter</a> &amp; the Golem legend</strong>. Rabbi Loew, the Old Jewish Cemetery, the lanes behind the stone: the Golem story is one of the oldest "code" myths in European culture, a creature animated by Hebrew letters. That is the kind of premise Langdon thrillers are built on.</p>
+<p><strong>The <a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">Klementinum</a></strong>. The Baroque library hall, the manuscript stacks, the Astronomical Tower's uninterrupted weather record since 1775. Rooms that look like scenery but behave like vaults.</p>
+<p>Below we go deeper into why these places matter and who Brown is as a writer. If you would rather walk them while they still feel like a reader's secret than recognise them from someone else's screen grab, start with a tour on the ground.</p>
 
 <div class="blog-inline-image"><img src="/images/blog-secret-of-secrets-prague.jpg" alt="Dan Brown – The Secret of Secrets, Prague" loading="lazy" /></div>
 
-<h2>Who Is Dan Brown?</h2>
-<p>Robert Dan Brown was born on June 22, 1964, in Exeter, New Hampshire, into a family where intellectual obsession was practically a birthright. His father was a mathematics professor at Phillips Exeter Academy; his mother, a professional musician with a devotion to sacred music. Brown grew up surrounded by the tension between science and faith — and that tension never left him. It became the engine of every novel he would write.</p>
-<p>He studied English at Amherst College, briefly pursued a music career in Los Angeles, then turned to writing. His first three novels — <em>Digital Fortress</em> (1998), <em>Angels & Demons</em> (2000), <em>Deception Point</em> (2001) — sold modestly. Then came <em>The Da Vinci Code</em> in 2003, and everything changed. It became one of the best-selling novels in history, spending 136 weeks on the <em>New York Times</em> bestseller list. Robert Langdon — Harvard symbologist, turtleneck enthusiast — became one of the most recognised fictional characters of the century.</p>
-<p>Brown's formula, if you can call it that, is deceptively simple: take a real place saturated with genuine history, layer a conspiracy on top that is just barely plausible, give a brilliant protagonist 12 hours to solve it, and run. But the formula only works because the history is real. Brown is not inventing mystery — he is finding it in the architecture, in the carvings, in the calendars, in the codes that institutions buried in plain sight centuries ago.</p>
+<h2>Who is Dan Brown?</h2>
+<p>Robert Dan Brown was born on June 22, 1964, in Exeter, New Hampshire. His father was a mathematics professor at Phillips Exeter Academy; his mother, a professional musician devoted to sacred music. He grew up surrounded by the tension between science and faith, and that tension never left him. It became the engine of every novel he would write.</p>
+<p>He studied English at Amherst College, briefly pursued music in Los Angeles, then turned to writing. His first three novels, <em>Digital Fortress</em> (1998), <em>Angels & Demons</em> (2000), and <em>Deception Point</em> (2001), sold modestly. Then came <em>The Da Vinci Code</em> in 2003, and everything changed. It spent 136 weeks on the <em>New York Times</em> bestseller list. Robert Langdon, Harvard symbologist and turtleneck enthusiast, became one of the most recognised fictional characters of the century.</p>
+<p>Brown's formula, if you can call it that, is deceptively simple: take a real place with genuine history, layer a conspiracy on top that is just barely plausible, give a protagonist 12 hours to solve it, and run. The formula only works because the history is real. Brown does not invent mystery. He finds it in the architecture, in the carvings, in the calendars, in codes that institutions buried in plain sight centuries ago.</p>
 
 <h2>See Prague before the Netflix show hits the screens</h2>
-<p>A Netflix adaptation of <em>The Secret of Secrets</em> is widely expected — and when it streams, millions will "discover" Prague second-hand from a sofa. There is a different kind of thrill in standing at the Orloj, in the cemetery lanes, or below the Castle ramparts <em>before</em> those frames belong to everyone's feed.</p>
-<p>Walking the novel's Prague with a certified guide who reads the city the way Brown reads his settings — layers, alignments, what was buried in plain sight — turns a postcard into a chase.</p>
+<p>A Netflix adaptation of <em>The Secret of Secrets</em> is widely expected. When it streams, millions will "discover" Prague second-hand from a sofa. There is a different kind of thrill in standing at the Orloj, in the cemetery lanes, or below the Castle ramparts <em>before</em> those frames belong to everyone's feed.</p>
+<p>Walking the novel's Prague with a guide who reads the city the way Brown reads his settings, layers and alignments and what was buried in plain sight, turns a postcard into a chase.</p>
 
 <div class="blog-cta-box">
   <h3>Book a tour on the book's ground</h3>
@@ -1169,42 +1527,42 @@ export const blogTranslations = {
   </div>
 </div>
 
-<h2>The 10,000-Page Secret</h2>
-<p>When details of Brown's writing process for <em>The Secret of Secrets</em> began to emerge, they were almost absurd in their scale. Thousands upon thousands of pages of research notes, character sketches, false starts, discarded chapters — an entire library of a book that the public would never read. What survived was roughly 687 pages in the Czech edition. The rest was excavation.</p>
-<p>This is, in fact, how Brown has always worked. He is one of the most methodical researchers in popular fiction. For each Robert Langdon novel, he spends years embedded in the subject matter — consulting historians, cryptographers, art scholars, theologians, architects. For <em>Angels & Demons</em> he gained rare access to the Vatican Archives. For <em>The Da Vinci Code</em>, the bibliography ran to dozens of scholarly works on Gnostic Christianity, sacred geometry, and medieval church politics. The visible novel is always the tip of an iceberg that took years to freeze.</p>
-<p>Ten thousand pages. Six hundred and eighty-seven made it. That is not inefficiency — that is the work. The confidence of knowing exactly which 687 pages to keep can only come from having written the other 9,313.</p>
+<h2>The 10,000-page secret</h2>
+<p>When details of Brown's writing process for <em>The Secret of Secrets</em> began to emerge, the scale was almost absurd. Thousands of pages of research notes, character sketches, false starts, discarded chapters. An entire library of a book the public would never read. What survived was roughly 687 pages in the Czech edition. The rest was excavation.</p>
+<p>This is how Brown has always worked. For each Robert Langdon novel he spends years embedded in the subject matter, consulting historians, cryptographers, art scholars, theologians, architects. For <em>Angels & Demons</em> he gained rare access to the Vatican Archives. For <em>The Da Vinci Code</em> the bibliography ran to dozens of scholarly works on Gnostic Christianity, sacred geometry, and medieval church politics. The published novel is always the tip of an iceberg that took years to freeze.</p>
+<p>Ten thousand pages. Six hundred and eighty-seven made it. That is not inefficiency. That is the work. The confidence of knowing exactly which 687 pages to keep can only come from having written the other 9,313.</p>
 
-<h2>The Cities Brown Chooses — and Why Prague Belongs</h2>
-<p>Brown's settings are never accidental. Paris. Rome. Washington DC. Florence. Seville. Each city was chosen because it carries a double life: the version tourists see, and the version that only reveals itself when you know where to look. The Louvre's pyramid, the obelisks of Rome, the Masonic geometry of the American capital, the Medici crypts — Brown gravitates to cities that encoded their secrets in the architecture itself.</p>
-<p>Prague was always going to be part of this story. Perhaps no city in Europe has done more to hide its secrets in plain sight.</p>
+<h2>The cities Brown chooses, and why Prague belongs</h2>
+<p>Brown's settings are never accidental. Paris. Rome. Washington DC. Florence. Seville. Each city was chosen because it carries a double life: the version tourists see, and the version that only reveals itself when you know where to look. The Louvre pyramid, the obelisks of Rome, the Masonic geometry of the American capital, the Medici crypts. Brown gravitates to cities that encoded their secrets in the architecture itself.</p>
+<p>Prague was always going to be part of this story. No city in Europe has done more to hide its secrets in plain sight.</p>
 
-<h2>Prague: Europe's Greatest Unsolved Puzzle</h2>
-<h3>Rudolf II and the Alchemists' Court</h3>
-<p>At the end of the 16th century, Emperor Rudolf II turned Prague Castle into the most extraordinary gathering of occult minds in European history. Alchemists, astrologers, Kabbalists, and natural philosophers flooded the city. Tycho Brahe — the Danish astronomer with the silver nose, who lost the original in a duel — died here in 1601 under circumstances that have never been fully explained. Johannes Kepler, who inherited Brahe's astronomical data, formulated his laws of planetary motion in Prague. John Dee and Edward Kelley — England's most notorious occultists — came to Rudolf's court claiming to communicate with angels in a language called Enochian.</p>
-<p>The city that hosted all of this is still the same city. Walk through the lanes of Malá Strana at night and the question is not whether secrets were buried here — it is how many.</p>
+<h2>Prague: the city that hides in plain sight</h2>
+<h3>Rudolf II and the alchemists' court</h3>
+<p>At the end of the 16th century, Emperor Rudolf II turned <a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Prague Castle</a> into a gathering of occult minds that had no equivalent in Europe. Alchemists, astrologers, Kabbalists, natural philosophers. Tycho Brahe, the Danish astronomer with the silver nose (he lost the original in a duel), died here in 1601 under circumstances that have never been fully explained. Johannes Kepler, who inherited Brahe's data, formulated his laws of planetary motion in Prague. John Dee and Edward Kelley, England's most notorious occultists, came to Rudolf's court claiming to communicate with angels in a language called Enochian.</p>
+<p>The city that hosted all of this is still the same city. Walk through the lanes of Malá Strana at night and the question is not whether secrets were buried here. The question is how many.</p>
 
 <h3>The Golem</h3>
-<p>The legend of the Golem of Prague — a creature of animated clay, created in the Jewish ghetto by Rabbi Loew in the 16th century to protect the Jewish community — is one of the oldest coded stories in European culture. The Golem is animated by a <em>shem</em>, a piece of parchment inscribed with Hebrew letters, placed in its mouth. Remove the letters, and the creature dies. The letters have power; the word is the key. Dan Brown has built six novels on precisely this premise.</p>
-<p>The Old Jewish Cemetery, where Rabbi Loew is buried, is one of the most layered and haunted spaces in the world. Bodies stacked twelve deep. The tombstones crowd each other like secrets fighting for space.</p>
+<p>The legend of the Golem of Prague, a creature of animated clay created in the Jewish ghetto by Rabbi Loew in the 16th century to protect the Jewish community, is old enough to predate the novel itself. The Golem is animated by a <em>shem</em>, a piece of parchment inscribed with Hebrew letters, placed in its mouth. Remove the letters, and the creature dies. The letters have power; the word is the key. Dan Brown has built six novels on precisely this premise.</p>
+<p>The <a href="https://www.jewishmuseum.cz/en/explore/sites/old-jewish-cemetery/" target="_blank" rel="noopener noreferrer">Old Jewish Cemetery</a>, where Rabbi Loew is buried, has bodies stacked twelve deep. The tombstones crowd each other like secrets fighting for space.</p>
 
-<h3>The Astronomical Clock — and What It's Actually Counting</h3>
-<p>Most tourists watch the Astronomical Clock on Old Town Square perform its hourly parade of figures and assume they understand it. They do not. The clock face carries four simultaneous systems of time — Central European time, Old Czech time, Babylonian time, and sidereal time (star time). It maps the position of the sun and moon in the zodiac. It shows the position of the sun above and below the horizon. It was built in 1410 by Mikuláš of Kadaň and mathematician Jan Šindel — and nobody agrees entirely on what the full system means. It has been performing its mystery every hour for over 600 years.</p>
+<h3>The Astronomical Clock, and what it is actually counting</h3>
+<p>Most tourists watch the <a href="https://www.prague.eu/en/object/places/3129/astronomical-clock" target="_blank" rel="noopener noreferrer">Astronomical Clock</a> on Old Town Square perform its hourly parade of figures and assume they understand it. They do not. The clock face carries four simultaneous systems of time: Central European time, Old Czech time, Babylonian time, and sidereal time (star time). It maps the position of the sun and moon in the zodiac. It shows the position of the sun above and below the horizon. It was built in 1410 by Mikuláš of Kadaň and mathematician Jan Šindel, and nobody agrees entirely on what the full system means. It has been performing its mystery every hour for over 600 years.</p>
 
-<h3>The Klementinum and Hidden Libraries</h3>
-<p>The Baroque Library at the Klementinum — one of the most beautiful rooms in Europe — holds tens of thousands of volumes, including manuscripts that have never been fully catalogued. The Astronomical Tower above it was once Prague's official weather-recording station, its observations documented without interruption from 1775 to the present day. The longest continuous climate record in Central Europe. History disguised as meteorology.</p>
+<h3>The Klementinum and hidden libraries</h3>
+<p>The Baroque Library at the <a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">Klementinum</a> holds tens of thousands of volumes, including manuscripts that have never been fully catalogued. The Astronomical Tower above it was once Prague's official weather-recording station, its observations documented without interruption from 1775 to the present day. The longest continuous climate record in Central Europe. History disguised as meteorology.</p>
 
-<h2>Why This Matters for Visitors</h2>
-<p>Brown's genius is not invention — it is attention. He looks at things that have been in front of people for centuries and asks: what if that wasn't decoration? What if the geometry of this building is a map? What if the placement of this tomb is a message?</p>
-<p>Prague rewards exactly this kind of attention. The city is not a backdrop. It is a participant. The alchemical symbols carved into doorways in Malá Strana are not ornamental. The layout of the Jewish Quarter, rebuilt after the clearance of 1893, preserved street patterns that echo the older ghetto underneath. The Baroque churches are full of astronomical alignments — shafts of light designed to fall on specific dates, on specific stones, for reasons that no parish notice board explains.</p>
+<h2>Why this matters if you are visiting</h2>
+<p>What Brown does well is not invention. It is attention. He looks at things that have been in front of people for centuries and asks: what if that was not decoration? What if the geometry of this building is a map? What if the placement of this tomb is a message?</p>
+<p>Prague rewards that kind of attention. The alchemical symbols carved into doorways in Malá Strana are not ornamental. The layout of the Jewish Quarter, rebuilt after the clearance of 1893, preserved street patterns that echo the older ghetto underneath. The Baroque churches are full of astronomical alignments, shafts of light designed to fall on specific dates, on specific stones, for reasons that no parish notice board explains.</p>
 <p>You can walk through Prague as a tourist and see a beautiful old city. Or you can walk through it the way Brown walks through his settings — asking what is underneath, what was hidden, what the builders knew that they did not say out loud.</p>
 
-<h2>The Segway Brown Would Love</h2>
-<p>Ten thousand pages condensed to six hundred and eighty-seven. An entire life's research hidden beneath a story that moves at a sprint. Rudolf II's court, where the greatest minds of the 16th century came to look for the philosopher's stone and left behind coded manuscripts nobody has finished reading. A cemetery where twelve layers of history press against each other underground. A clock that has been counting four kinds of time simultaneously for over six centuries and still hasn't told us everything it knows.</p>
+<h2>The elevator pitch Brown would love</h2>
+<p>Ten thousand pages condensed to six hundred and eighty-seven. A life's research hidden beneath a story that moves at a sprint. Rudolf II's court, where the great minds of the 16th century came looking for the philosopher's stone and left behind coded manuscripts nobody has finished reading. A cemetery where twelve layers of history press against each other underground. A clock that has been counting four kinds of time for over six centuries and still has not told us everything it knows.</p>
 <p>The secret of secrets, in Prague, is that there is no bottom. Every answer opens onto a deeper question. The city was built that way on purpose.</p>
 
 <div class="blog-cta-box">
-  <h3>Walk the hidden Prague — with a guide who knows where to look</h3>
-  <p>Rudolf II's alchemists, the Golem's quarter, the Klementinum's locked libraries, the clock face that no one fully understands — certified guide Ing. Zuzana Manová leads private tours through the Prague that does not explain itself. Ask about a walk built around the city's coded history.</p>
+  <h3>Walk the hidden Prague with a guide who knows where to look</h3>
+  <p>Rudolf II's alchemists, the Golem's quarter, the Klementinum's locked libraries, the clock face that no one fully understands. Certified guide Ing. Zuzana Manová leads private tours through the Prague that does not explain itself. Ask about a walk built around the city's coded history.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Hidden%20Prague%20History%20Tour#contact-title">Book a hidden history tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
@@ -1212,26 +1570,26 @@ export const blogTranslations = {
 </div>`,
     de: `<h2>Dan Browns Das Geheimnis der Geheimnisse: 10.000 Seiten, ein Buch — und warum Prag immer Teil der Geschichte war</h2>
 
-<p class="lead">Dan Brown soll jahrelang an dem geschrieben haben, was schließlich <em>Das Geheimnis der Geheimnisse</em> werden sollte — entwerfend, verwerfend, neu aufbauend — über 10.000 Seiten an Recherchen und Narrativen ansammelnd, bevor das fertige Buch mit knapp unter 700 Seiten erschien. In der tschechischen Ausgabe hielten Leser es mit rund 687 Seiten in den Händen. Diese Lücke — zehntausend Seiten Obsession verdichtet zu einer — ist auf gewisse Weise das Dan-Brown-haftigste, was er je getan hat. Prag ist in diesem Roman keine Kulisse: Es ist Teil des Mechanismus.</p>
+<p class="lead">Dan Brown soll jahrelang an dem geschrieben haben, was schließlich <em>Das Geheimnis der Geheimnisse</em> werden sollte. Entwerfen, verwerfen, neu aufbauen, über 10.000 Seiten an Recherchen ansammeln, bevor das fertige Buch mit knapp unter 700 Seiten erschien. Die tschechische Ausgabe hat rund 687 Seiten. Zehntausend Seiten Obsession, eingedampft auf ein Buch. Prag ist in diesem Roman keine Kulisse. Es ist Teil des Mechanismus.</p>
 
 <h2>Wo das Buch in Prag spielt</h2>
 <p><em>Das Geheimnis der Geheimnisse</em> bewegt sich durch Orte, die bereits eine kodierte Geschichte tragen. Die Handlung dreht sich um Schauplätze, vor denen Sie heute noch stehen können:</p>
-<p><strong>Prager Burg &amp; Hradčany</strong> — Ende des 16. Jahrhunderts machte Rudolf II. den Burghügel zu einem der großen Alchemistenhöfe Europas; Tycho Brahe, Kepler, Dee und Kelley wandelten über diese Steine. Der Roman nutzt diesen Hof als Angelpunkt für verborgenes Wissen und Macht.</p>
-<p><strong>Altstadt &amp; Astronomische Uhr</strong> — Die Orloj am Altstädter Ring zeigt nicht nur die Stunde; auf einem Zifferblatt lagern babylonische, böhmische, Stern- und moderne Zeit. In Browns Welt ist ein solches Instrument nie bloße Dekoration.</p>
-<p><strong>Jüdisches Viertel &amp; Golem-Legende</strong> — Rabbi Löw, der Alte Jüdische Friedhof, die Gassen hinter dem Stein: Die Golem-Geschichte ist einer der ältesten „Code“-Mythen Europas — ein Wesen, das durch hebräische Buchstaben belebt wird. Darauf bauen Langdon-Thriller.</p>
-<p><strong>Das Klementinum</strong> — Die Barockbibliothek, die Handschriften, der Astronomische Turm mit der ununterbrochenen Wetteraufzeichnung seit 1775: Räume, die wie Kulisse wirken, sich aber wie Tresore verhalten.</p>
-<p>Unten vertiefen wir, warum diese Orte zählen — und wer Brown als Autor ist. Wenn Sie sie lieber noch als Lesergeheimnis erleben wollen, bevor jeder sie aus fremden Screens kennt: Buchen Sie eine Tour vor Ort.</p>
+<p><strong><a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Prager Burg</a> &amp; Hradčany</strong>. Ende des 16. Jahrhunderts machte Rudolf II. den Burghügel zu einem der großen Alchemistenhöfe Europas. Tycho Brahe, Kepler, Dee und Kelley wandelten über diese Steine. Der Roman nutzt diesen Hof als Angelpunkt für verborgenes Wissen und Macht.</p>
+<p><strong>Altstadt &amp; <a href="https://www.prague.eu/en/object/places/3129/astronomical-clock" target="_blank" rel="noopener noreferrer">Astronomische Uhr</a></strong>. Die Orloj am Altstädter Ring zeigt nicht nur die Stunde; auf einem Zifferblatt lagern babylonische, böhmische, Stern- und moderne Zeit. In Browns Welt ist ein solches Instrument nie bloße Dekoration.</p>
+<p><strong><a href="https://www.jewishmuseum.cz/en/" target="_blank" rel="noopener noreferrer">Jüdisches Viertel</a> &amp; Golem-Legende</strong>. Rabbi Löw, der Alte Jüdische Friedhof, die Gassen hinter dem Stein: Die Golem-Geschichte ist einer der ältesten „Code“-Mythen Europas, ein Wesen, das durch hebräische Buchstaben belebt wird. Darauf bauen Langdon-Thriller.</p>
+<p><strong>Das <a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">Klementinum</a></strong>. Die Barockbibliothek, die Handschriften, der Astronomische Turm mit der ununterbrochenen Wetteraufzeichnung seit 1775. Räume, die wie Kulisse wirken, sich aber wie Tresore verhalten.</p>
+<p>Unten vertiefen wir, warum diese Orte zählen und wer Brown als Autor ist. Wenn Sie sie lieber noch als Lesergeheimnis erleben wollen, bevor jeder sie aus fremden Screens kennt, buchen Sie eine Tour vor Ort.</p>
 
 <div class="blog-inline-image"><img src="/images/blog-secret-of-secrets-prague.jpg" alt="Dan Brown – Das Geheimnis der Geheimnisse, Prag" loading="lazy" /></div>
 
 <h2>Wer ist Dan Brown?</h2>
-<p>Robert Dan Brown wurde am 22. Juni 1964 in Exeter, New Hampshire, in eine Familie geboren, in der intellektuelle Obsession praktisch ein Geburtsrecht war. Sein Vater war Mathematikprofessor an der Phillips Exeter Academy; seine Mutter, eine professionelle Musikerin mit einer Hingabe an Sakralmusik. Brown wuchs umgeben von der Spannung zwischen Wissenschaft und Glauben auf — und diese Spannung verließ ihn nie. Sie wurde zum Motor jedes Romans, den er schreiben würde.</p>
-<p>Er studierte Englisch am Amherst College, verfolgte kurz eine Musikkarriere in Los Angeles, dann wandte er sich dem Schreiben zu. Seine ersten drei Romane — <em>Diabolus</em> (1998), <em>Illuminati</em> (2000), <em>Meteor</em> (2001) — verkauften sich mäßig. Dann kam <em>The Da Vinci Code</em> im Jahr 2003, und alles änderte sich. Es wurde einer der meistverkauften Romane der Geschichte und verbrachte 136 Wochen auf der Bestsellerliste der <em>New York Times</em>. Robert Langdon — Harvard-Symbologe, Rollkragenpulli-Enthusiast — wurde zu einer der bekanntesten Romanfiguren des Jahrhunderts.</p>
-<p>Browns Formel, wenn man sie so nennen kann, ist täuschend einfach: Man nehme einen echten Ort, gesättigt mit echter Geschichte, lege eine Verschwörung darüber, die gerade noch plausibel ist, gebe einem brillanten Protagonisten 12 Stunden, sie zu lösen, und starte. Aber die Formel funktioniert nur, weil die Geschichte echt ist. Brown erfindet kein Geheimnis — er findet es in der Architektur, in den Schnitzereien, in den Kalendern, in den Codes, die Institutionen vor Jahrhunderten in aller Öffentlichkeit vergraben haben.</p>
+<p>Robert Dan Brown wurde am 22. Juni 1964 in Exeter, New Hampshire, geboren. Sein Vater war Mathematikprofessor an der Phillips Exeter Academy; seine Mutter, eine professionelle Musikerin mit einer Hingabe an Sakralmusik. Brown wuchs umgeben von der Spannung zwischen Wissenschaft und Glauben auf, und diese Spannung verließ ihn nie. Sie wurde zum Motor jedes Romans, den er schreiben würde.</p>
+<p>Er studierte Englisch am Amherst College, verfolgte kurz Musik in Los Angeles, dann wandte er sich dem Schreiben zu. Seine ersten drei Romane, <em>Diabolus</em> (1998), <em>Illuminati</em> (2000) und <em>Meteor</em> (2001), verkauften sich mäßig. Dann kam <em>The Da Vinci Code</em> im Jahr 2003, und alles änderte sich. 136 Wochen auf der Bestsellerliste der <em>New York Times</em>. Robert Langdon, Harvard-Symbologe und Rollkragenpulli-Enthusiast, wurde zu einer der bekanntesten Romanfiguren des Jahrhunderts.</p>
+<p>Browns Formel, wenn man sie so nennen kann, ist täuschend einfach: Man nehme einen echten Ort mit echter Geschichte, lege eine Verschwörung darüber, die gerade noch plausibel ist, gebe einem Protagonisten 12 Stunden, sie zu lösen, und starte. Die Formel funktioniert nur, weil die Geschichte echt ist. Brown erfindet kein Geheimnis. Er findet es in der Architektur, in den Schnitzereien, in den Kalendern, in den Codes, die Institutionen vor Jahrhunderten in aller Öffentlichkeit vergraben haben.</p>
 
 <h2>Prag sehen, bevor die Netflix-Serie die Bildschirme füllt</h2>
-<p>Eine Netflix-Adaption von <em>Das Geheimnis der Geheimnisse</em> gilt als wahrscheinlich — und wenn sie streamt, werden Millionen Prag vom Sofa aus „entdecken“. Ein anderes Erlebnis ist es, an der Orloj, in den Friedhofsgassen oder unter den Burgmauern zu stehen, <em>bevor</em> dieselben Bilder in jedem Feed auftauchen.</p>
-<p>Wer den Roman mit einer zertifizierten Führerin durch Prag geht — Schichten, Ausrichtungen, was in aller Öffentlichkeit verborgen wurde —, verwandelt eine Postkarte in eine Jagd.</p>
+<p>Eine Netflix-Adaption von <em>Das Geheimnis der Geheimnisse</em> gilt als wahrscheinlich. Wenn sie streamt, werden Millionen Prag vom Sofa aus „entdecken“. Ein anderes Erlebnis ist es, an der Orloj, in den Friedhofsgassen oder unter den Burgmauern zu stehen, <em>bevor</em> dieselben Bilder in jedem Feed auftauchen.</p>
+<p>Wer den Roman mit einer zertifizierten Führerin durch Prag geht, Schichten, Ausrichtungen, was in aller Öffentlichkeit verborgen wurde, verwandelt eine Postkarte in eine Jagd.</p>
 
 <div class="blog-cta-box">
   <h3>Tour auf dem Boden des Romans buchen</h3>
@@ -1243,41 +1601,41 @@ export const blogTranslations = {
 </div>
 
 <h2>Das Geheimnis der 10.000 Seiten</h2>
-<p>Als Details zu Browns Schreibprozess für <em>Das Geheimnis der Geheimnisse</em> bekannt wurden, waren sie in ihrem Ausmaß fast absurd. Tausende von Seiten Recherche-Notizen, Charakterskizzen, Fehlstarts, verworfene Kapitel — eine ganze Bibliothek eines Buches, das die Öffentlichkeit nie lesen würde. Was übrig blieb, waren rund 687 Seiten in der tschechischen Ausgabe. Der Rest war Ausgrabung.</p>
-<p>So hat Brown tatsächlich immer gearbeitet. Er ist einer der methodischsten Rechercheure in der populären Belletristik. Für jeden Robert-Langdon-Roman verbringt er Jahre in dem jeweiligen Fachgebiet — er konsultiert Historiker, Kryptographen, Kunstwissenschaftler, Theologen, Architekten. Für <em>Illuminati</em> erhielt er seltenen Zugang zu den Vatikanischen Archiven. Für <em>The Da Vinci Code</em> umfasste die Bibliographie Dutzende wissenschaftliche Werke über gnostisches Christentum, heilige Geometrie und mittelalterliche Kirchenpolitik. Der sichtbare Roman ist immer die Spitze eines Eisbergs, dessen Gefrieren Jahre dauerte.</p>
-<p>Zehntausend Seiten. Sechshundertsiebenundachtzig kamen durch. Das ist keine Ineffizienz — das ist die Arbeit. Die Sicherheit, genau zu wissen, welche 687 Seiten man behalten soll, kann nur daher kommen, dass man die anderen 9.313 geschrieben hat.</p>
+<p>Als Details zu Browns Schreibprozess für <em>Das Geheimnis der Geheimnisse</em> bekannt wurden, waren sie in ihrem Ausmaß fast absurd. Tausende von Seiten Recherche-Notizen, Charakterskizzen, Fehlstarts, verworfene Kapitel. Eine ganze Bibliothek eines Buches, das die Öffentlichkeit nie lesen würde. Was übrig blieb, waren rund 687 Seiten in der tschechischen Ausgabe. Der Rest war Ausgrabung.</p>
+<p>So hat Brown tatsächlich immer gearbeitet. Er ist einer der methodischsten Rechercheure in der populären Belletristik. Für jeden Robert-Langdon-Roman verbringt er Jahre in dem jeweiligen Fachgebiet, konsultiert Historiker, Kryptographen, Kunstwissenschaftler, Theologen, Architekten. Für <em>Illuminati</em> erhielt er seltenen Zugang zu den Vatikanischen Archiven. Für <em>The Da Vinci Code</em> umfasste die Bibliographie Dutzende wissenschaftliche Werke über gnostisches Christentum, heilige Geometrie und mittelalterliche Kirchenpolitik. Der sichtbare Roman ist immer die Spitze eines Eisbergs, dessen Gefrieren Jahre dauerte.</p>
+<p>Zehntausend Seiten. Sechshundertsiebenundachtzig kamen durch. Das ist keine Ineffizienz. Das ist die Arbeit. Die Sicherheit, genau zu wissen, welche 687 Seiten man behalten soll, kann nur daher kommen, dass man die anderen 9.313 geschrieben hat.</p>
 
-<h2>Die Städte, die Brown wählt — und warum Prag dazugehört</h2>
-<p>Browns Schauplätze sind nie zufällig. Paris. Rom. Washington DC. Florenz. Sevilla. Jede Stadt wurde gewählt, weil sie ein Doppelleben führt: die Version, die Touristen sehen, und die Version, die sich nur offenbart, wenn man weiß, wo man hinschauen muss. Die Pyramide des Louvre, die Obelisken Roms, die Freimaurer-Geometrie der amerikanischen Hauptstadt, die Medici-Krypten — Brown wird von Städten angezogen, die ihre Geheimnisse in die Architektur selbst kodiert haben.</p>
-<p>Prag war immer Teil dieser Geschichte. Vielleicht keine andere Stadt in Europa hat mehr dafür getan, ihre Geheimnisse in aller Öffentlichkeit zu verbergen.</p>
+<h2>Die Städte, die Brown wählt, und warum Prag dazugehört</h2>
+<p>Browns Schauplätze sind nie zufällig. Paris. Rom. Washington DC. Florenz. Sevilla. Jede Stadt wurde gewählt, weil sie ein Doppelleben führt: die Version, die Touristen sehen, und die Version, die sich nur offenbart, wenn man weiß, wo man hinschauen muss. Die Pyramide des Louvre, die Obelisken Roms, die Freimaurer-Geometrie der amerikanischen Hauptstadt, die Medici-Krypten. Brown wird von Städten angezogen, die ihre Geheimnisse in die Architektur selbst kodiert haben.</p>
+<p>Prag war immer Teil dieser Geschichte. Keine andere Stadt in Europa hat mehr dafür getan, ihre Geheimnisse in aller Öffentlichkeit zu verbergen.</p>
 
-<h2>Prag: Europas größtes ungelöstes Rätsel</h2>
+<h2>Prag: die Stadt, die sich in aller Öffentlichkeit versteckt</h2>
 <h3>Rudolf II. und der Alchemistenhof</h3>
-<p>Ende des 16. Jahrhunderts verwandelte Kaiser Rudolf II. die Prager Burg in die außergewöhnlichste Versammlung okkulter Geister in der europäischen Geschichte. Alchemisten, Astrologen, Kabbalisten und Naturphilosophen strömten in die Stadt. Tycho Brahe — der dänische Astronom mit der silbernen Nase, die er im Duell verlor — starb hier 1601 unter Umständen, die nie vollständig erklärt wurden. Johannes Kepler, der Brahes astronomische Daten erbte, formulierte seine Planetengesetze in Prag. John Dee und Edward Kelley — Englands berüchtigtste Okkultisten — kamen an Rudolfs Hof und behaupteten, mit Engeln in einer Sprache namens Enochianisch zu kommunizieren.</p>
-<p>Die Stadt, die all das beherbergte, ist noch immer dieselbe Stadt. Gehen Sie durch die Gassen von Malá Strana bei Nacht, und die Frage ist nicht, ob hier Geheimnisse vergraben wurden — sondern wie viele.</p>
+<p>Ende des 16. Jahrhunderts verwandelte Kaiser Rudolf II. die <a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Prager Burg</a> in eine Versammlung okkulter Geister, die in Europa ihresgleichen suchte. Alchemisten, Astrologen, Kabbalisten und Naturphilosophen strömten in die Stadt. Tycho Brahe, der dänische Astronom mit der silbernen Nase (die er im Duell verlor), starb hier 1601 unter Umständen, die nie vollständig erklärt wurden. Johannes Kepler, der Brahes astronomische Daten erbte, formulierte seine Planetengesetze in Prag. John Dee und Edward Kelley, Englands berüchtigtste Okkultisten, kamen an Rudolfs Hof und behaupteten, mit Engeln in einer Sprache namens Enochianisch zu kommunizieren.</p>
+<p>Die Stadt, die all das beherbergte, ist noch immer dieselbe Stadt. Gehen Sie durch die Gassen von Malá Strana bei Nacht, und die Frage ist nicht, ob hier Geheimnisse vergraben wurden. Die Frage ist, wie viele.</p>
 
 <h3>Der Golem</h3>
-<p>Die Legende des Prager Golems — ein belebtes Tonwesen, im jüdischen Ghetto vom Rabbi Löw im 16. Jahrhundert erschaffen, um die jüdische Gemeinde zu schützen — ist eine der ältesten kodierten Geschichten der europäischen Kultur. Der Golem wird durch einen <em>Schem</em> belebt, ein Pergamentstück mit hebräischen Buchstaben, das in seinen Mund gelegt wird. Nimm die Buchstaben heraus, und das Wesen stirbt. Die Buchstaben haben Macht; das Wort ist der Schlüssel. Dan Brown hat sechs Romane auf genau dieser Prämisse aufgebaut.</p>
-<p>Der Alte Jüdische Friedhof, wo Rabbi Löw begraben liegt, ist einer der vielschichtigsten und eindrucksvollsten Orte der Welt. Körper zwölf Lagen tief gestapelt. Die Grabsteine drängen sich aneinander wie Geheimnisse, die um Platz kämpfen.</p>
+<p>Die Legende des Prager Golems, ein belebtes Tonwesen, im jüdischen Ghetto vom Rabbi Löw im 16. Jahrhundert erschaffen, um die jüdische Gemeinde zu schützen, ist älter als der Roman selbst. Der Golem wird durch einen <em>Schem</em> belebt, ein Pergamentstück mit hebräischen Buchstaben, das in seinen Mund gelegt wird. Nimm die Buchstaben heraus, und das Wesen stirbt. Die Buchstaben haben Macht; das Wort ist der Schlüssel. Dan Brown hat sechs Romane auf genau dieser Prämisse aufgebaut.</p>
+<p>Der Alte Jüdische Friedhof, wo Rabbi Löw begraben liegt, hat Körper zwölf Lagen tief gestapelt. Die Grabsteine drängen sich aneinander wie Geheimnisse, die um Platz kämpfen.</p>
 
-<h3>Die Astronomische Uhr — und was sie wirklich zählt</h3>
-<p>Die meisten Touristen beobachten die Astronomische Uhr auf dem Altstädter Ring bei ihrer stündlichen Parade der Figuren und glauben, sie zu verstehen. Das tun sie nicht. Das Uhrenblatt trägt vier simultane Zeitsysteme — mitteleuropäische Zeit, altböhmische Zeit, babylonische Zeit und Sternzeit. Es bildet die Position von Sonne und Mond im Tierkreis ab. Sie zeigt die Position der Sonne über und unter dem Horizont. Sie wurde 1410 von Mikuláš von Kadaň und dem Mathematiker Jan Šindel gebaut — und niemand ist sich vollständig einig, was das Gesamtsystem bedeutet. Sie führt ihr Geheimnis jede Stunde seit über 600 Jahren auf.</p>
+<h3>Die Astronomische Uhr, und was sie wirklich zählt</h3>
+<p>Die meisten Touristen beobachten die <a href="https://www.prague.eu/en/object/places/3129/astronomical-clock" target="_blank" rel="noopener noreferrer">Astronomische Uhr</a> auf dem Altstädter Ring bei ihrer stündlichen Parade der Figuren und glauben, sie zu verstehen. Das tun sie nicht. Das Uhrenblatt trägt vier simultane Zeitsysteme: mitteleuropäische Zeit, altböhmische Zeit, babylonische Zeit und Sternzeit. Es bildet die Position von Sonne und Mond im Tierkreis ab. Sie zeigt die Position der Sonne über und unter dem Horizont. Sie wurde 1410 von Mikuláš von Kadaň und dem Mathematiker Jan Šindel gebaut, und niemand ist sich vollständig einig, was das Gesamtsystem bedeutet. Sie führt ihr Geheimnis jede Stunde seit über 600 Jahren auf.</p>
 
 <h3>Das Klementinum und verborgene Bibliotheken</h3>
-<p>Die Barockbibliothek im Klementinum — einer der schönsten Räume Europas — beherbergt Zehntausende von Bänden, darunter Manuskripte, die nie vollständig katalogisiert wurden. Der darüber liegende Astronomische Turm war einst Prags offizielle Wetteraufzeichnungsstation, deren Beobachtungen ohne Unterbrechung von 1775 bis heute dokumentiert wurden. Die längste kontinuierliche Klimaaufzeichnung in Mitteleuropa. Geschichte getarnt als Meteorologie.</p>
+<p>Die Barockbibliothek im <a href="https://www.klementinum.com/en/" target="_blank" rel="noopener noreferrer">Klementinum</a> beherbergt Zehntausende von Bänden, darunter Manuskripte, die nie vollständig katalogisiert wurden. Der darüber liegende Astronomische Turm war einst Prags offizielle Wetteraufzeichnungsstation, deren Beobachtungen ohne Unterbrechung von 1775 bis heute dokumentiert wurden. Die längste kontinuierliche Klimaaufzeichnung in Mitteleuropa. Geschichte getarnt als Meteorologie.</p>
 
 <h2>Warum das für Besucher wichtig ist</h2>
-<p>Browns Genie ist nicht Erfindung — es ist Aufmerksamkeit. Er betrachtet Dinge, die seit Jahrhunderten vor den Menschen liegen, und fragt: Was wäre, wenn das keine Dekoration wäre? Was wäre, wenn die Geometrie dieses Gebäudes eine Karte ist? Was wäre, wenn die Platzierung dieses Grabes eine Nachricht ist?</p>
-<p>Prag belohnt genau diese Art von Aufmerksamkeit. Die Stadt ist kein Hintergrund. Sie ist ein Teilnehmer. Die alchemistischen Symbole, die in Türrahmen in Malá Strana gemeißelt sind, sind nicht ornamental. Die Barockkirchen sind voller astronomischer Ausrichtungen — Lichtstrahlen, die so konzipiert sind, dass sie an bestimmten Daten auf bestimmte Steine fallen, aus Gründen, die kein Pfarrschild erklärt.</p>
-<p>Sie können durch Prag als Tourist gehen und eine schöne alte Stadt sehen. Oder Sie können durch sie gehen, wie Brown durch seine Schauplätze geht — und fragen, was darunter liegt, was verborgen wurde, was die Erbauer wussten, das sie nicht laut sagten.</p>
+<p>Was Brown gut macht, ist nicht Erfindung. Es ist Aufmerksamkeit. Er betrachtet Dinge, die seit Jahrhunderten vor den Menschen liegen, und fragt: Was wäre, wenn das keine Dekoration wäre? Was wäre, wenn die Geometrie dieses Gebäudes eine Karte ist? Was wäre, wenn die Platzierung dieses Grabes eine Nachricht ist?</p>
+<p>Prag belohnt genau diese Art von Aufmerksamkeit. Die alchemistischen Symbole, die in Türrahmen in Malá Strana gemeißelt sind, sind nicht ornamental. Die Barockkirchen sind voller astronomischer Ausrichtungen, Lichtstrahlen, die so konzipiert sind, dass sie an bestimmten Daten auf bestimmte Steine fallen, aus Gründen, die kein Pfarrschild erklärt.</p>
+<p>Sie können durch Prag als Tourist gehen und eine schöne alte Stadt sehen. Oder Sie können durch sie gehen, wie Brown durch seine Schauplätze geht, und fragen, was darunter liegt, was verborgen wurde, was die Erbauer wussten, das sie nicht laut sagten.</p>
 
-<h2>Das Segway, das Brown lieben würde</h2>
-<p>Zehntausend Seiten verdichtet zu sechshundertsiebenundachtzig. Ein ganzes Forscherleben verborgen unter einer Geschichte, die im Sprint voranschreitet. Rudolf II.s Hof, wo die größten Geister des 16. Jahrhunderts kamen, um den Stein der Weisen zu suchen, und kodierte Manuskripte hinterließen, die niemand zu Ende gelesen hat. Ein Friedhof, wo zwölf Schichten Geschichte unterirdisch aufeinanderliegend. Eine Uhr, die seit über sechs Jahrhunderten gleichzeitig vier Arten von Zeit zählt und uns noch immer nicht alles gesagt hat, was sie weiß.</p>
-<p>Das Geheimnis der Geheimnisse — in Prag — ist, dass es keinen Boden gibt. Jede Antwort öffnet sich auf eine tiefere Frage. Die Stadt wurde so absichtlich gebaut.</p>
+<h2>Der Elevator Pitch, den Brown lieben würde</h2>
+<p>Zehntausend Seiten verdichtet zu sechshundertsiebenundachtzig. Ein Forscherleben verborgen unter einer Geschichte, die im Sprint voranschreitet. Rudolf II.s Hof, wo die großen Geister des 16. Jahrhunderts kamen, um den Stein der Weisen zu suchen, und kodierte Manuskripte hinterließen, die niemand zu Ende gelesen hat. Ein Friedhof, wo zwölf Schichten Geschichte unterirdisch aufeinanderliegend. Eine Uhr, die seit über sechs Jahrhunderten gleichzeitig vier Arten von Zeit zählt und uns noch immer nicht alles gesagt hat, was sie weiß.</p>
+<p>Das Geheimnis der Geheimnisse in Prag ist, dass es keinen Boden gibt. Jede Antwort öffnet sich auf eine tiefere Frage. Die Stadt wurde so absichtlich gebaut.</p>
 
 <div class="blog-cta-box">
-  <h3>Das verborgene Prag erkunden — mit einer Führerin, die weiß, wo man hinschauen muss</h3>
-  <p>Rudolf II.s Alchemisten, das Viertel des Golems, die verschlossenen Bibliotheken des Klementinums, das Uhrenblatt, das niemand vollständig versteht — die zertifizierte Führerin Ing. Zuzana Manová führt private Touren durch das Prag, das sich nicht erklärt. Fragen Sie nach einem Rundgang rund um die kodierte Geschichte der Stadt.</p>
+  <h3>Das verborgene Prag erkunden, mit einer Führerin, die weiß, wo man hinschauen muss</h3>
+  <p>Rudolf II.s Alchemisten, das Viertel des Golems, die verschlossenen Bibliotheken des Klementinums, das Uhrenblatt, das niemand vollständig versteht. Die zertifizierte Führerin Ing. Zuzana Manová führt private Touren durch das Prag, das sich nicht erklärt. Fragen Sie nach einem Rundgang rund um die kodierte Geschichte der Stadt.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Verborgene%20Geschichte%20Prag#contact-title">Verborgene Geschichte Tour buchen</a>
     <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
@@ -1299,91 +1657,91 @@ export const blogTranslations = {
     de: '1. April 2026',
   },
   'blog.post15.content': {
-    en: `<h2>Spring in Prague: The Best Things to Do</h2>
-<p class="lead">March brings the first snowdrops to Prague's gardens, April fills the hilltop parks with cherry blossoms, and May turns the city into an open-air festival ground. Spring is arguably Prague's most photogenic season—and it arrives before the summer crowds.</p>
+    en: `<h2>Spring in Prague: what to do, month by month</h2>
+<p class="lead">March brings the first snowdrops to Prague's gardens, April fills the hilltop parks with cherry blossoms, and May turns the city into an open-air festival ground. Spring arrives before the summer crowds, and it photographs better than any other season here.</p>
 
-<h2>When Spring Begins & What to Expect</h2>
-<p><strong>March</strong> is cool (5–12 °C) and quiet—ideal for museums, castle tours, and the first outdoor café seats. <strong>April</strong> is the magic month: blossoms at Petřín and the Palace Gardens, Easter markets on Old Town Square, and long golden evenings. <strong>May</strong> warms to 18–22 °C and brings the Prague Spring International Music Festival, the Night of the Museums, and colourful markets citywide.</p>
+<h2>When spring starts and what to expect</h2>
+<p><strong>March</strong> is cool (5 to 12 °C) and quiet. Good for museums, <a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">castle tours</a>, and claiming the first outdoor café seats of the year. <strong>April</strong> is when things turn: blossoms at Petřín and the Palace Gardens, Easter markets on Old Town Square, long evenings. <strong>May</strong> warms to 18 to 22 °C and brings the <a href="https://www.festival.cz/en/" target="_blank" rel="noopener noreferrer">Prague Spring International Music Festival</a>, the Night of the Museums, and colourful markets citywide.</p>
 
-<h2>Cherry Blossoms & Garden Highlights</h2>
+<h2>Cherry blossoms and where to find them</h2>
 <h3>Petřín Hill</h3>
-<p>Prague's most spectacular spring display. The orchards on Petřín burst into pink and white blossom mid-April—pair with the Lookout Tower for panoramic shots over a flower-framed skyline.</p>
+<p>The orchards on Petřín burst into pink and white blossom mid-April. The <a href="https://www.prague.eu/en/object/places/176/petrinska-rozhledna-petrin-lookout-tower" target="_blank" rel="noopener noreferrer">Lookout Tower</a> at the top gives you the blossoms with the whole skyline behind them.</p>
 
-<h3>Palace Gardens Below Prague Castle</h3>
-<p>Opening in April, these terraced Baroque gardens cascade down the Castle hill. Tulips, wisteria, and city views make them one of Prague's most romantic spots. Arrive early to beat tour groups.</p>
+<h3>Palace Gardens below Prague Castle</h3>
+<p>These terraced Baroque gardens open in April and cascade down the Castle hill. Tulips, wisteria, views over the rooftops. Get there before 10:00 to have them mostly to yourself.</p>
 
 <h3>Vrtba Garden (UNESCO)</h3>
-<p>A hidden Baroque gem in Malá Strana, Vrtba opens in spring with formal flowerbeds and sweeping views. It's one of the most beautiful gardens in Central Europe and still feels like a secret.</p>
+<p>A Baroque garden hidden in Malá Strana. Formal flowerbeds, a stairway lined with statues, and a view that keeps surprising people who did not expect it from a side street. Fewer visitors than you would think.</p>
 
-<h3>Stromovka & Letná Park</h3>
-<p>For a relaxed morning walk, Stromovka's paths come alive with joggers, cyclists, and families. Letná Park offers sunset views and a classic Prague beer garden opening for the season.</p>
+<h3>Stromovka and Letná Park</h3>
+<p>For a slower morning, <a href="https://www.prague.eu/en/object/places/1139/stromovka" target="_blank" rel="noopener noreferrer">Stromovka</a> fills up with joggers, cyclists, and families. Letná Park has the beer garden that everyone is waiting for all winter; it opens around Easter.</p>
 
 <h2>Easter in Prague</h2>
-<p>Prague's Easter markets (late March–April) fill Old Town Square and the Castle district with hand-painted eggs, grilled sausages, mead, and folk crafts. The atmosphere is festive but unhurried—a proper Central European spring celebration.</p>
+<p>Prague's Easter markets (late March through April) fill <a href="https://www.prague.eu/en/object/places/3130/old-town-square" target="_blank" rel="noopener noreferrer">Old Town Square</a> and the Castle district with hand-painted eggs, grilled sausages, mead, and folk crafts. Less hectic than the Christmas markets and warmer than you would think.</p>
 
-<h2>Spring Events Worth Planning Around</h2>
+<h2>Spring events worth planning around</h2>
 <ul>
-  <li><strong>Prague Spring International Music Festival</strong> (May–June) — world-class concerts in historic venues, including Smetana Hall and Rudolfinum.</li>
-  <li><strong>Night of Museums</strong> (mid-May) — dozens of museums open free until midnight.</li>
-  <li><strong>Prague Marathon</strong> (May) — the city centre becomes a running stage; spectacular to watch from the riverbanks.</li>
+  <li><strong><a href="https://www.festival.cz/en/" target="_blank" rel="noopener noreferrer">Prague Spring International Music Festival</a></strong> (May to June). Concerts in Smetana Hall and the Rudolfinum, among other historic venues. Tickets sell early.</li>
+  <li><strong>Night of Museums</strong> (mid-May). Dozens of museums open free until midnight. Good for families.</li>
+  <li><strong><a href="https://www.runczech.com/en/events/prague-marathon" target="_blank" rel="noopener noreferrer">Prague Marathon</a></strong> (May). Worth watching from the riverbanks even if you are not running.</li>
 </ul>
 
-<h2>Practical Spring Tips</h2>
+<h2>Practical spring tips</h2>
 <ul>
-  <li>Pack layers — mornings can be 8 °C while afternoons reach 20 °C in May.</li>
-  <li>Gardens open in April (usually around Easter) and close in October; check hours before visiting.</li>
-  <li>Book Easter market accommodation 2–3 months ahead — April weekends fill quickly.</li>
-  <li>Spring light is soft and warm; golden hour arrives around 19:00–20:00 in May — perfect for photography.</li>
+  <li>Pack layers. Mornings can be 8 °C while afternoons reach 20 °C in May.</li>
+  <li>Gardens open in April (usually around Easter) and close in October. Check hours before visiting.</li>
+  <li>Book Easter-weekend accommodation two to three months ahead. April weekends fill quickly.</li>
+  <li>Spring light is soft. Golden hour arrives around 19:00 to 20:00 in May, good for photos from anywhere along the river.</li>
 </ul>
 
 <div class="blog-cta-box">
-  <h3>Discover Prague in Bloom</h3>
-  <p>Let me take you to the city's finest spring spots — blossom gardens, Easter markets, and hidden terraces — with stories and photography tips along the way.</p>
+  <h3>Walk Prague in spring with a local</h3>
+  <p>I know which gardens are blooming this week and which terraces just opened. Tell me what interests you and I will put a spring walk together.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Spring%20Prague%20Tour#contact-title">Book a spring tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
   </div>
 </div>`,
-    de: `<h2>Prag im Frühling: Die besten Aktivitäten</h2>
-<p class="lead">Im März zeigen sich die ersten Schneeglöckchen in Prags Gärten, im April füllen Kirschblüten die Hügelparks, und im Mai verwandelt sich die Stadt in ein Open-Air-Festivalgelände. Der Frühling ist wohl Prags fotogenste Jahreszeit – und er kommt, bevor die Sommermassen eintreffen.</p>
+    de: `<h2>Prag im Frühling: was Sie Monat für Monat erwartet</h2>
+<p class="lead">Im März zeigen sich die ersten Schneeglöckchen in Prags Gärten, im April füllen Kirschblüten die Hügelparks, und im Mai verwandelt sich die Stadt in ein Open-Air-Festivalgelände. Der Frühling kommt, bevor die Sommermassen eintreffen, und er fotografiert sich besser als jede andere Jahreszeit hier.</p>
 
-<h2>Wann beginnt der Frühling & was erwartet Sie?</h2>
-<p><strong>März</strong> ist kühl (5–12 °C) und ruhig – ideal für Museen, Burgführungen und die ersten Außenplätze in Cafés. <strong>April</strong> ist der Zaubermonat: Blüten auf dem Petřín und in den Palastgärten, Ostermärkte auf dem Altstädter Ring und lange goldene Abende. <strong>Mai</strong> wärmt sich auf 18–22 °C und bringt das Prager Frühling Musikfestival, die Nacht der Museen und bunte Märkte in der ganzen Stadt.</p>
+<h2>Wann beginnt der Frühling und was erwartet Sie</h2>
+<p><strong>März</strong> ist kühl (5 bis 12 °C) und ruhig. Gut für Museen, <a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Burgführungen</a> und die ersten Außenplätze in Cafés. <strong>April</strong> ist der Monat, in dem es losgeht: Blüten auf dem Petřín und in den Palastgärten, Ostermärkte auf dem Altstädter Ring, lange Abende. <strong>Mai</strong> wärmt sich auf 18 bis 22 °C und bringt das <a href="https://www.festival.cz/en/" target="_blank" rel="noopener noreferrer">Prager Frühling Musikfestival</a>, die Nacht der Museen und bunte Märkte in der ganzen Stadt.</p>
 
-<h2>Kirschblüten & Gartenhighlights</h2>
+<h2>Kirschblüten und wo Sie sie finden</h2>
 <h3>Petřínhügel</h3>
-<p>Prags spektakulärste Frühlingskulisse. Die Obstgärten auf dem Petřín strahlen Mitte April in Rosa und Weiß – kombinieren Sie den Besuch mit dem Aussichtsturm für Panoramafotos über eine blütengekrönte Skyline.</p>
+<p>Die Obstgärten auf dem Petřín strahlen Mitte April in Rosa und Weiß. Vom <a href="https://www.prague.eu/en/object/places/176/petrinska-rozhledna-petrin-lookout-tower" target="_blank" rel="noopener noreferrer">Aussichtsturm</a> oben sehen Sie die Blüten mit der ganzen Skyline dahinter.</p>
 
 <h3>Palastgärten unterhalb der Prager Burg</h3>
-<p>Diese terrassierten Barockgärten öffnen im April und kaskadieren den Burghügel hinunter. Tulpen, Glyzinien und Stadtblicke machen sie zu einem der romantischsten Orte Prags. Kommen Sie früh, um Reisegruppen zuvorzukommen.</p>
+<p>Diese terrassierten Barockgärten öffnen im April und ziehen sich den Burghügel hinunter. Tulpen, Glyzinien, Dachblicke. Vor 10:00 Uhr haben Sie sie fast für sich allein.</p>
 
 <h3>Vrtba-Garten (UNESCO)</h3>
-<p>Ein verstecktes Barockjuwel in Malá Strana, der Vrtba-Garten öffnet im Frühling mit formellen Blumenbeeten und weitreichenden Ausblicken. Er gilt als einer der schönsten Gärten Mitteleuropas und fühlt sich noch wie ein Geheimtipp an.</p>
+<p>Ein Barockgarten, versteckt in Malá Strana. Formelle Blumenbeete, eine von Statuen gesäumte Treppe und ein Blick, der immer wieder Leute überrascht, die ihn von einer Seitenstraße aus nicht erwartet hätten. Weniger Besucher, als man denkt.</p>
 
-<h3>Stromovka & Letná Park</h3>
-<p>Für einen entspannten Morgenspaziergang erwachen Stromovkas Pfade mit Joggern, Radfahrern und Familien zum Leben. Der Letná Park bietet Sonnenuntergangspanoramen und einen klassischen Prager Biergarten, der zur Saison öffnet.</p>
+<h3>Stromovka und Letná Park</h3>
+<p>Für einen ruhigeren Morgen füllt sich die <a href="https://www.prague.eu/en/object/places/1139/stromovka" target="_blank" rel="noopener noreferrer">Stromovka</a> mit Joggern, Radfahrern und Familien. Der Letná Park hat den Biergarten, auf den den ganzen Winter alle gewartet haben; er öffnet um Ostern.</p>
 
 <h2>Ostern in Prag</h2>
-<p>Prags Ostermärkte (Ende März–April) füllen den Altstädter Ring und das Burgareal mit handbemalten Eiern, gegrillten Würsten, Met und Volkshandwerk. Die Atmosphäre ist festlich, aber unaufgeregt – eine echte mitteleuropäische Frühlingsfeier.</p>
+<p>Prags Ostermärkte (Ende März bis April) füllen den <a href="https://www.prague.eu/en/object/places/3130/old-town-square" target="_blank" rel="noopener noreferrer">Altstädter Ring</a> und das Burgareal mit handbemalten Eiern, gegrillten Würsten, Met und Volkshandwerk. Weniger hektisch als die Weihnachtsmärkte und wärmer, als man denkt.</p>
 
 <h2>Frühlingsevents, die eine Planung lohnen</h2>
 <ul>
-  <li><strong>Prager Frühling Internationales Musikfestival</strong> (Mai–Juni) — Weltklasse-Konzerte in historischen Spielstätten wie dem Smetana-Saal und dem Rudolfinum.</li>
-  <li><strong>Nacht der Museen</strong> (Mitte Mai) — Dutzende Museen öffnen kostenlos bis Mitternacht.</li>
-  <li><strong>Prager Marathon</strong> (Mai) — Das Stadtzentrum wird zur Laufbühne; spektakulär von den Flussuferanlagen aus zu beobachten.</li>
+  <li><strong><a href="https://www.festival.cz/en/" target="_blank" rel="noopener noreferrer">Prager Frühling Internationales Musikfestival</a></strong> (Mai bis Juni). Konzerte im Smetana-Saal und Rudolfinum, unter anderem. Karten verkaufen sich früh.</li>
+  <li><strong>Nacht der Museen</strong> (Mitte Mai). Dutzende Museen öffnen kostenlos bis Mitternacht. Gut für Familien.</li>
+  <li><strong><a href="https://www.runczech.com/en/events/prague-marathon" target="_blank" rel="noopener noreferrer">Prager Marathon</a></strong> (Mai). Von den Flussuferanlagen aus sehenswert, auch wenn man nicht mitläuft.</li>
 </ul>
 
 <h2>Praktische Frühlingstipps</h2>
 <ul>
-  <li>Mehrere Schichten einpacken — morgens kann es 8 °C sein, nachmittags im Mai bis zu 20 °C.</li>
-  <li>Gärten öffnen im April (meist um Ostern) und schließen im Oktober; Öffnungszeiten vorab prüfen.</li>
-  <li>Unterkunft für Ostermärkte 2–3 Monate im Voraus buchen — Aprilwochenenden füllen sich schnell.</li>
-  <li>Das Frühlingslicht ist weich und warm; die goldene Stunde beginnt im Mai gegen 19–20 Uhr — perfekt für Fotografie.</li>
+  <li>Mehrere Schichten einpacken. Morgens kann es 8 °C sein, nachmittags im Mai bis zu 20 °C.</li>
+  <li>Gärten öffnen im April (meist um Ostern) und schließen im Oktober. Öffnungszeiten vorab prüfen.</li>
+  <li>Unterkunft für Ostermärkte zwei bis drei Monate im Voraus buchen. Aprilwochenenden füllen sich schnell.</li>
+  <li>Das Frühlingslicht ist weich. Die goldene Stunde beginnt im Mai gegen 19 bis 20 Uhr, gut für Fotos von überall am Fluss.</li>
 </ul>
 
 <div class="blog-cta-box">
-  <h3>Entdecken Sie Prag in voller Blüte</h3>
-  <p>Lassen Sie mich Sie zu den schönsten Frühlingsorten der Stadt führen — blühende Gärten, Ostermärkte und versteckte Terrassen — mit Geschichten und Fotografietipps.</p>
+  <h3>Prag im Frühling mit einer Einheimischen erleben</h3>
+  <p>Ich weiß, welche Gärten diese Woche blühen und welche Terrassen gerade aufgemacht haben. Sagen Sie mir, was Sie interessiert, und ich stelle einen Frühlingsspaziergang zusammen.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Prag%20Fr%C3%BChlingstour#contact-title">Frühlingstour buchen</a>
     <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
@@ -1405,101 +1763,101 @@ export const blogTranslations = {
     de: '15. März 2026',
   },
   'blog.post16.content': {
-    en: `<h2>Summer in Prague: What to Do, See & Eat</h2>
-<p class="lead">June through August brings Prague to life in a different way: outdoor stages, riverside bars, evening concerts in palace courtyards, and the longest golden hours of the year. Yes, it gets busy — but knowing where locals go makes all the difference.</p>
+    en: `<h2>Summer in Prague: what to do and where locals actually go</h2>
+<p class="lead">June through August brings outdoor stages, riverside bars, evening concerts in palace courtyards, and the longest golden hours of the year. Yes, it gets busy. But the locals do not leave town; they just know which corners stay calm.</p>
 
-<h2>Summer Weather & What to Expect</h2>
-<p><strong>June</strong> is warm (18–24 °C) with occasional rain — still manageable and full of cultural events. <strong>July and August</strong> bring the peak: 25–32 °C, long sunny days (sunset near 21:00), and the highest visitor numbers. Come early morning to the iconic sites and save afternoons for gardens, galleries, and riverside.</p>
+<h2>Summer weather and what to expect</h2>
+<p><strong>June</strong> is warm (18 to 24 °C) with occasional rain, still comfortable and full of cultural events. <strong>July and August</strong> bring the peak: 25 to 32 °C, long sunny days (sunset near 21:00), and the highest visitor numbers. Mornings belong to the iconic sites; afternoons are better spent in gardens, galleries, and along the river.</p>
 
-<h2>Best Outdoor Experiences</h2>
-<h3>Náplavka Riverside</h3>
-<p>Prague's most beloved summer strip: barge bars, food trucks, farmers' markets (Saturdays), and live music as the sun sets over the river. Walk south from Palacký Bridge for the full stretch.</p>
+<h2>Where to spend a summer afternoon</h2>
+<h3>Náplavka riverside</h3>
+<p>Barge bars, food trucks, <a href="https://www.prague.eu/en/object/places/3145/naplavka-farmers-market" target="_blank" rel="noopener noreferrer">farmers' markets on Saturdays</a>, and live music as the sun sets. Walk south from Palacký Bridge for the full stretch. It gets packed on weekend evenings, and that is part of the point.</p>
 
-<h3>Open-Air Cinemas</h3>
-<p>Prague has several outdoor cinemas operating June–September — Kino Letní Letná in Letná Park is the most atmospheric. A glass of wine under the stars and a classic film is very Prague summer.</p>
+<h3>Open-air cinemas</h3>
+<p>Several outdoor cinemas run from June to September. <a href="https://www.kinoletna.cz/" target="_blank" rel="noopener noreferrer">Kino Letní Letná</a> in Letná Park is the one locals keep coming back to. Wine, stars, a film you have probably seen before but in a better setting.</p>
 
-<h3>Letná Beer Garden</h3>
-<p>One of the city's best summer institutions: cold Pilsner Urquell, city views across the river, and locals of all ages. Arrive before 18:00 to find a bench.</p>
+<h3>Letná beer garden</h3>
+<p>Cold Pilsner Urquell, city views across the river, and locals of all ages. Arrive before 18:00 to find a bench. After that, you stand, which is also fine.</p>
 
-<h3>Swimming & Cooling Off</h3>
-<p>The Císařský ostrov (Emperor's Island) nature reserve is a local favourite for riverside walks and picnics. Divoká Šárka reservoir offers summer swimming on hot days — about 20 minutes by tram from the centre.</p>
+<h3>Swimming and cooling off</h3>
+<p>The Císařský ostrov (Emperor's Island) nature reserve is where locals go for riverside walks and picnics. <a href="https://www.prague.eu/en/object/places/823/divoka-sarka" target="_blank" rel="noopener noreferrer">Divoká Šárka</a> reservoir has summer swimming, about 20 minutes by tram from the centre.</p>
 
-<h2>Summer Cultural Highlights</h2>
+<h2>Summer events</h2>
 <ul>
-  <li><strong>Dvořák Prague Festival</strong> (August–September) — outdoor classical concerts including a free opening concert at Náměstí Míru.</li>
-  <li><strong>Shakespeare at Prague Castle</strong> — summer theatre productions in the castle gardens.</li>
-  <li><strong>Palace courtyard concerts</strong> — many historic spaces host evening concerts June–August; check local listings.</li>
+  <li><strong><a href="https://www.dvorakovapraha.cz/en/" target="_blank" rel="noopener noreferrer">Dvořák Prague Festival</a></strong> (August to September). Outdoor classical concerts, including a free opening concert at Náměstí Míru.</li>
+  <li><strong>Shakespeare at Prague Castle</strong>. Summer theatre in the castle gardens. Tickets sell out; check early.</li>
+  <li><strong>Palace courtyard concerts</strong>. Many historic spaces host evening concerts from June to August. Check <a href="https://goout.net/en/prague/" target="_blank" rel="noopener noreferrer">GoOut</a> for listings.</li>
 </ul>
 
-<h2>Beating the Summer Crowds</h2>
+<h2>How to avoid the worst of the crowds</h2>
 <ul>
-  <li><strong>Charles Bridge:</strong> go before 07:30 or after 21:00 — it empties beautifully.</li>
-  <li><strong>Prague Castle:</strong> Tuesday–Thursday mornings are calmer; buy tickets online in advance.</li>
-  <li><strong>Old Town Square:</strong> crowds peak 10:00–17:00; the square transforms at night when tour groups leave.</li>
-  <li><strong>Restaurants:</strong> reserve for dinner (19:30–21:00) to avoid queues. Many rooftop terraces require advance booking in July–August.</li>
+  <li><strong>Charles Bridge:</strong> before 07:30 or after 21:00. It empties out and becomes a different place.</li>
+  <li><strong>Prague Castle:</strong> Tuesday to Thursday mornings are calmer. <a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Buy tickets online</a> in advance.</li>
+  <li><strong>Old Town Square:</strong> crowds peak from 10:00 to 17:00. Come back at night when the tour groups have left.</li>
+  <li><strong>Restaurants:</strong> reserve for dinner (19:30 to 21:00). Rooftop terraces in July and August require advance booking or you will not sit down.</li>
 </ul>
 
-<h2>Practical Summer Tips</h2>
+<h2>Practical summer tips</h2>
 <ul>
-  <li>Stay hydrated — cobblestone streets in full sun feel hotter than the forecast suggests.</li>
-  <li>Pack a light rain jacket — afternoon thunderstorms are common in July.</li>
-  <li>Sunscreen on terrace tours and riverside walks — reflected light off the river and stone is intense.</li>
-  <li>Most attractions run longer hours in summer; verify before visiting.</li>
+  <li>Stay hydrated. Cobblestone streets in full sun feel hotter than the forecast suggests.</li>
+  <li>Pack a light rain jacket. Afternoon thunderstorms are common in July.</li>
+  <li>Sunscreen on terrace tours and riverside walks. Reflected light off the river and stone is stronger than people expect.</li>
+  <li>Most attractions have longer summer hours. Verify before visiting.</li>
 </ul>
 
 <div class="blog-cta-box">
-  <h3>Make the Most of Your Prague Summer</h3>
-  <p>Private morning walks before the crowds, secret garden terraces, evening concerts — I'll plan your perfect summer day in Prague.</p>
+  <h3>A summer tour before the heat kicks in</h3>
+  <p>Morning walks start early, finish before the crowds, and end with a coffee or a cold beer. Tell me what you want to see and I will build the route.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Summer%20Prague%20Tour#contact-title">Book a summer tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Get recommendations</a>
   </div>
 </div>`,
-    de: `<h2>Prag im Sommer: Was tun, sehen & essen</h2>
-<p class="lead">Von Juni bis August erwacht Prag auf andere Weise: Freiluftbühnen, Flussuferkneipen, Abendkonzerte in Palasthöfen und die längsten goldenen Stunden des Jahres. Ja, es wird belebter – aber wer weiß, wohin die Einheimischen gehen, erlebt die Stadt ganz anders.</p>
+    de: `<h2>Prag im Sommer: was tun und wohin die Einheimischen gehen</h2>
+<p class="lead">Von Juni bis August: Freiluftbühnen, Flussuferkneipen, Abendkonzerte in Palasthöfen und die längsten goldenen Stunden des Jahres. Ja, es wird belebter. Aber die Einheimischen verlassen die Stadt nicht; sie wissen einfach, welche Ecken ruhig bleiben.</p>
 
-<h2>Sommerwetter & was Sie erwartet</h2>
-<p><strong>Juni</strong> ist warm (18–24 °C) mit gelegentlichem Regen – noch überschaubar und voller Kulturveranstaltungen. <strong>Juli und August</strong> bringen den Höhepunkt: 25–32 °C, lange sonnige Tage (Sonnenuntergang gegen 21:00 Uhr) und die meisten Besucher. Besuchen Sie die Sehenswürdigkeiten am frühen Morgen und nutzen Sie die Nachmittage für Gärten, Galerien und Flussufer.</p>
+<h2>Sommerwetter und was Sie erwartet</h2>
+<p><strong>Juni</strong> ist warm (18 bis 24 °C) mit gelegentlichem Regen, noch angenehm und voller Kulturveranstaltungen. <strong>Juli und August</strong> bringen den Höhepunkt: 25 bis 32 °C, lange sonnige Tage (Sonnenuntergang gegen 21:00 Uhr) und die meisten Besucher. Morgens gehören den Sehenswürdigkeiten; nachmittags sind Gärten, Galerien und das Flussufer besser.</p>
 
-<h2>Die besten Outdoor-Erlebnisse</h2>
+<h2>Wo man einen Sommernachmittag verbringt</h2>
 <h3>Náplavka-Uferpromenade</h3>
-<p>Prags beliebtester Sommerstreifen: Schiffskneipen, Food Trucks, Bauernmärkte (samstags) und Live-Musik beim Sonnenuntergang über dem Fluss. Gehen Sie von der Palacký-Brücke nach Süden für die volle Strecke.</p>
+<p>Schiffskneipen, Food Trucks, <a href="https://www.prague.eu/en/object/places/3145/naplavka-farmers-market" target="_blank" rel="noopener noreferrer">Bauernmärkte samstags</a> und Live-Musik beim Sonnenuntergang. Von der Palacký-Brücke nach Süden gehen für die volle Strecke. Am Wochenende abends ist es voll, und das gehört dazu.</p>
 
 <h3>Open-Air-Kinos</h3>
-<p>Prag hat mehrere Freiluftkinos, die von Juni bis September betrieben werden — Kino Letní Letná im Letná Park ist das stimmungsvollste. Ein Glas Wein unter dem Sternenhimmel und ein Klassiker – das ist echter Prager Sommer.</p>
+<p>Mehrere Freiluftkinos laufen von Juni bis September. <a href="https://www.kinoletna.cz/" target="_blank" rel="noopener noreferrer">Kino Letní Letná</a> im Letná Park ist das, zu dem die Einheimischen immer wiederkommen. Wein, Sterne, ein Film, den man wahrscheinlich schon kennt, aber in besserer Umgebung.</p>
 
 <h3>Letná Biergarten</h3>
-<p>Eine der besten Sommerinstitutionen der Stadt: kaltes Pilsner Urquell, Stadtblicke über den Fluss und Einheimische aller Altersgruppen. Kommen Sie vor 18:00 Uhr, um eine Bank zu finden.</p>
+<p>Kaltes Pilsner Urquell, Stadtblicke über den Fluss und Einheimische aller Altersgruppen. Vor 18:00 Uhr kommen, um eine Bank zu finden. Danach steht man, was auch in Ordnung ist.</p>
 
-<h3>Schwimmen & Abkühlen</h3>
-<p>Das Naturschutzgebiet Císařský ostrov (Kaiserinsel) ist ein Geheimtipp für Flussuferpaziergänge und Picknicks. Der Divoká-Šárka-Stausee bietet an heißen Tagen Sommerschwimmen – etwa 20 Minuten mit der Straßenbahn vom Zentrum entfernt.</p>
+<h3>Schwimmen und Abkühlen</h3>
+<p>Das Naturschutzgebiet Císařský ostrov (Kaiserinsel) ist der Ort, an den Einheimische für Flussuferpaziergänge und Picknicks gehen. Der <a href="https://www.prague.eu/en/object/places/823/divoka-sarka" target="_blank" rel="noopener noreferrer">Divoká-Šárka</a>-Stausee bietet Sommerschwimmen, etwa 20 Minuten mit der Straßenbahn vom Zentrum.</p>
 
-<h2>Kulturelle Sommerhighlights</h2>
+<h2>Sommerveranstaltungen</h2>
 <ul>
-  <li><strong>Dvořák Prag Festival</strong> (August–September) — Freiluftklassikkonzerte, darunter ein kostenloses Eröffnungskonzert auf dem Náměstí Míru.</li>
-  <li><strong>Shakespeare auf der Prager Burg</strong> — Sommertheaterproduktionen in den Burggärten.</li>
-  <li><strong>Palasthofkonzerte</strong> — viele historische Räume veranstalten Abendkonzerte von Juni bis August; lokale Veranstaltungskalender prüfen.</li>
+  <li><strong><a href="https://www.dvorakovapraha.cz/en/" target="_blank" rel="noopener noreferrer">Dvořák Prag Festival</a></strong> (August bis September). Freiluftklassikkonzerte, darunter ein kostenloses Eröffnungskonzert auf dem Náměstí Míru.</li>
+  <li><strong>Shakespeare auf der Prager Burg</strong>. Sommertheater in den Burggärten. Karten sind schnell weg; früh prüfen.</li>
+  <li><strong>Palasthofkonzerte</strong>. Viele historische Räume veranstalten Abendkonzerte von Juni bis August. Auf <a href="https://goout.net/en/prague/" target="_blank" rel="noopener noreferrer">GoOut</a> nach Veranstaltungen suchen.</li>
 </ul>
 
-<h2>Die Sommermassen umgehen</h2>
+<h2>Wie man den schlimmsten Massen ausweicht</h2>
 <ul>
-  <li><strong>Karlsbrücke:</strong> vor 07:30 Uhr oder nach 21:00 Uhr — dann leert sie sich wunderschön.</li>
-  <li><strong>Prager Burg:</strong> Dienstag–Donnerstag morgens ruhiger; Tickets online im Voraus kaufen.</li>
-  <li><strong>Altstädter Ring:</strong> Massen zwischen 10:00–17:00 Uhr; der Platz verwandelt sich nachts, wenn die Reisegruppen gehen.</li>
-  <li><strong>Restaurants:</strong> für das Abendessen (19:30–21:00 Uhr) reservieren, um Wartezeiten zu vermeiden. Viele Dachterrassen erfordern im Juli–August eine Vorabreservierung.</li>
+  <li><strong>Karlsbrücke:</strong> vor 07:30 Uhr oder nach 21:00 Uhr. Sie leert sich und wird ein anderer Ort.</li>
+  <li><strong>Prager Burg:</strong> Dienstag bis Donnerstag morgens ruhiger. <a href="https://www.hrad.cz/en" target="_blank" rel="noopener noreferrer">Tickets online</a> im Voraus kaufen.</li>
+  <li><strong>Altstädter Ring:</strong> Massen zwischen 10:00 und 17:00 Uhr. Abends wiederkommen, wenn die Reisegruppen weg sind.</li>
+  <li><strong>Restaurants:</strong> fürs Abendessen (19:30 bis 21:00 Uhr) reservieren. Dachterrassen im Juli und August erfordern Vorabreservierung, sonst sitzt man nicht.</li>
 </ul>
 
 <h2>Praktische Sommertipps</h2>
 <ul>
-  <li>Ausreichend trinken — Kopfsteinpflasterstraßen in der vollen Sonne fühlen sich heißer an als die Prognose vermuten lässt.</li>
-  <li>Leichte Regenjacke einpacken — Nachmittagsgewitter sind im Juli häufig.</li>
-  <li>Sonnencreme bei Terrassenführungen und Flussuferpaziergängen — das reflektierte Licht vom Fluss und Stein ist intensiv.</li>
-  <li>Die meisten Sehenswürdigkeiten haben im Sommer längere Öffnungszeiten; vorher prüfen.</li>
+  <li>Ausreichend trinken. Kopfsteinpflasterstraßen in der vollen Sonne fühlen sich heißer an als die Prognose vermuten lässt.</li>
+  <li>Leichte Regenjacke einpacken. Nachmittagsgewitter sind im Juli häufig.</li>
+  <li>Sonnencreme bei Terrassenführungen und Flussuferpaziergängen. Das reflektierte Licht vom Fluss und Stein ist stärker, als viele erwarten.</li>
+  <li>Die meisten Sehenswürdigkeiten haben im Sommer längere Öffnungszeiten. Vorher prüfen.</li>
 </ul>
 
 <div class="blog-cta-box">
-  <h3>Das Beste aus Ihrem Prager Sommer herausholen</h3>
-  <p>Private Morgenspaziergänge vor den Massen, geheime Gartenterrassen, Abendkonzerte — ich plane Ihren perfekten Sommertag in Prag.</p>
+  <h3>Eine Sommertour, bevor die Hitze kommt</h3>
+  <p>Morgenspaziergänge starten früh, enden vor den Massen und schließen mit einem Kaffee oder einem kalten Bier ab. Sagen Sie mir, was Sie sehen wollen, und ich baue die Route.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Prag%20Sommertour#contact-title">Sommertour buchen</a>
     <a class="btn btn-outline" href="/contact#contact-title">Empfehlungen erhalten</a>
@@ -1521,91 +1879,91 @@ export const blogTranslations = {
     de: '1. März 2026',
   },
   'blog.post17.content': {
-    en: `<h2>Autumn in Prague: Golden Light, Wine Harvest & Fall Things to Do</h2>
-<p class="lead">September through November is when Prague reveals its most cinematic side: amber and crimson foliage in Stromovka and Petřín, the smell of svařák (mulled wine) at early Christmas markets, misty mornings over the river, and far fewer crowds than summer. Autumn is many travellers' favourite Prague season.</p>
+    en: `<h2>Autumn in Prague: foliage, wine harvest, and why October is the best month to visit</h2>
+<p class="lead">September through November is when Prague looks the way it does in your head: amber and crimson foliage in Stromovka and on Petřín, the first svařák (mulled wine) at early Christmas market stalls, mist over the river in the morning. Fewer tourists than summer, better light, and the city slows down just enough to be interesting.</p>
 
-<h2>Three Distinct Autumn Phases</h2>
-<p><strong>September</strong> is warm (18–22 °C) with summer lingering — terraces are still open, days are long, and the festival season continues. <strong>October</strong> brings the peak of foliage and the Dvořák Festival finale. <strong>November</strong> turns quiet and atmospheric: mist rolls across the river, the first Christmas markets appear, and the city feels intimate.</p>
+<h2>Three distinct autumn phases</h2>
+<p><strong>September</strong> is warm (18 to 22 °C) with summer still holding on. Terraces are open, days are long, and the festival season continues. <strong>October</strong> brings peak foliage and the Dvořák Festival finale. <strong>November</strong> turns quiet: mist rolls across the river, the first Christmas markets appear, and the city feels like it belongs to the people who live here.</p>
 
-<h2>Best Autumn Sights & Experiences</h2>
+<h2>Where to go in autumn</h2>
 <h3>Stromovka Park in October</h3>
-<p>Prague's largest park turns gold and deep red in October. Morning walks here — before the city wakes — feel like a private gallery of autumn colour. The park connects easily to Holešovice neighbourhood for coffee after.</p>
+<p>Prague's largest park turns gold and deep red in October. A morning walk here before the city wakes is worth setting an alarm for. The park connects easily to Holešovice for coffee after. Try <a href="https://www.instagram.com/vnitroblock/" target="_blank" rel="noopener noreferrer">Vnitroblock</a> or any of the cafés around Strossmayerovo náměstí.</p>
 
 <h3>Divoká Šárka</h3>
-<p>This rocky valley on the edge of Prague becomes a wonderland of autumn colours. A local favourite for weekend hikes — accessible by tram and completely free.</p>
+<p>A rocky valley on the edge of Prague. The autumn colours are good, the weekend hiking crowd is local rather than tourist, and getting there is just a <a href="https://www.prague.eu/en/object/places/823/divoka-sarka" target="_blank" rel="noopener noreferrer">tram ride from the centre</a>. Free.</p>
 
-<h3>Vinohrady & Žižkov in Fall</h3>
-<p>The tree-lined avenues of Vinohrady — especially Mánesova and Blanická streets — glow in autumn. Pair with the neighbourhood's excellent cafés and wine bars opening their autumn menus.</p>
+<h3>Vinohrady and Žižkov in fall</h3>
+<p>The tree-lined avenues of Vinohrady, especially Mánesova and Blanická, are at their best in October. Walk them, then sit down in one of the neighbourhood's wine bars that are switching to their autumn menus.</p>
 
-<h3>Vyšehrad Fortress in Autumn Mist</h3>
-<p>The hilltop Vyšehrad has sweeping city views and a famous cemetery. In autumn mist it becomes deeply atmospheric — less visited than the Castle and more contemplative.</p>
+<h3>Vyšehrad in autumn mist</h3>
+<p>The hilltop <a href="https://www.praha-vysehrad.cz/en" target="_blank" rel="noopener noreferrer">Vyšehrad</a> has city views and a famous cemetery. In the mist it gets a quality that the Castle district does not have: quiet. Less visited, more space to think.</p>
 
-<h2>Wine Harvest & Food Festivals</h2>
-<p>September brings Moravian wine harvest festivals to Prague. Look out for <strong>Vinobraní na Václavském náměstí</strong> (wine harvest on Wenceslas Square) — wine stalls, folk music, and the new season's burčák (partially-fermented wine), a Czech autumn tradition.</p>
+<h2>Wine harvest and food festivals</h2>
+<p>September brings Moravian wine harvest festivals to Prague. Look out for <strong>Vinobraní na Václavském náměstí</strong> (wine harvest on Wenceslas Square): wine stalls, folk music, and the new season's burčák (partially fermented wine). Burčák is only available for a few weeks each year. It tastes sweet and harmless and it is not.</p>
 
-<h2>Autumn Events</h2>
+<h2>Autumn events</h2>
 <ul>
-  <li><strong>Signal Festival</strong> (October) — light art installations transforming Old Town facades and monuments after dark. Free to wander.</li>
-  <li><strong>Dvořák Prague Festival finale</strong> (September) — final outdoor concerts at Rudolfinum and city squares.</li>
-  <li><strong>Christmas market preparations</strong> (late November) — Old Town Square transforms before advent with the first wooden stalls and lights.</li>
+  <li><strong><a href="https://www.signalfestival.com/en/" target="_blank" rel="noopener noreferrer">Signal Festival</a></strong> (October). Light art installations on Old Town facades and monuments after dark. Free to wander. Weekday evenings are less crowded.</li>
+  <li><strong><a href="https://www.dvorakovapraha.cz/en/" target="_blank" rel="noopener noreferrer">Dvořák Prague Festival</a> finale</strong> (September). Final outdoor concerts at Rudolfinum and city squares.</li>
+  <li><strong>Christmas market preparations</strong> (late November). Old Town Square transforms before Advent with the first wooden stalls and lights.</li>
 </ul>
 
-<h2>Practical Autumn Tips</h2>
+<h2>Practical autumn tips</h2>
 <ul>
-  <li>October is the sweet spot: foliage peaks, crowds thin after mid-month, and the light is extraordinary.</li>
-  <li>Bring a waterproof layer — autumn rain is light but frequent, especially in November.</li>
-  <li>Café culture thrives in autumn: Prague has outstanding independent coffee shops perfect for a rainy hour.</li>
-  <li>Signal Festival nights are crowded in the city centre — go on a weekday evening for a calmer experience.</li>
+  <li>October is when everything aligns: foliage peaks, crowds thin after mid-month, the light gets that low-angle quality.</li>
+  <li>Bring a waterproof layer. Autumn rain is light but frequent, especially in November.</li>
+  <li>Prague's independent coffee shops are at their best when you need a warm seat for an hour. Try <a href="https://www.doubleshot.cz/en/" target="_blank" rel="noopener noreferrer">Doubleshot</a> or <a href="https://kavfrancouzskeho.cz/" target="_blank" rel="noopener noreferrer">Kaváren Francouzského</a>.</li>
+  <li>Signal Festival nights get crowded in the centre. Go on a weekday.</li>
 </ul>
 
 <div class="blog-cta-box">
-  <h3>Experience Prague's Golden Season</h3>
-  <p>Autumn walks through leaf-covered courtyards, Signal Festival routes, and the season's best food and wine — let me plan your perfect autumn day.</p>
+  <h3>An autumn walk with a local</h3>
+  <p>I will take you through the courtyards when the leaves are down, past the Signal installations if the timing is right, and to the wine bars that are worth the walk. Tell me what you are interested in.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Autumn%20Prague%20Tour#contact-title">Book an autumn tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
   </div>
 </div>`,
-    de: `<h2>Prag im Herbst: Goldenes Licht, Weinlese & Herbstaktivitäten</h2>
-<p class="lead">Von September bis November zeigt Prag seine kinofilmreifste Seite: bernsteinfarbenes und purpurrotes Laub in Stromovka und auf dem Petřín, der Duft von Svařák (Glühwein) auf frühen Weihnachtsmärkten, neblige Morgen über dem Fluss und viel weniger Massen als im Sommer. Der Herbst ist für viele Reisende die liebste Prager Jahreszeit.</p>
+    de: `<h2>Prag im Herbst: Laubfärbung, Weinlese und warum Oktober der beste Monat ist</h2>
+<p class="lead">Von September bis November sieht Prag so aus, wie Sie es sich vorstellen: bernsteinfarbenes und purpurrotes Laub in der Stromovka und auf dem Petřín, der erste Svařák (Glühwein) an den frühen Weihnachtsmarktständen, Nebel über dem Fluss am Morgen. Weniger Touristen als im Sommer, besseres Licht, und die Stadt wird gerade ruhig genug, um interessant zu sein.</p>
 
 <h2>Drei verschiedene Herbstphasen</h2>
-<p><strong>September</strong> ist warm (18–22 °C), der Sommer klingt noch nach — Terrassen sind noch geöffnet, die Tage sind lang und die Festivalsaison geht weiter. <strong>Oktober</strong> bringt den Höhepunkt des Laubes und das Finale des Dvořák-Festivals. <strong>November</strong> wird ruhig und stimmungsvoll: Nebel zieht über den Fluss, die ersten Weihnachtsmärkte erscheinen und die Stadt fühlt sich intim an.</p>
+<p><strong>September</strong> ist warm (18 bis 22 °C), der Sommer hält noch an. Terrassen sind offen, die Tage sind lang, die Festivalsaison geht weiter. <strong>Oktober</strong> bringt den Höhepunkt der Laubfärbung und das Finale des Dvořák-Festivals. <strong>November</strong> wird ruhig: Nebel zieht über den Fluss, die ersten Weihnachtsmärkte erscheinen, und die Stadt fühlt sich an, als gehöre sie den Leuten, die hier leben.</p>
 
-<h2>Die besten Herbstsehenswürdigkeiten & Erlebnisse</h2>
+<h2>Wohin im Herbst</h2>
 <h3>Stromovka Park im Oktober</h3>
-<p>Prags größter Park leuchtet im Oktober in Gold und tiefem Rot. Morgendliche Spaziergänge hier — bevor die Stadt erwacht — fühlen sich wie eine private Galerie der Herbstfarben an. Der Park verbindet sich leicht mit dem Stadtteil Holešovice für einen Kaffee danach.</p>
+<p>Prags größter Park leuchtet im Oktober in Gold und tiefem Rot. Ein Morgenspaziergang hier, bevor die Stadt aufwacht, ist den Wecker wert. Der Park verbindet sich leicht mit Holešovice für einen Kaffee danach. Probieren Sie <a href="https://www.instagram.com/vnitroblock/" target="_blank" rel="noopener noreferrer">Vnitroblock</a> oder eines der Cafés rund um das Strossmayerovo náměstí.</p>
 
 <h3>Divoká Šárka</h3>
-<p>Dieses Felstal am Rande Prags wird im Herbst zu einem Wunderland der Farben. Ein Geheimtipp für Wochenendwanderungen — mit der Straßenbahn erreichbar und völlig kostenlos.</p>
+<p>Ein Felstal am Rande Prags. Die Herbstfarben sind gut, das Wochenend-Wanderpublikum ist eher lokal als touristisch, und die Anfahrt ist nur eine <a href="https://www.prague.eu/en/object/places/823/divoka-sarka" target="_blank" rel="noopener noreferrer">Straßenbahnfahrt vom Zentrum</a>. Kostenlos.</p>
 
-<h3>Vinohrady & Žižkov im Herbst</h3>
-<p>Die baumgesäumten Alleen von Vinohrady — besonders Mánesova und Blanická — leuchten im Herbst. Kombinieren Sie den Besuch mit den ausgezeichneten Cafés und Weinbars des Viertels, die ihre Herbstmenüs auflegen.</p>
+<h3>Vinohrady und Žižkov im Herbst</h3>
+<p>Die baumgesäumten Alleen von Vinohrady, besonders Mánesova und Blanická, sind im Oktober am besten. Spazieren gehen, dann in einer der Weinbars des Viertels einkehren, die gerade auf ihre Herbstkarte umstellen.</p>
 
-<h3>Vyšehrad-Festung im Herbstnebel</h3>
-<p>Der hoch gelegene Vyšehrad hat einen weiten Stadtblick und einen berühmten Friedhof. Im Herbstnebel wirkt er zutiefst atmosphärisch — weniger besucht als die Burg und kontemplativer.</p>
+<h3>Vyšehrad im Herbstnebel</h3>
+<p>Der hoch gelegene <a href="https://www.praha-vysehrad.cz/en" target="_blank" rel="noopener noreferrer">Vyšehrad</a> hat Stadtblicke und einen berühmten Friedhof. Im Nebel bekommt er eine Qualität, die das Burgviertel nicht hat: Ruhe. Weniger besucht, mehr Platz zum Nachdenken.</p>
 
-<h2>Weinlese & Lebensmittelfestivals</h2>
-<p>Im September kommen mährische Weinlesefeste nach Prag. Halten Sie Ausschau nach dem <strong>Vinobraní na Václavském náměstí</strong> (Weinlese auf dem Wenzelsplatz) — Weinstände, Volksmusik und Burčák (teilvergorener Wein), eine tschechische Herbsttradition.</p>
+<h2>Weinlese und Food-Festivals</h2>
+<p>Im September kommen mährische Weinlesefeste nach Prag. Halten Sie Ausschau nach <strong>Vinobraní na Václavském náměstí</strong> (Weinlese auf dem Wenzelsplatz): Weinstände, Volksmusik und der neue Burčák (teilvergorener Wein). Burčák gibt es nur wenige Wochen im Jahr. Er schmeckt süß und harmlos, und er ist es nicht.</p>
 
 <h2>Herbst-Events</h2>
 <ul>
-  <li><strong>Signal Festival</strong> (Oktober) — Lichtkunstinstallationen, die Altstadtfassaden und Denkmäler nach Einbruch der Dunkelheit verwandeln. Kostenlos zu erkunden.</li>
-  <li><strong>Dvořák Prag Festival Finale</strong> (September) — letzte Freiluftkonzerte am Rudolfinum und auf Stadtplätzen.</li>
-  <li><strong>Vorbereitung der Weihnachtsmärkte</strong> (Ende November) — der Altstädter Ring verwandelt sich vor dem Advent mit den ersten hölzernen Buden und Lichtern.</li>
+  <li><strong><a href="https://www.signalfestival.com/en/" target="_blank" rel="noopener noreferrer">Signal Festival</a></strong> (Oktober). Lichtkunstinstallationen auf Altstadtfassaden und an Denkmälern nach Einbruch der Dunkelheit. Kostenlos. Unter der Woche weniger voll.</li>
+  <li><strong><a href="https://www.dvorakovapraha.cz/en/" target="_blank" rel="noopener noreferrer">Dvořák Prag Festival</a> Finale</strong> (September). Letzte Freiluftkonzerte am Rudolfinum und auf Stadtplätzen.</li>
+  <li><strong>Vorbereitung der Weihnachtsmärkte</strong> (Ende November). Der Altstädter Ring verwandelt sich vor dem Advent mit den ersten hölzernen Buden und Lichtern.</li>
 </ul>
 
 <h2>Praktische Herbsttipps</h2>
 <ul>
-  <li>Oktober ist der süße Fleck: Das Laub erreicht seinen Höhepunkt, die Massen werden nach Monatsmitte dünner und das Licht ist außergewöhnlich.</li>
-  <li>Eine wasserfeste Schicht mitbringen — Herbstregen ist leicht, aber häufig, besonders im November.</li>
-  <li>Die Café-Kultur gedeiht im Herbst: Prag hat hervorragende unabhängige Cafés, perfekt für eine Regenstunde.</li>
-  <li>Signal-Festival-Nächte sind im Stadtzentrum belebt — gehen Sie unter der Woche für ein ruhigeres Erlebnis.</li>
+  <li>Oktober ist der Monat, in dem alles zusammenkommt: Laub am Höhepunkt, Massen werden nach Monatsmitte dünner, das Licht bekommt diesen flachen Winkel.</li>
+  <li>Wasserfeste Schicht mitbringen. Herbstregen ist leicht, aber häufig, besonders im November.</li>
+  <li>Prags unabhängige Cafés sind am besten, wenn man eine Stunde lang einen warmen Platz braucht. Probieren Sie <a href="https://www.doubleshot.cz/en/" target="_blank" rel="noopener noreferrer">Doubleshot</a> oder <a href="https://kavfrancouzskeho.cz/" target="_blank" rel="noopener noreferrer">Kaváren Francouzského</a>.</li>
+  <li>Signal-Festival-Nächte sind im Zentrum voll. Unter der Woche hingehen.</li>
 </ul>
 
 <div class="blog-cta-box">
-  <h3>Erleben Sie Prags goldene Jahreszeit</h3>
-  <p>Herbstspaziergänge durch laubbedeckte Innenhöfe, Signal-Festival-Routen und die besten Speisen und Weine der Saison — lassen Sie mich Ihren perfekten Herbsttag planen.</p>
+  <h3>Ein Herbstspaziergang mit einer Einheimischen</h3>
+  <p>Ich nehme Sie mit durch die Innenhöfe, wenn das Laub liegt, vorbei an den Signal-Installationen, wenn das Timing stimmt, und zu den Weinbars, die den Umweg wert sind. Sagen Sie mir, was Sie interessiert.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Prag%20Herbsttour#contact-title">Herbsttour buchen</a>
     <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>

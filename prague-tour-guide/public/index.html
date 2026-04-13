@@ -32,31 +32,177 @@
 
     <!-- Algolia -->
     <meta name="algolia-site-verification"  content="1F2583F68E3BF322" />
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://zuzapragtour.de/" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: LocalBusiness + Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "TouristInformationCenter",
-      "name": "Zuza Prague Tours",
-      "description": "Professionelle Stadtführungen in Prag mit zertifizierter Tour Guide Zuzana Manova – mehr als 40 Jahre Erfahrung, deutschsprachig und persönlich.",
-      "url": "https://zuzapragtour.de",
-      "telephone": "+420-721-231-933",
-      "email": "zuzanamanova@email.cz",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Prag",
-        "addressCountry": "CZ"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "50.0755",
-        "longitude": "14.4378"
-      },
-      "priceRange": "€€",
-      "knowsLanguage": ["Deutsch", "Tschechisch", "Englisch"]
+      "@graph": [
+        {
+          "@type": "TravelAgency",
+          "@id": "https://zuzapragtour.de/#business",
+          "name": "Zuza Prague Tours",
+          "alternateName": "Zuza Prag Tours",
+          "description": "Private certified tour guide service in Prague. German- and English-speaking guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Run by Ing. Zuzana Manova since 1986.",
+          "url": "https://zuzapragtour.de",
+          "telephone": "+420 721 231 933",
+          "email": "zuzanamanova@email.cz",
+          "image": "https://zuzapragtour.de/images/zuzana-portrait.jpg",
+          "logo": "https://zuzapragtour.de/favicon.ico",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Prague",
+            "addressRegion": "Prague",
+            "addressCountry": "CZ"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.0755,
+            "longitude": 14.4378
+          },
+          "priceRange": "€€",
+          "currenciesAccepted": "CZK, EUR",
+          "paymentAccepted": "Cash, Bank Transfer",
+          "areaServed": {
+            "@type": "City",
+            "name": "Prague",
+            "sameAs": "https://en.wikipedia.org/wiki/Prague"
+          },
+          "knowsLanguage": ["de", "en", "cs"],
+          "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "value": 1
+          },
+          "founder": { "@id": "https://zuzapragtour.de/#guide" },
+          "employee": { "@id": "https://zuzapragtour.de/#guide" },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html",
+            "https://www.tourhq.com/guide/CZ56896/zuzana-manova",
+            "https://www.instagram.com/erlebnis_tour_prag/"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Prague Walking Tours",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "TouristTrip",
+                  "name": "Prague Castle & Royal District",
+                  "description": "Guided tour of Prague Castle complex, St. Vitus Cathedral, and Golden Lane.",
+                  "touristType": "History & Architecture",
+                  "availableLanguage": ["de", "en"]
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "TouristTrip",
+                  "name": "Old Town & Jewish Quarter",
+                  "description": "Walking tour through medieval Old Town, Astronomical Clock, Charles Bridge, and the historic Jewish Quarter.",
+                  "touristType": "Cultural Heritage",
+                  "availableLanguage": ["de", "en"]
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "TouristTrip",
+                  "name": "Hidden Prague",
+                  "description": "Off-the-beaten-path tour of secret gardens, hidden courtyards, and local spots most tourists never find.",
+                  "touristType": "Off The Beaten Path",
+                  "availableLanguage": ["de", "en"]
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "TouristTrip",
+                  "name": "Prague's German Heritage",
+                  "description": "Tour highlighting Prague's rich German cultural heritage from medieval times to modern history.",
+                  "touristType": "Cultural Heritage",
+                  "availableLanguage": ["de", "en"]
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "TouristTrip",
+                  "name": "Václav Havel Tour: Sites of Freedom",
+                  "description": "Follow Václav Havel's story through key sites of the Velvet Revolution and his cultural legacy.",
+                  "touristType": "History",
+                  "availableLanguage": ["de", "en"]
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "TouristTrip",
+                  "name": "Custom Private Tour",
+                  "description": "Fully personalized Prague tour tailored to your interests: history, architecture, food, literature, or a mix.",
+                  "touristType": "Leisure",
+                  "availableLanguage": ["de", "en"]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://zuzapragtour.de/#guide",
+          "name": "Ing. Zuzana Manova",
+          "givenName": "Zuzana",
+          "familyName": "Manova",
+          "honorificPrefix": "Ing.",
+          "jobTitle": "Certified Tour Guide",
+          "description": "Professional Prague tour guide since 1986 with 40+ years of experience. Certified by the Czech Republic and accredited by the Jewish Museum in Prague.",
+          "url": "https://zuzapragtour.de",
+          "image": "https://zuzapragtour.de/images/zuzana-portrait.jpg",
+          "telephone": "+420 721 231 933",
+          "email": "zuzanamanova@email.cz",
+          "knowsLanguage": ["de", "en", "cs"],
+          "worksFor": { "@id": "https://zuzapragtour.de/#business" },
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Czech Republic Certified Tour Guide",
+              "credentialCategory": "Professional License"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Jewish Museum in Prague Accreditation",
+              "credentialCategory": "Specialist Certification",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Jewish Museum in Prague",
+                "url": "https://www.jewishmuseum.cz"
+              }
+            }
+          ],
+          "knowsAbout": [
+            "Prague history",
+            "Prague Castle",
+            "Jewish Quarter Prague",
+            "Czech Jewish heritage",
+            "Velvet Revolution",
+            "Václav Havel",
+            "Franz Kafka",
+            "Prague architecture",
+            "German-Czech cultural relations"
+          ],
+          "sameAs": [
+            "https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html",
+            "https://www.tourhq.com/guide/CZ56896/zuzana-manova",
+            "https://www.instagram.com/erlebnis_tour_prag/"
+          ]
+        }
+      ]
     }
     </script>
 

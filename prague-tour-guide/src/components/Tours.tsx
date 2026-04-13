@@ -150,6 +150,34 @@ const Tours: React.FC = () => {
           ))}
         </div>
       </section>
+
+      <section className="mx-auto max-w-3xl px-8 pb-16">
+        <h2 className="mb-8 text-center font-headline text-3xl text-primary">{t('tours.faq.title')}</h2>
+        <div className="space-y-6">
+          {([
+            { q: 'tours.faq.q1', a: 'tours.faq.a1' },
+            { q: 'tours.faq.q2', a: 'tours.faq.a2' },
+            { q: 'tours.faq.q3', a: 'tours.faq.a3' },
+            { q: 'tours.faq.q4', a: 'tours.faq.a4' },
+            { q: 'tours.faq.q5', a: 'tours.faq.a5' },
+          ] as const).map(({ q, a }) => (
+            <details
+              key={q}
+              className="group rounded-xl border border-outline-variant/20 bg-surface-container-lowest"
+            >
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-headline text-lg text-on-surface">
+                {t(q as any)}
+                <span className="material-symbols-outlined text-primary transition-transform group-open:rotate-180">
+                  expand_more
+                </span>
+              </summary>
+              <p className="px-6 pb-5 leading-relaxed text-on-surface-variant">
+                {t(a as any)}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

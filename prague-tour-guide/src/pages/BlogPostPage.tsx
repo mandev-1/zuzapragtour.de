@@ -135,6 +135,11 @@ const BlogPostPage: React.FC = () => {
           }`}
         />
         <link rel="canonical" href={`https://zuzapragtour.de/blog/${slugForUrl}`} />
+        <link rel="alternate" hrefLang="en" href={`https://zuzapragtour.de/blog/${post.slug}`} />
+        {(post as any).slugDe && (
+          <link rel="alternate" hrefLang="de" href={`https://zuzapragtour.de/blog/${(post as any).slugDe}`} />
+        )}
+        <link rel="alternate" hrefLang="x-default" href={`https://zuzapragtour.de/blog/${post.slug}`} />
         <meta property="og:title" content={`${t(post.titleKey as any)} | Zuza Prague Tours`} />
         <meta property="og:description" content={t(post.excerptKey as any)} />
         <meta property="og:url" content={`https://zuzapragtour.de/blog/${slugForUrl}`} />

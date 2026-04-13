@@ -236,16 +236,16 @@ export const translations = {
     de: 'Ihre Prager Führerin',
   },
   'about.intro': {
-    en: "Hi, I'm Ing. Zuzana Manová! With 40 years of experience as a certified tour guide, I've been sharing the beauty and history of Prague with travelers from around the world.",
-    de: 'Hallo, ich bin Ing. Zuzana Manová! Mit 40 Jahren Erfahrung als zertifizierte Reiseführerin teile ich die Schönheit und Geschichte Prags mit Reisenden aus aller Welt.',
+    en: "I'm Ing. Zuzana Manová. I've been guiding people through Prague since 1986. Forty years of watching this city change, keep its secrets, and surprise me. I still learn something new most weeks.",
+    de: 'Ich bin Ing. Zuzana Manová. Seit 1986 führe ich Menschen durch Prag. Vierzig Jahre, in denen ich zugesehen habe, wie sich diese Stadt verändert, ihre Geheimnisse bewahrt und mich überrascht. Die meisten Wochen lerne ich noch etwas Neues.',
   },
   'about.expertise': {
-    en: "As a certified guide with special certification for Prague's Jewish Quarter, I bring history to life with engaging storytelling and personal approach. From students to top executives and military groups, I've guided thousands of visitors through Prague's wonders.",
-    de: 'Als zertifizierte Führerin mit Sonderzertifizierung für das Prager Judenviertel erwecke ich Geschichte mit fesselndem Storytelling und persönlichem Ansatz zum Leben. Von Studenten bis zu Top-Managern und Militärgruppen habe ich Tausende von Besuchern durch Prags Wunder geführt.',
+    en: "I hold the standard Czech guide certification and a separate accreditation from the Jewish Museum in Prague for the Jewish Quarter. Over the years I've walked these streets with school groups, families, corporate boards, film crews, and the occasional diplomat. The tour I give a retired couple from Munich is not the same tour I give a group of architecture students from London, and that's the point.",
+    de: 'Ich habe die reguläre tschechische Stadtführer-Zertifizierung und eine zusätzliche Akkreditierung des Jüdischen Museums in Prag für das Jüdische Viertel. Im Laufe der Jahre bin ich mit Schulklassen, Familien, Vorständen, Filmteams und dem einen oder anderen Diplomaten durch diese Straßen gegangen. Die Tour, die ich einem Rentnerpaar aus München gebe, ist nicht dieselbe wie die für eine Gruppe Architekturstudenten aus London. Genau darum geht es.',
   },
   'about.promise': {
-    en: 'Whether you\'re interested in history, architecture, or hidden gems, I\'ll create an unforgettable experience just for you. Expect the unexpected!',
-    de: 'Ob Sie sich für Geschichte, Architektur oder versteckte Schätze interessieren, ich schaffe ein unvergessliches Erlebnis für Sie. Erwarten Sie das Unerwartete!',
+    en: "Tell me what you're curious about and I'll build the walk around that. If you don't know yet, even better. I have forty years of opinions about where to take you.",
+    de: 'Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser. Ich habe vierzig Jahre Meinungen darüber, wohin ich Sie mitnehmen sollte.',
   },
   'about.cta': {
     en: 'Get in Touch',
@@ -633,8 +633,8 @@ export const translations = {
     de: 'Sprachen',
   },
   'tourinfo.languages.desc': {
-    en: 'Tours available in Czech and German',
-    de: 'Touren verfügbar auf Tschechisch und Deutsch',
+    en: 'Tours available in German, English, and Czech',
+    de: 'Touren verfügbar auf Deutsch, Englisch und Tschechisch',
   },
   'tourinfo.booking.title': {
     en: 'Booking',
@@ -651,6 +651,82 @@ export const translations = {
   'tourinfo.weather.desc': {
     en: 'Tours run year-round! Dress appropriately',
     de: 'Touren das ganze Jahr über! Angemessen kleiden',
+  },
+
+  // Tours FAQ
+  'tours.faq.title': {
+    en: 'Frequently Asked Questions',
+    de: 'Häufig gestellte Fragen',
+  },
+  'tours.faq.q1': {
+    en: 'What languages do you offer tours in?',
+    de: 'In welchen Sprachen bieten Sie Touren an?',
+  },
+  'tours.faq.a1': {
+    en: 'I offer tours in German, English, and Czech. German is my primary touring language and most popular with visitors from Germany, Austria, and Switzerland.',
+    de: 'Ich biete Touren auf Deutsch, Englisch und Tschechisch an. Deutsch ist meine Hauptsprache für Führungen und bei Besuchern aus Deutschland, Österreich und der Schweiz am beliebtesten.',
+  },
+  'tours.faq.q2': {
+    en: 'How long do the tours last?',
+    de: 'Wie lange dauern die Touren?',
+  },
+  'tours.faq.a2': {
+    en: 'Most tours last between 3 and 4 hours. Custom tours can be shorter (2 hours) or longer (up to 6 hours) depending on your interests and schedule.',
+    de: 'Die meisten Touren dauern zwischen 3 und 4 Stunden. Individuelle Touren können kürzer (2 Stunden) oder länger (bis zu 6 Stunden) sein, je nach Ihren Interessen und Zeitplan.',
+  },
+  'tours.faq.q3': {
+    en: 'Can I book a private tour?',
+    de: 'Kann ich eine private Tour buchen?',
+  },
+  'tours.faq.a3': {
+    en: 'Yes! All my tours are private. I guide every tour personally, so you get my full attention. No large group bus tours. I work with individuals, couples, families, and groups of up to 50 people.',
+    de: 'Ja! Alle meine Touren sind privat. Ich führe jede Tour persönlich, Sie haben meine volle Aufmerksamkeit. Keine großen Bustouren. Ich arbeite mit Einzelpersonen, Paaren, Familien und Gruppen von bis zu 50 Personen.',
+  },
+  'tours.faq.q4': {
+    en: 'What is the Jewish Quarter certification?',
+    de: 'Was ist die Zertifizierung für das Jüdische Viertel?',
+  },
+  'tours.faq.a4': {
+    en: 'I hold a special accreditation from the Jewish Museum in Prague, which means I am authorized to provide in-depth guided tours of the Jewish Quarter, including the synagogues, the Old Jewish Cemetery, and the museum collections. Not all guides have this certification.',
+    de: 'Ich besitze eine spezielle Akkreditierung des Jüdischen Museums in Prag, die mich berechtigt, vertiefte Führungen durch das Jüdische Viertel anzubieten, einschließlich der Synagogen, des Alten Jüdischen Friedhofs und der Museumssammlungen. Nicht alle Guides haben diese Zertifizierung.',
+  },
+  'tours.faq.q5': {
+    en: 'How far in advance should I book?',
+    de: 'Wie weit im Voraus sollte ich buchen?',
+  },
+  'tours.faq.a5': {
+    en: 'I recommend booking at least 2 to 4 weeks in advance, especially during peak season (April through October). Last-minute bookings are sometimes possible if I have availability.',
+    de: 'Ich empfehle, mindestens 2 bis 4 Wochen im Voraus zu buchen, besonders in der Hauptsaison (April bis Oktober). Kurzfristige Buchungen sind manchmal möglich, wenn ich verfügbar bin.',
+  },
+
+  // Contact FAQ
+  'contact.faq.title': {
+    en: 'Frequently Asked Questions',
+    de: 'Häufig gestellte Fragen',
+  },
+  'contact.faq.q1': {
+    en: 'How do I book a tour?',
+    de: 'Wie buche ich eine Tour?',
+  },
+  'contact.faq.a1': {
+    en: 'You can book by filling out the contact form on this page, sending me an email at zuzanamanova@email.cz, calling +420 721 231 933, or messaging me on WhatsApp. I respond within 24 hours.',
+    de: 'Sie können buchen, indem Sie das Kontaktformular auf dieser Seite ausfüllen, mir eine E-Mail an zuzanamanova@email.cz senden, mich unter +420 721 231 933 anrufen oder mir auf WhatsApp schreiben. Ich antworte innerhalb von 24 Stunden.',
+  },
+  'contact.faq.q2': {
+    en: 'What is the cancellation policy?',
+    de: 'Wie ist die Stornierungspolitik?',
+  },
+  'contact.faq.a2': {
+    en: 'Free cancellation up to 48 hours before the tour. For cancellations within 48 hours, please contact me directly and we can usually find a solution, such as rescheduling.',
+    de: 'Kostenlose Stornierung bis zu 48 Stunden vor der Tour. Bei Stornierungen innerhalb von 48 Stunden kontaktieren Sie mich bitte direkt, und wir finden in der Regel eine Lösung, wie z.B. eine Terminverschiebung.',
+  },
+  'contact.faq.q3': {
+    en: 'What should I wear and bring?',
+    de: 'Was sollte ich anziehen und mitbringen?',
+  },
+  'contact.faq.a3': {
+    en: 'Wear comfortable walking shoes. Prague has cobblestones, so flat shoes work best. In summer, bring water and sunscreen. In winter, dress warmly in layers. I provide all historical context and stories, so no guidebook needed!',
+    de: 'Tragen Sie bequeme Wanderschuhe. Prag hat Kopfsteinpflaster, flache Schuhe sind am besten. Im Sommer bringen Sie Wasser und Sonnencreme mit. Im Winter kleiden Sie sich warm in Schichten. Ich liefere den gesamten historischen Kontext, kein Reiseführer nötig!',
   },
 
   // Contact Page

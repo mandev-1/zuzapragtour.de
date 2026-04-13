@@ -40,7 +40,6 @@ function readBlogPosts() {
     throw new Error('Could not locate blogPosts array in blogData.ts');
   }
   const arrLiteral = match[1];
-  // Evaluate the JS array literal in a sandbox to obtain objects
   const code = `const data = ${arrLiteral}; data;`;
   const posts = vm.runInNewContext(code, {}, { timeout: 1000 });
   if (!Array.isArray(posts)) {
@@ -48,17 +47,23 @@ function readBlogPosts() {
   }
   return posts.map(p => ({
     slug: p.slug,
+    slugDe: p.slugDe || null,
     date: p.date || todayISO(),
     image: p.image || null,
     titleKey: p.titleKey || '',
   }));
 }
 
-function urlBlock(loc, { lastmod, changefreq, priority, image } = {}) {
+function urlBlock(loc, { lastmod, changefreq, priority, image, hreflang } = {}) {
   let xml = `  <url>\n    <loc>${loc}</loc>\n`;
   if (lastmod) xml += `    <lastmod>${lastmod}</lastmod>\n`;
   if (changefreq) xml += `    <changefreq>${changefreq}</changefreq>\n`;
   if (priority) xml += `    <priority>${priority}</priority>\n`;
+  if (hreflang) {
+    for (const { lang, href } of hreflang) {
+      xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${href}" />\n`;
+    }
+  }
   if (image && image.loc) {
     xml += `    <image:image>\n`;
     xml += `      <image:loc>${image.loc}</image:loc>\n`;
@@ -101,6 +106,7 @@ function generate() {
   const parts = [];
   parts.push('<?xml version="1.0" encoding="UTF-8"?>');
   parts.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"');
+  parts.push('        xmlns:xhtml="http://www.w3.org/1999/xhtml"');
   parts.push('        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">');
   parts.push('');
   // Core pages
@@ -112,12 +118,23 @@ function generate() {
   parts.push(urlBlock(`${SITE}/blog`, { lastmod: pageLastMod['/blog'], changefreq: 'weekly', priority: '0.9' }));
   parts.push(urlBlock(`${SITE}/book`, { lastmod: pageLastMod['/book'], changefreq: 'weekly', priority: '0.85' }));
 
-  // Blog posts
+  // Blog posts (EN + DE variants with hreflang)
   parts.push('');
   posts.forEach(p => {
-    const loc = `${SITE}/blog/${p.slug}`;
+    const enLoc = `${SITE}/blog/${p.slug}`;
+    const deLoc = p.slugDe ? `${SITE}/blog/${p.slugDe}` : null;
     const image = p.image ? { loc: `${SITE}${p.image}`, title: '' } : null;
-    parts.push(urlBlock(loc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image }));
+
+    const hreflangEN = deLoc
+      ? [{ lang: 'en', href: enLoc }, { lang: 'de', href: deLoc }, { lang: 'x-default', href: enLoc }]
+      : null;
+
+    parts.push(urlBlock(enLoc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image, hreflang: hreflangEN }));
+
+    if (deLoc) {
+      const hreflangDE = [{ lang: 'en', href: enLoc }, { lang: 'de', href: deLoc }, { lang: 'x-default', href: enLoc }];
+      parts.push(urlBlock(deLoc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image, hreflang: hreflangDE }));
+    }
   });
 
   parts.push('');
