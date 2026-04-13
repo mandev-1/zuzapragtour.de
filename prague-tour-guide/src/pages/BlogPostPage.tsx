@@ -377,7 +377,7 @@ const BlogPostPage: React.FC = () => {
               <img
                 src={post.image}
                 alt={t(post.titleKey as any)}
-                className="h-auto max-h-[28rem] w-full object-cover"
+                className="h-auto max-h-[28rem] w-full object-cover object-top"
                 loading="eager"
               />
               {post.image === '/images/klementinum-tower.jpg' && (
