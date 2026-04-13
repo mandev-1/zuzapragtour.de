@@ -141,7 +141,7 @@ function generate() {
 
     // English slug -> English meta
     blogRoutes[post.slug] = {
-      title: `${titleVal.en} | Zuza Prague Tours Blog`,
+      title: `${titleVal.en} | Zuza Prague Tours`,
       description: excerptVal.en,
       ogTitle: `${titleVal.en} | Zuza Prague Tours`,
       ogDescription: excerptVal.en,
@@ -156,7 +156,7 @@ function generate() {
     // German slug -> German meta
     if (post.slugDe) {
       blogRoutes[post.slugDe] = {
-        title: `${titleVal.de} | Zuza Prague Tours Blog`,
+        title: `${titleVal.de} | Zuza Prague Tours`,
         description: excerptVal.de,
         ogTitle: `${titleVal.de} | Zuza Prague Tours`,
         ogDescription: excerptVal.de,

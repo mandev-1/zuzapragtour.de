@@ -76,13 +76,13 @@ export default async function handler(
     if (html.includes('rel="canonical"')) {
       html = rewriteTag(
         html,
-        /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
-        `<link rel="canonical" href="${escapeHtml(fallbackCanonical)}" />`
+        /<link[^>]*rel="canonical"\s+href="[^"]*"[^>]*\/?>/,
+        `<link data-rh="true" rel="canonical" href="${escapeHtml(fallbackCanonical)}" />`
       );
     } else {
       html = html.replace(
         "</head>",
-        `  <link rel="canonical" href="${escapeHtml(fallbackCanonical)}" />\n</head>`
+        `  <link data-rh="true" rel="canonical" href="${escapeHtml(fallbackCanonical)}" />\n</head>`
       );
     }
     const fallbackHeaders = new Headers(response.headers);
@@ -98,19 +98,19 @@ export default async function handler(
   // <title>
   html = rewriteTag(html, /<title>[^<]*<\/title>/, `<title>${safeTitle}</title>`);
 
-  // <meta name="title">
-  html = rewriteTag(
-    html,
-    /<meta\s+name="title"\s+content="[^"]*"\s*\/?>/,
-    `<meta name="title" content="${safeTitle}" />`
-  );
-
-  // <meta name="description">
-  html = rewriteTag(
-    html,
-    /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
-    `<meta name="description" content="${safeDesc}" />`
-  );
+  // <meta name="description"> — replace if present (with or without data-rh), otherwise inject
+  if (/<meta[\s\S]*?name="description"/.test(html)) {
+    html = rewriteTag(
+      html,
+      /<meta[^>]*name="description"\s+content="[^"]*"[^>]*\/?>/,
+      `<meta data-rh="true" name="description" content="${safeDesc}" />`
+    );
+  } else {
+    html = html.replace(
+      "</head>",
+      `  <meta data-rh="true" name="description" content="${safeDesc}" />\n</head>`
+    );
+  }
 
   // og:type
   html = rewriteTag(
@@ -175,17 +175,17 @@ export default async function handler(
     `<meta property="twitter:image" content="${escapeHtml(meta.ogImage)}" />`
   );
 
-  // Add canonical link if not present, or replace existing
+  // Add canonical link if not present, or replace existing (handles data-rh attribute)
   if (html.includes('rel="canonical"')) {
     html = rewriteTag(
       html,
-      /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
-      `<link rel="canonical" href="${escapeHtml(meta.canonical)}" />`
+      /<link[^>]*rel="canonical"\s+href="[^"]*"[^>]*\/?>/,
+      `<link data-rh="true" rel="canonical" href="${escapeHtml(meta.canonical)}" />`
     );
   } else {
     html = html.replace(
       "</head>",
-      `  <link rel="canonical" href="${escapeHtml(meta.canonical)}" />\n</head>`
+      `  <link data-rh="true" rel="canonical" href="${escapeHtml(meta.canonical)}" />\n</head>`
     );
   }
 

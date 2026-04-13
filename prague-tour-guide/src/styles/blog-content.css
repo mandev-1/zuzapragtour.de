@@ -71,6 +71,18 @@
   font-family: 'Noto Serif', Georgia, serif;
 }
 
+.blog-content a {
+  color: #93000b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s;
+}
+
+.blog-content a:hover {
+  color: #ba1a1a;
+}
+
 .blog-content p {
   margin-bottom: 1.5rem;
 }

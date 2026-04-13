@@ -124,7 +124,7 @@ const BlogPostPage: React.FC = () => {
     <>
       <Helmet>
         <html lang={language} />
-        <title>{t(post.titleKey as any)} | Zuza Prague Tours Blog</title>
+        <title>{t(post.titleKey as any)} | Zuza Prague Tours</title>
         <meta name="description" content={t(post.excerptKey as any)} />
         <meta
           name="keywords"
@@ -134,7 +134,7 @@ const BlogPostPage: React.FC = () => {
               : 'Prague tours, Prague guide'
           }`}
         />
-        <link rel="canonical" href={`https://zuzapragtour.de/blog/${slug}`} />
+        <link rel="canonical" href={`https://zuzapragtour.de/blog/${slugForUrl}`} />
         <link rel="alternate" hrefLang="en" href={`https://zuzapragtour.de/blog/${post.slug}`} />
         {(post as any).slugDe && (
           <link rel="alternate" hrefLang="de" href={`https://zuzapragtour.de/blog/${(post as any).slugDe}`} />
@@ -473,7 +473,7 @@ const BlogPostPage: React.FC = () => {
                       >
                         <img
                           src={rel.image}
-                          alt=""
+                          alt={t(rel.titleKey as any)}
                           className="h-14 w-14 shrink-0 rounded-md object-cover"
                           loading="lazy"
                         />
@@ -496,7 +496,7 @@ const BlogPostPage: React.FC = () => {
             <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
               <img
                 src="/images/old-town-square.jpg"
-                alt=""
+                alt={t('blog.featuredTour.title' as any)}
                 className="h-28 w-full rounded-md object-cover"
                 loading="lazy"
               />

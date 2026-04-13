@@ -39,7 +39,7 @@ const Blog: React.FC = () => {
                 className="block"
               >
                 <div className="h-52 overflow-hidden">
-                  <img src={thumbOf(post.image)} alt="" className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                  <img src={thumbOf(post.image)} alt={t(post.titleKey as any)} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
                 </div>
               </Link>
               <div className="flex flex-1 flex-col p-6">
