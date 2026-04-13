@@ -307,12 +307,12 @@ export const translations = {
     de: 'Persönlich · Zertifiziert · Lokal',
   },
   'home.hero.line1': {
-    en: 'Discover Prague',
-    de: 'Entdecken Sie Prag',
+    en: 'Zuzana Manova –',
+    de: 'Zuzana Manova –',
   },
   'home.hero.line2': {
-    en: 'with Zuzana',
-    de: 'mit Zuzana',
+    en: 'Private Prague Tour Guide',
+    de: 'Private Stadtführerin in Prag',
   },
   'home.meta1': {
     en: '40+ years of experience',
@@ -1772,6 +1772,141 @@ export const translations = {
   <li>Bequeme Schuhe—Pflaster und Steigungen zwischen Petřín und Burg können anspruchsvoll sein.</li>
   </ul>
 <p class="lead">Möchten Sie eine ruhige <strong>Strahov + Burg</strong>-Route mit den besten Aussichtspunkten? <a href="/book?tour=Individuelle%20Privattour#contact-title">Private Tour buchen</a>—ich passe den Spaziergang an Ihr Tempo an.</p>`
+  },
+
+  // ────── Zuzana Manova personal page ──────
+
+  'zm.hero.h1': {
+    en: 'Zuzana Manova – Private Prague Tour Guide',
+    de: 'Zuzana Manova – Private Stadtführerin in Prag',
+  },
+  'zm.hero.subtitle': {
+    en: 'Certified tour guide with 40 years of experience. I show you Prague through the eyes of someone who grew up with its streets, its revolutions, and its stories.',
+    de: 'Zertifizierte Stadtführerin mit 40 Jahren Erfahrung. Ich zeige Ihnen Prag durch die Augen einer Pragerin – mit Geschichten, die Sie in keinem Reiseführer finden.',
+  },
+  'zm.bio.title': {
+    en: 'About Zuzana Manova',
+    de: 'Über Zuzana Manova',
+  },
+  'zm.bio.p1': {
+    en: 'My name is Zuzana Manova and I have been a professional tour guide in Prague since 1986. I studied at the Czech Technical University (Ing.) and spent years working as an engineer before the Velvet Revolution in 1989 opened new possibilities. I pivoted to what I had always been passionate about: sharing my city with visitors from around the world.',
+    de: 'Mein Name ist Zuzana Manova und ich bin seit 1986 professionelle Stadtführerin in Prag. Ich habe an der Tschechischen Technischen Universität studiert (Ing.) und als Ingenieurin gearbeitet, bevor die Samtene Revolution 1989 neue Möglichkeiten eröffnete. Seitdem widme ich mich dem, was mich schon immer begeistert hat: meine Stadt mit Besuchern aus aller Welt zu teilen.',
+  },
+  'zm.bio.p2': {
+    en: 'Prague is not just where I work – it is where I grew up, where I lived through Communism, where I joined the revolution, and where I raised my family. When I guide you through the Old Town, across the Charles Bridge, or up to Prague Castle, I am sharing four decades of personal memories alongside centuries of history.',
+    de: 'Prag ist nicht nur mein Arbeitsplatz – es ist die Stadt, in der ich aufgewachsen bin, den Kommunismus erlebt habe, an der Revolution teilnahm und meine Familie großgezogen habe. Wenn ich Sie durch die Altstadt, über die Karlsbrücke oder zur Prager Burg führe, teile ich vier Jahrzehnte persönlicher Erinnerungen mit Jahrhunderten von Geschichte.',
+  },
+  'zm.bio.p3': {
+    en: 'As an accredited guide at the Jewish Museum in Prague, I hold a specialist certification that allows me to offer in-depth tours of the Jewish Quarter – from the Old Jewish Cemetery to the synagogues – with the context and sensitivity the subject deserves. I guide in German and English.',
+    de: 'Als akkreditierte Führerin am Jüdischen Museum in Prag halte ich eine Spezialisierungszertifizierung, die mir ermöglicht, tiefgehende Führungen durch das Jüdische Viertel anzubieten – vom Alten Jüdischen Friedhof bis zu den Synagogen – mit dem Kontext und der Sensibilität, die das Thema verdient. Ich führe auf Deutsch und Englisch.',
+  },
+  'zm.cred.1.title': {
+    en: 'Certified Tour Guide',
+    de: 'Zertifizierte Stadtführerin',
+  },
+  'zm.cred.1.desc': {
+    en: 'Licensed by the Czech Republic since 1986. Over 40 years of guiding experience in Prague.',
+    de: 'Lizenziert in der Tschechischen Republik seit 1986. Über 40 Jahre Führungserfahrung in Prag.',
+  },
+  'zm.cred.2.title': {
+    en: 'Jewish Museum Accredited',
+    de: 'Jüdisches Museum akkreditiert',
+  },
+  'zm.cred.2.desc': {
+    en: 'Specialist accreditation for the Jewish Quarter, including all synagogues and the Old Jewish Cemetery.',
+    de: 'Spezialisierte Akkreditierung für das Jüdische Viertel, einschließlich aller Synagogen und des Alten Jüdischen Friedhofs.',
+  },
+  'zm.cred.3.title': {
+    en: 'German & English',
+    de: 'Deutsch & Englisch',
+  },
+  'zm.cred.3.desc': {
+    en: 'Fluent in both languages with native-level Czech – no interpreter needed.',
+    de: 'Fließend in beiden Sprachen mit muttersprachlichem Tschechisch – kein Dolmetscher nötig.',
+  },
+  'zm.offer.title': {
+    en: 'What Zuzana Manova Offers',
+    de: 'Was Zuzana Manova anbietet',
+  },
+  'zm.offer.p1': {
+    en: 'Every tour with Zuzana Manova is private and tailored to your interests. Whether you have three hours or a full day, I design the route around what matters to you: architecture, history, food, hidden courtyards, or a bit of everything.',
+    de: 'Jede Tour mit Zuzana Manova ist privat und auf Ihre Interessen zugeschnitten. Ob Sie drei Stunden oder einen ganzen Tag haben – ich gestalte die Route nach Ihren Wünschen: Architektur, Geschichte, Essen, versteckte Innenhöfe oder von allem etwas.',
+  },
+  'zm.offer.p2': {
+    en: 'I do not use scripts or rush through a checklist. My tours are conversations – and the best ones happen when you ask the questions you genuinely want answered.',
+    de: 'Ich verwende keine vorgefertigten Texte und hetze nicht durch eine Checkliste. Meine Touren sind Gespräche – und die besten entstehen, wenn Sie die Fragen stellen, die Sie wirklich interessieren.',
+  },
+  'zm.tour.1': {
+    en: 'Old Town & Jewish Quarter Private Tour',
+    de: 'Altstadt & Jüdisches Viertel Privattour',
+  },
+  'zm.tour.2': {
+    en: 'Prague Castle Guided Tour',
+    de: 'Prager Burg Führung',
+  },
+  'zm.tour.3': {
+    en: 'Full-Day Prague Experience',
+    de: 'Ganztägige Prag-Erfahrung',
+  },
+  'zm.tour.4': {
+    en: 'Custom Private Tour',
+    de: 'Individuelle Privattour',
+  },
+  'zm.faq.title': {
+    en: 'Frequently Asked Questions about Zuzana Manova',
+    de: 'Häufig gestellte Fragen zu Zuzana Manova',
+  },
+  'zm.faq.q1': {
+    en: 'Who is Zuzana Manova?',
+    de: 'Wer ist Zuzana Manova?',
+  },
+  'zm.faq.a1': {
+    en: 'Zuzana Manova (Ing.) is a certified Prague tour guide who has been leading private tours since 1986. She is a native Praguer with accreditation from the Jewish Museum in Prague and offers tours in German and English.',
+    de: 'Zuzana Manova (Ing.) ist eine zertifizierte Prager Stadtführerin, die seit 1986 private Führungen anbietet. Sie ist gebürtige Pragerin mit Akkreditierung am Jüdischen Museum in Prag und führt auf Deutsch und Englisch.',
+  },
+  'zm.faq.q2': {
+    en: 'What languages does Zuzana Manova speak?',
+    de: 'Welche Sprachen spricht Zuzana Manova?',
+  },
+  'zm.faq.a2': {
+    en: 'Zuzana Manova offers tours in German and English. She is a native Czech speaker and communicates fluently in all three languages during tours.',
+    de: 'Zuzana Manova bietet Führungen auf Deutsch und Englisch an. Sie ist tschechische Muttersprachlerin und kommuniziert fließend in allen drei Sprachen während der Touren.',
+  },
+  'zm.faq.q3': {
+    en: 'How can I book a tour with Zuzana Manova?',
+    de: 'Wie kann ich eine Tour mit Zuzana Manova buchen?',
+  },
+  'zm.faq.a3': {
+    en: 'You can send a tour inquiry through the booking form on this website, call +420 721 231 933, or send a WhatsApp message. Zuzana typically responds within a few hours.',
+    de: 'Sie können eine Touranfrage über das Buchungsformular auf dieser Website senden, unter +420 721 231 933 anrufen oder eine WhatsApp-Nachricht schicken. Zuzana antwortet in der Regel innerhalb weniger Stunden.',
+  },
+  'zm.faq.q4': {
+    en: 'Is Zuzana Manova a certified tour guide?',
+    de: 'Ist Zuzana Manova eine zertifizierte Stadtführerin?',
+  },
+  'zm.faq.a4': {
+    en: 'Yes. Zuzana Manova holds an official Czech Republic tour guide license and is additionally accredited by the Jewish Museum in Prague for specialized tours of the Jewish Quarter.',
+    de: 'Ja. Zuzana Manova besitzt eine offizielle Stadtführerlizenz der Tschechischen Republik und ist zusätzlich beim Jüdischen Museum in Prag für spezialisierte Führungen durch das Jüdische Viertel akkreditiert.',
+  },
+  'zm.faq.q5': {
+    en: 'What makes Zuzana Manova different from other Prague tour guides?',
+    de: 'Was unterscheidet Zuzana Manova von anderen Prager Stadtführern?',
+  },
+  'zm.faq.a5': {
+    en: 'With over 40 years of experience, Zuzana Manova brings personal stories from living through Communism and the Velvet Revolution. Her tours are private, unhurried, and adapted to each visitor. She is one of the longest-serving licensed guides in Prague.',
+    de: 'Mit über 40 Jahren Erfahrung bringt Zuzana Manova persönliche Geschichten aus der Zeit des Kommunismus und der Samtenen Revolution ein. Ihre Touren sind privat, ohne Zeitdruck und auf jeden Besucher zugeschnitten. Sie ist eine der am längsten tätigen lizenzierten Stadtführerinnen in Prag.',
+  },
+  'zm.cta.title': {
+    en: 'Discover Prague with Zuzana Manova',
+    de: 'Entdecken Sie Prag mit Zuzana Manova',
+  },
+  'zm.cta.subtitle': {
+    en: 'Four decades of stories, one unforgettable tour.',
+    de: 'Vier Jahrzehnte voller Geschichten, eine unvergessliche Tour.',
+  },
+  'nav.zuzana': {
+    en: 'About Zuzana',
+    de: 'Über Zuzana',
   },
 };
 

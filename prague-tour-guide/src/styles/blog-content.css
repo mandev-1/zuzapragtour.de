@@ -119,3 +119,36 @@
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
+
+.blog-cta-box .btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: opacity 0.15s, background-color 0.15s;
+}
+
+.blog-cta-box .btn-primary {
+  background-color: #93000b;
+  color: #fff;
+  border: 2px solid #93000b;
+}
+
+.blog-cta-box .btn-primary:hover {
+  background-color: #ba1a1a;
+  border-color: #ba1a1a;
+  color: #fff;
+}
+
+.blog-cta-box .btn-outline {
+  background-color: transparent;
+  color: #93000b;
+  border: 2px solid #93000b;
+}
+
+.blog-cta-box .btn-outline:hover {
+  background-color: #93000b;
+  color: #fff;
+}

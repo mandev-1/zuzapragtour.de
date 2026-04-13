@@ -165,7 +165,7 @@ const Footer: React.FC = () => {
               {[
                 { to: '/', label: t('nav.home') },
                 { to: '/tours', label: t('nav.tours') },
-                { to: '/#about', label: t('nav.about') },
+                { to: '/zuzana-manova', label: t('nav.zuzana') },
                 { to: '/blog', label: t('nav.blog') },
                 { to: '/contact#contact-title', label: t('nav.contact') },
                 { to: '/book#contact-title', label: t('contact.booking.header.title') },

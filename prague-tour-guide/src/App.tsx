@@ -13,6 +13,7 @@ import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import ZuzanaManovaPage from './pages/ZuzanaManovaPage';
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -29,6 +30,7 @@ const App: React.FC = () => {
                 <Route path="/book" element={<BookPage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
+                <Route path="/zuzana-manova" element={<ZuzanaManovaPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
               </Routes>

@@ -39,12 +39,9 @@ const Header: React.FC = () => {
         <NavLink to="/tours" className={linkClass}>
           {t('nav.tours')}
         </NavLink>
-        <Link
-          to={{ pathname: '/', hash: '#about' }}
-          className="font-label text-sm text-slate-700 transition-colors hover:text-primary"
-        >
-          {t('nav.about')}
-        </Link>
+        <NavLink to="/zuzana-manova" className={linkClass}>
+          {t('nav.zuzana')}
+        </NavLink>
         <NavLink to="/blog" className={linkClass}>
           {t('nav.blog')}
         </NavLink>
@@ -108,13 +105,9 @@ const Header: React.FC = () => {
             <NavLink to="/tours" className={linkClass} onClick={close}>
               {t('nav.tours')}
             </NavLink>
-            <Link
-              to={{ pathname: '/', hash: '#about' }}
-              className="py-2 font-label text-sm text-slate-700 hover:text-primary"
-              onClick={close}
-            >
-              {t('nav.about')}
-            </Link>
+            <NavLink to="/zuzana-manova" className={linkClass} onClick={close}>
+              {t('nav.zuzana')}
+            </NavLink>
             <NavLink to="/blog" className={linkClass} onClick={close}>
               {t('nav.blog')}
             </NavLink>

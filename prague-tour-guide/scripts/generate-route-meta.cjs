@@ -45,12 +45,12 @@ function generate() {
 
   const staticRoutes = {
     '/': {
-      title: 'Zuza Prague Tours \u2013 Zertifizierte deutschsprachige Stadtf\u00fchrerin in Prag | Zuzana Manova',
+      title: 'Zuzana Manova | Private Prag-Stadtf\u00fchrungen \u2013 ZuzaPragTour',
       description:
-        'Entdecken Sie Prag mit einer zertifizierten, deutschsprachigen Stadtf\u00fchrerin \u2013 \u00fcber 40 Jahre Erfahrung! Private Stadtf\u00fchrungen, individuelle Touren & Insider-Tipps zu Altstadt, Karlsbr\u00fccke und Prager Burg. Jetzt Ihre deutsch gef\u00fchrte Prag-Tour buchen!',
-      ogTitle: 'Zuza Prague Tours \u2013 Deutschsprachige zertifizierte Stadtf\u00fchrerin',
+        'Zuzana Manova \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen auf Deutsch durch Altstadt, Karlsbr\u00fccke und Prager Burg. \u00dcber 40 Jahre Erfahrung, individuell und authentisch. Jetzt buchen!',
+      ogTitle: 'Zuzana Manova | Private Prag-Stadtf\u00fchrungen',
       ogDescription:
-        'Erleben Sie Prag mit einer deutschsprachigen Expertin. Private und individuelle Stadtf\u00fchrungen \u2013 pers\u00f6nlich und authentisch.',
+        'Zuzana Manova \u2013 Ihre private Stadtf\u00fchrerin in Prag seit 1986. Zertifizierte F\u00fchrungen durch Altstadt, Karlsbr\u00fccke und Prager Burg.',
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/`,
       canonical: `${SITE}/`,
@@ -100,6 +100,18 @@ function generate() {
       ogUrl: `${SITE}/blog`,
       canonical: `${SITE}/blog`,
       ogType: 'website',
+    },
+    '/zuzana-manova': {
+      title: 'Zuzana Manova \u2013 Private Stadtf\u00fchrerin in Prag | Zuza Prague Tours',
+      description:
+        'Ing. Zuzana Manova f\u00fchrt seit 1986 Besucher durch Prag. Zertifizierte Stadtf\u00fchrerin, akkreditiert beim J\u00fcdischen Museum. Deutsche und englische Privatf\u00fchrungen.',
+      ogTitle: 'Zuzana Manova \u2013 Private Stadtf\u00fchrerin in Prag',
+      ogDescription:
+        '\u00dcber 40 Jahre Erfahrung als Prager Stadtf\u00fchrerin. Private Touren auf Deutsch und Englisch.',
+      ogImage: `${SITE}/images/zuzana-portrait.jpg`,
+      ogUrl: `${SITE}/zuzana-manova`,
+      canonical: `${SITE}/zuzana-manova`,
+      ogType: 'profile',
     },
     '/privacy': {
       title: 'Datenschutz | Zuza Prague Tours',

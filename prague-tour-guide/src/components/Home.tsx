@@ -236,10 +236,10 @@ const Home: React.FC = () => {
                 {t('hero.exploreTours')}
               </Link>
               <Link
-                to="/contact#contact-title"
+                to="/zuzana-manova"
                 className="rounded-lg border-2 border-primary px-6 py-3 font-label text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-on-primary"
               >
-                {t('about.cta')}
+                {t('nav.zuzana')}
               </Link>
             </div>
           </div>

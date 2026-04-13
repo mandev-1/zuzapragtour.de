@@ -98,6 +98,7 @@ function generate() {
       path.join(ROOT, 'src', 'utils', 'blogData.ts'),
     ],
     '/book': [path.join(ROOT, 'src', 'pages', 'BookPage.tsx')],
+    '/zuzana-manova': [path.join(ROOT, 'src', 'pages', 'ZuzanaManovaPage.tsx')],
   };
   const pageLastMod = Object.fromEntries(
     Object.entries(pageFiles).map(([route, files]) => [route, latestISOFromFiles(files)])
@@ -117,6 +118,7 @@ function generate() {
   parts.push(urlBlock(`${SITE}/contact`, { lastmod: pageLastMod['/contact'], changefreq: 'monthly', priority: '0.8' }));
   parts.push(urlBlock(`${SITE}/blog`, { lastmod: pageLastMod['/blog'], changefreq: 'weekly', priority: '0.9' }));
   parts.push(urlBlock(`${SITE}/book`, { lastmod: pageLastMod['/book'], changefreq: 'weekly', priority: '0.85' }));
+  parts.push(urlBlock(`${SITE}/zuzana-manova`, { lastmod: pageLastMod['/zuzana-manova'], changefreq: 'monthly', priority: '0.9', image: { loc: `${SITE}/images/zuzana-portrait.jpg`, title: 'Zuzana Manova – Prague Tour Guide' } }));
 
   // Blog posts (EN + DE variants with hreflang)
   parts.push('');
