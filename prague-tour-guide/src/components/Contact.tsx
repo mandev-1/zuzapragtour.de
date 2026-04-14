@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -44,6 +44,17 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  /** Focus first field on desktop only — avoids opening the software keyboard on phones. */
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    if (!mq.matches) return;
+    const id = window.requestAnimationFrame(() => {
+      nameInputRef.current?.focus({ preventScroll: true });
+    });
+    return () => window.cancelAnimationFrame(id);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -182,8 +193,14 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
                       {t('form.name')} *
                     </label>
                     <input
-                      id="name" name="name" type="text" required autoFocus
-                      value={formData.name} onChange={handleChange} className={inputClass}
+                      ref={nameInputRef}
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={inputClass}
                     />
                   </div>
                   <div>

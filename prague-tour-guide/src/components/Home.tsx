@@ -87,12 +87,13 @@ const Home: React.FC = () => {
             fetchPriority="high"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-on-surface/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
         </div>
-        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col justify-end px-6 pb-16 sm:px-8 md:pb-24">
+        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col justify-end px-5 pb-12 sm:px-8 md:pb-24">
           <div className="mx-auto w-full max-w-3xl">
+            {/* Badge — single line on mobile, no wrapping */}
             <motion.span
-              className="mb-6 inline-block max-w-[min(100%,22rem)] rounded-full bg-secondary-container px-3 py-1.5 text-center font-label text-[0.65rem] font-bold uppercase leading-snug tracking-wider text-on-secondary-container sm:max-w-none sm:px-4 sm:text-xs sm:tracking-widest"
+              className="mb-4 inline-block rounded-full bg-secondary-container px-3 py-1 font-label text-[0.6rem] font-bold uppercase tracking-widest text-on-secondary-container sm:mb-6 sm:px-4 sm:py-1.5 sm:text-xs"
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -100,7 +101,11 @@ const Home: React.FC = () => {
               {t('home.badge')}
             </motion.span>
 
-            <h1 className="mb-6 font-headline text-4xl leading-tight text-surface-container-lowest text-shadow-sm md:text-6xl lg:text-7xl">
+            {/* H1 — clamp prevents line-break overflow on small screens */}
+            <h1
+              className="mb-5 font-headline leading-tight text-surface-container-lowest"
+              style={{ fontSize: 'clamp(1.75rem, 8vw, 4rem)' }}
+            >
               {t('home.hero.line1')}
               <br />
               <span className="text-secondary-container">{t('home.hero.line2')}</span>
@@ -111,41 +116,45 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="mb-8 flex flex-wrap gap-6 font-medium text-surface-container-lowest">
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xl">schedule</span>
-                  <span>{t('home.meta1')}</span>
+              {/* Trust signals — single compact row, no stacking */}
+              <div className="mb-6 flex items-center gap-4 overflow-x-auto text-sm font-medium text-surface-container-lowest sm:gap-6">
+                <div className="flex flex-none items-center gap-1.5">
+                  <span className="material-symbols-outlined text-base">schedule</span>
+                  <span className="whitespace-nowrap">{t('home.meta1')}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xl">group</span>
-                  <span>{t('home.meta2')}</span>
+                <span className="text-white/30">·</span>
+                <div className="flex flex-none items-center gap-1.5">
+                  <span className="material-symbols-outlined text-base">group</span>
+                  <span className="whitespace-nowrap">{t('home.meta2')}</span>
                 </div>
+                <span className="text-white/30">·</span>
                 <a
                   href={TRIPADVISOR_LISTING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 underline-offset-4 transition-opacity hover:opacity-90"
+                  className="flex flex-none items-center gap-1.5 transition-opacity hover:opacity-90"
                 >
                   <span
-                    className="material-symbols-outlined text-xl text-secondary-container"
+                    className="material-symbols-outlined text-base text-secondary-container"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
                     star
                   </span>
-                  <span>{t('home.meta3')}</span>
+                  <span className="whitespace-nowrap">{t('home.meta3')}</span>
                 </a>
               </div>
 
+              {/* CTAs — primary solid red, secondary frosted glass */}
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   to="/book#contact-title"
-                  className="rounded-lg bg-primary px-7 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95"
+                  className="rounded-lg bg-primary px-7 py-3.5 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95"
                 >
                   {t('hero.sendEnquiry')}
                 </Link>
                 <Link
                   to="/tours"
-                  className="rounded-lg border border-surface-container-lowest/50 px-6 py-3 font-label text-sm font-semibold text-surface-container-lowest backdrop-blur-sm transition-colors hover:border-surface-container-lowest hover:bg-surface-container-lowest/10"
+                  className="rounded-lg border border-white/40 bg-white/10 px-6 py-3.5 font-label text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20"
                 >
                   {t('hero.exploreTours')} →
                 </Link>
@@ -167,11 +176,12 @@ const Home: React.FC = () => {
               {t('home.tours.teaser.viewAll')} →
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {/* Mobile: horizontal scroll snap. Desktop: 3-col grid */}
+          <div className="-mx-5 flex gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
             {TEASER_TOURS.map((tour, i) => (
               <motion.div
                 key={tour.titleKey}
-                className="relative flex flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-sm transition-shadow hover:shadow-md"
+                className="relative flex w-[72vw] flex-none flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-sm transition-shadow hover:shadow-md sm:w-auto"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
