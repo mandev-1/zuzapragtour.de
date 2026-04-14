@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
@@ -11,7 +11,6 @@ const SITE = 'https://zuzapragtour.de';
 const TourPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, language } = useLanguage();
-  const navigate = useNavigate();
 
   const tour = slug ? getTourBySlug(slug) : undefined;
 
