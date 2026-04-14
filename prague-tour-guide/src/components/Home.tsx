@@ -74,7 +74,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-surface">
-      <section className="relative h-[min(88vh,52rem)] w-full overflow-hidden">
+      <section className="relative h-[min(77vh,46rem)] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
             className="h-full w-full object-cover"
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
           <div className="mx-auto w-full max-w-3xl">
             {/* Badge — single line on mobile, no wrapping */}
             <motion.span
-              className="mb-4 inline-block rounded-full bg-secondary-container px-3 py-1 font-label text-[0.6rem] font-bold uppercase tracking-widest text-on-secondary-container sm:mb-6 sm:px-4 sm:py-1.5 sm:text-xs"
+              className="mb-4 hidden rounded-full bg-secondary-container px-4 py-1.5 font-label text-xs font-bold uppercase tracking-widest text-on-secondary-container sm:mb-6 sm:inline-block"
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -116,23 +116,23 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              {/* Trust signals — single compact row, no stacking */}
-              <div className="mb-6 flex items-center gap-4 overflow-x-auto text-sm font-medium text-surface-container-lowest sm:gap-6">
-                <div className="flex flex-none items-center gap-1.5">
+              {/* Trust signals — two on mobile, three on sm+ */}
+              <div className="mb-6 flex items-center gap-3 text-sm font-medium text-surface-container-lowest sm:gap-5">
+                <div className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-base">schedule</span>
                   <span className="whitespace-nowrap">{t('home.meta1')}</span>
                 </div>
                 <span className="text-white/30">·</span>
-                <div className="flex flex-none items-center gap-1.5">
+                <div className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-base">group</span>
                   <span className="whitespace-nowrap">{t('home.meta2')}</span>
                 </div>
-                <span className="text-white/30">·</span>
+                <span className="hidden text-white/30 sm:inline">·</span>
                 <a
                   href={TRIPADVISOR_LISTING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-none items-center gap-1.5 transition-opacity hover:opacity-90"
+                  className="hidden items-center gap-1.5 transition-opacity hover:opacity-90 sm:flex"
                 >
                   <span
                     className="material-symbols-outlined text-base text-secondary-container"
@@ -144,17 +144,17 @@ const Home: React.FC = () => {
                 </a>
               </div>
 
-              {/* CTAs — primary solid red, secondary frosted glass */}
-              <div className="flex flex-wrap items-center gap-3">
+              {/* CTAs — always side by side */}
+              <div className="flex items-center gap-3">
                 <Link
                   to="/book#contact-title"
-                  className="rounded-lg bg-primary px-7 py-3.5 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95"
+                  className="rounded-lg bg-primary px-5 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95 sm:px-7 sm:py-3.5"
                 >
                   {t('hero.sendEnquiry')}
                 </Link>
                 <Link
                   to="/tours"
-                  className="rounded-lg border border-white/40 bg-white/10 px-6 py-3.5 font-label text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20"
+                  className="rounded-lg border border-white/40 bg-white/10 px-5 py-3 font-label text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20 sm:px-6 sm:py-3.5"
                 >
                   {t('hero.exploreTours')} →
                 </Link>
@@ -165,13 +165,13 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-8 py-16 md:py-20">
-        <div className="mb-20">
-          <div className="mb-8 flex items-end justify-between">
-            <h2 className="font-headline text-2xl text-primary md:text-3xl">{t('home.tours.teaser.title')}</h2>
+      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8 md:py-16">
+        <div className="mb-12">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <h2 className="font-headline text-xl text-primary sm:text-2xl md:text-3xl">{t('home.tours.teaser.title')}</h2>
             <Link
               to="/tours"
-              className="font-label text-sm font-semibold text-primary underline-offset-4 hover:underline"
+              className="shrink-0 font-label text-sm font-semibold text-primary underline-offset-4 hover:underline"
             >
               {t('home.tours.teaser.viewAll')} →
             </Link>
@@ -225,7 +225,7 @@ const Home: React.FC = () => {
           {/* Portrait — large, roughly half-width on desktop */}
           <div className="relative flex-none md:w-[44%]">
             <img
-              className="h-72 w-full object-cover object-top sm:h-80 md:h-full md:min-h-[26rem]"
+              className="h-72 w-full object-cover object-[center_15%] sm:h-80 md:h-full md:min-h-[26rem]"
               src={pub('/images/zuzana-portrait.jpg')}
               alt="Zuzana Manová"
             />

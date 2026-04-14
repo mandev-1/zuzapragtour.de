@@ -18,6 +18,29 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '27',
+    slug: 'prague-public-transport-tickets-apps',
+    slugDe: 'oeffentlicher-verkehr-prag-tickets-apps',
+    titleKey: 'blog.post27.title',
+    excerptKey: 'blog.post27.excerpt',
+    dateKey: 'blog.post27.date',
+    date: '2026-04-15',
+    image: '/images/blog-night-prague-min.jpg',
+    contentKey: 'blog.post27.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Prague public transport', 'Lítačka Prague', 'Prague tram tickets', 'Prague metro',
+      'PID Prague', 'DPP Prague', 'Prague travel tips', 'IDOS Prague', 'how to use Prague transport',
+      'Prague bank card tram', 'Prague tourist transport',
+    ],
+    tagsDe: [
+      'ÖPNV Prag', 'Lítačka Prag', 'Straßenbahn Tickets Prag', 'Prager Metro',
+      'PID Prag', 'DPP Prag', 'Prag Reisetipps', 'IDOS Prag', 'Nahverkehr Prag',
+      'Bankkarte Tram Prag', 'Prag Transport Touristen',
+    ],
+    language: 'both',
+  },
+  {
     id: '26',
     slug: 'how-to-exchange-money-czech-crowns',
     slugDe: 'geld-wechseln-tschechische-kronen',

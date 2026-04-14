@@ -7,6 +7,164 @@ export const blogTranslations = {
     de: 'Prag Reiseblog',
   },
 
+  // Post 27
+  'blog.post27.title': {
+    en: 'Prague public transport: tickets, apps, and what actually works',
+    de: 'Öffentlicher Verkehr in Prag: Tickets, Apps und was wirklich funktioniert',
+  },
+  'blog.post27.excerpt': {
+    en: 'Trams, metro, buses: one ticket system, but several ways to pay. Here is how to buy fares without stress, which app locals use first, and where to double-check prices before you travel.',
+    de: 'Straßenbahn, Metro, Bus: ein Tarifsystem, aber mehrere Wege zu zahlen. So kaufen Sie Fahrscheine ohne Stress, welche App die Prager zuerst nutzen und wo Sie die Preise vor der Fahrt prüfen.',
+  },
+  'blog.post27.date': {
+    en: 'April 15, 2026',
+    de: '15. April 2026',
+  },
+  'blog.post27.content': {
+    en: `<p class="lead">Prague is easy to move around in once you stop guessing at ticket machines. Metro, trams, most city buses, and the Vltava ferries in the centre use normal PID tickets. You pay in Czech crowns, not euros, and you buy time (30 or 90 minutes) or a longer pass, not single stops. Two catches tourists miss: ordinary 30 and 90 minute tickets do not work on the Petřín funicular or on the Airport Express (AE) bus. A 24 or 72 hour Prague pass includes the funicular; the AE line still needs its own fare. Details are on <a href="https://pid.cz/en/tariff/" target="_blank" rel="noopener noreferrer">pid.cz/en/tariff</a>.</p>
+
+<p>I still meet visitors who try to pay cash on board. Drivers do not sell tickets on regular lines. You need a valid fare before you step on, or you tap in with a card or phone setup that the system accepts. The rules are strict, the inspectors are polite but firm, and the fine for riding without a ticket hurts.</p>
+
+<div class="blog-inline-image"><img src="/images/charles-bridge-2-min.jpg" alt="Charles Bridge and Prague rooftops" loading="lazy" /><div class="image-credit">Most sights are a short tram or metro ride apart once you have a ticket in your pocket</div></div>
+
+<h2>Who runs what (one network, two names you will see)</h2>
+
+<p><a href="https://www.pid.cz/en" target="_blank" rel="noopener noreferrer">PID</a> (Prague Integrated Transport) is the umbrella: fares, zones, and the official information in English. <a href="https://www.dpp.cz/en" target="_blank" rel="noopener noreferrer">DPP</a> runs the metro, trams, and most buses inside the city. For a normal holiday you stay in the standard Prague area; you do not need a special rural ticket unless you day-trip far out. When in doubt, the route planners below will tell you which ticket length to pick.</p>
+
+<p>Always check current prices on the official tariff page before you travel. Fares change from time to time: <a href="https://pid.cz/en/tariff/" target="_blank" rel="noopener noreferrer">pid.cz/en/tariff</a>.</p>
+
+<h2>Paper tickets and yellow machines</h2>
+
+<p>You can still do it the old way: find a yellow ticket machine at a metro entrance, larger tram stops, or busy hubs. They take coins and cards at many locations. Press the flag for English, pick a 30 or 90 minute ticket or a 24 or 72 hour pass, pay, take the strip ticket. After you board, validate it in the yellow box inside trams and buses, or at the metro gate. First validation starts your clock.</p>
+
+<p>Some newsagents (look for the TABAK / lottery sign) sell PID tickets too. Handy if the machine is broken or the queue is long.</p>
+
+<h2>Lítačka: the app most of us actually use</h2>
+
+<p><a href="https://www.litacka.cz/en" target="_blank" rel="noopener noreferrer">Lítačka</a> is the free official PID app. You can buy the same fares as at the machine, store a virtual PID card, load passes, and show a QR code or digital ticket when an inspector asks. It is not flashy, but it is reliable and it is the one I recommend first.</p>
+
+<p>Download links are on the site: <a href="https://www.litacka.cz/en" target="_blank" rel="noopener noreferrer">litacka.cz/en</a> (App Store and Google Play). Create an account if you want your purchases backed up; for a short trip you can often buy a ticket as a guest-style flow depending on the version. Turn on notifications if you want a reminder before a pass expires.</p>
+
+<div class="blog-inline-image"><img src="/images/old-town-square.jpg" alt="Old Town Square, Prague" loading="lazy" /><div class="image-credit">From the centre, the metro and trams connect you to the castle side, Vinohrady, and the main train station in minutes</div></div>
+
+<h2>Other apps that help (but do not replace a ticket)</h2>
+
+<p><strong>IDOS</strong> (<a href="https://idos.idos.cz/en" target="_blank" rel="noopener noreferrer">idos.idos.cz</a>) is the national journey planner. It is clunky in places, yet it is accurate for connections across Prague and the rest of the country. Use it when you need departure times from a specific stop or when you combine metro with suburban buses.</p>
+
+<p><strong>Mapy.cz</strong> (<a href="https://en.mapy.cz/" target="_blank" rel="noopener noreferrer">en.mapy.cz</a>) is the Czech map service many locals prefer. Public transport layers are clear, walking paths are good, and it works offline if you download a region.</p>
+
+<p><strong>Google Maps</strong> and <strong>Apple Maps</strong> both show Prague transit and are fine for quick directions. I use them to compare walking versus riding; I still buy the ticket in Lítačka or at a machine.</p>
+
+<p><strong>PID live map</strong> (<a href="https://mapa.pid.cz/" target="_blank" rel="noopener noreferrer">mapa.pid.cz</a>) shows trams and buses on a map in real time. Useful when you are deciding whether to wait at the stop or walk to the next line.</p>
+
+<h2>Paying with a bank card on board</h2>
+
+<p>Prague rolled out contactless payments on vehicles and in metro stations. You tap a bank card on the reader when you enter, and the system charges an appropriate short-term fare. Not every foreign card behaves the same way, and the exact product rules live on the operator site. Read the English section here before you rely on it for a whole trip: <a href="https://www.dpp.cz/en" target="_blank" rel="noopener noreferrer">dpp.cz/en</a> (look for fares and bank card / contactless topics in the menu).</p>
+
+<p>If you prefer one app for everything, Lítačka still keeps your history in one place. If you prefer plastic, carry a contactless card and know how to see the charge on your statement.</p>
+
+<h2>Passes that bundle museums and transport</h2>
+
+<p>If you plan heavy sightseeing, compare a tourist pass. The <a href="https://www.praguevisitorpass.com/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> includes public transport for the duration you choose plus entries; worth doing the math against separate tickets and entry fees.</p>
+
+<h2>What goes wrong (and how to avoid it)</h2>
+
+<ul>
+<li><strong>No ticket on you.</strong> Inspectors wear plain clothes and show ID. The penalty is high; ignorance does not help. Buy before you ride.</li>
+<li><strong>Unvalidated paper ticket.</strong> Stamping matters on first use. In the metro, pass through the validators at entry.</li>
+<li><strong>Wrong zone or expired time.</strong> When your minutes run out, buy a new fare before you continue.</li>
+<li><strong>Petřín funicular with only a 30 or 90 minute ticket.</strong> Those tickets are not valid there. Use a 24 or 72 hour Prague pass, buy the separate funicular ticket, or walk up the paths if you are fit.</li>
+<li><strong>Airport Express (AE) versus bus 119.</strong> Normal PID tickets work on the 119 to Nádraží Veleslavín. The AE line uses a different fare; check the operator rules before you board.</li>
+</ul>
+
+<div style="background:#eff6ff;border-left:4px solid #2563eb;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0">
+  <p style="margin:0;font-weight:600;color:#1d4ed8">Small habit that saves stress</p>
+  <p style="margin:0.5rem 0 0">After you buy a digital ticket, screenshot the active screen. If your phone dies, you still have proof while you sort out power. Better yet, carry a cheap power bank on long days.</p>
+</div>
+
+<p>That is the whole idea: pick Lítačka or a machine, pay in crowns, validate or tap once, then ride. Once that is sorted, you can focus on the city instead of the fine print.</p>
+
+<div class="blog-cta-box">
+  <h3>Want to see Prague with someone who uses these lines every week?</h3>
+  <p>I would love to show you the stories behind the stops. Tell me what you want to see and we will build a route that fits your pace.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Send me a message</a>
+    <a class="btn btn-outline" href="/tours">Explore my tours</a>
+  </div>
+</div>`,
+    de: `<p class="lead">In Prag kommt man gut von A nach B, sobald man nicht mehr raten muss, welcher Knopf am Fahrscheinautomaten gemeint ist. Metro, Straßenbahn, die meisten Stadtbusse und die Moldaufähren in der Innenstadt nutzen die normalen PID-Fahrscheine. Man zahlt in Tschechischen Kronen, nicht in Euro, und kauft Zeit (30 oder 90 Minuten) oder eine längere Karte, nicht „eine Fahrt“. Zwei Fallen für Touristen: gewöhnliche 30- und 90-Minuten-Tickets gelten nicht für die Standseilbahn auf den Petřín und nicht für den Airport Express (AE). Eine 24- oder 72-Stunden-Karte für Prag umfasst die Standseilbahn; der AE braucht weiterhin einen eigenen Tarif. Nachlesen auf <a href="https://pid.cz/en/tariff/" target="_blank" rel="noopener noreferrer">pid.cz/en/tariff</a>.</p>
+
+<p>Immer wieder treffe ich Besucher, die an Bord bar zahlen wollen. Auf regulären Linien verkaufen Fahrer keine Tickets. Sie brauchen vor dem Einsteigen einen gültigen Fahrschein, oder Sie checken mit einer Karte oder Handy-Variante ein, die das System akzeptiert. Die Regeln sind klar, die Kontrolleure sind höflich aber konsequent, und das Bußgeld ohne Fahrschein tut weh.</p>
+
+<div class="blog-inline-image"><img src="/images/charles-bridge-2-min.jpg" alt="Karlsbrücke und Prager Dächer" loading="lazy" /><div class="image-credit">Die meisten Sehenswürdigkeiten liegen nach einem kurzen Umstieg mit Tram oder Metro nebeneinander</div></div>
+
+<h2>Wer was betreibt (ein Netz, zwei Namen)</h2>
+
+<p><a href="https://www.pid.cz/en" target="_blank" rel="noopener noreferrer">PID</a> (Prager integrierter Verkehr) ist die Dachmarke: Tarife, Zonen, die offiziellen Infos auch auf Englisch. <a href="https://www.dpp.cz/en" target="_blank" rel="noopener noreferrer">DPP</a> betreibt Metro, Straßenbahn und die meisten Busse innerhalb der Stadt. Für einen normalen Urlaub bleiben Sie im Standardgebiet von Prag; ein spezieller Landtarif lohnt erst bei weiten Tagesausflügen. Im Zweifel sagen Ihnen die Routenplaner unten, welche Ticketlänge passt.</p>
+
+<p>Prüfen Sie die aktuellen Preise vor der Fahrt auf der offiziellen Tarifseite. Die Beträge ändern sich gelegentlich: <a href="https://pid.cz/en/tariff/" target="_blank" rel="noopener noreferrer">pid.cz/en/tariff</a>.</p>
+
+<h2>Papierfahrscheine und gelbe Automaten</h2>
+
+<p>Es geht noch klassisch: gelbe Automaten an Metro-Eingängen, größeren Haltestellen oder Verkehrsknoten. Oft nehmen sie Münzen und Karten. Englisch wählen, 30- oder 90-Minuten-Ticket oder 24-/72-Stunden-Pass kaufen, Streifenfahrschein nehmen. Nach dem Einsteigen entwerten: gelbe Kästen in Tram und Bus, oder die Entwerter am Metro-Zugang. Die erste Entwertung startet die Uhr.</p>
+
+<p>Einige Trafiken und Zeitungsläden (TABAK / Lotto-Schild) verkaufen auch PID-Tickets. Praktisch, wenn der Automat streikt oder die Schlange lang ist.</p>
+
+<h2>Lítačka: die App, die die meisten zuerst nutzen</h2>
+
+<p><a href="https://www.litacka.cz/en" target="_blank" rel="noopener noreferrer">Lítačka</a> ist die kostenlose offizielle PID-App. Sie können dieselben Tarife wie am Automaten kaufen, eine virtuelle PID-Karte speichern, Zeitkarten laden und bei Kontrollen QR-Code oder digitales Ticket zeigen. Sie ist nicht besonders stylisch, aber zuverlässig, und sie ist die erste Empfehlung von mir.</p>
+
+<p>Download-Links stehen auf der Seite: <a href="https://www.litacka.cz/en" target="_blank" rel="noopener noreferrer">litacka.cz/en</a> (App Store und Google Play). Ein Konto lohnt sich, wenn Sie Käufe sichern wollen; für einen Kurzurlaub geht oft auch ein schneller Kauf ohne viel Drumherum. Benachrichtigungen helfen, bevor eine Karte abläuft.</p>
+
+<div class="blog-inline-image"><img src="/images/old-town-square.jpg" alt="Altstädter Ring Prag" loading="lazy" /><div class="image-credit">Von der Innenstadt aus sind Burg, Vinohrady und der Hauptbahnhof in wenigen Minuten mit Metro und Tram erreichbar</div></div>
+
+<h2>Weitere Apps (ersetzen aber keinen Fahrschein)</h2>
+
+<p><strong>IDOS</strong> (<a href="https://idos.idos.cz/en" target="_blank" rel="noopener noreferrer">idos.idos.cz</a>) ist der bundesweite Fahrplan. Er wirkt stellenweise sperrig, ist aber zuverlässig für Anschlüsse in Prag und im ganzen Land. Gut, wenn Sie Abfahrten an einer bestimmten Haltestelle brauchen oder Metro mit Überlandbus kombinieren.</p>
+
+<p><strong>Mapy.cz</strong> (<a href="https://en.mapy.cz/" target="_blank" rel="noopener noreferrer">en.mapy.cz</a>) ist der tschechische Kartendienst, den viele Einheimische nutzen. ÖPNV-Ebenen sind klar, Fußwege stimmen oft, offline geht es mit heruntergeladenem Gebiet.</p>
+
+<p><strong>Google Maps</strong> und <strong>Apple Maps</strong> zeigen Prager ÖPNV und reichen für schnelle Wege. Ich vergleiche damit Laufen und Fahren; gekauft wird bei mir trotzdem in Lítačka oder am Automaten.</p>
+
+<p><strong>PID-Livekarte</strong> (<a href="https://mapa.pid.cz/" target="_blank" rel="noopener noreferrer">mapa.pid.cz</a>) zeigt Straßenbahnen und Busse auf der Karte in Echtzeit. Praktisch, wenn Sie entscheiden wollen, ob sich Warten noch lohnt.</p>
+
+<h2>Mit Bankkarte an Bord zahlen</h2>
+
+<p>Prag hat kontaktloses Bezahlen in Fahrzeugen und in Metro-Stationen eingeführt. Sie halten die Karte an das Lesegerät beim Einstieg, das System bucht einen passenden Kurzstreckentarif. Nicht jede ausländische Karte verhält sich gleich, und die genauen Produktregeln stehen beim Betreiber. Lesen Sie die englischsprachigen Infos auf <a href="https://www.dpp.cz/en" target="_blank" rel="noopener noreferrer">dpp.cz/en</a> (Menü zu Tarifen und Bankkarte / kontaktlos), bevor Sie die ganze Reise darauf aufbauen.</p>
+
+<p>Wer alles in einer App haben will, bleibt bei Lítačka. Wer lieber Plastik nutzt: kontaktfähige Karte dabei und im Online-Banking prüfen, ob die Abbuchung stimmt.</p>
+
+<h2>Pässe mit Museen und Verkehr</h2>
+
+<p>Wenn Sie viel Sightseeing planen, lohnt der Vergleich mit einem Touristenpass. Der <a href="https://www.praguevisitorpass.com/" target="_blank" rel="noopener noreferrer">Prague Visitor Pass</a> enthält ÖPNV für die gewählte Dauer plus Eintritte; rechnen Sie gegen Einzeltickets und Eintritte.</p>
+
+<h2>Typische Fehler (und wie man sie vermeidet)</h2>
+
+<ul>
+<li><strong>Kein Fahrschein dabei.</strong> Kontrolleure in Zivil zeigen Ausweise. Das Strafgeld ist hoch; Unwissenheit zählt nicht. Vor dem Fahren kaufen.</li>
+<li><strong>Papierfahrschein nicht entwertet.</strong> Erste Fahrt zählt. In der Metro beim Eingang durch die Entwerter.</li>
+<li><strong>Falsche Zone oder Zeit abgelaufen.</strong> Wenn die Minuten weg sind, vor dem Weiterfahren neu lösen.</li>
+<li><strong>Petřín-Standseilbahn nur mit 30- oder 90-Minuten-Ticket.</strong> Diese Tickets gelten dort nicht. Entweder 24-/72-Stunden-Karte für Prag, separates Seilbahnticket oder zu Fuß den Berg hinauf.</li>
+<li><strong>Airport Express (AE) versus Bus 119.</strong> Auf die 119 zur Metro Nádraží Veleslavín reicht ein normales PID-Ticket. Der AE hat einen anderen Tarif; vor dem Einsteigen die Regeln lesen.</li>
+</ul>
+
+<div style="background:#eff6ff;border-left:4px solid #2563eb;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0">
+  <p style="margin:0;font-weight:600;color:#1d4ed8">Kleine Angewohnheit, die Stress spart</p>
+  <p style="margin:0.5rem 0 0">Nach dem Kauf eines digitalen Tickets einen Screenshot vom aktiven Bildschirm machen. Wenn das Handy leer ist, haben Sie wenigstens einen Nachweis, bis Strom wieder da ist. Noch besser: eine kleine Powerbank für lange Tage.</p>
+</div>
+
+<p>So ist das Prinzip: Lítačka oder Automat, in Kronen zahlen, einmal entwerten oder tippen, dann fahren. Wenn das sitzt, können Sie sich auf die Stadt konzentrieren statt auf Kleingedrucktes.</p>
+
+<div class="blog-cta-box">
+  <h3>Möchten Sie Prag mit jemandem erkunden, die diese Linien jede Woche nutzt?</h3>
+  <p>Ich zeige Ihnen gern die Geschichten hinter den Haltestellen. Schreiben Sie mir, was Sie sehen möchten, und wir planen eine Route in Ihrem Tempo.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prag%20Tour#contact-title">Schreiben Sie mir</a>
+    <a class="btn btn-outline" href="/tours">Meine Touren entdecken</a>
+  </div>
+</div>`,
+  },
+
   // Post 26
   'blog.post26.title': {
     en: 'How to get Czech crowns in Prague: Revolut, ATMs, and the scams to avoid',

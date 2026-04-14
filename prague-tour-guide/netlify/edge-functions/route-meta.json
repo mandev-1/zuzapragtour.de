@@ -202,6 +202,30 @@
     }
   },
   "blog": {
+    "prague-public-transport-tickets-apps": {
+      "title": "Prague public transport: tickets, apps, and what actually works | Zuza Prague Tours",
+      "description": "Trams, metro, buses: one ticket system, but several ways to pay. Here is how to buy fares without stress, which app locals use first, and where to double-check prices before you travel.",
+      "ogTitle": "Prague public transport: tickets, apps, and what actually works | Zuza Prague Tours",
+      "ogDescription": "Trams, metro, buses: one ticket system, but several ways to pay. Here is how to buy fares without stress, which app locals use first, and where to double-check prices before you travel.",
+      "ogImage": "https://zuzapragtour.de/images/blog-night-prague-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/prague-public-transport-tickets-apps",
+      "canonical": "https://zuzapragtour.de/blog/prague-public-transport-tickets-apps",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-15"
+    },
+    "oeffentlicher-verkehr-prag-tickets-apps": {
+      "title": "Öffentlicher Verkehr in Prag: Tickets, Apps und was wirklich funktioniert | Zuza Prague Tours",
+      "description": "Straßenbahn, Metro, Bus: ein Tarifsystem, aber mehrere Wege zu zahlen. So kaufen Sie Fahrscheine ohne Stress, welche App die Prager zuerst nutzen und wo Sie die Preise vor der Fahrt prüfen.",
+      "ogTitle": "Öffentlicher Verkehr in Prag: Tickets, Apps und was wirklich funktioniert | Zuza Prague Tours",
+      "ogDescription": "Straßenbahn, Metro, Bus: ein Tarifsystem, aber mehrere Wege zu zahlen. So kaufen Sie Fahrscheine ohne Stress, welche App die Prager zuerst nutzen und wo Sie die Preise vor der Fahrt prüfen.",
+      "ogImage": "https://zuzapragtour.de/images/blog-night-prague-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/oeffentlicher-verkehr-prag-tickets-apps",
+      "canonical": "https://zuzapragtour.de/blog/oeffentlicher-verkehr-prag-tickets-apps",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-15"
+    },
     "how-to-exchange-money-czech-crowns": {
       "title": "How to get Czech crowns in Prague: Revolut, ATMs, and the scams to avoid | Zuza Prague Tours",
       "description": "The Czech Republic uses its own currency — not euros. Here is how to get Czech crowns at a fair rate, why Revolut is the best tool for the job, and which exchange traps to walk straight past.",
