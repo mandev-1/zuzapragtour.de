@@ -79,6 +79,126 @@
       "ogUrl": "https://zuzapragtour.de/terms",
       "canonical": "https://zuzapragtour.de/terms",
       "ogType": "website"
+    },
+    "/tours/prague-castle": {
+      "title": "Prague Castle Private Tour in German & English | Zuza Prague Tours",
+      "description": "Explore Prague Castle complex, St. Vitus Cathedral, and Golden Lane with a certified private guide. Skip queues, hear real stories, see the view nobody photographs.",
+      "ogTitle": "Prague Castle Private Tour in German & English | Zuza Prague Tours",
+      "ogDescription": "Explore Prague Castle complex, St. Vitus Cathedral, and Golden Lane with a certified private guide. Skip queues, hear real stories, see the view nobody photographs.",
+      "ogImage": "https://zuzapragtour.de/images/prague-castle.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/prague-castle",
+      "canonical": "https://zuzapragtour.de/tours/prague-castle",
+      "ogType": "website"
+    },
+    "/tours/prager-burg": {
+      "title": "Prager Burg Private Tour auf Deutsch | Zuza Prague Tours",
+      "description": "Erkunden Sie Prager Burgkomplex, Veitsdom und Goldenes Gässchen mit einer zertifizierten Privatführerin. Warteschlangen umgehen, echte Geschichten hören, den Aussichtspunkt finden, den niemand fotografiert.",
+      "ogTitle": "Prager Burg Private Tour auf Deutsch | Zuza Prague Tours",
+      "ogDescription": "Erkunden Sie Prager Burgkomplex, Veitsdom und Goldenes Gässchen mit einer zertifizierten Privatführerin. Warteschlangen umgehen, echte Geschichten hören, den Aussichtspunkt finden, den niemand fotografiert.",
+      "ogImage": "https://zuzapragtour.de/images/prague-castle.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/prager-burg",
+      "canonical": "https://zuzapragtour.de/tours/prager-burg",
+      "ogType": "website"
+    },
+    "/tours/old-town-jewish-quarter": {
+      "title": "Old Town & Jewish Quarter Tour in German & English | Zuza Prague Tours",
+      "description": "Walk medieval Old Town, Astronomical Clock, and Jewish Quarter with a Jewish-Museum-accredited guide. Private tour in German and English.",
+      "ogTitle": "Old Town & Jewish Quarter Tour in German & English | Zuza Prague Tours",
+      "ogDescription": "Walk medieval Old Town, Astronomical Clock, and Jewish Quarter with a Jewish-Museum-accredited guide. Private tour in German and English.",
+      "ogImage": "https://zuzapragtour.de/images/blog-jewish-quarter-2-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/old-town-jewish-quarter",
+      "canonical": "https://zuzapragtour.de/tours/old-town-jewish-quarter",
+      "ogType": "website"
+    },
+    "/tours/altstadt-juedisches-viertel": {
+      "title": "Altstadt & Jüdisches Viertel Tour auf Deutsch | Zuza Prague Tours",
+      "description": "Mittelalterliche Altstadt, Astronomische Uhr und Jüdisches Viertel mit einer vom Jüdischen Museum akkreditierten Führerin. Privattour auf Deutsch und Englisch.",
+      "ogTitle": "Altstadt & Jüdisches Viertel Tour auf Deutsch | Zuza Prague Tours",
+      "ogDescription": "Mittelalterliche Altstadt, Astronomische Uhr und Jüdisches Viertel mit einer vom Jüdischen Museum akkreditierten Führerin. Privattour auf Deutsch und Englisch.",
+      "ogImage": "https://zuzapragtour.de/images/blog-jewish-quarter-2-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/altstadt-juedisches-viertel",
+      "canonical": "https://zuzapragtour.de/tours/altstadt-juedisches-viertel",
+      "ogType": "website"
+    },
+    "/tours/custom-private-tour": {
+      "title": "Custom Private Prague Tour in German & English | Zuza Prague Tours",
+      "description": "Design your own Prague tour — history, architecture, food, Kafka, or a mix. Private guide, flexible pace, personal route planned together in advance.",
+      "ogTitle": "Custom Private Prague Tour in German & English | Zuza Prague Tours",
+      "ogDescription": "Design your own Prague tour — history, architecture, food, Kafka, or a mix. Private guide, flexible pace, personal route planned together in advance.",
+      "ogImage": "https://zuzapragtour.de/images/blog-night-prague-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/custom-private-tour",
+      "canonical": "https://zuzapragtour.de/tours/custom-private-tour",
+      "ogType": "website"
+    },
+    "/tours/individuelle-privattour": {
+      "title": "Individuelle Privattour Prag auf Deutsch | Zuza Prague Tours",
+      "description": "Gestalten Sie Ihre eigene Prag-Tour — Geschichte, Architektur, Essen, Kafka oder eine Mischung. Privatführung, flexibles Tempo, persönliche Route gemeinsam im Voraus geplant.",
+      "ogTitle": "Individuelle Privattour Prag auf Deutsch | Zuza Prague Tours",
+      "ogDescription": "Gestalten Sie Ihre eigene Prag-Tour — Geschichte, Architektur, Essen, Kafka oder eine Mischung. Privatführung, flexibles Tempo, persönliche Route gemeinsam im Voraus geplant.",
+      "ogImage": "https://zuzapragtour.de/images/blog-night-prague-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/individuelle-privattour",
+      "canonical": "https://zuzapragtour.de/tours/individuelle-privattour",
+      "ogType": "website"
+    },
+    "/tours/hidden-prague": {
+      "title": "Hidden Prague Private Tour — Secret Spots & Local Gems | Zuza Prague Tours",
+      "description": "Skip the tourist trail. Secret courtyards, hidden gardens, and local spots that most visitors never find — private tour with a guide who has been collecting these places since 1986.",
+      "ogTitle": "Hidden Prague Private Tour — Secret Spots & Local Gems | Zuza Prague Tours",
+      "ogDescription": "Skip the tourist trail. Secret courtyards, hidden gardens, and local spots that most visitors never find — private tour with a guide who has been collecting these places since 1986.",
+      "ogImage": "https://zuzapragtour.de/images/blog-hidden-gems-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/hidden-prague",
+      "canonical": "https://zuzapragtour.de/tours/hidden-prague",
+      "ogType": "website"
+    },
+    "/tours/verstecktes-prag": {
+      "title": "Verstecktes Prag Privattour — Geheimtipps & verborgene Orte | Zuza Prague Tours",
+      "description": "Den Touristenpfad verlassen. Versteckte Innenhöfe, geheime Gärten und lokale Orte, die die meisten Besucher nie finden — Privattour mit einer Führerin, die diese Orte seit 1986 sammelt.",
+      "ogTitle": "Verstecktes Prag Privattour — Geheimtipps & verborgene Orte | Zuza Prague Tours",
+      "ogDescription": "Den Touristenpfad verlassen. Versteckte Innenhöfe, geheime Gärten und lokale Orte, die die meisten Besucher nie finden — Privattour mit einer Führerin, die diese Orte seit 1986 sammelt.",
+      "ogImage": "https://zuzapragtour.de/images/blog-hidden-gems-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/verstecktes-prag",
+      "canonical": "https://zuzapragtour.de/tours/verstecktes-prag",
+      "ogType": "website"
+    },
+    "/tours/prague-german-heritage": {
+      "title": "Prague's German Heritage Private Tour | Zuza Prague Tours",
+      "description": "Trace 700 years of German culture in Prague — Kafka, Mozart, Habsburg rulers, and an honest look at 20th-century history. Private tour with a bilingual Czech guide.",
+      "ogTitle": "Prague's German Heritage Private Tour | Zuza Prague Tours",
+      "ogDescription": "Trace 700 years of German culture in Prague — Kafka, Mozart, Habsburg rulers, and an honest look at 20th-century history. Private tour with a bilingual Czech guide.",
+      "ogImage": "https://zuzapragtour.de/images/prague-castle-cathedral.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/prague-german-heritage",
+      "canonical": "https://zuzapragtour.de/tours/prague-german-heritage",
+      "ogType": "website"
+    },
+    "/tours/prag-deutsches-erbe": {
+      "title": "Prag Deutsches Erbe Privattour auf Deutsch | Zuza Prague Tours",
+      "description": "700 Jahre deutsches Kulturerbe in Prag — Kafka, Mozart, Habsburger Herrscher und ein ehrlicher Blick auf die Geschichte des 20. Jahrhunderts. Privattour mit einer zweisprachigen tschechischen Führerin.",
+      "ogTitle": "Prag Deutsches Erbe Privattour auf Deutsch | Zuza Prague Tours",
+      "ogDescription": "700 Jahre deutsches Kulturerbe in Prag — Kafka, Mozart, Habsburger Herrscher und ein ehrlicher Blick auf die Geschichte des 20. Jahrhunderts. Privattour mit einer zweisprachigen tschechischen Führerin.",
+      "ogImage": "https://zuzapragtour.de/images/prague-castle-cathedral.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/prag-deutsches-erbe",
+      "canonical": "https://zuzapragtour.de/tours/prag-deutsches-erbe",
+      "ogType": "website"
+    },
+    "/tours/vaclav-havel-tour": {
+      "title": "Václav Havel Tour Prague — Velvet Revolution Private Tour | Zuza Prague Tours",
+      "description": "Follow Václav Havel's story through Prague — Wenceslas Square, the Velvet Revolution sites, and the Lucerna passage. Your guide was there in November 1989.",
+      "ogTitle": "Václav Havel Tour Prague — Velvet Revolution Private Tour | Zuza Prague Tours",
+      "ogDescription": "Follow Václav Havel's story through Prague — Wenceslas Square, the Velvet Revolution sites, and the Lucerna passage. Your guide was there in November 1989.",
+      "ogImage": "https://zuzapragtour.de/images/havel-tour.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/vaclav-havel-tour",
+      "canonical": "https://zuzapragtour.de/tours/vaclav-havel-tour",
+      "ogType": "website"
+    },
+    "/tours/vaclav-havel-tour-prag": {
+      "title": "Václav-Havel-Tour Prag — Samtene Revolution Privattour | Zuza Prague Tours",
+      "description": "Václav Havels Geschichte durch Prag verfolgen — Wenzelsplatz, Schauplätze der Samtenen Revolution und die Lucerna-Passage. Ihre Führerin war im November 1989 dabei.",
+      "ogTitle": "Václav-Havel-Tour Prag — Samtene Revolution Privattour | Zuza Prague Tours",
+      "ogDescription": "Václav Havels Geschichte durch Prag verfolgen — Wenzelsplatz, Schauplätze der Samtenen Revolution und die Lucerna-Passage. Ihre Führerin war im November 1989 dabei.",
+      "ogImage": "https://zuzapragtour.de/images/havel-tour.jpg",
+      "ogUrl": "https://zuzapragtour.de/tours/vaclav-havel-tour-prag",
+      "canonical": "https://zuzapragtour.de/tours/vaclav-havel-tour-prag",
+      "ogType": "website"
     }
   },
   "blog": {

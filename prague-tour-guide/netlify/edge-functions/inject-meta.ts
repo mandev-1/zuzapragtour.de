@@ -42,6 +42,15 @@ function lookupMeta(pathname: string): RouteMeta | null {
     }
   }
 
+  // Tour subpage: /tours/:slug (stored as static routes with full path key)
+  const tourMatch = pathname.match(/^\/tours\/([^/]+)\/?$/);
+  if (tourMatch) {
+    const tourPath = `/tours/${tourMatch[1]}`;
+    if (staticMeta[tourPath]) {
+      return staticMeta[tourPath];
+    }
+  }
+
   return null;
 }
 

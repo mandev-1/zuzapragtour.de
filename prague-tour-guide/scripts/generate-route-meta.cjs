@@ -192,6 +192,80 @@ function generate() {
     },
   };
 
+  // ── Tour subpage routes ────────────────────────────────────────────────────
+  const tourDefs = [
+    {
+      slug: 'prague-castle', slugDe: 'prager-burg', image: '/images/prague-castle.jpg',
+      titleEn: 'Prague Castle Private Tour in German & English | Zuza Prague Tours',
+      titleDe: 'Prager Burg Private Tour auf Deutsch | Zuza Prague Tours',
+      descEn: 'Explore Prague Castle complex, St. Vitus Cathedral, and Golden Lane with a certified private guide. Skip queues, hear real stories, see the view nobody photographs.',
+      descDe: 'Erkunden Sie Prager Burgkomplex, Veitsdom und Goldenes Gässchen mit einer zertifizierten Privatführerin. Warteschlangen umgehen, echte Geschichten hören, den Aussichtspunkt finden, den niemand fotografiert.',
+    },
+    {
+      slug: 'old-town-jewish-quarter', slugDe: 'altstadt-juedisches-viertel', image: '/images/blog-jewish-quarter-2-min.jpg',
+      titleEn: 'Old Town & Jewish Quarter Tour in German & English | Zuza Prague Tours',
+      titleDe: 'Altstadt & Jüdisches Viertel Tour auf Deutsch | Zuza Prague Tours',
+      descEn: 'Walk medieval Old Town, Astronomical Clock, and Jewish Quarter with a Jewish-Museum-accredited guide. Private tour in German and English.',
+      descDe: 'Mittelalterliche Altstadt, Astronomische Uhr und Jüdisches Viertel mit einer vom Jüdischen Museum akkreditierten Führerin. Privattour auf Deutsch und Englisch.',
+    },
+    {
+      slug: 'custom-private-tour', slugDe: 'individuelle-privattour', image: '/images/blog-night-prague-min.jpg',
+      titleEn: 'Custom Private Prague Tour in German & English | Zuza Prague Tours',
+      titleDe: 'Individuelle Privattour Prag auf Deutsch | Zuza Prague Tours',
+      descEn: 'Design your own Prague tour — history, architecture, food, Kafka, or a mix. Private guide, flexible pace, personal route planned together in advance.',
+      descDe: 'Gestalten Sie Ihre eigene Prag-Tour — Geschichte, Architektur, Essen, Kafka oder eine Mischung. Privatführung, flexibles Tempo, persönliche Route gemeinsam im Voraus geplant.',
+    },
+    {
+      slug: 'hidden-prague', slugDe: 'verstecktes-prag', image: '/images/blog-hidden-gems-min.jpg',
+      titleEn: 'Hidden Prague Private Tour — Secret Spots & Local Gems | Zuza Prague Tours',
+      titleDe: 'Verstecktes Prag Privattour — Geheimtipps & verborgene Orte | Zuza Prague Tours',
+      descEn: 'Skip the tourist trail. Secret courtyards, hidden gardens, and local spots that most visitors never find — private tour with a guide who has been collecting these places since 1986.',
+      descDe: 'Den Touristenpfad verlassen. Versteckte Innenhöfe, geheime Gärten und lokale Orte, die die meisten Besucher nie finden — Privattour mit einer Führerin, die diese Orte seit 1986 sammelt.',
+    },
+    {
+      slug: 'prague-german-heritage', slugDe: 'prag-deutsches-erbe', image: '/images/prague-castle-cathedral.jpg',
+      titleEn: "Prague's German Heritage Private Tour | Zuza Prague Tours",
+      titleDe: 'Prag Deutsches Erbe Privattour auf Deutsch | Zuza Prague Tours',
+      descEn: 'Trace 700 years of German culture in Prague — Kafka, Mozart, Habsburg rulers, and an honest look at 20th-century history. Private tour with a bilingual Czech guide.',
+      descDe: '700 Jahre deutsches Kulturerbe in Prag — Kafka, Mozart, Habsburger Herrscher und ein ehrlicher Blick auf die Geschichte des 20. Jahrhunderts. Privattour mit einer zweisprachigen tschechischen Führerin.',
+    },
+    {
+      slug: 'vaclav-havel-tour', slugDe: 'vaclav-havel-tour-prag', image: '/images/havel-tour.jpg',
+      titleEn: 'Václav Havel Tour Prague — Velvet Revolution Private Tour | Zuza Prague Tours',
+      titleDe: 'Václav-Havel-Tour Prag — Samtene Revolution Privattour | Zuza Prague Tours',
+      descEn: 'Follow Václav Havel\'s story through Prague — Wenceslas Square, the Velvet Revolution sites, and the Lucerna passage. Your guide was there in November 1989.',
+      descDe: 'Václav Havels Geschichte durch Prag verfolgen — Wenzelsplatz, Schauplätze der Samtenen Revolution und die Lucerna-Passage. Ihre Führerin war im November 1989 dabei.',
+    },
+  ];
+
+  const tourRoutes = {};
+  for (const td of tourDefs) {
+    tourRoutes[`/tours/${td.slug}`] = {
+      title: td.titleEn,
+      description: td.descEn,
+      ogTitle: td.titleEn,
+      ogDescription: td.descEn,
+      ogImage: `${SITE}${td.image}`,
+      ogUrl: `${SITE}/tours/${td.slug}`,
+      canonical: `${SITE}/tours/${td.slug}`,
+      ogType: 'website',
+    };
+    if (td.slugDe) {
+      tourRoutes[`/tours/${td.slugDe}`] = {
+        title: td.titleDe,
+        description: td.descDe,
+        ogTitle: td.titleDe,
+        ogDescription: td.descDe,
+        ogImage: `${SITE}${td.image}`,
+        ogUrl: `${SITE}/tours/${td.slugDe}`,
+        canonical: `${SITE}/tours/${td.slugDe}`,
+        ogType: 'website',
+      };
+    }
+  }
+  Object.assign(staticRoutes, tourRoutes);
+  console.log(`Tour routes added: ${Object.keys(tourRoutes).length} slugs`);
+
   const blogRoutes = {};
 
   for (const post of posts) {

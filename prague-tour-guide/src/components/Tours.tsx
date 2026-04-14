@@ -29,7 +29,8 @@ const Tours: React.FC = () => {
       <div className="mx-auto max-w-6xl px-8 py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {toursData.map((tour, index) => {
-            const dest = `/book?tour=${encodeURIComponent(t(tour.titleKey as any))}#contact-title`;
+            const bookDest = `/book?tour=${encodeURIComponent(t(tour.titleKey as any))}#contact-title`;
+            const tourDest = `/tours/${tour.slug}`;
             return (
               <motion.article
                 key={tour.id}
@@ -43,11 +44,11 @@ const Tours: React.FC = () => {
                   role="button"
                   tabIndex={0}
                   className="relative h-56 cursor-pointer overflow-hidden"
-                  onClick={() => navigate(dest)}
+                  onClick={() => navigate(tourDest)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
-                      navigate(dest);
+                      navigate(tourDest);
                     }
                   }}
                 >
@@ -70,9 +71,15 @@ const Tours: React.FC = () => {
                     ))}
                   </ul>
                   <div className="mt-auto flex flex-col gap-3 border-t border-outline-variant/20 pt-4 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="font-headline text-lg font-semibold text-primary">{t('tour.price')}</p>
                     <Link
-                      to={dest}
+                      to={tourDest}
+                      className="text-sm font-medium text-primary hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {t('tourpage.allTours' as any).replace('← ', '')} →
+                    </Link>
+                    <Link
+                      to={bookDest}
                       className="rounded-lg bg-primary px-5 py-2.5 text-center font-semibold text-on-primary hover:opacity-90"
                       onClick={(e) => e.stopPropagation()}
                     >
