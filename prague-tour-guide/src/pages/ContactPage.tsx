@@ -27,8 +27,8 @@ const ContactPage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Kontakt – Tour in Prag buchen | +420 721 231 933'
-      : 'Contact Zuzana - Book Your Prague Tour | +420 721 231 933';
+      ? 'Kontakt & Buchung — Prag Stadtführung | ZuzaPragTour'
+      : 'Contact & Booking — Prague Tour Guide | ZuzaPragTour';
   const description =
     language === 'de'
       ? 'Kontaktieren Sie Zuzana zur Buchung Ihrer Prag-Tour. Rufen Sie an unter +420 721 231 933, WhatsApp oder E‑Mail. Schnelle Antwort innerhalb von 24 Stunden. Geführte Tour Prag für Deutsche – private Prag-Touren mit deutschem Guide.'
@@ -45,6 +45,9 @@ const ContactPage: React.FC = () => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href="https://zuzapragtour.de/contact" />
+        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/contact" />
+        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/contact" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://zuzapragtour.de/contact" />

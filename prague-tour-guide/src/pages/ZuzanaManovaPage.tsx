@@ -91,6 +91,9 @@ const ZuzanaManovaPage: React.FC = () => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href="https://zuzapragtour.de/zuzana-manova" />
+        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/zuzana-manova" />
+        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/zuzana-manova" />
+        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/zuzana-manova" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="profile" />

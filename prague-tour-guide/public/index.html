@@ -236,5 +236,30 @@
       </div>
     </noscript>
     <div id="root"></div>
+
+    <!--
+      Hidden forms for Netlify Forms detection at build time.
+      The React app submits via fetch; Netlify sees these during the build scan.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="date" name="date" />
+      <select name="groupSize"></select>
+      <select name="tourInterest"></select>
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+    <form name="booking" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="date" name="date" />
+      <select name="groupSize"></select>
+      <select name="tourInterest"></select>
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
 </body>
 </html>

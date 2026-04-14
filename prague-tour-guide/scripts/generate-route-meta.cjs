@@ -110,21 +110,21 @@ function generate() {
       ogType: 'website',
     },
     '/tours': {
-      title: 'Prague Tours - Castle, Old Town & Custom Tours | Zuza Prague Tours',
+      title: 'Private Stadtführungen in Prag auf Deutsch | ZuzaPragTour',
       description:
-        'Choose from Prague Castle tours, Old Town walking tours, Jewish Quarter explorations, or create your custom Prague experience. Small groups, expert local guide, personalized service.',
-      ogTitle: 'Prague Tours - Expert Guided Experiences',
-      ogDescription: "Explore Prague's best attractions with a local expert guide.",
+        'Deutschsprachige Prag-Touren mit zertifizierter Expertin: Prager Burg, Altstadt, Jüdisches Viertel oder individuelle Privattour. Spezialistin mit über 40 Jahren Erfahrung. Kleine Gruppen, persönlicher Service.',
+      ogTitle: 'Private Stadtführungen in Prag auf Deutsch | ZuzaPragTour',
+      ogDescription: 'Deutschsprachige Prag-Touren mit zertifizierter Expertin: Prager Burg, Altstadt, Jüdisches Viertel oder individuelle Privattour.',
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/tours`,
       canonical: `${SITE}/tours`,
       ogType: 'website',
     },
     '/contact': {
-      title: 'Kontakt \u2013 Tour in Prag buchen | +420 721 231 933',
+      title: 'Kontakt & Buchung — Prag Stadtführung | ZuzaPragTour',
       description:
         'Kontaktieren Sie Zuzana zur Buchung Ihrer Prag-Tour. Rufen Sie an unter +420 721 231 933, WhatsApp oder E-Mail. Schnelle Antwort innerhalb von 24 Stunden.',
-      ogTitle: 'Kontakt \u2013 Tour in Prag buchen | +420 721 231 933',
+      ogTitle: 'Kontakt & Buchung — Prag Stadtführung | ZuzaPragTour',
       ogDescription:
         'Kontaktieren Sie Zuzana zur Buchung Ihrer Prag-Tour. +420 721 231 933.',
       ogImage: OG_IMAGE,
@@ -145,10 +145,10 @@ function generate() {
       ogType: 'website',
     },
     '/blog': {
-      title: 'Prag Reiseblog | Zuza Prague Tours',
-      description: 'Tipps, Geschichten und Einblicke \u00fcber die Erkundung Prags',
-      ogTitle: 'Prag Reiseblog | Zuza Prague Tours',
-      ogDescription: 'Tipps, Geschichten und Einblicke \u00fcber die Erkundung Prags',
+      title: 'Prag Reiseblog — Tipps & Geschichten | ZuzaPragTour',
+      description: 'Tipps, Geschichten und Einblicke über die Erkundung Prags',
+      ogTitle: 'Prag Reiseblog — Tipps & Geschichten | ZuzaPragTour',
+      ogDescription: 'Tipps, Geschichten und Einblicke über die Erkundung Prags',
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/blog`,
       canonical: `${SITE}/blog`,

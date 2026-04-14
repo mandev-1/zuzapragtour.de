@@ -6,6 +6,11 @@ import { useLanguage } from '../context/LanguageContext';
 const BlogPage: React.FC = () => {
   const { t, language } = useLanguage();
 
+  const title =
+    language === 'de'
+      ? 'Prag Reiseblog — Tipps & Geschichten | ZuzaPragTour'
+      : 'Prague Travel Blog — Tips & Stories | ZuzaPragTour';
+
   const description = language === 'de' ? t('blog.subtitle') : t('blog.subtitle');
   const keywords =
     language === 'de'
@@ -16,13 +21,16 @@ const BlogPage: React.FC = () => {
     <>
       <Helmet>
         <html lang={language} />
-        <title>{t('blog.title')} | Zuza Prague Tours</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-  <link rel="canonical" href="https://zuzapragtour.de/blog" />
-        <meta property="og:title" content={`${t('blog.title')} | Zuza Prague Tours`} />
+        <link rel="canonical" href="https://zuzapragtour.de/blog" />
+        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/blog" />
+        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/blog" />
+        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/blog" />
+        <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-  <meta property="og:url" content="https://zuzapragtour.de/blog" />
+        <meta property="og:url" content="https://zuzapragtour.de/blog" />
       </Helmet>
       <Blog />
     </>

@@ -11,19 +11,19 @@
       "ogType": "website"
     },
     "/tours": {
-      "title": "Prague Tours - Castle, Old Town & Custom Tours | Zuza Prague Tours",
-      "description": "Choose from Prague Castle tours, Old Town walking tours, Jewish Quarter explorations, or create your custom Prague experience. Small groups, expert local guide, personalized service.",
-      "ogTitle": "Prague Tours - Expert Guided Experiences",
-      "ogDescription": "Explore Prague's best attractions with a local expert guide.",
+      "title": "Private Stadtführungen in Prag auf Deutsch | ZuzaPragTour",
+      "description": "Deutschsprachige Prag-Touren mit zertifizierter Expertin: Prager Burg, Altstadt, Jüdisches Viertel oder individuelle Privattour. Spezialistin mit über 40 Jahren Erfahrung. Kleine Gruppen, persönlicher Service.",
+      "ogTitle": "Private Stadtführungen in Prag auf Deutsch | ZuzaPragTour",
+      "ogDescription": "Deutschsprachige Prag-Touren mit zertifizierter Expertin: Prager Burg, Altstadt, Jüdisches Viertel oder individuelle Privattour.",
       "ogImage": "https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg",
       "ogUrl": "https://zuzapragtour.de/tours",
       "canonical": "https://zuzapragtour.de/tours",
       "ogType": "website"
     },
     "/contact": {
-      "title": "Kontakt – Tour in Prag buchen | +420 721 231 933",
+      "title": "Kontakt & Buchung — Prag Stadtführung | ZuzaPragTour",
       "description": "Kontaktieren Sie Zuzana zur Buchung Ihrer Prag-Tour. Rufen Sie an unter +420 721 231 933, WhatsApp oder E-Mail. Schnelle Antwort innerhalb von 24 Stunden.",
-      "ogTitle": "Kontakt – Tour in Prag buchen | +420 721 231 933",
+      "ogTitle": "Kontakt & Buchung — Prag Stadtführung | ZuzaPragTour",
       "ogDescription": "Kontaktieren Sie Zuzana zur Buchung Ihrer Prag-Tour. +420 721 231 933.",
       "ogImage": "https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg",
       "ogUrl": "https://zuzapragtour.de/contact",
@@ -41,9 +41,9 @@
       "ogType": "website"
     },
     "/blog": {
-      "title": "Prag Reiseblog | Zuza Prague Tours",
+      "title": "Prag Reiseblog — Tipps & Geschichten | ZuzaPragTour",
       "description": "Tipps, Geschichten und Einblicke über die Erkundung Prags",
-      "ogTitle": "Prag Reiseblog | Zuza Prague Tours",
+      "ogTitle": "Prag Reiseblog — Tipps & Geschichten | ZuzaPragTour",
       "ogDescription": "Tipps, Geschichten und Einblicke über die Erkundung Prags",
       "ogImage": "https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg",
       "ogUrl": "https://zuzapragtour.de/blog",

@@ -32,6 +32,9 @@ const HomePage: React.FC = () => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href="https://zuzapragtour.de/" />
+        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/" />
+        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/" />
+        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />

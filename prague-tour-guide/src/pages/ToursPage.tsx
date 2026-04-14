@@ -87,27 +87,24 @@ const ToursPage: React.FC = () => {
     },
   ]);
 
+  const title =
+    language === 'de'
+      ? 'Private Stadtführungen in Prag auf Deutsch | ZuzaPragTour'
+      : 'Private Prague Tours in German & English | ZuzaPragTour';
+
   return (
     <>
       <Helmet>
         <html lang={language} />
-        <title>
-          {language === 'de'
-            ? 'Prag-Touren – Deutschsprachige Expertin für Burg, Altstadt & mehr | Zuza Prague Tours'
-            : 'Prague Tours – Castle, Old Town & Custom Tours | Zuza Prague Tours'}
-        </title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href="https://zuzapragtour.de/tours" />
-        <meta property="og:title" content="Prague Tours - Expert Guided Experiences" />
-        <meta
-          property="og:description"
-          content={
-            language === 'de'
-              ? 'Entdecken Sie Prags Highlights mit einer lokalen, zertifizierten Expertin.'
-              : "Explore Prague's best attractions with a local expert guide."
-          }
-        />
+        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/tours" />
+        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/tours" />
+        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/tours" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content="https://zuzapragtour.de/tours" />
         <script type="application/ld+json">{JSON.stringify(tourSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(toursFAQ)}</script>
