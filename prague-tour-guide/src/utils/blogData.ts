@@ -18,6 +18,29 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '26',
+    slug: 'how-to-exchange-money-czech-crowns',
+    slugDe: 'geld-wechseln-tschechische-kronen',
+    titleKey: 'blog.post26.title',
+    excerptKey: 'blog.post26.excerpt',
+    dateKey: 'blog.post26.date',
+    date: '2026-04-14',
+    image: '/images/blog-prague-money.jpg',
+    contentKey: 'blog.post26.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Czech koruna', 'money exchange Prague', 'Revolut Prague', 'Czech crowns',
+      'ATM Prague', 'Prague travel tips', 'Prague tourist scams',
+      'best exchange rate Prague', 'dynamic currency conversion', 'Prague money guide',
+    ],
+    tagsDe: [
+      'Tschechische Krone', 'Geld wechseln Prag', 'Revolut Prag', 'Tschechische Kronen',
+      'Geldautomat Prag', 'Prag Reisetipps', 'Prag Touristenfallen',
+      'bester Wechselkurs Prag', 'Dynamische Währungsumrechnung', 'Prag Geld Guide',
+    ],
+    language: 'both',
+  },
+  {
     id: '25',
     slug: 'all-museums-in-prague-complete-guide',
     slugDe: 'alle-museen-in-prag-kompletter-guide',

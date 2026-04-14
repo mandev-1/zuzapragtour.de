@@ -7,6 +7,163 @@ export const blogTranslations = {
     de: 'Prag Reiseblog',
   },
 
+  // Post 26
+  'blog.post26.title': {
+    en: 'How to get Czech crowns in Prague: Revolut, ATMs, and the scams to avoid',
+    de: 'Geld wechseln in Prag: Revolut, Bankautomaten und die Fallen, die Sie kennen sollten',
+  },
+  'blog.post26.excerpt': {
+    en: 'The Czech Republic uses its own currency — not euros. Here is how to get Czech crowns at a fair rate, why Revolut is the best tool for the job, and which exchange traps to walk straight past.',
+    de: 'Tschechien hat seine eigene Währung — keine Euros. So kommen Sie in Prag zu fairen Tschechischen Kronen, warum Revolut dabei das beste Werkzeug ist und welche Wechselfallen Sie getrost ignorieren können.',
+  },
+  'blog.post26.date': {
+    en: 'April 14, 2026',
+    de: '14. April 2026',
+  },
+  'blog.post26.content': {
+    en: `<p class="lead">The Czech Republic uses its own currency. Despite being in the EU for over twenty years, the Czechs kept the koruna — and given how things have gone with the euro, you can understand why. One euro gets you roughly 25 Czech crowns. One US dollar, around 23. These numbers shift a little from week to week but never dramatically.</p>
+
+<p>The practical question every visitor has: how do you actually get crowns without handing a chunk of them to a bad exchange rate? I have been guiding people through Prague for 40 years and the money question comes up on almost every single tour.</p>
+
+<figure style="margin:1.5rem 0">
+  <img src="/images/blog-prague-money.jpg" alt="Czech koruna banknotes and coins" style="width:100%;border-radius:8px;max-height:460px;object-fit:cover" loading="lazy" />
+  <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5rem;text-align:center">Czech koruna — get them at a fair rate and you will have more of them to spend</figcaption>
+</figure>
+
+<h2>The honest answer: get Revolut</h2>
+
+<p>If you already have a Revolut card, you are essentially done reading. Use it everywhere in Prague. When you need cash, withdraw from any Czech bank ATM and you will get something very close to the real interbank rate with no hidden markup. Simple.</p>
+
+<p>I tell almost everyone I guide to set Revolut up before they travel. It takes about twenty minutes, works globally, and over a week in Prague it genuinely saves real money — not rounding errors, actual money. Wise (formerly TransferWise) is nearly as good. Same idea: the market exchange rate, minimal fees, no surprises at the end of the trip.</p>
+
+<div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0">
+  <p style="margin:0;font-weight:600;color:#15803d">One Revolut rule to remember</p>
+  <p style="margin:0.5rem 0 0">When withdrawing cash from an ATM in Prague, always choose to be charged in <strong>Czech crowns (CZK)</strong> — not your home currency. The machine will prompt you. Decline the conversion. More on why below.</p>
+</div>
+
+<p>No Revolut? A regular debit card at a Czech bank ATM in the city center works fine. Look for <strong>Česká spořitelna</strong> (green logo), <strong>Komerční banka</strong>, or <strong>ČSOB</strong>. They pass on the standard interbank rate plus whatever fee your home bank charges — usually reasonable.</p>
+
+<h2>The scams — there are a few worth knowing</h2>
+
+<p>Prague is safe in most ways. The money exchange market is not dangerous, exactly. But there are practices that are legal, widespread, and designed to quietly take your money. These are not rare edge cases. They happen to hundreds of visitors a day.</p>
+
+<div style="background:#fef2f2;border-left:4px solid #dc2626;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0">
+  <p style="margin:0;font-weight:600;color:#b91c1c">Three things to watch for</p>
+  <ul style="margin:0.75rem 0 0;padding-left:1.25rem">
+    <li style="margin-bottom:0.75rem">
+      <strong>The "zero commission" trick.</strong> Exchange offices near Wenceslas Square and Old Town Square advertise 0% commission in big letters. What they do not advertise is the exchange rate, which they set themselves to whatever they like. An office charging no commission at 19 CZK per euro is far worse than one charging 2% at the real rate of 25. Always look at the actual rate, not the commission figure. The commission is a distraction.
+    </li>
+    <li style="margin-bottom:0.75rem">
+      <strong>Dynamic Currency Conversion (DCC).</strong> This is the one that catches the most people. At ATMs and card terminals, you will sometimes see a screen asking if you want to pay in your home currency — euros, pounds, dollars — instead of Czech crowns. Always say no. When you agree, the machine applies its own exchange rate, which is typically 5 to 10 percent worse than your bank's rate. Choose crowns, let your bank handle the conversion. This costs tourists real money every single day in Prague, and most people do not even know it happened.
+    </li>
+    <li>
+      <strong>Airport exchange offices.</strong> Rates at the airport are consistently bad — it is the same at almost every airport in the world. If you need cash on arrival, use an airport ATM: look for a Česká spořitelna or ČSOB machine rather than a Euronet. Better still, bring 500 to 1000 CZK from home if your bank can order Czech crowns in advance.
+    </li>
+  </ul>
+</div>
+
+<figure style="margin:1.5rem 0">
+  <img src="/images/blog-prague-walk-normal.jpg" alt="Walking through the streets of Prague" style="width:100%;border-radius:8px;max-height:460px;object-fit:cover" loading="lazy" />
+  <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5rem;text-align:center">Prague rewards walking — and a bit of cash in your pocket for the smaller spots along the way</figcaption>
+</figure>
+
+<h2>Where to actually get crowns</h2>
+
+<p>In rough order of how good the deal will be:</p>
+
+<ol style="padding-left:1.25rem;line-height:1.9">
+  <li><strong>Revolut or Wise</strong> — best rate, no drama, works at any ATM or payment terminal in the city</li>
+  <li><strong>Czech bank ATMs in the city center</strong> — Česká spořitelna, Komerční banka, ČSOB. Withdraw a reasonable amount in one go so you are not paying your home bank's per-withdrawal fee multiple times.</li>
+  <li><strong>Reputable exchange offices</strong> — they do exist. Some Interchange locations and a handful of others in the center offer fair rates. Always check the actual rate board before you hand anything over.</li>
+  <li><strong>Your hotel</strong> — usually a little worse than a bank ATM, but much better than the airport.</li>
+</ol>
+
+<p>Skip: Euronet ATMs, exchange booths directly on tourist squares, anything advertising "best rate in Prague" without a rate board visible outside.</p>
+
+<h2>Do you need cash at all?</h2>
+
+<p>Less than you used to. Prague has gotten genuinely good at card payments over the last few years. Most restaurants, shops, trams, and supermarkets take cards. The transit system now runs entirely on the Lítačka app or contactless tap.</p>
+
+<p>You will still want some cash for smaller pubs that have not switched yet, market stalls, the occasional taxi driver, and tipping. A reserve of around 1000 to 2000 CZK — roughly 40 to 80 euros — is enough for most stays. Top up at a city ATM when you run low. Just not the Euronet machines near the tourist squares.</p>
+
+<h2>One last thing: old banknotes</h2>
+
+<p>Some visitors bring Czech crowns left over from a previous trip, or order them from their home bank. Worth checking whether the notes are current before you travel — a couple of denominations have been redesigned over the years, and very old Czech notes are sometimes refused by shops. If you are unsure, take them to any Czech bank branch when you arrive. They will exchange them without any fuss.</p>
+
+<p>Money in Prague is actually easy once you know the two or three things to avoid. Set up Revolut before you go, always choose crowns at any payment terminal, and walk past the exchange offices on Wenceslas Square without stopping. That genuinely covers most of it.</p>`,
+
+    de: `<p class="lead">Tschechien hat seine eigene Währung behalten — trotz EU-Mitgliedschaft seit über zwanzig Jahren. Die Tschechische Krone ist seit Jahrzehnten stabil, und ehrlich gesagt verstehen die meisten Tschechen gar nicht, warum man sie aufgeben sollte. Grob gesagt: Ein Euro bringt Ihnen rund 25 Kronen, ein US-Dollar etwa 23. Diese Zahlen schwanken etwas von Woche zu Woche, aber nie dramatisch.</p>
+
+<p>Die praktische Frage jedes Besuchers: Wie kommt man eigentlich an Kronen, ohne dabei einen guten Teil davon an einen schlechten Wechselkurs zu verlieren? Ich führe seit 40 Jahren Menschen durch Prag — das Thema Geldwechsel kommt auf fast jeder Tour zur Sprache.</p>
+
+<figure style="margin:1.5rem 0">
+  <img src="/images/blog-prague-money.jpg" alt="Tschechische Kronen-Scheine und -Münzen" style="width:100%;border-radius:8px;max-height:460px;object-fit:cover" loading="lazy" />
+  <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5rem;text-align:center">Tschechische Kronen — zum fairen Kurs besorgt, bleibt mehr davon übrig</figcaption>
+</figure>
+
+<h2>Die ehrliche Antwort: Revolut besorgen</h2>
+
+<p>Wer bereits eine Revolut-Karte hat, ist mit dem Lesen eigentlich schon fertig. Einfach überall in Prag damit zahlen. Wenn Sie Bargeld brauchen: an einem tschechischen Bankautomaten abheben, und Sie bekommen einen Kurs sehr nahe am echten Interbank-Kurs — ohne versteckten Aufschlag.</p>
+
+<p>Ich empfehle das fast jedem, den ich durch Prag führe: Revolut vor der Reise einrichten. Das dauert etwa zwanzig Minuten, funktioniert weltweit, und über eine Woche in Prag spart es tatsächlich spürbares Geld — keine Centbeträge, sondern echtes Geld. Wise (früher TransferWise) ist fast genauso gut. Gleiches Prinzip: der echte Marktkurs, minimale Gebühren, keine bösen Überraschungen am Ende des Urlaubs.</p>
+
+<div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0">
+  <p style="margin:0;font-weight:600;color:#15803d">Eine Revolut-Regel, die man sich merken sollte</p>
+  <p style="margin:0.5rem 0 0">Wenn Sie in Prag Bargeld abheben, wählen Sie immer <strong>Tschechische Kronen (CZK)</strong> als Abrechnungswährung — nicht Ihre Heimatwährung. Der Automat wird Sie fragen. Sagen Sie nein zur Umrechnung. Warum das so wichtig ist, steht gleich unten.</p>
+</div>
+
+<p>Kein Revolut? Eine normale Debitkarte an einem tschechischen Bankautomaten in der Innenstadt funktioniert gut. Achten Sie auf <strong>Česká spořitelna</strong> (grünes Logo), <strong>Komerční banka</strong> oder <strong>ČSOB</strong>. Diese geben Ihnen den marktüblichen Kurs plus die Gebühr Ihrer Heimatbank — meistens vertretbar.</p>
+
+<h2>Die Fallen — ein paar kennt man wirklich nicht</h2>
+
+<p>Prag ist in den meisten Bereichen eine sichere Stadt. Der Geldwechselmarkt ist nicht gefährlich im eigentlichen Sinne. Aber es gibt Praktiken, die legal sind, weit verbreitet — und darauf ausgelegt, Ihnen still und leise Geld wegzunehmen. Das sind keine seltenen Ausnahmen. Das passiert täglich hunderten von Besuchern.</p>
+
+<div style="background:#fef2f2;border-left:4px solid #dc2626;padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.5rem 0">
+  <p style="margin:0;font-weight:600;color:#b91c1c">Drei Dinge, auf die man achten sollte</p>
+  <ul style="margin:0.75rem 0 0;padding-left:1.25rem">
+    <li style="margin-bottom:0.75rem">
+      <strong>Die "Null-Provision"-Falle.</strong> Wechselstuben am Wenzelsplatz und rund um den Altstädter Ring werben mit "0 % Provision" in riesigen Lettern. Was sie nicht zeigen, ist der Wechselkurs, den sie selbst festlegen. Eine Wechselstube ohne Provision bei 19 Kronen pro Euro ist weit schlechter als eine mit 2 % Provision beim echten Kurs von 25. Immer den tatsächlichen Kurs prüfen, nicht die Provisionsangabe. Die Provision ist eine Ablenkung.
+    </li>
+    <li style="margin-bottom:0.75rem">
+      <strong>Dynamische Währungsumrechnung (DCC).</strong> Das ist die Falle, in die die meisten tappen. An Geldautomaten und Kartenterminals erscheint manchmal ein Bildschirm, der fragt, ob Sie in Ihrer Heimatwährung — Euro, Pfund, Dollar — zahlen möchten statt in Tschechischen Kronen. Immer ablehnen. Wer zustimmt, bekommt den hauseigenen Kurs des Geräts, der in der Regel 5 bis 10 Prozent schlechter ist als der Kurs Ihrer Bank. Kronen wählen, die Umrechnung der eigenen Bank überlassen. Diese Falle kostet Touristen in Prag jeden Tag bares Geld — und die meisten merken es nicht einmal.
+    </li>
+    <li>
+      <strong>Wechselstuben am Flughafen.</strong> Die Kurse dort sind verlässlich schlecht — das ist an fast jedem Flughafen der Welt so. Wer bei der Ankunft Bargeld braucht: lieber einen Bankautomaten nutzen, Česká spořitelna oder ČSOB statt Euronet. Noch besser: 500 bis 1000 CZK schon von zu Hause mitbringen, wenn die Hausbank Tschechische Kronen vorab bestellen kann.
+    </li>
+  </ul>
+</div>
+
+<figure style="margin:1.5rem 0">
+  <img src="/images/blog-prague-walk-normal.jpg" alt="Spaziergang durch die Straßen Prags" style="width:100%;border-radius:8px;max-height:460px;object-fit:cover" loading="lazy" />
+  <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5rem;text-align:center">Prag lohnt sich zu Fuß — und etwas Bargeld in der Tasche schadet unterwegs nie</figcaption>
+</figure>
+
+<h2>Wo man in Prag wirklich an Kronen kommt</h2>
+
+<p>Grob nach Qualität des Deals geordnet:</p>
+
+<ol style="padding-left:1.25rem;line-height:1.9">
+  <li><strong>Revolut oder Wise</strong> — bester Kurs, kein Aufwand, funktioniert an jedem Automaten und Zahlungsterminal in der Stadt</li>
+  <li><strong>Bankautomaten tschechischer Banken in der Innenstadt</strong> — Česká spořitelna, Komerční banka, ČSOB. Am besten gleich etwas mehr abheben, um die Gebühr Ihrer Heimatbank nicht mehrfach zu zahlen.</li>
+  <li><strong>Seriöse Wechselstuben</strong> — es gibt sie. Bestimmte Interchange-Filialen und einige andere Anbieter im Stadtzentrum bieten faire Kurse. Immer erst die tatsächliche Kurstabelle prüfen, bevor man Geld übergibt.</li>
+  <li><strong>Das Hotel</strong> — meist etwas schlechter als ein Bankautomat, aber deutlich besser als der Flughafen.</li>
+</ol>
+
+<p>Meiden: Euronet-Automaten, Wechselstuben direkt auf touristischen Plätzen, alles, das mit "bester Kurs in Prag" wirbt, ohne eine sichtbare Kurstabelle draußen.</p>
+
+<h2>Braucht man überhaupt Bargeld?</h2>
+
+<p>Immer seltener. Prag hat sich beim Kartenzahlen in den letzten Jahren deutlich verbessert. Die meisten Restaurants, Läden, Straßenbahnen und Supermärkte nehmen Karten. Das Nahverkehrssystem läuft heute vollständig über die Lítačka-App oder kontaktloses Bezahlen.</p>
+
+<p>Bargeld braucht man noch für kleinere Kneipen, die noch nicht umgestellt haben, für Marktstände, den einen oder anderen Taxifahrer und fürs Trinkgeld. Eine Reserve von 1000 bis 2000 CZK — rund 40 bis 80 Euro — reicht für die meisten Aufenthalte. Bei Bedarf an einem Stadtautomaten nachholen. Nur nicht an den Euronet-Geräten auf den Touristenplätzen.</p>
+
+<h2>Noch ein Hinweis: alte Scheine</h2>
+
+<p>Manche Besucher bringen noch Tschechische Kronen von einer früheren Reise mit oder bestellen sie bei der Hausbank. Es lohnt sich zu prüfen, ob die Scheine noch aktuell sind — ein paar Stückelungen wurden im Laufe der Jahre neu gestaltet, und sehr alte tschechische Scheine werden von Geschäften manchmal nicht mehr angenommen. Im Zweifel: bei einer tschechischen Bankfiliale vorbeigehen, wenn man angekommen ist. Die tauschen das problemlos um.</p>
+
+<p>Mit Geld in Prag klappt es eigentlich gut, sobald man die zwei, drei Dinge kennt, die man meiden sollte. Revolut vor der Reise einrichten, an jedem Zahlungsterminal immer Kronen wählen, und an den Wechselstuben am Wenzelsplatz einfach vorbeigehen. Das deckt das Meiste ab.</p>`,
+  },
+
   // Post 24 (new)
   'blog.post24.title': {
     en: 'How to choose the right Prague tour guide for you',
