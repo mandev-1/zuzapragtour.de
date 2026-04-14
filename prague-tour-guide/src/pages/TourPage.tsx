@@ -28,7 +28,9 @@ const TourPage: React.FC = () => {
     );
   }
 
-  const title = t(tour.seoTitleKey as any);
+  // seoTitle is the keyword-rich H1 text — brand suffix added separately for <title>
+  const h1Text = t(tour.seoTitleKey as any);
+  const pageTitle = `${h1Text} | Zuza Prague Tours`;
   const description = t(tour.descriptionKey as any);
   const canonicalSlug = language === 'de' && tour.slugDe ? tour.slugDe : tour.slug;
   const canonical = `${SITE}/tours/${canonicalSlug}`;
@@ -54,10 +56,10 @@ const TourPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={canonical} />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content={imageUrl} />
@@ -81,7 +83,7 @@ const TourPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {t(tour.titleKey as any)}
+            {h1Text}
           </motion.h1>
         </div>
       </div>

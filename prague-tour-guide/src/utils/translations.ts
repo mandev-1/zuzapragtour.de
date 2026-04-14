@@ -409,8 +409,8 @@ export const translations = {
 
   // Tours Page
   'tours.header.title': {
-    en: 'Prague Tours',
-    de: 'Prag Touren',
+    en: 'Private Prague Tours',
+    de: 'Private Stadtführungen Prag auf Deutsch',
   },
   'tours.header.subtitle': {
     en: 'Choose from my most popular tours or create a custom experience',
@@ -621,8 +621,8 @@ export const translations = {
 
   // ─── Castle tour subpage ───────────────────────────────────────────────────
   'tour.castle.seoTitle': {
-    en: 'Prague Castle Private Tour in German & English | Zuza Prague Tours',
-    de: 'Prager Burg Private Tour auf Deutsch | Zuza Prague Tours',
+    en: 'Prague Castle Private Tour in German & English',
+    de: 'Prager Burg – Private Stadtführung Prag auf Deutsch',
   },
   'tour.castle.body1': {
     en: 'Prague Castle is the largest ancient castle complex in the world — over 70,000 square metres of courtyards, palaces, churches, and gardens stacked on the hill above the city. It has been the seat of Bohemian kings, Holy Roman Emperors, and Czech presidents. If you only have time for one thing in Prague, this is it.',
@@ -655,8 +655,8 @@ export const translations = {
 
   // ─── Old Town & Jewish Quarter subpage ────────────────────────────────────
   'tour.oldtown.seoTitle': {
-    en: 'Old Town & Jewish Quarter Tour in German & English | Zuza Prague Tours',
-    de: 'Altstadt & Jüdisches Viertel Tour auf Deutsch | Zuza Prague Tours',
+    en: 'Old Town & Jewish Quarter Private Tour in German & English',
+    de: 'Altstadt & Jüdisches Viertel – Prag Privatführung auf Deutsch',
   },
   'tour.oldtown.body1': {
     en: "Prague's Old Town is a medieval city that survived into the modern era largely intact — which makes it extraordinary. The streets are genuinely old: the same lanes Kafka walked to school, the same square where Bohemian kings were crowned and executions were held, the same astronomical clock that has been marking the hours since 1410. Walking it without context is pleasant. Walking it with a guide who has spent 40 years studying it is something else entirely.",
@@ -689,8 +689,8 @@ export const translations = {
 
   // ─── Custom Private Tour subpage ──────────────────────────────────────────
   'tour.custom.seoTitle': {
-    en: 'Custom Private Prague Tour in German & English | Zuza Prague Tours',
-    de: 'Individuelle Privattour Prag auf Deutsch | Zuza Prague Tours',
+    en: 'Custom Private Prague Tour — Tailored to You',
+    de: 'Individuelle Privattour Prag – maßgeschneiderte Stadtführung auf Deutsch',
   },
   'tour.custom.body1': {
     en: 'Every group that walks Prague with me is different. Some want pure history — the medieval layers, the Habsburg centuries, the scars of the 20th century. Some want architecture and want to stop in front of every Art Nouveau doorway. Some have children and need the pace to breathe, with stops at gardens and playgrounds woven into the route. Some want a slow morning with coffee breaks. Some want to cover as much as possible in four hours.',
@@ -723,16 +723,16 @@ export const translations = {
 
   // ─── Hidden Prague subpage ─────────────────────────────────────────────────
   'tour.hidden.seoTitle': {
-    en: 'Hidden Prague Private Tour — Secret Spots & Local Gems | Zuza Prague Tours',
-    de: 'Verstecktes Prag Privattour — Geheimtipps & verborgene Orte | Zuza Prague Tours',
+    en: 'Hidden Prague Private Tour — Secret Spots & Local Gems',
+    de: 'Verstecktes Prag – Private Führung abseits der Touristenpfade',
   },
   'tour.hidden.body1': {
     en: 'Every city has two versions of itself: the one in the photographs and the one the locals know. In Prague the gap between those two is unusually large. The Charles Bridge photograph is real, but it is not the whole picture. There are courtyards in the Old Town that have been private for 600 years and are now, quietly, open. There are gardens behind the castle walls that almost no visitor finds. There is a small Baroque street in Malá Strana that looks exactly like it did in the 18th century.',
     de: 'Jede Stadt hat zwei Versionen von sich: die, die auf den Fotos zu sehen ist, und die, die die Einheimischen kennen. In Prag ist der Unterschied zwischen diesen beiden ungewöhnlich groß. Das Karlsbrücken-Foto ist real, aber es ist nicht das ganze Bild. Es gibt Innenhöfe in der Altstadt, die 600 Jahre lang privat waren und nun still und leise geöffnet sind. Es gibt Gärten hinter den Burgmauern, die fast kein Besucher findet. Es gibt eine kleine Barockgasse in der Kleinseite, die genauso aussieht wie im 18. Jahrhundert.',
   },
   'tour.hidden.body2': {
-    en: "This tour has no fixed route. I build it around the city's current state — what is open, what is blooming, what unexpected thing is happening in a particular courtyard or square on the day you visit. What stays constant: we leave the main tourist path within the first ten minutes, and we rarely return to it.",
-    de: 'Diese Tour hat keine feste Route. Ich gestalte sie nach dem aktuellen Zustand der Stadt — was geöffnet ist, was blüht, was sich an einem bestimmten Hof oder Platz an dem Tag, an dem Sie besuchen, Unerwartetes ereignet. Was konstant bleibt: Wir verlassen den touristischen Hauptweg innerhalb der ersten zehn Minuten, und kehren selten zurück.',
+    en: "This tour has no fixed route. I build it around the city's current state — what is open, what is blooming, what unexpected thing is happening in a particular courtyard or square on the day you visit. What stays constant: we leave the main tourist path within the first ten minutes, and we rarely return to it. The goal is not to see Prague — it is to feel it.",
+    de: 'Diese Tour hat keine feste Route. Ich gestalte sie nach dem aktuellen Zustand der Stadt — was geöffnet ist, was blüht, was sich an einem bestimmten Hof oder Platz an dem Tag, an dem Sie besuchen, Unerwartetes ereignet. Was konstant bleibt: Wir verlassen den touristischen Hauptweg innerhalb der ersten zehn Minuten, und kehren selten zurück. Das Ziel ist nicht, Prag zu sehen — sondern es zu spüren.',
   },
   'tour.hidden.body3': {
     en: 'Previous tours have included: a Romanesque rotunda from the 12th century hidden in plain sight behind a petrol station; a roof terrace above a Baroque library with a view nobody photographs because nobody knows it is there; a small square in Vinohrady where locals play boules on Tuesday evenings; a passage through four connected courtyards that cuts invisibly through two city blocks. None of these are secrets exactly. They just require someone who knows where to look.',
@@ -757,8 +757,8 @@ export const translations = {
 
   // ─── German Heritage Tour subpage ─────────────────────────────────────────
   'tour.german.seoTitle': {
-    en: 'Prague German Heritage Private Tour | Zuza Prague Tours',
-    de: 'Prag Deutsches Erbe Privattour auf Deutsch | Zuza Prague Tours',
+    en: 'Prague German Heritage Private Tour',
+    de: 'Prag Deutsches Erbe – Privatführung auf Deutsch',
   },
   'tour.german.body1': {
     en: 'For 700 years, Prague was one of the great German-speaking cities of Central Europe. German was the language of the court, of commerce, of the university that Charles IV founded in 1348 — the first in the Holy Roman Empire north of the Alps. Kafka wrote in German. Rilke studied here. Mozart premiered Don Giovanni in Prague because the city understood him in a way Vienna did not.',
@@ -791,8 +791,8 @@ export const translations = {
 
   // ─── Havel Tour subpage ────────────────────────────────────────────────────
   'tour.havel.seoTitle': {
-    en: 'Václav Havel Tour Prague — Velvet Revolution Private Tour | Zuza Prague Tours',
-    de: 'Václav-Havel-Tour Prag — Samtene Revolution Privattour | Zuza Prague Tours',
+    en: 'Václav Havel Tour Prague — Velvet Revolution Private Tour',
+    de: 'Václav-Havel-Tour Prag – Private Stadtführung Samtene Revolution',
   },
   'tour.havel.body1': {
     en: "Václav Havel was a playwright who became a dissident who became a president. His story runs through almost every major site in Prague's modern history — and it is one of the most extraordinary stories of the 20th century. The Velvet Revolution of 1989 ended 40 years of Communist rule in eleven days, without a shot fired, led in part by a man who had spent years under house arrest writing essays and plays that the regime tried to suppress.",
