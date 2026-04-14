@@ -416,6 +416,54 @@ export const translations = {
     en: 'Choose from my most popular tours or create a custom experience',
     de: 'Wählen Sie aus meinen beliebtesten Touren oder erstellen Sie gerne ein individuelles Erlebnis',
   },
+  'tours.page.kicker': {
+    en: 'Private tours · Prague',
+    de: 'Private Stadtführungen Prag',
+  },
+  'tours.page.heading': {
+    en: 'Private Prague tours',
+    de: 'Prag auf Deutsch erleben',
+  },
+  'tours.page.lead': {
+    en: 'Popular itineraries or a fully custom experience — built around what you want to see.',
+    de: 'Beliebte Touren oder ein individuelles Erlebnis — ganz nach Ihren Wünschen',
+  },
+  'tours.section.popular': {
+    en: 'Popular tours',
+    de: 'Beliebte Touren',
+  },
+  'tours.section.custom': {
+    en: 'Custom',
+    de: 'Individuell',
+  },
+  'tours.badge.groupUpTo6': {
+    en: 'Group up to 6',
+    de: 'Gruppe bis 6',
+  },
+  'tours.badge.insider': {
+    en: 'Insider route',
+    de: 'Geheimtipps',
+  },
+  'tours.exploreTour': {
+    en: 'Explore tour',
+    de: 'Tour entdecken',
+  },
+  'tours.custom.requestCta': {
+    en: 'Request private tour',
+    de: 'Privattour anfragen',
+  },
+  'tours.custom.learnMore': {
+    en: 'Learn more',
+    de: 'Mehr erfahren',
+  },
+  'tours.stickyCta.hint': {
+    en: 'Not sure yet? I am happy to help you choose in person.',
+    de: 'Noch unsicher? Ich berate Sie gerne persönlich.',
+  },
+  'tours.stickyCta.button': {
+    en: 'Contact',
+    de: 'Kontakt',
+  },
 
   // Tour 1: Castle
   'tour.castle.title': {

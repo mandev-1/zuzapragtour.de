@@ -225,7 +225,12 @@ const Home: React.FC = () => {
           {/* Portrait — large, roughly half-width on desktop */}
           <div className="relative flex-none md:w-[44%]">
             <img
-              className="h-72 w-full object-cover object-top sm:h-80 md:h-full md:min-h-[26rem]"
+              className="h-72 w-full object-cover sm:h-80 md:h-full md:min-h-[26rem]"
+              style={{
+                /* Face is in the lower third of this image — anchor there on mobile,
+                   shift up slightly on desktop where the full height shows more */
+                objectPosition: 'center 42%',
+              }}
               src={pub('/images/zuzana-portrait.jpg')}
               alt="Zuzana Manová"
             />
