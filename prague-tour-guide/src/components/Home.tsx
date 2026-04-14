@@ -89,62 +89,70 @@ const Home: React.FC = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-on-surface/20 to-transparent" />
         </div>
-        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-end px-8 pb-16 md:pb-24">
-          <motion.div
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span className="mb-6 inline-block rounded-full bg-secondary-container px-4 py-1 font-label text-xs font-bold uppercase tracking-widest text-on-secondary-container">
+        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col justify-end px-6 pb-16 sm:px-8 md:pb-24">
+          <div className="mx-auto w-full max-w-3xl">
+            <motion.span
+              className="mb-6 inline-block max-w-[min(100%,22rem)] rounded-full bg-secondary-container px-3 py-1.5 text-center font-label text-[0.65rem] font-bold uppercase leading-snug tracking-wider text-on-secondary-container sm:max-w-none sm:px-4 sm:text-xs sm:tracking-widest"
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
               {t('home.badge')}
-            </span>
+            </motion.span>
+
             <h1 className="mb-6 font-headline text-4xl leading-tight text-surface-container-lowest text-shadow-sm md:text-6xl lg:text-7xl">
               {t('home.hero.line1')}
               <br />
               <span className="text-secondary-container">{t('home.hero.line2')}</span>
             </h1>
-            <div className="mb-8 flex flex-wrap gap-6 font-medium text-surface-container-lowest">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-xl">schedule</span>
-                <span>{t('home.meta1')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-xl">group</span>
-                <span>{t('home.meta2')}</span>
-              </div>
-              <a
-                href={TRIPADVISOR_LISTING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 underline-offset-4 transition-opacity hover:opacity-90"
-              >
-                <span
-                  className="material-symbols-outlined text-xl text-secondary-container"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  star
-                </span>
-                <span>{t('home.meta3')}</span>
-              </a>
-            </div>
 
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                to="/book#contact-title"
-                className="rounded-lg bg-primary px-7 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95"
-              >
-                {t('hero.sendEnquiry')}
-              </Link>
-              <Link
-                to="/tours"
-                className="rounded-lg border border-surface-container-lowest/50 px-6 py-3 font-label text-sm font-semibold text-surface-container-lowest backdrop-blur-sm transition-colors hover:border-surface-container-lowest hover:bg-surface-container-lowest/10"
-              >
-                {t('hero.exploreTours')} →
-              </Link>
-            </div>
-            <p className="mt-3 font-label text-xs text-surface-container-lowest/60">{t('hero.responsePromise')}</p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="mb-8 flex flex-wrap gap-6 font-medium text-surface-container-lowest">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-xl">schedule</span>
+                  <span>{t('home.meta1')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-xl">group</span>
+                  <span>{t('home.meta2')}</span>
+                </div>
+                <a
+                  href={TRIPADVISOR_LISTING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 underline-offset-4 transition-opacity hover:opacity-90"
+                >
+                  <span
+                    className="material-symbols-outlined text-xl text-secondary-container"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                  <span>{t('home.meta3')}</span>
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  to="/book#contact-title"
+                  className="rounded-lg bg-primary px-7 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95"
+                >
+                  {t('hero.sendEnquiry')}
+                </Link>
+                <Link
+                  to="/tours"
+                  className="rounded-lg border border-surface-container-lowest/50 px-6 py-3 font-label text-sm font-semibold text-surface-container-lowest backdrop-blur-sm transition-colors hover:border-surface-container-lowest hover:bg-surface-container-lowest/10"
+                >
+                  {t('hero.exploreTours')} →
+                </Link>
+              </div>
+              <p className="mt-3 font-label text-xs text-surface-container-lowest/60">{t('hero.responsePromise')}</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 

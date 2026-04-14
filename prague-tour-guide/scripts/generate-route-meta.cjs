@@ -11,6 +11,7 @@ const ROOT = path.join(__dirname, '..');
 const BLOG_TS = path.join(ROOT, 'src', 'utils', 'blogData.ts');
 const BLOG_TR = path.join(ROOT, 'src', 'utils', 'blogTranslations.ts');
 const OUT = path.join(ROOT, 'netlify', 'edge-functions', 'route-meta.json');
+const CONTENT_OUT = path.join(ROOT, 'netlify', 'edge-functions', 'route-content.json');
 
 const SITE = 'https://zuzapragtour.de';
 const OG_IMAGE = `${SITE}/images/charles-bridge-hero-1600.jpg`;
@@ -27,6 +28,58 @@ function readBlogPosts() {
 
 function unescape(str) {
   return str.replace(/\\'/g, "'").replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+}
+
+/**
+ * Find the index of the next unescaped backtick in `src` starting at `fromPos`.
+ * Returns -1 if none found.
+ */
+function findClosingBacktick(src, fromPos) {
+  let pos = fromPos;
+  while (pos < src.length) {
+    const bt = src.indexOf('`', pos);
+    if (bt === -1) return -1;
+    // If the char before is a backslash it's escaped — keep searching
+    if (bt > 0 && src[bt - 1] === '\\') {
+      pos = bt + 1;
+    } else {
+      return bt;
+    }
+  }
+  return -1;
+}
+
+/**
+ * Extract { en, de } template-literal content for a given translation key.
+ * Handles multi-KB HTML strings reliably via index-based slicing (not regex).
+ */
+function readContentValue(src, key) {
+  const keyStr = `'${key}'`;
+  const keyPos = src.indexOf(keyStr);
+  if (keyPos === -1) return null;
+
+  const slice = src.slice(keyPos);
+
+  // --- English value ---
+  const enMarker = 'en: `';
+  const enOpen = slice.indexOf(enMarker);
+  if (enOpen === -1) return null;
+  const enStart = enOpen + enMarker.length;
+  const enEnd = findClosingBacktick(slice, enStart);
+  if (enEnd === -1) return null;
+  const enContent = slice.slice(enStart, enEnd);
+
+  // --- German value (must come after the en closing backtick) ---
+  const afterEn = slice.slice(enEnd + 1);
+  const deMarker = 'de: `';
+  const deOpen = afterEn.indexOf(deMarker);
+  if (deOpen === -1) return null;
+  const deStart = deOpen + deMarker.length;
+  const deEnd = findClosingBacktick(afterEn, deStart);
+  if (deEnd === -1) return null;
+  const deContent = afterEn.slice(deStart, deEnd);
+
+  return { en: enContent, de: deContent };
 }
 
 function readTranslationValue(src, key) {
@@ -191,6 +244,56 @@ function generate() {
   const staticCount = Object.keys(staticRoutes).length;
   console.log(
     `Route meta generated: ${staticCount} static + ${slugCount} blog slugs -> ${path.relative(ROOT, OUT)}`
+  );
+
+  // ── route-content.json ──────────────────────────────────────────────────
+  // Maps each blog slug to pre-rendered article HTML for static injection
+  // by the edge function so crawlers see real content without JavaScript.
+  const contentRoutes = {};
+  let contentHit = 0;
+  let contentMiss = 0;
+
+  for (const post of posts) {
+    if (!post.contentKey) continue;
+
+    const contentVal = readContentValue(blogTrSrc, post.contentKey);
+    if (!contentVal) {
+      console.warn(`  ⚠ No content found for ${post.slug} (key: ${post.contentKey})`);
+      contentMiss++;
+      continue;
+    }
+
+    const titleVal = readTranslationValue(blogTrSrc, post.titleKey);
+    const postImage = post.image ? `${SITE}${post.image}` : OG_IMAGE;
+
+    // English slug → English HTML
+    contentRoutes[post.slug] = {
+      title: titleVal ? titleVal.en : '',
+      html: contentVal.en,
+      author: post.author || '',
+      date: post.date || '',
+      image: postImage,
+    };
+
+    // German slug → German HTML
+    if (post.slugDe) {
+      contentRoutes[post.slugDe] = {
+        title: titleVal ? titleVal.de : '',
+        html: contentVal.de,
+        author: post.author || '',
+        date: post.date || '',
+        image: postImage,
+      };
+    }
+
+    contentHit++;
+  }
+
+  fs.writeFileSync(CONTENT_OUT, JSON.stringify(contentRoutes), 'utf8');
+  const contentCount = Object.keys(contentRoutes).length;
+  const kb = Math.round(fs.statSync(CONTENT_OUT).size / 1024);
+  console.log(
+    `Route content generated: ${contentHit} posts (${contentCount} slugs, ${kb} KB) -> ${path.relative(ROOT, CONTENT_OUT)}${contentMiss ? ` | ${contentMiss} posts missing content` : ''}`
   );
 }
 

@@ -394,18 +394,14 @@ const BlogPostPage: React.FC = () => {
                 <>
                   <p className="lead">{t(post.excerptKey as any)}</p>
                   <div className="blog-cta-box">
-                    <h3>{language === 'de' ? 'Bereit, Prag zu erkunden?' : 'Ready to explore Prague?'}</h3>
-                    <p>
-                      {language === 'de'
-                        ? 'Entdecken Sie Prag mit Ing. Zuzana Manová — persönlich, zertifiziert, unvergesslich.'
-                        : 'Discover Prague with Ing. Zuzana Manová — personal, certified, unforgettable.'}
-                    </p>
+                    <h3>{t('blog.cta.defaultTitle' as any)}</h3>
+                    <p>{t('blog.cta.defaultBody' as any)}</p>
                     <div className="cta-buttons">
-                      <Link to="/contact#contact-title" className="btn btn-primary">
-                        {t('hero.contactMe' as any)}
+                      <Link to="/book#contact-title" className="btn btn-primary">
+                        {t('hero.sendEnquiry' as any)}
                       </Link>
-                      <Link to="/tours" className="btn btn-outline">
-                        {t('hero.exploreTours' as any)}
+                      <Link to="/contact#contact-title" className="btn btn-outline">
+                        {t('blog.cta.askQuestion' as any)}
                       </Link>
                     </div>
                   </div>

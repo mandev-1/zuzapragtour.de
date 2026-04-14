@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   [
-    'font-label text-sm leading-relaxed transition-colors',
+    'font-label text-xs leading-relaxed transition-colors xl:text-sm',
     isActive
       ? 'border-b-2 border-primary pb-1 font-semibold text-primary'
       : 'text-slate-700 hover:text-primary',
@@ -23,16 +23,16 @@ const Header: React.FC = () => {
   const close = () => setIsMenuOpen(false);
 
   return (
-    <header className="fixed top-0 z-50 flex w-full max-w-full items-center justify-between border-b border-slate-200/80 bg-white/95 px-4 py-4 shadow-sm backdrop-blur-md md:px-8">
+    <header className="fixed top-0 z-50 flex w-full max-w-full items-center justify-between gap-3 border-b border-slate-200/80 bg-white/95 px-4 py-3 shadow-sm backdrop-blur-md sm:px-6 lg:px-8 lg:py-4">
       <Link
         to="/"
-        className="font-headline text-xl font-bold text-primary md:text-2xl"
+        className="min-w-0 shrink font-headline text-lg font-bold text-primary sm:text-xl lg:text-2xl"
         onClick={close}
       >
         Zuza Prague Tours
       </Link>
 
-      <nav className="hidden items-center gap-6 md:flex md:gap-8">
+      <nav className="hidden min-w-0 items-center gap-3 lg:flex lg:gap-4 xl:gap-6 2xl:gap-8">
         <NavLink to="/" className={linkClass} end>
           {t('nav.home')}
         </NavLink>
@@ -50,13 +50,13 @@ const Header: React.FC = () => {
         </NavLink>
         <a
           href="tel:+420721231933"
-          className="font-label text-sm text-slate-700 hover:text-primary"
+          className="shrink-0 whitespace-nowrap font-label text-xs text-slate-700 hover:text-primary xl:text-sm"
         >
           +420 721 231 933
         </a>
         <button
           type="button"
-          className="rounded-md border border-slate-300 bg-white px-2 py-1 font-label text-xs font-semibold text-slate-800 transition-colors hover:border-primary hover:text-primary"
+          className="shrink-0 rounded-md border border-slate-300 bg-white px-2 py-1 font-label text-xs font-semibold text-slate-800 transition-colors hover:border-primary hover:text-primary"
           onClick={toggleLanguage}
           aria-label="Switch language"
         >
@@ -64,13 +64,13 @@ const Header: React.FC = () => {
         </button>
         <Link
           to="/book#contact-title"
-          className="rounded-lg bg-primary px-5 py-2.5 font-label text-sm font-semibold text-on-primary transition-opacity hover:opacity-90 active:scale-95"
+          className="shrink-0 rounded-lg bg-primary px-4 py-2.5 font-label text-xs font-semibold text-on-primary transition-opacity hover:opacity-90 active:scale-95 xl:px-5 xl:text-sm"
         >
           {t('contact.booking.header.title')}
         </Link>
       </nav>
 
-      <div className="flex items-center gap-2 md:hidden">
+      <div className="flex shrink-0 items-center gap-2 lg:hidden">
         <button
           type="button"
           className="rounded-md border border-slate-300 bg-white px-2 py-1 font-label text-xs font-semibold text-slate-800"
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute left-0 right-0 top-full border-b border-slate-200 bg-white px-4 py-4 shadow-lg md:hidden">
+        <div className="absolute left-0 right-0 top-full border-b border-slate-200 bg-white px-4 py-4 shadow-lg lg:hidden">
           <div className="flex flex-col gap-1">
             <NavLink to="/" className={linkClass} end onClick={close}>
               {t('nav.home')}

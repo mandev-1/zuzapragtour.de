@@ -1022,6 +1022,18 @@ export const translations = {
     en: 'Tips, stories, and insights about exploring Prague',
     de: 'Tipps, Geschichten und Einblicke über die Erkundung Prags',
   },
+  'blog.cta.defaultTitle': {
+    en: 'Ready to explore Prague?',
+    de: 'Bereit, Prag zu erkunden?',
+  },
+  'blog.cta.defaultBody': {
+    en: 'Discover Prague with Ing. Zuzana Manová — personal, certified, unforgettable.',
+    de: 'Entdecken Sie Prag mit Ing. Zuzana Manová — persönlich, zertifiziert, unvergesslich.',
+  },
+  'blog.cta.askQuestion': {
+    en: 'Ask a question',
+    de: 'Frage stellen',
+  },
   'blog.readMore': {
     en: 'Read More',
     de: 'Weiterlesen',

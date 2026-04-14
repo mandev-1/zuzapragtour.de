@@ -1,10 +1,10 @@
 {
   "static": {
     "/": {
-      "title": "Zuza Prague Tours – Zertifizierte deutschsprachige Stadtführerin in Prag | Zuzana Manova",
-      "description": "Entdecken Sie Prag mit einer zertifizierten, deutschsprachigen Stadtführerin – über 40 Jahre Erfahrung! Private Stadtführungen, individuelle Touren & Insider-Tipps zu Altstadt, Karlsbrücke und Prager Burg. Jetzt Ihre deutsch geführte Prag-Tour buchen!",
-      "ogTitle": "Zuza Prague Tours – Deutschsprachige zertifizierte Stadtführerin",
-      "ogDescription": "Erleben Sie Prag mit einer deutschsprachigen Expertin. Private und individuelle Stadtführungen – persönlich und authentisch.",
+      "title": "Zuzana Manová | Deutschsprachige Prag-Expertin & Stadtführerin – ZuzaPragTour",
+      "description": "Zuzana Manová – deutschsprachige Prag-Expertin & Spezialistin für private Stadtführungen seit 1986. Zertifizierte Führungen durch Altstadt, Karlsbrücke, Prager Burg & Jüdisches Viertel. Über 40 Jahre Erfahrung. Jetzt buchen!",
+      "ogTitle": "Zuzana Manová | Deutschsprachige Prag-Expertin & Stadtführerin",
+      "ogDescription": "Zuzana Manová – deutschsprachige Prag-Expertin & Spezialistin für Stadtführungen seit 1986.",
       "ogImage": "https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg",
       "ogUrl": "https://zuzapragtour.de/",
       "canonical": "https://zuzapragtour.de/",
@@ -50,6 +50,16 @@
       "canonical": "https://zuzapragtour.de/blog",
       "ogType": "website"
     },
+    "/zuzana-manova": {
+      "title": "Zuzana Manová – Deutschsprachige Prag-Expertin & Spezialistin | Zuza Prague Tours",
+      "description": "Ing. Zuzana Manová – Ihre deutschsprachige Prag-Expertin und Spezialistin seit 1986. Zertifizierte Stadtführerin, akkreditiert beim Jüdischen Museum. Private Führungen auf Deutsch und Englisch.",
+      "ogTitle": "Zuzana Manová – Deutschsprachige Prag-Expertin & Spezialistin",
+      "ogDescription": "Deutschsprachige Prag-Expertin mit über 40 Jahren Erfahrung. Spezialistin für Stadtführungen auf Deutsch und Englisch.",
+      "ogImage": "https://zuzapragtour.de/images/zuzana-portrait.jpg",
+      "ogUrl": "https://zuzapragtour.de/zuzana-manova",
+      "canonical": "https://zuzapragtour.de/zuzana-manova",
+      "ogType": "profile"
+    },
     "/privacy": {
       "title": "Datenschutz | Zuza Prague Tours",
       "description": "Datenschutzerklärung: Verarbeitung personenbezogener Daten bei Zuza Prague Tours (Ing. Zuzana Manová).",
@@ -72,8 +82,56 @@
     }
   },
   "blog": {
+    "all-museums-in-prague-complete-guide": {
+      "title": "Every museum in Prague worth your time (and a few that are not) | Zuza Prague Tours",
+      "description": "An honest, exhaustive list of Prague museums with ticket links, prices, and which ones the Visitor Pass covers.",
+      "ogTitle": "Every museum in Prague worth your time (and a few that are not) | Zuza Prague Tours",
+      "ogDescription": "An honest, exhaustive list of Prague museums with ticket links, prices, and which ones the Visitor Pass covers.",
+      "ogImage": "https://zuzapragtour.de/images/klementinum-library.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/all-museums-in-prague-complete-guide",
+      "canonical": "https://zuzapragtour.de/blog/all-museums-in-prague-complete-guide",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-13"
+    },
+    "alle-museen-in-prag-kompletter-guide": {
+      "title": "Alle Museen in Prag, die sich lohnen (und ein paar, die es nicht tun) | Zuza Prague Tours",
+      "description": "Eine ehrliche, vollständige Liste der Prager Museen mit Ticket-Links, Preisen und welche der Visitor Pass abdeckt.",
+      "ogTitle": "Alle Museen in Prag, die sich lohnen (und ein paar, die es nicht tun) | Zuza Prague Tours",
+      "ogDescription": "Eine ehrliche, vollständige Liste der Prager Museen mit Ticket-Links, Preisen und welche der Visitor Pass abdeckt.",
+      "ogImage": "https://zuzapragtour.de/images/klementinum-library.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/alle-museen-in-prag-kompletter-guide",
+      "canonical": "https://zuzapragtour.de/blog/alle-museen-in-prag-kompletter-guide",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-13"
+    },
+    "how-to-choose-prague-tour-guide": {
+      "title": "How to choose the right Prague tour guide for you | Zuza Prague Tours",
+      "description": "A friendly, honest guide to finding the perfect guide – what to look for, what to ask, and how to make your Prague visit truly personal.",
+      "ogTitle": "How to choose the right Prague tour guide for you | Zuza Prague Tours",
+      "ogDescription": "A friendly, honest guide to finding the perfect guide – what to look for, what to ask, and how to make your Prague visit truly personal.",
+      "ogImage": "https://zuzapragtour.de/images/charles-bridge-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/how-to-choose-prague-tour-guide",
+      "canonical": "https://zuzapragtour.de/blog/how-to-choose-prague-tour-guide",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-13"
+    },
+    "wie-man-den-besten-prag-stadtfuehrer-waehlt": {
+      "title": "So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis | Zuza Prague Tours",
+      "description": "Ein freundlicher, ehrlicher Leitfaden, um den perfekten Guide zu finden – worauf man achten sollte, welche Fragen man stellen kann und wie Ihr Prag-Besuch wirklich persönlich wird.",
+      "ogTitle": "So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis | Zuza Prague Tours",
+      "ogDescription": "Ein freundlicher, ehrlicher Leitfaden, um den perfekten Guide zu finden – worauf man achten sollte, welche Fragen man stellen kann und wie Ihr Prag-Besuch wirklich persönlich wird.",
+      "ogImage": "https://zuzapragtour.de/images/charles-bridge-min.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/wie-man-den-besten-prag-stadtfuehrer-waehlt",
+      "canonical": "https://zuzapragtour.de/blog/wie-man-den-besten-prag-stadtfuehrer-waehlt",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-13"
+    },
     "prague-visitor-pass-honest-review": {
-      "title": "The Prague Visitor Pass: why I tell every client to get one | Zuza Prague Tours Blog",
+      "title": "The Prague Visitor Pass: why I tell every client to get one | Zuza Prague Tours",
       "description": "After 40 years of guiding in Prague I have watched tourists overpay for individual tickets hundreds of times. The Prague Visitor Pass fixes most of that. Here is the honest maths.",
       "ogTitle": "The Prague Visitor Pass: why I tell every client to get one | Zuza Prague Tours",
       "ogDescription": "After 40 years of guiding in Prague I have watched tourists overpay for individual tickets hundreds of times. The Prague Visitor Pass fixes most of that. Here is the honest maths.",
@@ -85,7 +143,7 @@
       "articleDate": "2026-04-13"
     },
     "prague-visitor-pass-ehrliche-bewertung": {
-      "title": "Der Prague Visitor Pass: warum ich jedem Gast dazu rate | Zuza Prague Tours Blog",
+      "title": "Der Prague Visitor Pass: warum ich jedem Gast dazu rate | Zuza Prague Tours",
       "description": "Nach 40 Jahren als Stadtführerin in Prag habe ich hunderte Male zugesehen, wie Touristen für Einzeltickets zu viel bezahlen. Der Prague Visitor Pass löst das meiste davon. Hier die ehrliche Rechnung.",
       "ogTitle": "Der Prague Visitor Pass: warum ich jedem Gast dazu rate | Zuza Prague Tours",
       "ogDescription": "Nach 40 Jahren als Stadtführerin in Prag habe ich hunderte Male zugesehen, wie Touristen für Einzeltickets zu viel bezahlen. Der Prague Visitor Pass löst das meiste davon. Hier die ehrliche Rechnung.",
@@ -97,7 +155,7 @@
       "articleDate": "2026-04-13"
     },
     "prague-imax-kafka-grave-vinohrady-guide": {
-      "title": "IMAX Prague, Kafka's Grave & the Best Farmers' Market in Town: A Vinohrady Half-Day | Zuza Prague Tours Blog",
+      "title": "IMAX Prague, Kafka's Grave & the Best Farmers' Market in Town: A Vinohrady Half-Day | Zuza Prague Tours",
       "description": "The only IMAX in the Czech Republic, Franz Kafka's final resting place, and a farmers' market that even drew Leonardo DiCaprio — all within walking distance in Prague's Vinohrady and Žižkov neighbourhoods.",
       "ogTitle": "IMAX Prague, Kafka's Grave & the Best Farmers' Market in Town: A Vinohrady Half-Day | Zuza Prague Tours",
       "ogDescription": "The only IMAX in the Czech Republic, Franz Kafka's final resting place, and a farmers' market that even drew Leonardo DiCaprio — all within walking distance in Prague's Vinohrady and Žižkov neighbourhoods.",
@@ -109,7 +167,7 @@
       "articleDate": "2026-04-13"
     },
     "prag-imax-kafka-grab-vinohrady-guide": {
-      "title": "IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady | Zuza Prague Tours Blog",
+      "title": "IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady | Zuza Prague Tours",
       "description": "Das einzige IMAX der Tschechischen Republik, Franz Kafkas letzte Ruhestätte und ein Bauernmarkt, der sogar Leonardo DiCaprio anzog — alles zu Fuß erreichbar in Prags Vierteln Vinohrady und Žižkov.",
       "ogTitle": "IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady | Zuza Prague Tours",
       "ogDescription": "Das einzige IMAX der Tschechischen Republik, Franz Kafkas letzte Ruhestätte und ein Bauernmarkt, der sogar Leonardo DiCaprio anzog — alles zu Fuß erreichbar in Prags Vierteln Vinohrady und Žižkov.",
@@ -121,7 +179,7 @@
       "articleDate": "2026-04-13"
     },
     "dan-brown-secret-of-secrets-prague": {
-      "title": "Dan Brown's The Secret of Secrets: 10,000 Pages, One Book — and Why Prague Was Always Part of the Story | Zuza Prague Tours Blog",
+      "title": "Dan Brown's The Secret of Secrets: 10,000 Pages, One Book — and Why Prague Was Always Part of the Story | Zuza Prague Tours",
       "description": "Dan Brown reportedly wrote over 10,000 pages before distilling his new novel to fewer than 700. That obsessive pursuit of hidden truth — encoded symbols, buried history, cities that lie to your face — is exactly what Prague has been doing for a thousand years.",
       "ogTitle": "Dan Brown's The Secret of Secrets: 10,000 Pages, One Book — and Why Prague Was Always Part of the Story | Zuza Prague Tours",
       "ogDescription": "Dan Brown reportedly wrote over 10,000 pages before distilling his new novel to fewer than 700. That obsessive pursuit of hidden truth — encoded symbols, buried history, cities that lie to your face — is exactly what Prague has been doing for a thousand years.",
@@ -133,7 +191,7 @@
       "articleDate": "2026-04-13"
     },
     "dan-brown-geheimnis-der-geheimnisse-prag": {
-      "title": "Dan Browns Das Geheimnis der Geheimnisse: 10.000 Seiten, ein Buch — und warum Prag immer Teil der Geschichte war | Zuza Prague Tours Blog",
+      "title": "Dan Browns Das Geheimnis der Geheimnisse: 10.000 Seiten, ein Buch — und warum Prag immer Teil der Geschichte war | Zuza Prague Tours",
       "description": "Dan Brown schrieb angeblich über 10.000 Seiten, bevor er seinen neuen Roman auf weniger als 700 verdichtete. Diese obsessive Suche nach verborgener Wahrheit — kodierte Symbole, vergrabene Geschichte, Städte, die einem ins Gesicht lügen — ist genau das, was Prag seit tausend Jahren tut.",
       "ogTitle": "Dan Browns Das Geheimnis der Geheimnisse: 10.000 Seiten, ein Buch — und warum Prag immer Teil der Geschichte war | Zuza Prague Tours",
       "ogDescription": "Dan Brown schrieb angeblich über 10.000 Seiten, bevor er seinen neuen Roman auf weniger als 700 verdichtete. Diese obsessive Suche nach verborgener Wahrheit — kodierte Symbole, vergrabene Geschichte, Städte, die einem ins Gesicht lügen — ist genau das, was Prag seit tausend Jahren tut.",
@@ -145,7 +203,7 @@
       "articleDate": "2026-04-13"
     },
     "best-day-trips-from-prague": {
-      "title": "Best Day Trips from Prague: Kutná Hora, Český Krumlov & More | Zuza Prague Tours Blog",
+      "title": "Best Day Trips from Prague: Kutná Hora, Český Krumlov & More | Zuza Prague Tours",
       "description": "A bone church, a fairy-tale castle town, a Habsburg hunting lodge, and a sobering Holocaust memorial — six unmissable day trips reachable from Prague by train or bus.",
       "ogTitle": "Best Day Trips from Prague: Kutná Hora, Český Krumlov & More | Zuza Prague Tours",
       "ogDescription": "A bone church, a fairy-tale castle town, a Habsburg hunting lodge, and a sobering Holocaust memorial — six unmissable day trips reachable from Prague by train or bus.",
@@ -157,7 +215,7 @@
       "articleDate": "2026-01-15"
     },
     "beste-tagesausfluege-von-prag": {
-      "title": "Die besten Tagesausflüge von Prag: Kutná Hora, Český Krumlov & mehr | Zuza Prague Tours Blog",
+      "title": "Die besten Tagesausflüge von Prag: Kutná Hora, Český Krumlov & mehr | Zuza Prague Tours",
       "description": "Eine Knochenkirche, eine Märchenschlossstadt, eine habsburgische Jagdresidenz und ein erschütterndes Holocaust-Mahnmal — sechs unvergessliche Tagesausflüge von Prag mit Zug oder Bus.",
       "ogTitle": "Die besten Tagesausflüge von Prag: Kutná Hora, Český Krumlov & mehr | Zuza Prague Tours",
       "ogDescription": "Eine Knochenkirche, eine Märchenschlossstadt, eine habsburgische Jagdresidenz und ein erschütterndes Holocaust-Mahnmal — sechs unvergessliche Tagesausflüge von Prag mit Zug oder Bus.",
@@ -169,7 +227,7 @@
       "articleDate": "2026-01-15"
     },
     "prague-castle-complete-guide": {
-      "title": "Prague Castle: The Complete Visitor's Guide (What to See, Tips & Hours) | Zuza Prague Tours Blog",
+      "title": "Prague Castle: The Complete Visitor's Guide (What to See, Tips & Hours) | Zuza Prague Tours",
       "description": "The world's largest ancient castle complex — and most visitors see just 10% of it. Here's how to navigate St. Vitus Cathedral, the Golden Lane, the Royal Gardens, and everything in between.",
       "ogTitle": "Prague Castle: The Complete Visitor's Guide (What to See, Tips & Hours) | Zuza Prague Tours",
       "ogDescription": "The world's largest ancient castle complex — and most visitors see just 10% of it. Here's how to navigate St. Vitus Cathedral, the Golden Lane, the Royal Gardens, and everything in between.",
@@ -181,7 +239,7 @@
       "articleDate": "2026-02-01"
     },
     "prager-burg-vollstaendiger-besucher-guide": {
-      "title": "Prager Burg: Der vollständige Besucherführer (Was sehen, Tipps & Zeiten) | Zuza Prague Tours Blog",
+      "title": "Prager Burg: Der vollständige Besucherführer (Was sehen, Tipps & Zeiten) | Zuza Prague Tours",
       "description": "Die größte alte Burganlage der Welt — und die meisten Besucher sehen nur 10 % davon. So navigieren Sie durch den Veitsdom, das Goldene Gässchen, den Königlichen Garten und alles dazwischen.",
       "ogTitle": "Prager Burg: Der vollständige Besucherführer (Was sehen, Tipps & Zeiten) | Zuza Prague Tours",
       "ogDescription": "Die größte alte Burganlage der Welt — und die meisten Besucher sehen nur 10 % davon. So navigieren Sie durch den Veitsdom, das Goldene Gässchen, den Königlichen Garten und alles dazwischen.",
@@ -193,7 +251,7 @@
       "articleDate": "2026-02-01"
     },
     "prague-food-guide": {
-      "title": "Prague Food Guide: What to Eat, Where to Go & Local Favourites | Zuza Prague Tours Blog",
+      "title": "Prague Food Guide: What to Eat, Where to Go & Local Favourites | Zuza Prague Tours",
       "description": "From svíčková and tank beer to the Náplavka Saturday market and Vinohrady wine bars — a local's guide to eating and drinking well in Prague.",
       "ogTitle": "Prague Food Guide: What to Eat, Where to Go & Local Favourites | Zuza Prague Tours",
       "ogDescription": "From svíčková and tank beer to the Náplavka Saturday market and Vinohrady wine bars — a local's guide to eating and drinking well in Prague.",
@@ -205,7 +263,7 @@
       "articleDate": "2026-02-15"
     },
     "prag-kulinarik-guide": {
-      "title": "Prag Kulinarikführer: Was essen, wo hingehen & lokale Lieblinge | Zuza Prague Tours Blog",
+      "title": "Prag Kulinarikführer: Was essen, wo hingehen & lokale Lieblinge | Zuza Prague Tours",
       "description": "Von Svíčková und Tankbier bis zum Náplavka-Samstagmarkt und Vinohrady-Weinbars — ein Einheimischenführer zum guten Essen und Trinken in Prag.",
       "ogTitle": "Prag Kulinarikführer: Was essen, wo hingehen & lokale Lieblinge | Zuza Prague Tours",
       "ogDescription": "Von Svíčková und Tankbier bis zum Náplavka-Samstagmarkt und Vinohrady-Weinbars — ein Einheimischenführer zum guten Essen und Trinken in Prag.",
@@ -217,7 +275,7 @@
       "articleDate": "2026-02-15"
     },
     "autumn-in-prague": {
-      "title": "Autumn in Prague: Golden Light, Wine Harvest & Fall Things to Do | Zuza Prague Tours Blog",
+      "title": "Autumn in Prague: Golden Light, Wine Harvest & Fall Things to Do | Zuza Prague Tours",
       "description": "September to November is Prague at its most cinematic: amber foliage in Stromovka, the Signal Festival lighting up the Old Town, and the first Christmas market stalls appearing in November.",
       "ogTitle": "Autumn in Prague: Golden Light, Wine Harvest & Fall Things to Do | Zuza Prague Tours",
       "ogDescription": "September to November is Prague at its most cinematic: amber foliage in Stromovka, the Signal Festival lighting up the Old Town, and the first Christmas market stalls appearing in November.",
@@ -229,7 +287,7 @@
       "articleDate": "2026-03-01"
     },
     "prag-im-herbst": {
-      "title": "Prag im Herbst: Goldenes Licht, Weinlese & Herbstaktivitäten | Zuza Prague Tours Blog",
+      "title": "Prag im Herbst: Goldenes Licht, Weinlese & Herbstaktivitäten | Zuza Prague Tours",
       "description": "Von September bis November zeigt Prag seine kinofilmreifste Seite: bernsteinfarbenes Laub in Stromovka, das Signal Festival, das die Altstadt erhellt, und die ersten Weihnachtsmarktstände im November.",
       "ogTitle": "Prag im Herbst: Goldenes Licht, Weinlese & Herbstaktivitäten | Zuza Prague Tours",
       "ogDescription": "Von September bis November zeigt Prag seine kinofilmreifste Seite: bernsteinfarbenes Laub in Stromovka, das Signal Festival, das die Altstadt erhellt, und die ersten Weihnachtsmarktstände im November.",
@@ -241,7 +299,7 @@
       "articleDate": "2026-03-01"
     },
     "summer-in-prague": {
-      "title": "Summer in Prague: What to Do, See & Eat (June, July & August Guide) | Zuza Prague Tours Blog",
+      "title": "Summer in Prague: What to Do, See & Eat (June, July & August Guide) | Zuza Prague Tours",
       "description": "Riverside bars on Náplavka, open-air cinemas, sunset rooftops, and early-morning Charles Bridge walks — your complete guide to Prague in summer without the crowds ruining it.",
       "ogTitle": "Summer in Prague: What to Do, See & Eat (June, July & August Guide) | Zuza Prague Tours",
       "ogDescription": "Riverside bars on Náplavka, open-air cinemas, sunset rooftops, and early-morning Charles Bridge walks — your complete guide to Prague in summer without the crowds ruining it.",
@@ -253,7 +311,7 @@
       "articleDate": "2026-03-15"
     },
     "prag-im-sommer": {
-      "title": "Prag im Sommer: Was tun, sehen & essen (Juni, Juli & August) | Zuza Prague Tours Blog",
+      "title": "Prag im Sommer: Was tun, sehen & essen (Juni, Juli & August) | Zuza Prague Tours",
       "description": "Flussuferkneipen an der Náplavka, Open-Air-Kinos, Sonnenuntergangs-Rooftops und morgendliche Spaziergänge auf der Karlsbrücke — Ihr kompletter Leitfaden für Prag im Sommer.",
       "ogTitle": "Prag im Sommer: Was tun, sehen & essen (Juni, Juli & August) | Zuza Prague Tours",
       "ogDescription": "Flussuferkneipen an der Náplavka, Open-Air-Kinos, Sonnenuntergangs-Rooftops und morgendliche Spaziergänge auf der Karlsbrücke — Ihr kompletter Leitfaden für Prag im Sommer.",
@@ -265,7 +323,7 @@
       "articleDate": "2026-03-15"
     },
     "spring-in-prague": {
-      "title": "Spring in Prague: The Best Things to Do (March, April & May Guide) | Zuza Prague Tours Blog",
+      "title": "Spring in Prague: The Best Things to Do (March, April & May Guide) | Zuza Prague Tours",
       "description": "Cherry blossoms on Petřín Hill, Easter markets on Old Town Square, and the Prague Spring Music Festival — here's everything you need to know about visiting Prague in spring.",
       "ogTitle": "Spring in Prague: The Best Things to Do (March, April & May Guide) | Zuza Prague Tours",
       "ogDescription": "Cherry blossoms on Petřín Hill, Easter markets on Old Town Square, and the Prague Spring Music Festival — here's everything you need to know about visiting Prague in spring.",
@@ -277,7 +335,7 @@
       "articleDate": "2026-04-01"
     },
     "prag-im-fruehling": {
-      "title": "Prag im Frühling: Die besten Aktivitäten (März, April & Mai) | Zuza Prague Tours Blog",
+      "title": "Prag im Frühling: Die besten Aktivitäten (März, April & Mai) | Zuza Prague Tours",
       "description": "Kirschblüten auf dem Petřínhügel, Ostermärkte auf dem Altstädter Ring und das Prager Frühling Musikfestival — alles, was Sie für einen Prag-Besuch im Frühling wissen müssen.",
       "ogTitle": "Prag im Frühling: Die besten Aktivitäten (März, April & Mai) | Zuza Prague Tours",
       "ogDescription": "Kirschblüten auf dem Petřínhügel, Ostermärkte auf dem Altstädter Ring und das Prager Frühling Musikfestival — alles, was Sie für einen Prag-Besuch im Frühling wissen müssen.",
@@ -289,7 +347,7 @@
       "articleDate": "2026-04-01"
     },
     "top-places-to-visit-in-prague-right-now": {
-      "title": "Top Places to Visit in Prague Right Now (2025): Icons, Parks, Art, and Nightlife | Zuza Prague Tours Blog",
+      "title": "Top Places to Visit in Prague Right Now (2025): Icons, Parks, Art, and Nightlife | Zuza Prague Tours",
       "description": "From Charles Bridge and Old Town Square to Petřín Gardens, Riegrovy Sady, the National Gallery, and rooftop bars—here’s where to go in Prague right now, with practical tips for 2025 days and nights.",
       "ogTitle": "Top Places to Visit in Prague Right Now (2025): Icons, Parks, Art, and Nightlife | Zuza Prague Tours",
       "ogDescription": "From Charles Bridge and Old Town Square to Petřín Gardens, Riegrovy Sady, the National Gallery, and rooftop bars—here’s where to go in Prague right now, with practical tips for 2025 days and nights.",
@@ -301,7 +359,7 @@
       "articleDate": "2025-10-26"
     },
     "top-orte-in-prag-jetzt-besuchen": {
-      "title": "Top‑Orte, die Sie jetzt in Prag besuchen sollten (2025): Ikonen, Parks, Kunst & Nachtleben | Zuza Prague Tours Blog",
+      "title": "Top‑Orte, die Sie jetzt in Prag besuchen sollten (2025): Ikonen, Parks, Kunst & Nachtleben | Zuza Prague Tours",
       "description": "Von Karlsbrücke und Altstädter Ring über Petřín‑Gärten, Riegrovy Sady, die Nationalgalerie bis zu Rooftop‑Bars—hier geht’s 2025 in Prag hin, mit praktischen Tages‑ und Abendtipps.",
       "ogTitle": "Top‑Orte, die Sie jetzt in Prag besuchen sollten (2025): Ikonen, Parks, Kunst & Nachtleben | Zuza Prague Tours",
       "ogDescription": "Von Karlsbrücke und Altstädter Ring über Petřín‑Gärten, Riegrovy Sady, die Nationalgalerie bis zu Rooftop‑Bars—hier geht’s 2025 in Prag hin, mit praktischen Tages‑ und Abendtipps.",
@@ -313,7 +371,7 @@
       "articleDate": "2025-10-26"
     },
     "prettiest-winter-views-in-prague": {
-      "title": "Which Places Are the Prettiest to Visit in Prague in Winter? Top 12 Views | Zuza Prague Tours Blog",
+      "title": "Which Places Are the Prettiest to Visit in Prague in Winter? Top 12 Views | Zuza Prague Tours",
       "description": "Prague in winter glows with warm light, quiet alleys, and magical views. Here are the 12 prettiest Old Town vantage points—walkable, photogenic, and cozy.",
       "ogTitle": "Which Places Are the Prettiest to Visit in Prague in Winter? Top 12 Views | Zuza Prague Tours",
       "ogDescription": "Prague in winter glows with warm light, quiet alleys, and magical views. Here are the 12 prettiest Old Town vantage points—walkable, photogenic, and cozy.",
@@ -325,7 +383,7 @@
       "articleDate": "2025-10-25"
     },
     "prag-schoenste-orte-aussichten-im-winter": {
-      "title": "Welche Orte sind im Winter in Prag am schönsten? Top 12 Aussichtspunkte | Zuza Prague Tours Blog",
+      "title": "Welche Orte sind im Winter in Prag am schönsten? Top 12 Aussichtspunkte | Zuza Prague Tours",
       "description": "Prag leuchtet im Winter in warmem Licht: stille Gassen, magische Ausblicke. Hier sind 12 der schönsten Altstadt-Perspektiven—fußläufig, fotogen und behaglich.",
       "ogTitle": "Welche Orte sind im Winter in Prag am schönsten? Top 12 Aussichtspunkte | Zuza Prague Tours",
       "ogDescription": "Prag leuchtet im Winter in warmem Licht: stille Gassen, magische Ausblicke. Hier sind 12 der schönsten Altstadt-Perspektiven—fußläufig, fotogen und behaglich.",
@@ -337,7 +395,7 @@
       "articleDate": "2025-10-25"
     },
     "best-time-to-visit-prague": {
-      "title": "Best Time to Visit Prague: A Seasonal Guide | Zuza Prague Tours Blog",
+      "title": "Best Time to Visit Prague: A Seasonal Guide | Zuza Prague Tours",
       "description": "Discover the perfect season to explore Prague based on your preferences. From blooming spring gardens to magical winter markets...",
       "ogTitle": "Best Time to Visit Prague: A Seasonal Guide | Zuza Prague Tours",
       "ogDescription": "Discover the perfect season to explore Prague based on your preferences. From blooming spring gardens to magical winter markets...",
@@ -349,7 +407,7 @@
       "articleDate": "2024-01-15"
     },
     "beste-reisezeit-prag": {
-      "title": "Beste Reisezeit für Prag: Ein Saisonführer | Zuza Prague Tours Blog",
+      "title": "Beste Reisezeit für Prag: Ein Saisonführer | Zuza Prague Tours",
       "description": "Entdecken Sie die perfekte Jahreszeit, um Prag zu erkunden. Von blühenden Frühlingsgärten bis zu magischen Wintermärkten...",
       "ogTitle": "Beste Reisezeit für Prag: Ein Saisonführer | Zuza Prague Tours",
       "ogDescription": "Entdecken Sie die perfekte Jahreszeit, um Prag zu erkunden. Von blühenden Frühlingsgärten bis zu magischen Wintermärkten...",
@@ -361,7 +419,7 @@
       "articleDate": "2024-01-15"
     },
     "hidden-gems-of-prague": {
-      "title": "Hidden Gems of Prague: Realistic, Walkable, Beautiful | Zuza Prague Tours Blog",
+      "title": "Hidden Gems of Prague: Realistic, Walkable, Beautiful | Zuza Prague Tours",
       "description": "A walkable selection of courtyards, gardens, and cafés that feel truly local—without racing across the city.",
       "ogTitle": "Hidden Gems of Prague: Realistic, Walkable, Beautiful | Zuza Prague Tours",
       "ogDescription": "A walkable selection of courtyards, gardens, and cafés that feel truly local—without racing across the city.",
@@ -373,7 +431,7 @@
       "articleDate": "2024-01-08"
     },
     "prag-geheimtipps-versteckte-orte": {
-      "title": "Prag Geheimtipps: Realistisch, begehbar, schön | Zuza Prague Tours Blog",
+      "title": "Prag Geheimtipps: Realistisch, begehbar, schön | Zuza Prague Tours",
       "description": "Eine gehbare Auswahl aus Höfen, Gärten und Cafés, die sich wirklich lokal anfühlen—ohne durch die Stadt zu hetzen.",
       "ogTitle": "Prag Geheimtipps: Realistisch, begehbar, schön | Zuza Prague Tours",
       "ogDescription": "Eine gehbare Auswahl aus Höfen, Gärten und Cafés, die sich wirklich lokal anfühlen—ohne durch die Stadt zu hetzen.",
@@ -385,7 +443,7 @@
       "articleDate": "2024-01-08"
     },
     "prague-at-night-magical-experience": {
-      "title": "Prague at Night: A Magical Experience | Zuza Prague Tours Blog",
+      "title": "Prague at Night: A Magical Experience | Zuza Prague Tours",
       "description": "Discover the enchanting beauty of Prague after dark. From illuminated bridges to romantic evening walks, experience the magic of nocturnal Prague...",
       "ogTitle": "Prague at Night: A Magical Experience | Zuza Prague Tours",
       "ogDescription": "Discover the enchanting beauty of Prague after dark. From illuminated bridges to romantic evening walks, experience the magic of nocturnal Prague...",
@@ -397,7 +455,7 @@
       "articleDate": "2024-01-01"
     },
     "jewish-quarter-history-and-heritage": {
-      "title": "The Jewish Quarter: History and Heritage | Zuza Prague Tours Blog",
+      "title": "The Jewish Quarter: History and Heritage | Zuza Prague Tours",
       "description": "Explore the rich history of Prague's Jewish Quarter, one of Europe’s most significant Jewish heritage sites...",
       "ogTitle": "The Jewish Quarter: History and Heritage | Zuza Prague Tours",
       "ogDescription": "Explore the rich history of Prague's Jewish Quarter, one of Europe’s most significant Jewish heritage sites...",
@@ -409,7 +467,7 @@
       "articleDate": "2023-12-20"
     },
     "top-21-instagrammable-places-in-prague": {
-      "title": "Top 21 Instagrammable Places in Prague | Zuza Prague Tours Blog",
+      "title": "Top 21 Instagrammable Places in Prague | Zuza Prague Tours",
       "description": "From iconic bridges to hidden courtyards—discover Prague’s most photogenic locations and exact spots for the perfect shot.",
       "ogTitle": "Top 21 Instagrammable Places in Prague | Zuza Prague Tours",
       "ogDescription": "From iconic bridges to hidden courtyards—discover Prague’s most photogenic locations and exact spots for the perfect shot.",
@@ -421,7 +479,7 @@
       "articleDate": "2025-10-12"
     },
     "vaclav-havel-tour-prague": {
-      "title": "Václav Havel in Prague: A Walking Tour of Freedom | Zuza Prague Tours Blog",
+      "title": "Václav Havel in Prague: A Walking Tour of Freedom | Zuza Prague Tours",
       "description": "Follow the footsteps of Václav Havel across Prague—Velvet Revolution sites, civic forums, theaters, and cafés that shaped a nation's path to freedom.",
       "ogTitle": "Václav Havel in Prague: A Walking Tour of Freedom | Zuza Prague Tours",
       "ogDescription": "Follow the footsteps of Václav Havel across Prague—Velvet Revolution sites, civic forums, theaters, and cafés that shaped a nation's path to freedom.",
@@ -433,7 +491,7 @@
       "articleDate": "2025-10-18"
     },
     "klementinum-baroque-library-prague": {
-      "title": "Did You Know? Prague’s Most Beautiful Library is at the Klementinum | Zuza Prague Tours Blog",
+      "title": "Did You Know? Prague’s Most Beautiful Library is at the Klementinum | Zuza Prague Tours",
       "description": "Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here’s how to see it and what to know.",
       "ogTitle": "Did You Know? Prague’s Most Beautiful Library is at the Klementinum | Zuza Prague Tours",
       "ogDescription": "Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here’s how to see it and what to know.",
@@ -445,7 +503,7 @@
       "articleDate": "2025-10-18"
     },
     "klementinum-astronomical-tower-meridian-room": {
-      "title": "Klementinum Astronomical Tower: Views, Time, and Stories | Zuza Prague Tours Blog",
+      "title": "Klementinum Astronomical Tower: Views, Time, and Stories | Zuza Prague Tours",
       "description": "Climb the Klementinum’s Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight.",
       "ogTitle": "Klementinum Astronomical Tower: Views, Time, and Stories | Zuza Prague Tours",
       "ogDescription": "Climb the Klementinum’s Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight.",
@@ -457,7 +515,7 @@
       "articleDate": "2025-10-18"
     },
     "what-to-do-in-prague-in-november-2025": {
-      "title": "What to Do in Prague in November (2025): Things to See Now | Zuza Prague Tours Blog",
+      "title": "What to Do in Prague in November (2025): Things to See Now | Zuza Prague Tours",
       "description": "Concerts, galleries, river walks, warm cafés—and realistic tips for weather and timings. Your calm November plan in Prague.",
       "ogTitle": "What to Do in Prague in November (2025): Things to See Now | Zuza Prague Tours",
       "ogDescription": "Concerts, galleries, river walks, warm cafés—and realistic tips for weather and timings. Your calm November plan in Prague.",
@@ -469,7 +527,7 @@
       "articleDate": "2025-10-16"
     },
     "top-prague-gardens-to-visit": {
-      "title": "Top Prague Gardens to Visit | Zuza Prague Tours Blog",
+      "title": "Top Prague Gardens to Visit | Zuza Prague Tours",
       "description": "From Vrtba to Wallenstein, here are the prettiest gardens in Prague—plus timing tips and route ideas.",
       "ogTitle": "Top Prague Gardens to Visit | Zuza Prague Tours",
       "ogDescription": "From Vrtba to Wallenstein, here are the prettiest gardens in Prague—plus timing tips and route ideas.",
@@ -481,7 +539,7 @@
       "articleDate": "2025-10-18"
     },
     "strahov-monastery-prague": {
-      "title": "Strahov Monastery: Quiet Views, Library, and Lore | Zuza Prague Tours Blog",
+      "title": "Strahov Monastery: Quiet Views, Library, and Lore | Zuza Prague Tours",
       "description": "Climb gently above Lesser Town for calm views, a legendary library (with permits), and a classic Prague monastery walk.",
       "ogTitle": "Strahov Monastery: Quiet Views, Library, and Lore | Zuza Prague Tours",
       "ogDescription": "Climb gently above Lesser Town for calm views, a legendary library (with permits), and a classic Prague monastery walk.",
@@ -493,7 +551,7 @@
       "articleDate": "2025-10-19"
     },
     "franz-kafka-places-in-prague": {
-      "title": "Franz Kafka in Prague: All Places to Visit + Walking Itinerary | Zuza Prague Tours Blog",
+      "title": "Franz Kafka in Prague: All Places to Visit + Walking Itinerary | Zuza Prague Tours",
       "description": "The definitive Kafka-in-Prague route: birthplace, plaques, cafés, museum, Golden Lane and more—timed, map-friendly, and doable in half a day.",
       "ogTitle": "Franz Kafka in Prague: All Places to Visit + Walking Itinerary | Zuza Prague Tours",
       "ogDescription": "The definitive Kafka-in-Prague route: birthplace, plaques, cafés, museum, Golden Lane and more—timed, map-friendly, and doable in half a day.",
@@ -505,7 +563,7 @@
       "articleDate": "2025-10-19"
     },
     "franz-kafka-orte-in-prag": {
-      "title": "Franz Kafka in Prag: Alle Orte – Rundgang & Reiseroute | Zuza Prague Tours Blog",
+      "title": "Franz Kafka in Prag: Alle Orte – Rundgang & Reiseroute | Zuza Prague Tours",
       "description": "Die vollständige Kafka-Route in Prag: Geburtshaus, Tafeln, Cafés, Museum, Goldenes Gässchen u. mehr—mit Zeiten, Karte und in einem halben Tag machbar.",
       "ogTitle": "Franz Kafka in Prag: Alle Orte – Rundgang & Reiseroute | Zuza Prague Tours",
       "ogDescription": "Die vollständige Kafka-Route in Prag: Geburtshaus, Tafeln, Cafés, Museum, Goldenes Gässchen u. mehr—mit Zeiten, Karte und in einem halben Tag machbar.",

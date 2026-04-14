@@ -10,12 +10,12 @@ const HomePage: React.FC = () => {
   const title =
     language === 'de'
       ? 'Zuzana Manová | Deutschsprachige Prag-Expertin & Stadtführerin – ZuzaPragTour'
-      : 'Zuzana Manová | Private Prague Tours – ZuzaPragTour';
+      : 'Zuzana Manová | Private Prague Tours & Expert Guide – ZuzaPragTour';
 
   const description =
     language === 'de'
       ? 'Zuzana Manová – deutschsprachige Prag-Expertin & Spezialistin für private Stadtführungen seit 1986. Zertifizierte Führungen durch Altstadt, Karlsbrücke, Prager Burg & Jüdisches Viertel. Über 40 Jahre Erfahrung. Jetzt buchen!'
-      : 'Zuzana Manová – your private Prague tour guide since 1986. Certified expert tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. 40+ years of experience. Book your personal tour today!';
+      : 'Zuzana Manová – certified Prague expert guide and specialist since 1986. Private tours of Prague Castle, Old Town, Jewish Quarter, and hidden gems. German & English. Book your tour today!';
 
   const keywords =
     language === 'de'
@@ -36,7 +36,19 @@ const HomePage: React.FC = () => {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zuzapragtour.de/" />
+        <meta property="og:image" content="https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg" />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="1029" />
+        <meta
+          property="og:image:alt"
+          content="Charles Bridge and Prague — Zuza Prague Tours"
+        />
+        <meta property="og:locale" content={language === 'de' ? 'de_DE' : 'en_US'} />
+        <meta property="og:locale:alternate" content={language === 'de' ? 'en_US' : 'de_DE'} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg" />
         <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
       </Helmet>
       <Home />
