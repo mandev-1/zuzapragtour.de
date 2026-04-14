@@ -116,31 +116,31 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              {/* Trust signals — two on mobile, three on sm+ */}
-              <div className="mb-6 flex items-center gap-3 text-sm font-medium text-surface-container-lowest sm:gap-5">
-                <div className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-base">schedule</span>
-                  <span className="whitespace-nowrap">{t('home.meta1')}</span>
+              {/* Trust signals — stack on narrow phones; row from sm up */}
+              <div className="mb-6 flex flex-col gap-2 text-sm font-medium text-surface-container-lowest sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
+                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
+                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">schedule</span>
+                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta1')}</span>
                 </div>
-                <span className="text-white/30">·</span>
-                <div className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-base">group</span>
-                  <span className="whitespace-nowrap">{t('home.meta2')}</span>
+                <span className="hidden text-white/30 sm:inline">·</span>
+                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
+                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">group</span>
+                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta2')}</span>
                 </div>
                 <span className="hidden text-white/30 sm:inline">·</span>
                 <a
                   href={TRIPADVISOR_LISTING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden items-center gap-1.5 transition-opacity hover:opacity-90 sm:flex"
+                  className="hidden min-w-0 items-center gap-1.5 transition-opacity hover:opacity-90 sm:flex"
                 >
                   <span
-                    className="material-symbols-outlined text-base text-secondary-container"
+                    className="material-symbols-outlined shrink-0 text-base text-secondary-container"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
                     star
                   </span>
-                  <span className="whitespace-nowrap">{t('home.meta3')}</span>
+                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta3')}</span>
                 </a>
               </div>
 
@@ -225,7 +225,7 @@ const Home: React.FC = () => {
           {/* Portrait — large, roughly half-width on desktop */}
           <div className="relative flex-none md:w-[44%]">
             <img
-              className="h-72 w-full object-cover object-[center_15%] sm:h-80 md:h-full md:min-h-[26rem]"
+              className="h-72 w-full object-cover object-top sm:h-80 md:h-full md:min-h-[26rem]"
               src={pub('/images/zuzana-portrait.jpg')}
               alt="Zuzana Manová"
             />
