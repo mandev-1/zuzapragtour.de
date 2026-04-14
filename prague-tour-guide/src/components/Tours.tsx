@@ -2,70 +2,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { tours } from '../data/tours';
 
 const Tours: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const navigate = useNavigate();
 
-  type TourCard = {
-    id: number;
-    titleKey: string;
-    descriptionKey: string;
-    durationKey: string;
-    image: string;
-    highlightKeys: readonly string[];
-  };
-
-  const toursData: TourCard[] = [
-    {
-      id: 1,
-      titleKey: 'tour.castle.title',
-      descriptionKey: 'tour.castle.description',
-      durationKey: 'tour.castle.duration',
-      image: '/images/prague-castle.jpg',
-      highlightKeys: ['tour.castle.h1', 'tour.castle.h2', 'tour.castle.h3', 'tour.castle.h4'],
-    },
-    {
-      id: 2,
-      titleKey: 'tour.oldtown.title',
-      descriptionKey: 'tour.oldtown.description',
-      durationKey: 'tour.oldtown.duration',
-      image: '/images/blog-jewish-quarter-2-min.jpg',
-      highlightKeys: ['tour.oldtown.h1', 'tour.oldtown.h2', 'tour.oldtown.h3', 'tour.oldtown.h4'],
-    },
-    {
-      id: 3,
-      titleKey: 'tour.hidden.title',
-      descriptionKey: 'tour.hidden.description',
-      durationKey: 'tour.hidden.duration',
-      image: '/images/blog-hidden-gems-min.jpg',
-      highlightKeys: ['tour.hidden.h1', 'tour.hidden.h2', 'tour.hidden.h3', 'tour.hidden.h4'],
-    },
-    {
-      id: 4,
-      titleKey: 'tour.german.title',
-      descriptionKey: 'tour.german.description',
-      durationKey: 'tour.german.duration',
-      image: '/images/prague-castle-cathedral.jpg',
-      highlightKeys: ['tour.german.h1', 'tour.german.h2', 'tour.german.h3', 'tour.german.h4'],
-    },
-    {
-      id: 5,
-      titleKey: 'tour.custom.title',
-      descriptionKey: 'tour.custom.description',
-      durationKey: 'tour.custom.duration',
-      image: '/images/blog-night-prague-min.jpg',
-      highlightKeys: ['tour.custom.h1', 'tour.custom.h2', 'tour.custom.h3', 'tour.custom.h4'],
-    },
-    {
-      id: 6,
-      titleKey: 'tour.havel.title',
-      descriptionKey: 'tour.havel.description',
-      durationKey: 'tour.havel.duration',
-      image: '/images/havel-tour.jpg',
-      highlightKeys: ['tour.havel.h1', 'tour.havel.h2', 'tour.havel.h3', 'tour.havel.h4'],
-    },
-  ];
+  // Build card data from the shared tours array
+  const toursData = tours.map((tour, index) => ({
+    id: index + 1,
+    slug: language === 'de' && tour.slugDe ? tour.slugDe : tour.slug,
+    titleKey: tour.titleKey,
+    descriptionKey: tour.descriptionKey,
+    durationKey: tour.durationKey,
+    image: tour.image,
+    highlightKeys: tour.highlightKeys,
+  }));
 
   return (
     <div className="bg-surface pb-16">

@@ -257,12 +257,12 @@ const BlogPostPage: React.FC = () => {
 
       <article className="min-h-screen bg-white" ref={articleRef}>
         {/* Tag strip (Stitch: pill row under site header) */}
-        <section className="border-b border-stone-100 bg-stone-50/70 py-4">
-          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-2 px-6">
+        <section className="border-b border-stone-100 bg-stone-50/70 py-3 sm:py-4">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-1.5 px-4 sm:gap-2 sm:px-6">
             {currentTags.map((tag: string, i: number) => (
               <span
                 key={i}
-                className="rounded-full bg-stone-200/90 px-3 py-1 font-label text-xs font-medium text-on-surface"
+                className="rounded-full bg-stone-200/90 px-2 py-0.5 font-label text-[0.65rem] font-medium leading-snug text-on-surface sm:px-3 sm:py-1 sm:text-xs"
               >
                 {tag}
               </span>

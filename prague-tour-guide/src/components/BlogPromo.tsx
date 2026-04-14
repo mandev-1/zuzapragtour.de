@@ -3,7 +3,46 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const PROMO_SLUG = 'vaclav-havel-tour-prague';
-const DISMISS_KEY = 'zpt.promo.dismissed';
+const STORAGE_CLICKED = 'zpt.promo.havel.clicked';
+const STORAGE_LAST_SHOWN = 'zpt.promo.havel.lastShown';
+const ONE_HOUR_MS = 60 * 60 * 1000;
+const SHOW_DELAY_MS = 4000;
+
+function hasClickedArticle(): boolean {
+  try {
+    return localStorage.getItem(STORAGE_CLICKED) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function wasShownWithinLastHour(): boolean {
+  try {
+    const raw = localStorage.getItem(STORAGE_LAST_SHOWN);
+    if (!raw) return false;
+    const last = parseInt(raw, 10);
+    if (Number.isNaN(last)) return false;
+    return Date.now() - last < ONE_HOUR_MS;
+  } catch {
+    return false;
+  }
+}
+
+function markShown(): void {
+  try {
+    localStorage.setItem(STORAGE_LAST_SHOWN, String(Date.now()));
+  } catch {
+    /* ignore quota / private mode */
+  }
+}
+
+function markClicked(): void {
+  try {
+    localStorage.setItem(STORAGE_CLICKED, '1');
+  } catch {
+    /* ignore */
+  }
+}
 
 const BlogPromo: React.FC = () => {
   const { pathname } = useLocation();
@@ -17,18 +56,26 @@ const BlogPromo: React.FC = () => {
 
   React.useEffect(() => {
     if (isHidden) return;
-    if (sessionStorage.getItem(DISMISS_KEY)) return;
+    if (hasClickedArticle()) return;
+    if (wasShownWithinLastHour()) return;
 
-    const timer = setTimeout(() => setVisible(true), 4000);
-    return () => clearTimeout(timer);
+    const timer = window.setTimeout(() => {
+      setVisible(true);
+      markShown();
+    }, SHOW_DELAY_MS);
+    return () => window.clearTimeout(timer);
   }, [isHidden]);
 
   const dismiss = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setExiting(true);
-    sessionStorage.setItem(DISMISS_KEY, '1');
     setTimeout(() => setVisible(false), 300);
+    // Close still respects 1/hour (lastShown already set when card appeared)
+  };
+
+  const onPromoClick = () => {
+    markClicked();
   };
 
   if (isHidden || !visible) return null;
@@ -49,7 +96,11 @@ const BlogPromo: React.FC = () => {
         exiting ? 'translate-y-4 scale-95 opacity-0' : 'animate-[slideUp_0.4s_ease-out]'
       }`}
     >
-      <Link to={`/blog/${PROMO_SLUG}`} className="group block">
+      <Link
+        to={`/blog/${PROMO_SLUG}`}
+        className="group block"
+        onClick={onPromoClick}
+      >
         <div className="relative h-32 overflow-hidden">
           <img
             src="/images/blog-havel.jpg"

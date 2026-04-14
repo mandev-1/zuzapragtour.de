@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "prebuild": "node scripts/generate-sitemap.js && node scripts/generate-route-meta.cjs",
+    "prebuild": "node scripts/generate-thumbnails.cjs && node scripts/generate-sitemap.js && node scripts/generate-route-meta.cjs",
     "new:blog": "node scripts/new-blog-post.cjs",
     "thumbs": "node scripts/generate-thumbnails.cjs",
     "thumbs:force": "node scripts/generate-thumbnails.cjs --force",

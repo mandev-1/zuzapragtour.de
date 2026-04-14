@@ -14,6 +14,7 @@ import BlogPostPage from './pages/BlogPostPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import ZuzanaManovaPage from './pages/ZuzanaManovaPage';
+import TourPage from './pages/TourPage';
 import BlogPromo from './components/BlogPromo';
 const App: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const App: React.FC = () => {
                 <Route path="/book" element={<BookPage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
+                <Route path="/tours/:slug" element={<TourPage />} />
                 <Route path="/zuzana-manova" element={<ZuzanaManovaPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />

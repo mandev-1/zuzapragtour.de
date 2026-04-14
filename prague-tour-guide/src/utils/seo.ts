@@ -145,6 +145,119 @@ export function getFAQSchema(faqs: FAQItem[]) {
   };
 }
 
+export interface TourPageSchemaInput {
+  name: string;
+  description: string;
+  duration: string; // human-readable e.g. "3-4 hours"
+  durationMinutes: number; // ISO 8601 PT value base
+  image: string; // full URL
+  url: string; // full canonical URL for this tour page
+  faqs: { question: string; answer: string }[];
+}
+
+/**
+ * Rich schema for an individual tour page:
+ *   - TouristTrip  (tour details, offered by business)
+ *   - LocalBusiness (re-asserts NAP so Google associates page with listing)
+ *   - FAQPage  (enables FAQ rich snippets in SERPs)
+ */
+export function getTourPageSchema(tour: TourPageSchemaInput) {
+  const isoPT = `PT${tour.durationMinutes}M`;
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'TouristTrip',
+        '@id': `${tour.url}#tour`,
+        name: tour.name,
+        description: tour.description,
+        image: tour.image,
+        url: tour.url,
+        touristType: { '@type': 'Audience', audienceType: 'Tourists' },
+        availableLanguage: [
+          { '@type': 'Language', name: 'German' },
+          { '@type': 'Language', name: 'English' },
+        ],
+        duration: isoPT,
+        provider: {
+          '@type': 'LocalBusiness',
+          '@id': BUSINESS_ID,
+          name: NAP.businessName,
+          telephone: NAP.phone,
+          email: NAP.email,
+          url: NAP.url,
+          image: `${NAP.url}/images/zuzana-portrait.jpg`,
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: NAP.city,
+            addressRegion: NAP.city,
+            addressCountry: NAP.country,
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: NAP.lat,
+            longitude: NAP.lng,
+          },
+          priceRange: '€€',
+          knowsLanguage: ['de', 'en', 'cs'],
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.9',
+            reviewCount: '14',
+            bestRating: '5',
+            worstRating: '1',
+          },
+          sameAs: [NAP.tripadvisor, NAP.tourhq, NAP.instagram],
+        },
+        guide: {
+          '@type': 'Person',
+          '@id': GUIDE_ID,
+          name: NAP.personName,
+          jobTitle: 'Certified Tour Guide',
+          hasCredential: [
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'Czech Republic Certified Tour Guide',
+              credentialCategory: 'Professional License',
+            },
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'Jewish Museum in Prague Accreditation',
+              credentialCategory: 'Specialist Certification',
+            },
+          ],
+        },
+        offers: {
+          '@type': 'Offer',
+          url: `${NAP.url}/book`,
+          availability: 'https://schema.org/InStock',
+          priceCurrency: 'EUR',
+          seller: { '@id': BUSINESS_ID },
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: tour.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: NAP.url },
+          { '@type': 'ListItem', position: 2, name: 'Tours', item: `${NAP.url}/tours` },
+          { '@type': 'ListItem', position: 3, name: tour.name, item: tour.url },
+        ],
+      },
+    ],
+  };
+}
+
 export const defaultMeta = {
   title: 'Zuza Prague Tours - Expert Prague Tour Guide | Zuzana Manová',
   description:

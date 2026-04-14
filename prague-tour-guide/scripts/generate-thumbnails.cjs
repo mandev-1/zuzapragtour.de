@@ -21,6 +21,13 @@ const JPEG_QUALITY = 80; // sips doesn't support quality for jpg, but we convert
 
 const force = process.argv.includes('--force');
 
+if (process.platform !== 'darwin') {
+  console.log(
+    'generate-thumbnails: skipped (requires macOS `sips`). Commit public/images/thumbs/ or run `npm run thumbs` on a Mac before deploy.'
+  );
+  process.exit(0);
+}
+
 // All images that appear as blog hero images or site thumbnails
 const SOURCES = fs
   .readdirSync(IMAGES_DIR)
