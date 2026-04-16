@@ -5,17 +5,12 @@ import { useLanguage } from '../context/LanguageContext';
 import type { TranslationKey } from '../utils/translations';
 import TripAdvisorWidget from './TripAdvisorWidget';
 import TourHqWidget from './TourHqWidget';
-import { TRIPADVISOR_LISTING_URL } from '../constants/tripAdvisor';
 
 const pub = (path: string) => `${process.env.PUBLIC_URL}${path}`;
 
-/** Responsive hero assets (resized from charles-bridge-min.jpg; max 1600px wide for LCP). */
-const HERO_SRC = pub('/images/charles-bridge-hero-1600.jpg');
-const HERO_SRC_SET = [
-  `${pub('/images/charles-bridge-hero-800.jpg')} 800w`,
-  `${pub('/images/charles-bridge-hero-1200.jpg')} 1200w`,
-  `${pub('/images/charles-bridge-hero-1600.jpg')} 1600w`,
-].join(', ');
+// Portrait for the hero — use a real professional photograph of Zuzana.
+// If /images/zuzana-hero.jpg doesn't exist yet, falls back to the existing portrait.
+const PORTRAIT_SRC = pub('/images/zuzana-portrait.jpg');
 
 type TeaserTour = {
   titleKey: TranslationKey;
@@ -74,92 +69,110 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-surface">
-      <section className="relative h-[min(77vh,46rem)] w-full overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            className="h-full w-full object-cover"
-            src={HERO_SRC}
-            srcSet={HERO_SRC_SET}
-            sizes="100vw"
-            width={1600}
-            height={1029}
-            alt={t('home.hero.imageAlt')}
-            fetchPriority="high"
-            decoding="async"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
-        </div>
-        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col justify-end px-5 pb-12 sm:px-8 md:pb-24">
-          <div className="mx-auto w-full max-w-3xl">
-            {/* Badge — single line on mobile, no wrapping */}
-            <motion.span
-              className="mb-4 hidden rounded-full bg-secondary-container px-4 py-1.5 font-label text-xs font-bold uppercase tracking-widest text-on-secondary-container sm:mb-6 sm:inline-block"
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {t('home.badge')}
-            </motion.span>
+      <section className="border-b border-stone-200 bg-paper">
+        <div className="mx-auto max-w-editorial px-5 py-16 md:px-10 md:py-24">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-16">
+            {/* Copy */}
+            <div>
+              <motion.p
+                className="mb-6 font-eyebrow text-eyebrow uppercase text-stone-500"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                {t('home.badge')}
+              </motion.p>
 
-            {/* H1 — clamp prevents line-break overflow on small screens */}
-            <h1
-              className="mb-5 font-headline leading-tight text-surface-container-lowest"
-              style={{ fontSize: 'clamp(1.75rem, 8vw, 4rem)' }}
-            >
-              {t('home.hero.line1')}
-              <br />
-              <span className="text-secondary-container">{t('home.hero.line2')}</span>
-            </h1>
+              <motion.h1
+                className="mb-8 font-headline text-display-xl text-ink"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.05 }}
+              >
+                {t('home.hero.line1')}
+                <span className="block italic text-stone-600">{t('home.hero.line2')}</span>
+              </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {/* Trust signals — stack on narrow phones; row from sm up */}
-              <div className="mb-6 flex flex-col gap-2 text-sm font-medium text-surface-container-lowest sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
-                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
-                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">schedule</span>
-                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta1')}</span>
-                </div>
-                <span className="hidden text-white/30 sm:inline">·</span>
-                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
-                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">group</span>
-                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta2')}</span>
-                </div>
-                <span className="hidden text-white/30 sm:inline">·</span>
-                <a
-                  href={TRIPADVISOR_LISTING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden min-w-0 items-center gap-1.5 transition-opacity hover:opacity-90 sm:flex"
-                >
-                  <span
-                    className="material-symbols-outlined shrink-0 text-base text-secondary-container"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    star
-                  </span>
-                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta3')}</span>
-                </a>
-              </div>
+              <motion.p
+                className="mb-10 max-w-prose-narrow font-body text-prose-lg text-stone-700"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+              >
+                {t('hero.subtitle')}
+              </motion.p>
 
-              {/* CTAs — always side by side */}
-              <div className="flex items-center gap-3">
+              <motion.div
+                className="flex flex-wrap items-center gap-4"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+              >
                 <Link
                   to="/book#contact-title"
-                  className="rounded-lg bg-primary px-5 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95 sm:px-7 sm:py-3.5"
+                  className="rounded-md bg-ink px-7 py-3.5 font-label text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
                 >
                   {t('hero.sendEnquiry')}
                 </Link>
                 <Link
                   to="/tours"
-                  className="rounded-lg border border-white/40 bg-white/10 px-5 py-3 font-label text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20 sm:px-6 sm:py-3.5"
+                  className="font-label text-sm text-stone-600 underline-offset-4 hover:text-ink hover:underline"
                 >
                   {t('hero.exploreTours')} →
                 </Link>
+              </motion.div>
+
+              {/* Trust stats row — editorial, no icons */}
+              <motion.dl
+                className="mt-14 grid grid-cols-3 gap-6 border-t border-stone-200 pt-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <div>
+                  <dt className="font-eyebrow text-eyebrow uppercase text-stone-500">
+                    {t('home.meta1')}
+                  </dt>
+                  <dd className="mt-2 font-headline text-2xl text-ink md:text-3xl">40+</dd>
+                </div>
+                <div>
+                  <dt className="font-eyebrow text-eyebrow uppercase text-stone-500">TripAdvisor</dt>
+                  <dd className="mt-2 font-headline text-2xl text-ink md:text-3xl">4,9</dd>
+                </div>
+                <div>
+                  <dt className="font-eyebrow text-eyebrow uppercase text-stone-500">
+                    {t('home.meta2')}
+                  </dt>
+                  <dd className="mt-2 font-headline text-2xl text-ink md:text-3xl">1–6</dd>
+                </div>
+              </motion.dl>
+            </div>
+
+            {/* Portrait */}
+            <motion.div
+              className="relative mx-auto w-full max-w-md md:max-w-none"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-stone-200">
+                <img
+                  src={PORTRAIT_SRC}
+                  alt="Zuzana Manová"
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: 'center 40%' }}
+                  fetchPriority="high"
+                  decoding="async"
+                />
               </div>
-              <p className="mt-3 font-label text-xs text-surface-container-lowest/60">{t('hero.responsePromise')}</p>
+              <div className="absolute -bottom-4 -right-4 hidden max-w-[220px] bg-paper p-4 ring-1 ring-stone-200 md:block">
+                <p className="font-eyebrow text-eyebrow uppercase text-stone-500">
+                  {t('about.badge.line1')}
+                </p>
+                <p className="mt-1 font-body text-sm text-stone-700">
+                  {t('about.badge.line2')}
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
