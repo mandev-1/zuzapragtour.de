@@ -4,18 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // --- New editorial palette (Phase 1) ---
-        // Ink: near-black, warm. Used for primary text + solid dark sections.
+        // ============================================================
+        // NEW editorial palette — use these in all new/migrated code
+        // ============================================================
         ink: {
           DEFAULT: '#1a1613',
           soft: '#2a2420',
         },
-        // Paper: warm off-white page background. Never pure white.
         paper: {
           DEFAULT: '#faf8f4',
           warm: '#f5f1ea',
         },
-        // Stone: warm-gray neutral scale. The workhorse.
         stone: {
           50: '#faf8f4',
           100: '#f0ebe2',
@@ -28,25 +27,28 @@ module.exports = {
           800: '#2b2620',
           900: '#1a1613',
         },
-        // Accent: the ONE color used for primary CTAs and editorial highlights.
-        // Kept maroon for brand continuity — can switch to ink for zero-color version.
         accent: {
           DEFAULT: '#8a1f1f',
           hover: '#6e1818',
           soft: '#f5e6e6',
         },
 
-        // --- Legacy aliases (will be removed once all components migrated) ---
-        // DO NOT use these in new code. Kept only to prevent breakage of existing components.
+        // ============================================================
+        // LEGACY aliases — DO NOT use in new code.
+        // These keep existing components working during migration.
+        // All aliases point at the new palette so the visual shift is
+        // coherent, not whiplash. Remove aliases once all components
+        // are migrated to the new tokens.
+        // ============================================================
         primary: '#8a1f1f',
-        'on-primary': '#ffffff',
+        'on-primary': '#faf8f4',
         'primary-container': '#8a1f1f',
         secondary: '#645849',
-        'on-secondary': '#ffffff',
+        'on-secondary': '#faf8f4',
         'secondary-container': '#e0d8c9',
         'on-secondary-container': '#2b2620',
         tertiary: '#453d33',
-        'on-tertiary': '#ffffff',
+        'on-tertiary': '#faf8f4',
         'tertiary-container': '#645849',
         background: '#faf8f4',
         'on-background': '#1a1613',
@@ -64,30 +66,23 @@ module.exports = {
         outline: '#857563',
         'outline-variant': '#c7bba6',
         error: '#ba1a1a',
-        'on-error': '#ffffff',
+        'on-error': '#faf8f4',
         'error-container': '#f5e6e6',
         'on-error-container': '#6e1818',
       },
       fontFamily: {
-        // Headlines get real serif treatment.
         headline: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
-        // Body text: switch to a clean sans for readability.
-        // Keep Noto Serif available as `serif` for deliberate editorial pull-quotes.
         body: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
         serif: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
         label: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        // Small caps / eyebrow labels.
         eyebrow: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        // Editorial display scale for hero + section heads.
         'display-xl': ['clamp(2.75rem, 5vw + 1rem, 4.5rem)', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
         'display-lg': ['clamp(2.25rem, 4vw + 0.75rem, 3.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
         'display-md': ['clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.015em' }],
-        // Editorial body prose (slightly larger than default for long-form reading).
         prose: ['1.0625rem', { lineHeight: '1.75', letterSpacing: '0' }],
         'prose-lg': ['1.1875rem', { lineHeight: '1.7', letterSpacing: '-0.005em' }],
-        // Eyebrow labels (small, uppercase, tracked out).
         eyebrow: ['0.6875rem', { lineHeight: '1', letterSpacing: '0.15em' }],
       },
       letterSpacing: {
@@ -118,10 +113,7 @@ module.exports = {
         'fade-in-up': 'fadeInUp 0.7s ease-out',
       },
       borderRadius: {
-        // Using Tailwind defaults — your previous overrides were making every
-        // component feel timid and inconsistent.
         DEFAULT: '0.375rem',
-        // `lg`, `xl`, `full` now inherit Tailwind defaults (0.5rem, 0.75rem, 9999px).
       },
     },
   },
