@@ -7,9 +7,33 @@ import { tours } from '../data/tours';
 
 const pub = (path: string) => `${process.env.PUBLIC_URL}${path}`;
 
+/** True once the user has scrolled past ~50% of the scrollable range (second half of the page). */
+function useScrolledPastPageMidpoint(): boolean {
+  const [pastMid, setPastMid] = React.useState(false);
+
+  React.useEffect(() => {
+    const update = () => {
+      const el = document.documentElement;
+      const maxScroll = Math.max(0, el.scrollHeight - window.innerHeight);
+      setPastMid(maxScroll === 0 ? false : window.scrollY >= maxScroll / 2);
+    };
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, []);
+
+  return pastMid;
+}
+
 const Tours: React.FC = () => {
   const { t, language } = useLanguage();
   const navigate = useNavigate();
+  const showStickyKontakt = useScrolledPastPageMidpoint();
 
   const toursData = tours.map((tour, index) => ({
     id: index + 1,
@@ -30,7 +54,9 @@ const Tours: React.FC = () => {
     tourId === 'hidden' ? 'tours.badge.insider' : 'tours.badge.groupUpTo6';
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] pb-24 md:pb-16">
+    <div
+      className={`min-h-screen bg-[#0f0f0f] md:pb-16 ${showStickyKontakt ? 'pb-24' : 'pb-8'}`}
+    >
       {/* Compact hero — maroon, minimal vertical padding on mobile */}
       <header className="bg-primary px-5 py-6 text-center md:py-8">
         <p className="mb-2 font-label text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-on-primary/65">
@@ -210,8 +236,15 @@ const Tours: React.FC = () => {
         </div>
       </section>
 
-      {/* Sticky bottom CTA — mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0a0a0a]/95 px-4 py-3 backdrop-blur-md md:hidden">
+      {/* Sticky bottom CTA — mobile only; appears after scrolling into the second half of the page */}
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0a0a0a]/95 px-4 py-3 backdrop-blur-md transition-[transform,opacity] duration-300 ease-out md:hidden ${
+          showStickyKontakt
+            ? 'pointer-events-auto translate-y-0 opacity-100'
+            : 'pointer-events-none translate-y-full opacity-0'
+        }`}
+        aria-hidden={!showStickyKontakt}
+      >
         <div className="mx-auto flex max-w-lg items-center gap-3">
           <p className="min-w-0 flex-1 font-label text-xs leading-snug text-white/55">{t('tours.stickyCta.hint')}</p>
           <Link

@@ -18,6 +18,52 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '29',
+    slug: 'three-secret-gardens-mala-strana-prague',
+    slugDe: 'drei-gaerten-kleinseite-prag',
+    titleKey: 'blog.post29.title',
+    excerptKey: 'blog.post29.excerpt',
+    dateKey: 'blog.post29.date',
+    date: '2026-04-16',
+    image: '/images/blog-gardens.jpg',
+    contentKey: 'blog.post29.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Malá Strana gardens Prague', 'Palace Gardens below Prague Castle', 'Vojanovy sady',
+      'Wallenstein Garden Prague', 'Prague hidden gardens', 'Prague free gardens',
+      'Prague UNESCO gardens', 'Prague Baroque gardens', 'secret gardens Prague', 'Prague Castle gardens',
+    ],
+    tagsDe: [
+      'Kleinseitner Gärten Prag', 'Palastgärten unter der Prager Burg', 'Vojanovy sady',
+      'Waldsteingarten Prag', 'Prag versteckte Gärten', 'kostenlose Gärten Prag',
+      'Prag UNESCO Gärten', 'Prager Barockgärten', 'geheime Gärten Prag', 'Prager Burg Gärten',
+    ],
+    language: 'both',
+  },
+  {
+    id: '28',
+    slug: 'wallenstein-garden-prague',
+    slugDe: 'waldstein-garten-prag',
+    titleKey: 'blog.post28.title',
+    excerptKey: 'blog.post28.excerpt',
+    dateKey: 'blog.post28.date',
+    date: '2026-04-16',
+    image: '/images/blog-gardens-2.jpg',
+    contentKey: 'blog.post28.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Wallenstein Garden Prague', 'Valdštejnská zahrada', 'Prague gardens', 'Malá Strana Prague',
+      'Prague hidden gems', 'Baroque garden Prague', 'Prague stalactite wall', 'Adriaen de Vries Prague',
+      'Prague Senate garden', 'free things to do Prague',
+    ],
+    tagsDe: [
+      'Waldsteingarten Prag', 'Valdštejnská zahrada', 'Prager Gärten', 'Kleinseite Prag',
+      'Prag Geheimtipps', 'Barockgarten Prag', 'Tropfsteinwand Prag', 'Adriaen de Vries Prag',
+      'Tschechischer Senat Garten', 'kostenlose Sehenswürdigkeiten Prag',
+    ],
+    language: 'both',
+  },
+  {
     id: '27',
     slug: 'prague-public-transport-tickets-apps',
     slugDe: 'oeffentlicher-verkehr-prag-tickets-apps',

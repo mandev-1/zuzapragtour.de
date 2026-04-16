@@ -62,3 +62,18 @@ By making these changes, you shift the page from being a "Contact Form" to being
 #### REDO https://www.bing.com/webmasters/urlinspection?siteUrl=https%3A%2F%2Fzuzapragtour.de%2F&urlToInspect=https%253A%252F%252Fzuzapragtour.de%252Ftours BING WEBMASTER TOOLS
 
 
+- [] Viator
+- [] GetYourGuide
+- [] Google Business Profile
+
+> these platforms rank 1st–3rd for almost every Prague tour search. Yes, they take ~20% commission, but they also drive substantial volume and provide a do-follow backlink to your main site. Think of them as a paid acquisition channel with an SEO bonus.
+
+Dominate Google Business Profile — for the search "Prag Stadtführung Deutsch", Google Maps results appear before organic results. Your 312 TripAdvisor reviews are gold, but they're on a third-party platform. Push for equivalent Google reviews, post weekly updates, add photos from tours, and make sure the category is "Reiseleiter" not something generic.
+
+The main direct competitors for German-language private Prague tours are pragkompakt.de (Petra), prager-privat-tour.de, and halloprag.de. All three do one thing Zuza's site doesn't: they have individual pages for each tour. Petra alone has 8+ dedicated subpages. Google indexes each one separately, each ranks for its own keywords, and together they build topical authority. Your site has one scrolling homepage — Google sees it as a single document about everything, which means it ranks well for nothing specific.
+
+6. Target the long-tail gap — keywords like "Prag Stadtführerin zertifiziert" and "Prag Führung kleine Gruppe" have low competition and align perfectly with Zuzana's actual differentiators. Short blog articles targeting these (500–800 words, one per keyword) with internal links to the booking form would capture intent-heavy traffic that the big platforms don't bother with.
+
+Proper hreflang="de" and hreflang="en" tags on each page tell Google exactly what's happening, which improves ranking for German-speaking searchers in Germany/Austria/Switzerland.
+
+Create a post-tour email flow encouraging TripAdvisor reviews. Target 50+ reviews.

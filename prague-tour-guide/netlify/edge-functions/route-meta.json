@@ -202,6 +202,54 @@
     }
   },
   "blog": {
+    "three-secret-gardens-mala-strana-prague": {
+      "title": "Three walled gardens in Malá Strana that most tourists walk straight past | Zuza Prague Tours",
+      "description": "Vojanovy sady, the Palace Gardens below Prague Castle, and Wallenstein Garden are all within ten minutes of each other in Malá Strana. One is free and over 750 years old. One costs 80 crowns and gives you a view straight up to the castle. One belongs to the Senate and has a demon wall. Here is how to visit all three.",
+      "ogTitle": "Three walled gardens in Malá Strana that most tourists walk straight past | Zuza Prague Tours",
+      "ogDescription": "Vojanovy sady, the Palace Gardens below Prague Castle, and Wallenstein Garden are all within ten minutes of each other in Malá Strana. One is free and over 750 years old. One costs 80 crowns and gives you a view straight up to the castle. One belongs to the Senate and has a demon wall. Here is how to visit all three.",
+      "ogImage": "https://zuzapragtour.de/images/blog-gardens.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/three-secret-gardens-mala-strana-prague",
+      "canonical": "https://zuzapragtour.de/blog/three-secret-gardens-mala-strana-prague",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-16"
+    },
+    "drei-gaerten-kleinseite-prag": {
+      "title": "Drei ummauerte Gärten in der Prager Kleinseite, an denen fast alle vorbeigehen | Zuza Prague Tours",
+      "description": "Vojanovy sady, die Palastgärten unter der Prager Burg und der Waldsteingarten liegen alle innerhalb von zehn Minuten in der Kleinseite. Einer ist kostenlos und über 750 Jahre alt. Einer kostet 80 Kronen und bietet einen direkten Blick hinauf zur Burg. Einer gehört dem Senat und hat eine Dämonenwand. So besucht man alle drei.",
+      "ogTitle": "Drei ummauerte Gärten in der Prager Kleinseite, an denen fast alle vorbeigehen | Zuza Prague Tours",
+      "ogDescription": "Vojanovy sady, die Palastgärten unter der Prager Burg und der Waldsteingarten liegen alle innerhalb von zehn Minuten in der Kleinseite. Einer ist kostenlos und über 750 Jahre alt. Einer kostet 80 Kronen und bietet einen direkten Blick hinauf zur Burg. Einer gehört dem Senat und hat eine Dämonenwand. So besucht man alle drei.",
+      "ogImage": "https://zuzapragtour.de/images/blog-gardens.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/drei-gaerten-kleinseite-prag",
+      "canonical": "https://zuzapragtour.de/blog/drei-gaerten-kleinseite-prag",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-16"
+    },
+    "wallenstein-garden-prague": {
+      "title": "Wallenstein Garden: Prague's strangest baroque park (and it's free) | Zuza Prague Tours",
+      "description": "Hidden behind a gate in Malá Strana, Wallenstein Garden is one of Prague's most overlooked spaces — a 400-year-old baroque park with demon-faced grottos, sculptures stolen to Sweden, and a very unusual owner.",
+      "ogTitle": "Wallenstein Garden: Prague's strangest baroque park (and it's free) | Zuza Prague Tours",
+      "ogDescription": "Hidden behind a gate in Malá Strana, Wallenstein Garden is one of Prague's most overlooked spaces — a 400-year-old baroque park with demon-faced grottos, sculptures stolen to Sweden, and a very unusual owner.",
+      "ogImage": "https://zuzapragtour.de/images/blog-gardens-2.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/wallenstein-garden-prague",
+      "canonical": "https://zuzapragtour.de/blog/wallenstein-garden-prague",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-16"
+    },
+    "waldstein-garten-prag": {
+      "title": "Waldsteingarten Prag: Tropfsteinwand, gestohlene Skulpturen und der tschechische Senat | Zuza Prague Tours",
+      "description": "Hinter einem Tor in der Kleinseite verbirgt sich der Waldsteingarten — ein 400 Jahre alter Barockgarten mit Dämonen-Grotesken, nach Schweden gestohlenen Bronzeskulpturen und einem ungewöhnlichen Eigentümer: dem tschechischen Senat.",
+      "ogTitle": "Waldsteingarten Prag: Tropfsteinwand, gestohlene Skulpturen und der tschechische Senat | Zuza Prague Tours",
+      "ogDescription": "Hinter einem Tor in der Kleinseite verbirgt sich der Waldsteingarten — ein 400 Jahre alter Barockgarten mit Dämonen-Grotesken, nach Schweden gestohlenen Bronzeskulpturen und einem ungewöhnlichen Eigentümer: dem tschechischen Senat.",
+      "ogImage": "https://zuzapragtour.de/images/blog-gardens-2.jpg",
+      "ogUrl": "https://zuzapragtour.de/blog/waldstein-garten-prag",
+      "canonical": "https://zuzapragtour.de/blog/waldstein-garten-prag",
+      "ogType": "article",
+      "articleAuthor": "Ing. Zuzana Manová",
+      "articleDate": "2026-04-16"
+    },
     "prague-public-transport-tickets-apps": {
       "title": "Prague public transport: tickets, apps, and what actually works | Zuza Prague Tours",
       "description": "Trams, metro, buses: one ticket system, but several ways to pay. Here is how to buy fares without stress, which app locals use first, and where to double-check prices before you travel.",

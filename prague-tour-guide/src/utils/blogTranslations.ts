@@ -7,6 +7,234 @@ export const blogTranslations = {
     de: 'Prag Reiseblog',
   },
 
+  // Post 29
+  'blog.post29.title': {
+    en: 'Three walled gardens in Malá Strana that most tourists walk straight past',
+    de: 'Drei ummauerte Gärten in der Prager Kleinseite, an denen fast alle vorbeigehen',
+  },
+  'blog.post29.excerpt': {
+    en: 'Vojanovy sady, the Palace Gardens below Prague Castle, and Wallenstein Garden are all within ten minutes of each other in Malá Strana. One is free and over 750 years old. One costs 80 crowns and gives you a view straight up to the castle. One belongs to the Senate and has a demon wall. Here is how to visit all three.',
+    de: 'Vojanovy sady, die Palastgärten unter der Prager Burg und der Waldsteingarten liegen alle innerhalb von zehn Minuten in der Kleinseite. Einer ist kostenlos und über 750 Jahre alt. Einer kostet 80 Kronen und bietet einen direkten Blick hinauf zur Burg. Einer gehört dem Senat und hat eine Dämonenwand. So besucht man alle drei.',
+  },
+  'blog.post29.date': {
+    en: 'April 16, 2026',
+    de: '16. April 2026',
+  },
+  'blog.post29.content': {
+    en: `<p class="lead">Three of Prague's best gardens are within ten minutes of each other in Malá Strana. Roughly one person in twenty who visits the neighbourhood finds all of them. The others walk straight past the gates, which is a shame, because together they cover everything from a medieval bishop's orchard to a UNESCO-listed Baroque terrace complex to a Senate garden with a grotesque wall you will not find anywhere else in central Europe.</p>
+
+<p>All three are in the same patch of the city, which means you can visit them in sequence without backtracking. None of them requires much planning. You just need to know the gates exist.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-gardens.jpg" alt="Walled garden in Malá Strana, Prague" loading="lazy" /><div class="image-credit">Malá Strana hides more garden space than most visitors realise — most of it behind high walls and unmarked doors</div></div>
+
+<h2>Vojanovy sady — the oldest garden in Prague, and the most overlooked</h2>
+
+<p>The entrance is easy to miss: a small wooden door in a long, high white wall on U Lužického semináře street. There is no dramatic sign. Push the door open and you are inside one of the oldest garden spaces in Prague — the land has been used as a garden since 1248, when it was an orchard attached to the Prague bishop's court. It was burned during the Hussite upheaval in 1420, parcelled out, changed hands several times, and eventually given to the Discalced Carmelite nuns by Emperor Ferdinand III in 1656. The nuns built the Church of St. Joseph, which still stands alongside the garden, and added three chapels over the following century: St. Elijah in the 1660s, St. Teresa of Ávila in 1743, and St. Joseph with a viewing terrace in 1747.</p>
+
+<p>When the monastery was dissolved in 1782, the English Ladies religious order took over. The state acquired the land in 1919, opened it to the public in 1954, and named it after Eduard Vojánek (1853–1920), a celebrated Czech actor who had nothing to do with the garden's history but whose name it now carries.</p>
+
+<p>The garden is 2.4 hectares — bigger than it looks from the entrance. At the centre is a pond with a sculpture called <em>Legs from Water</em> (Nohy z vody) by Kurt Gebauer, which is either unsettling or charming depending on your mood. There are peacocks. There are medlar trees, ginkgo, magnolia, old pear and walnut trees, and an arcade wall from 1676 with the characteristic baroque stalactite-style stonework you see elsewhere in the neighbourhood. The chapels are small and not always open, but their facades are worth stopping at.</p>
+
+<p>Admission is free. Opening hours run roughly 8:00 to 19:00 in the warmer months, shorter in winter. It is one of the only genuinely quiet spots in the centre of Prague, particularly in the morning.</p>
+
+<h2>Palácové zahrady pod Pražským hradem — five terraced gardens, one ticket</h2>
+
+<p>A short walk up Valdštejnská street brings you to the entrance of the Palace Gardens Below Prague Castle. These are not one garden but five interconnected terraced gardens on the steep southern slopes below the castle walls, each originally belonging to a different aristocratic family: Ledebour, Pálffy (two of them — small and large), Kolowrat, and the Small Fürstenberg garden. You buy one ticket and walk through all of them in sequence, moving between terraces by stone staircases, some of them genuinely steep.</p>
+
+<p>The gardens were originally laid out during the Renaissance as pleasure gardens for the palace owners on Valdštejnská. After the Swedish occupation of 1648 — which left Prague's baroque gardens in a sorry state — they were rebuilt in the Baroque style: terraces, balustrades, fountains, sala terrenas, pavilions. The Pálffy garden was designed in 1715–1720 by architect Franz Maximilian Kaňka. The Kolowrat garden dates from the 1770s–1789, largely the work of Ignatius John Nepomuk Palliardi. The Ledebour garden's sala terrena contains frescoes by Václav Vavřinec Reiner, one of the leading Baroque painters working in Bohemia at the time.</p>
+
+<p>The whole complex fell into serious neglect during the communist period. Restoration began around 1990 and took nearly twenty years to complete — the final section opened in 2008. The gardens are UNESCO-listed as part of the historic centre of Prague. They are managed by the National Heritage Institute.</p>
+
+<p>What makes them worth the ticket is the combination of architecture and position. You are walking along the castle slope, with the castle walls above you and the rooftops of Malá Strana falling away below. The sala terrenas are well-preserved. The stonework is exact. It does not feel like a tourist attraction so much as a place someone has been carefully maintaining for four centuries.</p>
+
+<p>Entry is 80 CZK (adult), 50 CZK (students, seniors, children). Open April through October, 10:00–18:00 (until 19:00 May–September). Note: there are no ramps — this is terraced hillside garden access only by stairs, so it is not suitable for wheelchairs or pushchairs. No pets, no bicycles.</p>
+
+<h2>Valdštejnská zahrada — the Senate garden, and the wall</h2>
+
+<p>Two minutes from the Palace Gardens entrance, also on Valdštejnská, is the main gate of Wallenstein Garden. This one is free, open April through October, and considerably less visited than the Charles Bridge that most tourists spend their time on instead.</p>
+
+<p>Albrecht von Wallenstein had 23 houses, three gardens, and a brickworks demolished between 1623 and 1630 to build his palace and grounds. Italian architects Andrea Spezza and Niccolò Sebregondi designed the garden in Mannerist Italian style — one of the earliest examples of this north of the Alps. The garden has been the seat of the Czech Senate since 1993, which is why it is maintained to an unusual standard.</p>
+
+<p>The two things worth seeking out specifically: the sala terrena at the far end, a three-arched loggia painted with Greek mythology scenes including episodes from the Trojan War; and the stalactite wall (Krápníková stěna) in the so-called Secret Garden to the side — an artificial grotto wall encrusted with demon heads, serpent bodies, owl faces, and stone formations that look like something between geology and nightmare. The bronze sculptures in the garden are 20th-century copies; the originals by Adriaen de Vries were taken as war booty by Swedish troops in 1648 and now stand at Drottningholm Palace near Stockholm.</p>
+
+<p>I have written about this garden in more detail <a href="/blog/wallenstein-garden-prague">in a separate post here</a> if you want the full story.</p>
+
+<h2>How to visit all three in one afternoon</h2>
+
+<p>Start at Vojanovy sady in the morning when it is quiet — enter from U Lužického semináře. Spend thirty to forty minutes. Then walk up through Malá Strana to Valdštejnská street: the Palace Gardens entrance is at number 158/14. Allow an hour for all five terraces, longer if you want to sit in the sala terrena. When you come out, the Wallenstein Garden entrance is a few minutes further along the same street. Another hour there, more if you find the stalactite wall and want to stay with it.</p>
+
+<p>The three gardens together take a half day at a comfortable pace. Between them they cover eight centuries of Prague garden history, three different ownership models (free public park, paid heritage site, Senate grounds), and three entirely different moods. None of them requires booking, crowds are modest even in summer, and the neighbourhood they sit in — Malá Strana — is worth the time regardless.</p>
+
+<div class="blog-cta-box">
+  <h3>Want to walk these gardens with someone who can tell you what you are looking at?</h3>
+  <p>This is the part of Prague I know best. I would be glad to show you the stories behind the walls.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Send me a message</a>
+    <a class="btn btn-outline" href="/tours">See all tours</a>
+  </div>
+</div>`,
+    de: `<p class="lead">Drei der besten Gärten Prags liegen innerhalb von zehn Minuten voneinander entfernt in der Kleinseite. Etwa einer von zwanzig Besuchern des Viertels findet alle drei. Die anderen gehen geradewegs an den Toren vorbei — was schade ist, denn zusammen spannen sie einen Bogen vom mittelalterlichen Bischofsgarten über einen denkmalgeschützten Barocktrassenkomplex bis hin zu einem Senatsgarten mit einer grotesken Mauer, die es sonst nirgendwo in Mitteleuropa gibt.</p>
+
+<p>Alle drei liegen im selben Straßenzug der Stadt, was bedeutet, dass man sie nacheinander besuchen kann, ohne umzukehren. Großartige Vorbereitung braucht es nicht. Man muss nur wissen, dass die Tore existieren.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-gardens.jpg" alt="Ummauerter Garten in der Prager Kleinseite" loading="lazy" /><div class="image-credit">Die Kleinseite verbirgt mehr Gartenfläche, als die meisten Besucher ahnen — größtenteils hinter hohen Mauern und unscheinbaren Türen</div></div>
+
+<h2>Vojanovy sady — der älteste Garten Prags, und der am meisten übersehene</h2>
+
+<p>Den Eingang kann man leicht übersehen: eine kleine Holztür in einer langen, hohen weißen Mauer in der Straße U Lužického semináře. Es gibt kein auffälliges Schild. Man drückt die Tür auf und steht in einem der ältesten Gartenräume Prags — das Grundstück wird seit 1248 als Garten genutzt, damals als Obstgarten des Prager Bischofshofs. Es wurde während der hussitischen Unruhen 1420 niedergebrannt, parzelliert, wechselte mehrfach den Besitzer und wurde schließlich 1656 von Kaiser Ferdinand III. den Unbeschuhten Karmelitinnen geschenkt. Die Nonnen bauten die Kirche St. Josef, die noch heute neben dem Garten steht, und ergänzten im Laufe des folgenden Jahrhunderts drei Kapellen: die St.-Elias-Kapelle in den 1660er Jahren, die St.-Teresa-von-Ávila-Kapelle 1743 und die St.-Josef-Kapelle mit Aussichtsterrasse 1747.</p>
+
+<p>Als das Kloster 1782 aufgelöst wurde, übernahm der Orden der Englischen Fräulein das Gelände. Der Staat erwarb es 1919, öffnete es 1954 für die Öffentlichkeit und benannte es nach Eduard Vojánek (1853–1920), einem berühmten tschechischen Schauspieler, der mit der Geschichte des Gartens nichts zu tun hatte, dessen Namen er aber seitdem trägt.</p>
+
+<p>Der Garten umfasst 2,4 Hektar — größer, als der Eingang vermuten lässt. Im Zentrum liegt ein Teich mit der Skulptur <em>Nohy z vody</em> (Beine aus dem Wasser) von Kurt Gebauer, die je nach Stimmung entweder beunruhigend oder charmant wirkt. Es gibt Pfauen. Es gibt Mispelbäume, Ginkgo, Magnolien, alte Birnen- und Walnussbäume sowie eine Arkadenwall aus dem Jahr 1676 mit dem für das Viertel typischen Barockstalaktit-Mauerwerk. Die Kapellen sind klein und nicht immer zugänglich, aber ihre Fassaden lohnen einen Moment des Betrachtens.</p>
+
+<p>Der Eintritt ist frei. Die Öffnungszeiten liegen in den wärmeren Monaten etwa zwischen 8:00 und 19:00 Uhr, im Winter kürzer. Es ist einer der wenigen wirklich ruhigen Orte im Zentrum Prags, besonders am Morgen.</p>
+
+<h2>Palácové zahrady pod Pražským hradem — fünf Terrassengärten, ein Ticket</h2>
+
+<p>Ein kurzer Spaziergang die Valdštejnská-Straße hinauf führt zum Eingang der Palastgärten unter der Prager Burg. Das sind nicht ein Garten, sondern fünf miteinander verbundene Terrassengärten an den steilen Südhängen unterhalb der Burgmauern, jeder ursprünglich einer anderen Adelsfamilie gehörig: Ledebour, Pálffy (in zwei Versionen — klein und groß), Kolowrat und der Kleine Fürstenberggarten. Man kauft ein Ticket und geht alle nacheinander durch, verbunden durch steinerne Treppen, manche davon ausgesprochen steil.</p>
+
+<p>Die Gärten wurden ursprünglich während der Renaissance als Lustwandlungsgärten für die Palastbesitzer der Valdštejnská angelegt. Nach der Schwedenbesatzung von 1648 — die Prags Barockgärten in einem schlechten Zustand hinterließ — wurden sie im Barockstil neu gestaltet: Terrassen, Balustraden, Brunnen, Sala terrenas, Pavillons. Der Pálffy-Garten wurde 1715–1720 vom Architekten Franz Maximilian Kaňka entworfen. Der Kolowrat-Garten stammt aus den 1770er bis 1789er Jahren, überwiegend vom Architekten Ignaz Johann Nepomuk Palliardi. Die Sala terrena im Ledeburska-Garten enthält Fresken von Václav Vavřinec Reiner, einem der bedeutendsten böhmischen Barockmalern seiner Zeit.</p>
+
+<p>Der gesamte Komplex verfiel während der kommunistischen Ära stark. Die Restaurierung begann um 1990 und dauerte fast zwanzig Jahre — der letzte Abschnitt wurde 2008 eröffnet. Die Gärten stehen als Teil des historischen Zentrums Prags auf der UNESCO-Welterbeliste. Verwaltet werden sie vom Nationalen Denkmalinstitut.</p>
+
+<p>Was sie das Ticket wert macht, ist die Kombination aus Architektur und Lage. Man geht den Burghang entlang, mit den Burgmauern über sich und den Dächern der Kleinseite, die sich darunter erstrecken. Die Sala terrenas sind gut erhalten. Das Mauerwerk ist präzise. Es fühlt sich weniger wie eine Touristenattraktion an als wie ein Ort, den jemand vier Jahrhunderte lang sorgfältig gepflegt hat.</p>
+
+<p>Eintritt: 80 CZK (Erwachsene), 50 CZK (Studenten, Senioren, Kinder). Geöffnet April bis Oktober, 10:00–18:00 Uhr (bis 19:00 Uhr von Mai bis September). Wichtiger Hinweis: Es gibt keine Rampen — der Zugang erfolgt ausschließlich über Treppen in einem terrassierten Hanggelände, daher nicht für Rollstühle oder Kinderwagen geeignet. Keine Haustiere, keine Fahrräder.</p>
+
+<h2>Valdštejnská zahrada — der Senatsgarten und die Mauer</h2>
+
+<p>Zwei Minuten vom Eingang der Palastgärten, ebenfalls in der Valdštejnská, liegt das Haupttor des Waldsteingartens. Dieser ist kostenlos, von April bis Oktober geöffnet und deutlich weniger besucht als die Karlsbrücke, auf der die meisten Touristen ihre Zeit verbringen.</p>
+
+<p>Albrecht von Wallenstein ließ zwischen 1623 und 1630 23 Häuser, drei Gärten und eine Ziegelei abreißen, um seinen Palast und sein Anwesen zu bauen. Die italienischen Architekten Andrea Spezza und Niccolò Sebregondi gestalteten den Garten im manieristischen italienischen Stil — eines der frühesten Beispiele nördlich der Alpen. Der Garten dient seit 1993 als Amtssitz des tschechischen Senats, weshalb er in einem ungewöhnlich gepflegten Zustand gehalten wird.</p>
+
+<p>Die beiden Dinge, die man gezielt aufsuchen sollte: die Sala terrena am Ende des Hauptparterres — eine dreigewölbte Loggia mit Fresken aus der griechischen Mythologie, darunter Szenen aus dem Trojanischen Krieg; sowie die Tropfsteinwand (Krápníková stěna) im sogenannten Geheimen Garten seitlich — eine künstliche Grottenanlage aus Dämonenköpfen, Schlangenkörpern, Eulengesichtern und Steinformationen, die irgendwo zwischen Geologie und Albtraum angesiedelt sind. Die Bronzeskulpturen im Garten sind Kopien aus dem 20. Jahrhundert; die Originale von Adriaen de Vries wurden 1648 als Kriegsbeute von schwedischen Truppen mitgenommen und stehen heute im Schloss Drottningholm bei Stockholm.</p>
+
+<p>Über diesen Garten habe ich <a href="/blog/waldstein-garten-prag">in einem eigenen Beitrag ausführlicher geschrieben</a>, falls Sie die ganze Geschichte interessiert.</p>
+
+<h2>Wie man alle drei an einem Nachmittag besucht</h2>
+
+<p>Beginnen Sie morgens in den Vojanovy sady, wenn es noch ruhig ist — Eingang von der U-Lužického-semináře-Straße. Planen Sie dreißig bis vierzig Minuten ein. Dann geht es durch die Kleinseite hinauf zur Valdštejnská: Der Eingang der Palastgärten liegt an der Hausnummer 158/14. Rechnen Sie eine Stunde für alle fünf Terrassen, mehr, wenn Sie in der Sala terrena sitzen möchten. Am Ausgang liegt der Eingang des Waldsteingartens nur wenige Minuten weiter dieselbe Straße entlang. Nochmals eine Stunde, mehr wenn Sie die Tropfsteinwand entdecken und davor verweilen wollen.</p>
+
+<p>Die drei Gärten zusammen füllen in gemächlichem Tempo einen halben Tag. Zwischen ihnen spannen sie acht Jahrhunderte Prager Gartengeschichte auf, drei verschiedene Eigentumsmodelle (kostenloser Stadtpark, kostenpflichtiges Denkmalareal, Senatsgelände) und drei völlig unterschiedliche Atmosphären. Für keinen braucht man eine Reservierung, die Besuchermengen sind selbst im Sommer überschaubar, und das Viertel, in dem sie liegen — die Kleinseite — ist in jedem Fall eine Reise wert.</p>
+
+<div class="blog-cta-box">
+  <h3>Möchten Sie diese Gärten mit jemandem erkunden, der Ihnen erklären kann, was Sie sehen?</h3>
+  <p>Das ist das Prager Viertel, das ich am besten kenne. Ich zeige Ihnen gerne die Geschichten hinter den Mauern.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prag%20Tour#contact-title">Schreiben Sie mir</a>
+    <a class="btn btn-outline" href="/tours">Alle Touren entdecken</a>
+  </div>
+</div>`,
+  },
+
+  // Post 28
+  'blog.post28.title': {
+    en: 'Wallenstein Garden: Prague\'s strangest baroque park (and it\'s free)',
+    de: 'Waldsteingarten Prag: Tropfsteinwand, gestohlene Skulpturen und der tschechische Senat',
+  },
+  'blog.post28.excerpt': {
+    en: 'Hidden behind a gate in Malá Strana, Wallenstein Garden is one of Prague\'s most overlooked spaces — a 400-year-old baroque park with demon-faced grottos, sculptures stolen to Sweden, and a very unusual owner.',
+    de: 'Hinter einem Tor in der Kleinseite verbirgt sich der Waldsteingarten — ein 400 Jahre alter Barockgarten mit Dämonen-Grotesken, nach Schweden gestohlenen Bronzeskulpturen und einem ungewöhnlichen Eigentümer: dem tschechischen Senat.',
+  },
+  'blog.post28.date': {
+    en: 'April 16, 2026',
+    de: '16. April 2026',
+  },
+  'blog.post28.content': {
+    en: `<p class="lead">There is a garden in Malá Strana where you can stand in front of a wall covered in frozen demon faces, serpent bodies, and stone owls staring back at you, and then turn around and look straight at the Czech Senate building. It is not a dream. It is Wallenstein Garden, it is free to enter, and somehow most visitors to Prague never find it.</p>
+
+<p>The garden was built between 1623 and 1630 by Albrecht von Wallenstein — Albrecht z Valdštejna in Czech — a Bohemian nobleman who had turned himself into one of the most powerful military commanders in Europe during the Thirty Years' War. He was the kind of man who did not let minor obstacles, like other people's property, stand in his way. To build his palace and gardens, he had 23 houses, 3 existing gardens, and a brickworks demolished. The neighbours did not get much say in the matter.</p>
+
+<p>What he built was extraordinary. Italian architects Andrea Spezza and Niccolò Sebregondi designed a garden that was unusual this far north — a fully Mannerist Italian layout at a time when Prague was still digesting the Renaissance. The result is one of the earliest Baroque gardens in central Europe, and one of the best-preserved.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-gardens-2.jpg" alt="Baroque garden in Prague, Malá Strana" loading="lazy" /><div class="image-credit">The garden sits a short walk from Malostranská metro station and is free to enter between April and October</div></div>
+
+<h2>The stalactite wall — and why it is so strange</h2>
+
+<p>The strangest thing in the garden is tucked into the "Secret Garden" (Giardino secreto): a long artificial grotto wall called the Krápníková stěna, which translates, not very romantically, as the stalactite wall. It is not made of real stalactites. It is an elaborate piece of Mannerist fantasy — a surface encrusted with sculpted rock formations, owl faces, demon heads, serpent bodies, and animal shapes that seem to be half-emerging from the stone. Some sections look almost geological; others look like someone gave a very creative stonemason a nightmare and asked them to carve it.</p>
+
+<p>This kind of artificial grotto was fashionable in 16th and 17th century Italian garden design. It was meant to represent the raw, untamed side of nature — a deliberate contrast to the manicured parterres and clipped hornbeam hedges nearby. That it survives at all, in this condition, in the middle of a city, is something close to remarkable. Go slowly when you are in front of it. The longer you look, the more faces appear in the stone.</p>
+
+<h2>Adriaen de Vries — the originals are in Sweden</h2>
+
+<p>The bronze sculptures placed around the garden are copies. The originals were made by Adriaen de Vries, a Dutch sculptor who worked for Emperor Rudolf II and was one of the most gifted artists of his generation. In 1648, at the very end of the Thirty Years' War, Swedish troops occupied Prague and took the sculptures as war booty. They have been at Drottningholm Palace outside Stockholm ever since.</p>
+
+<p>The replicas now standing in the garden were cast in the 20th century and follow the originals closely, but knowing the real bronzes are in Sweden gives the whole place an odd, slightly melancholy quality. Wallenstein spent an extraordinary amount of money and effort building something that was, in a single afternoon, stripped of its finest pieces. He did not live to see it happen — he was assassinated in 1634, fourteen years before the Swedes arrived.</p>
+
+<h2>The Sala terrena</h2>
+
+<p>At the far end of the main parterre stands the Sala terrena, a three-arched open loggia whose ceiling and walls are covered in frescoes. The paintings show scenes from ancient Greek mythology — the gods of Olympus, episodes from the Trojan War. The style is Mannerist, meaning the figures are elongated and the compositions slightly theatrical, in a way that fits the building perfectly. It is not a gallery and not a museum. It just sits open to the garden air, with painted gods weathering quietly in the Central European climate and still managing to look magnificent.</p>
+
+<h2>The Senate, and why the garden is in good hands</h2>
+
+<p>Since 1993, after the dissolution of Czechoslovakia and the creation of the new Czech Senate, Wallenstein Palace and its garden have served as the official seat of the Senate of the Czech Republic. This turns out to be good news for anyone who visits. The Senate has a clear interest in keeping the place presentable, and the maintenance shows — the hornbeam hedges that divide the garden into rooms are impeccably trimmed, the parterre is replanted with seasonal flowers, and the overall standard of care is high. Spring tulips give way to summer annuals in a way that feels considered rather than perfunctory.</p>
+
+<p>The garden is open to the public from April through October, free of charge. The Senate occasionally uses the grounds for concerts and cultural events in summer, which are also open to the public.</p>
+
+<h2>How to get there and what not to miss</h2>
+
+<p>The main entrance is on Letenská street in Malá Strana, a short walk from Malostranská metro station on line A. There is also an entrance from Valdštejnské náměstí square. Standard opening hours run from 10:00 to 18:00, extended to 22:00 on state holidays.</p>
+
+<p>Walk the length of the main parterre first to get a sense of the scale, then find the Sala terrena at the far end, then go looking specifically for the stalactite wall — it is in the smaller enclosed section to the side and easy to miss if you do not know it is there. The aviary near it is original, its decorative stonework matching the grotto in style.</p>
+
+<p><em>The botanical and historical details in this article draw on the work of <a href="https://botany.cz/cs/valdstejnska-zahrada/" target="_blank" rel="noopener noreferrer">Ladislav Hoskovec at botany.cz</a>, whose documentation of Prague's gardens is meticulous and worth reading in full.</em></p>
+
+<div class="blog-cta-box">
+  <h3>Want to see Wallenstein Garden — and the stories behind it — with someone who knows Malá Strana well?</h3>
+  <p>This is one of my favourite corners of the city. Tell me what interests you and we will build a route around it.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Send me a message</a>
+    <a class="btn btn-outline" href="/tours">See all tours</a>
+  </div>
+</div>`,
+    de: `<p class="lead">Es gibt einen Garten in der Kleinseite, in dem man vor einer Mauer stehen kann, die mit eingefrorenen Dämonengesichtern, Schlangenkörpern und steinernen Eulen bedeckt ist — und sich dann umdrehen und direkt auf das Gebäude des tschechischen Senats blickt. Das ist kein Traum. Das ist der Waldsteingarten. Der Eintritt ist frei, und trotzdem finden ihn die meisten Prag-Besucher nie.</p>
+
+<p>Der Garten wurde zwischen 1623 und 1630 von Albrecht von Wallenstein — auf Tschechisch Albrecht z Valdštejna — angelegt, einem böhmischen Adligen, der sich im Dreißigjährigen Krieg zu einem der mächtigsten Feldherren Europas aufgeschwungen hatte. Er war ein Mann, dem Hindernisse wie das Eigentum anderer Menschen keine besondere Pause gaben. Um seinen Palast und seine Gartenanlagen bauen zu können, ließ er 23 Häuser, 3 bestehende Gärten und eine Ziegelei abreißen. Die Nachbarn hatten wenig zu melden.</p>
+
+<p>Was entstand, war außergewöhnlich. Die italienischen Architekten Andrea Spezza und Niccolò Sebregondi schufen eine Anlage, die in dieser nördlichen Breite ungewöhnlich war — ein vollständig manieristisches italienisches Layout zu einer Zeit, als Prag die Renaissance noch verdaute. Das Ergebnis ist einer der ältesten Barockgärten Mitteleuropas und einer der am besten erhaltenen.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-gardens-2.jpg" alt="Barockgarten in der Prager Kleinseite" loading="lazy" /><div class="image-credit">Der Garten liegt wenige Gehminuten von der Metrostation Malostranská (Linie A) und ist von April bis Oktober kostenlos zugänglich</div></div>
+
+<h2>Die Tropfsteinwand — und warum sie so merkwürdig ist</h2>
+
+<p>Das seltsamste Stück im ganzen Garten befindet sich im sogenannten Geheimen Garten (Giardino secreto): eine lange künstliche Grottenanlage, die Krápníková stěna — auf Deutsch: Tropfsteinwand. Echte Tropfsteine sind es nicht. Es ist ein aufwendiges Stück manieristischer Fantasie — eine Oberfläche aus gemeißelten Felsformationen, Eulengesichtern, Dämonenköpfen, Schlangenkörpern und Tiergestalten, die halb aus dem Stein herauszutreten scheinen. Manche Abschnitte wirken fast geologisch; andere sehen aus, als hätte jemand einem sehr begabten Steinmetz einen Albtraum beschrieben und ihn gebeten, ihn nachzumeißeln.</p>
+
+<p>Diese Art von Kunstgrotte war im 16. und 17. Jahrhundert in der italienischen Gartengestaltung verbreitet. Sie sollte die rohe, ungezähmte Seite der Natur darstellen — bewusster Kontrast zu den gepflegten Parterres und gestutzten Hainbuchenhecken in der Nähe. Dass sie überhaupt noch so erhalten ist, mitten in einer Großstadt, grenzt ans Wunderliche. Nehmen Sie sich Zeit davor. Je länger man schaut, desto mehr Gesichter tauchen im Stein auf.</p>
+
+<h2>Adriaen de Vries — die Originale sind in Schweden</h2>
+
+<p>Die Bronzeskulpturen im Garten sind Kopien. Die Originale stammen von Adriaen de Vries, einem niederländischen Bildhauer, der für Kaiser Rudolf II. arbeitete und zu den begabtesten Künstlern seiner Generation zählte. Im Jahr 1648, am Ende des Dreißigjährigen Krieges, besetzten schwedische Truppen Prag und nahmen die Skulpturen als Kriegsbeute mit. Sie befinden sich seitdem im Schloss Drottningholm bei Stockholm.</p>
+
+<p>Die heute im Garten stehenden Repliken wurden im 20. Jahrhundert gegossen und folgen den Originalen genau — doch das Wissen, dass die echten Bronzen in Schweden stehen, gibt dem Ort eine eigenartige, leicht melancholische Note. Wallenstein hatte ungeheure Summen für etwas ausgegeben, das an einem einzigen Nachmittag seiner wertvollsten Stücke beraubt wurde. Er erlebte es nicht mehr — er wurde 1634 ermordet, vierzehn Jahre bevor die Schweden kamen.</p>
+
+<h2>Die Sala terrena</h2>
+
+<p>Am Ende des Hauptparterres steht die Sala terrena, eine dreigewölbte offene Loggia, deren Decke und Wände mit Fresken bedeckt sind. Die Malereien zeigen Szenen aus der griechischen Mythologie — Götter auf dem Olymp, Episoden aus dem Trojanischen Krieg. Der Stil ist manieristisch: die Figuren sind gestreckt, die Kompositionen leicht theatralisch — und das passt zum Gebäude ausgezeichnet. Es ist keine Galerie und kein Museum. Die Loggia liegt einfach offen da, mit Gottheiten aus Fresko, die still dem mitteleuropäischen Klima trotzen und dabei noch immer großartig wirken.</p>
+
+<h2>Der Senat — und warum der Garten in guten Händen ist</h2>
+
+<p>Seit 1993, nach der Auflösung der Tschechoslowakei und der Gründung des neuen tschechischen Senats, sind der Waldsteinpalast und sein Garten der offizielle Amtssitz des Senats der Tschechischen Republik. Das erweist sich als gute Nachricht für Besucher. Der Senat hat ein klares Interesse daran, die Anlage vorzeigbar zu halten, und die Pflege zeigt das — die Hainbuchenhecken, die den Garten in einzelne Räume teilen, sind tadellos gestutzt, das Parterre wird saisonal bepflanzt, und der Gesamtzustand ist bemerkenswert gut. Frühlingstulpen weichen im Sommer einjährigen Blumen, auf eine Art, die überlegt wirkt und nicht wie bloße Routine.</p>
+
+<p>Der Garten ist von April bis Oktober kostenlos für die Öffentlichkeit zugänglich. Im Sommer veranstaltet der Senat gelegentlich Konzerte und Kulturveranstaltungen auf dem Gelände, die ebenfalls offen für alle sind.</p>
+
+<h2>So kommt man hin — und was man nicht verpassen sollte</h2>
+
+<p>Der Haupteingang liegt in der Letenská ulice in der Kleinseite, wenige Gehminuten von der Metrostation Malostranská (Linie A) entfernt. Es gibt auch einen Eingang vom Valdštejnské náměstí. Die regulären Öffnungszeiten sind 10:00–18:00 Uhr, an Staatsfeiertagen bis 22:00 Uhr.</p>
+
+<p>Gehen Sie zuerst die Länge des Hauptparterres ab, um das Ausmaß der Anlage zu erfassen, dann zur Sala terrena am Ende, und suchen Sie danach gezielt die Tropfsteinwand — sie befindet sich im kleineren geschlossenen Abschnitt seitlich und ist leicht zu übersehen, wenn man nicht weiß, dass sie existiert. Die angrenzende historische Voliere ist original erhalten und zeigt im Dekor denselben Stil wie die Grotte.</p>
+
+<p><em>Die botanischen und historischen Details in diesem Artikel stützen sich auf die Arbeit von <a href="https://botany.cz/cs/valdstejnska-zahrada/" target="_blank" rel="noopener noreferrer">Ladislav Hoskovec auf botany.cz</a>, dessen Dokumentation der Prager Gärten außerordentlich sorgfältig ist und sich lohnt, vollständig gelesen zu werden.</em></p>
+
+<div class="blog-cta-box">
+  <h3>Möchten Sie den Waldsteingarten — und die Geschichten dahinter — mit jemandem erkunden, der die Kleinseite in- und auswendig kennt?</h3>
+  <p>Das ist eine meiner liebsten Ecken in Prag. Schreiben Sie mir, was Sie interessiert, und wir bauen eine Route darum herum.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prag%20Tour#contact-title">Schreiben Sie mir</a>
+    <a class="btn btn-outline" href="/tours">Alle Touren entdecken</a>
+  </div>
+</div>`,
+  },
+
   // Post 27
   'blog.post27.title': {
     en: 'Prague public transport: tickets, apps, and what actually works',
@@ -47,15 +275,21 @@ export const blogTranslations = {
 
 <div class="blog-inline-image"><img src="/images/old-town-square.jpg" alt="Old Town Square, Prague" loading="lazy" /><div class="image-credit">From the centre, the metro and trams connect you to the castle side, Vinohrady, and the main train station in minutes</div></div>
 
-<h2>Other apps that help (but do not replace a ticket)</h2>
+<h2>Tramoji: the slick newcomer you should have on your phone</h2>
 
-<p><strong>IDOS</strong> (<a href="https://idos.idos.cz/en" target="_blank" rel="noopener noreferrer">idos.idos.cz</a>) is the national journey planner. It is clunky in places, yet it is accurate for connections across Prague and the rest of the country. Use it when you need departure times from a specific stop or when you combine metro with suburban buses.</p>
+<p><a href="https://apps.apple.com/cz/app/tramoji-odjezdy-mhd-v-%C4%8Desku/id1552942074?l=cs" target="_blank" rel="noopener noreferrer"><strong>Tramoji</strong></a> is a beautifully designed departure-board app built by two Czech developers. While Lítačka is the official ticket wallet, Tramoji is the one you open when you want to know exactly when the next tram is coming and where it is right now. Clean interface, fast, and genuinely fun to use. I have it on my own phone. Download it from the <a href="https://apps.apple.com/cz/app/tramoji-odjezdy-mhd-v-%C4%8Desku/id1552942074?l=cs" target="_blank" rel="noopener noreferrer">App Store here</a> (also on Google Play — search for Tramoji).</p>
+
+<p>Between Lítačka and Tramoji you have everything covered: buy and store your fare in Lítačka, check live departures in Tramoji. Both are free. If you only install one app before your trip, make it one of these two — ideally both.</p>
+
+<h2>Other apps worth knowing</h2>
 
 <p><strong>Mapy.cz</strong> (<a href="https://en.mapy.cz/" target="_blank" rel="noopener noreferrer">en.mapy.cz</a>) is the Czech map service many locals prefer. Public transport layers are clear, walking paths are good, and it works offline if you download a region.</p>
 
-<p><strong>Google Maps</strong> and <strong>Apple Maps</strong> both show Prague transit and are fine for quick directions. I use them to compare walking versus riding; I still buy the ticket in Lítačka or at a machine.</p>
+<p><strong>Google Maps</strong> and <strong>Apple Maps</strong> both show Prague transit and are fine for quick directions. I use them to compare walking versus riding; I still buy the ticket in Lítačka.</p>
 
-<p><strong>PID live map</strong> (<a href="https://mapa.pid.cz/" target="_blank" rel="noopener noreferrer">mapa.pid.cz</a>) shows trams and buses on a map in real time. Useful when you are deciding whether to wait at the stop or walk to the next line.</p>
+<p><strong>PID live map</strong> (<a href="https://mapa.pid.cz/" target="_blank" rel="noopener noreferrer">mapa.pid.cz</a>) shows trams and buses on a map in real time — useful from a browser if you do not want another app.</p>
+
+<p><strong>IDOS</strong> is the old national journey planner. It is clunky, not particularly tourist-friendly, and I would not bother installing it. For route planning, Google Maps, Mapy.cz, or the Tramoji app will serve you much better.</p>
 
 <h2>Paying with a bank card on board</h2>
 
@@ -82,7 +316,7 @@ export const blogTranslations = {
   <p style="margin:0.5rem 0 0">After you buy a digital ticket, screenshot the active screen. If your phone dies, you still have proof while you sort out power. Better yet, carry a cheap power bank on long days.</p>
 </div>
 
-<p>That is the whole idea: pick Lítačka or a machine, pay in crowns, validate or tap once, then ride. Once that is sorted, you can focus on the city instead of the fine print.</p>
+<p>That is the whole idea: install Lítačka for tickets and Tramoji for live departures, pay in crowns, validate or tap once, then ride. Both apps are free and take five minutes to set up. Once that is sorted, you can focus on the city instead of the fine print.</p>
 
 <div class="blog-cta-box">
   <h3>Want to see Prague with someone who uses these lines every week?</h3>
@@ -118,15 +352,21 @@ export const blogTranslations = {
 
 <div class="blog-inline-image"><img src="/images/old-town-square.jpg" alt="Altstädter Ring Prag" loading="lazy" /><div class="image-credit">Von der Innenstadt aus sind Burg, Vinohrady und der Hauptbahnhof in wenigen Minuten mit Metro und Tram erreichbar</div></div>
 
-<h2>Weitere Apps (ersetzen aber keinen Fahrschein)</h2>
+<h2>Tramoji: die schicke Newcomer-App, die auf Ihr Handy gehört</h2>
 
-<p><strong>IDOS</strong> (<a href="https://idos.idos.cz/en" target="_blank" rel="noopener noreferrer">idos.idos.cz</a>) ist der bundesweite Fahrplan. Er wirkt stellenweise sperrig, ist aber zuverlässig für Anschlüsse in Prag und im ganzen Land. Gut, wenn Sie Abfahrten an einer bestimmten Haltestelle brauchen oder Metro mit Überlandbus kombinieren.</p>
+<p><a href="https://apps.apple.com/cz/app/tramoji-odjezdy-mhd-v-%C4%8Desku/id1552942074?l=cs" target="_blank" rel="noopener noreferrer"><strong>Tramoji</strong></a> ist eine wunderschön gestaltete Abfahrtstafel-App, die zwei tschechische Entwickler gebaut haben. Lítačka ist die offizielle Tickettasche, aber Tramoji öffnen Sie, wenn Sie wissen wollen, wann genau die nächste Straßenbahn kommt und wo sie gerade steckt. Klares Interface, schnell, und wirklich ein Vergnügen zu bedienen — ich habe sie selbst auf dem Handy. Download im <a href="https://apps.apple.com/cz/app/tramoji-odjezdy-mhd-v-%C4%8Desku/id1552942074?l=cs" target="_blank" rel="noopener noreferrer">App Store hier</a> (auch bei Google Play — einfach nach Tramoji suchen).</p>
+
+<p>Mit Lítačka und Tramoji zusammen ist alles abgedeckt: Fahrschein kaufen und speichern in Lítačka, Echtzeit-Abfahrten in Tramoji. Beide Apps sind kostenlos. Wenn Sie vor der Reise nur eine App installieren wollen — nehmen Sie eine von diesen beiden, am besten gleich beide.</p>
+
+<h2>Weitere nützliche Apps</h2>
 
 <p><strong>Mapy.cz</strong> (<a href="https://en.mapy.cz/" target="_blank" rel="noopener noreferrer">en.mapy.cz</a>) ist der tschechische Kartendienst, den viele Einheimische nutzen. ÖPNV-Ebenen sind klar, Fußwege stimmen oft, offline geht es mit heruntergeladenem Gebiet.</p>
 
-<p><strong>Google Maps</strong> und <strong>Apple Maps</strong> zeigen Prager ÖPNV und reichen für schnelle Wege. Ich vergleiche damit Laufen und Fahren; gekauft wird bei mir trotzdem in Lítačka oder am Automaten.</p>
+<p><strong>Google Maps</strong> und <strong>Apple Maps</strong> zeigen Prager ÖPNV und reichen für schnelle Wege. Ich vergleiche damit Laufen und Fahren; gekauft wird bei mir trotzdem in Lítačka.</p>
 
-<p><strong>PID-Livekarte</strong> (<a href="https://mapa.pid.cz/" target="_blank" rel="noopener noreferrer">mapa.pid.cz</a>) zeigt Straßenbahnen und Busse auf der Karte in Echtzeit. Praktisch, wenn Sie entscheiden wollen, ob sich Warten noch lohnt.</p>
+<p><strong>PID-Livekarte</strong> (<a href="https://mapa.pid.cz/" target="_blank" rel="noopener noreferrer">mapa.pid.cz</a>) zeigt Straßenbahnen und Busse in Echtzeit auf der Karte — praktisch im Browser, wenn man keine weitere App möchte.</p>
+
+<p><strong>IDOS</strong> ist der alte nationale Fahrplanauskunftsdienst. Die Bedienung ist sperrig und für Touristen nicht besonders geeignet — ich würde ihn nicht empfehlen. Für die Routenplanung sind Google Maps, Mapy.cz oder Tramoji deutlich besser.</p>
 
 <h2>Mit Bankkarte an Bord zahlen</h2>
 
@@ -153,7 +393,7 @@ export const blogTranslations = {
   <p style="margin:0.5rem 0 0">Nach dem Kauf eines digitalen Tickets einen Screenshot vom aktiven Bildschirm machen. Wenn das Handy leer ist, haben Sie wenigstens einen Nachweis, bis Strom wieder da ist. Noch besser: eine kleine Powerbank für lange Tage.</p>
 </div>
 
-<p>So ist das Prinzip: Lítačka oder Automat, in Kronen zahlen, einmal entwerten oder tippen, dann fahren. Wenn das sitzt, können Sie sich auf die Stadt konzentrieren statt auf Kleingedrucktes.</p>
+<p>So ist das Prinzip: Lítačka für Tickets, Tramoji für Echtzeit-Abfahrten, in Kronen zahlen, einmal entwerten oder tippen, dann fahren. Beide Apps sind kostenlos und in fünf Minuten eingerichtet. Wenn das sitzt, können Sie sich auf die Stadt konzentrieren statt auf Kleingedrucktes.</p>
 
 <div class="blog-cta-box">
   <h3>Möchten Sie Prag mit jemandem erkunden, die diese Linien jede Woche nutzt?</h3>

@@ -78,8 +78,16 @@ const BlogPostPage: React.FC = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const deSlug: string | undefined = (post as any).slugDe;
+  const deUrl = deSlug ? `https://zuzapragtour.de/blog/${deSlug}` : null;
+  const enUrl = `https://zuzapragtour.de/blog/${post.slug}`;
+  // Canonical always resolves to the DE version when one exists (DE is primary)
+  const canonicalUrl = deUrl ?? enUrl;
+  // True when the visitor landed on the EN slug but a DE version exists → noindex
+  const isEnUrlWithDe = slug === post.slug && !!deSlug;
+
   const slugForUrl =
-    language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug;
+    language === 'de' && deSlug ? deSlug : post.slug;
   const postAbsoluteUrl = `https://zuzapragtour.de/blog/${slugForUrl}`;
   const currentTags = language === 'de' && post.tagsDe ? post.tagsDe : post.tags;
 
@@ -134,15 +142,16 @@ const BlogPostPage: React.FC = () => {
               : 'Prague tours, Prague guide'
           }`}
         />
-        <link rel="canonical" href={`https://zuzapragtour.de/blog/${slugForUrl}`} />
-        <link rel="alternate" hrefLang="en" href={`https://zuzapragtour.de/blog/${post.slug}`} />
-        {(post as any).slugDe && (
-          <link rel="alternate" hrefLang="de" href={`https://zuzapragtour.de/blog/${(post as any).slugDe}`} />
-        )}
-        <link rel="alternate" hrefLang="x-default" href={`https://zuzapragtour.de/blog/${post.slug}`} />
+        {/* DE is always canonical when a DE version exists. EN URL gets noindex. */}
+        <link rel="canonical" href={canonicalUrl} />
+        {isEnUrlWithDe && <meta name="robots" content="noindex, follow" />}
+        <link rel="alternate" hrefLang="en" href={enUrl} />
+        {deUrl && <link rel="alternate" hrefLang="de" href={deUrl} />}
+        {/* x-default points to DE when available — site primary language is German */}
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <meta property="og:title" content={`${t(post.titleKey as any)} | Zuza Prague Tours`} />
         <meta property="og:description" content={t(post.excerptKey as any)} />
-        <meta property="og:url" content={`https://zuzapragtour.de/blog/${slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={`https://zuzapragtour.de${post.image}`} />
         <meta property="article:published_time" content={post.date} />
