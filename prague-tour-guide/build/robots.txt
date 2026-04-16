@@ -5,7 +5,7 @@ Allow: /
 # Bing — explicit allow to ensure crawl priority
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0
 
 # AI crawlers - explicitly allowed
 User-agent: GPTBot

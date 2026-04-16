@@ -25,6 +25,9 @@ const BookPage: React.FC = () => {
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
         <link rel="canonical" href="https://zuzapragtour.de/book" />
+        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/book" />
+        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/book" />
+        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/book" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
         <meta property="og:url" content="https://zuzapragtour.de/book" />

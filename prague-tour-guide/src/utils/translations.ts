@@ -323,8 +323,8 @@ export const translations = {
     de: 'Kleine Gruppen & Privattouren',
   },
   'home.meta3': {
-    en: '4.9 · 312 reviews on TripAdvisor',
-    de: '4,9 · 312 Bewertungen auf TripAdvisor',
+    en: '4.9 · 14 reviews on TripAdvisor',
+    de: '4,9 · 14 Bewertungen auf TripAdvisor',
   },
   'home.hero.noPressure': {
     en: 'No commitment · Personal quote',
@@ -409,12 +409,60 @@ export const translations = {
 
   // Tours Page
   'tours.header.title': {
-    en: 'Prague Tours',
-    de: 'Prag Touren',
+    en: 'Private Prague Tours',
+    de: 'Private Stadtführungen Prag auf Deutsch',
   },
   'tours.header.subtitle': {
     en: 'Choose from my most popular tours or create a custom experience',
     de: 'Wählen Sie aus meinen beliebtesten Touren oder erstellen Sie gerne ein individuelles Erlebnis',
+  },
+  'tours.page.kicker': {
+    en: 'Private tours · Prague',
+    de: 'Private Stadtführungen Prag',
+  },
+  'tours.page.heading': {
+    en: 'Private Prague tours',
+    de: 'Prag auf Deutsch erleben',
+  },
+  'tours.page.lead': {
+    en: 'Popular itineraries or a fully custom experience — built around what you want to see.',
+    de: 'Beliebte Touren oder ein individuelles Erlebnis — ganz nach Ihren Wünschen',
+  },
+  'tours.section.popular': {
+    en: 'Popular tours',
+    de: 'Beliebte Touren',
+  },
+  'tours.section.custom': {
+    en: 'Custom',
+    de: 'Individuell',
+  },
+  'tours.badge.groupUpTo6': {
+    en: 'Group up to 6',
+    de: 'Gruppe bis 6',
+  },
+  'tours.badge.insider': {
+    en: 'Insider route',
+    de: 'Geheimtipps',
+  },
+  'tours.exploreTour': {
+    en: 'Explore tour',
+    de: 'Tour entdecken',
+  },
+  'tours.custom.requestCta': {
+    en: 'Request private tour',
+    de: 'Privattour anfragen',
+  },
+  'tours.custom.learnMore': {
+    en: 'Learn more',
+    de: 'Mehr erfahren',
+  },
+  'tours.stickyCta.hint': {
+    en: 'Not sure yet? I am happy to help you choose in person.',
+    de: 'Noch unsicher? Ich berate Sie gerne persönlich.',
+  },
+  'tours.stickyCta.button': {
+    en: 'Contact',
+    de: 'Kontakt',
   },
 
   // Tour 1: Castle
@@ -604,6 +652,224 @@ export const translations = {
     en: '/blog/vaclav-havel-tour-prague',
     de: '/blog/vaclav-havel-tour-prague',
   },
+
+  // ─── Tour subpage shared UI ────────────────────────────────────────────────
+  'tourpage.included': { en: "What's included", de: 'Im Preis enthalten' },
+  'tourpage.meetingPoint': { en: 'Meeting point', de: 'Treffpunkt' },
+  'tourpage.duration': { en: 'Duration', de: 'Dauer' },
+  'tourpage.language': { en: 'Language', de: 'Sprache' },
+  'tourpage.languageValue': { en: 'German & English', de: 'Deutsch & Englisch' },
+  'tourpage.groupSize': { en: 'Group size', de: 'Gruppengröße' },
+  'tourpage.groupSizeValue': { en: 'Private (your group only)', de: 'Privat (nur Ihre Gruppe)' },
+  'tourpage.faq': { en: 'Frequently asked questions', de: 'Häufig gestellte Fragen' },
+  'tourpage.bookCta': { en: 'Book this tour', de: 'Diese Tour buchen' },
+  'tourpage.enquiryCta': { en: 'Send an enquiry', de: 'Anfrage senden' },
+  'tourpage.allTours': { en: '← All tours', de: '← Alle Touren' },
+  'tourpage.highlights': { en: 'Highlights', de: 'Highlights' },
+
+  // ─── Castle tour subpage ───────────────────────────────────────────────────
+  'tour.castle.seoTitle': {
+    en: 'Prague Castle Private Tour in German & English',
+    de: 'Prager Burg – Private Stadtführung Prag auf Deutsch',
+  },
+  'tour.castle.body1': {
+    en: 'Prague Castle is the largest ancient castle complex in the world — over 70,000 square metres of courtyards, palaces, churches, and gardens stacked on the hill above the city. It has been the seat of Bohemian kings, Holy Roman Emperors, and Czech presidents. If you only have time for one thing in Prague, this is it.',
+    de: 'Die Prager Burg ist das größte alte Burgkomplex der Welt — über 70.000 Quadratmeter Innenhöfe, Paläste, Kirchen und Gärten auf dem Hügel über der Stadt. Sie war Sitz böhmischer Könige, römisch-deutscher Kaiser und tschechischer Präsidenten. Wenn Sie in Prag nur eine Sache sehen können, dann diese.',
+  },
+  'tour.castle.body2': {
+    en: 'Most visitors walk through the castle in a rush, photograph the cathedral, and leave. A private tour is different. We take our time in the courtyards where coronation processions once assembled. We step inside St. Vitus Cathedral and I tell you exactly who is buried beneath your feet — seven Holy Roman Emperors, including Charles IV. We walk Golden Lane, where Franz Kafka briefly rented a tiny house to write in peace. And we find a viewpoint over the red rooftops of Malá Strana that almost nobody knows about.',
+    de: 'Die meisten Besucher eilen durch die Burg, fotografieren den Dom und gehen wieder. Eine private Tour ist anders. Wir nehmen uns Zeit auf den Innenhöfen, wo einst Krönungszüge aufmarschierten. Wir betreten den Veitsdom, und ich erkläre Ihnen genau, wer unter Ihren Füßen begraben liegt — sieben römisch-deutsche Kaiser, darunter Karl IV. Wir gehen durch das Goldene Gässchen, wo Franz Kafka kurzzeitig ein winziges Häuschen mietete, um in Ruhe zu schreiben. Und wir finden einen Aussichtspunkt über die roten Dächer der Kleinseite, den fast niemand kennt.',
+  },
+  'tour.castle.body3': {
+    en: 'I have been guiding at the castle since 1986 — before the Velvet Revolution, before the crowds arrived. I know which entrance avoids the longest queues, which hour of the day the light in the cathedral is extraordinary, and which stories do not make it into the guidebooks. Book the castle tour as a morning trip; we finish with coffee and a view that stays with you.',
+    de: 'Ich führe an der Burg seit 1986 — vor der Samtenen Revolution, bevor die Massen kamen. Ich weiß, welcher Eingang die längsten Warteschlangen vermeidet, zu welcher Tageszeit das Licht im Dom außergewöhnlich ist und welche Geschichten es nicht in die Reiseführer schaffen. Buchen Sie die Burgtour als Morgenausflug; wir enden mit Kaffee und einem Blick, der bleibt.',
+  },
+  'tour.castle.meetingPoint': {
+    en: 'First Courtyard gate, Hradčanské náměstí (Castle Square) — I will be waiting for you at the main gate.',
+    de: 'Tor zum Ersten Burghof, Hradčanské náměstí (Burgplatz) — ich warte am Haupttor auf Sie.',
+  },
+  'tour.castle.inc1': { en: 'Personal certified guide (German & English)', de: 'Persönliche zertifizierte Führung (Deutsch & Englisch)' },
+  'tour.castle.inc2': { en: 'Skip-the-queue entrance strategy', de: 'Eintrittsstrategie ohne lange Wartezeit' },
+  'tour.castle.inc3': { en: 'St. Vitus Cathedral interior visit', de: 'Besuch des Veitsdom-Innenraums' },
+  'tour.castle.inc4': { en: 'Golden Lane & hidden viewpoint', de: 'Goldenes Gässchen & versteckter Aussichtspunkt' },
+  'tour.castle.faq1.q': { en: 'Do I need to book entry tickets in advance?', de: 'Muss ich Eintrittskarten im Voraus buchen?' },
+  'tour.castle.faq1.a': { en: 'Advance ticket booking is recommended in peak season (April–October). I can advise you on the best ticket combination for your interests, and I know which entrances have shorter queues at different times of day.', de: 'In der Hauptsaison (April–Oktober) empfiehlt sich eine Vorabbuchung der Eintrittskarten. Ich berate Sie gern, welche Ticketkombination für Ihre Interessen am sinnvollsten ist, und kenne die Eingänge mit kürzeren Warteschlangen zu verschiedenen Tageszeiten.' },
+  'tour.castle.faq2.q': { en: 'Is the castle accessible for visitors with limited mobility?', de: 'Ist die Burg für Besucher mit eingeschränkter Mobilität zugänglich?' },
+  'tour.castle.faq2.a': { en: 'Parts of the castle complex are accessible, though the steep cobblestone approach from Malá Strana is challenging. The easiest access is by tram to Pohořelec or by car to Castle Square. Please mention any mobility needs when booking and I will plan the route accordingly.', de: 'Teile des Burgkomplexes sind barrierefrei zugänglich, jedoch ist der steile Kopfsteinpflasterweg von der Kleinseite anspruchsvoll. Der einfachste Zugang ist per Straßenbahn bis Pohořelec oder mit dem Auto zum Burgplatz. Bitte teilen Sie etwaige Mobilitätsbedürfnisse bei der Buchung mit — ich plane die Route entsprechend.' },
+  'tour.castle.faq3.q': { en: 'How long does the tour take?', de: 'Wie lange dauert die Tour?' },
+  'tour.castle.faq3.a': { en: 'Typically 3 to 4 hours depending on your interests and pace. We never rush. If you want to linger in the cathedral or spend extra time in Golden Lane, we do that.', de: 'In der Regel 3 bis 4 Stunden, je nach Interessen und Tempo. Wir hetzen nie. Wenn Sie im Dom verweilen oder mehr Zeit im Goldenen Gässchen verbringen möchten, machen wir das.' },
+  'tour.castle.faq4.q': { en: 'Can we combine the castle tour with Old Town on the same day?', de: 'Können wir die Burgtour am selben Tag mit der Altstadt kombinieren?' },
+  'tour.castle.faq4.a': { en: 'Yes — many visitors do a half-day castle tour in the morning and Old Town in the afternoon, with a break for lunch. It makes for a full but very rewarding day. I can arrange both tours back to back.', de: 'Ja — viele Besucher machen morgens eine halbtägige Burgtour und nachmittags die Altstadt, mit einer Mittagspause. Das ergibt einen vollen, aber sehr lohnenden Tag. Ich kann beide Touren hintereinander arrangieren.' },
+
+  // ─── Old Town & Jewish Quarter subpage ────────────────────────────────────
+  'tour.oldtown.seoTitle': {
+    en: 'Old Town & Jewish Quarter Private Tour in German & English',
+    de: 'Altstadt & Jüdisches Viertel – Prag Privatführung auf Deutsch',
+  },
+  'tour.oldtown.body1': {
+    en: "Prague's Old Town is a medieval city that survived into the modern era largely intact — which makes it extraordinary. The streets are genuinely old: the same lanes Kafka walked to school, the same square where Bohemian kings were crowned and executions were held, the same astronomical clock that has been marking the hours since 1410. Walking it without context is pleasant. Walking it with a guide who has spent 40 years studying it is something else entirely.",
+    de: 'Prags Altstadt ist eine mittelalterliche Stadt, die weitgehend unversehrt in die Moderne überlebt hat — das macht sie außergewöhnlich. Die Straßen sind wirklich alt: dieselben Gassen, durch die Kafka zur Schule ging, derselbe Platz, auf dem böhmische Könige gekrönt und Hinrichtungen vollzogen wurden, dieselbe Astronomische Uhr, die seit 1410 die Stunden schlägt. Ohne Hintergrundwissen durch die Altstadt zu laufen ist angenehm. Mit einer Führerin, die 40 Jahre damit verbracht hat, sie zu erforschen, ist es etwas völlig anderes.',
+  },
+  'tour.oldtown.body2': {
+    en: 'The Jewish Quarter — Josefov — is one of the most significant Jewish heritage sites in Europe. Six synagogues, the Old Jewish Cemetery with its layers of graves stacked on top of each other for centuries, and stories of the community that shaped the cultural life of Prague for hundreds of years. I am accredited by the Jewish Museum in Prague specifically to guide here, which means I can take you inside sites and share context that most guides cannot.',
+    de: 'Das Jüdische Viertel — Josefov — ist eine der bedeutendsten jüdischen Kulturstätten Europas. Sechs Synagogen, der Alte Jüdische Friedhof mit seinen seit Jahrhunderten übereinander gestapelten Grabschichten, und Geschichten einer Gemeinschaft, die das kulturelle Leben Prags über Jahrhunderte geprägt hat. Ich bin speziell vom Jüdischen Museum Prag akkreditiert, um hier Führungen durchzuführen — das bedeutet, ich kann Sie in Stätten mitnehmen und Zusammenhänge vermitteln, die die meisten Guides nicht können.',
+  },
+  'tour.oldtown.body3': {
+    en: 'We finish at or near Charles Bridge, where I will point out the medieval towers, tell you which of the 30 saint statues is which, and explain why the bridge is technically older than most people think. The tour can be done in the morning when the Old Town Square is calm, or in the early evening when the light on the facades turns golden. Both are worth it for different reasons.',
+    de: 'Wir beenden die Tour an oder nahe der Karlsbrücke, wo ich Ihnen die mittelalterlichen Türme zeige, erkläre, welche der 30 Heiligenstatuen wer ist, und warum die Brücke technisch gesehen älter ist, als die meisten denken. Die Tour lässt sich morgens machen, wenn der Altstädter Ring ruhig ist, oder früh abends, wenn das Licht auf den Fassaden golden wird. Beides lohnt sich aus verschiedenen Gründen.',
+  },
+  'tour.oldtown.meetingPoint': {
+    en: 'Jan Hus Monument, Old Town Square — I will be standing by the monument.',
+    de: 'Jan-Hus-Denkmal, Altstädter Ring — ich stehe beim Denkmal.',
+  },
+  'tour.oldtown.inc1': { en: 'Personal certified guide (German & English)', de: 'Persönliche zertifizierte Führung (Deutsch & Englisch)' },
+  'tour.oldtown.inc2': { en: 'Jewish Museum accreditation — specialist insight', de: 'Jüdisches Museum Akkreditierung — Fachkenntnisse' },
+  'tour.oldtown.inc3': { en: 'Old Town Square & Astronomical Clock', de: 'Altstädter Ring & Astronomische Uhr' },
+  'tour.oldtown.inc4': { en: 'Charles Bridge with historical commentary', de: 'Karlsbrücke mit historischem Kommentar' },
+  'tour.oldtown.faq1.q': { en: 'Does the tour include entry to the Jewish Museum?', de: 'Ist der Eintritt ins Jüdische Museum im Preis enthalten?' },
+  'tour.oldtown.faq1.a': { en: 'Entry tickets to the Jewish Museum sites are not included in the tour fee but I will advise you on the best ticket to buy. Tickets can be purchased on the day or in advance — I recommend advance booking in summer.', de: 'Eintrittskarten für die Stätten des Jüdischen Museums sind nicht im Tourpreis enthalten, aber ich berate Sie, welches Ticket am sinnvollsten ist. Karten können am Tag selbst oder im Voraus gekauft werden — im Sommer empfehle ich Vorabbuchung.' },
+  'tour.oldtown.faq2.q': { en: 'Is there a lot of walking? My elderly parent is joining us.', de: 'Gibt es viel zu Fuß? Mein älterer Elternteil kommt mit.' },
+  'tour.oldtown.faq2.a': { en: 'The Old Town is largely flat and very walkable. The Jewish Quarter is entirely flat. The only moderate incline is the approach to Charles Bridge from the Old Town side, which is gentle. This tour is suitable for most fitness levels. Just let me know when booking and I will adjust the pace.', de: 'Die Altstadt ist weitgehend flach und sehr gut zu Fuß erkunden. Das Jüdische Viertel ist völlig eben. Die einzige moderate Steigung ist der Zugang zur Karlsbrücke von der Altstädter Seite, der sanft ist. Diese Tour ist für die meisten Fitnessniveaus geeignet. Teilen Sie mir das bei der Buchung mit, und ich passe das Tempo an.' },
+  'tour.oldtown.faq3.q': { en: 'Can we include the Astronomical Clock striking the hour?', de: 'Können wir die Astronomische Uhr beim Stundenschlag einschließen?' },
+  'tour.oldtown.faq3.a': { en: 'Yes, I always plan the route so we arrive at the clock at a full or half hour if possible. The mechanism is beautiful to watch. I will explain what each figure means and why the clock shows three different calendar systems simultaneously.', de: 'Ja, ich plane die Route immer so, dass wir wenn möglich zur vollen oder halben Stunde an der Uhr ankommen. Der Mechanismus ist wunderschön anzusehen. Ich erkläre, was jede Figur bedeutet und warum die Uhr gleichzeitig drei verschiedene Kalender anzeigt.' },
+  'tour.oldtown.faq4.q': { en: 'What is the best time of day for this tour?', de: 'Was ist die beste Tageszeit für diese Tour?' },
+  'tour.oldtown.faq4.a': { en: 'Early morning (8–10am) means fewer crowds and beautiful soft light. Late afternoon (4–6pm) gives golden light on the facades and a more relaxed atmosphere as day-trippers leave. Both are excellent; it depends whether you prefer a calm start or a golden-hour finish.', de: 'Am frühen Morgen (8–10 Uhr) gibt es weniger Menschenmassen und schönes weiches Licht. Am späten Nachmittag (16–18 Uhr) fällt goldenes Licht auf die Fassaden und die Atmosphäre ist entspannter, wenn die Tagesausflügler gehen. Beides ist ausgezeichnet — es kommt darauf an, ob Sie einen ruhigen Beginn oder ein Goldstunden-Finale bevorzugen.' },
+
+  // ─── Custom Private Tour subpage ──────────────────────────────────────────
+  'tour.custom.seoTitle': {
+    en: 'Custom Private Prague Tour — Tailored to You',
+    de: 'Individuelle Privattour Prag – maßgeschneiderte Stadtführung auf Deutsch',
+  },
+  'tour.custom.body1': {
+    en: 'Every group that walks Prague with me is different. Some want pure history — the medieval layers, the Habsburg centuries, the scars of the 20th century. Some want architecture and want to stop in front of every Art Nouveau doorway. Some have children and need the pace to breathe, with stops at gardens and playgrounds woven into the route. Some want a slow morning with coffee breaks. Some want to cover as much as possible in four hours.',
+    de: 'Jede Gruppe, die Prag mit mir erkundet, ist anders. Manche wollen pure Geschichte — die mittelalterlichen Schichten, die habsburgischen Jahrhunderte, die Narben des 20. Jahrhunderts. Manche wollen Architektur und möchten vor jedem Jugendstil-Eingang stehen bleiben. Manche haben Kinder und brauchen Luft zum Atmen, mit Haltepunkten in Gärten entlang der Route. Manche wollen einen gemütlichen Morgen mit Kaffeepausen. Manche möchten in vier Stunden so viel wie möglich abdecken.',
+  },
+  'tour.custom.body2': {
+    en: 'A custom private tour means we design it together before you arrive. You tell me what you are most curious about — I send back a suggested route and we adjust it until it feels right. On the day, if something catches your eye or you want to spend longer somewhere, we change the plan. That is the point of a private tour. The route serves you, not the other way around.',
+    de: 'Eine individuelle Privattour bedeutet, dass wir sie gemeinsam gestalten, bevor Sie ankommen. Sie sagen mir, was Sie am meisten interessiert — ich schicke Ihnen eine Routenempfehlung, und wir passen sie an, bis sie sich richtig anfühlt. Am Tag selbst, wenn Ihnen etwas auffällt oder Sie irgendwo länger bleiben möchten, ändern wir den Plan. Das ist der Sinn einer Privattour. Die Route dient Ihnen, nicht umgekehrt.',
+  },
+  'tour.custom.body3': {
+    en: 'Popular starting points for custom tours: the view from Letná Park down over the bend in the river, the quiet Baroque gardens below the castle, the covered passage through the Lucerna arcade in Wenceslas Square, or a morning at Náplavka market on the riverbank on Saturdays. I have been collecting these places for 40 years. The custom tour is how I share the ones that never make the guidebooks.',
+    de: 'Beliebte Ausgangspunkte für individuelle Touren: der Blick vom Letná-Park über die Flussschleife, die ruhigen Barockgärten unterhalb der Burg, der überdachte Gang durch die Lucerna-Passage am Wenzelsplatz oder ein Morgen auf dem Náplavka-Markt am Flussufer samstags. Ich sammle diese Orte seit 40 Jahren. Die individuelle Tour ist meine Art, die zu teilen, die es nie in die Reiseführer schaffen.',
+  },
+  'tour.custom.meetingPoint': {
+    en: 'We agree the meeting point together when planning your tour — usually your hotel or a central landmark of your choice.',
+    de: 'Den Treffpunkt vereinbaren wir gemeinsam bei der Planung Ihrer Tour — in der Regel Ihr Hotel oder ein zentrales Wahrzeichen Ihrer Wahl.',
+  },
+  'tour.custom.inc1': { en: 'Personalised pre-tour route planning', de: 'Persönliche Routenplanung vor der Tour' },
+  'tour.custom.inc2': { en: 'Private guide — your group only', de: 'Privater Guide — nur Ihre Gruppe' },
+  'tour.custom.inc3': { en: 'Flexible duration and pace', de: 'Flexible Dauer und Tempo' },
+  'tour.custom.inc4': { en: 'Recommendations for lunch, dinner & local spots', de: 'Empfehlungen für Mittagessen, Abendessen & lokale Orte' },
+  'tour.custom.faq1.q': { en: 'How far in advance should I book?', de: 'Wie weit im Voraus sollte ich buchen?' },
+  'tour.custom.faq1.a': { en: 'A week or more in advance is ideal so we have time to plan the route together. That said, I can often accommodate last-minute requests — just contact me and I will let you know my availability.', de: 'Eine Woche oder mehr im Voraus ist ideal, damit wir Zeit haben, die Route gemeinsam zu planen. Dennoch kann ich oft auch kurzfristige Anfragen berücksichtigen — kontaktieren Sie mich einfach und ich teile Ihnen meine Verfügbarkeit mit.' },
+  'tour.custom.faq2.q': { en: 'We are a family with young children. Is this suitable?', de: 'Wir sind eine Familie mit kleinen Kindern. Ist das geeignet?' },
+  'tour.custom.faq2.a': { en: 'Absolutely. Family tours are some of my favourites. I know which stories capture children\'s imaginations, which gardens have good open space for a break, and how to keep the pace comfortable for everyone. Just tell me the ages when you get in touch.', de: 'Absolut. Familientouren gehören zu meinen liebsten. Ich weiß, welche Geschichten die Vorstellungskraft von Kindern anregen, welche Gärten guten Freiraum für eine Pause bieten und wie man das Tempo für alle angenehm hält. Teilen Sie mir beim Kontakt einfach die Altersgruppen mit.' },
+  'tour.custom.faq3.q': { en: 'Can we focus on a specific topic — architecture, food, Kafka?', de: 'Können wir uns auf ein bestimmtes Thema konzentrieren — Architektur, Essen, Kafka?' },
+  'tour.custom.faq3.a': { en: 'Yes, that is exactly the point of a custom tour. Thematic tours — Art Nouveau architecture, Jewish heritage, Kafka\'s Prague, Communist-era buildings, the Velvet Revolution — are often the most memorable because there is a thread running through the whole day.', de: 'Ja, genau das ist der Sinn einer individuellen Tour. Thematische Touren — Jugendstilarchitektur, jüdisches Erbe, Kafkas Prag, Gebäude aus der kommunistischen Ära, die Samtene Revolution — sind oft die einprägsamsten, weil ein roter Faden durch den gesamten Tag führt.' },
+  'tour.custom.faq4.q': { en: 'What is the pricing for a custom tour?', de: 'Was kostet eine individuelle Tour?' },
+  'tour.custom.faq4.a': { en: 'Pricing depends on duration and group size. Contact me with your dates, group size, and preferred duration and I will send you a quote within 24 hours.', de: 'Der Preis hängt von Dauer und Gruppengröße ab. Kontaktieren Sie mich mit Ihren Daten, Gruppengröße und gewünschter Dauer, und ich schicke Ihnen innerhalb von 24 Stunden ein Angebot.' },
+
+  // ─── Hidden Prague subpage ─────────────────────────────────────────────────
+  'tour.hidden.seoTitle': {
+    en: 'Hidden Prague Private Tour — Secret Spots & Local Gems',
+    de: 'Verstecktes Prag – Private Führung abseits der Touristenpfade',
+  },
+  'tour.hidden.body1': {
+    en: 'Every city has two versions of itself: the one in the photographs and the one the locals know. In Prague the gap between those two is unusually large. The Charles Bridge photograph is real, but it is not the whole picture. There are courtyards in the Old Town that have been private for 600 years and are now, quietly, open. There are gardens behind the castle walls that almost no visitor finds. There is a small Baroque street in Malá Strana that looks exactly like it did in the 18th century.',
+    de: 'Jede Stadt hat zwei Versionen von sich: die, die auf den Fotos zu sehen ist, und die, die die Einheimischen kennen. In Prag ist der Unterschied zwischen diesen beiden ungewöhnlich groß. Das Karlsbrücken-Foto ist real, aber es ist nicht das ganze Bild. Es gibt Innenhöfe in der Altstadt, die 600 Jahre lang privat waren und nun still und leise geöffnet sind. Es gibt Gärten hinter den Burgmauern, die fast kein Besucher findet. Es gibt eine kleine Barockgasse in der Kleinseite, die genauso aussieht wie im 18. Jahrhundert.',
+  },
+  'tour.hidden.body2': {
+    en: "This tour has no fixed route. I build it around the city's current state — what is open, what is blooming, what unexpected thing is happening in a particular courtyard or square on the day you visit. What stays constant: we leave the main tourist path within the first ten minutes, and we rarely return to it. The goal is not to see Prague — it is to feel it.",
+    de: 'Diese Tour hat keine feste Route. Ich gestalte sie nach dem aktuellen Zustand der Stadt — was geöffnet ist, was blüht, was sich an einem bestimmten Hof oder Platz an dem Tag, an dem Sie besuchen, Unerwartetes ereignet. Was konstant bleibt: Wir verlassen den touristischen Hauptweg innerhalb der ersten zehn Minuten, und kehren selten zurück. Das Ziel ist nicht, Prag zu sehen — sondern es zu spüren.',
+  },
+  'tour.hidden.body3': {
+    en: 'Previous tours have included: a Romanesque rotunda from the 12th century hidden in plain sight behind a petrol station; a roof terrace above a Baroque library with a view nobody photographs because nobody knows it is there; a small square in Vinohrady where locals play boules on Tuesday evenings; a passage through four connected courtyards that cuts invisibly through two city blocks. None of these are secrets exactly. They just require someone who knows where to look.',
+    de: 'Frühere Touren haben umfasst: eine romanische Rotunde aus dem 12. Jahrhundert, die unbemerkt hinter einer Tankstelle versteckt ist; eine Dachterrasse über einer Barockbibliothek mit einem Ausblick, den niemand fotografiert, weil niemand weiß, dass sie da ist; ein kleiner Platz in Vinohrady, wo Einheimische dienstags abends Boule spielen; eine Passage durch vier verbundene Innenhöfe, die unsichtbar durch zwei Häuserblocks verläuft. Das sind eigentlich keine Geheimnisse. Man muss nur wissen, wo man suchen muss.',
+  },
+  'tour.hidden.meetingPoint': {
+    en: 'Agreed when booking — I choose the starting point based on which neighbourhood has the most interesting things open on your day.',
+    de: 'Bei der Buchung vereinbart — ich wähle den Ausgangspunkt nach dem Stadtteil, in dem an Ihrem Tag am meisten Interessantes geöffnet ist.',
+  },
+  'tour.hidden.inc1': { en: 'Off-the-beaten-path route, different every time', de: 'Abseits der Touristenpfade, jedes Mal anders' },
+  'tour.hidden.inc2': { en: 'Access to hidden courtyards and private passages', de: 'Zugang zu versteckten Höfen und privaten Durchgängen' },
+  'tour.hidden.inc3': { en: 'Local cafe or pastry stop included', de: 'Café oder Gebäckstopp bei Einheimischen inbegriffen' },
+  'tour.hidden.inc4': { en: 'Personal guide who has been collecting these spots since 1986', de: 'Persönlicher Guide, der diese Orte seit 1986 sammelt' },
+  'tour.hidden.faq1.q': { en: 'How is this different from a regular walking tour?', de: 'Was unterscheidet diese Tour von einer regulären Stadtführung?' },
+  'tour.hidden.faq1.a': { en: "A regular tour covers the landmarks every visitor sees. This one deliberately avoids them. We might walk past the Astronomical Clock but we will not stop to explain it — we are heading somewhere more interesting. If you have already seen Prague's highlights, or if you simply prefer the road less travelled, this tour is for you.", de: "Eine reguläre Tour deckt die Sehenswürdigkeiten ab, die jeder Besucher sieht. Diese weicht ihnen absichtlich aus. Wir könnten an der Astronomischen Uhr vorbeigehen, aber wir halten nicht an — wir sind auf dem Weg zu etwas Interessanterem. Wenn Sie Prags Highlights bereits kennen oder den weniger begangenen Weg bevorzugen, ist diese Tour für Sie." },
+  'tour.hidden.faq2.q': { en: 'Will we really avoid the tourist crowds?', de: 'Werden wir die Touristenströme wirklich meiden?' },
+  'tour.hidden.faq2.a': { en: 'Mostly, yes. We will cross the Old Town but not linger in it. Some of the places I take you are genuinely off the tourist map — small enough, obscure enough, that even on busy summer days they are quiet.', de: 'Größtenteils ja. Wir werden die Altstadt durchqueren, aber nicht dort verweilen. Einige der Orte, zu denen ich Sie führe, sind tatsächlich abseits der Touristenkarte — klein und unbekannt genug, sodass sie selbst an belebten Sommertagen ruhig sind.' },
+  'tour.hidden.faq3.q': { en: 'Can I combine this with the Castle or Old Town tour?', de: 'Kann ich diese Tour mit der Burg- oder Altstadttour kombinieren?' },
+  'tour.hidden.faq3.a': { en: "Yes, but I would suggest doing the Hidden Prague tour on a different day. It works best when you already have a feel for the city's main landmarks — the hidden places make more sense when you have the reference points.", de: 'Ja, aber ich würde empfehlen, die Tour Verstecktes Prag an einem anderen Tag zu machen. Sie funktioniert am besten, wenn Sie bereits ein Gefühl für die wichtigsten Sehenswürdigkeiten haben — die verborgenen Orte ergeben mehr Sinn, wenn man die Bezugspunkte kennt.' },
+  'tour.hidden.faq4.q': { en: 'Is this tour suitable for children?', de: 'Ist diese Tour für Kinder geeignet?' },
+  'tour.hidden.faq4.a': { en: 'Yes — children often enjoy it more than standard tours because there are more surprises and fewer crowds. I adjust the stories for the audience. A courtyard with a mysterious old well is much more interesting to a ten-year-old than a list of dates.', de: 'Ja — Kinder genießen es oft mehr als Standardtouren, weil es mehr Überraschungen und weniger Menschenmassen gibt. Ich passe die Geschichten an das Publikum an. Ein Hof mit einem geheimnisvollen alten Brunnen ist für einen Zehnjährigen viel interessanter als eine Liste von Jahreszahlen.' },
+
+  // ─── German Heritage Tour subpage ─────────────────────────────────────────
+  'tour.german.seoTitle': {
+    en: 'Prague German Heritage Private Tour',
+    de: 'Prag Deutsches Erbe – Privatführung auf Deutsch',
+  },
+  'tour.german.body1': {
+    en: 'For 700 years, Prague was one of the great German-speaking cities of Central Europe. German was the language of the court, of commerce, of the university that Charles IV founded in 1348 — the first in the Holy Roman Empire north of the Alps. Kafka wrote in German. Rilke studied here. Mozart premiered Don Giovanni in Prague because the city understood him in a way Vienna did not.',
+    de: 'Siebenhundert Jahre lang war Prag eine der großen deutschsprachigen Städte Mitteleuropas. Deutsch war die Sprache des Hofes, des Handels, der Universität, die Karl IV. 1348 gründete — die erste im Heiligen Römischen Reich nördlich der Alpen. Kafka schrieb auf Deutsch. Rilke studierte hier. Mozart uraufführte Don Giovanni in Prag, weil die Stadt ihn auf eine Art verstand, wie es Wien nicht tat.',
+  },
+  'tour.german.body2': {
+    en: 'This tour traces the German-Czech entanglement that shaped Prague — the cathedrals and palaces built by German-speaking rulers, the Jewish community that navigated between German and Czech culture for centuries, the complicated 20th century that ended with the expulsion of the Sudeten Germans and left a silence in the city that is only now slowly being acknowledged.',
+    de: 'Diese Tour verfolgt die deutsch-tschechische Verflechtung, die Prag geprägt hat — die Kathedralen und Paläste, die von deutschsprachigen Herrschern errichtet wurden, die jüdische Gemeinschaft, die jahrhundertelang zwischen deutscher und tschechischer Kultur navigierte, das komplizierte 20. Jahrhundert, das mit der Vertreibung der Sudetendeutschen endete und eine Stille hinterließ, die erst jetzt langsam anerkannt wird.',
+  },
+  'tour.german.body3': {
+    en: 'As a Czech guide who speaks German fluently and has studied this history for decades, I can give you a perspective you will not get from a guidebook — neither the German-nostalgia version nor the Czech-nationalist version, but something more honest and more interesting. This tour suits visitors who want to understand Central Europe, not just photograph it.',
+    de: 'Als tschechische Führerin, die fließend Deutsch spricht und diese Geschichte seit Jahrzehnten studiert, kann ich Ihnen eine Perspektive bieten, die Sie in keinem Reiseführer finden — weder die deutsch-nostalgische noch die tschechisch-nationalistische Version, sondern etwas Ehrlicheres und Interessanteres. Diese Tour eignet sich für Besucher, die Mitteleuropa verstehen, nicht nur fotografieren möchten.',
+  },
+  'tour.german.meetingPoint': {
+    en: 'Charles University, Old Town — Ovocný trh square, in front of the Carolinum building.',
+    de: 'Karlsuniversität, Altstadt — Ovocný-trh-Platz, vor dem Carolinum-Gebäude.',
+  },
+  'tour.german.inc1': { en: 'Czech-German historical context from a bilingual expert', de: 'Deutsch-tschechischer historischer Kontext von einer zweisprachigen Expertin' },
+  'tour.german.inc2': { en: 'Literary Prague: Kafka, Rilke, and Mozart\'s Prague', de: 'Literarisches Prag: Kafka, Rilke und Mozarts Prag' },
+  'tour.german.inc3': { en: 'German-speaking rulers and the architecture they built', de: 'Deutschsprachige Herrscher und die Architektur, die sie bauten' },
+  'tour.german.inc4': { en: 'Honest account of 20th-century German-Czech history', de: 'Ehrliche Darstellung der deutsch-tschechischen Geschichte des 20. Jahrhunderts' },
+  'tour.german.faq1.q': { en: 'Is this tour only for German-speaking visitors?', de: 'Ist diese Tour nur für deutschsprachige Besucher?' },
+  'tour.german.faq1.a': { en: 'No — I conduct it in German or English or both, depending on your group. The tour focuses on German cultural heritage in Prague, but the audience can be anyone with an interest in Central European history.', de: 'Nein — ich führe sie auf Deutsch, Englisch oder beidem durch, je nach Ihrer Gruppe. Die Tour konzentriert sich auf das deutsche Kulturerbe in Prag, aber das Publikum kann jeder sein, der an mitteleuropäischer Geschichte interessiert ist.' },
+  'tour.german.faq2.q': { en: 'How much does the tour cover about the Sudeten German expulsions?', de: 'Wie viel behandelt die Tour die Vertreibung der Sudetendeutschen?' },
+  'tour.german.faq2.a': { en: "I treat it seriously and honestly. The expulsions of 1945–46 are a significant part of Prague's 20th-century history and I do not skip them. I also give context — the occupation, the war — so the full picture is there. It is a tour for people who want to understand, not one that simplifies or avoids difficult history.", de: 'Ich behandle es ernsthaft und ehrlich. Die Vertreibungen von 1945–46 sind ein bedeutender Teil der Prager Geschichte des 20. Jahrhunderts, und ich lasse sie nicht aus. Ich gebe auch Kontext — die Besatzung, den Krieg — damit das vollständige Bild entsteht. Es ist eine Tour für Menschen, die verstehen wollen, keine, die schwierige Geschichte vereinfacht oder vermeidet.' },
+  'tour.german.faq3.q': { en: 'Will we visit the places connected to Kafka?', de: 'Besuchen wir die mit Kafka verbundenen Orte?' },
+  'tour.german.faq3.a': { en: "Yes — Kafka's Prague is central to this tour. We visit the house where he was born, the routes he walked between home and office, and the Jewish Quarter where his family lived. If you want a full day dedicated entirely to Kafka, I also run a standalone Kafka tour.", de: 'Ja — Kafkas Prag ist zentral für diese Tour. Wir besuchen das Haus, in dem er geboren wurde, die Wege zwischen Haus und Büro, und das Jüdische Viertel, wo seine Familie lebte. Wenn Sie einen ganzen Tag möchten, der ausschließlich Kafka gewidmet ist, führe ich auch eine eigenständige Kafka-Tour durch.' },
+  'tour.german.faq4.q': { en: 'How long is this tour?', de: 'Wie lange dauert diese Tour?' },
+  'tour.german.faq4.a': { en: 'Typically 2.5 to 3 hours, though this is one of the tours that often runs longer because the conversations go deep. We can agree a fixed end time if you have other plans.', de: 'In der Regel 2,5 bis 3 Stunden, obwohl dies eine der Touren ist, die oft länger dauern, weil die Gespräche tief gehen. Wir können eine feste Endzeit vereinbaren, wenn Sie andere Pläne haben.' },
+
+  // ─── Havel Tour subpage ────────────────────────────────────────────────────
+  'tour.havel.seoTitle': {
+    en: 'Václav Havel Tour Prague — Velvet Revolution Private Tour',
+    de: 'Václav-Havel-Tour Prag – Private Stadtführung Samtene Revolution',
+  },
+  'tour.havel.body1': {
+    en: "Václav Havel was a playwright who became a dissident who became a president. His story runs through almost every major site in Prague's modern history — and it is one of the most extraordinary stories of the 20th century. The Velvet Revolution of 1989 ended 40 years of Communist rule in eleven days, without a shot fired, led in part by a man who had spent years under house arrest writing essays and plays that the regime tried to suppress.",
+    de: 'Václav Havel war ein Dramatiker, der zum Dissidenten wurde, der zum Präsidenten wurde. Seine Geschichte zieht sich durch fast jeden bedeutenden Ort der modernen Prager Geschichte — und sie ist eine der außergewöhnlichsten des 20. Jahrhunderts. Die Samtene Revolution von 1989 beendete 40 Jahre kommunistischer Herrschaft in elf Tagen, ohne einen Schuss, angeführt von einem Mann, der jahrelang unter Hausarrest verbracht hatte und Essays und Theaterstücke schrieb, die das Regime zu unterdrücken versuchte.',
+  },
+  'tour.havel.body2': {
+    en: 'I lived through November 1989 in Prague. I was there. The tour is not just academic — I can tell you what it felt like to stand on Wenceslas Square when half a million people rang their keys, what the city sounded like, what people said to each other. This is the version of the Velvet Revolution that does not exist in textbooks.',
+    de: 'Ich habe den November 1989 in Prag erlebt. Ich war dabei. Die Tour ist nicht nur akademisch — ich kann Ihnen erzählen, wie es sich anfühlte, auf dem Wenzelsplatz zu stehen, als eine halbe Million Menschen ihre Schlüssel läuteten, wie die Stadt klang, was die Menschen zueinander sagten. Das ist die Version der Samtenen Revolution, die es in keinem Lehrbuch gibt.',
+  },
+  'tour.havel.body3': {
+    en: "We visit Wenceslas Square, the spot on Národní where students were beaten on November 17th, the Laterna Magika theatre that became Civic Forum headquarters, and Havel's final apartment in the castle district. I also take you to Lucerna, the Havel family's cultural complex — a beautiful Art Nouveau passage that most visitors walk past without realising the building was designed by Havel's grandfather.",
+    de: "Wir besuchen den Wenzelsplatz, den Ort auf der Národní, wo Studenten am 17. November geschlagen wurden, das Theater Laterna Magika, das Hauptquartier des Bürgerforums wurde, und Havels letzte Wohnung im Burgviertel. Ich nehme Sie auch ins Lucerna mit, dem Kulturkomplex der Familie Havel — eine wunderschöne Jugendstilpassage, an der die meisten Besucher vorbeigehen, ohne zu merken, dass das Gebäude von Havels Großvater entworfen wurde.",
+  },
+  'tour.havel.meetingPoint': {
+    en: 'Top of Wenceslas Square, in front of the National Museum steps.',
+    de: 'Oberes Ende des Wenzelsplatzes, vor den Stufen des Nationalmuseums.',
+  },
+  'tour.havel.inc1': { en: 'Eyewitness account of November 1989 from your guide', de: 'Augenzeugenbericht vom November 1989 durch Ihre Führerin' },
+  'tour.havel.inc2': { en: 'Wenceslas Square, Národní, Laterna Magika', de: 'Wenzelsplatz, Národní, Laterna Magika' },
+  'tour.havel.inc3': { en: 'Lucerna passage & Havel family history', de: 'Lucerna-Passage & Geschichte der Familie Havel' },
+  'tour.havel.inc4': { en: 'Communist-era Prague and life under the regime', de: 'Prag zur Kommunistenzeit und das Leben unter dem Regime' },
+  'tour.havel.faq1.q': { en: 'Do I need to know Czech history to enjoy this tour?', de: 'Muss ich tschechische Geschichte kennen, um diese Tour zu genießen?' },
+  'tour.havel.faq1.a': { en: "Not at all. I build the context as we go — the tour works equally well for someone who knows Havel's writing intimately and someone who has only a vague idea that something happened in 1989. By the end, everyone has the full picture.", de: 'Überhaupt nicht. Ich baue den Kontext während der Tour auf — sie funktioniert gleich gut für jemanden, der Havels Werk gut kennt, und für jemanden, der nur eine vage Vorstellung hat, dass 1989 etwas geschah. Am Ende hat jeder das vollständige Bild.' },
+  'tour.havel.faq2.q': { en: 'You were really there in 1989?', de: 'Sie waren wirklich 1989 dabei?' },
+  'tour.havel.faq2.a': { en: 'Yes. I was living and working in Prague in November 1989. I stood on Wenceslas Square during the demonstrations. What I share on the tour is personal memory, not just historical record — and people often tell me that is what makes the difference.', de: 'Ja. Ich lebte und arbeitete im November 1989 in Prag. Ich stand während der Demonstrationen auf dem Wenzelsplatz. Was ich auf der Tour teile, ist persönliche Erinnerung, nicht nur historisches Zeugnis — und die Besucher sagen mir oft, dass das den Unterschied ausmacht.' },
+  'tour.havel.faq3.q': { en: 'Can we combine this with the Old Town tour?', de: 'Können wir diese Tour mit der Altstadttour kombinieren?' },
+  'tour.havel.faq3.a': { en: 'Yes — the tours overlap geographically but not thematically. The Old Town tour covers medieval and Jewish history; this one focuses on the 20th century. On the same day, I would suggest Old Town in the morning and Havel in the afternoon, finishing with a drink at a wine bar Havel frequented.', de: 'Ja — die Touren überschneiden sich geografisch, aber nicht thematisch. Die Altstadttour behandelt mittelalterliche und jüdische Geschichte; diese konzentriert sich auf das 20. Jahrhundert. Am selben Tag würde ich die Altstadt morgens und Havel nachmittags empfehlen, mit einem Abschlussgetränk in einer Weinbar, die Havel frequentierte.' },
+  'tour.havel.faq4.q': { en: 'Is there a related blog post I can read before the tour?', de: 'Gibt es einen Blog-Beitrag, den ich vor der Tour lesen kann?' },
+  'tour.havel.faq4.a': { en: "Yes — I have written a detailed piece on Havel's Prague with the key sites and their stories. You can read it on the blog before your visit to get more out of the tour.", de: 'Ja — ich habe einen detaillierten Artikel über Havels Prag mit den wichtigsten Stätten und ihren Geschichten geschrieben. Sie können ihn vor Ihrem Besuch im Blog lesen, um mehr aus der Tour herauszuholen.' },
 
   // Tour Details
   'tour.price': {
@@ -805,8 +1071,8 @@ export const translations = {
     de: 'Teilen Sie mir Ihre Wünsche mit — ich melde mich persönlich innerhalb von 24 Stunden.',
   },
   'contact.trust.rating': {
-    en: '4.9 ★ · 312 reviews on TripAdvisor',
-    de: '4.9 ★ · 312 Bewertungen auf TripAdvisor',
+    en: '4.9 ★ · 14 reviews on TripAdvisor',
+    de: '4,9 ★ · 14 Bewertungen auf TripAdvisor',
   },
   'contact.booking.intro.title': {
     en: 'Ready to book?',
@@ -967,8 +1233,8 @@ export const translations = {
     de: 'Zertifizierte Prag-Expertin & Spezialistin',
   },
   'footer.reviewCount': {
-    en: '312 reviews',
-    de: '312 Bewertungen',
+    en: '14 reviews',
+    de: '14 Bewertungen',
   },
   'footer.tripadvisor.trustLine': {
     en: '4.9 ★ TripAdvisor',
@@ -1021,6 +1287,18 @@ export const translations = {
   'blog.subtitle': {
     en: 'Tips, stories, and insights about exploring Prague',
     de: 'Tipps, Geschichten und Einblicke über die Erkundung Prags',
+  },
+  'blog.cta.defaultTitle': {
+    en: 'Ready to explore Prague?',
+    de: 'Bereit, Prag zu erkunden?',
+  },
+  'blog.cta.defaultBody': {
+    en: 'Discover Prague with Ing. Zuzana Manová — personal, certified, unforgettable.',
+    de: 'Entdecken Sie Prag mit Ing. Zuzana Manová — persönlich, zertifiziert, unvergesslich.',
+  },
+  'blog.cta.askQuestion': {
+    en: 'Ask a question',
+    de: 'Frage stellen',
   },
   'blog.readMore': {
     en: 'Read More',

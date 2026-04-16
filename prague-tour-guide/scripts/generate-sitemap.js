@@ -120,22 +120,26 @@ function generate() {
   parts.push(urlBlock(`${SITE}/book`, { lastmod: pageLastMod['/book'], changefreq: 'weekly', priority: '0.85' }));
   parts.push(urlBlock(`${SITE}/zuzana-manova`, { lastmod: pageLastMod['/zuzana-manova'], changefreq: 'monthly', priority: '0.9', image: { loc: `${SITE}/images/zuzana-portrait.jpg`, title: 'Zuzana Manová – Prague Tour Guide' } }));
 
-  // Blog posts (EN + DE variants with hreflang)
+  // Blog posts — DE is the primary/canonical language.
+  // When a DE slug exists, only the DE URL goes in the sitemap (EN URL has noindex).
+  // When no DE slug exists, the EN URL is included as usual.
   parts.push('');
   posts.forEach(p => {
     const enLoc = `${SITE}/blog/${p.slug}`;
     const deLoc = p.slugDe ? `${SITE}/blog/${p.slugDe}` : null;
     const image = p.image ? { loc: `${SITE}${p.image}`, title: '' } : null;
 
-    const hreflangEN = deLoc
-      ? [{ lang: 'en', href: enLoc }, { lang: 'de', href: deLoc }, { lang: 'x-default', href: enLoc }]
-      : null;
-
-    parts.push(urlBlock(enLoc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image, hreflang: hreflangEN }));
-
     if (deLoc) {
-      const hreflangDE = [{ lang: 'en', href: enLoc }, { lang: 'de', href: deLoc }, { lang: 'x-default', href: enLoc }];
-      parts.push(urlBlock(deLoc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image, hreflang: hreflangDE }));
+      // DE is canonical — x-default also points here
+      const hreflang = [
+        { lang: 'de', href: deLoc },
+        { lang: 'en', href: enLoc },
+        { lang: 'x-default', href: deLoc },
+      ];
+      parts.push(urlBlock(deLoc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image, hreflang }));
+    } else {
+      // No DE version — include EN with no alternate annotations needed
+      parts.push(urlBlock(enLoc, { lastmod: p.date, changefreq: 'monthly', priority: '0.85', image }));
     }
   });
 

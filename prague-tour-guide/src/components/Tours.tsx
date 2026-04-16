@@ -2,158 +2,220 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import type { TranslationKey } from '../utils/translations';
+import { tours } from '../data/tours';
+
+const pub = (path: string) => `${process.env.PUBLIC_URL}${path}`;
+
+/** True once the user has scrolled past ~50% of the scrollable range (second half of the page). */
+function useScrolledPastPageMidpoint(): boolean {
+  const [pastMid, setPastMid] = React.useState(false);
+
+  React.useEffect(() => {
+    const update = () => {
+      const el = document.documentElement;
+      const maxScroll = Math.max(0, el.scrollHeight - window.innerHeight);
+      setPastMid(maxScroll === 0 ? false : window.scrollY >= maxScroll / 2);
+    };
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, []);
+
+  return pastMid;
+}
 
 const Tours: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const navigate = useNavigate();
+  const showStickyKontakt = useScrolledPastPageMidpoint();
 
-  type TourCard = {
-    id: number;
-    titleKey: string;
-    descriptionKey: string;
-    durationKey: string;
-    image: string;
-    highlightKeys: readonly string[];
-  };
+  const toursData = tours.map((tour, index) => ({
+    id: index + 1,
+    slug: language === 'de' && tour.slugDe ? tour.slugDe : tour.slug,
+    tourId: tour.id,
+    titleKey: tour.titleKey,
+    descriptionKey: tour.descriptionKey,
+    durationKey: tour.durationKey,
+    image: tour.image,
+    highlightKeys: tour.highlightKeys,
+    isCustom: tour.id === 'custom',
+  }));
 
-  const toursData: TourCard[] = [
-    {
-      id: 1,
-      titleKey: 'tour.castle.title',
-      descriptionKey: 'tour.castle.description',
-      durationKey: 'tour.castle.duration',
-      image: '/images/prague-castle.jpg',
-      highlightKeys: ['tour.castle.h1', 'tour.castle.h2', 'tour.castle.h3', 'tour.castle.h4'],
-    },
-    {
-      id: 2,
-      titleKey: 'tour.oldtown.title',
-      descriptionKey: 'tour.oldtown.description',
-      durationKey: 'tour.oldtown.duration',
-      image: '/images/blog-jewish-quarter-2-min.jpg',
-      highlightKeys: ['tour.oldtown.h1', 'tour.oldtown.h2', 'tour.oldtown.h3', 'tour.oldtown.h4'],
-    },
-    {
-      id: 3,
-      titleKey: 'tour.hidden.title',
-      descriptionKey: 'tour.hidden.description',
-      durationKey: 'tour.hidden.duration',
-      image: '/images/blog-hidden-gems-min.jpg',
-      highlightKeys: ['tour.hidden.h1', 'tour.hidden.h2', 'tour.hidden.h3', 'tour.hidden.h4'],
-    },
-    {
-      id: 4,
-      titleKey: 'tour.german.title',
-      descriptionKey: 'tour.german.description',
-      durationKey: 'tour.german.duration',
-      image: '/images/prague-castle-cathedral.jpg',
-      highlightKeys: ['tour.german.h1', 'tour.german.h2', 'tour.german.h3', 'tour.german.h4'],
-    },
-    {
-      id: 5,
-      titleKey: 'tour.custom.title',
-      descriptionKey: 'tour.custom.description',
-      durationKey: 'tour.custom.duration',
-      image: '/images/blog-night-prague-min.jpg',
-      highlightKeys: ['tour.custom.h1', 'tour.custom.h2', 'tour.custom.h3', 'tour.custom.h4'],
-    },
-    {
-      id: 6,
-      titleKey: 'tour.havel.title',
-      descriptionKey: 'tour.havel.description',
-      durationKey: 'tour.havel.duration',
-      image: '/images/havel-tour.jpg',
-      highlightKeys: ['tour.havel.h1', 'tour.havel.h2', 'tour.havel.h3', 'tour.havel.h4'],
-    },
-  ];
+  const regularTours = toursData.filter((x) => !x.isCustom);
+  const customTour = toursData.find((x) => x.isCustom);
+
+  const secondaryBadgeKey = (tourId: string): TranslationKey =>
+    tourId === 'hidden' ? 'tours.badge.insider' : 'tours.badge.groupUpTo6';
 
   return (
-    <div className="bg-surface pb-16">
-      <div className="border-b border-outline-variant/15 bg-surface-container-low py-16 text-center">
-        <h1 className="mb-4 font-headline text-4xl text-primary md:text-5xl">{t('tours.header.title')}</h1>
-        <p className="mx-auto max-w-2xl text-lg text-on-surface-variant">{t('tours.header.subtitle')}</p>
-      </div>
+    <div
+      className={`min-h-screen bg-[#0f0f0f] md:pb-16 ${showStickyKontakt ? 'pb-24' : 'pb-8'}`}
+    >
+      {/* Compact hero — maroon, minimal vertical padding on mobile */}
+      <header className="bg-primary px-5 py-6 text-center md:py-8">
+        <p className="mb-2 font-label text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-on-primary/65">
+          {t('tours.page.kicker')}
+        </p>
+        <h1 className="mb-3 font-headline text-2xl leading-tight text-on-primary md:text-3xl lg:text-4xl">
+          {t('tours.page.heading')}
+        </h1>
+        <p className="mx-auto max-w-xl font-label text-sm leading-relaxed text-on-primary/80 md:text-base">
+          {t('tours.page.lead')}
+        </p>
+      </header>
 
-      <div className="mx-auto max-w-6xl px-8 py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          {toursData.map((tour, index) => {
-            const dest = `/book?tour=${encodeURIComponent(t(tour.titleKey as any))}#contact-title`;
+      <div className="mx-auto max-w-6xl px-4 py-6 md:px-8 md:py-8">
+        <p className="mb-4 font-label text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white/45">
+          {t('tours.section.popular')}
+        </p>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+          {regularTours.map((tour, index) => {
+            const bookDest = `/book?tour=${encodeURIComponent(t(tour.titleKey as TranslationKey))}#contact-title`;
+            const tourDest = `/tours/${tour.slug}`;
             return (
               <motion.article
                 key={tour.id}
-                className="flex flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-md transition-shadow hover:shadow-lg"
-                initial={{ opacity: 0, y: 40 }}
+                className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#1a1a1a] shadow-lg transition-shadow hover:border-white/15 hover:shadow-xl"
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: index * 0.05 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
               >
                 <div
                   role="button"
                   tabIndex={0}
-                  className="relative h-56 cursor-pointer overflow-hidden"
-                  onClick={() => navigate(dest)}
+                  className="relative h-44 cursor-pointer overflow-hidden md:h-52"
+                  onClick={() => navigate(tourDest)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
-                      navigate(dest);
+                      navigate(tourDest);
                     }
                   }}
                 >
-                  <img src={tour.image} alt={t(tour.titleKey as any)} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h2 className="mb-2 font-headline text-xl text-primary">{t(tour.titleKey as any)}</h2>
-                  <div className="mb-3 flex items-center gap-2 font-label text-sm text-on-surface-variant">
-                    <span className="material-symbols-outlined text-lg">schedule</span>
-                    {t(tour.durationKey as any)}
+                  <img
+                    src={pub(tour.image)}
+                    alt={t(tour.titleKey as TranslationKey)}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+                    <span className="rounded-full bg-black/60 px-2.5 py-1 font-label text-xs font-medium text-white backdrop-blur-sm">
+                      {t(tour.durationKey as TranslationKey)}
+                    </span>
+                    <span className="rounded-full bg-primary/90 px-2.5 py-1 font-label text-xs font-medium text-on-primary backdrop-blur-sm">
+                      {t(secondaryBadgeKey(tour.tourId))}
+                    </span>
                   </div>
-                  <p className="mb-4 flex-1 text-on-surface-variant">{t(tour.descriptionKey as any)}</p>
-                  <h3 className="mb-2 font-label text-sm font-bold uppercase tracking-wide text-secondary">{t('tour.highlights')}</h3>
-                  <ul className="mb-6 space-y-2">
+                </div>
+
+                <div className="flex flex-1 flex-col p-4 md:p-5">
+                  <h2 className="mb-2 font-headline text-lg text-white md:text-xl">{t(tour.titleKey as TranslationKey)}</h2>
+                  <p className="mb-4 flex-1 font-body text-sm leading-relaxed text-white/65">{t(tour.descriptionKey as TranslationKey)}</p>
+
+                  <ul className="mb-5 space-y-1.5">
                     {tour.highlightKeys.map((key) => (
-                      <li key={key} className="flex items-start gap-2 text-sm text-on-surface-variant">
-                        <span className="material-symbols-outlined text-lg text-green-700">check_circle</span>
-                        <span>{t(key as any)}</span>
+                      <li key={key} className="flex items-start gap-2 text-sm text-white/60">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        {t(key as TranslationKey)}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-auto flex flex-col gap-3 border-t border-outline-variant/20 pt-4 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="font-headline text-lg font-semibold text-primary">{t('tour.price')}</p>
-                    <Link
-                      to={dest}
-                      className="rounded-lg bg-primary px-5 py-2.5 text-center font-semibold text-on-primary hover:opacity-90"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {t('tour.bookNow')}
-                    </Link>
-                  </div>
+
+                  <Link
+                    to={bookDest}
+                    onClick={(e) => e.stopPropagation()}
+                    className="mb-2 w-full rounded-xl border-2 border-white/70 bg-transparent py-3 text-center font-label text-sm font-semibold text-white transition-colors hover:bg-white/10 active:bg-white/15"
+                  >
+                    {t('tour.bookNow')}
+                  </Link>
+                  <Link
+                    to={tourDest}
+                    onClick={(e) => e.stopPropagation()}
+                    className="w-full rounded-xl border border-white/25 py-2.5 text-center font-label text-sm font-medium text-white/90 transition-colors hover:bg-white/5"
+                  >
+                    {t('tours.exploreTour')} →
+                  </Link>
                 </div>
               </motion.article>
             );
           })}
         </div>
+
+        {/* Custom tour — light card */}
+        {customTour && (
+          <motion.section
+            className="mt-8 md:mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <p className="mb-4 font-label text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white/45">
+              {t('tours.section.custom')}
+            </p>
+            <div className="rounded-2xl border border-neutral-300/80 bg-white p-5 shadow-md md:p-6">
+              <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-8">
+                <div className="min-w-0 flex-1">
+                  <h2 className="mb-2 font-headline text-xl text-primary md:text-2xl">
+                    {t(customTour.titleKey as TranslationKey)}
+                  </h2>
+                  <p className="font-body text-sm leading-relaxed text-on-surface-variant md:text-base">
+                    {t(customTour.descriptionKey as TranslationKey)}
+                  </p>
+                </div>
+                <div className="flex w-full flex-col gap-2 md:w-56 md:shrink-0">
+                  <Link
+                    to={`/book?tour=${encodeURIComponent(t(customTour.titleKey as TranslationKey))}#contact-title`}
+                    className="w-full rounded-xl bg-primary py-3 text-center font-label text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
+                  >
+                    {t('tours.custom.requestCta')}
+                  </Link>
+                  <Link
+                    to={`/tours/${customTour.slug}`}
+                    className="w-full rounded-xl border border-primary/35 py-2.5 text-center font-label text-sm font-medium text-primary transition-colors hover:bg-primary/5"
+                  >
+                    {t('tours.custom.learnMore')} →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+        )}
       </div>
 
-      <section className="mx-auto max-w-6xl px-8 pb-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Info tiles — dark */}
+      <section className="mx-auto max-w-6xl px-4 pb-8 md:px-8">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {[
             { icon: 'groups', title: t('tourinfo.groups.title'), desc: t('tourinfo.groups.desc') },
             { icon: 'translate', title: t('tourinfo.languages.title'), desc: t('tourinfo.languages.desc') },
             { icon: 'event_available', title: t('tourinfo.booking.title'), desc: t('tourinfo.booking.desc') },
             { icon: 'partly_cloudy_day', title: t('tourinfo.weather.title'), desc: t('tourinfo.weather.desc') },
           ].map((item) => (
-            <div key={item.title} className="rounded-xl bg-surface-container-low p-6">
-              <span className="material-symbols-outlined mb-2 text-2xl text-primary">{item.icon}</span>
-              <h3 className="mb-2 font-headline text-lg text-on-surface">{item.title}</h3>
-              <p className="text-sm text-on-surface-variant">{item.desc}</p>
+            <div
+              key={item.title}
+              className="rounded-xl border border-white/10 bg-[#1a1a1a] p-4 md:p-5"
+            >
+              <span className="material-symbols-outlined mb-2 block text-2xl text-secondary-container">{item.icon}</span>
+              <h3 className="mb-1 font-headline text-sm text-white md:text-base">{item.title}</h3>
+              <p className="font-label text-xs leading-relaxed text-white/55 md:text-sm">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-8 pb-16">
-        <h2 className="mb-8 text-center font-headline text-3xl text-primary">{t('tours.faq.title')}</h2>
-        <div className="space-y-6">
+      {/* FAQ — dark */}
+      <section className="mx-auto max-w-3xl px-4 pb-20 md:px-8 md:pb-24">
+        <h2 className="mb-6 text-center font-headline text-2xl text-white md:text-3xl">{t('tours.faq.title')}</h2>
+        <div className="space-y-3">
           {([
             { q: 'tours.faq.q1', a: 'tours.faq.a1' },
             { q: 'tours.faq.q2', a: 'tours.faq.a2' },
@@ -161,23 +223,38 @@ const Tours: React.FC = () => {
             { q: 'tours.faq.q4', a: 'tours.faq.a4' },
             { q: 'tours.faq.q5', a: 'tours.faq.a5' },
           ] as const).map(({ q, a }) => (
-            <details
-              key={q}
-              className="group rounded-xl border border-outline-variant/20 bg-surface-container-lowest"
-            >
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-headline text-lg text-on-surface">
-                {t(q as any)}
-                <span className="material-symbols-outlined text-primary transition-transform group-open:rotate-180">
+            <details key={q} className="group rounded-xl border border-white/10 bg-[#1a1a1a]">
+              <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 font-headline text-base text-white md:text-lg">
+                {t(q as TranslationKey)}
+                <span className="material-symbols-outlined ml-3 shrink-0 text-secondary-container transition-transform group-open:rotate-180">
                   expand_more
                 </span>
               </summary>
-              <p className="px-6 pb-5 leading-relaxed text-on-surface-variant">
-                {t(a as any)}
-              </p>
+              <p className="px-5 pb-5 font-body text-sm leading-relaxed text-white/65 md:text-base">{t(a as TranslationKey)}</p>
             </details>
           ))}
         </div>
       </section>
+
+      {/* Sticky bottom CTA — mobile only; appears after scrolling into the second half of the page */}
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0a0a0a]/95 px-4 py-3 backdrop-blur-md transition-[transform,opacity] duration-300 ease-out md:hidden ${
+          showStickyKontakt
+            ? 'pointer-events-auto translate-y-0 opacity-100'
+            : 'pointer-events-none translate-y-full opacity-0'
+        }`}
+        aria-hidden={!showStickyKontakt}
+      >
+        <div className="mx-auto flex max-w-lg items-center gap-3">
+          <p className="min-w-0 flex-1 font-label text-xs leading-snug text-white/55">{t('tours.stickyCta.hint')}</p>
+          <Link
+            to="/book#contact-title"
+            className="shrink-0 rounded-xl border border-white/50 bg-transparent px-4 py-2.5 font-label text-sm font-semibold text-white"
+          >
+            {t('tours.stickyCta.button')}
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

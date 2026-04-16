@@ -118,10 +118,28 @@ ${formatTagLines(tagsDe, 6)}
 }
 
 function buildTranslationsBlock(args, postKey, dateEn, dateDe) {
+  const ctaEn = `<div class="blog-cta-box">
+  <h3>Ready to explore Prague?</h3>
+  <p>Draft — replace this paragraph with your closing pitch. Keep or edit the buttons below.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book#contact-title">Send enquiry</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>`;
+  const ctaDe = `<div class="blog-cta-box">
+  <h3>Bereit, Prag zu erkunden?</h3>
+  <p>Entwurf — ersetzen Sie diesen Absatz durch Ihren Abschlusstext. Die Buttons unten können Sie anpassen.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book#contact-title">Anfrage senden</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>`;
   const stubEn = `<h2>${escapeTpl(args.titleen)}</h2>
-<p class="lead">Draft — replace with your full article HTML in blogTranslations.ts.</p>`;
+<p class="lead">Draft — replace with your full article HTML in blogTranslations.ts.</p>
+${ctaEn}`;
   const stubDe = `<h2>${escapeTpl(args.titlede)}</h2>
-<p class="lead">Entwurf — vollständigen Artikel-HTML-Text in blogTranslations.ts einfügen.</p>`;
+<p class="lead">Entwurf — vollständigen Artikel-HTML-Text in blogTranslations.ts einfügen.</p>
+${ctaDe}`;
 
   return `  // Post ${postKey.replace('post', '')} (new)
   'blog.${postKey}.title': {

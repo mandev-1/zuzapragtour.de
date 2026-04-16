@@ -74,7 +74,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-surface">
-      <section className="relative h-[min(88vh,52rem)] w-full overflow-hidden">
+      <section className="relative h-[min(77vh,46rem)] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
             className="h-full w-full object-cover"
@@ -87,83 +87,101 @@ const Home: React.FC = () => {
             fetchPriority="high"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-on-surface/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
         </div>
-        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-end px-8 pb-16 md:pb-24">
-          <motion.div
-            className="max-w-3xl"
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span className="mb-6 inline-block rounded-full bg-secondary-container px-4 py-1 font-label text-xs font-bold uppercase tracking-widest text-on-secondary-container">
+        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col justify-end px-5 pb-12 sm:px-8 md:pb-24">
+          <div className="mx-auto w-full max-w-3xl">
+            {/* Badge — single line on mobile, no wrapping */}
+            <motion.span
+              className="mb-4 hidden rounded-full bg-secondary-container px-4 py-1.5 font-label text-xs font-bold uppercase tracking-widest text-on-secondary-container sm:mb-6 sm:inline-block"
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
               {t('home.badge')}
-            </span>
-            <h1 className="mb-6 font-headline text-4xl leading-tight text-surface-container-lowest text-shadow-sm md:text-6xl lg:text-7xl">
+            </motion.span>
+
+            {/* H1 — clamp prevents line-break overflow on small screens */}
+            <h1
+              className="mb-5 font-headline leading-tight text-surface-container-lowest"
+              style={{ fontSize: 'clamp(1.75rem, 8vw, 4rem)' }}
+            >
               {t('home.hero.line1')}
               <br />
               <span className="text-secondary-container">{t('home.hero.line2')}</span>
             </h1>
-            <div className="mb-8 flex flex-wrap gap-6 font-medium text-surface-container-lowest">
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-xl">schedule</span>
-                <span>{t('home.meta1')}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-xl">group</span>
-                <span>{t('home.meta2')}</span>
-              </div>
-              <a
-                href={TRIPADVISOR_LISTING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 underline-offset-4 transition-opacity hover:opacity-90"
-              >
-                <span
-                  className="material-symbols-outlined text-xl text-secondary-container"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  star
-                </span>
-                <span>{t('home.meta3')}</span>
-              </a>
-            </div>
 
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                to="/book#contact-title"
-                className="rounded-lg bg-primary px-7 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95"
-              >
-                {t('hero.sendEnquiry')}
-              </Link>
-              <Link
-                to="/tours"
-                className="rounded-lg border border-surface-container-lowest/50 px-6 py-3 font-label text-sm font-semibold text-surface-container-lowest backdrop-blur-sm transition-colors hover:border-surface-container-lowest hover:bg-surface-container-lowest/10"
-              >
-                {t('hero.exploreTours')} →
-              </Link>
-            </div>
-            <p className="mt-3 font-label text-xs text-surface-container-lowest/60">{t('hero.responsePromise')}</p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            >
+              {/* Trust signals — stack on narrow phones; row from sm up */}
+              <div className="mb-6 flex flex-col gap-2 text-sm font-medium text-surface-container-lowest sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
+                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
+                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">schedule</span>
+                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta1')}</span>
+                </div>
+                <span className="hidden text-white/30 sm:inline">·</span>
+                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
+                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">group</span>
+                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta2')}</span>
+                </div>
+                <span className="hidden text-white/30 sm:inline">·</span>
+                <a
+                  href={TRIPADVISOR_LISTING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden min-w-0 items-center gap-1.5 transition-opacity hover:opacity-90 sm:flex"
+                >
+                  <span
+                    className="material-symbols-outlined shrink-0 text-base text-secondary-container"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta3')}</span>
+                </a>
+              </div>
+
+              {/* CTAs — always side by side */}
+              <div className="flex items-center gap-3">
+                <Link
+                  to="/book#contact-title"
+                  className="rounded-lg bg-primary px-5 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95 sm:px-7 sm:py-3.5"
+                >
+                  {t('hero.sendEnquiry')}
+                </Link>
+                <Link
+                  to="/tours"
+                  className="rounded-lg border border-white/40 bg-white/10 px-5 py-3 font-label text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20 sm:px-6 sm:py-3.5"
+                >
+                  {t('hero.exploreTours')} →
+                </Link>
+              </div>
+              <p className="mt-3 font-label text-xs text-surface-container-lowest/60">{t('hero.responsePromise')}</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-8 py-16 md:py-20">
-        <div className="mb-20">
-          <div className="mb-8 flex items-end justify-between">
-            <h2 className="font-headline text-2xl text-primary md:text-3xl">{t('home.tours.teaser.title')}</h2>
+      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8 md:py-16">
+        <div className="mb-12">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <h2 className="font-headline text-xl text-primary sm:text-2xl md:text-3xl">{t('home.tours.teaser.title')}</h2>
             <Link
               to="/tours"
-              className="font-label text-sm font-semibold text-primary underline-offset-4 hover:underline"
+              className="shrink-0 font-label text-sm font-semibold text-primary underline-offset-4 hover:underline"
             >
               {t('home.tours.teaser.viewAll')} →
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {/* Mobile: horizontal scroll snap. Desktop: 3-col grid */}
+          <div className="-mx-5 flex gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
             {TEASER_TOURS.map((tour, i) => (
               <motion.div
                 key={tour.titleKey}
-                className="relative flex flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-sm transition-shadow hover:shadow-md"
+                className="relative flex w-[72vw] flex-none flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-sm transition-shadow hover:shadow-md sm:w-auto"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
@@ -207,7 +225,12 @@ const Home: React.FC = () => {
           {/* Portrait — large, roughly half-width on desktop */}
           <div className="relative flex-none md:w-[44%]">
             <img
-              className="h-72 w-full object-cover object-top sm:h-80 md:h-full md:min-h-[26rem]"
+              className="h-72 w-full object-cover sm:h-80 md:h-full md:min-h-[26rem]"
+              style={{
+                /* Face is in the lower third of this image — anchor there on mobile,
+                   shift up slightly on desktop where the full height shows more */
+                objectPosition: 'center 42%',
+              }}
               src={pub('/images/zuzana-portrait.jpg')}
               alt="Zuzana Manová"
             />

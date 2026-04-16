@@ -78,8 +78,16 @@ const BlogPostPage: React.FC = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const deSlug: string | undefined = (post as any).slugDe;
+  const deUrl = deSlug ? `https://zuzapragtour.de/blog/${deSlug}` : null;
+  const enUrl = `https://zuzapragtour.de/blog/${post.slug}`;
+  // Canonical always resolves to the DE version when one exists (DE is primary)
+  const canonicalUrl = deUrl ?? enUrl;
+  // True when the visitor landed on the EN slug but a DE version exists → noindex
+  const isEnUrlWithDe = slug === post.slug && !!deSlug;
+
   const slugForUrl =
-    language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug;
+    language === 'de' && deSlug ? deSlug : post.slug;
   const postAbsoluteUrl = `https://zuzapragtour.de/blog/${slugForUrl}`;
   const currentTags = language === 'de' && post.tagsDe ? post.tagsDe : post.tags;
 
@@ -134,15 +142,16 @@ const BlogPostPage: React.FC = () => {
               : 'Prague tours, Prague guide'
           }`}
         />
-        <link rel="canonical" href={`https://zuzapragtour.de/blog/${slugForUrl}`} />
-        <link rel="alternate" hrefLang="en" href={`https://zuzapragtour.de/blog/${post.slug}`} />
-        {(post as any).slugDe && (
-          <link rel="alternate" hrefLang="de" href={`https://zuzapragtour.de/blog/${(post as any).slugDe}`} />
-        )}
-        <link rel="alternate" hrefLang="x-default" href={`https://zuzapragtour.de/blog/${post.slug}`} />
+        {/* DE is always canonical when a DE version exists. EN URL gets noindex. */}
+        <link rel="canonical" href={canonicalUrl} />
+        {isEnUrlWithDe && <meta name="robots" content="noindex, follow" />}
+        <link rel="alternate" hrefLang="en" href={enUrl} />
+        {deUrl && <link rel="alternate" hrefLang="de" href={deUrl} />}
+        {/* x-default points to DE when available — site primary language is German */}
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <meta property="og:title" content={`${t(post.titleKey as any)} | Zuza Prague Tours`} />
         <meta property="og:description" content={t(post.excerptKey as any)} />
-        <meta property="og:url" content={`https://zuzapragtour.de/blog/${slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={`https://zuzapragtour.de${post.image}`} />
         <meta property="article:published_time" content={post.date} />
@@ -257,12 +266,12 @@ const BlogPostPage: React.FC = () => {
 
       <article className="min-h-screen bg-white" ref={articleRef}>
         {/* Tag strip (Stitch: pill row under site header) */}
-        <section className="border-b border-stone-100 bg-stone-50/70 py-4">
-          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-2 px-6">
+        <section className="border-b border-stone-100 bg-stone-50/70 py-3 sm:py-4">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-1.5 px-4 sm:gap-2 sm:px-6">
             {currentTags.map((tag: string, i: number) => (
               <span
                 key={i}
-                className="rounded-full bg-stone-200/90 px-3 py-1 font-label text-xs font-medium text-on-surface"
+                className="rounded-full bg-stone-200/90 px-2 py-0.5 font-label text-[0.65rem] font-medium leading-snug text-on-surface sm:px-3 sm:py-1 sm:text-xs"
               >
                 {tag}
               </span>
@@ -394,18 +403,14 @@ const BlogPostPage: React.FC = () => {
                 <>
                   <p className="lead">{t(post.excerptKey as any)}</p>
                   <div className="blog-cta-box">
-                    <h3>{language === 'de' ? 'Bereit, Prag zu erkunden?' : 'Ready to explore Prague?'}</h3>
-                    <p>
-                      {language === 'de'
-                        ? 'Entdecken Sie Prag mit Ing. Zuzana Manová — persönlich, zertifiziert, unvergesslich.'
-                        : 'Discover Prague with Ing. Zuzana Manová — personal, certified, unforgettable.'}
-                    </p>
+                    <h3>{t('blog.cta.defaultTitle' as any)}</h3>
+                    <p>{t('blog.cta.defaultBody' as any)}</p>
                     <div className="cta-buttons">
-                      <Link to="/contact#contact-title" className="btn btn-primary">
-                        {t('hero.contactMe' as any)}
+                      <Link to="/book#contact-title" className="btn btn-primary">
+                        {t('hero.sendEnquiry' as any)}
                       </Link>
-                      <Link to="/tours" className="btn btn-outline">
-                        {t('hero.exploreTours' as any)}
+                      <Link to="/contact#contact-title" className="btn btn-outline">
+                        {t('blog.cta.askQuestion' as any)}
                       </Link>
                     </div>
                   </div>

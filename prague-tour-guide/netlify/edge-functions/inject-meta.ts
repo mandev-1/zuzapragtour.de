@@ -1,5 +1,6 @@
 import type { Config, Context } from "@netlify/edge-functions";
 import routeMeta from "./route-meta.json" with { type: "json" };
+import routeContent from "./route-content.json" with { type: "json" };
 
 interface RouteMeta {
   title: string;
@@ -12,6 +13,14 @@ interface RouteMeta {
   ogType: string;
   articleAuthor?: string;
   articleDate?: string;
+}
+
+interface RouteContent {
+  title: string;
+  html: string;
+  author: string;
+  date: string;
+  image: string;
 }
 
 function lookupMeta(pathname: string): RouteMeta | null {
@@ -30,6 +39,15 @@ function lookupMeta(pathname: string): RouteMeta | null {
     const slug = blogMatch[1];
     if (blogMeta[slug]) {
       return blogMeta[slug];
+    }
+  }
+
+  // Tour subpage: /tours/:slug (stored as static routes with full path key)
+  const tourMatch = pathname.match(/^\/tours\/([^/]+)\/?$/);
+  if (tourMatch) {
+    const tourPath = `/tours/${tourMatch[1]}`;
+    if (staticMeta[tourPath]) {
+      return staticMeta[tourPath];
     }
   }
 
@@ -202,6 +220,44 @@ export default async function handler(
         "</head>",
         `  <meta property="article:published_time" content="${escapeHtml(meta.articleDate)}" />\n</head>`
       );
+    }
+  }
+
+  // ── Static article injection ─────────────────────────────────────────────
+  // Inject the full article HTML into <div id="root"> so crawlers (Bingbot,
+  // Googlebot first-pass, etc.) see real content without executing JavaScript.
+  // React's createRoot().render() will completely replace this on page load —
+  // browsers experience zero side-effects, crawlers get full article text.
+  if (meta.ogType === "article") {
+    const blogSlug = url.pathname.match(/^\/blog\/([^/]+)\/?$/)?.[1];
+    if (blogSlug) {
+      const content = (routeContent as Record<string, RouteContent>)[blogSlug];
+      if (content?.html) {
+        const safeArticleTitle = escapeHtml(content.title || meta.title);
+        const safeAuthor = escapeHtml(content.author || "");
+        const safeDate = escapeHtml(content.date || "");
+        const safeImage = escapeHtml(content.image || meta.ogImage);
+
+        const staticArticle = [
+          `<article id="ssr-content" style="max-width:800px;margin:2rem auto;padding:1rem 1.5rem;font-family:Georgia,serif;line-height:1.75;color:#1a1a1a">`,
+          `<h1 style="font-size:1.9rem;font-weight:700;margin-bottom:1rem;line-height:1.3">${safeArticleTitle}</h1>`,
+          safeAuthor || safeDate
+            ? `<p style="font-size:0.9rem;color:#666;margin-bottom:1.5rem">${safeAuthor}${safeAuthor && safeDate ? " &middot; " : ""}${safeDate}</p>`
+            : "",
+          safeImage
+            ? `<img src="${safeImage}" alt="${safeArticleTitle}" style="width:100%;max-height:420px;object-fit:cover;border-radius:8px;margin-bottom:1.5rem" loading="eager" />`
+            : "",
+          `<div class="blog-content">`,
+          content.html,
+          `</div>`,
+          `</article>`,
+        ].join("\n");
+
+        html = html.replace(
+          /<div id="root"><\/div>/,
+          `<div id="root">${staticArticle}</div>`
+        );
+      }
     }
   }
 
