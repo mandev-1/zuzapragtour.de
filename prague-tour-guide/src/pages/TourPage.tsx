@@ -16,39 +16,38 @@ const TourPage: React.FC = () => {
 
   if (!tour) {
     return (
-      <div className="mx-auto max-w-2xl px-8 py-24 text-center">
-        <h1 className="mb-4 font-headline text-3xl text-primary">Tour not found</h1>
-        <p className="mb-8 text-on-surface-variant">
+      <div className="mx-auto max-w-prose px-5 py-24 text-center">
+        <h1 className="mb-4 font-headline text-3xl text-ink">Tour not found</h1>
+        <p className="mb-8 font-body text-stone-600">
           This tour page does not exist. Please check the URL or browse all tours.
         </p>
-        <Link to="/tours" className="rounded-lg bg-primary px-6 py-3 font-semibold text-on-primary hover:opacity-90">
+        <Link to="/tours" className="rounded-md bg-ink px-6 py-3 font-label text-sm font-medium text-paper hover:bg-ink-soft">
           {t('tourpage.allTours' as any)}
         </Link>
       </div>
     );
   }
 
-  // seoTitle is the keyword-rich H1 text — brand suffix added separately for <title>
-  const h1Text = t(tour.seoTitleKey as any);
-  const pageTitle = `${h1Text} | Zuza Prague Tours`;
-  const description = t(tour.descriptionKey as any);
+  const h1Text       = t(tour.seoTitleKey as any);
+  const pageTitle    = `${h1Text} | Zuza Prague Tours`;
+  const description  = t(tour.descriptionKey as any);
   const canonicalSlug = language === 'de' && tour.slugDe ? tour.slugDe : tour.slug;
-  const canonical = `${SITE}/tours/${canonicalSlug}`;
-  const imageUrl = `${SITE}${tour.image}`;
+  const canonical    = `${SITE}/tours/${canonicalSlug}`;
+  const imageUrl     = `${SITE}${tour.image}`;
 
   const faqsForSchema = tour.faqKeys.map((fk) => ({
     question: t(fk.qKey as any),
-    answer: t(fk.aKey as any),
+    answer:   t(fk.aKey as any),
   }));
 
   const schema = getTourPageSchema({
-    name: t(tour.titleKey as any),
+    name:            t(tour.titleKey as any),
     description,
-    duration: t(tour.durationKey as any),
+    duration:        t(tour.durationKey as any),
     durationMinutes: tour.durationMinutes,
-    image: imageUrl,
-    url: canonical,
-    faqs: faqsForSchema,
+    image:           imageUrl,
+    url:             canonical,
+    faqs:            faqsForSchema,
   });
 
   const bookDest = `/book?tour=${encodeURIComponent(t(tour.titleKey as any))}#contact-title`;
@@ -70,58 +69,57 @@ const TourPage: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
-      {/* Hero */}
-      <div className="relative h-72 overflow-hidden md:h-96">
-        <img
-          src={tour.image}
-          alt={t(tour.titleKey as any)}
-          className="h-full w-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-8 md:px-12">
-          <motion.h1
-            className="font-headline text-3xl font-bold text-white drop-shadow-lg md:text-4xl lg:text-5xl"
-            initial={{ opacity: 0, y: 20 }}
+      {/* ── Text hero ─────────────────────────────────────────── */}
+      <section className="border-b border-stone-200 bg-paper">
+        <div className="mx-auto max-w-editorial px-5 py-12 md:px-10 md:py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {h1Text}
-          </motion.h1>
+            <p className="mb-3 font-eyebrow text-eyebrow uppercase text-stone-500">
+              {t('tourpage.allTours' as any)} · {t(tour.durationKey as any)}
+            </p>
+            <h1 className="font-headline text-display-lg leading-snug text-ink">
+              {h1Text}
+            </h1>
+            <p className="mt-5 max-w-prose font-body text-prose text-stone-600">
+              {description}
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      <div className="mx-auto max-w-6xl px-6 py-12 md:px-10">
+      <div className="mx-auto max-w-editorial px-5 py-12 md:px-10">
+
         {/* Breadcrumb */}
-        <nav className="mb-8 flex items-center gap-2 text-sm text-on-surface-variant">
-          <Link to="/tours" className="hover:text-primary transition-colors">
+        <nav className="mb-10 flex items-center gap-2 font-label text-sm text-stone-400">
+          <Link to="/tours" className="transition-colors hover:text-ink">
             {t('tourpage.allTours' as any)}
           </Link>
           <span>/</span>
-          <span className="text-on-surface">{t(tour.titleKey as any)}</span>
+          <span className="text-ink">{t(tour.titleKey as any)}</span>
         </nav>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
-          {/* Main content */}
+
+          {/* ── Main content ──────────────────────────────────── */}
           <div className="lg:col-span-2">
-            {/* Intro paragraphs */}
-            <div className="prose prose-lg max-w-none space-y-5 text-on-surface-variant">
-              <p className="text-lg leading-relaxed">{t(tour.body1Key as any)}</p>
-              <p className="leading-relaxed">{t(tour.body2Key as any)}</p>
-              <p className="leading-relaxed">{t(tour.body3Key as any)}</p>
+            <div className="space-y-5 font-body text-prose leading-relaxed text-stone-700">
+              <p>{t(tour.body1Key as any)}</p>
+              <p>{t(tour.body2Key as any)}</p>
+              <p>{t(tour.body3Key as any)}</p>
             </div>
 
             {/* Highlights */}
             <div className="mt-10">
-              <h2 className="mb-4 font-headline text-2xl text-primary">
+              <h2 className="mb-5 font-headline text-xl text-ink">
                 {t('tourpage.highlights' as any)}
               </h2>
-              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                 {tour.highlightKeys.map((key) => (
-                  <li key={key} className="flex items-start gap-2 text-on-surface-variant">
-                    <span className="material-symbols-outlined mt-0.5 text-lg text-green-700">
-                      check_circle
-                    </span>
+                  <li key={key} className="flex items-start gap-3 font-body text-sm text-stone-700">
+                    <span className="mt-1 shrink-0 text-stone-400">—</span>
                     <span>{t(key as any)}</span>
                   </li>
                 ))}
@@ -130,15 +128,13 @@ const TourPage: React.FC = () => {
 
             {/* What's included */}
             <div className="mt-10">
-              <h2 className="mb-4 font-headline text-2xl text-primary">
+              <h2 className="mb-5 font-headline text-xl text-ink">
                 {t('tourpage.included' as any)}
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {tour.includedKeys.map((key) => (
-                  <li key={key} className="flex items-start gap-2 text-on-surface-variant">
-                    <span className="material-symbols-outlined mt-0.5 text-lg text-primary">
-                      verified
-                    </span>
+                  <li key={key} className="flex items-start gap-3 font-body text-sm text-stone-700">
+                    <span className="mt-1 shrink-0 text-stone-400">—</span>
                     <span>{t(key as any)}</span>
                   </li>
                 ))}
@@ -147,22 +143,16 @@ const TourPage: React.FC = () => {
 
             {/* FAQ */}
             <div className="mt-12">
-              <h2 className="mb-6 font-headline text-2xl text-primary">
+              <h2 className="mb-6 font-headline text-xl text-ink">
                 {t('tourpage.faq' as any)}
               </h2>
-              <div className="space-y-4">
+              <div className="divide-y divide-stone-200">
                 {tour.faqKeys.map(({ qKey, aKey }) => (
-                  <details
-                    key={qKey}
-                    className="group rounded-xl border border-outline-variant/20 bg-surface-container-lowest"
-                  >
-                    <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-headline text-base text-on-surface">
+                  <details key={qKey} className="group py-1">
+                    <summary className="cursor-pointer list-none py-4 font-headline text-base text-ink">
                       {t(qKey as any)}
-                      <span className="material-symbols-outlined text-primary transition-transform group-open:rotate-180">
-                        expand_more
-                      </span>
                     </summary>
-                    <p className="px-6 pb-5 leading-relaxed text-on-surface-variant">
+                    <p className="pb-4 font-body text-sm leading-relaxed text-stone-600">
                       {t(aKey as any)}
                     </p>
                   </details>
@@ -171,68 +161,47 @@ const TourPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
+          {/* ── Sidebar ───────────────────────────────────────── */}
           <aside className="lg:col-span-1">
-            <div className="sticky top-28 space-y-4 rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6 shadow-md">
-              {/* Tour meta */}
-              <div className="space-y-4 text-sm">
-                <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-xl text-primary">schedule</span>
-                  <div>
-                    <p className="font-semibold text-on-surface">{t('tourpage.duration' as any)}</p>
-                    <p className="text-on-surface-variant">{t(tour.durationKey as any)}</p>
-                  </div>
+            <div className="sticky top-28 space-y-5 border-t border-stone-200 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+
+              <div className="space-y-5">
+                <div className="border-b border-stone-100 pb-4">
+                  <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">
+                    {t('tourpage.duration' as any)}
+                  </p>
+                  <p className="font-body text-sm text-ink">{t(tour.durationKey as any)}</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-xl text-primary">translate</span>
-                  <div>
-                    <p className="font-semibold text-on-surface">{t('tourpage.language' as any)}</p>
-                    <p className="text-on-surface-variant">{t('tourpage.languageValue' as any)}</p>
-                  </div>
+                <div className="border-b border-stone-100 pb-4">
+                  <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">
+                    {t('tourpage.language' as any)}
+                  </p>
+                  <p className="font-body text-sm text-ink">{t('tourpage.languageValue' as any)}</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-xl text-primary">group</span>
-                  <div>
-                    <p className="font-semibold text-on-surface">{t('tourpage.groupSize' as any)}</p>
-                    <p className="text-on-surface-variant">{t('tourpage.groupSizeValue' as any)}</p>
-                  </div>
+                <div className="border-b border-stone-100 pb-4">
+                  <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">
+                    {t('tourpage.groupSize' as any)}
+                  </p>
+                  <p className="font-body text-sm text-ink">{t('tourpage.groupSizeValue' as any)}</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-xl text-primary">pin_drop</span>
-                  <div>
-                    <p className="font-semibold text-on-surface">{t('tourpage.meetingPoint' as any)}</p>
-                    <p className="text-on-surface-variant">{t(tour.meetingPointKey as any)}</p>
-                  </div>
+                <div className="border-b border-stone-100 pb-4">
+                  <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">
+                    {t('tourpage.meetingPoint' as any)}
+                  </p>
+                  <p className="font-body text-sm text-ink">{t(tour.meetingPointKey as any)}</p>
                 </div>
               </div>
 
-              {/* Rating badge */}
-              <div className="rounded-xl bg-surface-container-low px-4 py-3 text-center">
-                <div className="flex items-center justify-center gap-1 text-primary">
-                  {[1,2,3,4,5].map((i) => (
-                    <span key={i} className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>
-                      star
-                    </span>
-                  ))}
-                </div>
-                <p className="mt-1 text-xs text-on-surface-variant">
-                  4.9 / 5 · 14 Bewertungen · TripAdvisor
-                </p>
-              </div>
-
-              <div className="border-t border-outline-variant/20 pt-4">
-                <p className="mb-4 text-center font-headline text-lg font-semibold text-primary">
-                  {t('tour.price' as any)}
-                </p>
+              <div className="pt-2">
                 <Link
                   to={bookDest}
-                  className="block w-full rounded-lg bg-primary px-5 py-3 text-center font-semibold text-on-primary shadow-sm hover:opacity-90 active:opacity-80 transition-opacity"
+                  className="block w-full rounded-md bg-ink px-5 py-3 text-center font-label text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
                 >
                   {t('tourpage.bookCta' as any)}
                 </Link>
                 <Link
                   to="/contact"
-                  className="mt-3 block w-full rounded-lg border border-primary px-5 py-3 text-center font-semibold text-primary hover:bg-primary/5 transition-colors"
+                  className="mt-3 block w-full text-center font-label text-sm text-stone-500 underline-offset-4 hover:text-ink hover:underline"
                 >
                   {t('tourpage.enquiryCta' as any)}
                 </Link>
@@ -241,24 +210,24 @@ const TourPage: React.FC = () => {
           </aside>
         </div>
 
-        {/* Bottom CTA strip */}
-        <div className="mt-16 rounded-2xl bg-surface-container-low px-8 py-10 text-center">
-          <h2 className="mb-3 font-headline text-2xl text-primary">
+        {/* ── Bottom CTA ────────────────────────────────────────── */}
+        <div className="mt-16 bg-ink px-8 py-12 text-center md:px-12">
+          <h2 className="mb-3 font-headline text-2xl text-paper">
             {t(tour.titleKey as any)}
           </h2>
-          <p className="mx-auto mb-6 max-w-xl text-on-surface-variant">
+          <p className="mx-auto mb-8 max-w-prose font-body text-sm text-stone-400">
             {t(tour.descriptionKey as any)}
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               to={bookDest}
-              className="rounded-lg bg-primary px-8 py-3 font-semibold text-on-primary shadow hover:opacity-90 transition-opacity"
+              className="rounded-md bg-accent px-8 py-3 font-label text-sm font-medium text-paper transition-colors hover:bg-accent-hover"
             >
               {t('tourpage.bookCta' as any)}
             </Link>
             <Link
               to="/tours"
-              className="rounded-lg border border-outline-variant/40 px-8 py-3 font-semibold text-on-surface hover:bg-surface-container transition-colors"
+              className="font-label text-sm text-stone-400 underline-offset-4 hover:text-paper hover:underline"
             >
               {t('tourpage.allTours' as any)}
             </Link>
