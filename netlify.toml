@@ -4,6 +4,10 @@
   publish = "build"
   command = "npm run build"
 
+# pragkenner.de production deploy (branch name) — PragKenner wordmark + layout in Header
+[context."pragkenner.de".environment]
+  REACT_APP_SITE_BRAND = "pragkenner"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
