@@ -13,7 +13,9 @@ const BLOG_TR = path.join(ROOT, 'src', 'utils', 'blogTranslations.ts');
 const OUT = path.join(ROOT, 'netlify', 'edge-functions', 'route-meta.json');
 const CONTENT_OUT = path.join(ROOT, 'netlify', 'edge-functions', 'route-content.json');
 
-const SITE = 'https://zuzapragtour.de';
+const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
+const SITE = (pkg.homepage || 'https://zuzapragtour.de').replace(/\/$/, '');
+const BRAND_NAME = pkg.brandName || 'Zuza Prague Tours';
 const OG_IMAGE = `${SITE}/images/charles-bridge-hero-1600.jpg`;
 
 function readBlogPosts() {
@@ -133,10 +135,10 @@ function generate() {
       ogType: 'website',
     },
     '/book': {
-      title: 'Tour buchen \u2013 Zuza Prague Tours',
+      title: `Tour buchen \u2013 ${BRAND_NAME}`,
       description:
         'Buchen Sie Ihre Tour in Prag. Nutzen Sie das Formular oder schreiben Sie mir per WhatsApp.',
-      ogTitle: 'Tour buchen \u2013 Zuza Prague Tours',
+      ogTitle: `Tour buchen \u2013 ${BRAND_NAME}`,
       ogDescription:
         'Buchen Sie Ihre Tour in Prag. Nutzen Sie das Formular oder schreiben Sie mir per WhatsApp.',
       ogImage: OG_IMAGE,
@@ -155,7 +157,7 @@ function generate() {
       ogType: 'website',
     },
     '/zuzana-manova': {
-      title: 'Zuzana Manová \u2013 Deutschsprachige Prag-Expertin & Spezialistin | Zuza Prague Tours',
+      title: `Zuzana Manová \u2013 Deutschsprachige Prag-Expertin & Spezialistin | ${BRAND_NAME}`,
       description:
         'Ing. Zuzana Manová \u2013 Ihre deutschsprachige Prag-Expertin und Spezialistin seit 1986. Zertifizierte Stadtf\u00fchrerin, akkreditiert beim J\u00fcdischen Museum. Private F\u00fchrungen auf Deutsch und Englisch.',
       ogTitle: 'Zuzana Manová \u2013 Deutschsprachige Prag-Expertin & Spezialistin',
@@ -167,24 +169,24 @@ function generate() {
       ogType: 'profile',
     },
     '/privacy': {
-      title: 'Datenschutz | Zuza Prague Tours',
+      title: `Datenschutz | ${BRAND_NAME}`,
       description:
-        'Datenschutzerkl\u00e4rung: Verarbeitung personenbezogener Daten bei Zuza Prague Tours (Ing. Zuzana Manov\u00e1).',
-      ogTitle: 'Datenschutz | Zuza Prague Tours',
+        `Datenschutzerkl\u00e4rung: Verarbeitung personenbezogener Daten bei ${BRAND_NAME} (Ing. Zuzana Manov\u00e1).`,
+      ogTitle: `Datenschutz | ${BRAND_NAME}`,
       ogDescription:
-        'Datenschutzerkl\u00e4rung: Verarbeitung personenbezogener Daten bei Zuza Prague Tours.',
+        `Datenschutzerkl\u00e4rung: Verarbeitung personenbezogener Daten bei ${BRAND_NAME}.`,
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/privacy`,
       canonical: `${SITE}/privacy`,
       ogType: 'website',
     },
     '/terms': {
-      title: 'AGB | Zuza Prague Tours',
+      title: `AGB | ${BRAND_NAME}`,
       description:
-        'Allgemeine Gesch\u00e4ftsbedingungen f\u00fcr private Stadtf\u00fchrungen und Touren mit Zuza Prague Tours.',
-      ogTitle: 'AGB | Zuza Prague Tours',
+        `Allgemeine Gesch\u00e4ftsbedingungen f\u00fcr private Stadtf\u00fchrungen und Touren mit ${BRAND_NAME}.`,
+      ogTitle: `AGB | ${BRAND_NAME}`,
       ogDescription:
-        'Allgemeine Gesch\u00e4ftsbedingungen f\u00fcr private Stadtf\u00fchrungen und Touren mit Zuza Prague Tours.',
+        `Allgemeine Gesch\u00e4ftsbedingungen f\u00fcr private Stadtf\u00fchrungen und Touren mit ${BRAND_NAME}.`,
       ogImage: OG_IMAGE,
       ogUrl: `${SITE}/terms`,
       canonical: `${SITE}/terms`,
@@ -196,43 +198,43 @@ function generate() {
   const tourDefs = [
     {
       slug: 'prague-castle', slugDe: 'prager-burg', image: '/images/prague-castle.jpg',
-      titleEn: 'Prague Castle Private Tour in German & English | Zuza Prague Tours',
-      titleDe: 'Prager Burg – Private Stadtführung Prag auf Deutsch | Zuza Prague Tours',
+      titleEn: `Prague Castle Private Tour in German & English | ${BRAND_NAME}`,
+      titleDe: `Prager Burg – Private Stadtführung Prag auf Deutsch | ${BRAND_NAME}`,
       descEn: 'Explore Prague Castle complex, St. Vitus Cathedral, and Golden Lane with a certified private guide. Skip queues, hear real stories, see the view nobody photographs.',
       descDe: 'Erkunden Sie Prager Burgkomplex, Veitsdom und Goldenes Gässchen mit einer zertifizierten Privatführerin. Warteschlangen umgehen, echte Geschichten hören, den Aussichtspunkt finden, den niemand fotografiert.',
     },
     {
       slug: 'old-town-jewish-quarter', slugDe: 'altstadt-juedisches-viertel', image: '/images/blog-jewish-quarter-2-min.jpg',
-      titleEn: 'Old Town & Jewish Quarter Private Tour in German & English | Zuza Prague Tours',
-      titleDe: 'Altstadt & Jüdisches Viertel – Prag Privatführung auf Deutsch | Zuza Prague Tours',
+      titleEn: `Old Town & Jewish Quarter Private Tour in German & English | ${BRAND_NAME}`,
+      titleDe: `Altstadt & Jüdisches Viertel – Prag Privatführung auf Deutsch | ${BRAND_NAME}`,
       descEn: 'Walk medieval Old Town, Astronomical Clock, and Jewish Quarter with a Jewish-Museum-accredited guide. Private tour in German and English.',
       descDe: 'Mittelalterliche Altstadt, Astronomische Uhr und Jüdisches Viertel mit einer vom Jüdischen Museum akkreditierten Führerin. Privattour auf Deutsch und Englisch.',
     },
     {
       slug: 'custom-private-tour', slugDe: 'individuelle-privattour', image: '/images/blog-night-prague-min.jpg',
-      titleEn: 'Custom Private Prague Tour — Tailored to You | Zuza Prague Tours',
-      titleDe: 'Individuelle Privattour Prag – maßgeschneiderte Stadtführung auf Deutsch | Zuza Prague Tours',
+      titleEn: `Custom Private Prague Tour — Tailored to You | ${BRAND_NAME}`,
+      titleDe: `Individuelle Privattour Prag – maßgeschneiderte Stadtführung auf Deutsch | ${BRAND_NAME}`,
       descEn: 'Design your own Prague tour — history, architecture, food, Kafka, or a mix. Private guide, flexible pace, personal route planned together in advance.',
       descDe: 'Gestalten Sie Ihre eigene Prag-Tour — Geschichte, Architektur, Essen, Kafka oder eine Mischung. Privatführung, flexibles Tempo, persönliche Route gemeinsam im Voraus geplant.',
     },
     {
       slug: 'hidden-prague', slugDe: 'verstecktes-prag', image: '/images/blog-hidden-gems-min.jpg',
-      titleEn: 'Hidden Prague Private Tour — Secret Spots & Local Gems | Zuza Prague Tours',
-      titleDe: 'Verstecktes Prag – Private Führung abseits der Touristenpfade | Zuza Prague Tours',
+      titleEn: `Hidden Prague Private Tour — Secret Spots & Local Gems | ${BRAND_NAME}`,
+      titleDe: `Verstecktes Prag – Private Führung abseits der Touristenpfade | ${BRAND_NAME}`,
       descEn: 'Skip the tourist trail. Secret courtyards, hidden gardens, and local spots that most visitors never find — private tour with a guide who has been collecting these places since 1986.',
       descDe: 'Den Touristenpfad verlassen. Versteckte Innenhöfe, geheime Gärten und lokale Orte, die die meisten Besucher nie finden — Privattour mit einer Führerin, die diese Orte seit 1986 sammelt.',
     },
     {
       slug: 'prague-german-heritage', slugDe: 'prag-deutsches-erbe', image: '/images/prague-castle-cathedral.jpg',
-      titleEn: 'Prague German Heritage Private Tour | Zuza Prague Tours',
-      titleDe: 'Prag Deutsches Erbe – Privatführung auf Deutsch | Zuza Prague Tours',
+      titleEn: `Prague German Heritage Private Tour | ${BRAND_NAME}`,
+      titleDe: `Prag Deutsches Erbe – Privatführung auf Deutsch | ${BRAND_NAME}`,
       descEn: 'Trace 700 years of German culture in Prague — Kafka, Mozart, Habsburg rulers, and an honest look at 20th-century history. Private tour with a bilingual Czech guide.',
       descDe: '700 Jahre deutsches Kulturerbe in Prag — Kafka, Mozart, Habsburger Herrscher und ein ehrlicher Blick auf die Geschichte des 20. Jahrhunderts. Privattour mit einer zweisprachigen tschechischen Führerin.',
     },
     {
       slug: 'vaclav-havel-tour', slugDe: 'vaclav-havel-tour-prag', image: '/images/havel-tour.jpg',
-      titleEn: 'Václav Havel Tour Prague — Velvet Revolution Private Tour | Zuza Prague Tours',
-      titleDe: 'Václav-Havel-Tour Prag – Private Stadtführung Samtene Revolution | Zuza Prague Tours',
+      titleEn: `Václav Havel Tour Prague — Velvet Revolution Private Tour | ${BRAND_NAME}`,
+      titleDe: `Václav-Havel-Tour Prag – Private Stadtführung Samtene Revolution | ${BRAND_NAME}`,
       descEn: 'Follow Václav Havel\'s story through Prague — Wenceslas Square, the Velvet Revolution sites, and the Lucerna passage. Your guide was there in November 1989.',
       descDe: 'Václav Havels Geschichte durch Prag verfolgen — Wenzelsplatz, Schauplätze der Samtenen Revolution und die Lucerna-Passage. Ihre Führerin war im November 1989 dabei.',
     },
@@ -280,9 +282,9 @@ function generate() {
 
     // English slug -> English meta
     blogRoutes[post.slug] = {
-      title: `${titleVal.en} | Zuza Prague Tours`,
+      title: `${titleVal.en} | ${BRAND_NAME}`,
       description: excerptVal.en,
-      ogTitle: `${titleVal.en} | Zuza Prague Tours`,
+      ogTitle: `${titleVal.en} | ${BRAND_NAME}`,
       ogDescription: excerptVal.en,
       ogImage: postImage,
       ogUrl: `${SITE}/blog/${post.slug}`,
@@ -295,9 +297,9 @@ function generate() {
     // German slug -> German meta
     if (post.slugDe) {
       blogRoutes[post.slugDe] = {
-        title: `${titleVal.de} | Zuza Prague Tours`,
+        title: `${titleVal.de} | ${BRAND_NAME}`,
         description: excerptVal.de,
-        ogTitle: `${titleVal.de} | Zuza Prague Tours`,
+        ogTitle: `${titleVal.de} | ${BRAND_NAME}`,
         ogDescription: excerptVal.de,
         ogImage: postImage,
         ogUrl: `${SITE}/blog/${post.slugDe}`,

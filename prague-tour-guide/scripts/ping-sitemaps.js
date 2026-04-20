@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const SITE = 'https://zuzapragtour.de';
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8'));
+const SITE = (pkg.homepage || 'https://zuzapragtour.de').replace(/\/$/, '');
 const SITEMAP_URL = `${SITE}/sitemap.xml`;
 const INDEXNOW_KEY = '0ba5d917a5ee483c9c875df26cd223d0';
 

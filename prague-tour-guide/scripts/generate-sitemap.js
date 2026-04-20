@@ -10,7 +10,8 @@ const vm = require('vm');
 const ROOT = path.join(__dirname, '..');
 const BLOG_TS = path.join(ROOT, 'src', 'utils', 'blogData.ts');
 const SITEMAP_XML = path.join(ROOT, 'public', 'sitemap.xml');
-const SITE = 'https://zuzapragtour.de';
+const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
+const SITE = (pkg.homepage || 'https://zuzapragtour.de').replace(/\/$/, '');
 
 function todayISO() {
   return new Date().toISOString().slice(0, 10);

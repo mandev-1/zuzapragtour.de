@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Tours from '../components/Tours';
 import { useLanguage } from '../context/LanguageContext';
 import { getTouristTripSchema, getFAQSchema } from '../utils/seo';
+import { BRAND } from '../brand';
 
 const toursForSchema = [
   {
@@ -99,13 +100,13 @@ const ToursPage: React.FC = () => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <link rel="canonical" href="https://zuzapragtour.de/tours" />
-        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/tours" />
-        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/tours" />
-        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/tours" />
+        <link rel="canonical" href={`${BRAND.domain}/tours`} />
+        <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/tours`} />
+        <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/tours`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BRAND.domain}/tours`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://zuzapragtour.de/tours" />
+        <meta property="og:url" content={`${BRAND.domain}/tours`} />
         <script type="application/ld+json">{JSON.stringify(tourSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(toursFAQ)}</script>
       </Helmet>

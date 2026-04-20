@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Contact from '../components/Contact';
 import { useLanguage } from '../context/LanguageContext';
 import { getFAQSchema } from '../utils/seo';
+import { BRAND } from '../brand';
 
 const contactFAQ = getFAQSchema([
   {
@@ -44,13 +45,13 @@ const ContactPage: React.FC = () => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <link rel="canonical" href="https://zuzapragtour.de/contact" />
-        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/contact" />
-        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/contact" />
-        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/contact" />
+        <link rel="canonical" href={`${BRAND.domain}/contact`} />
+        <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/contact`} />
+        <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/contact`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BRAND.domain}/contact`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://zuzapragtour.de/contact" />
+        <meta property="og:url" content={`${BRAND.domain}/contact`} />
         <script type="application/ld+json">{JSON.stringify(contactFAQ)}</script>
       </Helmet>
       <Contact />

@@ -5,8 +5,9 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { getTourBySlug } from '../data/tours';
 import { getTourPageSchema } from '../utils/seo';
+import { BRAND } from '../brand';
 
-const SITE = 'https://zuzapragtour.de';
+const SITE = BRAND.domain;
 
 const TourPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,7 +30,7 @@ const TourPage: React.FC = () => {
   }
 
   const h1Text       = t(tour.seoTitleKey as any);
-  const pageTitle    = `${h1Text} | Zuza Prague Tours`;
+  const pageTitle    = `${h1Text} | ${BRAND.siteName}`;
   const description  = t(tour.descriptionKey as any);
   const canonicalSlug = language === 'de' && tour.slugDe ? tour.slugDe : tour.slug;
   const canonical    = `${SITE}/tours/${canonicalSlug}`;

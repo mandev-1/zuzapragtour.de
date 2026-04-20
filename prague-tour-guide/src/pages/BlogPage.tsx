@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Blog from '../components/Blog';
 import { useLanguage } from '../context/LanguageContext';
+import { BRAND } from '../brand';
 
 const BlogPage: React.FC = () => {
   const { t, language } = useLanguage();
@@ -24,13 +25,13 @@ const BlogPage: React.FC = () => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <link rel="canonical" href="https://zuzapragtour.de/blog" />
-        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/blog" />
-        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/blog" />
-        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/blog" />
+        <link rel="canonical" href={`${BRAND.domain}/blog`} />
+        <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/blog`} />
+        <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/blog`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BRAND.domain}/blog`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://zuzapragtour.de/blog" />
+        <meta property="og:url" content={`${BRAND.domain}/blog`} />
       </Helmet>
       <Blog />
     </>

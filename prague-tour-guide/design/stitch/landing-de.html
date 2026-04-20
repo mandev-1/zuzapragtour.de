@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prag Kurator | Private Touren von Zuzana</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fbf9f5",
+                        "inverse-surface": "#30312e",
+                        "surface-container": "#efeeea",
+                        "tertiary-container": "#46494c",
+                        "outline": "#8c716e",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#715000",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f5f3ef",
+                        "on-secondary-fixed": "#271900",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary-container": "#ff9e95",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e4e2de",
+                        "secondary": "#7b5800",
+                        "secondary-fixed": "#ffdea6",
+                        "outline-variant": "#e0bfbc",
+                        "surface-variant": "#e4e2de",
+                        "secondary-container": "#fdc34d",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "on-surface-variant": "#58413f",
+                        "primary-container": "#8e1b1b",
+                        "surface-dim": "#dbdad6",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1b1c1a",
+                        "surface-tint": "#ac322e",
+                        "inverse-primary": "#ffb3ac",
+                        "on-primary": "#ffffff",
+                        "primary": "#6c0008",
+                        "tertiary-fixed": "#e1e2e6",
+                        "inverse-on-surface": "#f2f0ed",
+                        "tertiary-fixed-dim": "#c5c6ca",
+                        "surface-container-high": "#eae8e4",
+                        "secondary-fixed-dim": "#f7bd48",
+                        "tertiary": "#303336",
+                        "background": "#fbf9f5",
+                        "on-tertiary-container": "#b6b8bc",
+                        "on-tertiary-fixed": "#191c1f",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-surface": "#1b1c1a",
+                        "on-primary-fixed": "#410003",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#8b1919",
+                        "surface": "#fbf9f5",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif-font { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .velvet-gradient { background: linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md shadow-xl shadow-stone-900/5">
+<div class="flex justify-between items-center w-full px-6 py-2 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic font-bold text-red-900 dark:text-red-500">Prague Curator</div>
+<div class="hidden md:flex items-center space-x-8 font-serif text-lg tracking-tight">
+<a class="text-red-900 dark:text-red-400 font-semibold border-b-2 border-amber-600 pb-1 hover:text-amber-700 transition-all duration-300" href="#tours">Touren</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-700 transition-all duration-300" href="#about">Über Zuzana</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-700 transition-all duration-300" href="#gallery">Galerie</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-amber-700 transition-all duration-300" href="#reviews">Bewertungen</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block text-stone-600 font-medium px-4 py-2 hover:text-red-900 transition-all">Kontakt</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-semibold velvet-gradient active:scale-95 transition-transform">Tour buchen</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center pt-16 pb-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Cinematic wide shot of Charles Bridge in Prague at sunrise with golden light reflecting off the Vltava River" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDorkKEnlLzx56J9si7yR16s-DVt42veVckAt8l0PnBPrHUQAgXHpJ4d96rp4RiG8Y7oGGtzO2oach37ODE8RYnn_1HsV3_i1LzvJu38EIXot64A9VDENbWetuWAsKzsSsBVqu88p1g_nS6oS_CT60PBw-Y6BXqear3CdkqFko7FbNX0KSkpiQafXHGR49DAskai_2BRFD1dHssIcHQ1RVtgeGi8FXX2kTpKfSU9zR54i1xIqvjvUlRgyrKZU11Ukk92U7oXiJWr1o"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center space-x-2 bg-secondary/10 px-3 py-1 rounded-full text-secondary font-bold text-xs tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Zertifizierte Expertin</span>
+</div>
+<h1 class="text-5xl md:text-7xl leading-tight font-bold text-on-surface">
+                        Entdecken Sie <br/>
+<span class="italic text-primary">Prag</span><br/>
+<span class="italic text-on-surface">mit Zuzana Manová</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-lg font-body leading-relaxed">
+                        Erleben Sie die Magie Prags mit den Augen einer zertifizierten lokalen Expertin.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="velvet-gradient text-on-primary px-8 py-3 rounded-md text-lg font-bold shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            Anfrage senden
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/80 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 py-3 rounded-md text-lg font-semibold hover:bg-white transition-all">
+                            Touren erkunden
+                        </button>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 bg-white p-4 rounded-xl shadow-2xl rotate-2 max-w-sm mx-auto">
+<img class="rounded-lg aspect-[4/5] object-cover" data-alt="Portrait of Zuzana, a professional female tour guide smiling in front of a historic Prague cathedral facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOC_aTO15knttNVJ8WLsSV-5BI4q1BtGWV__2n2kTSki9WS9HHbltG63uOMBkcmLsHRqwaQcsTTvHIHLbiLLNc5GG-Cx6E-wFqUoODmPBFkGSmteMGHIWCAUOTBWTJ3E1QhaVdjp0ZHgWS_2G3x9G2wYoLyBVuHRwEA2rYS3esh_Es04rTysIkl0PrxpDHqZrZYgZeDw1oXPyQR53ikAuilHWocMc2OJVLwhs5OD_dSPSfNpE1FB5Cj2JE3nbCRbiThfK-LeGYyCM"/>
+<div class="absolute -bottom-6 -right-6 bg-secondary p-4 rounded-lg shadow-xl text-on-secondary">
+<p class="font-serif italic text-xl">"Prag ist eine vielschichtige Geschichte, lassen Sie uns diese gemeinsam lesen."</p>
+<p class="text-xs uppercase tracking-widest mt-2 opacity-80">— Zuzana, Ihre Expertin</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tour Highlights -->
+<section class="py-12 bg-surface-container-low" id="tours">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm block mb-2">Beliebte Touren</span>
+<h2 class="text-4xl font-bold text-on-surface">Ausgewählte Erlebnisse</h2>
+</div>
+<p class="text-on-surface-variant max-w-md font-body text-sm">
+                        Maßgeschneiderte Routen für anspruchsvolle Reisende, mit Fokus auf Authentizität, Geschichte und dem lokalen Puls der Stadt.
+                    </p>
+</div>
+<div class="grid grid-cols-1 gap-1">
+<!-- Tour Item 1 -->
+<div class="group bg-surface py-6 px-8 flex flex-col md:flex-row justify-between items-center transition-all hover:bg-surface-bright border-b border-outline-variant/10">
+<div class="flex items-center gap-6 mb-4 md:mb-0">
+<span class="text-3xl font-serif italic text-outline-variant group-hover:text-primary transition-colors">01</span>
+<div>
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Altstadt &amp; Jüdisches Viertel</h3>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-secondary">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 4 Stunden
+                                    </span>
+<span class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">group</span> Private Gruppe
+                                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<p class="hidden lg:block text-on-surface-variant max-w-xs text-xs leading-relaxed">
+                                Ein tiefes Eintauchen in das mittelalterliche Herz Prags, auf den Spuren von 1.000 Jahren Legenden und Überlieferungen.
+                            </p>
+<button class="text-primary font-bold flex items-center gap-1 text-sm group/btn">
+                                Details 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Tour Item 2 -->
+<div class="group bg-surface py-6 px-8 flex flex-col md:flex-row justify-between items-center transition-all hover:bg-surface-bright border-b border-outline-variant/10">
+<div class="flex items-center gap-6 mb-4 md:mb-0">
+<span class="text-3xl font-serif italic text-outline-variant group-hover:text-primary transition-colors">02</span>
+<div>
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Das alchemistische Prag</h3>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-secondary">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 3 Stunden
+                                    </span>
+<span class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">magic_button</span> Versteckte Juwelen
+                                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<p class="hidden lg:block text-on-surface-variant max-w-xs text-xs leading-relaxed">
+                                Entdecken Sie die mystische und geheimnisvolle Seite der Prager Geschichte, von der Astrologie bis zur Alchemie.
+                            </p>
+<button class="text-primary font-bold flex items-center gap-1 text-sm group/btn">
+                                Details 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Tour Item 3 -->
+<div class="group bg-surface py-6 px-8 flex flex-col md:flex-row justify-between items-center transition-all hover:bg-surface-bright">
+<div class="flex items-center gap-6 mb-4 md:mb-0">
+<span class="text-3xl font-serif italic text-outline-variant group-hover:text-primary transition-colors">03</span>
+<div>
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Böhmische Kunst &amp; Architektur</h3>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-secondary">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 5 Stunden
+                                    </span>
+<span class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">
+<span class="material-symbols-outlined text-[12px]">architecture</span> Expertenfokus
+                                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<p class="hidden lg:block text-on-surface-variant max-w-xs text-xs leading-relaxed">
+                                Ein kuratierter Spaziergang durch Jugendstil, Kubismus und die barocke Pracht der Kleinseite.
+                            </p>
+<button class="text-primary font-bold flex items-center gap-1 text-sm group/btn">
+                                Details 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Zuzana -->
+<section class="py-12 overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-5 relative">
+<div class="bg-surface-container-high rounded-xl overflow-hidden aspect-[3/4] relative z-10 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Lifestyle photo of Zuzana walking through a narrow cobblestone street in Prague, dressed in elegant business casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuZTnuElWMBDEECKvXJNKmAm0hQ9JqgwrGcThSP6XupSiwceObLGnyR8-RacNQ9a6oGIVsF7vINznISEsSN7ulZwur4SDG0zJE2krSir43rphpl83w-nc9DZEv8Z6gUeb_3wAH_sLvH-_x1qPb3rt5Dlm5gxiETGKWK1GkOOKT7tnB0Xk1IP1ZJxxwzlld8jgrMm8JLoRRIQZ3BcKM0RgotZB7avtZh8zLurnyNBYTLKoFxvYuo9L0nMIaabedc3jydaUMKzw8LnI"/>
+</div>
+<!-- Architectural Overlay Element -->
+<div class="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-secondary/20 rounded-lg -z-0"></div>
+<div class="absolute top-1/2 -left-10 -translate-y-1/2 hidden xl:block">
+<span class="text-[8rem] font-serif italic text-surface-container-highest/50 select-none">Zuzana</span>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-6">
+<div class="space-y-2">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-sm">Lernen Sie Zuzana kennen</span>
+<h2 class="text-4xl font-bold text-on-surface leading-tight">Prag, erzählt mit <span class="italic font-normal">Leidenschaft</span></h2>
+</div>
+<div class="space-y-4 text-base text-on-surface-variant font-body leading-relaxed">
+<p>
+                                Ich bin Ing. Zuzana Manová – deutschsprachige Prag-Expertin und zertifizierte Stadtführerin. Seit 1986 führe ich Besucher durch Prag. Vierzig Jahre, in denen ich zugesehen habe, wie sich diese Stadt verändert, ihre Geheimnisse bewahrt und mich überrascht.
+                            </p>
+<p>
+                                Als Spezialistin für Prager Geschichte und Kultur besitze ich die offizielle tschechische Stadtführer-Zertifizierung und eine zusätzliche Akkreditierung des Jüdischen Museums in Prag als Expertin für das Jüdische Viertel.
+                            </p>
+<p>
+                                Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser. Ich habe vierzig Jahre Meinungen darüber, wohin ich Sie mitnehmen sollte.
+                            </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-4">
+<div>
+<p class="text-2xl font-serif text-primary font-bold">40+</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Jahre Erfahrung</p>
+</div>
+<div>
+<p class="text-2xl font-serif text-primary font-bold">4.9k</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Touren kuratiert</p>
+</div>
+<div>
+<p class="text-2xl font-serif text-primary font-bold">5.0</p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Sterne Bewertung</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- City Gallery -->
+<section class="py-12 bg-on-background text-surface" id="gallery">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-10 space-y-2">
+<span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Visuelles Tagebuch</span>
+<h2 class="text-4xl font-bold font-serif italic">Momente in Gold</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px]">
+<div class="col-span-2 row-span-2 rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="St. Vitus Cathedral interior with dramatic light rays filtering through stained glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcyegA7IVX72TRbJIvroIraxYRRIhFT_ogS9DYmE9tP1pBK0LgRQUQyD3rc-bdyyW-gmHpvuuw94C_sTuVeiqDTNSzMKOnmat4xOK1WZ5MsikYwe7yWnMcIOmJNQXGoGPnL9ltCFnOuCDA07cmvj_n5l-pzcagriVqrSvcR6vB8Xtos2a-_9Bi56xNwa0AjtFYZKrnrjiyaP4vvmAZ7F-bckm7tF2r1wuVVfBCvsx95s1msdSFlRD7jyABBeW13BR4a5WFNfZpK9E"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Classic red tram crossing a cobblestone street in the Lesser Town of Prague" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeh0opzkIX5LWnqXupFRIytpSGoSIGbpWxlK_MmyD0nMaOrL3bZ5u9ksjwobQJZlQsMSr1IQI7jENpxGClhGfDJOWxo3h2gEwRNiqFNwwIq0CbcJBeMhEO-fP2ouZj3Yl_Kjhk98JDPDp2dq_KO75SMkzWZA473wXciau3XPpJN2gScuP6SSX5_4i-3JDgwo8PdEeB8Kh9UGZBRoAfI4OristSUkANDX_19p6-V6ism_vXb82aOmOjwSM0fWhOqBHiHZVPoHr6KA0"/>
+</div>
+<div class="rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of Prague rooftops featuring orange terracotta tiles and green spires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtmzc14uw4EuajV46R30FTdzhG6F1KQ8Aufa2RwmVa6IcK5SdgBHbJsHpLIzg_t1ocTwoP4duntJBGo6xE67jY2t3zZyPFxtrkv888kUAov9Xonb9TEPvVpA1aKgXRqU8juOn3JeS52maiHdjyAhC9_Wjjj_WAS6U5Z2-j9IQiUwR5ugvs8ELBCDawoXYkCoIV7XFIq-Kav4PJM9Gr-2i5-bebJMwj6Ao4aWF_IBPIjEVbi_LS_k-pa7-2LFMIOMeQ4tn3ZgUtpIc"/>
+</div>
+<div class="col-span-2 rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Night view of the Astronomical Clock in Prague's Old Town Square with illuminated details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5el8XhHdy4ciIeYfs-zT2NoL3jGcHF5gtooG8wIYpBdF-PFk9EqlSXm4ETPisNx1F0_oSSxYI4jWhNSJFQQX2GvYsg0gjbJRFs42Dgd7ZUuJRXfxWNEiHaztNAwMcb87t_TNb0WuCsErH-Gc9hXc-4WUFhx0lSC0s_lZPfh8hvZ_oX0bHRVQOdKdYwBIkeKhxQ9K5RH-q3-zixcM9OiPWbqPf2L2aQQdX5h8jyGMgK_MaGQu1v8ZVZ3r-ZVJbenERYbnsH4WQKaI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof -->
+<section class="py-12 bg-surface-container" id="reviews">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-10 space-y-2">
+<div class="flex justify-center items-center gap-2 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h2 class="text-3xl font-bold">Unvergessliche Erinnerungen</h2>
+<p class="text-on-surface-variant uppercase tracking-widest text-[10px] font-bold">Bewertungen von Gästen</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Review Card 1 -->
+<div class="bg-surface p-6 rounded-xl shadow-lg shadow-on-surface/5 flex flex-col justify-between">
+<div>
+<p class="text-on-surface-variant font-body italic mb-6 text-sm">"Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich."</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a satisfied male traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjWsfnuFlgoVYOv2y8IXNJXMp6KrCHgEq3xpF-0K6dsOY9AqThoWx822IThLCNIT0W3oggzrEc6IZns0mGzSspvJSc8e9RX19s35RYKe6W8rqbpEnT085JYuHhNEoxItSQo5sIqB9AEZfa6-ARamk6823k_uymtNgT4YlgsroB7gWOga1Q4ImWq8RUqu_NUavuUmI4cWwskR1WzG7XRXdfpEJrVzw6fMmb6kNTADBoP7LZSr8NaJyJFQ0zKL6brFDseEfgqgtDQCw"/>
+</div>
+<div>
+<p class="font-bold text-xs">David M.</p>
+<p class="text-[9px] text-secondary font-bold uppercase tracking-widest">TripAdvisor Elite</p>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface p-6 rounded-xl shadow-lg shadow-on-surface/5 flex flex-col justify-between">
+<div>
+<p class="text-on-surface-variant font-body italic mb-6 text-sm">"Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen, und sie hält die Energie lebendig und mitreißend."</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling female traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnkL7N4Ggveh4aNsCM1OU7P-fD9kaEYGbFra70AvAifj8Huu8sE_UoRCM17arluovy21l-LgfCkHtxWzZUbiqbaP3wP_roFVvLAe1dOMg8YnKRX78Hn8UW9caQ35Co10YlgHIs-KuG_kRarZ8s3VX2RfW4eeYWeyaKtNqNaOJ0XZTZwTYkh6LV3_A8AceZn6T7oE1aM0FhYFop0vUfHUVapbJhlZh86p0Ia1_y4tI5hgmHEAug_xAyuUCFxedmaZ4ndk68V0FM1co"/>
+</div>
+<div>
+<p class="font-bold text-xs">Sarah Jenkins</p>
+<p class="text-[9px] text-secondary font-bold uppercase tracking-widest">TourHQ Verifiziert</p>
+</div>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-surface p-6 rounded-xl shadow-lg shadow-on-surface/5 flex flex-col justify-between">
+<div>
+<p class="text-on-surface-variant font-body italic mb-6 text-sm">"Perfekt für unsere Familie. Sie hat es geschafft, die Kinder mit lokalen Legenden zu faszinieren, während sie den Erwachsenen eine Meisterklasse in böhmischer Geschichte gab."</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling middle-aged male traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDiuub6luf7U4RDiSjC0A08MB7x5WtYsh_HIb7HTGfPp533G7TIa4ledT5Suf0bKQDaODMPONmBxNERno8Bq184h9RX7UjlN1QuvSNBh4E1lS1NoBIeFMlhUaCiNENWx_MwNOspaIaAIohjsUTkf1BeOP7F35t8IBKxF9kDA-pOoClUx--q0ov580dXCT5PqFzTp4pSZbgbbAL2QJp-T3kJ8bFhuunJP5-J93hQvZMr9cpLeCIfDDGGCI_GFXTPl9K1XJCSfk5-lU"/>
+</div>
+<div>
+<p class="font-bold text-xs">The Thompsons</p>
+<p class="text-[9px] text-secondary font-bold uppercase tracking-widest">Private Buchung</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-12 px-6">
+<div class="max-w-5xl mx-auto velvet-gradient rounded-[1.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover mix-blend-overlay" data-alt="Faint textured architectural pattern of Prague spires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU7KxAT8vbMbMLquqHX2pjiKJPavYbWfnr-56nYTZYBom89tm-BtFt-j84iX8di4NyTDvZhPEZ-XIolHGPU3wIKhxLQWvjdYK0gQTWXIq0osdyWaP2Q84oupgUQCwKWatMGu888GdSmeSQx-RdDIf2049fgStsDjkB1mFYHr80jILnuW3SwLqpvOvAGZJ77zE67egBqNd8veLXCBMGpDtlfqO9r7VtdlAPhUz73qu2DFQbKMX4NKbz6qXDDX0KQfAwb6u4nq2iZX8"/>
+</div>
+<div class="relative z-10 space-y-6">
+<h2 class="text-3xl md:text-5xl font-bold text-on-primary font-serif leading-tight">Bereit, Prag <br/> zu entdecken?</h2>
+<p class="text-base text-on-primary/80 max-w-2xl mx-auto font-body">
+                        Begrenzte Verfügbarkeit für private Buchungen. Kontaktieren Sie Zuzana noch heute, um Ihre individuelle Reiseroute zu planen.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-8 py-3 rounded-md text-base font-bold hover:bg-surface-bright transition-all shadow-xl">
+                            Anfrage senden
+                        </button>
+<button class="bg-transparent border border-white/40 text-white px-8 py-3 rounded-md text-base font-bold hover:bg-white/10 transition-all">
+                            Verfügbarkeit prüfen
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 px-6 bg-stone-100 dark:bg-stone-900">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-start max-w-7xl mx-auto gap-6">
+<div class="space-y-3">
+<div class="text-lg font-serif italic text-red-900 dark:text-red-500">Prag Kurator</div>
+<p class="max-w-xs text-stone-500 dark:text-stone-400 font-sans text-xs leading-relaxed">
+                    Ein Boutique-Reiseservice, der sich der Enthüllung der geheimen Schichten der Stadt der Hundert Türme widmet.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-3">
+<p class="font-sans text-[10px] tracking-wide uppercase font-bold text-red-900">Erlebnis</p>
+<ul class="space-y-1">
+<li><a class="text-stone-500 dark:text-stone-400 text-xs hover:text-red-800 transition-opacity duration-200" href="#">Private Touren</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 text-xs hover:text-red-800 transition-opacity duration-200" href="#">Geschichtsblog</a></li>
+</ul>
+</div>
+<div class="space-y-3">
+<p class="font-sans text-[10px] tracking-wide uppercase font-bold text-red-900">Rechtliches</p>
+<ul class="space-y-1">
+<li><a class="text-stone-500 dark:text-stone-400 text-xs hover:text-red-800 transition-opacity duration-200" href="#">Nutzungsbedingungen</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 text-xs hover:text-red-800 transition-opacity duration-200" href="#">Datenschutzrichtlinie</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-3">
+<p class="font-sans text-[10px] tracking-wide uppercase font-bold text-red-900">Folgen Sie uns</p>
+<div class="flex gap-4">
+<a class="text-stone-500 hover:text-red-800 transition-colors uppercase text-[10px] font-bold tracking-widest" href="#">Instagram</a>
+<a class="text-stone-500 hover:text-red-800 transition-colors uppercase text-[10px] font-bold tracking-widest" href="#">TripAdvisor</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-stone-500 dark:text-stone-400 font-sans text-[9px] tracking-wide uppercase">
+                © 2024 Die Digitale Kuratorin. Erstellt in Prag.
+            </p>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-stone-400 text-sm">payments</span>
+<span class="material-symbols-outlined text-stone-400 text-sm">3p</span>
+<span class="material-symbols-outlined text-stone-400 text-sm">lock</span>
+</div>
+</div>
+</footer>
+</body></html>

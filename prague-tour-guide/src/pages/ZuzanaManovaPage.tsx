@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { NAP } from '../utils/seo';
+import { BRAND } from '../brand';
 
 const FAQ_KEYS = [
   { q: 'zm.faq.q1', a: 'zm.faq.a1' },
@@ -18,8 +19,8 @@ const ZuzanaManovaPage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Zuzana Manová – Deutschsprachige Prag-Expertin & Spezialistin | Zuza Prague Tours'
-      : 'Zuzana Manová – Private Prague Tour Guide & Expert | Zuza Prague Tours';
+      ? `Zuzana Manová – Deutschsprachige Prag-Expertin & Spezialistin | ${BRAND.siteName}`
+      : `Zuzana Manová – Private Prague Tour Guide & Expert | ${BRAND.siteName}`;
 
   const description =
     language === 'de'
@@ -38,12 +39,12 @@ const ZuzanaManovaPage: React.FC = () => {
       language === 'de'
         ? 'Deutschsprachige Prag-Expertin und Spezialistin für Stadtführungen seit 1986 mit über 40 Jahren Erfahrung.'
         : 'Professional Prague expert and specialist tour guide since 1986 with 40+ years of experience.',
-    url: 'https://zuzapragtour.de/zuzana-manova',
-    image: 'https://zuzapragtour.de/images/zuzana-portrait.jpg',
+    url: `${BRAND.domain}/zuzana-manova`,
+    image: `${BRAND.domain}/images/zuzana-portrait.jpg`,
     telephone: NAP.phone,
     email: NAP.email,
     knowsLanguage: ['de', 'en', 'cs'],
-    worksFor: { '@id': 'https://zuzapragtour.de/#business' },
+    worksFor: { '@id': BRAND.businessId },
     hasCredential: [
       { '@type': 'EducationalOccupationalCredential', name: 'Czech Republic Certified Tour Guide', credentialCategory: 'Professional License' },
       { '@type': 'EducationalOccupationalCredential', name: 'Jewish Museum in Prague Accreditation', credentialCategory: 'Specialist Certification', recognizedBy: { '@type': 'Organization', name: 'Jewish Museum in Prague', url: 'https://www.jewishmuseum.cz' } },
@@ -68,15 +69,15 @@ const ZuzanaManovaPage: React.FC = () => {
         <html lang={language} />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href="https://zuzapragtour.de/zuzana-manova" />
-        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/zuzana-manova" />
-        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/zuzana-manova" />
-        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/zuzana-manova" />
+        <link rel="canonical" href={`${BRAND.domain}/zuzana-manova`} />
+        <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/zuzana-manova`} />
+        <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/zuzana-manova`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BRAND.domain}/zuzana-manova`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content="https://zuzapragtour.de/zuzana-manova" />
-        <meta property="og:image" content="https://zuzapragtour.de/images/zuzana-portrait.jpg" />
+        <meta property="og:url" content={`${BRAND.domain}/zuzana-manova`} />
+        <meta property="og:image" content={`${BRAND.domain}/images/zuzana-portrait.jpg`} />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

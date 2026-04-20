@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Home from '../components/Home';
 import { useLanguage } from '../context/LanguageContext';
 import { getHomePageSchema } from '../utils/seo';
+import { BRAND } from '../brand';
 
 const HomePage: React.FC = () => {
   const { language } = useLanguage();
@@ -31,27 +32,27 @@ const HomePage: React.FC = () => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <link rel="canonical" href="https://zuzapragtour.de/" />
-        <link rel="alternate" hrefLang="de" href="https://zuzapragtour.de/" />
-        <link rel="alternate" hrefLang="en" href="https://zuzapragtour.de/" />
-        <link rel="alternate" hrefLang="x-default" href="https://zuzapragtour.de/" />
+        <link rel="canonical" href={`${BRAND.domain}/`} />
+        <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/`} />
+        <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/`} />
+        <link rel="alternate" hrefLang="x-default" href={`${BRAND.domain}/`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zuzapragtour.de/" />
-        <meta property="og:image" content="https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg" />
+        <meta property="og:url" content={`${BRAND.domain}/`} />
+        <meta property="og:image" content={BRAND.ogImage} />
         <meta property="og:image:width" content="1600" />
         <meta property="og:image:height" content="1029" />
         <meta
           property="og:image:alt"
-          content="Charles Bridge and Prague — Zuza Prague Tours"
+          content={`Charles Bridge and Prague — ${BRAND.siteName}`}
         />
         <meta property="og:locale" content={language === 'de' ? 'de_DE' : 'en_US'} />
         <meta property="og:locale:alternate" content={language === 'de' ? 'en_US' : 'de_DE'} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg" />
+        <meta name="twitter:image" content={BRAND.ogImage} />
         <script type="application/ld+json">{JSON.stringify(homeSchema)}</script>
       </Helmet>
       <Home />

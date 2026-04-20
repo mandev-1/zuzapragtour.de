@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
+import { BRAND } from '../brand';
 
 function extractHeadings(html: string): { id: string; text: string }[] {
   const matches = Array.from(html.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi));
@@ -79,8 +80,8 @@ const BlogPostPage: React.FC = () => {
   }
 
   const deSlug: string | undefined = (post as any).slugDe;
-  const deUrl = deSlug ? `https://zuzapragtour.de/blog/${deSlug}` : null;
-  const enUrl = `https://zuzapragtour.de/blog/${post.slug}`;
+  const deUrl = deSlug ? `${BRAND.domain}/blog/${deSlug}` : null;
+  const enUrl = `${BRAND.domain}/blog/${post.slug}`;
   // Canonical always resolves to the DE version when one exists (DE is primary)
   const canonicalUrl = deUrl ?? enUrl;
   // True when the visitor landed on the EN slug but a DE version exists → noindex
@@ -88,18 +89,18 @@ const BlogPostPage: React.FC = () => {
 
   const slugForUrl =
     language === 'de' && deSlug ? deSlug : post.slug;
-  const postAbsoluteUrl = `https://zuzapragtour.de/blog/${slugForUrl}`;
+  const postAbsoluteUrl = `${BRAND.domain}/blog/${slugForUrl}`;
   const currentTags = language === 'de' && post.tagsDe ? post.tagsDe : post.tags;
 
   const jsonLdImage =
     post.id === '12' || post.id === '13'
       ? [
-          `https://zuzapragtour.de${post.image}`,
+          `${BRAND.domain}${post.image}`,
           post.id === '12'
-            ? 'https://zuzapragtour.de/images/blog-kafka-2.jpg'
-            : 'https://zuzapragtour.de/images/blog-winter-cathedral.png',
+            ? `${BRAND.domain}/images/blog-kafka-2.jpg`
+            : `${BRAND.domain}/images/blog-winter-cathedral.png`,
         ]
-      : `https://zuzapragtour.de${post.image}`;
+      : `${BRAND.domain}${post.image}`;
 
   const pinterestShare = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
     postAbsoluteUrl
@@ -132,7 +133,7 @@ const BlogPostPage: React.FC = () => {
     <>
       <Helmet>
         <html lang={language} />
-        <title>{t(post.titleKey as any)} | Zuza Prague Tours</title>
+        <title>{t(post.titleKey as any)} | {BRAND.siteName}</title>
         <meta name="description" content={t(post.excerptKey as any)} />
         <meta
           name="keywords"
@@ -149,11 +150,11 @@ const BlogPostPage: React.FC = () => {
         {deUrl && <link rel="alternate" hrefLang="de" href={deUrl} />}
         {/* x-default points to DE when available — site primary language is German */}
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-        <meta property="og:title" content={`${t(post.titleKey as any)} | Zuza Prague Tours`} />
+        <meta property="og:title" content={`${t(post.titleKey as any)} | ${BRAND.siteName}`} />
         <meta property="og:description" content={t(post.excerptKey as any)} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={`https://zuzapragtour.de${post.image}`} />
+        <meta property="og:image" content={`${BRAND.domain}${post.image}`} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
         {currentTags.map((tag: string, i: number) => (
@@ -172,9 +173,9 @@ const BlogPostPage: React.FC = () => {
             image: jsonLdImage,
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': `https://zuzapragtour.de/blog/${slugForUrl}`,
+              '@id': `${BRAND.domain}/blog/${slugForUrl}`,
             },
-            url: `https://zuzapragtour.de/blog/${slugForUrl}`,
+            url: `${BRAND.domain}/blog/${slugForUrl}`,
           })}
         </script>
         <script type="application/ld+json">
@@ -186,19 +187,19 @@ const BlogPostPage: React.FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('nav.home' as any),
-                item: 'https://zuzapragtour.de/',
+                item: `${BRAND.domain}/`,
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: t('nav.blog' as any),
-                item: 'https://zuzapragtour.de/blog',
+                item: `${BRAND.domain}/blog`,
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: t(post.titleKey as any),
-                item: `https://zuzapragtour.de/blog/${slugForUrl}`,
+                item: `${BRAND.domain}/blog/${slugForUrl}`,
               },
             ],
           })}

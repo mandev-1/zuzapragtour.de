@@ -1,41 +1,112 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import type { TranslationKey } from '../utils/translations';
 import TripAdvisorWidget from './TripAdvisorWidget';
 import TourHqWidget from './TourHqWidget';
 
 const pub = (path: string) => `${process.env.PUBLIC_URL}${path}`;
-const PORTRAIT_SRC = pub('/images/zuzana-portrait.jpg');
 
-type TeaserTour = {
-  titleKey: TranslationKey;
-  durationKey: TranslationKey;
-};
-
-const TEASER_TOURS: TeaserTour[] = [
-  { titleKey: 'tour.oldtown.title', durationKey: 'tour.oldtown.duration' },
-  { titleKey: 'tour.castle.title',  durationKey: 'tour.castle.duration'  },
-  { titleKey: 'tour.custom.title',  durationKey: 'tour.custom.duration'  },
+/* ─── Static review data ─────────────────────────────────────── */
+const REVIEWS = [
+  {
+    de: {
+      quote: 'Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.',
+      author: 'David M.',
+      source: 'TripAdvisor',
+    },
+    en: {
+      quote: "Zuzana's personal connection to the city makes this tour something truly unique. Absolutely unforgettable.",
+      author: 'David M.',
+      source: 'TripAdvisor',
+    },
+  },
+  {
+    de: {
+      quote: 'Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen, und sie hält die Energie lebendig und mitreißend.',
+      author: 'Sarah Jenkins',
+      source: 'TourHQ Verifiziert',
+    },
+    en: {
+      quote: 'An absolute highlight of our European trip. Her knowledge of architecture and history is unmatched, and she keeps the energy alive.',
+      author: 'Sarah Jenkins',
+      source: 'TourHQ Verified',
+    },
+  },
+  {
+    de: {
+      quote: 'Perfekt für unsere Familie. Sie hat es geschafft, die Kinder mit lokalen Legenden zu faszinieren, während sie den Erwachsenen eine Meisterklasse in böhmischer Geschichte gab.',
+      author: 'The Thompsons',
+      source: 'Private Buchung',
+    },
+    en: {
+      quote: 'Perfect for our family. She managed to fascinate the kids with local legends while giving the adults a masterclass in Bohemian history.',
+      author: 'The Thompsons',
+      source: 'Private Booking',
+    },
+  },
 ];
 
-const TESTIMONIAL = {
-  de: {
-    quote: 'Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.',
-    author: 'Michael T., USA',
-    platform: 'TripAdvisor',
+/* ─── Tour rows ──────────────────────────────────────────────── */
+const TOURS_DE = [
+  {
+    num: '01',
+    title: 'Altstadt & Jüdisches Viertel',
+    duration: '4 Stunden',
+    meta: 'Private Gruppe',
+    desc: 'Ein tiefes Eintauchen in das mittelalterliche Herz Prags, auf den Spuren von 1.000 Jahren Legenden und Überlieferungen.',
+    slug: 'old-town-jewish-quarter',
   },
-  en: {
-    quote: "Zuzana's personal connection to the city makes this tour something truly unique. Absolutely unforgettable.",
-    author: 'Michael T., USA',
-    platform: 'TripAdvisor',
+  {
+    num: '02',
+    title: 'Das alchemistische Prag',
+    duration: '3 Stunden',
+    meta: 'Versteckte Juwelen',
+    desc: 'Entdecken Sie die mystische und geheimnisvolle Seite der Prager Geschichte, von der Astrologie bis zur Alchemie.',
+    slug: 'alchemy-mysterious-prague',
   },
-};
+  {
+    num: '03',
+    title: 'Böhmische Kunst & Architektur',
+    duration: '5 Stunden',
+    meta: 'Expertenfokus',
+    desc: 'Ein kuratierter Spaziergang durch Jugendstil, Kubismus und die barocke Pracht der Kleinseite.',
+    slug: 'art-architecture-baroque',
+  },
+];
 
+const TOURS_EN = [
+  {
+    num: '01',
+    title: 'Old Town & Jewish Quarter',
+    duration: '4 hours',
+    meta: 'Private group',
+    desc: 'A deep dive into the medieval heart of Prague, tracing 1,000 years of legends and lore.',
+    slug: 'old-town-jewish-quarter',
+  },
+  {
+    num: '02',
+    title: 'Alchemical Prague',
+    duration: '3 hours',
+    meta: 'Hidden gems',
+    desc: "Discover the mystical and mysterious side of Prague's history, from astrology to alchemy.",
+    slug: 'alchemy-mysterious-prague',
+  },
+  {
+    num: '03',
+    title: 'Bohemian Art & Architecture',
+    duration: '5 hours',
+    meta: 'Expert focus',
+    desc: 'A curated walk through Art Nouveau, Cubism, and the baroque splendour of Malá Strana.',
+    slug: 'art-architecture-baroque',
+  },
+];
+
+/* ─── Component ──────────────────────────────────────────────── */
 const Home: React.FC = () => {
   const { t, language } = useLanguage();
-  const testimonial = TESTIMONIAL[language === 'en' ? 'en' : 'de'];
+  const de = language !== 'en';
+  const tours  = de ? TOURS_DE  : TOURS_EN;
+  const reviews = REVIEWS.map(r => de ? r.de : r.en);
 
   React.useEffect(() => {
     if (window.location.hash === '#about') {
@@ -46,274 +117,383 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-paper">
+    <div className="bg-[#fbf9f5] text-[#1b1c1a]">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="border-b border-stone-200 bg-paper">
-        <div className="mx-auto max-w-editorial px-5 py-16 md:px-10 md:py-24">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-16">
-            {/* Copy */}
-            <div>
-              <motion.p
-                className="mb-6 font-eyebrow text-eyebrow uppercase text-stone-500"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                {t('home.badge')}
-              </motion.p>
+      <section className="relative min-h-[80vh] flex items-center pt-16 pb-16 overflow-hidden">
 
-              <motion.h1
-                className="mb-8 font-headline text-display-xl text-ink"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.05 }}
-              >
-                {t('home.hero.line1')}
-                <span className="block italic text-stone-600">{t('home.hero.line2')}</span>
-              </motion.h1>
+        {/* Background image + scrim */}
+        <div className="absolute inset-0 z-0">
+          <img
+            className="w-full h-full object-cover"
+            src={pub('/images/charles-bridge-hero-1600.jpg')}
+            alt={t('home.hero.imageAlt')}
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fbf9f5] via-[#fbf9f5]/60 to-transparent" />
+        </div>
 
-              <motion.p
-                className="mb-10 max-w-prose-narrow font-body text-prose-lg text-stone-700"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 }}
-              >
-                {t('hero.subtitle')}
-              </motion.p>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full">
 
-              <motion.div
-                className="flex flex-wrap items-center gap-4"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25 }}
+          {/* Copy */}
+          <div className="space-y-6">
+            {/* Eyebrow pill */}
+            <div className="inline-flex items-center space-x-2 bg-[#7b5800]/10 px-3 py-1 rounded-full font-bold text-xs tracking-widest uppercase text-[#7b5800]">
+              <span
+                className="material-symbols-outlined text-sm"
+                style={{ fontVariationSettings: "'FILL' 1", fontSize: '14px' }}
               >
-                <Link
-                  to="/book#contact-title"
-                  className="rounded-md bg-ink px-7 py-3.5 font-label text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
-                >
-                  {t('hero.sendEnquiry')}
-                </Link>
-                <Link
-                  to="/tours"
-                  className="font-label text-sm text-stone-600 underline-offset-4 hover:text-ink hover:underline"
-                >
-                  {t('hero.exploreTours')} →
-                </Link>
-              </motion.div>
-
-              <motion.dl
-                className="mt-14 grid grid-cols-3 gap-6 border-t border-stone-200 pt-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <div>
-                  <dt className="font-eyebrow text-eyebrow uppercase text-stone-500">{t('home.meta1')}</dt>
-                  <dd className="mt-2 font-headline text-2xl text-ink md:text-3xl">40+</dd>
-                </div>
-                <div>
-                  <dt className="font-eyebrow text-eyebrow uppercase text-stone-500">TripAdvisor</dt>
-                  <dd className="mt-2 font-headline text-2xl text-ink md:text-3xl">4,9</dd>
-                </div>
-                <div>
-                  <dt className="font-eyebrow text-eyebrow uppercase text-stone-500">{t('home.meta2')}</dt>
-                  <dd className="mt-2 font-headline text-2xl text-ink md:text-3xl">1–6</dd>
-                </div>
-              </motion.dl>
+                star
+              </span>
+              <span>{de ? 'Zertifizierte Expertin' : 'Certified Expert'}</span>
             </div>
 
-            {/* Portrait */}
-            <motion.div
-              className="relative mx-auto w-full max-w-md md:max-w-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-            >
-              <div className="aspect-[4/5] overflow-hidden rounded-sm bg-stone-200">
-                <img
-                  src={PORTRAIT_SRC}
-                  alt="Zuzana Manová"
-                  className="h-full w-full object-cover"
-                  style={{ objectPosition: 'center 40%' }}
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 hidden max-w-[220px] bg-paper p-4 ring-1 ring-stone-200 md:block">
-                <p className="font-eyebrow text-eyebrow uppercase text-stone-500">{t('about.badge.line1')}</p>
-                <p className="mt-1 font-body text-sm text-stone-700">{t('about.badge.line2')}</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+            {/* H1 */}
+            <h1 className="font-headline text-5xl md:text-7xl leading-tight font-bold text-[#1b1c1a]">
+              {de ? (
+                <>
+                  Entdecken Sie <br />
+                  <span className="italic text-[#6c0008]">Prag</span><br />
+                  <span className="italic text-[#1b1c1a]">mit Zuzana Manová</span>
+                </>
+              ) : (
+                <>
+                  Discover <br />
+                  <span className="italic text-[#6c0008]">Prague</span><br />
+                  <span className="italic text-[#1b1c1a]">with Zuzana Manová</span>
+                </>
+              )}
+            </h1>
 
-      {/* ── Tour teaser ──────────────────────────────────────── */}
-      <section className="border-b border-stone-200">
-        <div className="mx-auto max-w-editorial px-5 py-14 md:px-10 md:py-20">
-          <div className="mb-8 flex items-baseline justify-between">
-            <p className="font-eyebrow text-eyebrow uppercase text-stone-500">
-              {t('home.tours.teaser.title')}
+            {/* Subtitle */}
+            <p className="text-xl text-[#58413f] max-w-lg font-body leading-relaxed">
+              {t('hero.subtitle')}
             </p>
-            <Link
-              to="/tours"
-              className="font-label text-sm text-stone-500 underline-offset-4 hover:text-ink hover:underline"
-            >
-              {t('home.tours.teaser.viewAll')} →
-            </Link>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/book#contact-title"
+                className="flex items-center justify-center gap-2 rounded-md px-8 py-3 text-lg font-bold text-white shadow-lg shadow-[#6c0008]/20"
+                style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
+              >
+                {t('hero.sendEnquiry')}
+                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
+              </Link>
+              <Link
+                to="/tours"
+                className="flex items-center justify-center rounded-md bg-white/80 backdrop-blur-md border border-[#e0bfbc]/30 text-[#1b1c1a] px-8 py-3 text-lg font-semibold hover:bg-white transition-all"
+              >
+                {t('hero.exploreTours')}
+              </Link>
+            </div>
           </div>
 
-          <ol className="divide-y divide-stone-200">
-            {TEASER_TOURS.map((tour, i) => (
-              <motion.li
-                key={tour.titleKey}
-                className="flex items-start gap-6 py-7 first:pt-0 last:pb-0"
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: Math.min(i * 0.06, 0.15) }}
-                viewport={{ once: true, margin: '-60px' }}
-              >
-                <span className="w-8 shrink-0 font-headline text-2xl text-stone-300 md:text-3xl">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-headline text-lg text-ink md:text-xl">{t(tour.titleKey)}</h3>
-                  <p className="mt-0.5 font-body text-sm text-stone-500">{t(tour.durationKey)}</p>
-                </div>
-                <Link
-                  to={`/book?tour=${encodeURIComponent(t(tour.titleKey))}#contact-title`}
-                  className="shrink-0 font-label text-sm text-stone-500 underline-offset-4 hover:text-ink hover:underline"
-                >
-                  {t('tour.sendEnquiry')} →
-                </Link>
-              </motion.li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* ── About ────────────────────────────────────────────── */}
-      <section id="about" className="scroll-mt-28 border-b border-stone-200 bg-paper-warm">
-        <div className="mx-auto grid max-w-editorial grid-cols-1 gap-10 px-5 py-16 md:grid-cols-[260px_1fr] md:gap-16 md:px-10 md:py-20">
-
-          {/* Portrait */}
-          <div className="mx-auto w-full max-w-[260px] md:mx-0">
-            <div className="aspect-[4/5] overflow-hidden rounded-sm bg-stone-200">
+          {/* Portrait card (desktop only) */}
+          <div className="hidden lg:block relative">
+            <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#7b5800]/10 rounded-full blur-3xl" />
+            <div className="relative z-10 bg-white p-4 rounded-xl shadow-2xl rotate-2 max-w-sm mx-auto">
               <img
                 src={pub('/images/zuzana-portrait.jpg')}
                 alt="Zuzana Manová"
-                className="h-full w-full object-cover"
-                style={{ objectPosition: 'center 42%' }}
-                loading="lazy"
+                className="rounded-lg aspect-[4/5] object-cover w-full"
+                style={{ objectPosition: 'center 20%' }}
               />
-            </div>
-            <p className="mt-3 font-eyebrow text-eyebrow uppercase text-stone-400">{t('about.badge.line1')}</p>
-            <p className="font-eyebrow text-eyebrow uppercase text-stone-400">{t('about.badge.line2')}</p>
-          </div>
-
-          {/* Copy */}
-          <div className="flex flex-col justify-center">
-            <motion.h2
-              className="mb-7 font-headline text-display-md text-ink"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '-60px' }}
-            >
-              {t('home.section.story.title')}
-            </motion.h2>
-            <div className="space-y-4 font-body text-prose text-stone-700 leading-relaxed">
-              <p>{t('about.intro')}</p>
-              <p>{t('about.expertise')}</p>
-              <p>{t('about.promise')}</p>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-5">
-              <Link
-                to="/tours"
-                className="font-label text-sm text-stone-600 underline-offset-4 hover:text-ink hover:underline"
+              <div
+                className="absolute -bottom-6 -right-6 p-4 rounded-lg shadow-xl text-white max-w-[240px]"
+                style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
               >
-                {t('hero.exploreTours')} →
-              </Link>
-              <Link
-                to="/zuzana-manova"
-                className="font-label text-sm text-stone-600 underline-offset-4 hover:text-ink hover:underline"
-              >
-                {t('nav.zuzana')} →
-              </Link>
+                <p className="font-headline italic text-base leading-snug">
+                  {de
+                    ? '"Prag ist eine vielschichtige Geschichte, lassen Sie uns diese gemeinsam lesen."'
+                    : '"Prague is a layered story — let us read it together."'}
+                </p>
+                <p className="text-xs uppercase tracking-widest mt-2 opacity-80">— Zuzana</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Gallery ──────────────────────────────────────────── */}
-      <section className="border-b border-stone-200">
-        <div className="mx-auto max-w-editorial px-5 py-14 md:px-10 md:py-20">
-          <p className="mb-6 font-eyebrow text-eyebrow uppercase text-stone-500">
-            {t('home.gallery.title')}
-          </p>
-          <div className="grid grid-cols-3 gap-1">
-            <div className="col-span-2 row-span-2">
-              <img
-                className="h-full w-full object-cover"
-                style={{ minHeight: '14rem' }}
-                src={pub('/images/prague-castle.jpg')}
-                alt=""
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <img
-                className="h-full w-full object-cover"
-                style={{ aspectRatio: '1/1' }}
-                src={pub('/images/charles-bridge-2-min.jpg')}
-                alt=""
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <img
-                className="h-full w-full object-cover"
-                style={{ aspectRatio: '1/1' }}
-                src={pub('/images/old-town-square.jpg')}
-                alt=""
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ── Tour Highlights ──────────────────────────────────── */}
+      <section className="py-12 bg-[#f5f3ef]" id="tours">
+        <div className="max-w-7xl mx-auto px-6">
 
-      {/* ── Reviews ──────────────────────────────────────────── */}
-      <section className="bg-paper">
-        <div className="mx-auto max-w-editorial px-5 py-16 md:px-10 md:py-20">
-
-          {/* Pull quote */}
-          <motion.blockquote
-            className="mb-14 border-l-2 border-stone-300 pl-8"
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, margin: '-60px' }}
-          >
-            <p className="font-headline text-2xl italic leading-snug text-ink md:text-3xl">
-              <span aria-hidden="true">&ldquo;</span>
-              {testimonial.quote}
-              <span aria-hidden="true">&rdquo;</span>
+          {/* Heading row */}
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div>
+              <span className="font-bold tracking-[0.2em] uppercase text-sm block mb-2 text-[#7b5800]">
+                {t('home.tours.teaser.title')}
+              </span>
+              <h2 className="font-headline text-4xl font-bold text-[#1b1c1a]">
+                {de ? 'Ausgewählte Erlebnisse' : 'Selected Experiences'}
+              </h2>
+            </div>
+            <p className="font-body text-sm text-[#58413f] max-w-md leading-relaxed">
+              {de
+                ? 'Maßgeschneiderte Routen für anspruchsvolle Reisende, mit Fokus auf Authentizität, Geschichte und dem lokalen Puls der Stadt.'
+                : 'Tailor-made routes for discerning travellers, focused on authenticity, history and the local pulse of the city.'}
             </p>
-            <footer className="mt-5 font-eyebrow text-eyebrow uppercase text-stone-500">
-              — {testimonial.author} · {testimonial.platform}
-            </footer>
-          </motion.blockquote>
+          </div>
 
-          {/* Widget strip */}
-          <div className="border-t border-stone-200 pt-10">
-            <p className="mb-8 font-eyebrow text-eyebrow uppercase text-stone-500">
+          {/* Tour rows */}
+          <div className="grid grid-cols-1 gap-1">
+            {tours.map((tour, i) => (
+              <div
+                key={tour.num}
+                className={`group bg-[#fbf9f5] py-6 px-8 flex flex-col md:flex-row justify-between items-center transition-all hover:bg-white${i < tours.length - 1 ? ' border-b border-[#e0bfbc]/20' : ''}`}
+              >
+                <div className="flex items-center gap-6 mb-4 md:mb-0">
+                  <span className="text-3xl font-headline italic text-[#e0bfbc] group-hover:text-[#6c0008] transition-colors">
+                    {tour.num}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-[#6c0008] transition-colors">
+                      {tour.title}
+                    </h3>
+                    <div className="flex items-center gap-4 mt-1">
+                      <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-[#7b5800]">
+                        <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>schedule</span>
+                        {tour.duration}
+                      </span>
+                      <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-[#58413f]">
+                        <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>group</span>
+                        {tour.meta}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-8">
+                  <p className="hidden lg:block text-[#58413f] max-w-xs text-xs leading-relaxed font-body">
+                    {tour.desc}
+                  </p>
+                  <Link
+                    to={`/book?tour=${encodeURIComponent(tour.title)}#contact-title`}
+                    className="text-[#6c0008] font-bold flex items-center gap-1 text-sm whitespace-nowrap"
+                  >
+                    {de ? 'Details' : 'Details'}
+                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" style={{ fontSize: '18px' }}>chevron_right</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── About Zuzana ─────────────────────────────────────── */}
+      <section className="py-12 overflow-hidden" id="about">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            {/* Portrait column */}
+            <div className="lg:col-span-5 relative">
+              <div className="rounded-xl overflow-hidden aspect-[3/4] relative z-10 shadow-2xl bg-[#eae8e4]">
+                <img
+                  className="w-full h-full object-cover"
+                  src={pub('/images/zuzana-portrait.jpg')}
+                  alt="Zuzana Manová"
+                  style={{ objectPosition: 'center 20%' }}
+                  loading="lazy"
+                />
+              </div>
+              {/* Decorative border offset */}
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-[#7b5800]/20 rounded-lg -z-0" />
+              {/* Watermark */}
+              <div className="absolute top-1/2 -left-10 -translate-y-1/2 hidden xl:block">
+                <span className="font-headline italic select-none text-[#e4e2de]/50"
+                  style={{ fontSize: '8rem', lineHeight: 1 }}>
+                  Zuzana
+                </span>
+              </div>
+            </div>
+
+            {/* Copy column */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="space-y-2">
+                <span className="font-bold tracking-[0.2em] uppercase text-sm text-[#6c0008]">
+                  {de ? 'Lernen Sie Zuzana kennen' : 'Meet Zuzana'}
+                </span>
+                <h2 className="font-headline text-4xl font-bold text-[#1b1c1a] leading-tight">
+                  {de
+                    ? <>Prag, erzählt mit <span className="italic font-normal">Leidenschaft</span></>
+                    : <>Prague, told with <span className="italic font-normal">passion</span></>}
+                </h2>
+              </div>
+
+              <div className="space-y-4 text-base text-[#58413f] font-body leading-relaxed">
+                <p>{t('about.intro')}</p>
+                <p>{t('about.expertise')}</p>
+                <p>{t('about.promise')}</p>
+              </div>
+
+              {/* Stat grid */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-4">
+                <div>
+                  <p className="font-headline text-2xl text-[#6c0008] font-bold">40+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#58413f] font-bold">
+                    {de ? 'Jahre Erfahrung' : 'Years guiding'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-headline text-2xl text-[#6c0008] font-bold">4,9k</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#58413f] font-bold">
+                    {de ? 'Touren kuratiert' : 'Tours curated'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-headline text-2xl text-[#6c0008] font-bold">5,0</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#58413f] font-bold">
+                    {de ? 'Sterne Bewertung' : 'Star rating'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── City Gallery ─────────────────────────────────────── */}
+      <section className="py-12 bg-[#1b1c1a] text-[#fbf9f5]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10 space-y-2">
+            <span className="font-bold tracking-[0.2em] uppercase text-sm text-[#fdc34d]">
+              {de ? 'Visuelles Tagebuch' : 'Visual Diary'}
+            </span>
+            <h2 className="font-headline text-4xl font-bold italic">
+              {de ? 'Momente in Gold' : 'Moments in Gold'}
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4" style={{ height: 600 }}>
+            <div className="col-span-2 row-span-2 overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={pub('/images/prague-castle-cathedral.jpg')}
+                alt="Prague Castle Cathedral"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-[#6c0008]/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+            <div className="overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={pub('/images/blog-prague-tram.jpg')}
+                alt="Prague tram"
+                loading="lazy"
+              />
+            </div>
+            <div className="overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={pub('/images/blog-autumn-prague.jpg')}
+                alt="Prague rooftops"
+                loading="lazy"
+              />
+            </div>
+            <div className="col-span-2 overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={pub('/images/old-town-square.jpg')}
+                alt="Old Town Square"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Social Proof ─────────────────────────────────────── */}
+      <section className="py-12 bg-[#efeeea]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10 space-y-2">
+            {/* Stars */}
+            <div className="flex justify-center items-center gap-2 text-[#7b5800] mb-2">
+              {[1,2,3,4,5].map(s => (
+                <span
+                  key={s}
+                  className="material-symbols-outlined text-sm"
+                  style={{ fontVariationSettings: "'FILL' 1", fontSize: '18px' }}
+                >
+                  star
+                </span>
+              ))}
+            </div>
+            <h2 className="font-headline text-3xl font-bold text-[#1b1c1a]">
+              {de ? 'Unvergessliche Erinnerungen' : 'Unforgettable Memories'}
+            </h2>
+            <p className="text-[#58413f] uppercase tracking-widest text-[10px] font-bold">
               {t('home.reviews.groupTitle')}
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {reviews.map((review, i) => (
+              <div key={i} className="bg-[#fbf9f5] p-6 rounded-xl shadow-lg shadow-[#1b1c1a]/5 flex flex-col justify-between">
+                <p className="text-[#58413f] font-body italic mb-6 text-sm leading-relaxed">
+                  "{review.quote}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#e4e2de] flex items-center justify-center flex-shrink-0">
+                    <span className="font-bold text-sm text-[#58413f]">{review.author[0]}</span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-xs">{review.author}</p>
+                    <p className="text-[9px] text-[#7b5800] font-bold uppercase tracking-widest">{review.source}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Widget strip */}
+          <div className="border-t border-[#e0bfbc] pt-10">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <TripAdvisorWidget />
               <TourHqWidget />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Final CTA ────────────────────────────────────────── */}
+      <section className="py-12 px-6">
+        <div
+          className="max-w-5xl mx-auto rounded-[1.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl"
+          style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
+        >
+          {/* Texture overlay */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden rounded-[1.5rem]">
+            <img
+              className="w-full h-full object-cover mix-blend-overlay"
+              src={pub('/images/prague-castle.jpg')}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="relative z-10 space-y-6">
+            <h2 className="font-headline text-3xl md:text-5xl font-bold text-white leading-tight">
+              {de ? <>Bereit, Prag <br /> zu entdecken?</> : <>Ready to discover <br /> Prague?</>}
+            </h2>
+            <p className="text-base text-white/80 max-w-2xl mx-auto font-body">
+              {de
+                ? 'Begrenzte Verfügbarkeit für private Buchungen. Kontaktieren Sie Zuzana noch heute, um Ihre individuelle Reiseroute zu planen.'
+                : 'Limited availability for private bookings. Contact Zuzana today to plan your personal itinerary.'}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/book#contact-title"
+                className="bg-white text-[#6c0008] px-8 py-3 rounded-md text-base font-bold hover:bg-[#fbf9f5] transition-all shadow-xl"
+              >
+                {t('hero.sendEnquiry')}
+              </Link>
+              <Link
+                to="/tours"
+                className="bg-transparent border border-white/40 text-white px-8 py-3 rounded-md text-base font-bold hover:bg-white/10 transition-all"
+              >
+                {t('hero.exploreTours')}
+              </Link>
             </div>
           </div>
         </div>

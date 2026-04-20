@@ -2,13 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { BRAND } from '../brand';
 
 const LAST_UPDATED = '2026-04-12';
 
 const TermsPage: React.FC = () => {
   const { language } = useLanguage();
   const isDe = language === 'de';
-  const title = isDe ? 'AGB | Zuza Prague Tours' : 'Terms & Conditions | Zuza Prague Tours';
+  const title = isDe ? `AGB | ${BRAND.siteName}` : `Terms & Conditions | ${BRAND.siteName}`;
   const desc = isDe
     ? 'Allgemeine Geschäftsbedingungen für private Stadtführungen und Touren mit Zuza Prague Tours.'
     : 'Terms and conditions for private guided tours with Zuza Prague Tours.';
@@ -19,10 +20,10 @@ const TermsPage: React.FC = () => {
         <html lang={language} />
         <title>{title}</title>
         <meta name="description" content={desc} />
-        <link rel="canonical" href="https://zuzapragtour.de/terms" />
+        <link rel="canonical" href={`${BRAND.domain}/terms`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
-        <meta property="og:url" content="https://zuzapragtour.de/terms" />
+        <meta property="og:url" content={`${BRAND.domain}/terms`} />
       </Helmet>
 
       <h1 className="mb-4 font-headline text-3xl text-primary md:text-4xl">
