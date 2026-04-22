@@ -11,14 +11,14 @@
 
 export const BRAND = {
   /** Human-readable site name shown in titles and schema */
-  siteName: 'Zuza Prague Tours',
+  siteName: 'Prag Kenner',
 
   /** Root URL — no trailing slash */
-  domain: 'https://zuzapragtour.de',
+  domain: 'https://pragkenner.de',
 
   /** Schema.org @id anchors */
-  businessId: 'https://zuzapragtour.de/#business',
-  guideId:    'https://zuzapragtour.de/#guide',
+  businessId: 'https://pragkenner.de/#business',
+  guideId:    'https://pragkenner.de/#guide',
 
   /** Contact */
   personName:   'Ing. Zuzana Manová',
@@ -29,7 +29,7 @@ export const BRAND = {
   /** Social / review platforms */
   tripadvisor:
     'https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html',
-  tourhq:   'https://www.tourhq.com/guide/CZ56896/zuzana-manova',
+  tourhq:    'https://www.tourhq.com/guide/CZ56896/zuzana-manova',
   instagram: 'https://www.instagram.com/erlebnis_tour_prag/',
 
   /** Geo */
@@ -39,5 +39,5 @@ export const BRAND = {
   lng:     14.4378,
 
   /** Hero OG image (absolute URL) */
-  ogImage: 'https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg',
+  ogImage: 'https://pragkenner.de/images/charles-bridge-hero-1600.jpg',
 } as const;

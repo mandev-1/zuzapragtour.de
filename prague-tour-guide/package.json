@@ -1,6 +1,6 @@
 {
-  "name": "prague-tour-guide",
-  "brandName": "Zuza Prague Tours",
+  "name": "pragkenner-de",
+  "brandName": "Prag Kenner",
   "version": "1.0.0",
   "description": "Zuza Prague Tours - Professional Prague tour guide services with Zuzana Manova",
   "private": true,
@@ -61,7 +61,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://zuzapragtour.de",
+  "homepage": "https://pragkenner.de",
   "repository": {
     "type": "git",
     "url": "https://github.com/mandev-1/zuzapragtour.de.git"
