@@ -18,6 +18,29 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '30',
+    slug: 'boat-tours-prague-vltava',
+    slugDe: 'bootsfahrt-prag-moldau',
+    titleKey: 'blog.post30.title',
+    excerptKey: 'blog.post30.excerpt',
+    dateKey: 'blog.post30.date',
+    date: '2026-04-25',
+    image: '/images/blog-boat-prague.jpg',
+    contentKey: 'blog.post30.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'boat tours Prague', 'Prague river cruise', 'Vltava boat rental', 'rowboat Prague',
+      'Prague pedal boat', 'Prague evening cruise', 'kayak Prague Vltava', 'boat hire Prague',
+      'Prague water activities', 'Pražské Benátky', 'dinner cruise Prague', 'Prague sightseeing boat',
+    ],
+    tagsDe: [
+      'Bootsfahrt Prag', 'Moldau Schifffahrt', 'Ruderboot Prag mieten', 'Tretboot Prag',
+      'Abendfahrt Prag Boot', 'Kajak Prag Moldau', 'Bootsverleih Prag', 'Moldaukreuzfahrt',
+      'Pražské Benátky Prag', 'Dinner-Cruise Prag', 'Aktivitäten Prag Wasser', 'Ausflugsboot Prag',
+    ],
+    language: 'both',
+  },
+  {
     id: '29',
     slug: 'three-secret-gardens-mala-strana-prague',
     slugDe: 'drei-gaerten-kleinseite-prag',

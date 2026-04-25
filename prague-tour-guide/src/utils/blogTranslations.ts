@@ -7,6 +7,152 @@ export const blogTranslations = {
     de: 'Prag Reiseblog',
   },
 
+  // Post 30
+  'blog.post30.title': {
+    en: 'Boating in Prague: The Best Boat Options on the Vltava',
+    de: 'Bootsfahrt in Prag: Die besten Bootsoptionen auf der Moldau',
+  },
+  'blog.post30.excerpt': {
+    en: 'From rented rowboats near Slovanský ostrov to evening dinner cruises with a view of the illuminated castle — the Vltava offers more on-water options than most visitors realise. A practical overview of what exists, what it costs, and what is actually worth doing.',
+    de: 'Vom gemieteten Ruderboot beim Slovanský ostrov bis zur Abend-Dinner-Cruise mit Blick auf die beleuchtete Burg — die Moldau bietet mehr Möglichkeiten auf dem Wasser, als die meisten Besucher ahnen. Ein praktischer Überblick darüber, was es gibt, was es kostet und was sich wirklich lohnt.',
+  },
+  'blog.post30.date': {
+    en: 'April 25, 2026',
+    de: '25. April 2026',
+  },
+  'blog.post30.content': {
+    en: `<p class="lead">The Vltava runs through the heart of Prague, and most visitors see it only from above — from the Charles Bridge, from the castle hill, from the railings of the embankment. That is a missed opportunity. From the water, Prague looks fundamentally different: the towers and bridges appear in their true proportion, the hills fall into place, and the city suddenly makes a different kind of sense. An hour on the river is one of the best things you can do here — and there is something suitable for everyone, whether you want to drift quietly in a rented rowboat, sit over dinner on a cruise ship, or paddle a kayak under the bridges.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-boat-prague.jpg" alt="View of Prague Castle and Charles Bridge from the Vltava river" loading="lazy" /><div class="image-credit">The view from the water is the one most visitors never see — and it is the best one</div></div>
+
+<h2>Rented rowboats and pedal boats — the classic Prague option</h2>
+
+<p>The most local and most affordable way to get onto the Vltava is simply to rent a rowboat or pedal boat for an hour. The main rental point is at <strong>Slovanský ostrov</strong> (also called Žofín Island), the small island in the river just south of the National Theatre. Boats are available from April through October, weather permitting. A rowboat costs around 150–180 CZK per thirty minutes; pedal boats are similar. You take the boat out, paddle at your own pace, and return it when you are done.</p>
+
+<p>What makes this option special is the freedom. No schedule, no commentary, no group. You row where you want — upstream toward the Palacký Bridge with the view of Vyšehrad, or downstream under the Jiráskův Bridge toward the National Theatre with the castle framing the skyline behind it. In the early morning or on a weekday afternoon, you can have stretches of the river almost to yourself.</p>
+
+<p>A second rental point operates near <strong>Čechův most</strong> on the left bank, giving you access to a quieter stretch of river toward the northern weir. This is not a polished tourist experience — the boats are simple, the piers are modest, nobody hands you a map. That is partly why it works.</p>
+
+<h2>Vltava river cruises — for first-time visitors</h2>
+
+<p>Several companies operate scheduled sightseeing cruises from the embankment near <strong>Čechův most</strong> and <strong>Rašínovo nábřeží</strong>. The standard cruise runs one to two hours, passes under the Charles Bridge in both directions, and covers the main stretch between Vyšehrad and the northern railway bridge. Prices run 350–500 CZK per adult for a one-hour cruise.</p>
+
+<p>The largest operator is <strong>Prague Boats</strong>, running glassed-in and open-deck vessels departing several times daily. Their one-hour commentary cruise is the most straightforward option for first-time visitors — you see the castle panorama, the Vyšehrad cliffs, and the embankment architecture without planning anything. Tickets available at the pier.</p>
+
+<p>Best on clear days or in the late afternoon when the light on the castle is warmest. Avoid midday in peak summer — flat light, full boats.</p>
+
+<h2>Evening and dinner cruises</h2>
+
+<p>For a special evening, a dinner cruise is worth considering. Several operators run two- to three-hour departures from the central embankment, typically from 19:00 or 19:30. The boat moves slowly along the illuminated city while a fixed-price dinner is served. The castle lit at night from the water, with its reflection in the river, is genuinely striking — one of the better evening views the city offers.</p>
+
+<p>Prices run from around 900 CZK to 1,400 CZK per person depending on operator and menu. The food is serviceable rather than exceptional — this is not the reason to go. The reason is the view and the unhurried pace. Book in advance in July and August. Shoulder season (May, June, September) is easier to book last-minute.</p>
+
+<h2>Pražské Benátky — gondola boats and water taxis</h2>
+
+<p><strong>Pražské Benátky</strong> (Prague Venice) operates gondola-style covered boats along the <strong>Čertovka</strong> canal in Malá Strana — the narrow channel running behind Kampa Island. The canal is only a few hundred metres long, but the setting is unusual: old mill buildings on both sides, slowly turning water wheels, the noise of the city muffled behind the walls. It is quiet in a way that is hard to find in central Prague. Rides depart from the landing near the Kampa Museum and last about fifteen to twenty minutes.</p>
+
+<p>The company also runs water taxis between embankment points — practical if you want to cross between Malá Strana and the Old Town without going around by bridge.</p>
+
+<h2>Kayaking on the Vltava</h2>
+
+<p>Kayak and canoe rentals are available near <strong>Císařský ostrov</strong> (Emperor's Island) in the Troja district. This stretch is calmer and less trafficked than the central embankment, and the island itself — a nature reserve with old-growth floodplain forest — is an unusual paddling destination within city limits. Half-day rentals run around 400–600 CZK per kayak.</p>
+
+<p>The route from the island toward the city centre passes through a surprisingly green section of river before the urban embankment begins near Holešovice — about two to three hours at a comfortable pace. This is also the starting point for multi-day Vltava trips heading south toward Český Krumlov, with campsites and boat return points along the route.</p>
+
+<h2>What does a boat trip in Prague cost?</h2>
+
+<table class="blog-table">
+  <thead><tr><th>Option</th><th>Price (approx.)</th><th>Duration</th></tr></thead>
+  <tbody>
+    <tr><td>Rowboat / pedal boat rental</td><td>150–200 CZK</td><td>30 min</td></tr>
+    <tr><td>Sightseeing cruise</td><td>350–500 CZK / person</td><td>1–2 hours</td></tr>
+    <tr><td>Dinner cruise</td><td>900–1,400 CZK / person</td><td>2–3 hours</td></tr>
+    <tr><td>Čertovka canal ride (Pražské Benátky)</td><td>200–300 CZK / person</td><td>15–20 min</td></tr>
+    <tr><td>Kayak rental (Císařský ostrov)</td><td>400–600 CZK / kayak</td><td>half day</td></tr>
+  </tbody>
+</table>
+
+<h2>When is the best time for a boat trip in Prague?</h2>
+
+<p>The season runs April through October. May, June, and September are the best months: warm enough to sit outside, long daylight hours, fewer boats on the water than July and August. The late afternoon light in June — golden, low, falling across Hradčany — is about as good as Prague gets photographically, and from the river it is particularly strong.</p>
+
+<p>July and August work well for evening departures once the midday heat has passed. Spring can be cold on the water — bring a layer even on days that feel warm on land. Avoid weekend mornings in July and August for the rowboats at Slovanský ostrov; weekday mornings are almost always easy.</p>
+
+<div class="blog-cta-box">
+  <h3>Want to build a full day around the river?</h3>
+  <p>I can combine a morning on the water with a walking tour of Malá Strana, Kampa, and the embankment — the neighbourhoods that make the most sense when you have just seen them from below.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Send me a message</a>
+    <a class="btn btn-outline" href="/tours">See all tours</a>
+  </div>
+</div>`,
+    de: `<p class="lead">Die Moldau fließt mitten durch Prag, und die meisten Besucher sehen sie von oben — von der Karlsbrücke, vom Burgberg, von den Geländern der Uferpromenade. Schade eigentlich. Vom Wasser aus sieht die Stadt ganz anders aus: Die Türme und Brücken erscheinen in ihrer richtigen Proportion, die Hügel fügen sich plötzlich zusammen. Ich empfehle meinen Gästen fast immer, sich wenigstens eine Stunde aufs Wasser zu trauen. Es lohnt sich jedes Mal.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-boat-prague.jpg" alt="Blick auf die Prager Burg und die Karlsbrücke von der Moldau" loading="lazy" /><div class="image-credit">Den Blick vom Wasser aus sehen die meisten Besucher nie — dabei ist er der schönste</div></div>
+
+<h2>Ruderboote und Tretboote — der klassische Prager Ausflug</h2>
+
+<p>Der günstigste und meiner Meinung nach schönste Weg auf die Moldau ist ein gemietetes Ruder- oder Tretboot. Den wichtigsten Verleih gibt es am <strong>Slovanský ostrov</strong> (auch Žofín-Insel genannt), der kleinen Flussinsel unmittelbar südlich des Nationaltheaters. Boote sind von April bis Oktober erhältlich, wetterabhängig. Ein Ruderboot kostet etwa 150–180 CZK für dreißig Minuten, Tretboote ähnlich.</p>
+
+<p>Was ich daran mag: die Freiheit. Kein fester Abfahrtsplan, kein Kommentar, keine Gruppe. Man rudert, wohin man möchte — flussaufwärts Richtung Palacký-Brücke mit dem Blick auf Vyšehrad, oder flussabwärts unter der Jiráskův-Brücke hindurch, mit der Burg im Rücken. Früh morgens oder an einem Wochentagnachmittag hat man weite Strecken des Flusses fast für sich allein.</p>
+
+<p>Ein zweiter Verleih befindet sich nahe der <strong>Čechův-Brücke</strong> am linken Ufer, gut für den ruhigeren Abschnitt Richtung Norden. Große Touristenattraktion ist das nicht: die Boote sind schlicht, die Stege sind bescheiden, niemand drückt einem eine Karte in die Hand. Für mich genau das Richtige.</p>
+
+<h2>Moldau-Rundfahrten — für Erstbesucher und schöne Sommertage</h2>
+
+<p>Mehrere Anbieter betreiben regelmäßige Rundfahrten von der Uferpromenade nahe der <strong>Čechův-Brücke</strong> und dem <strong>Rašínovo nábřeží</strong>. Eine Standardrundfahrt dauert ein bis zwei Stunden und führt entlang des Hauptabschnitts zwischen Vyšehrad und der Eisenbahnbrücke im Norden — dabei passiert man die Karlsbrücke in beiden Richtungen. Der Preis liegt in der Regel bei 350–500 CZK pro Erwachsenem für eine einstündige Fahrt.</p>
+
+<p>Der größte Anbieter ist <strong>Prague Boats</strong>, der verglaste und Freideck-Schiffe betreibt, die mehrmals täglich ablegen. Für Erstbesucher ist die einstündige Kommentarfahrt die unkomplizierteste Wahl — Burgpanorama, Vyšehrad-Felsen, Uferarchitektur, kein Aufwand. Tickets gibt es direkt am Pier.</p>
+
+<p>Am schönsten an klaren Tagen oder am späten Nachmittag, wenn das Licht auf der Burg am wärmsten ist. Im Hochsommer lieber den Mittag meiden — flaches Licht, volle Boote.</p>
+
+<h2>Abendfahrten und Dinner-Cruises</h2>
+
+<p>Für einen besonderen Abend lohnt sich eine Dinner-Cruise. Mehrere Anbieter starten zwei- bis dreistündige Fahrten von der zentralen Uferpromenade, typischerweise um 19:00 oder 19:30 Uhr. Das Schiff gleitet langsam an der illuminierten Stadt vorbei, während ein Menü zum Festpreis serviert wird.</p>
+
+<p>Wer Prag noch nie bei Nacht vom Wasser aus gesehen hat, sollte das nachholen. Die Burg spiegelt sich im Fluss, das Licht liegt anders als tagsüber, und man hat zwei Stunden Zeit, das einfach zu genießen. Die Preise liegen je nach Anbieter und Menü zwischen etwa 900 und 1.400 CZK pro Person — das Essen ist solide, aber nicht der Grund für die Fahrt. Für Paare oder alle, die einen ruhigen Abend ohne Kampf um einen Restauranttisch in der Altstadt suchen, ist das wirklich schön. Im Juli und August lohnt sich eine Vorabreservierung; in der Nebensaison reicht meist auch kurzfristig.</p>
+
+<h2>Pražské Benátky — Gondelboote und Wassertaxis</h2>
+
+<p><strong>Pražské Benátky</strong> (Prager Venedig) betreibt überdachte Gondelboote entlang der <strong>Čertovka</strong> in der Kleinseite — dem schmalen Kanal, der hinter der Kampa-Insel verläuft und manchmal als das Kleine Venedig von Prag bezeichnet wird. Der Kanal ist nur wenige hundert Meter lang, aber die Kulisse ist ungewöhnlich: alte Mühlgebäude auf beiden Seiten, langsam drehende Wasserräder, der Stadtlärm gedämpft hinter den Mauern. Es ist ruhig auf eine Art, die man im Prager Zentrum kaum findet. Die Abfahrten erfolgen von der Anlegestelle nahe dem Kampa-Museum und dauern etwa fünfzehn bis zwanzig Minuten.</p>
+
+<p>Pražské Benátky betreibt außerdem Wassertaxis zwischen verschiedenen Punkten am Fluss — praktisch, wenn man zwischen der Kleinseite und der Altstädter Uferpromenade wechseln möchte, ohne den Umweg über eine Brücke zu nehmen.</p>
+
+<h2>Kajak auf der Moldau</h2>
+
+<p>Wer es aktiver mag: Kajak- und Kanuverleih gibt es nahe dem <strong>Císařský ostrov</strong> (Kaiserinsel) im Stadtbezirk Troja im nördlichen Prag. Dieser Flussabschnitt ist ruhiger und weniger befahren als die zentrale Uferpromenade. Die Insel selbst ist ein Naturschutzgebiet mit altem Auwald — mitten in der Stadt, aber überraschend still. Halbtagsmieten kosten ab etwa 400–600 CZK pro Kajak.</p>
+
+<p>Die Route vom Císařský ostrov Richtung Stadtmitte führt durch einen grünen, stillen Flussabschnitt, bevor die städtische Uferpromenade bei Holešovice wieder beginnt — je nach Tempo etwa zwei bis drei Stunden. Von hier starten auch mehrtägige Moldaufahrten in Richtung Süden: Von Prag bis Český Krumlov lässt sich der Fluss über mehrere Tage paddeln, mit Campingplätzen und Bootsrückgabestellen entlang der Strecke. Wer eine Woche hat, sollte das in Betracht ziehen.</p>
+
+<h2>Was kostet eine Bootsfahrt in Prag?</h2>
+
+<table class="blog-table">
+  <thead><tr><th>Option</th><th>Preis (ca.)</th><th>Dauer</th></tr></thead>
+  <tbody>
+    <tr><td>Ruderboot / Tretboot mieten</td><td>150–200 CZK</td><td>30 Minuten</td></tr>
+    <tr><td>Sightseeing-Rundfahrt</td><td>350–500 CZK / Person</td><td>1–2 Stunden</td></tr>
+    <tr><td>Dinner-Cruise</td><td>900–1.400 CZK / Person</td><td>2–3 Stunden</td></tr>
+    <tr><td>Čertovka-Kanalfahrt (Pražské Benátky)</td><td>200–300 CZK / Person</td><td>15–20 Minuten</td></tr>
+    <tr><td>Kajak-Verleih (Císařský ostrov)</td><td>400–600 CZK / Kajak</td><td>halber Tag</td></tr>
+  </tbody>
+</table>
+
+<h2>Wann ist die beste Zeit für eine Bootsfahrt in Prag?</h2>
+
+<p>Die Saison läuft von April bis Oktober. Mai, Juni und September sind am angenehmsten: warm genug für draußen, lange Tage, weniger Betrieb auf dem Wasser als im Hochsommer. Im Juni liegt das Licht am späten Nachmittag flach über Hradčany, golden und langgestreckt — vom Wasser aus ist das wirklich besonders.</p>
+
+<p>Juli und August eignen sich gut für Abendfahrten, wenn die Mittagshitze nachgelassen hat. Im Frühjahr kann es auf dem Wasser kalt sein — eine Jacke einpacken, auch an Tagen, die an Land warm wirken. Der Fluss ist spürbar kühler als die Stadtstraßen. An Wochenenden im Hochsommer empfiehlt sich ein früher Start beim Ruderbootverleih am Slovanský ostrov; an Wochentagen morgens ist es fast immer unkompliziert.</p>
+
+<div class="blog-cta-box">
+  <h3>Einen ganzen Tag rund um den Fluss planen?</h3>
+  <p>Ich kombiniere eine Stunde auf dem Wasser gerne mit einer Führung durch die Kleinseite, Kampa und die Uferpromenade — die Viertel, die am meisten Sinn ergeben, wenn man sie gerade von unten gesehen hat.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Nachricht schreiben</a>
+    <a class="btn btn-outline" href="/tours">Alle Touren ansehen</a>
+  </div>
+</div>`,
+  },
+
   // Post 29
   'blog.post29.title': {
     en: 'Three walled gardens in Malá Strana that most tourists walk straight past',
