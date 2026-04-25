@@ -358,18 +358,18 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10 space-y-2">
             <span className="font-bold tracking-[0.2em] uppercase text-sm text-[#fdc34d]">
-              {de ? 'Visuelles Tagebuch' : 'Visual Diary'}
+              {de ? 'Von meinen Gästen' : 'From my guests'}
             </span>
             <h2 className="font-headline text-4xl font-bold italic">
-              {de ? 'Momente in Gold' : 'Moments in Gold'}
+              {de ? 'Fotos von unseren Touren' : 'Photos from our tours'}
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4" style={{ height: 600 }}>
             <div className="col-span-2 row-span-2 overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/prague-castle-cathedral.jpg')}
-                alt="Prague Castle Cathedral"
+                src={pub('/images/guest-photo-tourguide.jpg')}
+                alt="Zuzana with guests on a Prague tour"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-[#6c0008]/20 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -377,24 +377,24 @@ const Home: React.FC = () => {
             <div className="overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/blog-prague-tram.jpg')}
-                alt="Prague tram"
+                src={pub('/images/guest-photo-night.jpeg')}
+                alt="Prague at night"
                 loading="lazy"
               />
             </div>
             <div className="overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/blog-autumn-prague.jpg')}
-                alt="Prague rooftops"
+                src={pub('/images/guest-photo-food.jpeg')}
+                alt="Czech food on a Prague tour"
                 loading="lazy"
               />
             </div>
             <div className="col-span-2 overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/old-town-square.jpg')}
-                alt="Old Town Square"
+                src={pub('/images/blog-boat-prague.jpg')}
+                alt="Boat on the Vltava river in Prague"
                 loading="lazy"
               />
             </div>
