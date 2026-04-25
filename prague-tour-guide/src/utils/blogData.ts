@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     excerptKey: 'blog.post30.excerpt',
     dateKey: 'blog.post30.date',
     date: '2026-04-25',
-    image: '/images/blog-boat-prague.jpg',
+    image: '/images/charles-bridge-hero-1200.jpg',
     contentKey: 'blog.post30.content',
     author: 'Ing. Zuzana Manová',
     tags: [
