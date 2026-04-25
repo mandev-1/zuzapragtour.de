@@ -9,6 +9,7 @@ export interface BlogPost {
   date: string; // ISO format for sorting
   image: string;
   contentKey?: string; // For full blog post content
+  ogImage?: string;
   author: string;
   tags: string[];
   tagsDe?: string[];
@@ -25,7 +26,8 @@ export const blogPosts: BlogPost[] = [
     excerptKey: 'blog.post30.excerpt',
     dateKey: 'blog.post30.date',
     date: '2026-04-25',
-    image: '/images/charles-bridge-hero-1200.jpg',
+    image: '/images/blog-boat-prague.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post30.content',
     author: 'Ing. Zuzana Manová',
     tags: [

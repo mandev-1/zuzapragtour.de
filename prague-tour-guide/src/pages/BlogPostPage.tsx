@@ -154,7 +154,7 @@ const BlogPostPage: React.FC = () => {
         <meta property="og:description" content={t(post.excerptKey as any)} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={`${BRAND.domain}${post.image}`} />
+        <meta property="og:image" content={`${BRAND.domain}${post.ogImage ?? post.image}`} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:author" content={post.author} />
         {currentTags.map((tag: string, i: number) => (
