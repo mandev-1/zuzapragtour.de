@@ -3714,6 +3714,303 @@ export const blogTranslations = {
 </div>`,
   },
 
+  'blog.post33.title': { en: 'What to Do in Prague: The Best Places', de: 'Was kann man in Prag machen? Die besten Orte und Aktivitäten' },
+  'blog.post33.excerpt': {
+    en: 'The best places and activities in Prague — from the castle to the river, from Czech beer culture to hidden neighborhoods.',
+    de: 'Die besten Orte und Aktivitäten in Prag — von der Burg bis zur Moldau, von der tschechischen Bierkultur bis zu den Vierteln, die die meisten Touristen nie finden.',
+  },
+  'blog.post33.date': { en: 'April 26, 2026', de: '26. April 2026' },
+  'blog.post33.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Ich führe seit Jahren Menschen durch Prag — Paare, Familien, Alleinreisende, Gruppen. Die Frage, die ich am häufigsten höre, noch bevor wir losgehen: „Was muss man hier unbedingt gesehen haben?" Diese Antwort ist lang. Hier ist sie.</p>
+
+<h2>1. Pražský hrad — die Burg</h2>
+
+<p>Die Prager Burg ist die größte zusammenhängende Burganlage der Welt. Das merkt man, wenn man sie betritt: Sie ist keine einzelne Sehenswürdigkeit, sondern eine Stadt in der Stadt — mit einem Dom, mehreren Palästen, einer Gasse, einem Weinberg und einer Wachablösung täglich um 12:00 Uhr am Haupttor.</p>
+
+<ul>
+  <li>Den <strong>Veitsdom</strong> von innen — besonders die Mucha-Fenster im Morgenlicht.</li>
+  <li>Den <strong>Alten Königspalast</strong> mit dem Wladislawsaal, in dem früher Pferdeturniere stattfanden.</li>
+  <li>Das <strong>Zlatá ulička</strong> — bunte Häuschen, in denen Kafka schrieb und Burgwächter wohnten.</li>
+</ul>
+
+<p>Kombiticket B reicht für die meisten Besucher (250 CZK). Den Burgbereich selbst zu betreten ist kostenlos.</p>
+
+<h2>2. Karlsbrücke — zur richtigen Zeit</h2>
+
+<p>Die Karlsbrücke braucht keine Einleitung. Aber sie braucht das richtige Timing. Vor 8:00 Uhr morgens oder nach 19:00 Uhr abends ist sie eine andere Brücke — ruhig, ohne Gedränge, mit Blick auf eine Stadt, die noch nicht ganz wach ist.</p>
+
+<p>Wer 130 CZK übrig hat: Der Altstädter Brückenturm gibt den Blick von oben auf alle 30 Barockstatuen und den Burgberg dahinter. Einer der schönsten Aussichtspunkte der Stadt, und kaum jemand geht hinauf.</p>
+
+<h2>3. Staroměstské náměstí — der Altstädter Ring</h2>
+
+<p>Stündlich von 9:00 bis 23:00 Uhr schlägt die Orloj. Ein Skelett läutet, zwölf Apostel drehen sich, ein Hahn kräht. 45 Sekunden, dann Applaus. Man kann es kitschig finden — aber ich habe noch keine Gruppe gehabt, die nicht hingeschaut hat.</p>
+
+<p>Der Platz selbst ist architektonisch ungewöhnlich: gotische Kirche, barocke Kuppeln, Renaissance-Giebel — alles nebeneinander. Der Rathausturm (250 CZK) gibt den besten Überblick. Die Restaurants direkt am Platz mit englischer Karte sind eine Touristenfalle — 50 Meter in die Dlouhá, und das Preis-Leistungs-Verhältnis verdoppelt sich.</p>
+
+<h2>4. Josefov — das jüdische Viertel</h2>
+
+<p>Das ehemalige jüdische Ghetto wurde Ende des 19. Jahrhunderts fast vollständig abgerissen. Was übrig blieb: sechs Synagogen, der Alte Jüdische Friedhof und das Alte Rathaus mit der rückwärts laufenden Uhr.</p>
+
+<p>Der Alte Jüdische Friedhof ist einer der ältesten erhaltenen jüdischen Friedhöfe Europas — Gräber übereinander, weil der Platz nie reichte. Eintritt über das Jüdische Museum Prag, Kombiticket ab 350 CZK.</p>
+
+<h2>5. Malá Strana &amp; Kampa-Insel</h2>
+
+<p>Malá Strana liegt zwischen der Karlsbrücke und dem Burgberg — ein Viertel aus Barockpalais, Weinbergen und Gassen, in denen die Zeit etwas langsamer läuft als im Rest der Stadt.</p>
+
+<p>Die Kampa-Insel ist mein persönlicher Lieblingsort in Prag. Ein kleiner Park direkt am Wasser, Blick auf die Brückenbögen, fast keine Touristenläden. Die John-Lennon-Mauer zwei Minuten entfernt — entstanden nach Lennons Tod 1980, immer wieder übermalt, immer wieder neu beschrieben.</p>
+
+<h2>6. Vyšehrad</h2>
+
+<p>Vyšehrad ist die ältere Burg — älter als die Prager Burg, wenn man der Legende glaubt. Heute ist sie eine Festungsanlage auf einem Felsen über der Vltava, mit einem Nationalfriedhof, in dem Dvořák, Smetana und Mucha begraben sind.</p>
+
+<p>Warum ich Vyšehrad empfehle: keine Reisebusse, keine Souvenirläden in Sichtweite, und der Blick von den Klippen auf den Fluss ist einer der besten der Stadt — kostenlos.</p>
+
+<h2>7. Bootsfahrt auf der Moldau</h2>
+
+<p>Prag vom Wasser aus ist ein anderes Prag. Die Karlsbrücke von unten, die Burgsilhouette, die Weinberge am Ufer. Optionen: geführte Abendfahrten ab ca. 500 CZK, Tretboote und Ruderboote zum Selbstfahren am Slovanský ostrov, oder Kajak für sportlichere Gäste.</p>
+
+<p>Das Ruderboot für alle, die lieber selbst bestimmen, wo sie hinfahren: wenig Geld, kein Voranmelden, und man kommt an Stellen, die kein Ausflugsboot anfährt.</p>
+
+<h2>8. Letná-Park</h2>
+
+<p>Letná liegt auf einem Hügel nördlich der Altstadt. Am Ende des Parks öffnet sich das beste kostenlose Stadtpanorama: alle Brücken, die Altstadt, die Burg. Der Biergarten darunter — Pilsner Urquell vom Fass, entspannteste Atmosphäre der Stadt, kein Eintritt, kein Reservieren.</p>
+
+<h2>9. Tschechisches Essen &amp; Bier</h2>
+
+<p>Tschechien hat pro Kopf den höchsten Bierkonsum der Welt. Das liegt am Bier. Pilsner Urquell, Kozel, Bernard — alle besser vom Fass, in einem echten Prager Lokal (Pivnice), nicht im Touristenrestaurant am Platz.</p>
+
+<p>Empfehlenswert ohne Touristenaufschlag: Lokál Dlouhá (Dlouhá 33), U Medvídků (Na Perštýně 7), Pivovarský dům (Ječná 15).</p>
+
+<p>Beim Essen: <em>Svíčková na smetaně</em> ist das tschechische Nationalgericht — Rinderfilet in Rahmsauce mit Knödeln. Den Trdelník am Touristenstand können Sie stehenlassen: es ist keine tschechische Tradition, sondern ein importiertes Touristenprodukt aus den letzten Jahren.</p>
+
+<h2>10. Petřín-Hügel</h2>
+
+<p>Petřín ist der bewaldete Hügel zwischen Malá Strana und dem Burgberg. Oben: ein Aussichtsturm, gebaut 1891 als kleinere Version des Eiffelturms (150 CZK, 299 Stufen oder Aufzug). Die Standseilbahn hinauf kostet eine normale Fahrkarte (30 CZK) und fährt alle 15 Minuten.</p>
+
+<h2>11. Jazz, Konzerte, Nachtleben</h2>
+
+<p>Prag hat eine lebendige Jazzszene. Reduta Jazz Club (Národní 20 — hier spielte Bill Clinton 1994 Saxofon), AghaRTA (Železná 16), Jazz Dock (Janáčkovo nábřeží 2, direkt am Wasser). Abendkonzerte ab ca. 200–300 CZK.</p>
+
+<p>Klassische Konzerte in historischen Kirchen gibt es fast täglich. Für echte Konzertprogramme: Rudolfinum oder Nationaltheater.</p>
+
+<h2>12. Was sich beim Einkaufen lohnt</h2>
+
+<p>Böhmisches Glas — gut, wenn vom Hersteller (Moser-Galerie, Na Příkopě). Holzmarionetten — tschechisches Handwerk mit langer Tradition, kaufenswert in Werkstätten. Böhmischer Granat — der dunkelrote Halbedelstein aus Böhmen, echte Stücke erkennt man am Preis und am Händler mit Zertifikat.</p>
+
+<p>Was ich abraten würde: Matroschkas, Bier-Souvenirs vom Marktstand, alles mit dem Prager Gesicht drauf. Das wird anderswo hergestellt.</p>
+
+<div class="blog-cta-box">
+  <h3>Prag mit jemandem, der es kennt</h3>
+  <p>Ich zeige Ihnen die Version von Prag, die in keinem Reiseführer steht — auf Deutsch, in Ihrem Tempo, ohne Gruppe.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prag%20Stadtf%C3%BChrung#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: '',
+  },
+
+  'blog.post32.title': { en: 'Top 12 Photo Spots in Prague: Where to Take the Best Pictures', de: 'Die 12 besten Fotospots in Prag: Hier müssen Sie fotografieren' },
+  'blog.post32.excerpt': {
+    en: 'From Charles Bridge at dawn to a hidden Letná viewpoint most tourists walk straight past — here are the 12 Prague spots worth pointing your camera at, with timing tips for each.',
+    de: 'Von der Karlsbrücke im Morgengrauen bis zu einem versteckten Aussichtspunkt im Letná-Park, den die meisten Touristen einfach überlaufen — hier sind die 12 Prager Orte, an denen sich das Fotografieren wirklich lohnt.',
+  },
+  'blog.post32.date': { en: 'April 26, 2026', de: '26. April 2026' },
+  'blog.post32.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Prag ist eine der meistfotografierten Städte Europas. Das Problem: Neunzig Prozent aller Prag-Fotos zeigen dieselben fünf Motive, gemacht zur gleichen Tageszeit, von der gleichen Stelle aus. Ich zeige Ihnen, wo die wirklich guten Bilder entstehen — und wann.</p>
+
+<h2>1. Karlsbrücke — aber um 6:00 Uhr morgens</h2>
+
+<p>Die Karlsbrücke ist tagsüber überfüllt. Morgens um 6:00 Uhr gehört sie Ihnen. Nebel liegt manchmal noch über der Vltava, die Straßenlaternen brennen noch, und die 30 Barockheiligen stehen still. Das ist das Bild.</p>
+
+<p>Bester Standort: Mitte der Brücke, Blick Richtung Burgberg. Die Burg im Hintergrund, eine Heiligenfigur im Vordergrund. Kein Stativ nötig — legen Sie die Kamera auf die Balustrade.</p>
+
+<p>Wenn Nebel vorhergesagt ist: sofort aufstehen. Nebliger Frühmorgen auf der Karlsbrücke ist eines der beeindruckendsten Motive der Stadt.</p>
+
+<h2>2. Altstädter Brückenturm — von oben</h2>
+
+<p>130 CZK Eintritt. Der Turm öffnet um 10:00 Uhr. Von oben sehen Sie die Brücke von hinten — alle 30 Statuen in einer Reihe, die Burg am Ende. Das ist das Foto, das man von der Brücke selbst nicht machen kann.</p>
+
+<p>Tipp: Kommen Sie kurz nach dem Öffnen. Die erste Stunde ist ruhig.</p>
+
+<h2>3. Letná-Park — die Biergartenaussicht</h2>
+
+<p>Der Biergarten im Letná-Park hat eine Terrasse mit dem besten Panorama über die Altstadt, das ich kenne. Kostenloser Eintritt, Sie brauchen kein Getränk zu kaufen. Die goldene Stunde trifft diesen Ort im Sommer gegen 19:00 Uhr.</p>
+
+<p>Vom Metronom aus — dem riesigen Metronom auf dem Sockel, wo früher Stalins Statue stand — haben Sie zusätzlich einen freien Blick auf den Sonnenuntergang über der Stadt. Die meisten Touristen laufen einfach daran vorbei.</p>
+
+<h2>4. Vyšehrad-Klippen</h2>
+
+<p>Vyšehrad liegt südlich der Innenstadt, 20 Minuten mit der Metro. Vom Südende der Festungsmauern aus blicken Sie steil auf die Vltava hinunter — Fluss, Brücken, Stadtsilhouette. Kein Eintritt. Fast keine Touristen.</p>
+
+<p>Die Kirche St. Peter und Paul dahinter ist ein gutes zweites Motiv: neugotisch, mit zwei Türmen, die aus der Ferne besser lesbar sind als von nah.</p>
+
+<h2>5. Nerudova — die Häuserschilder</h2>
+
+<p>Die Nerudova-Straße führt von Malostranské náměstí hinauf zur Burg. Jedes Haus hat ein historisches Symbol über dem Eingang: ein roter Adler, drei Geigen, zwei Sonnen. Das sind die alten Hausnummern — vor dem Straßennummernsystem.</p>
+
+<p>Bestes Licht: Vormittag, wenn die Sonne von Osten in die Straße fällt. Die Schilder sind dann gut beleuchtet, ohne hartes Gegenlicht.</p>
+
+<h2>6. Malá Strana von der Kampa-Insel</h2>
+
+<p>Die Kampa-Insel liegt direkt unter der Karlsbrücke, durch einen schmalen Kanal von Malá Strana getrennt. Vom nördlichen Ufer aus fotografieren Sie die Brückenbögen von unten — mit den Heiligenfiguren oben und dem Wasser darunter. Ungewöhnlicher Winkel, kaum jemand macht ihn.</p>
+
+<p>Das Čertovka-Mühlenrad daneben ist ein weiteres gutes Motiv — besonders bei Abendlicht.</p>
+
+<h2>7. Prager Burg von der Malostranská-Seite</h2>
+
+<p>Die meisten Fotos der Prager Burg entstehen von der Altstadt aus — zu weit weg, zu komprimiert. Das bessere Bild entsteht von der Malostranská Metro-Station aus: Sie sehen die Burg direkt über den Dächern von Malá Strana. Gehen Sie von der Station aus ein paar Schritte Richtung Fluss und schauen Sie zurück.</p>
+
+<h2>8. Josefov — die Jugendstil-Fassaden</h2>
+
+<p>Das jüdische Viertel Josefov wurde Ende des 19. Jahrhunderts fast vollständig abgerissen und mit Jugendstilhäusern neu bebaut. Die Pařížská-Straße ist die bekannteste — aber die Seitenstraßen Maiselova und Široka haben die schöneren Fassadendetails ohne die Luxusboutiquen davor.</p>
+
+<p>Bestes Licht: bewölkter Tag. Jugendstildetails brauchen diffuses Licht, kein hartes Sonnenlicht.</p>
+
+<h2>9. Strahov-Bibliothek (Innenraum)</h2>
+
+<p>Das Strahov-Kloster hat zwei barocke Bibliothekssäle, die zu den schönsten Innenräumen Mitteleuropas gehören. Fotografieren ist erlaubt (ohne Stativ). 150 CZK Eintritt.</p>
+
+<p>Sie schauen durch Eisengitter in die Säle hinein — das verhindert, dass Besucher hineingehen und Bücher berühren. Das Gitter gehört zum Bild: es gibt die Rahmung.</p>
+
+<p>Tipp: Kommen Sie unter der Woche vor 10:00 Uhr. Reisegruppen kommen meist gegen 11:00 Uhr.</p>
+
+<h2>10. Wenzelsplatz von oben — Nationalmuseum-Treppe</h2>
+
+<p>Der Wenzelsplatz ist schwer zu fotografieren, weil er so lang und schmal ist. Die einzige Position, von der er vollständig zu sehen ist: die Treppe des Nationalmuseums am oberen Ende. Von dort sehen Sie die gesamte Länge des Platzes mit der Wenzelstatue im Vordergrund.</p>
+
+<p>Abends, wenn die Straßenlaternen brennen und der Verkehr Lichtstreifen zieht: das ist der Moment für dieses Bild.</p>
+
+<h2>11. Zlatá ulička — Details statt Weitwinkel</h2>
+
+<p>Im Inneren der Burg lohnt sich das Zlatá ulička weniger für Weitwinkelfotos als für Details: Türrahmen in kräftigen Farben, niedrige Fenster, Handwerksschilder. Jedes Haus ist anders gestrichen. Das sind die Bilder, die aus Prag-Alben herausstechen, weil sie nicht wie Postkarten aussehen.</p>
+
+<h2>12. Čechův most bei Nacht</h2>
+
+<p>Die Čechův most ist die Jugendstilbrücke nördlich der Altstadt — vergoldet, mit Jugendstillampen. Tagsüber eher unscheinbar. Nachts, beleuchtet und im Wasser gespiegelt, ist sie eine der schönsten Brücken der Stadt.</p>
+
+<p>Standort: Náplavka-Ufer auf der Altstadtseite, Blick Richtung Holešovice. Stativ empfohlen — oder Handgelenk auf dem Geländer abstützen.</p>
+
+<h2>Allgemeine Tipps</h2>
+
+<ul>
+  <li><strong>Goldene Stunde:</strong> Ca. 30 Minuten nach Sonnenaufgang und vor Sonnenuntergang. Im April ist Sonnenaufgang gegen 6:10 Uhr, Sonnenuntergang gegen 20:15 Uhr.</li>
+  <li><strong>Bewölkte Tage:</strong> Für Gebäudedetails, Jugendstil und Innenräume besser als pralle Sonne.</li>
+  <li><strong>Regen:</strong> Nasse Kopfsteinpflastergassen spiegeln Licht. Ungeplant gut.</li>
+  <li><strong>Frühmorgens:</strong> Vor 8:00 Uhr sind Karlsbrücke, Altstädter Ring und Burggelände nahezu leer.</li>
+</ul>
+
+<p>Wenn Sie eine geführte Fototour machen möchten — zu den weniger bekannten Winkeln, mit den richtigen Zeitfenstern — führe ich auch das durch. Schreiben Sie mir.</p>
+
+<div class="blog-cta-box">
+  <h3>Prag fotografieren mit einer Ortskundigen</h3>
+  <p>Ich kenne die Stellen, die auf keiner Karte stehen — und wann das Licht stimmt.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Fotospots%20Prag#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: `<div class="blog-post-content">
+<p class="lead">Prague is one of the most photographed cities in Europe. The problem: ninety percent of Prague photos show the same five subjects, taken at the same time of day, from the same spot. Here are the 12 places where the really good pictures happen — and when to be there.</p>
+
+<h2>1. Charles Bridge — but at 6am</h2>
+
+<p>Charles Bridge is overcrowded during the day. At 6am, it's yours. Mist sometimes still sits over the Vltava, the street lamps are still on, and the 30 baroque saints stand quiet. That's the shot.</p>
+
+<p>Best position: center of the bridge, facing the castle hill. Castle in the background, a saint statue up front. No tripod needed — rest the camera on the balustrade.</p>
+
+<p>If fog is forecast: get up immediately. Misty early morning on Charles Bridge is one of the most striking subjects in the city.</p>
+
+<h2>2. Old Town Bridge Tower — from the top</h2>
+
+<p>130 CZK entry. The tower opens at 10am. From the top you see the bridge from behind — all 30 statues in a row, the castle at the end. That's the photo you can't take from the bridge itself.</p>
+
+<p>Tip: arrive just after opening. The first hour is quiet.</p>
+
+<h2>3. Letná Park — the beer garden view</h2>
+
+<p>The Letná Park beer garden has a terrace with the best panorama over the Old Town I know. Free to enter, no need to buy a drink. Golden hour hits this spot around 7pm in summer.</p>
+
+<p>From the Metronome — the giant metronome on the plinth where Stalin's statue once stood — you get an unobstructed view of the sunset over the city. Most tourists walk straight past it.</p>
+
+<h2>4. Vyšehrad cliffs</h2>
+
+<p>Vyšehrad is south of the center, 20 minutes by metro. From the southern end of the fortress walls you look steeply down onto the Vltava — river, bridges, city skyline. No entry fee. Almost no tourists.</p>
+
+<p>The Church of St. Peter and Paul behind you is a good second subject: neo-Gothic, with two towers that read better from a distance than up close.</p>
+
+<h2>5. Nerudova — the house signs</h2>
+
+<p>Nerudova Street runs from Malostranské náměstí up to the castle. Every house has a historical symbol above the entrance: a red eagle, three violins, two suns. These are the old house numbers — from before the street numbering system.</p>
+
+<p>Best light: morning, when the sun comes from the east into the street. The signs are well lit without harsh backlight.</p>
+
+<h2>6. Malá Strana from Kampa Island</h2>
+
+<p>Kampa Island sits directly under Charles Bridge, separated from Malá Strana by a narrow channel. From the northern bank you photograph the bridge arches from below — saints visible above, water below. An unusual angle almost nobody uses.</p>
+
+<p>The Čertovka mill wheel nearby is another good subject — especially in evening light.</p>
+
+<h2>7. Prague Castle from the Malostranská side</h2>
+
+<p>Most photos of Prague Castle are taken from the Old Town — too far away, too compressed. The better picture is from the Malostranská metro station: you see the castle directly above the rooftops of Malá Strana. Walk a few steps from the station toward the river and look back.</p>
+
+<h2>8. Josefov — the Art Nouveau facades</h2>
+
+<p>The Jewish Quarter Josefov was almost entirely demolished in the late 19th century and rebuilt with Art Nouveau apartment buildings. Pařížská Street is the best known — but the side streets Maiselova and Široka have better facade details without the luxury boutiques in front of them.</p>
+
+<p>Best light: overcast day. Art Nouveau details need diffuse light, not harsh sun.</p>
+
+<h2>9. Strahov Library (interior)</h2>
+
+<p>The Strahov Monastery has two Baroque library halls that rank among the most beautiful interiors in Central Europe. Photography is permitted (no tripod). 150 CZK entry.</p>
+
+<p>You look in through iron grilles — this prevents visitors from entering and touching the books. The grille is part of the picture: it gives you the framing.</p>
+
+<p>Tip: come on a weekday before 10am. Tour groups tend to arrive around 11.</p>
+
+<h2>10. Wenceslas Square from above — National Museum steps</h2>
+
+<p>Wenceslas Square is hard to photograph because it's so long and narrow. The only position from which it's fully visible: the steps of the National Museum at the upper end. From there you see the full length of the square with the Wenceslas statue in the foreground.</p>
+
+<p>In the evening, when the street lamps are on and traffic draws light streaks: that's the moment for this shot.</p>
+
+<h2>11. Golden Lane — details over wide angles</h2>
+
+<p>Inside the castle, Zlatá ulička rewards detail shots more than wide angles: door frames in bold colors, low windows, craft signs. Each house is painted differently. These are the pictures that stand out from Prague albums precisely because they don't look like postcards.</p>
+
+<h2>12. Čechův most at night</h2>
+
+<p>Čechův most is the Art Nouveau bridge north of the Old Town — gilded, with Art Nouveau lamps. Unremarkable in daylight. At night, lit up and reflected in the water, it's one of the most beautiful bridges in the city.</p>
+
+<p>Position: Náplavka embankment on the Old Town side, looking toward Holešovice. Tripod recommended — or brace your wrist on the railing.</p>
+
+<h2>General tips</h2>
+
+<ul>
+  <li><strong>Golden hour:</strong> About 30 minutes after sunrise and before sunset. In April, sunrise is around 6:10am, sunset around 8:15pm.</li>
+  <li><strong>Overcast days:</strong> Better than full sun for building details, Art Nouveau, and interiors.</li>
+  <li><strong>Rain:</strong> Wet cobblestones reflect light. Unexpectedly good.</li>
+  <li><strong>Early morning:</strong> Before 8am, Charles Bridge, Old Town Square, and the castle grounds are nearly empty.</li>
+</ul>
+
+<p>If you'd like a guided photography walk — to the less obvious angles, with the right timing — I do those too. Get in touch.</p>
+
+<div class="blog-cta-box">
+  <h3>Photograph Prague with someone who knows it</h3>
+  <p>I know the spots that aren't on any map — and when the light is right.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20Photo%20Walk#contact-title">Book a tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>
+</div>`,
+  },
+
   'blog.post31.title': { en: 'One Day in Prague: The 5 Places Worth Your Time', de: 'Ein Tag in Prag: Die 5 Orte, die Sie wirklich sehen sollten' },
   'blog.post31.excerpt': {
     en: 'Only one day in Prague? Here\'s the route I give my guests: from Národní třída across the castle and back through the Old Town — on foot, without rushing.',
@@ -3754,11 +4051,21 @@ export const blogTranslations = {
 
 <p>Planen Sie etwa 1,5 bis 2 Stunden ein.</p>
 
+<figure class="blog-inline-image">
+  <img src="/images/prague-castle-cathedral.jpg" alt="Veitsdom Prager Burg — gotischer Dom auf dem Hradschin in Prag" loading="lazy" />
+  <figcaption class="image-credit">Der Veitsdom dominiert das Burggelände — im Inneren fallen die Mucha-Fenster sofort auf.</figcaption>
+</figure>
+
 <h2>Platz 3: Zlaté schody &amp; Malá Strana — Der Abstieg</h2>
 
 <p>Verlassen Sie die Burg durch das Ostportal und gehen Sie die Zlaté schody (Goldene Treppe) hinab. Das ist die stille Seite, die Touristen meistens übersehen — wenige Stufen, Weinbergmauern, und plötzlich Malá Strana zu Ihren Füßen.</p>
 
 <p>Unten angekommen: biegen Sie links in die Nerudova. Sie ist steil und gepflastert und zieht sich den Burgberg hinunter. Fast jedes Haus hat ein historisches Schild über dem Eingang — die alten Hausnummern in Form von Zeichen: ein Bär, eine Sonne, drei Geigen. Vor der Erfindung der Straßennummern war das das System.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/photo-guests-mala-strana.jpeg" alt="Malá Strana Prag — Blick auf die Kleinseite mit Barockkirchen und engen Gassen" loading="lazy" />
+  <figcaption class="image-credit">Malá Strana — das Viertel zwischen Karlsbrücke und Burgberg.</figcaption>
+</figure>
 
 <p>Am Fuß der Nerudova liegt das Malostranské náměstí — der Hauptplatz der Kleinseite. Die Barockkirche St. Nikolaus dominiert ihn; Eintritt kostet etwas, aber das Innere ist theatralischer als viele Opernhäuser. Wenn Sie Hunger haben: das Restaurant U Malého Glena (Karmelitská 23) ist kein Touristenlokal. Oder für etwas Schnelleres: Lokál Malá Strana, Míšeňská 12.</p>
 
@@ -3770,6 +4077,11 @@ export const blogTranslations = {
 
 <p>Die 30 Barockheiligen entlang der Balustrade sind Kopien — die Originale sind im Lapidarium im Výstaviště-Park, falls Sie die echten sehen wollen. Empfehlenswert für alle, die sich länger als zwei Tage in Prag aufhalten.</p>
 
+<figure class="blog-inline-image">
+  <img src="/images/charles-bridge-pretty-picture.jpg" alt="Karlsbrücke Prag — historische Steinbrücke mit Barockheiligen über der Moldau" loading="lazy" />
+  <figcaption class="image-credit">Die Karlsbrücke — am eindrucksvollsten früh morgens oder nach 18 Uhr.</figcaption>
+</figure>
+
 <p>Kleiner Tipp: Für 130 CZK können Sie den Altstädter Brückenturm besteigen — einer der schönsten gotischen Tortürme Europas, und die Aussicht von oben auf die Brücke und den Fluss ist außergewöhnlich.</p>
 
 <h2>Platz 5: Staroměstské náměstí — Der Altstädter Ring</h2>
@@ -3779,6 +4091,11 @@ export const blogTranslations = {
 <p>Die <strong>Orloj</strong> schlägt stündlich. Das Spektakel dauert etwa 45 Sekunden: ein Skelett läutet, die zwölf Apostel drehen sich, ein Hahn kräht. Die Menge applaudiert. Sie können dafür anstehen oder einfach zufällig vorbeikommen — die Uhr tickt zuverlässig.</p>
 
 <p>Der <strong>Turm des Altstädter Rathauses</strong> (250 CZK) gibt Ihnen den besten Blick über die Dächer der Altstadt. Von hier sehen Sie, wie Prag gebaut ist: konzentrische Ringe um die Kirche Unserer Lieben Frau vor dem Týn, gotische Türme neben barocken Kuppeln neben Renaissance-Giebeln.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/old-town-square.jpg" alt="Altstädter Ring Prag — Orloj astronomische Uhr und Týnkirche" loading="lazy" />
+  <figcaption class="image-credit">Staroměstské náměstí — der Altstädter Ring mit der Orloj und der Týnkirche.</figcaption>
+</figure>
 
 <p>Was Sie auf dem Platz vermeiden sollten: die Restaurants mit englischer Speisekarte direkt am Platz. Gehen Sie stattdessen 50 Meter in eine Seitenstraße — Lokál Dlouhá (Dlouhá 33) ist perfekt für ein Abendessen mit Pilsner Urquell.</p>
 
