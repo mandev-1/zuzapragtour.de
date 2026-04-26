@@ -3713,4 +3713,177 @@ export const blogTranslations = {
   </div>
 </div>`,
   },
+
+  'blog.post31.title': { en: 'One Day in Prague: The 5 Places Worth Your Time', de: 'Ein Tag in Prag: Die 5 Orte, die Sie wirklich sehen sollten' },
+  'blog.post31.excerpt': {
+    en: 'Only one day in Prague? Here\'s the route I give my guests: from Národní třída across the castle and back through the Old Town — on foot, without rushing.',
+    de: 'Nur einen Tag in Prag? Ich zeige Ihnen die Route, die ich meinen Gästen gebe: von Národní třída über die Burg bis zum Altstädter Ring — zu Fuß, ohne Hetze.',
+  },
+  'blog.post31.date': { en: 'April 25, 2026', de: '25. April 2026' },
+  'blog.post31.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Einer meiner Gäste — ein Banker aus Frankfurt, der auf dem Weg nach Wien war — sagte mir einmal: „Ich habe nur heute." Kein Stress in der Stimme, einfach eine Tatsache. Meine Antwort: „Das reicht."</p>
+
+<p>Prag lässt sich nicht erschöpfen. Das wäre vermessen. Aber in einem einzigen Tag kann man die Seele der Stadt spüren — vorausgesetzt, man wählt die richtige Route. Hier ist die, die ich meinen Gästen gebe.</p>
+
+<h2>Vorab: Wo Sie schlafen sollten</h2>
+
+<p>Wenn Sie nur einen Tag haben, ist die Lage des Hotels nicht Komfort — sie ist Strategie. Ein Hotel mit Spa in der Innenstadt bedeutet: Sie starten ausgeruht, ohne Transfers, und können am Abend zurück, ohne Stunden in einem Taxi zu verbringen.</p>
+
+<p>Gute Lagen für diesen Rundgang: zwischen Národní třída und dem Wenzelsplatz, oder direkt in der Nähe des Altstädter Rings. Das Grand Hotel Bohemia, das Icon Hotel &amp; Lounge oder das Be Smart Mánes — alle drei haben Wellness-Bereiche und liegen exakt auf dieser Route.</p>
+
+<h2>Platz 1: Národní třída — Ihr Morgen beginnt hier</h2>
+
+<p>Treffen Sie sich um 9:00 Uhr im Café Louvre, Národní 20. Es gibt es seit 1902. Kafka saß hier, Einstein auch. Die Milchkaffees kommen in großen weißen Tassen. Das Croissant ist nicht das, wofür Sie hergekommen sind, aber der Raum ist es.</p>
+
+<p>Draußen auf der Národní třída, ein paar Schritte Richtung Vltava, finden Sie ein kleines Denkmal in einem Eingang: Hände, die aus der Wand ragen. Hier waren am 17. November 1989 Studenten, Polizeiknüppel, und der Beginn des Endes der kommunistischen Tschechoslowakei. Ein stilles Denkmal, fast zu unscheinbar für das, was es festhält.</p>
+
+<p>Von dort spazieren Sie die Národní zur Kreuzung mit der Spálená, biegen rechts auf die Na Příkopě — die Einkaufsmeile Prags. Nicht zwingend aufregend (Zara, H&amp;M, Sephora), aber wenn jemand in Ihrer Gruppe shoppen möchte: hier ist die Zeit dafür.</p>
+
+<h2>Platz 2: Pražský hrad — Die Burg</h2>
+
+<p>Gegen 11:00 Uhr nehmen Sie die Tram 22 von der Haltestelle Národní divadlo (zwei Minuten zu Fuß vom Café Louvre). Vier Stationen bis Pohořelec, dann zu Fuß bergab durch den Hradčany-Platz zum Burgeingang.</p>
+
+<p>Was Sie sehen müssen:</p>
+
+<ul>
+  <li><strong>Veitsdom</strong>: Außen romanisch und gotisch durcheinander, innen fast dunkel — bis das Licht durch die Mucha-Fenster fällt. Kostenloser Eintritt in den Vorchor. Für das innere Kirchenschiff und die Königsgruft: Kombiticket B, 250 CZK.</li>
+  <li><strong>Alter Königspalast</strong>: Der Wladislawsaal ist einer der größten säulenlosen gotischen Säle Mitteleuropas. Er wurde auch für Pferdeturniere genutzt. Die Wendeltreppe im Inneren — der Reiterstieg — ist breit genug für ein Pferd. Daran erkennt man, für wen Architektur in dieser Zeit gedacht war.</li>
+  <li><strong>Zlatá ulička</strong>: Die bunten Häuschen wurden ursprünglich von Burgwächtern und Handwerkern bewohnt. Kafka schrieb dort eine Zeit lang — seine Schwester mietete Haus Nr. 22 im Winter 1916/17. Heute Souvenirläden, aber die Architektur lohnt sich.</li>
+</ul>
+
+<p>Planen Sie etwa 1,5 bis 2 Stunden ein.</p>
+
+<h2>Platz 3: Zlaté schody &amp; Malá Strana — Der Abstieg</h2>
+
+<p>Verlassen Sie die Burg durch das Ostportal und gehen Sie die Zlaté schody (Goldene Treppe) hinab. Das ist die stille Seite, die Touristen meistens übersehen — wenige Stufen, Weinbergmauern, und plötzlich Malá Strana zu Ihren Füßen.</p>
+
+<p>Unten angekommen: biegen Sie links in die Nerudova. Sie ist steil und gepflastert und zieht sich den Burgberg hinunter. Fast jedes Haus hat ein historisches Schild über dem Eingang — die alten Hausnummern in Form von Zeichen: ein Bär, eine Sonne, drei Geigen. Vor der Erfindung der Straßennummern war das das System.</p>
+
+<p>Am Fuß der Nerudova liegt das Malostranské náměstí — der Hauptplatz der Kleinseite. Die Barockkirche St. Nikolaus dominiert ihn; Eintritt kostet etwas, aber das Innere ist theatralischer als viele Opernhäuser. Wenn Sie Hunger haben: das Restaurant U Malého Glena (Karmelitská 23) ist kein Touristenlokal. Oder für etwas Schnelleres: Lokál Malá Strana, Míšeňská 12.</p>
+
+<h2>Platz 4: Karlův most — Die Brücke</h2>
+
+<p>Die Karlsbrücke ist am frühen Morgen oder nach 18:00 Uhr leer. Um 14:00 Uhr ist sie es nicht. Das ist die ehrliche Auskunft.</p>
+
+<p>Trotzdem: Sie müssen sie überqueren, denn die Aussicht von der Brücke ist eine der schönsten in Europa. Burgsilhouette im Westen, die Kuppeln von Malá Strana, dann die Türme der Altstadt, wenn man sich umdreht.</p>
+
+<p>Die 30 Barockheiligen entlang der Balustrade sind Kopien — die Originale sind im Lapidarium im Výstaviště-Park, falls Sie die echten sehen wollen. Empfehlenswert für alle, die sich länger als zwei Tage in Prag aufhalten.</p>
+
+<p>Kleiner Tipp: Für 130 CZK können Sie den Altstädter Brückenturm besteigen — einer der schönsten gotischen Tortürme Europas, und die Aussicht von oben auf die Brücke und den Fluss ist außergewöhnlich.</p>
+
+<h2>Platz 5: Staroměstské náměstí — Der Altstädter Ring</h2>
+
+<p>Vom Ende der Karlsbrücke sind es fünf Minuten zu Fuß. Der Altstädter Ring ist der dramatischste Stadtplatz, den ich kenne — und ich kenne einige.</p>
+
+<p>Die <strong>Orloj</strong> schlägt stündlich. Das Spektakel dauert etwa 45 Sekunden: ein Skelett läutet, die zwölf Apostel drehen sich, ein Hahn kräht. Die Menge applaudiert. Sie können dafür anstehen oder einfach zufällig vorbeikommen — die Uhr tickt zuverlässig.</p>
+
+<p>Der <strong>Turm des Altstädter Rathauses</strong> (250 CZK) gibt Ihnen den besten Blick über die Dächer der Altstadt. Von hier sehen Sie, wie Prag gebaut ist: konzentrische Ringe um die Kirche Unserer Lieben Frau vor dem Týn, gotische Türme neben barocken Kuppeln neben Renaissance-Giebeln.</p>
+
+<p>Was Sie auf dem Platz vermeiden sollten: die Restaurants mit englischer Speisekarte direkt am Platz. Gehen Sie stattdessen 50 Meter in eine Seitenstraße — Lokál Dlouhá (Dlouhá 33) ist perfekt für ein Abendessen mit Pilsner Urquell.</p>
+
+<h2>Die Rückkehr</h2>
+
+<p>Von der Staroměstská-Metro sind es zwei Stationen bis Národní třída (Linie B, grün). Sie sind zurück, wo Sie begonnen haben. Wenn das Hotel einen Saunabereich hat: das ist jetzt genau das Richtige.</p>
+
+<p>Die Gesamtroute sind ungefähr 8 bis 10 Kilometer zu Fuß. Sie werden Treppen hochgehen, unebenes Pflaster begehen, und wahrscheinlich an einer Stelle kurz stehenbleiben und denken: Wann komme ich wieder. Das ist normal.</p>
+
+<h2>Was ich meinen Gästen sage</h2>
+
+<p>Prag ist schön, aber es ist auch dicht. Nicht wegen der Distanzen — wegen der Geschichten. An jeder Ecke gibt es eine. Man kann nicht alles auf einmal verarbeiten. Ein Tag gibt Ihnen genug, um zu verstehen, warum die Menschen wiederkommen.</p>
+
+<p>Wenn Sie möchten, zeige ich Ihnen das alles persönlich — mit den Geschichten hinter den Sehenswürdigkeiten, ohne Hetze, ohne Gruppenbus.</p>
+
+<div class="blog-cta-box">
+  <h3>Einen Tag gut verbringen</h3>
+  <p>Ich begleite Sie durch diese Route — auf Deutsch, Englisch oder Tschechisch, im eigenen Tempo.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Stadtf%C3%BChrung%20Prag#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: `<div class="blog-post-content">
+<p class="lead">One of my guests — a banker from Frankfurt on his way to Vienna — told me once: "I only have today." No stress in his voice, just a fact. My answer: "That's enough."</p>
+
+<p>You can't exhaust Prague in a day. But you can feel the soul of the city — if you pick the right route. Here's the one I give my guests.</p>
+
+<h2>First: Where to stay</h2>
+
+<p>If you only have one day, your hotel location isn't comfort — it's strategy. A hotel with a spa in the center means you start rested, no transfers, and can return in the evening without spending an hour in traffic.</p>
+
+<p>Good locations for this route: between Národní třída and Wenceslas Square, or right near Old Town Square. Grand Hotel Bohemia, Icon Hotel &amp; Lounge, or Be Smart Mánes — all three have wellness areas and sit exactly on this route.</p>
+
+<h2>Stop 1: Národní třída — Your morning starts here</h2>
+
+<p>Meet at Café Louvre, Národní 20, at 9:00. It's been here since 1902. Kafka sat here, so did Einstein. The lattes come in large white cups. The croissant isn't why you came, but the room is.</p>
+
+<p>Outside on Národní, a few steps toward the river, there's a small monument in a doorway: hands reaching from the wall. On November 17, 1989, students were beaten here by police — the beginning of the end for communist Czechoslovakia. A quiet memorial, almost too understated for what it marks.</p>
+
+<p>From there, walk Národní to the junction with Spálená, turn right onto Na Příkopě — Prague's main shopping strip. Not exactly thrilling (Zara, H&amp;M, Sephora), but if anyone in your group wants to shop, this is where to do it.</p>
+
+<h2>Stop 2: Pražský hrad — The Castle</h2>
+
+<p>Around 11:00, take Tram 22 from the Národní divadlo stop (two minutes on foot from Café Louvre). Four stops to Pohořelec, then walk downhill through Hradčany Square to the castle entrance.</p>
+
+<p>What you need to see:</p>
+
+<ul>
+  <li><strong>St. Vitus Cathedral</strong>: Romanesque and Gothic layered on top of each other outside; nearly dark inside until light comes through the Mucha windows. Free entry to the outer nave. For the inner nave and royal crypt: Combo Ticket B, 250 CZK.</li>
+  <li><strong>Old Royal Palace</strong>: The Vladislav Hall is one of the largest Gothic halls in Central Europe built without columns. It was also used for horse tournaments. The Riders' Staircase inside is wide enough for a horse — you can tell who the architecture was built for.</li>
+  <li><strong>Zlatá ulička (Golden Lane)</strong>: The colored houses were originally occupied by castle guards and craftsmen. Kafka wrote there for a period — his sister rented house No. 22 in the winter of 1916/17. Souvenir shops now, but the architecture is worth it.</li>
+</ul>
+
+<p>Allow 1.5 to 2 hours.</p>
+
+<h2>Stop 3: Zlaté schody &amp; Malá Strana — The descent</h2>
+
+<p>Leave the castle through the east portal and walk down Zlaté schody (Golden Steps). This is the quiet side — the one most tourists miss. A few flights of stairs, vineyard walls, and suddenly Malá Strana below you.</p>
+
+<p>At the bottom, turn left onto Nerudova. It's steep, cobblestoned, and winds down the castle hill. Almost every house has a historical sign above the entrance — the old house numbers in the form of symbols: a bear, a sun, three violins. Before street numbers, this was the system.</p>
+
+<p>At the foot of Nerudova lies Malostranské náměstí — the main square of Malá Strana. The baroque St. Nicholas Church dominates it; entry costs a little, but the interior is more theatrical than most opera houses. If you're hungry: U Malého Glena (Karmelitská 23) is not a tourist trap. Or for something quicker: Lokál Malá Strana, Míšeňská 12.</p>
+
+<h2>Stop 4: Karlův most — The Bridge</h2>
+
+<p>Charles Bridge is empty early in the morning or after 6pm. At 2pm, it isn't. That's the honest answer.</p>
+
+<p>Still: you have to cross it, because the view from the bridge is one of the best in Europe. The castle silhouette to the west, the domes of Malá Strana, then the towers of the Old Town when you turn around.</p>
+
+<p>The 30 baroque saint statues along the balustrade are copies — the originals are in the Lapidarium at Výstaviště Park, if you want to see the real ones. Worth it for anyone spending more than two days in Prague.</p>
+
+<p>Small tip: for 130 CZK you can climb the Old Town Bridge Tower — one of the most beautiful Gothic gate towers in Europe, and the view from the top down onto the bridge and the river is exceptional.</p>
+
+<h2>Stop 5: Staroměstské náměstí — Old Town Square</h2>
+
+<p>From the end of Charles Bridge it's five minutes on foot. Old Town Square is the most dramatic city square I know — and I know a few.</p>
+
+<p>The <strong>Orloj (Astronomical Clock)</strong> strikes on the hour. The display lasts about 45 seconds: a skeleton rings a bell, the twelve apostles rotate, a rooster crows. The crowd applauds. You can queue for it or simply happen to be there — the clock is reliable.</p>
+
+<p>The <strong>Old Town Hall Tower</strong> (250 CZK) gives you the best view over the Old Town rooftops. From here you see how Prague is built: concentric rings around the Church of Our Lady before Týn, Gothic towers next to Baroque domes next to Renaissance gables.</p>
+
+<p>What to avoid on the square: the restaurants with English menus right on the plaza. Go 50 meters into a side street instead — Lokál Dlouhá (Dlouhá 33) is perfect for dinner with a Pilsner Urquell.</p>
+
+<h2>Getting back</h2>
+
+<p>From Staroměstská metro it's two stops to Národní třída (Line B, green). You're back where you started. If the hotel has a sauna: now is exactly the right time.</p>
+
+<p>The full route is about 8 to 10 kilometers on foot. You'll climb stairs, walk uneven cobblestones, and probably stop somewhere and think: when am I coming back. That's normal.</p>
+
+<h2>What I tell my guests</h2>
+
+<p>Prague is beautiful but it's also dense. Not because of the distances — because of the stories. Every corner has one. You can't take it all in at once. One day gives you enough to understand why people come back.</p>
+
+<p>If you'd like, I can show you all of this in person — with the stories behind the sights, no rush, no group bus.</p>
+
+<div class="blog-cta-box">
+  <h3>Make the most of your day</h3>
+  <p>I'll take you through this route — in English, German, or Czech, at your own pace.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20City%20Tour#contact-title">Book a tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>
+</div>`,
+  },
 };

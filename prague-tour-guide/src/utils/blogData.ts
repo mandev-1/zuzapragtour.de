@@ -19,6 +19,30 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '31',
+    slug: 'one-day-in-prague-top-5-places',
+    slugDe: 'ein-tag-in-prag-fuenf-orte',
+    titleKey: 'blog.post31.title',
+    excerptKey: 'blog.post31.excerpt',
+    dateKey: 'blog.post31.date',
+    date: '2026-04-25',
+    image: '/images/best-tourguide-prag-thumbnail-early-2026.png',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
+    contentKey: 'blog.post31.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'one day in Prague', 'Prague itinerary', 'top 5 places Prague', 'Prague must see',
+      'Prague old town', 'Prague Castle', 'Charles Bridge', 'Mala Strana Prague',
+      'Narodni trida Prague', 'Prague walking tour', 'Prague day trip', 'best places Prague',
+    ],
+    tagsDe: [
+      'ein Tag in Prag', 'Prag Rundgang', 'Top 5 Orte Prag', 'Prag Sehenswürdigkeiten',
+      'Prag Altstadt', 'Prager Burg', 'Karlsbrücke', 'Malá Strana Prag',
+      'Národní třída Prag', 'Prag Stadtführung', 'Prag Tagesausflug', 'Prag Highlights',
+    ],
+    language: 'both',
+  },
+  {
     id: '30',
     slug: 'boat-tours-prague-vltava',
     slugDe: 'bootsfahrt-prag-moldau',

@@ -57,6 +57,18 @@
   </url>
 
   <url>
+    <loc>https://zuzapragtour.de/blog/ein-tag-in-prag-fuenf-orte</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuzapragtour.de/blog/ein-tag-in-prag-fuenf-orte" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuzapragtour.de/blog/one-day-in-prague-top-5-places" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuzapragtour.de/blog/ein-tag-in-prag-fuenf-orte" />
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/best-tourguide-prag-thumbnail-early-2026.png</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://zuzapragtour.de/blog/bootsfahrt-prag-moldau</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -65,7 +77,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://zuzapragtour.de/blog/boat-tours-prague-vltava" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zuzapragtour.de/blog/bootsfahrt-prag-moldau" />
     <image:image>
-      <image:loc>https://zuzapragtour.de/images/charles-bridge-hero-1200.jpg</image:loc>
+      <image:loc>https://zuzapragtour.de/images/blog-boat-prague.jpg</image:loc>
     </image:image>
   </url>
   <url>
