@@ -20,6 +20,7 @@ const TermsPage: React.FC = () => {
         <html lang={language} />
         <title>{title}</title>
         <meta name="description" content={desc} />
+        <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href={`${BRAND.domain}/terms`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />

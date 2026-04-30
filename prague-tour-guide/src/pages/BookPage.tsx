@@ -25,6 +25,7 @@ const BookPage: React.FC = () => {
         <html lang={language} />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
+        <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href={`${BRAND.domain}/book`} />
         <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/book`} />
         <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/book`} />

@@ -1285,8 +1285,8 @@ export const translations = {
     de: 'Prag Reiseblog',
   },
   'blog.subtitle': {
-    en: 'Tips, stories, and insights about exploring Prague',
-    de: 'Tipps, Geschichten und Einblicke über die Erkundung Prags',
+    en: 'Insider tips, guide knowledge, and travel information for Prague — from a certified Prague expert',
+    de: 'Insider-Tipps, Stadtführer-Wissen und Reiseinformationen für Prag — von einer zertifizierten Prag-Expertin',
   },
   'blog.cta.defaultTitle': {
     en: 'Ready to explore Prague?',

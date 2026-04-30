@@ -145,7 +145,7 @@ const BlogPostPage: React.FC = () => {
         />
         {/* DE is always canonical when a DE version exists. EN URL gets noindex. */}
         <link rel="canonical" href={canonicalUrl} />
-        {isEnUrlWithDe && <meta name="robots" content="noindex, follow" />}
+        {(isEnUrlWithDe || post.noindex) && <meta name="robots" content="noindex, follow" />}
         <link rel="alternate" hrefLang="en" href={enUrl} />
         {deUrl && <link rel="alternate" hrefLang="de" href={deUrl} />}
         {/* x-default points to DE when available — site primary language is German */}
@@ -281,7 +281,7 @@ const BlogPostPage: React.FC = () => {
         </section>
 
         <div
-          className={`mx-auto grid max-w-6xl gap-8 px-6 py-10 lg:items-start lg:gap-10 ${
+          className={`mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:items-start lg:gap-10 ${
             headings.length > 1
               ? 'lg:grid-cols-[220px_minmax(0,1fr)_280px]'
               : 'lg:grid-cols-[minmax(0,1fr)_280px]'

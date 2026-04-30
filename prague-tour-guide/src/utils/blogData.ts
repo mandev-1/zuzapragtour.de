@@ -10,6 +10,7 @@ export interface BlogPost {
   image: string;
   contentKey?: string; // For full blog post content
   ogImage?: string;
+  noindex?: boolean;
   author: string;
   tags: string[];
   tagsDe?: string[];
@@ -18,6 +19,26 @@ export interface BlogPost {
 
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
+  {
+    id: '34',
+    slug: 'tropfsteinwand-mala-strana-karlsbruecke-geheimtipps',
+    titleKey: 'blog.post34.title',
+    excerptKey: 'blog.post34.excerpt',
+    dateKey: 'blog.post34.date',
+    date: '2026-04-30',
+    image: '/images/blog-gardens-2.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
+    contentKey: 'blog.post34.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [],
+    tagsDe: [
+      'Tropfsteinwand Prag', 'Waldsteingarten Prag', 'Malá Strana Geheimtipps',
+      'Karlsbrücke Geheimtipps', 'Čertovka Prag', 'Bruncvík Statue Prag',
+      'Prag versteckte Orte', 'Prag unbekannte Sehenswürdigkeiten',
+      'Prag Insider Tipps', 'Waldstein Garten Prag', 'Kleinseite Prag Tipps',
+    ],
+    language: 'de',
+  },
   {
     id: '33',
     slug: 'was-kann-man-in-prag-machen',
@@ -121,6 +142,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post29.date',
     date: '2026-04-16',
     image: '/images/blog-gardens.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post29.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -144,6 +166,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post28.date',
     date: '2026-04-16',
     image: '/images/blog-gardens-2.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post28.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -167,6 +190,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post27.date',
     date: '2026-04-15',
     image: '/images/blog-night-prague-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post27.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -190,6 +214,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post26.date',
     date: '2026-04-14',
     image: '/images/blog-prague-money.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post26.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -213,6 +238,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post25.date',
     date: '2026-04-13',
     image: '/images/klementinum-library.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post25.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -250,6 +276,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post24.date',
     date: '2026-04-13',
     image: '/images/charles-bridge-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post24.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -283,6 +310,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post23.date',
     date: '2026-04-13',
     image: '/images/old-town-square.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post23.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -306,6 +334,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post22.date',
     date: '2026-04-13',
     image: '/images/atriumflora-b.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post22.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -329,6 +358,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post21.date',
     date: '2026-04-13',
     image: '/images/blog-secret-of-secrets-prague.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post21.content',
     author: 'Martin Man',
     tags: [
@@ -352,6 +382,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post20.date',
     date: '2026-01-15',
     image: '/images/blog-day-trips.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post20.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Day trips from Prague', 'Kutná Hora', 'Český Krumlov', 'Karlštejn', 'Terezín', 'Karlovy Vary', 'Konopiště', 'Czech castles', 'UNESCO Czech Republic', 'Prague excursions'],
@@ -367,6 +398,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post19.date',
     date: '2026-02-01',
     image: '/images/blog-prague-castle.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post19.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Prague Castle', 'St Vitus Cathedral', 'Golden Lane', 'Old Royal Palace', 'Prague Castle tour', 'Prague Castle tickets', 'Prague Castle opening hours', 'Visit Prague Castle'],
@@ -382,6 +414,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post18.date',
     date: '2026-02-15',
     image: '/images/blog-food-prague.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post18.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Prague food', 'Czech cuisine', 'Svíčková', 'Czech beer', 'Where to eat Prague', 'Prague restaurants', 'Prague food guide', 'Czech traditional food', 'Náplavka market'],
@@ -397,6 +430,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post17.date',
     date: '2026-03-01',
     image: '/images/blog-autumn-prague.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post17.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Autumn in Prague', 'Prague in fall', 'Prague October', 'Prague September', 'Signal Festival Prague', 'Prague foliage', 'Wine harvest Prague', 'Things to do Prague autumn'],
@@ -412,6 +446,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post16.date',
     date: '2026-03-15',
     image: '/images/blog-summer-prague.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post16.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Summer in Prague', 'Prague in summer', 'Prague June July August', 'Things to do Prague summer', 'Prague outdoor', 'Náplavka Prague', 'Prague beer garden', 'Prague summer events'],
@@ -427,6 +462,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post15.date',
     date: '2026-04-01',
     image: '/images/blog-spring-prague.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post15.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Spring in Prague', 'Prague in spring', 'Prague cherry blossoms', 'Petřín blossoms', 'Easter Prague', 'Prague March April May', 'Prague spring events', 'Prague Spring Festival'],
@@ -442,6 +478,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post14.date',
     date: '2025-10-26',
     image: '/images/blog-ots-terasa.png',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post14.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -489,6 +526,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post13.date',
     date: '2025-10-25',
     image: '/images/blog-winter-ots.png',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post13.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -524,6 +562,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post1.date',
     date: '2024-01-15',
     image: '/images/blog-best-time-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post1.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Travel Tips', 'Seasons', 'Planning'],
@@ -539,6 +578,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post2.date',
     date: '2024-01-08',
     image: '/images/blog-hidden-gems-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post2.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Hidden Gems', 'Local Tips', 'Off the Beaten Path'],
@@ -553,6 +593,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post3.date',
     date: '2024-01-01',
     image: '/images/blog-night-prague-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post3.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Night Tours', 'Prague Nightlife', 'Photography'],
@@ -562,11 +603,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: '4',
     slug: 'jewish-quarter-history-and-heritage',
+    slugDe: 'juedisches-viertel-prag-geschichte-und-erbe',
     titleKey: 'blog.post4.title',
     excerptKey: 'blog.post4.excerpt',
     dateKey: 'blog.post4.date',
     date: '2023-12-20',
     image: '/images/blog-jewish-quarter-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post4.content',
     author: 'Ing. Zuzana Manová',
     tags: ['History', 'Jewish Quarter', 'Culture'],
@@ -581,6 +624,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post5.date',
     date: '2025-10-12',
     image: '/images/charles-bridge-2-min.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post5.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Photography', 'Instagram', 'Viewpoints', 'Itinerary'],
@@ -590,11 +634,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: '6',
     slug: 'vaclav-havel-tour-prague',
+    slugDe: 'vaclav-havel-prag-spaziergang-der-freiheit',
     titleKey: 'blog.post6.title',
     excerptKey: 'blog.post6.excerpt',
     dateKey: 'blog.post6.date',
     date: '2025-10-18',
     image: '/images/blog-havel.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post6.content',
     author: 'Ing. Zuzana Manová',
     tags: ['History', 'Velvet Revolution', 'Culture', 'Havel'],
@@ -604,11 +650,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: '7',
     slug: 'klementinum-baroque-library-prague',
+    slugDe: 'klementinum-barock-bibliothek-prag',
     titleKey: 'blog.post7.title',
     excerptKey: 'blog.post7.excerpt',
     dateKey: 'blog.post7.date',
     date: '2025-10-18',
     image: '/images/klementinum-library.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post7.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Klementinum', 'Library', 'History', 'Old Town'],
@@ -623,6 +671,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post8.date',
     date: '2025-10-18',
     image: '/images/klementinum-tower.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post8.content',
     author: 'Ing. Zuzana Manová',
     tags: ['Klementinum', 'Astronomy', 'Views', 'Old Town'],
@@ -632,11 +681,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: '9',
     slug: 'what-to-do-in-prague-in-november-2025',
+    noindex: true,
     titleKey: 'blog.post9.title',
     excerptKey: 'blog.post9.excerpt',
     dateKey: 'blog.post9.date',
     date: '2025-10-16',
     image: '/images/old-town-square.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post9.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -669,6 +720,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post10.date',
     date: '2025-10-18',
     image: '/images/blog-gardens.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post10.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -702,11 +754,13 @@ export const blogPosts: BlogPost[] = [
   {
     id: '11',
     slug: 'strahov-monastery-prague',
+    slugDe: 'strahov-kloster-prag',
     titleKey: 'blog.post11.title',
     excerptKey: 'blog.post11.excerpt',
     dateKey: 'blog.post11.date',
     date: '2025-10-19',
     image: '/images/strahov-monastery.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post11.content',
     author: 'Ing. Zuzana Manová',
     tags: [
@@ -742,6 +796,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post12.date',
     date: '2025-10-19',
     image: '/images/blog-kafka.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post12.content',
     author: 'Ing. Zuzana Manová',
     tags: [

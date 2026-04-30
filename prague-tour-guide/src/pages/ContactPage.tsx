@@ -28,8 +28,8 @@ const ContactPage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Kontakt & Buchung — Prag Stadtführung | ZuzaPragTour'
-      : 'Contact & Booking — Prague Tour Guide | ZuzaPragTour';
+      ? 'Prag Führung anfragen – Zuzana Manová | ZuzaPragTour'
+      : 'Book a Prague Tour — Contact Zuzana Manová | ZuzaPragTour';
   const description =
     language === 'de'
       ? 'Kontaktieren Sie Zuzana zur Buchung Ihrer Prag-Tour. Rufen Sie an unter +420 721 231 933, WhatsApp oder E‑Mail. Schnelle Antwort innerhalb von 24 Stunden. Geführte Tour Prag für Deutsche – private Prag-Touren mit deutschem Guide.'

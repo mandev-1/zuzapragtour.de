@@ -11,14 +11,14 @@
 
 export const BRAND = {
   /** Human-readable site name shown in titles and schema */
-  siteName: 'Prag Kenner',
+  siteName: 'ZuzaPragTour',
 
   /** Root URL — no trailing slash */
-  domain: 'https://pragkenner.de',
+  domain: 'https://zuzapragtour.de',
 
   /** Schema.org @id anchors */
-  businessId: 'https://pragkenner.de/#business',
-  guideId:    'https://pragkenner.de/#guide',
+  businessId: 'https://zuzapragtour.de/#business',
+  guideId:    'https://zuzapragtour.de/#guide',
 
   /** Contact */
   personName:   'Ing. Zuzana Manová',
@@ -39,5 +39,5 @@ export const BRAND = {
   lng:     14.4378,
 
   /** Hero OG image (absolute URL) */
-  ogImage: 'https://pragkenner.de/images/charles-bridge-hero-1600.jpg',
+  ogImage: 'https://zuzapragtour.de/images/charles-bridge-hero-1600.jpg',
 } as const;
