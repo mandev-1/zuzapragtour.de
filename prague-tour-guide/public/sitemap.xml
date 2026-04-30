@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://zuzapragtour.de/blog</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -38,6 +38,15 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://zuzapragtour.de/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://zuzapragtour.de/images/blog-gardens-2.jpg</image:loc>
+    </image:image>
+  </url>
   <url>
     <loc>https://zuzapragtour.de/blog/was-kann-man-in-prag-machen</loc>
     <lastmod>2026-04-26</lastmod>
@@ -321,10 +330,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://zuzapragtour.de/blog/jewish-quarter-history-and-heritage</loc>
+    <loc>https://zuzapragtour.de/blog/juedisches-viertel-prag-geschichte-und-erbe</loc>
     <lastmod>2023-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuzapragtour.de/blog/juedisches-viertel-prag-geschichte-und-erbe" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuzapragtour.de/blog/jewish-quarter-history-and-heritage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuzapragtour.de/blog/juedisches-viertel-prag-geschichte-und-erbe" />
     <image:image>
       <image:loc>https://zuzapragtour.de/images/blog-jewish-quarter-min.jpg</image:loc>
     </image:image>
@@ -339,19 +351,25 @@
     </image:image>
   </url>
   <url>
-    <loc>https://zuzapragtour.de/blog/vaclav-havel-tour-prague</loc>
+    <loc>https://zuzapragtour.de/blog/vaclav-havel-prag-spaziergang-der-freiheit</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuzapragtour.de/blog/vaclav-havel-prag-spaziergang-der-freiheit" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuzapragtour.de/blog/vaclav-havel-tour-prague" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuzapragtour.de/blog/vaclav-havel-prag-spaziergang-der-freiheit" />
     <image:image>
       <image:loc>https://zuzapragtour.de/images/blog-havel.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://zuzapragtour.de/blog/klementinum-baroque-library-prague</loc>
+    <loc>https://zuzapragtour.de/blog/klementinum-barock-bibliothek-prag</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuzapragtour.de/blog/klementinum-barock-bibliothek-prag" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuzapragtour.de/blog/klementinum-baroque-library-prague" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuzapragtour.de/blog/klementinum-barock-bibliothek-prag" />
     <image:image>
       <image:loc>https://zuzapragtour.de/images/klementinum-library.jpg</image:loc>
     </image:image>
@@ -375,10 +393,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://zuzapragtour.de/blog/strahov-monastery-prague</loc>
+    <loc>https://zuzapragtour.de/blog/strahov-kloster-prag</loc>
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuzapragtour.de/blog/strahov-kloster-prag" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuzapragtour.de/blog/strahov-monastery-prague" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuzapragtour.de/blog/strahov-kloster-prag" />
     <image:image>
       <image:loc>https://zuzapragtour.de/images/strahov-monastery.jpg</image:loc>
     </image:image>

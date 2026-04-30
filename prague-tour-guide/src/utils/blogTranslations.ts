@@ -3714,6 +3714,120 @@ export const blogTranslations = {
 </div>`,
   },
 
+  'blog.post34.title': { en: 'The Stalactite Wall, Malá Strana & Charles Bridge: What the Guidebooks Skip', de: 'Tropfsteinwand, Malá Strana und Karlsbrücke: Was kein Reiseführer verrät' },
+  'blog.post34.excerpt': {
+    en: 'A Swedish art heist from 1648, a knight on a river pillar nobody notices, and a bridge whose foundation stone was laid at a minute calculated by astrologers — here\'s the walk nobody takes.',
+    de: 'Ein Kunstdiebstahl aus dem Jahr 1648, ein Ritter auf einem Flusspfeiler, den kaum jemand bemerkt, und eine Brücke, deren Grundstein auf die Minute genau von Astrologen berechnet wurde — hier ist der Spaziergang, den kaum jemand kennt.',
+  },
+  'blog.post34.date': { en: 'April 30, 2026', de: '30. April 2026' },
+  'blog.post34.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Ich führe Menschen durch Malá Strana, seitdem ich Führungen mache. Und trotzdem finde ich noch Dinge, die mich überraschen. Dieser Artikel ist für alle, die die Karlsbrücke schon kennen — und trotzdem noch nicht alles gesehen haben.</p>
+
+<h2>Der Waldsteingarten: ein Garten mit Kunstdiebstahlgeschichte</h2>
+
+<p>Der Waldsteingarten (Valdštejnská zahrada) liegt einen Steinwurf vom Malostranské náměstí entfernt und ist kostenlos zugänglich — was schon mal ein gutes Zeichen ist. Gebaut wurde er zwischen 1623 und 1630 für Albrecht von Wallenstein, einen der mächtigsten Feldherren des Dreißigjährigen Krieges und einen Mann, der offenbar keine halben Sachen mochte: Er ließ dafür 23 Häuser, drei Gärten und eine Ziegelei abreißen.</p>
+
+<p>Der Garten hat eine Sala terrena (ein offenes Gartenloggia-Gebäude mit Fresken), einen Teich, Pfauen, Eulen in Steinnischen und — die Hauptattraktion — die Tropfsteinwand.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-gardens-2.jpg" alt="Waldsteingarten Prag — Tropfsteinwand und Barockgarten in Malá Strana" loading="lazy" />
+  <figcaption class="image-credit">Der Waldsteingarten: einer der schönsten Barockgärten Prags — und kostenlos zugänglich.</figcaption>
+</figure>
+
+<h2>Die Tropfsteinwand: fake, aber trotzdem großartig</h2>
+
+<p>Die Tropfsteinwand ist eine lange Kunstfelsenwand aus Kalkstein und Tufstein, die eine natürliche Grotte imitiert. Sie ist komplett künstlich — das war auch so geplant. So etwas nennt man eine Grotte oder Rustika-Wand: ein Barocktrend, bei dem Gärten natürlich wirkende Felsformationen bekamen, obwohl kein einziger Stein dort gewachsen ist.</p>
+
+<p>In den Nischen der Wand leben echte Eulen. Nicht dekorativ — tatsächlich echte Eulen, die den Garten als Zuhause betrachten. Und am Boden davor: ein Pfau. Der Pfau hat keine Angst vor Touristen. Das lernt man schnell.</p>
+
+<p>Was die meisten Besucher nicht wissen: Die Bronzestatuen im Garten sind Kopien. Die Originale — eine Gruppe von Götter- und Heldenstatuen des niederländischen Bildhauers Adriaen de Vries, einem der bedeutendsten Künstler seiner Zeit — wurden 1648 von schwedischen Soldaten gestohlen. Sie kamen gegen Ende des Dreißigjährigen Krieges nach Prag, plünderten den Waldsteingarten und transportierten die Skulpturen nach Schweden. Heute stehen sie im Schlosspark von Drottningholm bei Stockholm.</p>
+
+<p>Die tschechische Seite hat mehrfach höflich um Rückgabe gebeten. Die Antwort war bisher freundlich und ergebnislos.</p>
+
+<h2>Čertovka: das Prager Venedig, das niemand so nennt</h2>
+
+<p>Verlassen Sie den Waldsteingarten und gehen Sie Richtung Karlsbrücke — aber nicht über die Brücke. Biegen Sie davor links ab auf die Cihelná, dann unter den Brückenbögen hindurch auf die Kampa-Insel.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/photo-guests-mala-strana.jpeg" alt="Malá Strana Prag — enge Gassen und Barockarchitektur in der Prager Kleinseite" loading="lazy" />
+  <figcaption class="image-credit">Malá Strana — das Viertel, das zwischen Karlsbrücke und Burgberg eingeklemmt ist und deshalb noch immer wie im 18. Jahrhundert aussieht.</figcaption>
+</figure>
+
+<p>Die Čertovka ist der schmale Kanal, der Kampa vom Rest von Malá Strana trennt. „Čert" heißt Teufel — der Kanal wurde nach einer legendär schlechtgelaunten Müllersfrau benannt, die früher am Ufer wohnte. Das Mühlenrad der Grand-Priory-Mühle dreht sich noch heute, angetrieben vom Wasser des Kanals.</p>
+
+<p>Technisches Detail für alle, die sowas mögen: Das Wasser für die Čertovka wird aus der Vltava über ein System von Wehren und Schleusen abgezweigt, das noch aus dem Mittelalter stammt. Das Wassergefälle ist gering, aber für Mahlzwecke ausreichend. Die Mühle ist seit dem 15. Jahrhundert dokumentiert.</p>
+
+<p>Vom Nordufer der Kampa aus — direkt unter den Bögen der Karlsbrücke — fotografiert man die Brücke von unten. Das ist der Winkel, den Touristen meistens verpassen, weil sie schon oben auf der Brücke stehen.</p>
+
+<h2>Bruncvík: der Ritter, den fast niemand sieht</h2>
+
+<p>Auf einem der Brückenpfeiler der Karlsbrücke, auf der Seite zur Kampa-Insel, steht eine kleine Statue auf einem Fels im Wasser: Bruncvík, ein legendärer böhmischer Ritter, der das Wappen von Prag trägt und ein Schwert hält.</p>
+
+<p>Er steht dort seit 1884 — ein Ersatz für eine gotische Statue, die bei einer Überschwemmung weggespült wurde. Das Schwert in seiner Hand ist laut Legende das magische Schwert, mit dem er einmal einen Löwen besiegte. Die andere Version der Legende besagt, das Schwert ist im Pfeiler verborgen und wird im Moment der größten Not Böhmens von allein auftauchen.</p>
+
+<p>Beide Versionen sind unwahrscheinlich. Trotzdem: Wer Bruncvík auf seinem Brückenpfeiler-Felsen übersieht, hat die Karlsbrücke nur halb gesehen.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/charles-bridge-pretty-picture.jpg" alt="Karlsbrücke Prag — historische Steinbrücke mit Barockstatuen über der Moldau" loading="lazy" />
+  <figcaption class="image-credit">Die Karlsbrücke hat 16 Bögen, 30 Statuen — und einen Ritter auf einem Flussfelsen, den fast niemand bemerkt.</figcaption>
+</figure>
+
+<h2>Der Grundstein: ein Datum, das kein Zufall ist</h2>
+
+<p>Der Grundstein der Karlsbrücke wurde am 9. Juli 1357 gelegt. Das klingt unspektakulär — bis man das Datum als Zahl schreibt: 1-3-5-7-9-7-5-3-1. Ein vollständiges Zahlenpalindrom. Und die Uhrzeit? 5:31 Uhr morgens.</p>
+
+<p>Das ist kein Zufall. Kaiser Karl IV. ließ den Termin von Astrologen berechnen, die glaubten, dass Zahlenpalindrome besondere Stabilität verleihen. Die Brücke sollte für die Ewigkeit gebaut sein — und tatsächlich steht sie heute noch, 670 Jahre später, und trägt täglich zehntausende Fußgänger.</p>
+
+<p>Die Vorgängerbrücke, die Judithbrücke aus dem 12. Jahrhundert, hatte das nicht so genau genommen und wurde 1342 von einer Flut zerstört. Mag Zufall sein. Oder auch nicht.</p>
+
+<h2>Johannes von Nepomuk: das Kreuz im Pflaster</h2>
+
+<p>Auf der Brücke, auf der Nordseite, gibt es eine kleine Bronzeplatte mit einem Kreuz im Pflaster. Das ist die Stelle, von der Johannes von Nepomuk am 20. März 1393 in die Moldau geworfen wurde — auf Befehl von König Wenzel IV.</p>
+
+<p>Johannes war Generalvikar des Erzbistums Prag und weigerte sich angeblich, dem König das Beichtgeheimnis der Königin zu verraten. Die Statue von Johannes auf der Brücke ist die älteste — von 1683, also früher als alle anderen dreißig. An der Plinthe gibt es zwei Bronzereliefs. Beide sind von so vielen Händen berührt worden, dass das Metall hochglänzend poliert ist. Angeblich bringt das Berühren Glück und garantiert die Rückkehr nach Prag.</p>
+
+<p>Ich sage meinen Gästen immer, dass das eine Legende ist. Und dann berühren sie es trotzdem alle.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/photo-guests-mala-strana-from-castle.jpeg" alt="Blick von der Prager Burg auf Malá Strana und die Karlsbrücke über die Moldau" loading="lazy" />
+  <figcaption class="image-credit">Von der Burg aus sieht man, wie sich alles zusammenfügt: Malá Strana, die Brücke, die Moldau — und irgendwo da unten Bruncvík auf seinem Felsen.</figcaption>
+</figure>
+
+<h2>Der beste Zeitpunkt</h2>
+
+<p>Früh morgens — vor 8:00 Uhr — ist der Waldsteingarten noch leer, die Brücke gehört fast Ihnen allein, und die Čertovka hat das beste Licht. Der Garten öffnet je nach Saison zwischen 7:30 und 10:00 Uhr.</p>
+
+<p>Abends nach 19:00 Uhr funktioniert auch gut: Die Brücke leert sich, die Lichtstimmung über dem Wasser ist außergewöhnlich, und die Eulen im Waldsteingarten sind aktiver.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/guest-photo-night.jpeg" alt="Prag bei Nacht — Beleuchtung der Prager Kleinseite und der Moldau" loading="lazy" />
+  <figcaption class="image-credit">Prag nach Einbruch der Dunkelheit — der Zeitpunkt, auf den es sich zu warten lohnt.</figcaption>
+</figure>
+
+<h2>Die Route</h2>
+
+<ol>
+  <li><strong>Waldsteingarten</strong> (Valdštejnská 14, Eintritt frei) — Tropfsteinwand, Eulen, Pfau, Kopien der gestohlenen de-Vries-Statuen</li>
+  <li><strong>Čertovka-Kanal &amp; Kampa-Insel</strong> — Mühlenrad, Blick von unten auf die Brückenbögen</li>
+  <li><strong>Bruncvík</strong> — Ritter auf dem Brückenpfeiler-Felsen, Südseite Kampa</li>
+  <li><strong>Karlsbrücke</strong> — Kreuz im Pflaster, Nepomuk-Bronzereliefs berühren, Palindromdatum im Kopf behalten</li>
+</ol>
+
+<p>Gesamtdistanz: ca. 2 km. Zeit: 1,5 bis 2 Stunden — je nachdem, wie lange man bei den Eulen bleibt. Länger als man plant, meistens.</p>
+
+<div class="blog-cta-box">
+  <h3>Mit jemandem, der die Geschichten kennt</h3>
+  <p>Ich führe Sie durch diese Route — mit den Details, die in keinem Reiseführer stehen, und ohne Gruppenbus.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Malá%20Strana%20Geheimtipps#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: '',
+  },
+
   'blog.post33.title': { en: 'What to Do in Prague: The Best Places', de: 'Was kann man in Prag machen? Die besten Orte und Aktivitäten' },
   'blog.post33.excerpt': {
     en: 'The best places and activities in Prague — from the castle to the river, from Czech beer culture to hidden neighborhoods.',
