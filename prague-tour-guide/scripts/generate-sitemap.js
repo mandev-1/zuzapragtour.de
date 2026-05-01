@@ -176,7 +176,7 @@ function generate() {
 
   const xml = parts.join('\n');
   fs.writeFileSync(SITEMAP_XML, xml, 'utf8');
-  console.log(`Sitemap updated with ${posts.length} blog posts -> ${path.relative(ROOT, SITEMAP_XML)}`);
+  console.log(`Sitemap updated with ${tourDefs.length} tours + ${posts.length} blog posts -> ${path.relative(ROOT, SITEMAP_XML)}`);
 }
 
 try {
