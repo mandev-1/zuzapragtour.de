@@ -50,8 +50,8 @@ const ToursPage: React.FC = () => {
 
   const description =
     language === 'de'
-      ? 'Deutschsprachige Prag-Touren mit zertifizierter Expertin: Prager Burg, Altstadt, Jüdisches Viertel oder individuelle Privattour. Spezialistin mit über 40 Jahren Erfahrung. Kleine Gruppen, persönlicher Service.'
-      : "Choose from Prague Castle tours, Old Town walking tours, Jewish Quarter explorations, or create your custom Prague experience. Small groups, certified expert guide, personalized service.";
+      ? 'Private Prag-Touren auf Deutsch mit Stadtführerin Zuzana Manová. Prager Burg, Altstadt & Jüdisches Viertel oder Privattour. Zertifizierte Expertin seit 1986.'
+      : 'Private Prague tours in German and English. Prague Castle, Old Town, Jewish Quarter or a custom route. Certified expert guide, small groups.';
 
   const keywords =
     language === 'de'
@@ -90,8 +90,8 @@ const ToursPage: React.FC = () => {
 
   const title =
     language === 'de'
-      ? 'Private Stadtführungen in Prag auf Deutsch | ZuzaPragTour'
-      : 'Private Prague Tours in German & English | ZuzaPragTour';
+      ? 'Prag Stadtführungen auf Deutsch | Zuza Prague Tours'
+      : 'Private Prague Tours – Expert Guide | Zuza Prague Tours';
 
   return (
     <>
