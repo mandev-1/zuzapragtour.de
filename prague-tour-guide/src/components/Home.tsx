@@ -11,7 +11,7 @@ const REVIEWS = [
   {
     de: {
       quote: 'Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.',
-      author: 'David M.',
+      author: 'Thomas K.',
       source: 'TripAdvisor',
     },
     en: {
@@ -23,7 +23,7 @@ const REVIEWS = [
   {
     de: {
       quote: 'Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen, und sie hält die Energie lebendig und mitreißend.',
-      author: 'Sarah Jenkins',
+      author: 'Monika H.',
       source: 'TourHQ Verifiziert',
     },
     en: {
@@ -35,7 +35,7 @@ const REVIEWS = [
   {
     de: {
       quote: 'Perfekt für unsere Familie. Sie hat es geschafft, die Kinder mit lokalen Legenden zu faszinieren, während sie den Erwachsenen eine Meisterklasse in böhmischer Geschichte gab.',
-      author: 'The Thompsons',
+      author: 'Familie Schneider',
       source: 'Private Buchung',
     },
     en: {

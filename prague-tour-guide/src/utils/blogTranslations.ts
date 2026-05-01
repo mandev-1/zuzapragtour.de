@@ -4317,4 +4317,128 @@ export const blogTranslations = {
 </div>
 </div>`,
   },
+
+  // ─── Post 35: Prague Visitor Pass — why it's not worth it ─────────────────
+  'blog.post35.title': {
+    en: '5 reasons the Prague Visitor Pass is not worth it',
+    de: '5 Gründe, warum sich der Prague Visitor Pass nicht lohnt',
+  },
+  'blog.post35.excerpt': {
+    en: 'I wrote a glowing review of the Prague Visitor Pass. Now the honest counterpoint: for most visitors — young travellers here for the vibe, and over-60s who already get half-price transport — the pass simply does not make sense.',
+    de: 'Ich habe einen positiven Artikel über den Prague Visitor Pass geschrieben. Jetzt die ehrliche Gegenseite: Für die meisten Besucher — junge Reisende, die wegen der Atmosphäre kommen, und Gäste über 60, die bereits halben Fahrpreis zahlen — macht der Pass keinen Sinn.',
+  },
+  'blog.post35.date': {
+    en: 'May 1, 2026',
+    de: '1. Mai 2026',
+  },
+  'blog.post35.content': {
+    en: `<div class="blog-content">
+<h2>5 reasons the Prague Visitor Pass is not worth it</h2>
+
+<p class="lead">A few weeks ago I published an article explaining <a href="/blog/prague-visitor-pass-honest-review">when the Prague Visitor Pass makes sense</a>. It does — for a specific kind of visitor. But after 40 years of guiding, I have to be equally honest about the other side: for most people who come to Prague, the pass is not a good fit. Here are five reasons why.</p>
+
+<h2>1. Young visitors are not here for museums</h2>
+
+<p>I see it every season. Young couples and friend groups arrive in Prague and they want Charles Bridge at sunrise, a glass of Moravian wine in a courtyard off Malá Strana, a proper espresso in one of the city's exceptional cafés, a walk through the castle district, maybe a beautiful piece of clothing from a boutique on Dlouhá or Pařížská. They are here for the city, not the institutions.</p>
+
+<p>The Prague Visitor Pass is built around museum and gallery entry. If you plan to visit the National Museum, all four National Gallery locations, the Jewish Quarter, Prague Castle's paid areas, and the Zoo — you will get value. But most young visitors to Prague do not do that itinerary. They would rather spend an afternoon in Vinohrady with coffee and conversation than work through a checklist of heritage sites.</p>
+
+<p>Prague has developed a quietly serious café culture over the last decade, and it rewards exploration far more than a city card does. If you are looking for exceptional coffee, I recommend the <a href="https://www.thewaytocoffee.com/prague-center/" target="_blank" rel="noopener noreferrer">The Way to Coffee Prague guide</a> and <a href="https://www.youtube.com/watch?v=Yjbyzj2K1Fg" target="_blank" rel="noopener noreferrer">this video on Prague's coffee scene</a>. You will spend a fraction of the Visitor Pass price and have a far better morning.</p>
+
+<h2>2. Prague's most beautiful things are free</h2>
+
+<p>Charles Bridge: free. Walking across it at 7 in the morning with mist on the Vltava: free. Old Town Square, the astronomical clock from below, the façades of Staré Město: free. The view from Letná park over the river: free. Malá Strana's streets, the Čertovka channel, the lane under the bridge tower: free. The basic Prague Castle courtyards: free.</p>
+
+<p>I am not dismissing the paid attractions — some are extraordinary. But the reason people fall in love with Prague is overwhelmingly the walkable, breathable city itself. The Visitor Pass adds nothing to that.</p>
+
+<h2>3. Over-60 visitors already get half-price public transport</h2>
+
+<p>More than two thirds of my clients are over 60 years old. Prague draws older, experienced travellers who appreciate history, architecture, and a slower pace — and this is a wonderful thing. But it also means the Visitor Pass numbers rarely work out for them.</p>
+
+<p>A 72-hour public transport pass in Prague costs <strong>340 CZK</strong> — around €14. Visitors over 60 pay <strong>170 CZK</strong>. That is three days of unlimited trams, metro, and buses for roughly €7. The Prague Visitor Pass, which bundles transport with attraction entry, starts significantly higher and rarely recovers the difference — especially since over-60 visitors already receive discounts at many individual attractions.</p>
+
+<p>For tickets, download the <strong>PID Lítačka</strong> app — the official Prague transport app, available in English. You can buy and validate tickets directly on your phone. No queuing at a machine, no paper to lose.</p>
+
+<h2>4. The pass only pays off if you are a serious museum visitor</h2>
+
+<p>I did the maths in my <a href="/blog/prague-visitor-pass-honest-review">earlier article</a>: the 72-hour pass at around 3,300 CZK requires a meaningful stack of paid attractions before it breaks even. If you genuinely want to visit the National Museum, the Alfons Mucha Museum, Prague Castle's palace interiors, at least one National Gallery location, and the Jewish Quarter — all within 72 hours — then yes, it can work.</p>
+
+<p>Most people are not that kind of visitor. Three days in Prague typically means one full sightseeing day, one half-day of wandering, and one day of eating, drinking, and shopping. That itinerary does not justify the pass.</p>
+
+<h2>5. There are better things to spend that money on</h2>
+
+<p>The 72-hour Visitor Pass costs roughly €130–140. That same money, spent differently in Prague, could be: a private walking tour with a local guide, two long lunches with wine in good restaurants, several evenings at a wine bar in Vinohrady, a beautiful piece of Czech glass or jewellery, or a proper tour of the city's exceptional coffee bars.</p>
+
+<p>Prague rewards spontaneity and depth of experience. A city card rewards quantity and coverage. Those are different travel philosophies — and the second one is not how most people actually enjoy this city.</p>
+
+<h2>Who should still get the pass</h2>
+
+<p>I do not want to be unfair to it. If you are staying four or five days, have a genuine appetite for museums and galleries, and are under 60, the maths can work in your favour. I explained exactly when in my <a href="/blog/prague-visitor-pass-honest-review">earlier article</a>. But for the majority of visitors I meet — young people here for the atmosphere, and older guests who already benefit from age discounts — the Prague Visitor Pass is genuinely hard for me to recommend.</p>
+
+<p>See the city. Drink good coffee. Walk slowly. You will not miss the pass.</p>
+
+<div class="blog-cta-box">
+  <h3>Let me show you Prague properly</h3>
+  <p>No checklist. No rushing between ticket queues. Just the city, the stories, and your pace.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20City%20Tour#contact-title">Book a tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>
+</div>`,
+    de: `<div class="blog-content">
+<h2>5 Gründe, warum sich der Prague Visitor Pass nicht lohnt</h2>
+
+<p class="lead">Vor einigen Wochen habe ich einen Artikel veröffentlicht, der erklärt, <a href="/blog/prague-visitor-pass-ehrliche-bewertung">wann sich der Prague Visitor Pass lohnt</a>. Das tut er — für einen bestimmten Reisenden. Aber nach 40 Jahren als Stadtführerin muss ich auch die andere Seite ehrlich benennen: Für die meisten Menschen, die nach Prag kommen, ist der Pass keine gute Wahl. Hier sind fünf Gründe.</p>
+
+<h2>1. Junge Besucher kommen nicht wegen der Museen</h2>
+
+<p>Ich sehe es jede Saison. Junge Paare und Freundesgruppen kommen nach Prag und wollen die Karlsbrücke im Morgengrauen, ein Glas mährischen Wein in einem Innenhof in Malá Strana, einen guten Espresso in einem der außergewöhnlichen Cafés der Stadt, einen Spaziergang durch das Burgviertel — vielleicht noch ein schönes Kleidungsstück aus einer Boutique in der Dlouhá oder Pařížská. Sie sind wegen der Stadt hier, nicht wegen der Institutionen.</p>
+
+<p>Der Prague Visitor Pass ist auf Museums- und Galerieeintritte ausgelegt. Wer das Nationalmuseum, alle vier Nationalgalerie-Standorte, das Jüdische Viertel, die kostenpflichtigen Bereiche der Prager Burg und den Zoo besuchen will — für den kann er sich lohnen. Aber die meisten jungen Besucher in Prag machen dieses Programm nicht. Sie verbringen einen Nachmittag lieber in Vinohrady mit Kaffee und Gesprächen als eine Liste von Kulturstätten abzuarbeiten.</p>
+
+<p>Prag hat in den letzten zehn Jahren eine ernstzunehmende Cafékultur entwickelt, die Erkundung weit mehr belohnt als eine Stadtkarte. Wer außergewöhnliche Cafés sucht, dem empfehle ich den <a href="https://www.thewaytocoffee.com/prague-center/" target="_blank" rel="noopener noreferrer">Prague-Guide von The Way to Coffee</a> und <a href="https://www.youtube.com/watch?v=Yjbyzj2K1Fg" target="_blank" rel="noopener noreferrer">dieses Video zur Prager Kaffeeszene</a>. Man gibt einen Bruchteil des Pass-Preises aus und hat einen weit schöneren Morgen.</p>
+
+<h2>2. Das Schönste in Prag ist kostenlos</h2>
+
+<p>Die Karlsbrücke: kostenlos. Um 7 Uhr morgens über sie gehen, mit Nebel über der Moldau: kostenlos. Altstädter Ring, die Astronomische Uhr von unten, die Fassaden der Altstadt: kostenlos. Der Blick vom Letná-Park über den Fluss: kostenlos. Die Gassen der Kleinseite, der Čertovka-Kanal, der Gang unter dem Brückenturm: kostenlos. Die Vorhöfe der Prager Burg: kostenlos.</p>
+
+<p>Ich sage damit nicht, dass die kostenpflichtigen Attraktionen nichts wert sind — manche sind außergewöhnlich. Aber der Grund, warum Menschen sich in Prag verlieben, ist fast immer die begehbare, atmende Stadt selbst. Der Visitor Pass fügt dem nichts hinzu.</p>
+
+<h2>3. Besucher über 60 bekommen den ÖPNV schon zum halben Preis</h2>
+
+<p>Mehr als zwei Drittel meiner Gäste sind über 60 Jahre alt. Prag zieht ältere, erfahrene Reisende an, die Geschichte, Architektur und ein ruhigeres Tempo zu schätzen wissen — das ist eine schöne Sache. Aber genau deshalb rechnet sich der Visitor Pass für sie selten.</p>
+
+<p>Eine 72-Stunden-Fahrkarte für Prags öffentliche Verkehrsmittel kostet <strong>340 CZK</strong> — rund 14 Euro. Besucher über 60 zahlen <strong>170 CZK</strong>. Das sind drei Tage unbegrenzte Straßenbahn-, U-Bahn- und Busfahrten für etwa 7 Euro. Der Prague Visitor Pass, der Transport mit Eintritten bündelt, kostet erheblich mehr — und die Differenz wird durch Ermäßigungen, die ältere Besucher an vielen Attraktionen sowieso erhalten, selten ausgeglichen.</p>
+
+<p>Für Tickets empfehle ich die App <strong>PID Lítačka</strong> herunterzuladen — die offizielle Prager ÖPNV-App, auf Englisch verfügbar. Tickets kaufen und entwerten direkt auf dem Smartphone. Kein Anstehen am Automaten, kein Papier, das man verlieren kann.</p>
+
+<h2>4. Der Pass lohnt sich nur für ernsthafte Museumsbesucher</h2>
+
+<p>Ich habe in meinem <a href="/blog/prague-visitor-pass-ehrliche-bewertung">früheren Artikel</a> nachgerechnet: Der 72-Stunden-Pass für rund 3.300 CZK erfordert eine beachtliche Anzahl bezahlter Attraktionen, bevor er sich rentiert. Wer wirklich das Nationalmuseum, das Alfons-Mucha-Museum, die Palasträume der Prager Burg, mindestens einen Nationalgalerie-Standort und das Jüdische Viertel besuchen möchte — alles innerhalb von 72 Stunden — dem kann er Sinn machen.</p>
+
+<p>Die meisten Besucher sind nicht dieser Typ. Drei Tage in Prag bedeuten für die meisten: ein voller Sightseeing-Tag, ein halber Tag zum Schlendern, ein Tag zum Essen, Trinken und Einkaufen. Dieses Programm rechtfertigt den Pass nicht.</p>
+
+<h2>5. Es gibt Besseres, wofür man dieses Geld ausgeben kann</h2>
+
+<p>Der 72-Stunden-Visitor-Pass kostet rund 130–140 Euro. Dieses Geld, anders in Prag verwendet: eine private Stadtführung mit einem lokalen Guide, zwei ausgedehnte Mittagessen mit Wein in guten Restaurants, mehrere Abende in einer Weinbar in Vinohrady, ein schönes Stück böhmisches Glas oder Schmuck — oder eine Runde durch die außergewöhnlichen Kaffeebars der Stadt.</p>
+
+<p>Prag belohnt Spontaneität und Erlebnistiefe. Eine Stadtkarte belohnt Quantität und Abdeckung. Das sind verschiedene Reisephilosophien — und die zweite ist nicht die Art, wie die meisten Menschen diese Stadt wirklich genießen.</p>
+
+<h2>Wer den Pass trotzdem holen sollte</h2>
+
+<p>Ich möchte nicht ungerecht sein. Wer vier oder fünf Tage bleibt, echtes Interesse an Museen und Galerien hat und unter 60 ist, kann durchaus auf seine Kosten kommen. Ich habe das in meinem <a href="/blog/prague-visitor-pass-ehrliche-bewertung">früheren Artikel</a> erklärt. Aber für die Mehrzahl der Gäste, die ich begleite — junge Menschen, die wegen der Atmosphäre der Stadt kommen, und ältere Besucher, die von Altersermäßigungen bereits profitieren — ist der Prague Visitor Pass ehrlich gesagt schwer zu empfehlen.</p>
+
+<p>Erleben Sie die Stadt. Trinken Sie guten Kaffee. Gehen Sie langsam. Den Pass werden Sie nicht vermissen.</p>
+
+<div class="blog-cta-box">
+  <h3>Ich zeige Ihnen Prag — richtig</h3>
+  <p>Keine Checkliste. Kein Hetzen von Ticketschlange zu Ticketschlange. Nur die Stadt, die Geschichten und Ihr Tempo.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20City%20Tour#contact-title">Tour buchen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+  },
 };

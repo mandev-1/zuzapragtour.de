@@ -20,6 +20,30 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '35',
+    slug: 'prague-visitor-pass-not-worth-it',
+    slugDe: 'prague-visitor-pass-lohnt-sich-nicht',
+    titleKey: 'blog.post35.title',
+    excerptKey: 'blog.post35.excerpt',
+    dateKey: 'blog.post35.date',
+    date: '2026-05-01',
+    image: '/images/charles-bridge-pretty-picture.jpg',
+    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
+    contentKey: 'blog.post35.content',
+    author: 'Ing. Zuzana Manová',
+    tags: [
+      'Prague Visitor Pass', 'Prague tourist card', 'Prague travel tips', 'Prague budget',
+      'Prague public transport', 'PID Litacka', 'Prague coffee', 'Prague wine',
+      'Prague over 60', 'Prague honest review',
+    ],
+    tagsDe: [
+      'Prague Visitor Pass', 'Prag Touristenkarte', 'Prag Reisetipps', 'Prag Budget',
+      'Prag öffentliche Verkehrsmittel', 'PID Lítačka', 'Prag Kaffee', 'Prag Wein',
+      'Prag über 60', 'Prag ehrliche Bewertung',
+    ],
+    language: 'both',
+  },
+  {
     id: '34',
     slug: 'tropfsteinwand-mala-strana-karlsbruecke-geheimtipps',
     titleKey: 'blog.post34.title',
