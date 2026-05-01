@@ -32,7 +32,7 @@ const ZuzanaManovaPage: React.FC = () => {
     '@type': 'Person',
     name: 'Ing. Zuzana Manová',
     givenName: 'Zuzana',
-    familyName: 'Manova',
+    familyName: 'Manová',
     honorificPrefix: 'Ing.',
     jobTitle: language === 'de' ? 'Deutschsprachige Prag-Expertin & zertifizierte Stadtführerin' : 'Certified Expert Tour Guide in Prague',
     description:

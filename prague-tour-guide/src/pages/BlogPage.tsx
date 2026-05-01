@@ -12,7 +12,7 @@ const BlogPage: React.FC = () => {
       ? 'Prag Reiseblog — Tipps & Geschichten | ZuzaPragTour'
       : 'Prague Travel Blog — Tips & Stories | ZuzaPragTour';
 
-  const description = language === 'de' ? t('blog.subtitle') : t('blog.subtitle');
+  const description = t('blog.subtitle');
   const keywords =
     language === 'de'
       ? 'Prag Blog, Prag Tipps, Prag Reiseführer, Prag Reise, Prag Insider, geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'

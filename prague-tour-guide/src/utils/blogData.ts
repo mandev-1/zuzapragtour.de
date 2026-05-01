@@ -360,7 +360,7 @@ export const blogPosts: BlogPost[] = [
     image: '/images/blog-secret-of-secrets-prague.jpg',
     ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post21.content',
-    author: 'Martin Man',
+    author: 'Ing. Zuzana Manová',
     tags: [
       'Dan Brown Prague', 'The Secret of Secrets', 'Dan Brown new book', 'Prague mysteries',
       'Prague alchemy', 'Rudolf II Prague', 'Prague coded history', 'Masonic Prague',

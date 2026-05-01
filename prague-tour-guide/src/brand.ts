@@ -11,7 +11,7 @@
 
 export const BRAND = {
   /** Human-readable site name shown in titles and schema */
-  siteName: 'ZuzaPragTour',
+  siteName: 'Zuza Prague Tours',
 
   /** Root URL — no trailing slash */
   domain: 'https://zuzapragtour.de',

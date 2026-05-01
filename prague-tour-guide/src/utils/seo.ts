@@ -27,7 +27,7 @@ export function getHomePageSchema() {
         description:
           'Expert and specialist tour guide service in Prague. German- and English-speaking certified guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Deutschsprachige Prag-Expertin Ing. Zuzana Manová since 1986.',
         url: BRAND.domain,
-        telephone: BRAND.phone,
+        telephone: BRAND.phoneRaw,
         email: BRAND.email,
         image: `${BRAND.domain}/images/zuzana-portrait.jpg`,
         address: {
@@ -60,7 +60,7 @@ export function getHomePageSchema() {
           'Professional Prague tour guide since 1986 with 40+ years of experience. Certified by the Czech Republic and accredited by the Jewish Museum in Prague.',
         url:       BRAND.domain,
         image:     `${BRAND.domain}/images/zuzana-portrait.jpg`,
-        telephone: BRAND.phone,
+        telephone: BRAND.phoneRaw,
         email:     BRAND.email,
         knowsLanguage: ['de', 'en', 'cs'],
         worksFor: { '@id': BRAND.businessId },

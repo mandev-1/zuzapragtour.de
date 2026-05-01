@@ -146,7 +146,7 @@ const BlogPostPage: React.FC = () => {
         {/* DE is always canonical when a DE version exists. EN URL gets noindex. */}
         <link rel="canonical" href={canonicalUrl} />
         {(isEnUrlWithDe || post.noindex) && <meta name="robots" content="noindex, follow" />}
-        <link rel="alternate" hrefLang="en" href={enUrl} />
+        {post.language !== 'de' && <link rel="alternate" hrefLang="en" href={enUrl} />}
         {deUrl && <link rel="alternate" hrefLang="de" href={deUrl} />}
         {/* x-default points to DE when available — site primary language is German */}
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />

@@ -61,7 +61,7 @@ const TourPage: React.FC = () => {
         <link rel="canonical" href={canonical} />
         <link rel="alternate" hrefLang="en" href={`${SITE}/tours/${tour.slug}`} />
         <link rel="alternate" hrefLang="de" href={`${SITE}/tours/${tour.slugDe}`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE}/tours/${tour.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`${SITE}/tours/${tour.slugDe}`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={canonical} />
