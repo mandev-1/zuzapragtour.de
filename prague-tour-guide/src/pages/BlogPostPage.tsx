@@ -169,7 +169,21 @@ const BlogPostPage: React.FC = () => {
             datePublished: post.date,
             dateModified: post.date,
             inLanguage: language,
-            author: { '@type': 'Person', name: post.author },
+            author: {
+              '@type': 'Person',
+              '@id': BRAND.guideId,
+              name: post.author,
+              url: `${BRAND.domain}/zuzana-manova`,
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': BRAND.businessId,
+              name: BRAND.siteName,
+              logo: {
+                '@type': 'ImageObject',
+                url: `${BRAND.domain}/images/zuzana-portrait.jpg`,
+              },
+            },
             image: jsonLdImage,
             mainEntityOfPage: {
               '@type': 'WebPage',
