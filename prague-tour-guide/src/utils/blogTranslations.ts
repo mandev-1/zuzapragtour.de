@@ -3726,7 +3726,7 @@ export const blogTranslations = {
 
 <h2>Der Waldsteingarten: ein Garten mit Kunstdiebstahlgeschichte</h2>
 
-<p>Der Waldsteingarten (Valdštejnská zahrada) liegt einen Steinwurf vom Malostranské náměstí entfernt und ist kostenlos zugänglich — was schon mal ein gutes Zeichen ist. Gebaut wurde er zwischen 1623 und 1630 für Albrecht von Wallenstein, einen der mächtigsten Feldherren des Dreißigjährigen Krieges und einen Mann, der offenbar keine halben Sachen mochte: Er ließ dafür 23 Häuser, drei Gärten und eine Ziegelei abreißen.</p>
+<p>Der <a href="https://prague.eu/cs/objevujte/valdstejnska-zahrada/" target="_blank" rel="noopener noreferrer">Waldsteingarten (Valdštejnská zahrada)</a> liegt einen Steinwurf vom Malostranské náměstí entfernt und ist kostenlos zugänglich — was schon mal ein gutes Zeichen ist. Gebaut wurde er zwischen 1623 und 1630 für Albrecht von Wallenstein, einen der mächtigsten Feldherren des Dreißigjährigen Krieges und einen Mann, der offenbar keine halben Sachen mochte: Er ließ dafür 23 Häuser, drei Gärten und eine Ziegelei abreißen.</p>
 
 <p>Der Garten hat eine Sala terrena (ein offenes Gartenloggia-Gebäude mit Fresken), einen Teich, Pfauen, Eulen in Steinnischen und — die Hauptattraktion — die Tropfsteinwand.</p>
 
@@ -3808,13 +3808,15 @@ export const blogTranslations = {
 <h2>Die Route</h2>
 
 <ol>
-  <li><strong>Waldsteingarten</strong> (Valdštejnská 14, Eintritt frei) — Tropfsteinwand, Eulen, Pfau, Kopien der gestohlenen de-Vries-Statuen</li>
+  <li><strong><a href="https://prague.eu/cs/objevujte/valdstejnska-zahrada/" target="_blank" rel="noopener noreferrer">Waldsteingarten</a></strong> (Valdštejnská 14, Eintritt frei) — Tropfsteinwand, Eulen, Pfau, Kopien der gestohlenen de-Vries-Statuen · <a href="https://www.senat.cz/informace/pro_verejnost/valdstejnska_zahrada/" target="_blank" rel="noopener noreferrer">Senát-Seite</a> · <a href="https://www.npu.cz/cs/hrady-a-zamky/tipy-na-vylet/17887-valdstejnska-zahrada" target="_blank" rel="noopener noreferrer">NPÚ-Eintrag</a></li>
   <li><strong>Čertovka-Kanal &amp; Kampa-Insel</strong> — Mühlenrad, Blick von unten auf die Brückenbögen</li>
   <li><strong>Bruncvík</strong> — Ritter auf dem Brückenpfeiler-Felsen, Südseite Kampa</li>
-  <li><strong>Karlsbrücke</strong> — Kreuz im Pflaster, Nepomuk-Bronzereliefs berühren, Palindromdatum im Kopf behalten</li>
+  <li><strong><a href="https://prague.eu/cs/objevujte/karluv-most/" target="_blank" rel="noopener noreferrer">Karlsbrücke</a></strong> — Kreuz im Pflaster, Nepomuk-Bronzereliefs berühren, Palindromdatum im Kopf behalten</li>
 </ol>
 
 <p>Gesamtdistanz: ca. 2 km. Zeit: 1,5 bis 2 Stunden — je nachdem, wie lange man bei den Eulen bleibt. Länger als man plant, meistens.</p>
+
+<p>Bewertungen und weitere Tipps zu diesen Orten finden Sie auf <a href="https://www.tripadvisor.com/Attractions-g274707-Activities-zfn7246866-Prague_Bohemia.html" target="_blank" rel="noopener noreferrer">TripAdvisor</a>.</p>
 
 <div class="blog-cta-box">
   <h3>Mit jemandem, der die Geschichten kennt</h3>
@@ -4351,13 +4353,18 @@ export const blogTranslations = {
 
 <p>I am not dismissing the paid attractions — some are extraordinary. But the reason people fall in love with Prague is overwhelmingly the walkable, breathable city itself. The Visitor Pass adds nothing to that.</p>
 
+<figure class="blog-inline-image">
+  <img src="/images/blog-secret-of-secrets-prague.jpg" alt="Prague old town — the streets and atmosphere that draw visitors back" loading="lazy" />
+  <figcaption class="image-credit">The city itself is the attraction. No pass required.</figcaption>
+</figure>
+
 <h2>3. Over-60 visitors already get half-price public transport</h2>
 
 <p>More than two thirds of my clients are over 60 years old. Prague draws older, experienced travellers who appreciate history, architecture, and a slower pace — and this is a wonderful thing. But it also means the Visitor Pass numbers rarely work out for them.</p>
 
 <p>A 72-hour public transport pass in Prague costs <strong>340 CZK</strong> — around €14. Visitors over 60 pay <strong>170 CZK</strong>. That is three days of unlimited trams, metro, and buses for roughly €7. The Prague Visitor Pass, which bundles transport with attraction entry, starts significantly higher and rarely recovers the difference — especially since over-60 visitors already receive discounts at many individual attractions.</p>
 
-<p>For tickets, download the <strong>PID Lítačka</strong> app — the official Prague transport app, available in English. You can buy and validate tickets directly on your phone. No queuing at a machine, no paper to lose.</p>
+<p>For tickets, download the <a href="https://pidlitacka.cz/en/pricing" target="_blank" rel="noopener noreferrer"><strong>PID Lítačka</strong></a> app — the official Prague transport app, available in English. You can buy and validate tickets directly on your phone. No queuing at a machine, no paper to lose. <a href="https://apps.apple.com/cz/app/pid-l%C3%ADta%C4%8Dka/id983071129" target="_blank" rel="noopener noreferrer">Download on the App Store.</a></p>
 
 <h2>4. The pass only pays off if you are a serious museum visitor</h2>
 
@@ -4370,6 +4377,11 @@ export const blogTranslations = {
 <p>The 72-hour Visitor Pass costs roughly €130–140. That same money, spent differently in Prague, could be: a private walking tour with a local guide, two long lunches with wine in good restaurants, several evenings at a wine bar in Vinohrady, a beautiful piece of Czech glass or jewellery, or a proper tour of the city's exceptional coffee bars.</p>
 
 <p>Prague rewards spontaneity and depth of experience. A city card rewards quantity and coverage. Those are different travel philosophies — and the second one is not how most people actually enjoy this city.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-food-prague.jpg" alt="Czech food in Prague — a long lunch with wine is a better use of your budget than a tourist pass" loading="lazy" />
+  <figcaption class="image-credit">A long lunch with wine in a good Prague restaurant. That is what €130 looks like when spent well.</figcaption>
+</figure>
 
 <h2>Who should still get the pass</h2>
 
@@ -4405,13 +4417,18 @@ export const blogTranslations = {
 
 <p>Ich sage damit nicht, dass die kostenpflichtigen Attraktionen nichts wert sind — manche sind außergewöhnlich. Aber der Grund, warum Menschen sich in Prag verlieben, ist fast immer die begehbare, atmende Stadt selbst. Der Visitor Pass fügt dem nichts hinzu.</p>
 
+<figure class="blog-inline-image">
+  <img src="/images/blog-secret-of-secrets-prague.jpg" alt="Prager Altstadt — die Gassen und Atmosphäre, die Besucher immer wieder zurückbringt" loading="lazy" />
+  <figcaption class="image-credit">Die Stadt selbst ist die Attraktion. Kein Pass nötig.</figcaption>
+</figure>
+
 <h2>3. Besucher über 60 bekommen den ÖPNV schon zum halben Preis</h2>
 
 <p>Mehr als zwei Drittel meiner Gäste sind über 60 Jahre alt. Prag zieht ältere, erfahrene Reisende an, die Geschichte, Architektur und ein ruhigeres Tempo zu schätzen wissen — das ist eine schöne Sache. Aber genau deshalb rechnet sich der Visitor Pass für sie selten.</p>
 
 <p>Eine 72-Stunden-Fahrkarte für Prags öffentliche Verkehrsmittel kostet <strong>340 CZK</strong> — rund 14 Euro. Besucher über 60 zahlen <strong>170 CZK</strong>. Das sind drei Tage unbegrenzte Straßenbahn-, U-Bahn- und Busfahrten für etwa 7 Euro. Der Prague Visitor Pass, der Transport mit Eintritten bündelt, kostet erheblich mehr — und die Differenz wird durch Ermäßigungen, die ältere Besucher an vielen Attraktionen sowieso erhalten, selten ausgeglichen.</p>
 
-<p>Für Tickets empfehle ich die App <strong>PID Lítačka</strong> herunterzuladen — die offizielle Prager ÖPNV-App, auf Englisch verfügbar. Tickets kaufen und entwerten direkt auf dem Smartphone. Kein Anstehen am Automaten, kein Papier, das man verlieren kann.</p>
+<p>Für Tickets empfehle ich die <a href="https://pidlitacka.cz/en/pricing" target="_blank" rel="noopener noreferrer"><strong>PID Lítačka</strong></a> App herunterzuladen — die offizielle Prager ÖPNV-App, auf Englisch verfügbar. Tickets kaufen und entwerten direkt auf dem Smartphone. Kein Anstehen am Automaten, kein Papier, das man verlieren kann. <a href="https://apps.apple.com/cz/app/pid-l%C3%ADta%C4%8Dka/id983071129" target="_blank" rel="noopener noreferrer">Im App Store herunterladen.</a></p>
 
 <h2>4. Der Pass lohnt sich nur für ernsthafte Museumsbesucher</h2>
 
@@ -4424,6 +4441,11 @@ export const blogTranslations = {
 <p>Der 72-Stunden-Visitor-Pass kostet rund 130–140 Euro. Dieses Geld, anders in Prag verwendet: eine private Stadtführung mit einem lokalen Guide, zwei ausgedehnte Mittagessen mit Wein in guten Restaurants, mehrere Abende in einer Weinbar in Vinohrady, ein schönes Stück böhmisches Glas oder Schmuck — oder eine Runde durch die außergewöhnlichen Kaffeebars der Stadt.</p>
 
 <p>Prag belohnt Spontaneität und Erlebnistiefe. Eine Stadtkarte belohnt Quantität und Abdeckung. Das sind verschiedene Reisephilosophien — und die zweite ist nicht die Art, wie die meisten Menschen diese Stadt wirklich genießen.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-food-prague.jpg" alt="Tschechisches Essen in Prag — ein ausgedehntes Mittagessen mit Wein ist sinnvoller als ein Touristenpass" loading="lazy" />
+  <figcaption class="image-credit">Ein ausgedehntes Mittagessen mit Wein in einem guten Prager Restaurant. So sehen 130 Euro aus, wenn man sie gut ausgibt.</figcaption>
+</figure>
 
 <h2>Wer den Pass trotzdem holen sollte</h2>
 

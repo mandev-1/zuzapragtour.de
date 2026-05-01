@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     dateKey: 'blog.post35.date',
     date: '2026-05-01',
     image: '/images/charles-bridge-pretty-picture.jpg',
-    ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
+    ogImage: '/images/blog-visitor-card-best-review-bad-product.png',
     contentKey: 'blog.post35.content',
     author: 'Ing. Zuzana Manová',
     tags: [
