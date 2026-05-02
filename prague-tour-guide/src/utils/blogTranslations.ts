@@ -3745,6 +3745,11 @@ export const blogTranslations = {
 
 <p>Die tschechische Seite hat mehrfach höflich um Rückgabe gebeten. Die Antwort war bisher freundlich und ergebnislos.</p>
 
+<figure class="blog-inline-image">
+  <img src="/images/blog-tropfsteinwand-zwei.png" alt="Tropfsteinwand Waldsteingarten Prag — Kunstfelsenwand mit Eulen in Malá Strana" loading="lazy" />
+  <figcaption class="image-credit">Die Tropfsteinwand aus der Nähe — inklusive der Eulen, die sich dort dauerhaft eingerichtet haben.</figcaption>
+</figure>
+
 <h2>Čertovka: das Prager Venedig, das niemand so nennt</h2>
 
 <p>Verlassen Sie den Waldsteingarten und gehen Sie Richtung Karlsbrücke — aber nicht über die Brücke. Biegen Sie davor links ab auf die Cihelná, dann unter den Brückenbögen hindurch auf die Kampa-Insel.</p>
