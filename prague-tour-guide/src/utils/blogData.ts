@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
     excerptKey: 'blog.post34.excerpt',
     dateKey: 'blog.post34.date',
     date: '2026-04-30',
-    image: '/images/blog-gardens-2.jpg',
+    image: '/images/blog-tropfsteinwand.png',
     ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post34.content',
     author: 'Ing. Zuzana Manová',
