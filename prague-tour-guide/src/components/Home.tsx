@@ -1,10 +1,10 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 import TripAdvisorWidget from './TripAdvisorWidget';
 import TourHqWidget from './TourHqWidget';
-
-const pub = (path: string) => `${process.env.PUBLIC_URL}${path}`;
 
 /* ─── Static review data ─────────────────────────────────────── */
 const REVIEWS = [
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover"
-            src={pub('/images/charles-bridge-hero-1600.jpg')}
+            src={'/images/charles-bridge-hero-1600.jpg'}
             alt={t('home.hero.imageAlt')}
             fetchPriority="high"
           />
@@ -173,7 +173,7 @@ const Home: React.FC = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/book#contact-title"
+                href="/book#contact-title"
                 className="flex items-center justify-center gap-2 rounded-md px-8 py-3 text-lg font-bold text-white shadow-lg shadow-[#6c0008]/20"
                 style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
               >
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
                 <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
               </Link>
               <Link
-                to="/tours"
+                href="/tours"
                 className="flex items-center justify-center rounded-md bg-white/80 backdrop-blur-md border border-[#e0bfbc]/30 text-[#1b1c1a] px-8 py-3 text-lg font-semibold hover:bg-white transition-all"
               >
                 {t('hero.exploreTours')}
@@ -194,7 +194,7 @@ const Home: React.FC = () => {
             <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#7b5800]/10 rounded-full blur-3xl" />
             <div className="relative z-10 bg-white p-4 rounded-xl shadow-2xl rotate-2 max-w-sm mx-auto">
               <img
-                src={pub('/images/zuzana-portrait.jpg')}
+                src={'/images/zuzana-portrait.jpg'}
                 alt="Zuzana Manová"
                 className="rounded-lg aspect-[4/5] object-cover w-full"
                 style={{ objectPosition: 'center 20%' }}
@@ -268,7 +268,7 @@ const Home: React.FC = () => {
                     {tour.desc}
                   </p>
                   <Link
-                    to={`/book?tour=${encodeURIComponent(tour.title)}#contact-title`}
+                    href={`/book?tour=${encodeURIComponent(tour.title)}#contact-title`}
                     className="text-[#6c0008] font-bold flex items-center gap-1 text-sm whitespace-nowrap"
                   >
                     {de ? 'Details' : 'Details'}
@@ -291,7 +291,7 @@ const Home: React.FC = () => {
               <div className="rounded-xl overflow-hidden aspect-[3/4] relative z-10 shadow-2xl bg-[#eae8e4]">
                 <img
                   className="w-full h-full object-cover"
-                  src={pub('/images/zuzana-portrait.jpg')}
+                  src={'/images/zuzana-portrait.jpg'}
                   alt="Zuzana Manová"
                   style={{ objectPosition: 'center 20%' }}
                   loading="lazy"
@@ -368,7 +368,7 @@ const Home: React.FC = () => {
             <div className="col-span-2 row-span-2 overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/guest-photo-tourguide.jpg')}
+                src={'/images/guest-photo-tourguide.jpg'}
                 alt="Zuzana with guests on a Prague tour"
                 loading="lazy"
               />
@@ -377,7 +377,7 @@ const Home: React.FC = () => {
             <div className="overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/guest-photo-night.jpeg')}
+                src={'/images/guest-photo-night.jpeg'}
                 alt="Prague at night"
                 loading="lazy"
               />
@@ -385,7 +385,7 @@ const Home: React.FC = () => {
             <div className="overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/guest-photo-food.jpeg')}
+                src={'/images/guest-photo-food.jpeg'}
                 alt="Czech food on a Prague tour"
                 loading="lazy"
               />
@@ -393,7 +393,7 @@ const Home: React.FC = () => {
             <div className="col-span-2 overflow-hidden relative group rounded-lg">
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src={pub('/images/blog-boat-prague.jpg')}
+                src={'/images/blog-boat-prague.jpg'}
                 alt="Boat on the Vltava river in Prague"
                 loading="lazy"
               />
@@ -465,7 +465,7 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden rounded-[1.5rem]">
             <img
               className="w-full h-full object-cover mix-blend-overlay"
-              src={pub('/images/prague-castle.jpg')}
+              src={'/images/prague-castle.jpg'}
               alt=""
               aria-hidden="true"
               loading="lazy"
@@ -483,13 +483,13 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/book#contact-title"
+                href="/book#contact-title"
                 className="bg-white text-[#6c0008] px-8 py-3 rounded-md text-base font-bold hover:bg-[#fbf9f5] transition-all shadow-xl"
               >
                 {t('hero.sendEnquiry')}
               </Link>
               <Link
-                to="/tours"
+                href="/tours"
                 className="bg-transparent border border-white/40 text-white px-8 py-3 rounded-md text-base font-bold hover:bg-white/10 transition-all"
               >
                 {t('hero.exploreTours')}

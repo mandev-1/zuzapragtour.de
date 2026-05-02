@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
@@ -35,7 +37,7 @@ const Blog: React.FC = () => {
               viewport={{ once: true }}
             >
               <Link
-                to={`/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`}
+                href={`/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`}
                 className="block"
               >
                 <div className="h-52 overflow-hidden">
@@ -46,7 +48,7 @@ const Blog: React.FC = () => {
                 <span className="mb-2 font-label text-sm font-medium text-secondary">{t(post.dateKey as any)}</span>
                 <h2 className="mb-3 font-headline text-xl text-on-surface">
                   <Link
-                    to={`/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`}
+                    href={`/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`}
                     className="hover:text-primary"
                   >
                     {t(post.titleKey as any)}
@@ -54,7 +56,7 @@ const Blog: React.FC = () => {
                 </h2>
                 <p className="mb-4 flex-1 text-sm leading-relaxed text-on-surface-variant">{t(post.excerptKey as any)}</p>
                 <Link
-                  to={`/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`}
+                  href={`/blog/${language === 'de' && (post as any).slugDe ? (post as any).slugDe : post.slug}`}
                   className="font-label font-semibold text-primary hover:underline"
                 >
                   {t('blog.readMore')} →
@@ -69,7 +71,7 @@ const Blog: React.FC = () => {
         <div className="mx-auto max-w-3xl px-8 text-center">
           <h2 className="mb-4 font-headline text-3xl">{t('cta.title')}</h2>
           <p className="mb-8 text-lg opacity-95">{t('cta.subtitle')}</p>
-          <Link to="/contact#contact-title" className="inline-block rounded-lg bg-secondary-container px-8 py-3 font-semibold text-on-secondary-container hover:opacity-95">
+          <Link href="/contact#contact-title" className="inline-block rounded-lg bg-secondary-container px-8 py-3 font-semibold text-on-secondary-container hover:opacity-95">
             {t('hero.contactMe')}
           </Link>
         </div>

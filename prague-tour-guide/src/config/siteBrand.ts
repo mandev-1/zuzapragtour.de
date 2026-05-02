@@ -2,6 +2,6 @@
 export type SiteBrand = 'zuza' | 'pragkenner';
 
 export const SITE_BRAND: SiteBrand =
-  process.env.REACT_APP_SITE_BRAND === 'pragkenner' ? 'pragkenner' : 'zuza';
+  process.env.NEXT_PUBLIC_SITE_BRAND === 'pragkenner' ? 'pragkenner' : 'zuza';
 
 export const isPragkennerSite = SITE_BRAND === 'pragkenner';

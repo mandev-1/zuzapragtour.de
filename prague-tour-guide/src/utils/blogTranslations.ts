@@ -9,8 +9,8 @@ export const blogTranslations = {
 
   // Post 30
   'blog.post30.title': {
-    en: 'Boating in Prague: The Best Boat Options on the Vltava',
-    de: 'Bootsfahrt in Prag: Die besten Bootsoptionen auf der Moldau',
+    en: 'Boat Trips in Prague on the Vltava',
+    de: 'Bootsfahrt in Prag: Was die Moldau bietet',
   },
   'blog.post30.excerpt': {
     en: 'From rented rowboats near Slovanský ostrov to evening dinner cruises with a view of the illuminated castle — the Vltava offers more on-water options than most visitors realise. A practical overview of what exists, what it costs, and what is actually worth doing.',
@@ -155,8 +155,8 @@ export const blogTranslations = {
 
   // Post 29
   'blog.post29.title': {
-    en: 'Three walled gardens in Malá Strana that most tourists walk straight past',
-    de: 'Drei ummauerte Gärten in der Prager Kleinseite, an denen fast alle vorbeigehen',
+    en: 'Three Hidden Gardens in Malá Strana',
+    de: 'Drei verborgene Gärten in Malá Strana',
   },
   'blog.post29.excerpt': {
     en: 'Vojanovy sady, the Palace Gardens below Prague Castle, and Wallenstein Garden are all within ten minutes of each other in Malá Strana. One is free and over 750 years old. One costs 80 crowns and gives you a view straight up to the castle. One belongs to the Senate and has a demon wall. Here is how to visit all three.',
@@ -275,8 +275,8 @@ export const blogTranslations = {
 
   // Post 28
   'blog.post28.title': {
-    en: 'Wallenstein Garden: Prague\'s strangest baroque park (and it\'s free)',
-    de: 'Waldsteingarten Prag: Tropfsteinwand, gestohlene Skulpturen und der tschechische Senat',
+    en: 'Wallenstein Garden: Prague\'s Baroque Secret',
+    de: 'Waldsteingarten Prag: Tropfsteinwand & Barock',
   },
   'blog.post28.excerpt': {
     en: 'Hidden behind a gate in Malá Strana, Wallenstein Garden is one of Prague\'s most overlooked spaces — a 400-year-old baroque park with demon-faced grottos, sculptures stolen to Sweden, and a very unusual owner.',
@@ -383,8 +383,8 @@ export const blogTranslations = {
 
   // Post 27
   'blog.post27.title': {
-    en: 'Prague public transport: tickets, apps, and what actually works',
-    de: 'Öffentlicher Verkehr in Prag: Tickets, Apps und was wirklich funktioniert',
+    en: 'Prague Public Transport: Tickets & Apps',
+    de: 'Öffentlicher Verkehr Prag: Tickets & Apps',
   },
   'blog.post27.excerpt': {
     en: 'Trams, metro, buses: one ticket system, but several ways to pay. Here is how to buy fares without stress, which app locals use first, and where to double-check prices before you travel.',
@@ -553,8 +553,8 @@ export const blogTranslations = {
 
   // Post 26
   'blog.post26.title': {
-    en: 'How to get Czech crowns in Prague: Revolut, ATMs, and the scams to avoid',
-    de: 'Geld wechseln in Prag: Revolut, Bankautomaten und die Fallen, die Sie kennen sollten',
+    en: 'Czech Crowns in Prague: Revolut & ATMs',
+    de: 'Geld wechseln Prag: Revolut & Bankautomaten',
   },
   'blog.post26.excerpt': {
     en: 'The Czech Republic uses its own currency — not euros. Here is how to get Czech crowns at a fair rate, why Revolut is the best tool for the job, and which exchange traps to walk straight past.',
@@ -710,8 +710,8 @@ export const blogTranslations = {
 
   // Post 24 (new)
   'blog.post24.title': {
-    en: 'How to choose the right Prague tour guide for you',
-    de: 'So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis',
+    en: 'How to Choose the Right Prague Tour Guide',
+    de: 'Den richtigen Prag-Stadtführer finden',
   },
   'blog.post24.excerpt': {
     en: 'A friendly, honest guide to finding the perfect guide – what to look for, what to ask, and how to make your Prague visit truly personal.',
@@ -870,8 +870,8 @@ export const blogTranslations = {
 
   // Post 25 (new)
   'blog.post25.title': {
-    en: 'Every museum in Prague worth your time (and a few that are not)',
-    de: 'Alle Museen in Prag, die sich lohnen (und ein paar, die es nicht tun)',
+    en: 'Prague Museums: Which Are Worth Your Time?',
+    de: 'Prager Museen: Welche lohnen sich wirklich?',
   },
   'blog.post25.excerpt': {
     en: 'An honest, exhaustive list of Prague museums with ticket links, prices, and which ones the Visitor Pass covers.',
@@ -1378,12 +1378,12 @@ export const blogTranslations = {
 
   // Post 14 (Top places to visit right now)
   'blog.post14.title': {
-    en: 'Top Places to Visit in Prague Right Now (2025): Icons, Parks, Art, and Nightlife',
-    de: 'Top‑Orte, die Sie jetzt in Prag besuchen sollten (2025): Ikonen, Parks, Kunst & Nachtleben',
+    en: 'Top Places to Visit in Prague (2025)',
+    de: 'Top-Orte in Prag 2025: Was Sie sehen müssen',
   },
   'blog.post14.excerpt': {
-    en: 'From Charles Bridge and Old Town Square to Petřín Gardens, Riegrovy Sady, the National Gallery, and rooftop bars—here’s where to go in Prague right now, with practical tips for 2025 days and nights.',
-    de: 'Von Karlsbrücke und Altstädter Ring über Petřín‑Gärten, Riegrovy Sady, die Nationalgalerie bis zu Rooftop‑Bars—hier geht’s 2025 in Prag hin, mit praktischen Tages‑ und Abendtipps.',
+    en: 'From Charles Bridge and Old Town Square to Petřín Gardens, Riegrovy Sady, the National Gallery, and rooftop bars—here\'s where to go in Prague right now, with practical tips for 2025 days and nights.',
+    de: 'Von Karlsbrücke und Altstädter Ring über Petřín‑Gärten, Riegrovy Sady, die Nationalgalerie bis zu Rooftop‑Bars—hier geht\'s 2025 in Prag hin, mit praktischen Tages‑ und Abendtipps.',
   },
   'blog.post14.date': {
     en: 'October 26, 2025',
@@ -1391,7 +1391,7 @@ export const blogTranslations = {
   },
   'blog.post14.content': {
     en: `<h2>Top Places to Visit in Prague Right Now (2025)</h2>
-<p class=”lead”>Prague works at any hour. Sunrise on <strong>Charles Bridge</strong>, quiet lawns in <strong>Petřín Gardens</strong>, design museums when it rains, glowing rooftops after dark. I always tell guests: plan your day by the light, not by a checklist. Here’s how I’d do it now.</p>
+<p class=”lead”>Prague works at any hour. Sunrise on <strong>Charles Bridge</strong>, quiet lawns in <strong>Petřín Gardens</strong>, design museums when it rains, glowing rooftops after dark. I always tell guests: plan your day by the light, not by a checklist. Here's how I'd do it now.</p>
 
 <h3>A few practical notes before you start</h3>
 <ul>
@@ -1403,10 +1403,10 @@ export const blogTranslations = {
 <hr />
 <h2>1) The Classics — Worth It, If You Time Them Right</h2>
 <h3>Charles Bridge (Karlův most)</h3>
-<p>The bridge at blue hour is something I never get tired of showing people. Come early to see <strong>statues, towers, and castle views</strong> without the midday crowds. From the <em>Old Town Bridge Tower</em> side, look toward the Castle for that long diagonal of arches and spires. It’s the photograph everyone takes for a reason.</p>
+<p>The bridge at blue hour is something I never get tired of showing people. Come early to see <strong>statues, towers, and castle views</strong> without the midday crowds. From the <em>Old Town Bridge Tower</em> side, look toward the Castle for that long diagonal of arches and spires. It's the photograph everyone takes for a reason.</p>
 
 <h3>Old Town Square (Staroměstské náměstí)</h3>
-<p>At the northwest corner, the <strong>Astronomical Clock</strong> performs on the hour. Early mornings give you pastel façades and soft light on the cobblestones. Late evenings are just as good. Wander the side lanes — Ungelt courtyard, Týn Church, the passages toward <em>Pařížská</em> are all within a few minutes’ walk.</p>
+<p>At the northwest corner, the <strong>Astronomical Clock</strong> performs on the hour. Early mornings give you pastel façades and soft light on the cobblestones. Late evenings are just as good. Wander the side lanes — Ungelt courtyard, Týn Church, the passages toward <em>Pařížská</em> are all within a few minutes' walk.</p>
 
 <h3>Prague Castle Courtyards & St. Vitus Vistas</h3>
 <p>The courtyards are free to enter. Late afternoon is my preferred time, when the city below turns amber. The <strong>III. Courtyard</strong> frames St. Vitus Cathedral beautifully; the South Gardens give you a long sweep of rooftops and the river. Walk down through <em>Lesser Town</em> to Kampa to finish it properly.</p>
@@ -1414,10 +1414,10 @@ export const blogTranslations = {
 <hr />
 <h2>2) Green Spaces Worth Seeking Out</h2>
 <h3>Petřín Gardens (Petřínské sady)</h3>
-<p>Petřín is Prague’s gentle hillside — orchards, viewpoints, winding paths. Near the Lookout Tower you get <strong>castle-and-river panoramas</strong> that work in every season. Spring blossoms, summer shade, autumn gold, winter stillness. It connects easily to Strahov and the Castle ridge.</p>
+<p>Petřín is Prague's gentle hillside — orchards, viewpoints, winding paths. Near the Lookout Tower you get <strong>castle-and-river panoramas</strong> that work in every season. Spring blossoms, summer shade, autumn gold, winter stillness. It connects easily to Strahov and the Castle ridge.</p>
 
 <h3>Riegrovy Sady (Vinohrady)</h3>
-<p>Locals come here for <strong>sunset views</strong> toward the Castle. The meadow on the western edge has that famous skyline. Bring a picnic or use it as a starting point before heading into Vinohrady’s cafés and beer spots.</p>
+<p>Locals come here for <strong>sunset views</strong> toward the Castle. The meadow on the western edge has that famous skyline. Bring a picnic or use it as a starting point before heading into Vinohrady's cafés and beer spots.</p>
 
 <h3>Letná Park (Letenské sady)</h3>
 <p>From the old “Stalin” lookout you get <strong>several bridges in one frame</strong>. Photographers love the blue-hour light trails; families love the open paths. Good for any viewpoint day.</p>
@@ -1428,10 +1428,10 @@ export const blogTranslations = {
 <hr />
 <h2>3) Art, Design, and What to Do When It Rains</h2>
 <h3>National Gallery Prague (Trade Fair Palace)</h3>
-<p>For modern and contemporary art, the <strong>Trade Fair Palace</strong> (Veletržní palác) is the right choice. Big spaces, good rotating exhibitions. Plan 90 to 120 minutes, check what’s showing before you go.</p>
+<p>For modern and contemporary art, the <strong>Trade Fair Palace</strong> (Veletržní palác) is the right choice. Big spaces, good rotating exhibitions. Plan 90 to 120 minutes, check what's showing before you go.</p>
 
 <h3>Museum of Decorative Arts (Uměleckoprůmyslové museum)</h3>
-<p>One thing I love about this museum: it covers <strong>design, photography, glass, posters, and fashion</strong> all in one building, and it’s always well laid out. Easy to combine with the riverbank and the Old Town loop.</p>
+<p>One thing I love about this museum: it covers <strong>design, photography, glass, posters, and fashion</strong> all in one building, and it's always well laid out. Easy to combine with the riverbank and the Old Town loop.</p>
 
 <h3>Rudolfinum & DOX (worth knowing about)</h3>
 <p><strong>Rudolfinum</strong> runs art exhibitions beside the Philharmonic; <strong>DOX</strong> in Holešovice focuses on architecture and contemporary work. Both are good wet-weather options.</p>
@@ -1463,14 +1463,14 @@ export const blogTranslations = {
 </ul>
 
 <h3>Cocktails and Rooftop Ideas</h3>
-<p>Beyond Terasa U Prince, there are good hotel rooftops, river-view lounges, and a handful of proper speakeasies scattered through the centre. Casual-smart is the right dress code. Bar staff appreciate punctuality if you’ve reserved.</p>
+<p>Beyond Terasa U Prince, there are good hotel rooftops, river-view lounges, and a handful of proper speakeasies scattered through the centre. Casual-smart is the right dress code. Bar staff appreciate punctuality if you've reserved.</p>
 
 <h3>Craft Beer and Classic Pubs</h3>
-<p>Czech beer is serious here, and I mean that as a compliment. Explore <strong>rotating taps from microbreweries</strong>, seasonal styles, and tasting flights. Around <em>Vinohrady and Žižkov</em> you’ll find places that work for both beginners and people who actually read tap lists. Food is usually simple: cheese, pickled things, something hearty nearby.</p>
+<p>Czech beer is serious here, and I mean that as a compliment. Explore <strong>rotating taps from microbreweries</strong>, seasonal styles, and tasting flights. Around <em>Vinohrady and Žižkov</em> you'll find places that work for both beginners and people who actually read tap lists. Food is usually simple: cheese, pickled things, something hearty nearby.</p>
 
 <div class="blog-cta-box">
   <h3>Plan a Night Out That Fits You</h3>
-  <p>Tell me your vibe—rooftop views, speakeasy tasting, or a craft‑beer loop—and I’ll map a safe, walkable route with reservations and last‑tram timing.</p>
+  <p>Tell me your vibe—rooftop views, speakeasy tasting, or a craft‑beer loop—and I'll map a safe, walkable route with reservations and last‑tram timing.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Custom%20Private%20Tour#contact-title">Book a private night tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Ask for recommendations</a>
@@ -1489,7 +1489,7 @@ export const blogTranslations = {
 <p>A classic stretch for photographers: good facades, tram lines, and the Castle sitting above the Philharmonic roof.</p>
 
 <hr />
-<h2>7) How I’d Put a Day Together</h2>
+<h2>7) How I'd Put a Day Together</h2>
 <ul>
   <li><strong>Sunrise:</strong> Charles Bridge, then a wander through the Old Town lanes</li>
   <li><strong>Late morning:</strong> Petřín or Letná for views</li>
@@ -1507,12 +1507,12 @@ export const blogTranslations = {
 </ul>
 
 <div class="did-you-know"><h4>Further Resources</h4>
-  <p>For what’s on right now, the most reliable sources are local media event calendars and community threads updated through 2025.</p>
+  <p>For what's on right now, the most reliable sources are local media event calendars and community threads updated through 2025.</p>
 </div>
 
 <div class="blog-cta-box">
-  <h3>Want a plan built around today’s weather and your energy?</h3>
-  <p>I’ll put together a <strong>walkable day-to-night route</strong> — landmarks, parks, a museum stop if the weather calls for it, and a proper finish on a rooftop or in a good pub. Timed to the light and your pace.</p>
+  <h3>Want a plan built around today's weather and your energy?</h3>
+  <p>I'll put together a <strong>walkable day-to-night route</strong> — landmarks, parks, a museum stop if the weather calls for it, and a proper finish on a rooftop or in a good pub. Timed to the light and your pace.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Custom%20Private%20Tour#contact-title">Book a custom private tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Contact me</a>
@@ -1679,7 +1679,7 @@ export const blogTranslations = {
   },
   'blog.post1.content': {
     en: `<h2>When Is the Best Time to Visit Prague?</h2>
-<p>People ask me this constantly, and my honest answer: every season has something real going for it. It depends what you’re after. <strong>Spring</strong> is quieter and the light is beautiful. <strong>Summer</strong> is busy but the evenings are long. <strong>Autumn</strong> is probably my personal favourite. <strong>Winter</strong> gets cold but the Christmas markets are genuinely worth it.</p>
+<p>People ask me this constantly, and my honest answer: every season has something real going for it. It depends what you're after. <strong>Spring</strong> is quieter and the light is beautiful. <strong>Summer</strong> is busy but the evenings are long. <strong>Autumn</strong> is probably my personal favourite. <strong>Winter</strong> gets cold but the Christmas markets are genuinely worth it.</p>
 <h3>Spring (March–May)</h3>
 <ul>
   <li>Cherry blossoms on Petřín in April, and quiet mornings on <a href="/tours">Charles Bridge</a> before the tour groups arrive</li>
@@ -1702,7 +1702,7 @@ export const blogTranslations = {
   <li><strong>Christmas markets</strong> on Old Town Square and the Castle district — not to be missed</li>
   <li>Snow-dusted courtyards are almost empty. Good for museums and warm cafés between walks.</li>
 </ul>
-<p class="lead">Want a seasonal private route that works around when you’re actually here? <a href="/contact#contact-title">Contact me</a> and I’ll plan something that fits your time and interests.</p>`,
+<p class="lead">Want a seasonal private route that works around when you're actually here? <a href="/contact#contact-title">Contact me</a> and I'll plan something that fits your time and interests.</p>`,
     de: `<h2>Wann ist die beste Reisezeit für Prag?</h2>
 <p>Diese Frage bekomme ich ständig, und meine ehrliche Antwort: Jede Jahreszeit hat etwas Echtes zu bieten. Es kommt darauf an, was Sie suchen. <strong>Frühling</strong> ist ruhiger und das Licht ist schön. <strong>Sommer</strong> ist belebter, aber die Abende sind lang. <strong>Herbst</strong> ist persönlich mein Favorit. <strong>Winter</strong> ist kalt, aber die Weihnachtsmärkte sind es wirklich wert.</p>
 <h3>Frühling (März–Mai)</h3>
@@ -1732,8 +1732,8 @@ export const blogTranslations = {
 
   // Post 2 (Hidden Gems) — abbreviated header and excerpt; content intact in base file previously
   'blog.post2.title': {
-    en: 'Hidden Gems of Prague: Realistic, Walkable, Beautiful',
-    de: 'Prag Geheimtipps: Realistisch, begehbar, schön',
+    en: 'Hidden Gems of Prague: Realistic & Walkable',
+    de: 'Prag Geheimtipps: Realistisch & schön',
   },
   'blog.post2.excerpt': {
     en: 'A walkable selection of courtyards, gardens, and cafés that feel truly local—without racing across the city.',
@@ -1807,7 +1807,7 @@ export const blogTranslations = {
   },
   'blog.post3.content': {
     en: `<h2>Prague After Dark</h2>
-<p>The city changes completely at night. The tour groups leave, the light softens, and suddenly <strong>the bridges, the church facades, and the cobblestones</strong> look the way they do in films. I’ve been walking these routes at night for decades and I still find things to notice.</p>
+<p>The city changes completely at night. The tour groups leave, the light softens, and suddenly <strong>the bridges, the church facades, and the cobblestones</strong> look the way they do in films. I've been walking these routes at night for decades and I still find things to notice.</p>
 <h3>The Hour Before Dark</h3>
 <ul>
   <li>Charles Bridge silhouettes and Vltava reflections — best just before the lights come on fully</li>
@@ -1818,7 +1818,7 @@ export const blogTranslations = {
   <li>Lesser Town lanterns and the quiet alleys behind Malostranské náměstí — a different place after 21:00</li>
   <li>Old Town architectural details in soft light that daytime visitors miss entirely</li>
 </ul>
-<p class="lead">Book a private <a href="/tours">night tour</a> — I’ll show you the viewpoints worth the walk and the photo spots that aren’t on any list yet.</p>`,
+<p class="lead">Book a private <a href="/tours">night tour</a> — I'll show you the viewpoints worth the walk and the photo spots that aren't on any list yet.</p>`,
     de: `<h2>Prag nach Einbruch der Dunkelheit</h2>
 <p>Die Stadt verändert sich völlig bei Nacht. Die Reisegruppen gehen, das Licht wird weicher, und plötzlich sehen <strong>die Brücken, die Kirchenfassaden und das Kopfsteinpflaster</strong> aus wie im Film. Ich laufe diese Routen seit Jahrzehnten nachts und entdecke immer noch etwas Neues.</p>
 <h3>Die Stunde vor der Dunkelheit</h3>
@@ -1840,7 +1840,7 @@ export const blogTranslations = {
     de: 'Das Jüdische Viertel: Geschichte und Erbe',
   },
   'blog.post4.excerpt': {
-    en: "Explore the rich history of Prague's Jewish Quarter, one of Europe’s most significant Jewish heritage sites...",
+    en: "Explore the rich history of Prague's Jewish Quarter, one of Europe's most significant Jewish heritage sites...",
     de: 'Erkunden Sie die reiche Geschichte des Prager Jüdischen Viertels, einer der bedeutendsten jüdischen Stätten Europas...',
   },
   'blog.post4.date': {
@@ -1849,14 +1849,14 @@ export const blogTranslations = {
   },
   'blog.post4.content': {
     en: `<h2>The Jewish Quarter: Memory and History</h2>
-<p>Josefov is one of the most important Jewish heritage sites in Europe, and it’s also one of the places where I feel the weight of guiding most strongly. I hold a <em>special certification</em> for this area, and I take the responsibility seriously — both the history and the way it’s told.</p>
+<p>Josefov is one of the most important Jewish heritage sites in Europe, and it's also one of the places where I feel the weight of guiding most strongly. I hold a <em>special certification</em> for this area, and I take the responsibility seriously — both the history and the way it's told.</p>
 <h3>What to See</h3>
 <ul>
   <li>Pinkas Synagogue: the walls are inscribed with the names of over 77,000 Bohemian and Moravian Jewish victims of the Holocaust. Nothing prepares you for the scale of it.</li>
-  <li>Old-New Synagogue: Europe’s oldest active synagogue, built around 1270. Still in use today.</li>
+  <li>Old-New Synagogue: Europe's oldest active synagogue, built around 1270. Still in use today.</li>
   <li>The Old Jewish Cemetery: burials stacked twelve deep over centuries. The crowded tombstones are not a design choice — they reflect a community that ran out of space.</li>
 </ul>
-<p class="lead">For a visit that does justice to the history, <a href="/contact#contact-title">contact me</a>. I tailor the pace and depth to what you’re looking for.</p>`,
+<p class="lead">For a visit that does justice to the history, <a href="/contact#contact-title">contact me</a>. I tailor the pace and depth to what you're looking for.</p>`,
     de: `<h2>Das Jüdische Viertel: Erinnerung und Geschichte</h2>
 <p>Josefov ist eines der bedeutendsten jüdischen Erbe-Stätten Europas, und es ist auch einer der Orte, an dem ich das Gewicht des Führens am stärksten spüre. Ich habe eine <em>Sonderzertifizierung</em> für diesen Bereich, und ich nehme die Verantwortung ernst — sowohl die Geschichte als auch die Art, wie sie erzählt wird.</p>
 <h3>Was zu sehen ist</h3>
@@ -1874,7 +1874,7 @@ export const blogTranslations = {
     de: 'Top 21 Instagram-taugliche Orte in Prag',
   },
   'blog.post5.excerpt': {
-    en: 'From iconic bridges to hidden courtyards—discover Prague’s most photogenic locations and exact spots for the perfect shot.',
+    en: 'From iconic bridges to hidden courtyards—discover Prague\'s most photogenic locations and exact spots for the perfect shot.',
     de: 'Von ikonischen Brücken bis zu versteckten Höfen—entdecken Sie Prags fotogenste Orte und präzise Spots für das perfekte Foto.',
   },
   'blog.post5.date': {
@@ -1882,8 +1882,8 @@ export const blogTranslations = {
     de: '12. Oktober 2025',
   },
   'blog.post5.content': {
-    en: `<h2>Prague’s Best Photo Spots</h2>
-<p>These are <strong>21 locations I actually use</strong> on tours and photo walks. Not a random roundup — these are places where the light, the angle, or the access makes a difference. Arrive early, watch the light, and don’t climb on things or block people trying to get past.</p>
+    en: `<h2>Prague's Best Photo Spots</h2>
+<p>These are <strong>21 locations I actually use</strong> on tours and photo walks. Not a random roundup — these are places where the light, the angle, or the access makes a difference. Arrive early, watch the light, and don't climb on things or block people trying to get past.</p>
 <ol>
   <li><h3>Charles Bridge (Statues & Towers)</h3><p>Best at dawn from the Old Town tower towards the Castle.</p></li>
   <li><h3>Prague Castle Viewpoints</h3><p>Lookouts by St. Wenceslas Vineyard and Hradčanské náměstí.</p></li>
@@ -1907,7 +1907,7 @@ export const blogTranslations = {
   <li><h3>St. Nicholas Church (Mala Strana)</h3><p>Domes and curves—inside and out.</p></li>
   <li><h3>Štefánik Bridge Lookout</h3><p>Multiple bridges in one frame at sunset.</p></li>
   </ol>
-<p class="lead">Want a sunrise-to-night photo route planned around your schedule? <a href="/contact#contact-title">Message me</a> and I’ll put together a private tour.</p>`,
+<p class="lead">Want a sunrise-to-night photo route planned around your schedule? <a href="/contact#contact-title">Message me</a> and I'll put together a private tour.</p>`,
     de: `<h2>Prags beste Fotospots</h2>
 <p>Das sind <strong>21 Orte, die ich wirklich nutze</strong> — auf Führungen und Fotowalks. Keine zufällige Zusammenstellung: Das sind Orte, bei denen Licht, Winkel oder Zugang einen Unterschied machen. Früh ankommen, Licht beachten, nicht auf Dinge steigen oder Leute blockieren.</p>
 <ol>
@@ -1938,8 +1938,8 @@ export const blogTranslations = {
 
   // Post 6 (Havel) — abbreviated header and excerpt; content remains as authored
   'blog.post6.title': {
-    en: 'Václav Havel in Prague: A Walking Tour of Freedom',
-    de: 'Václav Havel in Prag: Ein Spaziergang der Freiheit',
+    en: 'Václav Havel in Prague: A Walk of Freedom',
+    de: 'Václav Havel in Prag: Der Weg der Freiheit',
   },
   'blog.post6.excerpt': {
     en: "Follow the footsteps of Václav Havel across Prague—Velvet Revolution sites, civic forums, theaters, and cafés that shaped a nation's path to freedom.",
@@ -1950,22 +1950,22 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post6.content': {
-    en: `<h2>Prague Through Havel’s Eyes</h2>
+    en: `<h2>Prague Through Havel's Eyes</h2>
 <p>Václav Havel — <strong>playwright, dissident, later president</strong> — left a living map across Prague. This tour follows places where art, civic courage, and history ran into each other. I find new things to say on it every time I lead it.</p>
 <h3>Rašín Embankment: Where It Starts</h3>
-<p>We begin at <strong>Rašínovo nábřeží</strong>, near Havel’s former residence. Look at the building: a <em>female relief</em>, traces of the <em>communist past</em>, and a <em>globe on the roof</em>. Once you know what you’re looking for, it’s hard to walk past without stopping.</p>
+<p>We begin at <strong>Rašínovo nábřeží</strong>, near Havel's former residence. Look at the building: a <em>female relief</em>, traces of the <em>communist past</em>, and a <em>globe on the roof</em>. Once you know what you're looking for, it's hard to walk past without stopping.</p>
 <h3>Quiet Refuge by the River</h3>
 <p>At the <strong>Vltava restaurant</strong>, Havel often sat in the back, facing the wall. A habit from surveillance times. It was where he went to <em>think and write</em>, away from politics and public rooms.</p>
 <div class="blog-inline-image"><img src="/images/blog-havel-2.jpg" alt="Václav Havel tour – riverside reflections" loading="lazy" /></div>
 <h3>Café Slavia and Olga</h3>
-<p>We visit the legendary <strong>Café Slavia</strong>—a center of intellectual life. Here Havel met artists, politicians, and his great love, <em>Olga</em>. Their bond, rooted in everyday humanity, anchored Havel’s extraordinary public life.</p>
+<p>We visit the legendary <strong>Café Slavia</strong>—a center of intellectual life. Here Havel met artists, politicians, and his great love, <em>Olga</em>. Their bond, rooted in everyday humanity, anchored Havel's extraordinary public life.</p>
 <h3>Dissident Years and Theatres</h3>
-<p>We explore Havel’s creative ground at <strong>Divadlo Na zábradlí</strong> and the difficult chapters of <em>interrogations and prison</em> near <strong>Bartolomějská</strong> (today’s Unitas Hotel).</p>
+<p>We explore Havel's creative ground at <strong>Divadlo Na zábradlí</strong> and the difficult chapters of <em>interrogations and prison</em> near <strong>Bartolomějská</strong> (today's Unitas Hotel).</p>
 <h3>From Civic Forum to the Castle</h3>
 <p>At <strong>Laterna magika</strong>, the <em>Civic Forum</em> held daily briefings during the Velvet Revolution. On <strong>Wenceslas Square</strong> and <strong>Národní</strong>, we recall 17 November. Finally, we reflect in the <strong>Prague Castle</strong> courtyards—symbols reshaped by a playwright-president.</p>
 <h3>What This Route Is Actually About</h3>
 <p>Beyond plaques and dates, what I want to show is the <strong>citizen Havel</strong> — humorous, genuinely open, comfortable talking to anyone. This is a walk about what it means to hold onto your humanity when the system is designed to wear it down.</p>
-<p class="lead">Want the full route or to explore some places on your own? <a href="/book?tour=V%C3%A1clav%20Havel%20Tour:%20Sites%20of%20Freedom#contact-title">Message me</a> and I’ll tailor it to your time and interests.</p>
+<p class="lead">Want the full route or to explore some places on your own? <a href="/book?tour=V%C3%A1clav%20Havel%20Tour:%20Sites%20of%20Freedom#contact-title">Message me</a> and I'll tailor it to your time and interests.</p>
 <p><em>Further reading:</em> <a href="https://www.pragerzeitung.cz/typisch-havel/" target="_blank" rel="noopener">Prager Zeitung: Typisch Havel</a></p>`,
     de: `<h2>Auf den Spuren von Václav Havel</h2>
 <p>Václav Havel — <strong>Dramatiker, Dissident, später Präsident</strong> — hat eine lebendige Karte über Prag hinterlassen. Diese Führung folgt Orten, an denen Kunst, Zivilcourage und Geschichte aufeinandertrafen. Ich entdecke bei jeder Führung etwas Neues daran.</p>
@@ -1988,11 +1988,11 @@ export const blogTranslations = {
 
   // Post 7 (Klementinum Library)
   'blog.post7.title': {
-    en: 'Did You Know? Prague’s Most Beautiful Library is at the Klementinum',
-    de: 'Wussten Sie schon? Prags schönste Bibliothek ist im Klementinum',
+    en: 'Most Beautiful Library in Prague: Klementinum',
+    de: 'Prags schönste Bibliothek: das Klementinum',
   },
   'blog.post7.excerpt': {
-    en: 'Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here’s how to see it and what to know.',
+    en: 'Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here\'s how to see it and what to know.',
     de: 'Betreten Sie den Barocksaal des Klementinums—von vielen als eine der schönsten Bibliotheken der Welt bezeichnet. So sehen Sie sie und das sollten Sie wissen.',
   },
   'blog.post7.date': {
@@ -2001,14 +2001,14 @@ export const blogTranslations = {
   },
   'blog.post7.content': {
     en: `<h2>Klementinum: The Baroque Library</h2>
-<p>Right in the middle of the Old Town, the <strong>Klementinum</strong> has a <em>Baroque Library Hall</em> that people consistently call one of the most beautiful libraries they’ve ever seen. Frescoed ceilings, antique globes, oak bookcases stacked to the ceiling. I’ve brought guests here hundreds of times and the reaction is always the same.</p>
-<h3>What You’ll See</h3>
+<p>Right in the middle of the Old Town, the <strong>Klementinum</strong> has a <em>Baroque Library Hall</em> that people consistently call one of the most beautiful libraries they've ever seen. Frescoed ceilings, antique globes, oak bookcases stacked to the ceiling. I've brought guests here hundreds of times and the reaction is always the same.</p>
+<h3>What You'll See</h3>
 <ul>
   <li><strong>Baroque Library Hall:</strong> Historical volumes, celestial globes, and allegorical ceiling frescoes. Access is by guided tour only.</li>
   <li><strong>Astronomical Tower:</strong> Views over Prague and the Vltava. Worth the climb.</li>
   <li><strong>Meridian Room:</strong> Where they used sunlight to set the time before modern clocks. Small room, genuine curiosity.</li>
 </ul>
-<div class="did-you-know"><h4>Did you know?</h4><p>The Klementinum ran one of Central Europe’s oldest weather stations — continuous measurements going back centuries. The longest climate record in the region.</p></div>
+<div class="did-you-know"><h4>Did you know?</h4><p>The Klementinum ran one of Central Europe's oldest weather stations — continuous measurements going back centuries. The longest climate record in the region.</p></div>
 <div class="blog-inline-image"><img src="/images/klementinum-library-2.jpg" alt="Klementinum Baroque Library—mid view" loading="lazy" /></div>
 <h3>Practical Notes</h3>
 <p>Visits are guided tours with fixed time slots. Capacity is limited and <strong>photography rules change</strong> — check before you go. I can help with <a href="/contact#contact-title">tickets</a> and combine the Klementinum into a <a href="/tours">longer Old Town route</a>.</p>
@@ -2044,11 +2044,11 @@ export const blogTranslations = {
 
   // Post 8 (Klementinum Tower)
   'blog.post8.title': {
-    en: 'Klementinum Astronomical Tower: Views, Time, and Stories',
-    de: 'Astronomischer Turm im Klementinum: Aussicht, Zeit und Geschichten',
+    en: 'Klementinum Astronomical Tower: Views & Stories',
+    de: 'Klementinum: Astronomischer Turm & Aussicht',
   },
   'blog.post8.excerpt': {
-    en: 'Climb the Klementinum’s Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight.',
+    en: 'Climb the Klementinum\'s Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight.',
     de: 'Erklimmen Sie den Astronomischen Turm des Klementinums und entdecken Sie das Meridianzimmer—wo Zeit einst mit Sonnenlicht gemessen wurde.',
   },
   'blog.post8.date': {
@@ -2060,7 +2060,7 @@ export const blogTranslations = {
 <p>The <strong>Astronomical Tower</strong> at the Klementinum pairs baroque science with something genuinely hard to forget. After the climb, you get a <em>360° panorama</em>: Prague Castle, Charles Bridge, Old Town roofs spread out below you.</p>
 <div class="blog-inline-image"><img src="/images/klementinum-tower-2.jpg" alt="Klementinum Astronomical Tower—panoramic view" loading="lazy" /></div>
 <h3>The Meridian Room</h3>
-<p>Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It’s a rare window into how cities coordinated daily life.</p>
+<p>Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It's a rare window into how cities coordinated daily life.</p>
 <div class="did-you-know"><h4>Did you know?</h4><p>Observations at the Klementinum helped standardize noon in Prague—long before radio signals and GPS.</p></div>
 <h3>Practical Notes</h3>
 <ul>
@@ -2086,8 +2086,8 @@ export const blogTranslations = {
 
   // Post 9 (Prague in November)
   'blog.post9.title': {
-    en: 'What to Do in Prague in November (2025): Things to See Now',
-    de: 'Was tun in Prag im November (2025): Das sollten Sie jetzt sehen',
+    en: 'Prague in November 2025: Things to Do',
+    de: 'Was tun in Prag im November 2025?',
   },
   'blog.post9.excerpt': {
     en: 'Concerts, galleries, river walks, warm cafés—and realistic tips for weather and timings. Your calm November plan in Prague.',
@@ -2099,20 +2099,20 @@ export const blogTranslations = {
   },
   'blog.post9.content': {
     en: `<h2>Prague in November: Calm, Cultural, Cozy</h2>
-<p>November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city full of <em>music and exhibitions</em>. Here’s a grounded plan for enjoying the month without rushing.</p>
+<p>November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city full of <em>music and exhibitions</em>. Here's a grounded plan for enjoying the month without rushing.</p>
 <h3>What to Do</h3>
 <ul>
   <li>Evening concerts: classical and jazz (Rudolfinum, small clubs)</li>
   <li>Galleries and museums: avoid cold spells while seeing the best works</li>
   <li>Evening river walks and bridges. Dress warm.</li>
 </ul>
-<div class="did-you-know"><h4>Did you know?</h4><p>Some of Prague’s most atmospheric nights happen in late autumn. Mist on the river, lantern-lit streets. I always suggest at least one evening walk, even in November.</p></div>
+<div class="did-you-know"><h4>Did you know?</h4><p>Some of Prague's most atmospheric nights happen in late autumn. Mist on the river, lantern-lit streets. I always suggest at least one evening walk, even in November.</p></div>
 <h3>Weather and What to Wear</h3>
 <ul>
   <li>Expect 5–10°C with early sunsets.</li>
   <li>Layers, rain jacket, and good shoes for cobblestones.</li>
 </ul>
-<p class="lead">Want a calm schedule with maps and ticket timings? <a href="/contact#contact-title">Ask me</a> and I’ll tailor your November.</p>`,
+<p class="lead">Want a calm schedule with maps and ticket timings? <a href="/contact#contact-title">Ask me</a> and I'll tailor your November.</p>`,
     de: `<h2>Prag im November: ruhig, kulturell, gemütlich</h2>
 <p>Im November hat Prag <strong>weniger Menschen</strong>, <strong>gute Verfügbarkeiten</strong> und reichlich <em>Musik und Ausstellungen</em>. Hier ein realistischer Plan, der ohne Hektik auskommt.</p>
 <h3>Was tun?</h3>
@@ -2144,8 +2144,8 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post10.content': {
-    en: `<h2>Prague’s Garden Highlights</h2>
-<p>Prague’s gardens form a quiet lattice through the city—baroque terraces, palace steps, and riverside lawns. Here’s how to see the best with time and calm in mind.</p>
+    en: `<h2>Prague's Garden Highlights</h2>
+<p>Prague's gardens form a quiet lattice through the city—baroque terraces, palace steps, and riverside lawns. Here's how to see the best with time and calm in mind.</p>
 <h3>Palace Gardens Below Prague Castle</h3>
 <ul>
   <li><strong>Ledebour & Small Palaces:</strong> Terraces and formal patterns ideal for photos.</li>
@@ -2186,8 +2186,8 @@ export const blogTranslations = {
 
   // Post 11 (Strahov Monastery)
   'blog.post11.title': {
-    en: 'Strahov Monastery: Quiet Views, Library, and Lore',
-    de: 'Strahov-Kloster: Ruhige Blicke, Bibliothek und Legenden',
+    en: 'Strahov Monastery: Views, Library & Lore',
+    de: 'Strahov-Kloster: Bibliothek & Aussicht',
   },
   'blog.post11.excerpt': {
     en: 'Climb gently above Lesser Town for calm views, a legendary library (with permits), and a classic Prague monastery walk.',
@@ -2198,8 +2198,8 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post11.content': {
-    en: `<h2>Strahov’s Quiet Power</h2>
-<p>Above Lesser Town, <strong>Strahov Monastery</strong> offers a reflective climb and sweeping views. It’s where I bring guests who want space, texture, and a sense of Prague’s layered history.</p>
+    en: `<h2>Strahov's Quiet Power</h2>
+<p>Above Lesser Town, <strong>Strahov Monastery</strong> offers a reflective climb and sweeping views. It's where I bring guests who want space, texture, and a sense of Prague's layered history.</p>
 <h3>Viewpoints & The Walk</h3>
 <ul>
   <li><strong>Petřín terraces:</strong> Soft slopes with city vistas, good in all light.</li>
@@ -2219,7 +2219,7 @@ export const blogTranslations = {
   <li>Morning and late afternoon bring softer light and fewer people.</li>
   <li>Comfortable shoes—cobblestones and slopes between Petřín and the Castle.</li>
 </ul>
-<p class="lead">Want a quiet <strong>Strahov + Castle</strong> route with the best overlooks? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Book a private tour</a>—I’ll match the pace to yours.</p>`,
+<p class="lead">Want a quiet <strong>Strahov + Castle</strong> route with the best overlooks? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Book a private tour</a>—I'll match the pace to yours.</p>`,
     de: `<h2>Strahovs stille Kraft</h2>
 <p>Oberhalb der Kleinseite bietet das <strong>Strahov-Kloster</strong> einen besinnlichen Aufstieg und weite Blicke. Ein Ort für Gäste, die Raum, Texturen und die Schichten Prager Geschichte spüren möchten.</p>
 <h3>Aussichten & Weg</h3>
@@ -2246,8 +2246,8 @@ export const blogTranslations = {
 
   // Post 12 (Kafka in Prague)
   'blog.post12.title': {
-    en: 'Franz Kafka in Prague: All Places to Visit + Walking Itinerary',
-    de: 'Franz Kafka in Prag: Alle Orte – Rundgang & Reiseroute',
+    en: 'Franz Kafka in Prague: Places & Walking Tour',
+    de: 'Franz Kafka in Prag: Alle Orte & Rundgang',
   },
   'blog.post12.excerpt': {
     en: 'The definitive Kafka-in-Prague route: birthplace, plaques, cafés, museum, Golden Lane and more—timed, map-friendly, and doable in half a day.',
@@ -2261,21 +2261,21 @@ export const blogTranslations = {
     en: `<h2>Kafka in Prague: All Places to Visit (With Route)</h2>
 <p class="lead"><strong>Franz Kafka (1883–1924)</strong> wrote in a Prague shaped by <em>German–Czech–Jewish</em> culture. Use this map-friendly <strong>itinerary</strong> to see every essential Kafka place in half a day.</p>
 <h3>Stop 1 — Birthplace by Týn Church (Old Town)</h3>
-<p>The original building is gone, but the <strong>site by Týn Church</strong> anchors Kafka’s early years steps from Old Town Square.</p>
+<p>The original building is gone, but the <strong>site by Týn Church</strong> anchors Kafka's early years steps from Old Town Square.</p>
 <h3>Stop 2 — Old Town Plaques & Charles University</h3>
 <p>Find <strong>plaques and addresses</strong> where Kafka lived or studied around <strong>Charles University</strong> and the Old Town grid.</p>
 <h3>Stop 3 — Kafka Statue & Jewish Quarter Context</h3>
 <p>Visit the <strong>Kafka statue</strong> near the Spanish Synagogue and add the <strong>Jewish Museum sites</strong> for the period context.</p>
 <div class="blog-inline-image"><img src="/images/blog-kafka-2.jpg" alt="Franz Kafka — Rotating Head by David Černý near Národní třída" loading="lazy" /><div class="image-credit">Franz Kafka – Rotating Head by David Černý (near Národní třída / Quadrio)</div></div>
 <h3>Optional — Franz Kafka “Rotating Head” (David Černý)</h3>
-<p>The kinetic sculpture by <strong>David Černý</strong>—often called the <em>Rotating Head</em>—stands by <strong>Quadrio</strong> close to <strong>Národní třída</strong>. It’s an easy add-on between the Old Town and the café stops.</p>
-<h3>Stop 4 — Kafka’s Golden Lane House (Prague Castle)</h3>
+<p>The kinetic sculpture by <strong>David Černý</strong>—often called the <em>Rotating Head</em>—stands by <strong>Quadrio</strong> close to <strong>Národní třída</strong>. It's an easy add-on between the Old Town and the café stops.</p>
+<h3>Stop 4 — Kafka's Golden Lane House (Prague Castle)</h3>
 <p>A small house in <strong>Golden Lane</strong> served as a writing retreat—combine with a <a href="/tours">Prague Castle walk</a> for top views.</p>
 <h3>Stop 5 — Cafés: Louvre & Slavia</h3>
-<p>Classic cafés on Národní—<strong>Café Louvre</strong> and <strong>Café Slavia</strong>—tie into Prague’s literary circles. Perfect rest stops.</p>
+<p>Classic cafés on Národní—<strong>Café Louvre</strong> and <strong>Café Slavia</strong>—tie into Prague's literary circles. Perfect rest stops.</p>
 <h3>Stop 6 — Franz Kafka Museum (Lesser Town)</h3>
 <p>On the river, the <strong>Franz Kafka Museum</strong> is an hour of manuscripts, photos and multimedia—ideal at the end of the loop.</p>
-<div class="did-you-know"><h4>Did you know?</h4><p>Kafka’s <em>day job</em> at the <strong>Workers’ Accident Insurance Institute</strong> helped shape his themes of bureaucracy and modernity.</p></div>
+<div class="did-you-know"><h4>Did you know?</h4><p>Kafka's <em>day job</em> at the <strong>Workers' Accident Insurance Institute</strong> helped shape his themes of bureaucracy and modernity.</p></div>
 <h3>Timing & Route (3–4 hours)</h3>
 <ul>
   <li>Old Town core (Birthplace, plaques): 45–60 min</li>
@@ -2296,7 +2296,7 @@ export const blogTranslations = {
 </div>
 <div class="blog-cta-box">
   <h3>Want a calm, guide-led Kafka route?</h3>
-  <p>With the Rotating Head, hidden Old Town plaques and museum timing—paced to <strong>your</strong> tempo. <a href="/book?tour=Kafka%20Itinerary#contact-title">Book a private tour</a> and I’ll tailor the route, timings and tickets.</p>
+  <p>With the Rotating Head, hidden Old Town plaques and museum timing—paced to <strong>your</strong> tempo. <a href="/book?tour=Kafka%20Itinerary#contact-title">Book a private tour</a> and I'll tailor the route, timings and tickets.</p>
 </div>
 <p>Do it point-to-point on foot or book a <a href="/book?tour=Kafka%20Itinerary#contact-title">Kafka private tour</a> for navigation, tickets and context.</p>`,
     de: `<h2>Kafka in Prag: Alle Orte (mit Route)</h2>
@@ -2344,8 +2344,8 @@ export const blogTranslations = {
 
   // Post 13 (Prettiest Winter Views)
   'blog.post13.title': {
-    en: 'Which Places Are the Prettiest to Visit in Prague in Winter? Top 12 Views',
-    de: 'Welche Orte sind im Winter in Prag am schönsten? Top 12 Aussichtspunkte',
+    en: 'Prague in Winter: Top 12 Views',
+    de: 'Prag im Winter: Top 12 Aussichtspunkte',
   },
   'blog.post13.excerpt': {
     en: 'Prague in winter glows with warm light, quiet alleys, and magical views. Here are the 12 prettiest Old Town vantage points—walkable, photogenic, and cozy.',
@@ -2494,8 +2494,8 @@ export const blogTranslations = {
 
   // ─── Post 23: Prague Visitor Pass — honest review ─────────────────────────
   'blog.post23.title': {
-    en: 'The Prague Visitor Pass: why I tell every client to get one',
-    de: 'Der Prague Visitor Pass: warum ich jedem Gast dazu rate',
+    en: 'Prague Visitor Pass: Why I Recommend It',
+    de: 'Prague Visitor Pass: Meine Empfehlung',
   },
   'blog.post23.excerpt': {
     en: 'After 40 years of guiding in Prague I have watched tourists overpay for individual tickets hundreds of times. The Prague Visitor Pass fixes most of that. Here is the honest maths.',
@@ -2694,8 +2694,8 @@ export const blogTranslations = {
 
   // ─── Post 22: Prague IMAX, Kafka's Grave & the Vinohrady Neighbourhood ───
   'blog.post22.title': {
-    en: 'IMAX Prague, Kafka\'s Grave & the Best Farmers\' Market in Town: A Vinohrady Half-Day',
-    de: 'IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady',
+    en: 'Vinohrady Half-Day: IMAX, Kafka & Market',
+    de: 'Vinohrady: IMAX, Kafkas Grab & Bauernmarkt',
   },
   'blog.post22.excerpt': {
     en: 'The only IMAX in the Czech Republic, Franz Kafka\'s final resting place, and a farmers\' market that even drew Leonardo DiCaprio — all within walking distance in Prague\'s Vinohrady and Žižkov neighbourhoods.',
@@ -2860,8 +2860,8 @@ export const blogTranslations = {
 
   // ─── Post 21: Dan Brown – The Secret of Secrets & Prague ─────────────────
   'blog.post21.title': {
-    en: 'Dan Brown\'s The Secret of Secrets: 10,000 Pages, One Book — and Why Prague Was Always Part of the Story',
-    de: 'Dan Browns Das Geheimnis der Geheimnisse: 10.000 Seiten, ein Buch — und warum Prag immer Teil der Geschichte war',
+    en: 'Dan Brown\'s Secret of Secrets & Prague',
+    de: 'Dan Brown: Das Geheimnis der Geheimnisse',
   },
   'blog.post21.excerpt': {
     en: 'Dan Brown reportedly wrote over 10,000 pages before distilling his new novel to fewer than 700. That obsessive pursuit of hidden truth — encoded symbols, buried history, cities that lie to your face — is exactly what Prague has been doing for a thousand years.',
@@ -3022,8 +3022,8 @@ export const blogTranslations = {
 
   // ─── Post 15: Spring in Prague ───────────────────────────────────────────
   'blog.post15.title': {
-    en: 'Spring in Prague: The Best Things to Do (March, April & May Guide)',
-    de: 'Prag im Frühling: Die besten Aktivitäten (März, April & Mai)',
+    en: 'Prague in Spring: Best Things to Do',
+    de: 'Prag im Frühling: Die besten Aktivitäten',
   },
   'blog.post15.excerpt': {
     en: 'Cherry blossoms on Petřín Hill, Easter markets on Old Town Square, and the Prague Spring Music Festival — here\'s everything you need to know about visiting Prague in spring.',
@@ -3128,8 +3128,8 @@ export const blogTranslations = {
 
   // ─── Post 16: Summer in Prague ───────────────────────────────────────────
   'blog.post16.title': {
-    en: 'Summer in Prague: What to Do, See & Eat (June, July & August Guide)',
-    de: 'Prag im Sommer: Was tun, sehen & essen (Juni, Juli & August)',
+    en: 'Prague in Summer: What to Do, See & Eat',
+    de: 'Prag im Sommer: Was tun, sehen & essen',
   },
   'blog.post16.excerpt': {
     en: 'Riverside bars on Náplavka, open-air cinemas, sunset rooftops, and early-morning Charles Bridge walks — your complete guide to Prague in summer without the crowds ruining it.',
@@ -3244,8 +3244,8 @@ export const blogTranslations = {
 
   // ─── Post 17: Autumn in Prague ───────────────────────────────────────────
   'blog.post17.title': {
-    en: 'Autumn in Prague: Golden Light, Wine Harvest & Fall Things to Do',
-    de: 'Prag im Herbst: Goldenes Licht, Weinlese & Herbstaktivitäten',
+    en: 'Prague in Autumn: Golden Light & Wine',
+    de: 'Prag im Herbst: Goldenes Licht & Weinlese',
   },
   'blog.post17.excerpt': {
     en: 'September to November is Prague at its most cinematic: amber foliage in Stromovka, the Signal Festival lighting up the Old Town, and the first Christmas market stalls appearing in November.',
@@ -3350,8 +3350,8 @@ export const blogTranslations = {
 
   // ─── Post 18: Prague Food Guide ──────────────────────────────────────────
   'blog.post18.title': {
-    en: 'Prague Food Guide: What to Eat, Where to Go & Local Favourites',
-    de: 'Prag Kulinarikführer: Was essen, wo hingehen & lokale Lieblinge',
+    en: 'Prague Food Guide: What to Eat & Local Picks',
+    de: 'Prag Kulinarik: Was essen & lokale Lieblinge',
   },
   'blog.post18.excerpt': {
     en: 'From svíčková and tank beer to the Náplavka Saturday market and Vinohrady wine bars — a local\'s guide to eating and drinking well in Prague.',
@@ -3482,8 +3482,8 @@ export const blogTranslations = {
 
   // ─── Post 19: Prague Castle Complete Guide ───────────────────────────────
   'blog.post19.title': {
-    en: 'Prague Castle: The Complete Visitor\'s Guide (What to See, Tips & Hours)',
-    de: 'Prager Burg: Der vollständige Besucherführer (Was sehen, Tipps & Zeiten)',
+    en: 'Prague Castle: Complete Visitor\'s Guide',
+    de: 'Prager Burg: Vollständiger Besucherführer',
   },
   'blog.post19.excerpt': {
     en: 'The world\'s largest ancient castle complex — and most visitors see just 10% of it. Here\'s how to navigate St. Vitus Cathedral, the Golden Lane, the Royal Gardens, and everything in between.',
@@ -3616,8 +3616,8 @@ export const blogTranslations = {
 
   // ─── Post 20: Day Trips from Prague ──────────────────────────────────────
   'blog.post20.title': {
-    en: 'Best Day Trips from Prague: Kutná Hora, Český Krumlov & More',
-    de: 'Die besten Tagesausflüge von Prag: Kutná Hora, Český Krumlov & mehr',
+    en: 'Best Day Trips from Prague: Kutná Hora',
+    de: 'Tagesausflüge von Prag: Kutná Hora & mehr',
   },
   'blog.post20.excerpt': {
     en: 'A bone church, a fairy-tale castle town, a Habsburg hunting lodge, and a sobering Holocaust memorial — six unmissable day trips reachable from Prague by train or bus.',
@@ -3714,7 +3714,7 @@ export const blogTranslations = {
 </div>`,
   },
 
-  'blog.post34.title': { en: 'The Stalactite Wall, Malá Strana & Charles Bridge: What the Guidebooks Skip', de: 'Tropfsteinwand, Malá Strana und Karlsbrücke: Was kein Reiseführer verrät' },
+  'blog.post34.title': { en: 'Malá Strana & Charles Bridge: Untold Stories', de: 'Tropfsteinwand & Karlsbrücke: Geheimtipps' },
   'blog.post34.excerpt': {
     en: 'A Swedish art heist from 1648, a knight on a river pillar nobody notices, and a bridge whose foundation stone was laid at a minute calculated by astrologers — here\'s the walk nobody takes.',
     de: 'Ein Kunstdiebstahl aus dem Jahr 1648, ein Ritter auf einem Flusspfeiler, den kaum jemand bemerkt, und eine Brücke, deren Grundstein auf die Minute genau von Astrologen berechnet wurde — hier ist der Spaziergang, den kaum jemand kennt.',
@@ -3835,7 +3835,7 @@ export const blogTranslations = {
     en: '',
   },
 
-  'blog.post33.title': { en: 'What to Do in Prague: The Best Places', de: 'Was kann man in Prag machen? Die besten Orte und Aktivitäten' },
+  'blog.post33.title': { en: 'What to Do in Prague: The Best Places', de: 'Was kann man in Prag machen? Aktivitäten' },
   'blog.post33.excerpt': {
     en: 'The best places and activities in Prague — from the castle to the river, from Czech beer culture to hidden neighborhoods.',
     de: 'Die besten Orte und Aktivitäten in Prag — von der Burg bis zur Moldau, von der tschechischen Bierkultur bis zu den Vierteln, die die meisten Touristen nie finden.',
@@ -3933,7 +3933,7 @@ export const blogTranslations = {
     en: '',
   },
 
-  'blog.post32.title': { en: 'Top 12 Photo Spots in Prague: Where to Take the Best Pictures', de: 'Die 12 besten Fotospots in Prag: Hier müssen Sie fotografieren' },
+  'blog.post32.title': { en: 'Top 12 Photo Spots in Prague to Visit', de: 'Die 12 schönsten Fotospots in Prag' },
   'blog.post32.excerpt': {
     en: 'From Charles Bridge at dawn to a hidden Letná viewpoint most tourists walk straight past — here are the 12 Prague spots worth pointing your camera at, with timing tips for each.',
     de: 'Von der Karlsbrücke im Morgengrauen bis zu einem versteckten Aussichtspunkt im Letná-Park, den die meisten Touristen einfach überlaufen — hier sind die 12 Prager Orte, an denen sich das Fotografieren wirklich lohnt.',
@@ -4132,7 +4132,7 @@ export const blogTranslations = {
 </div>`,
   },
 
-  'blog.post31.title': { en: 'One Day in Prague: The 5 Places Worth Your Time', de: 'Ein Tag in Prag: Die 5 Orte, die Sie wirklich sehen sollten' },
+  'blog.post31.title': { en: 'One Day in Prague: 5 Places Worth Your Time', de: 'Ein Tag in Prag: Die 5 Orte, die sich lohnen' },
   'blog.post31.excerpt': {
     en: 'Only one day in Prague? Here\'s the route I give my guests: from Národní třída across the castle and back through the Old Town — on foot, without rushing.',
     de: 'Nur einen Tag in Prag? Ich zeige Ihnen die Route, die ich meinen Gästen gebe: von Národní třída über die Burg bis zum Altstädter Ring — zu Fuß, ohne Hetze.',
@@ -4327,8 +4327,8 @@ export const blogTranslations = {
 
   // ─── Post 35: Prague Visitor Pass — why it's not worth it ─────────────────
   'blog.post35.title': {
-    en: '5 reasons the Prague Visitor Pass is not worth it',
-    de: '5 Gründe, warum sich der Prague Visitor Pass nicht lohnt',
+    en: 'Prague Visitor Pass: 5 Reasons to Skip It',
+    de: 'Prague Visitor Pass: 5 Gründe dagegen',
   },
   'blog.post35.excerpt': {
     en: 'I wrote a glowing review of the Prague Visitor Pass. Now the honest counterpoint: for most visitors — young travellers here for the vibe, and over-60s who already get half-price transport — the pass simply does not make sense.',

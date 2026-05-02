@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './app/**/*.{js,jsx,ts,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
-        // ============================================================
-        // NEW editorial palette — use these in all new/migrated code
-        // ============================================================
         ink: {
           DEFAULT: '#1a1613',
           soft: '#2a2420',
@@ -32,14 +32,6 @@ module.exports = {
           hover: '#6e1818',
           soft: '#f5e6e6',
         },
-
-        // ============================================================
-        // LEGACY aliases — DO NOT use in new code.
-        // These keep existing components working during migration.
-        // All aliases point at the new palette so the visual shift is
-        // coherent, not whiplash. Remove aliases once all components
-        // are migrated to the new tokens.
-        // ============================================================
         primary: '#8a1f1f',
         'on-primary': '#faf8f4',
         'primary-container': '#8a1f1f',

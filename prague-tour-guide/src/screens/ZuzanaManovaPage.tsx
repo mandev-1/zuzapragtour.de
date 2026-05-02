@@ -1,10 +1,9 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { NAP } from '../utils/seo';
-import { BRAND } from '../brand';
 
 const FAQ_KEYS = [
   { q: 'zm.faq.q1', a: 'zm.faq.a1' },
@@ -17,73 +16,8 @@ const FAQ_KEYS = [
 const ZuzanaManovaPage: React.FC = () => {
   const { t, language } = useLanguage();
 
-  const title =
-    language === 'de'
-      ? `Zuzana Manová – Deutschsprachige Prag-Expertin & Spezialistin | ${BRAND.siteName}`
-      : `Zuzana Manová – Private Prague Tour Guide & Expert | ${BRAND.siteName}`;
-
-  const description =
-    language === 'de'
-      ? 'Ing. Zuzana Manová – Ihre deutschsprachige Prag-Expertin und Spezialistin seit 1986. Zertifizierte Stadtführerin, akkreditiert beim Jüdischen Museum. Private Führungen auf Deutsch und Englisch.'
-      : 'Ing. Zuzana Manová – certified Prague expert and specialist guide since 1986. Accredited by the Jewish Museum. Private tours in German and English.';
-
-  const personSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Ing. Zuzana Manová',
-    givenName: 'Zuzana',
-    familyName: 'Manová',
-    honorificPrefix: 'Ing.',
-    jobTitle: language === 'de' ? 'Deutschsprachige Prag-Expertin & zertifizierte Stadtführerin' : 'Certified Expert Tour Guide in Prague',
-    description:
-      language === 'de'
-        ? 'Deutschsprachige Prag-Expertin und Spezialistin für Stadtführungen seit 1986 mit über 40 Jahren Erfahrung.'
-        : 'Professional Prague expert and specialist tour guide since 1986 with 40+ years of experience.',
-    url: `${BRAND.domain}/zuzana-manova`,
-    image: `${BRAND.domain}/images/zuzana-portrait.jpg`,
-    telephone: NAP.phone,
-    email: NAP.email,
-    knowsLanguage: ['de', 'en', 'cs'],
-    worksFor: { '@id': BRAND.businessId },
-    hasCredential: [
-      { '@type': 'EducationalOccupationalCredential', name: 'Czech Republic Certified Tour Guide', credentialCategory: 'Professional License' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Jewish Museum in Prague Accreditation', credentialCategory: 'Specialist Certification', recognizedBy: { '@type': 'Organization', name: 'Jewish Museum in Prague', url: 'https://www.jewishmuseum.cz' } },
-    ],
-    knowsAbout: ['Prague history', 'Prague Castle', 'Jewish Quarter Prague', 'Czech Jewish heritage', 'Velvet Revolution', 'Václav Havel', 'Franz Kafka', 'Prague architecture'],
-    sameAs: [NAP.tripadvisor, NAP.tourhq, NAP.instagram],
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_KEYS.map(({ q, a }) => ({
-      '@type': 'Question',
-      name: t(q as any),
-      acceptedAnswer: { '@type': 'Answer', text: t(a as any) },
-    })),
-  };
-
   return (
-    <>
-      <Helmet>
-        <html lang={language} />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BRAND.domain}/zuzana-manova`} />
-        <link rel="alternate" hrefLang="de" href={`${BRAND.domain}/zuzana-manova`} />
-        <link rel="alternate" hrefLang="en" href={`${BRAND.domain}/zuzana-manova`} />
-        <link rel="alternate" hrefLang="x-default" href={`${BRAND.domain}/zuzana-manova`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="profile" />
-        <meta property="og:url" content={`${BRAND.domain}/zuzana-manova`} />
-        <meta property="og:image" content={`${BRAND.domain}/images/zuzana-portrait.jpg`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
-
-      <div className="bg-paper">
+    <div className="bg-paper">
 
         {/* ── Hero ──────────────────────────────────────────── */}
         <section className="border-b border-stone-200">
@@ -104,13 +38,13 @@ const ZuzanaManovaPage: React.FC = () => {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  to="/book#contact-title"
+                  href="/book#contact-title"
                   className="rounded-md bg-ink px-6 py-3 font-label text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
                 >
                   {t('hero.sendEnquiry')}
                 </Link>
                 <Link
-                  to="/tours"
+                  href="/tours"
                   className="font-label text-sm text-stone-500 underline-offset-4 hover:text-ink hover:underline"
                 >
                   {t('hero.exploreTours')} →
@@ -183,7 +117,7 @@ const ZuzanaManovaPage: React.FC = () => {
               {(['zm.tour.1', 'zm.tour.2', 'zm.tour.3', 'zm.tour.4'] as const).map((key) => (
                 <Link
                   key={key}
-                  to="/tours"
+                  href="/tours"
                   className="block border-b border-stone-200 py-3.5 font-label text-sm text-ink transition-colors hover:text-accent"
                 >
                   {t(key as any)} →
@@ -216,15 +150,14 @@ const ZuzanaManovaPage: React.FC = () => {
             <h2 className="mb-3 font-headline text-2xl text-paper">{t('zm.cta.title')}</h2>
             <p className="mb-8 font-body text-prose text-stone-400">{t('zm.cta.subtitle')}</p>
             <Link
-              to="/book#contact-title"
+              href="/book#contact-title"
               className="inline-block rounded-md bg-accent px-8 py-4 font-label text-sm font-medium text-paper transition-colors hover:bg-accent-hover"
             >
               {t('hero.sendEnquiry')}
             </Link>
           </div>
         </section>
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -1,32 +1,17 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
-import { BRAND } from '../brand';
 
 const LAST_UPDATED = '2026-04-12';
 
 const TermsPage: React.FC = () => {
   const { language } = useLanguage();
   const isDe = language === 'de';
-  const title = isDe ? `AGB | ${BRAND.siteName}` : `Terms & Conditions | ${BRAND.siteName}`;
-  const desc = isDe
-    ? 'Allgemeine Geschäftsbedingungen für private Stadtführungen und Touren mit Zuza Prague Tours.'
-    : 'Terms and conditions for private guided tours with Zuza Prague Tours.';
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-12 text-on-surface">
-      <Helmet>
-        <html lang={language} />
-        <title>{title}</title>
-        <meta name="description" content={desc} />
-        <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href={`${BRAND.domain}/terms`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={desc} />
-        <meta property="og:url" content={`${BRAND.domain}/terms`} />
-      </Helmet>
-
       <h1 className="mb-4 font-headline text-3xl text-primary md:text-4xl">
         {isDe ? 'Allgemeine Geschäftsbedingungen (AGB)' : 'Terms & Conditions'}
       </h1>
@@ -225,7 +210,7 @@ const TermsPage: React.FC = () => {
       </section>
 
       <p className="text-sm text-on-surface-variant">
-        <Link to="/privacy" className="text-primary underline-offset-2 hover:underline">
+        <Link href="/privacy" className="text-primary underline-offset-2 hover:underline">
           {isDe ? 'Zur Datenschutzerklärung' : 'Privacy Policy'}
         </Link>
       </p>

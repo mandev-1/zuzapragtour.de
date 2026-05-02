@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams, notFound } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
@@ -27,7 +29,8 @@ function injectHeadingIds(html: string): string {
 }
 
 const BlogPostPage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const params = useParams();
+  const slug = params?.slug as string | undefined;
   const { t, language } = useLanguage();
   const [activeHeading, setActiveHeading] = React.useState('');
   const [readProgress, setReadProgress] = React.useState(0);
@@ -76,7 +79,7 @@ const BlogPostPage: React.FC = () => {
   }, [headings]);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    notFound();
   }
 
   const deSlug: string | undefined = (post as any).slugDe;
@@ -131,147 +134,6 @@ const BlogPostPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <html lang={language} />
-        <title>{t(post.titleKey as any)} | {BRAND.siteName}</title>
-        <meta name="description" content={t(post.excerptKey as any)} />
-        <meta
-          name="keywords"
-          content={`${currentTags.join(', ')}, ${
-            language === 'de'
-              ? 'Prag Touren, Prag Reiseführer, geführte Tour Prag für Deutsche, private Prag-Touren mit deutschem Guide'
-              : 'Prague tours, Prague guide'
-          }`}
-        />
-        {/* DE is always canonical when a DE version exists. EN URL gets noindex. */}
-        <link rel="canonical" href={canonicalUrl} />
-        {(isEnUrlWithDe || post.noindex) && <meta name="robots" content="noindex, follow" />}
-        {post.language !== 'de' && <link rel="alternate" hrefLang="en" href={enUrl} />}
-        {deUrl && <link rel="alternate" hrefLang="de" href={deUrl} />}
-        {/* x-default points to DE when available — site primary language is German */}
-        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-        <meta property="og:title" content={`${t(post.titleKey as any)} | ${BRAND.siteName}`} />
-        <meta property="og:description" content={t(post.excerptKey as any)} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content={`${BRAND.domain}${post.ogImage ?? post.image}`} />
-        <meta property="article:published_time" content={post.date} />
-        <meta property="article:author" content={post.author} />
-        {currentTags.map((tag: string, i: number) => (
-          <meta key={i} property="article:tag" content={tag} />
-        ))}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: t(post.titleKey as any),
-            description: t(post.excerptKey as any),
-            datePublished: post.date,
-            dateModified: post.date,
-            inLanguage: language,
-            author: {
-              '@type': 'Person',
-              '@id': BRAND.guideId,
-              name: post.author,
-              url: `${BRAND.domain}/zuzana-manova`,
-            },
-            publisher: {
-              '@type': 'Organization',
-              '@id': BRAND.businessId,
-              name: BRAND.siteName,
-              logo: {
-                '@type': 'ImageObject',
-                url: `${BRAND.domain}/images/zuzana-portrait.jpg`,
-              },
-            },
-            image: jsonLdImage,
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': `${BRAND.domain}/blog/${slugForUrl}`,
-            },
-            url: `${BRAND.domain}/blog/${slugForUrl}`,
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: t('nav.home' as any),
-                item: `${BRAND.domain}/`,
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: t('nav.blog' as any),
-                item: `${BRAND.domain}/blog`,
-              },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                name: t(post.titleKey as any),
-                item: `${BRAND.domain}/blog/${slugForUrl}`,
-              },
-            ],
-          })}
-        </script>
-        {post.slug === 'what-to-do-in-prague-in-november-2025' && (
-          <script type="application/ld+json">
-            {JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name:
-                    language === 'de'
-                      ? 'Ist November eine gute Zeit für Prag?'
-                      : 'Is November a good time to visit Prague?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text:
-                      language === 'de'
-                        ? 'Ja—weniger Menschen, gute Verfügbarkeiten und viele Konzerte & Ausstellungen. Warme Kleidung und bequeme Schuhe sind empfehlenswert.'
-                        : 'Yes—fewer crowds, better availability, and lots of concerts & exhibitions. Dress warm and wear comfortable shoes.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name:
-                    language === 'de'
-                      ? 'Was kann man in Prag im November machen?'
-                      : 'What can you do in Prague in November?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text:
-                      language === 'de'
-                        ? 'Klassik- und Jazzkonzerte, Galerien & Museen, Abendspaziergänge an der Moldau und gemütliche Cafés. Events finden Sie im verlinkten Novemberkalender.'
-                        : 'Classical and jazz concerts, galleries & museums, evening riverside walks, and cozy cafés. See the linked November events calendar for what’s on.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name:
-                    language === 'de'
-                      ? 'Wie ist das Wetter in Prag im November?'
-                      : 'What is the weather like in Prague in November?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text:
-                      language === 'de'
-                        ? 'Meist kühl (5–10°C) mit frühem Sonnenuntergang. Schichten, Regenjacke und rutschfeste Schuhe sind sinnvoll.'
-                        : 'Generally cool (5–10°C) with early sunsets. Pack layers, a rain jacket, and good shoes for cobblestones.',
-                  },
-                },
-              ],
-            })}
-          </script>
-        )}
-      </Helmet>
-
       <div className="pointer-events-none fixed left-0 top-20 z-30 h-0.5 w-full bg-primary/20">
         <div
           className="h-full bg-primary transition-all duration-75"
@@ -355,11 +217,11 @@ const BlogPostPage: React.FC = () => {
             )}
 
             <nav className="mb-4 flex flex-wrap items-center gap-2 font-label text-xs text-stone-500">
-              <Link to="/" className="hover:text-primary">
+              <Link href="/" className="hover:text-primary">
                 {t('nav.home' as any)}
               </Link>
               <span>›</span>
-              <Link to="/blog" className="hover:text-primary">
+              <Link href="/blog" className="hover:text-primary">
                 {t('nav.blog' as any)}
               </Link>
               <span>›</span>
@@ -382,7 +244,7 @@ const BlogPostPage: React.FC = () => {
               {language === 'en' && (post as any).slugDe && (
                 <>
                   <span className="text-stone-400">·</span>
-                  <Link to={`/blog/${(post as any).slugDe}`} className="text-primary hover:underline">
+                  <Link href={`/blog/${(post as any).slugDe}`} className="text-primary hover:underline">
                     DE
                   </Link>
                 </>
@@ -390,7 +252,7 @@ const BlogPostPage: React.FC = () => {
               {language === 'de' && (
                 <>
                   <span className="text-stone-400">·</span>
-                  <Link to={`/blog/${post.slug}`} className="text-primary hover:underline">
+                  <Link href={`/blog/${post.slug}`} className="text-primary hover:underline">
                     EN
                   </Link>
                 </>
@@ -421,10 +283,10 @@ const BlogPostPage: React.FC = () => {
                     <h3>{t('blog.cta.defaultTitle' as any)}</h3>
                     <p>{t('blog.cta.defaultBody' as any)}</p>
                     <div className="cta-buttons">
-                      <Link to="/book#contact-title" className="btn btn-primary">
+                      <Link href="/book#contact-title" className="btn btn-primary">
                         {t('hero.sendEnquiry' as any)}
                       </Link>
-                      <Link to="/contact#contact-title" className="btn btn-outline">
+                      <Link href="/contact#contact-title" className="btn btn-outline">
                         {t('blog.cta.askQuestion' as any)}
                       </Link>
                     </div>
@@ -488,7 +350,7 @@ const BlogPostPage: React.FC = () => {
                       viewport={{ once: true }}
                     >
                       <Link
-                        to={`/blog/${language === 'de' && (rel as any).slugDe ? (rel as any).slugDe : rel.slug}`}
+                        href={`/blog/${language === 'de' && (rel as any).slugDe ? (rel as any).slugDe : rel.slug}`}
                         className="group flex gap-3 rounded-lg border border-stone-200 bg-white p-3 shadow-sm transition hover:border-primary/30 hover:bg-stone-50"
                       >
                         <img
@@ -525,7 +387,7 @@ const BlogPostPage: React.FC = () => {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-stone-600">{t('blog.featuredTour.desc' as any)}</p>
               <Link
-                to="/book#contact-title"
+                href="/book#contact-title"
                 className="mt-4 inline-block rounded-full bg-primary px-5 py-2.5 text-center font-label text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
               >
                 {t('blog.featuredTour.cta' as any)}
@@ -536,7 +398,7 @@ const BlogPostPage: React.FC = () => {
               <h3 className="font-headline text-lg font-bold text-on-surface">{t('blog.newsletter.title' as any)}</h3>
               <p className="mt-1 text-sm text-stone-600">{t('blog.newsletter.blurb' as any)}</p>
               <Link
-                to="/contact#contact-title"
+                href="/contact#contact-title"
                 className="mt-4 block w-full rounded-full bg-primary py-2.5 text-center font-label text-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
               >
                 {t('blog.newsletter.cta' as any)}

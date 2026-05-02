@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 import type { TranslationKey } from '../utils/translations';
 import { tours } from '../data/tours';
@@ -51,7 +53,7 @@ const Tours: React.FC = () => {
 
                 {/* Body */}
                 <div className="min-w-0 md:max-w-prose">
-                  <Link to={tourDest} className="group block">
+                  <Link href={tourDest} className="group block">
                     <h2 className="mb-3 font-headline text-2xl leading-tight text-ink transition-colors group-hover:text-accent md:text-[1.75rem]">
                       {t(tour.titleKey as TranslationKey)}
                     </h2>
@@ -70,13 +72,13 @@ const Tours: React.FC = () => {
                 {/* CTAs — right rail on desktop, below body on mobile */}
                 <div className="col-span-2 flex items-center gap-6 md:col-span-1 md:flex-col md:items-end md:justify-center md:gap-3">
                   <Link
-                    to={bookDest}
+                    href={bookDest}
                     className="font-label text-sm font-medium text-accent underline-offset-4 hover:underline"
                   >
                     {t('tour.sendEnquiry')} →
                   </Link>
                   <Link
-                    to={tourDest}
+                    href={tourDest}
                     className="font-label text-sm text-stone-500 underline-offset-4 hover:text-ink hover:underline"
                   >
                     {t('tours.exploreTour')}
@@ -99,7 +101,7 @@ const Tours: React.FC = () => {
           </h2>
           <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
-              to="/book#contact-title"
+              href="/book#contact-title"
               className="rounded-md bg-paper px-8 py-3.5 font-label text-sm font-medium text-ink transition-colors hover:bg-stone-100"
             >
               {t('contact.booking.header.title')}

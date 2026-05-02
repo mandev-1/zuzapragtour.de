@@ -1,17 +1,16 @@
+'use client';
+
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { getTourBySlug } from '../data/tours';
-import { getTourPageSchema } from '../utils/seo';
-import { BRAND } from '../brand';
-
-const SITE = BRAND.domain;
 
 const TourPage: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const { t, language } = useLanguage();
+  const params = useParams();
+  const slug = params?.slug as string | undefined;
+  const { t } = useLanguage();
 
   const tour = slug ? getTourBySlug(slug) : undefined;
 
@@ -22,55 +21,21 @@ const TourPage: React.FC = () => {
         <p className="mb-8 font-body text-stone-600">
           This tour page does not exist. Please check the URL or browse all tours.
         </p>
-        <Link to="/tours" className="rounded-md bg-ink px-6 py-3 font-label text-sm font-medium text-paper hover:bg-ink-soft">
+        <Link href="/tours" className="rounded-md bg-ink px-6 py-3 font-label text-sm font-medium text-paper hover:bg-ink-soft">
           {t('tourpage.allTours' as any)}
         </Link>
       </div>
     );
   }
 
-  const h1Text       = t(tour.seoTitleKey as any);
-  const pageTitle    = `${h1Text} | ${BRAND.siteName}`;
-  const description  = t(tour.descriptionKey as any);
-  const canonicalSlug = language === 'de' && tour.slugDe ? tour.slugDe : tour.slug;
-  const canonical    = `${SITE}/tours/${canonicalSlug}`;
-  const imageUrl     = `${SITE}${tour.image}`;
-
-  const faqsForSchema = tour.faqKeys.map((fk) => ({
-    question: t(fk.qKey as any),
-    answer:   t(fk.aKey as any),
-  }));
-
-  const schema = getTourPageSchema({
-    name:            t(tour.titleKey as any),
-    description,
-    duration:        t(tour.durationKey as any),
-    durationMinutes: tour.durationMinutes,
-    image:           imageUrl,
-    url:             canonical,
-    faqs:            faqsForSchema,
-  });
+  const h1Text = t(tour.seoTitleKey as any);
+  const description = t(tour.descriptionKey as any);
 
   const bookDest = `/book?tour=${encodeURIComponent(t(tour.titleKey as any))}#contact-title`;
 
   return (
-    <>
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={canonical} />
-        <link rel="alternate" hrefLang="en" href={`${SITE}/tours/${tour.slug}`} />
-        <link rel="alternate" hrefLang="de" href={`${SITE}/tours/${tour.slugDe}`} />
-        <link rel="alternate" hrefLang="x-default" href={`${SITE}/tours/${tour.slugDe}`} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      </Helmet>
-
-      {/* ── Text hero ─────────────────────────────────────────── */}
+    <div>
+      {/* Text hero */}
       <section className="border-b border-stone-200 bg-paper">
         <div className="mx-auto max-w-editorial px-5 py-12 md:px-10 md:py-16">
           <motion.div
@@ -95,7 +60,7 @@ const TourPage: React.FC = () => {
 
         {/* Breadcrumb */}
         <nav className="mb-10 flex items-center gap-2 font-label text-sm text-stone-400">
-          <Link to="/tours" className="transition-colors hover:text-ink">
+          <Link href="/tours" className="transition-colors hover:text-ink">
             {t('tourpage.allTours' as any)}
           </Link>
           <span>/</span>
@@ -195,13 +160,13 @@ const TourPage: React.FC = () => {
 
               <div className="pt-2">
                 <Link
-                  to={bookDest}
+                  href={bookDest}
                   className="block w-full rounded-md bg-ink px-5 py-3 text-center font-label text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
                 >
                   {t('tourpage.bookCta' as any)}
                 </Link>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="mt-3 block w-full text-center font-label text-sm text-stone-500 underline-offset-4 hover:text-ink hover:underline"
                 >
                   {t('tourpage.enquiryCta' as any)}
@@ -221,13 +186,13 @@ const TourPage: React.FC = () => {
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              to={bookDest}
+              href={bookDest}
               className="rounded-md bg-accent px-8 py-3 font-label text-sm font-medium text-paper transition-colors hover:bg-accent-hover"
             >
               {t('tourpage.bookCta' as any)}
             </Link>
             <Link
-              to="/tours"
+              href="/tours"
               className="font-label text-sm text-stone-400 underline-offset-4 hover:text-paper hover:underline"
             >
               {t('tourpage.allTours' as any)}
@@ -235,7 +200,7 @@ const TourPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
