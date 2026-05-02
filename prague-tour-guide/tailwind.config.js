@@ -7,14 +7,36 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: {
-          DEFAULT: '#1a1613',
-          soft: '#2a2420',
+        // Editorial blog palette
+        ivory: {
+          DEFAULT: '#F5EFE4',
+          deep: '#EDE4D3',
         },
         paper: {
-          DEFAULT: '#faf8f4',
+          DEFAULT: '#FAF6EC',
           warm: '#f5f1ea',
         },
+        ink: {
+          DEFAULT: '#1A1714',
+          soft: '#3A332C',
+          mute: '#6B6055',
+        },
+        rule: {
+          DEFAULT: '#D9CFBC',
+          soft: '#E8DFCC',
+        },
+        burgundy: {
+          DEFAULT: '#6B1F2A',
+          deep: '#4F1620',
+        },
+        brass: {
+          DEFAULT: '#A88654',
+          deep: '#8C6A3C',
+        },
+        sage: {
+          DEFAULT: '#8A9282',
+        },
+        // Existing tokens preserved for non-blog pages
         stone: {
           50: '#faf8f4',
           100: '#f0ebe2',
@@ -63,8 +85,13 @@ module.exports = {
         'on-error-container': '#6e1818',
       },
       fontFamily: {
+        // Editorial blog font stack — wired to next/font CSS variables
+        display: ['var(--font-display)', '"Italiana"', '"Cormorant Garamond"', '"Times New Roman"', 'serif'],
+        body: ['var(--font-body)', '"Libre Caslon Text"', '"EB Garamond"', 'Georgia', 'serif'],
+        italic: ['var(--font-italic)', '"Cormorant Garamond"', '"EB Garamond"', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)', '"Inter Tight"', '"Helvetica Neue"', 'system-ui', 'sans-serif'],
+        // Legacy aliases used by non-blog pages — kept intact
         headline: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
-        body: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
         serif: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
         label: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
         eyebrow: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
@@ -85,6 +112,8 @@ module.exports = {
         'prose-narrow': '36rem',
         prose: '44rem',
         editorial: '72rem',
+        measure: '660px',
+        shell: '1320px',
       },
       keyframes: {
         slideUp: {

@@ -1,115 +1,230 @@
-/* Styles for blog post HTML (dangerouslySetInnerHTML) and shared article chrome */
+/* ================================================================
+   Editorial Article Typography
+   Fonts: Italiana (display) / Libre Caslon Text (body) / Cormorant Garamond (italic) / Inter Tight (sans)
+   ================================================================ */
 
+/* ── Body text ── */
+.blog-content {
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 19px;
+  line-height: 1.72;
+  color: #3A332C;
+  font-feature-settings: "kern", "liga", "onum";
+  text-wrap: pretty;
+  hanging-punctuation: first last;
+}
+
+/* ── Drop cap on first paragraph ── */
+/* Covers: direct p, one wrapper deep, and both .blog-content and .blog-post-content inner divs */
+.blog-content > p:first-of-type::first-letter,
+.blog-content > div > p:first-of-type::first-letter,
+.blog-content > div > .blog-content > p:first-of-type::first-letter,
+.blog-content > div > .blog-post-content > p:first-of-type::first-letter {
+  font-family: var(--font-display, 'Italiana', serif);
+  font-style: normal;
+  font-size: 5.4em;
+  font-weight: 500;
+  line-height: 0.85;
+  float: left;
+  margin: 0.05em 0.08em 0 -0.04em;
+  color: #6B1F2A;
+  font-feature-settings: "lnum";
+}
+
+/* ── Paragraphs ── */
+.blog-content p,
+.blog-post-content p {
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-style: normal;
+  margin-bottom: 1.5em;
+}
+
+/* ── Headings ── */
+.blog-content h2 {
+  font-family: var(--font-display, 'Italiana', serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  color: #1A1714;
+  margin-top: 3em;
+  margin-bottom: 0.75em;
+}
+
+.blog-content h2 em {
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: #6B1F2A;
+}
+
+.blog-content h3 {
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #1A1714;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
+/* ── Links ── */
+.blog-content a {
+  color: #6B1F2A;
+  text-decoration: underline;
+  text-decoration-color: #A88654;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.blog-content a:hover {
+  color: #4F1620;
+  text-decoration-color: #6B1F2A;
+}
+
+/* ── Lists — em-dash markers ── */
+.blog-content ul {
+  list-style: none;
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.blog-content ul li {
+  position: relative;
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+.blog-content ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #A88654;
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+}
+
+.blog-content ol {
+  margin: 1.5em 0;
+  padding-left: 2em;
+}
+
+.blog-content ol li {
+  margin-bottom: 0.5em;
+}
+
+/* ── Strong / em ── */
+.blog-content strong {
+  font-weight: 700;
+  color: #1A1714;
+}
+
+.blog-content em {
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-style: italic;
+}
+
+/* ── Blockquote / pull-quote fallback ── */
+.blog-content blockquote {
+  margin: 3em 0;
+  padding: 0 0 0 40px;
+  border-left: 2px solid #6B1F2A;
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-size: 26px;
+  font-style: italic;
+  line-height: 1.35;
+  color: #3A332C;
+}
+
+/* ── Pull-quote attribution (cite inside blockquote) ── */
+.blog-content blockquote cite {
+  display: block;
+  margin-top: 1.25em;
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6B6055;
+}
+
+/* ── Inline images ── */
+.blog-content figure,
 .blog-inline-image {
-  margin: 2rem 0;
-  text-align: center;
+  margin: 3em 0;
 }
 
+.blog-content figure img,
 .blog-inline-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+  display: block;
 }
 
+.blog-content figcaption,
 .image-credit {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: #5b403d;
+  margin-top: 12px;
+  padding-left: 16px;
+  border-left: 1px solid #A88654;
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #6B6055;
+  max-width: 64ch;
 }
 
+/* ── Did you know callout ── */
 .did-you-know {
-  margin: 2rem 0;
-  padding: 1.25rem 1.25rem 1.25rem 3.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #fffdf5;
-  border-left: 6px solid #fed01b;
-  border-radius: 0.5rem;
+  margin: 2.5em 0;
+  padding: 28px 32px;
+  background: #FAF6EC;
+  border: 1px solid #E8DFCC;
+  border-left: 3px solid #A88654;
   position: relative;
 }
 
-.did-you-know::before {
-  content: '💡';
-  position: absolute;
-  left: 0.9rem;
-  top: 1rem;
-  font-size: 1.2rem;
-}
-
 .did-you-know h4 {
-  margin: 0 0 0.5rem 0;
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8C6A3C;
+  margin: 0 0 12px 0;
 }
 
 .did-you-know p {
   margin: 0;
-}
-
-.blog-content {
-  line-height: 1.8;
-  color: #111c2d;
-}
-
-.blog-content .lead {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #735c00;
-  margin-bottom: 2rem;
+  font-size: 17px;
   line-height: 1.6;
 }
 
-.blog-content h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: #93000b;
-  font-family: 'Noto Serif', Georgia, serif;
-}
-
-.blog-content h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #111c2d;
-  font-family: 'Noto Serif', Georgia, serif;
-}
-
-.blog-content a {
-  color: #93000b;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 1px;
-  transition: color 0.15s;
-}
-
-.blog-content a:hover {
-  color: #ba1a1a;
-}
-
-.blog-content p {
-  margin-bottom: 1.5rem;
-}
-
-.blog-content ul,
-.blog-content ol {
-  margin: 1.5rem 0;
-  padding-left: 2rem;
-}
-
-.blog-content li {
-  margin-bottom: 0.5rem;
-}
-
+/* ── Blog CTA box ── */
 .blog-cta-box {
-  background: linear-gradient(135deg, rgba(254, 208, 27, 0.12), rgba(147, 0, 11, 0.06));
-  padding: 2.5rem;
-  border-radius: 0.75rem;
+  margin: 4em 0;
+  padding: 40px;
+  background: #FAF6EC;
+  border: 1px solid #D9CFBC;
   text-align: center;
-  margin: 3rem 0;
-  border: 1px solid rgba(143, 111, 108, 0.2);
 }
 
 .blog-cta-box h3 {
-  color: #93000b;
-  margin-bottom: 1rem;
-  font-family: 'Noto Serif', Georgia, serif;
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  color: #6B1F2A;
+  margin-bottom: 1em;
+}
+
+.blog-cta-box p {
+  font-size: 16px;
+  color: #6B6055;
+  margin-bottom: 1.5em;
 }
 
 .blog-cta-box .cta-buttons {
@@ -122,33 +237,166 @@
 
 .blog-cta-box .btn {
   display: inline-block;
-  padding: 0.75rem 1.75rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  transition: opacity 0.15s, background-color 0.15s;
+  transition: background-color 0.2s ease;
 }
 
 .blog-cta-box .btn-primary {
-  background-color: #93000b;
-  color: #fff;
-  border: 2px solid #93000b;
+  background-color: #6B1F2A;
+  color: #F5EFE4;
+  border: none;
 }
 
 .blog-cta-box .btn-primary:hover {
-  background-color: #ba1a1a;
-  border-color: #ba1a1a;
-  color: #fff;
+  background-color: #4F1620;
 }
 
 .blog-cta-box .btn-outline {
   background-color: transparent;
-  color: #93000b;
-  border: 2px solid #93000b;
+  color: #6B1F2A;
+  border: 1px solid #6B1F2A;
 }
 
 .blog-cta-box .btn-outline:hover {
-  background-color: #93000b;
-  color: #fff;
+  background-color: #6B1F2A;
+  color: #F5EFE4;
+}
+
+/* ── Lead paragraph — upright body text with drop-cap, matching the mockup ── */
+.blog-content .lead {
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.72;
+  color: #3A332C;
+  margin-bottom: 2em;
+}
+
+/* ── Ornament divider (❦ with brass lines) ── */
+.artikel-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 4em 0 0;
+}
+.artikel-ornament-line {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #A88654;
+  opacity: 0.5;
+}
+.artikel-ornament-glyph {
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-size: 24px;
+  font-style: italic;
+  color: #A88654;
+}
+
+/* ── Grund section marker (numeral + label + h2) ── */
+.grund-marker-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  border-bottom: 1px solid #D9CFBC;
+  padding-bottom: 20px;
+  margin: 2em 0 1.5em;
+}
+.grund-numeral {
+  flex-shrink: 0;
+  font-family: var(--font-display, 'Italiana', serif);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: #6B1F2A;
+}
+.grund-label {
+  display: block;
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #6B6055;
+  margin-bottom: 6px;
+}
+.grund-title {
+  font-family: var(--font-display, 'Italiana', serif) !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.005em !important;
+  color: #1A1714 !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+}
+.grund-title em {
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: #6B1F2A;
+}
+
+/* ── Cost table ── */
+.cost-table {
+  margin: 2.5em 0;
+  background: #FAF6EC;
+  border: 1px solid #D9CFBC;
+  padding: 32px 40px 40px;
+}
+.cost-table-header {
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6B6055;
+  margin: 0 0 24px 0;
+}
+.cost-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px dotted #C9B99A;
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 19px;
+  color: #3A332C;
+}
+.cost-table-row.total {
+  border-top: 1px solid #D9CFBC;
+  border-bottom: none;
+  padding-top: 20px;
+  margin-top: 4px;
+}
+.cost-table-row.total .cost-table-label {
+  font-weight: 700;
+  color: #1A1714;
+}
+.cost-table-amount {
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-size: 22px;
+  white-space: nowrap;
+  margin-left: 1em;
+}
+.cost-table-row.total .cost-table-amount {
+  color: #6B1F2A;
+}
+.cost-table-footnote {
+  margin: 24px 0 0;
+  font-family: var(--font-italic, 'Cormorant Garamond', serif);
+  font-size: 17px;
+  font-style: italic;
+  color: #6B6055;
+  line-height: 1.5;
 }

@@ -4441,6 +4441,31 @@ export const blogTranslations = {
 
 <p>Die meisten Besucher sind nicht dieser Typ. Drei Tage in Prag bedeuten für die meisten: ein voller Sightseeing-Tag, ein halber Tag zum Schlendern, ein Tag zum Essen, Trinken und Einkaufen. Dieses Programm rechtfertigt den Pass nicht.</p>
 
+<div class="cost-table">
+  <p class="cost-table-header">Eine typische Rechnung — Paar, drei Tage</p>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Prager Burg (Rundgang B)</span>
+    <span class="cost-table-amount">36 €</span>
+  </div>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Strahov-Bibliothek</span>
+    <span class="cost-table-amount">12 €</span>
+  </div>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Astronomische Uhr (Turmaufstieg)</span>
+    <span class="cost-table-amount">14 €</span>
+  </div>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Jüdisches Museum</span>
+    <span class="cost-table-amount">22 €</span>
+  </div>
+  <div class="cost-table-row total">
+    <span class="cost-table-label">Direkter Eintritt, pro Person</span>
+    <span class="cost-table-amount">84 €</span>
+  </div>
+  <p class="cost-table-footnote">Im Vergleich: 3-Tages-Pass · 98 € — und davon ist Position 1 nicht abgedeckt.</p>
+</div>
+
 <h2>5. Es gibt Besseres, wofür man dieses Geld ausgeben kann</h2>
 
 <p>Der 72-Stunden-Visitor-Pass kostet rund 130–140 Euro. Dieses Geld, anders in Prag verwendet: eine private Stadtführung mit einem lokalen Guide, zwei ausgedehnte Mittagessen mit Wein in guten Restaurants, mehrere Abende in einer Weinbar in Vinohrady, ein schönes Stück böhmisches Glas oder Schmuck — oder eine Runde durch die außergewöhnlichen Kaffeebars der Stadt.</p>

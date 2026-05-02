@@ -231,101 +231,70 @@
     display: flex; flex-direction: column; gap: 24px;
   }
 
-  /* Reach-me CTA card */
-  .reach-card {
+  /* Right-rail cards — calmer, softer */
+  .rail-card {
     background: var(--paper);
-    border: 1px solid var(--rule);
-    padding: 28px 24px 24px;
-    position: relative;
-  }
-  .reach-card::before {
-    content: ""; position: absolute;
-    top: 8px; left: 8px; right: 8px; bottom: 8px;
     border: 1px solid var(--rule-soft);
-    pointer-events: none;
+    padding: 22px;
   }
-  .reach-card-inner { position: relative; }
-  .reach-kicker {
-    font-family: var(--sans); font-size: 9px;
-    letter-spacing: 0.26em; text-transform: uppercase;
-    color: var(--brass-deep);
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 18px;
-  }
-  .reach-kicker::before {
-    content: ""; width: 14px; height: 1px; background: var(--brass);
-  }
-  .reach-portrait {
-    width: 84px; height: 84px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #C9A87A 0%, #6B4329 100%);
-    margin: 0 0 16px;
+  .rail-card-image {
+    aspect-ratio: 4 / 3;
+    margin: -22px -22px 18px;
+    background: linear-gradient(135deg, #C9956B 0%, #8B5A2B 50%, #4F3018 100%);
     position: relative;
     overflow: hidden;
-    border: 3px solid var(--ivory);
-    box-shadow: 0 0 0 1px var(--rule);
   }
-  .reach-portrait::after {
-    content: "Z"; position: absolute; inset: 0;
-    display: grid; place-items: center;
-    font-family: var(--serif-italic); font-style: italic;
-    font-size: 38px; color: var(--ivory); font-weight: 300;
+  .rail-card-image::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(135deg, transparent 0, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px),
+      radial-gradient(ellipse at 60% 30%, rgba(255, 240, 210, 0.3) 0%, transparent 60%);
   }
-  .reach-title {
+  .rail-card-image::after {
+    content: "Altädter Ring";
+    position: absolute; bottom: 12px; left: 14px;
+    font-family: 'Courier New', monospace; font-size: 9px;
+    color: rgba(245, 239, 228, 0.6); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .rail-kicker {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+  }
+  .rail-title {
     font-family: var(--serif-display);
     font-weight: 400;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.2;
     letter-spacing: 0.005em;
     color: var(--ink);
     margin: 0 0 10px;
   }
-  .reach-title em {
-    font-family: var(--serif-italic);
-    font-style: italic;
-    color: var(--burgundy);
-    letter-spacing: -0.005em;
-  }
-  .reach-text {
+  .rail-text {
     font-family: var(--serif-body);
     font-size: 14px;
     line-height: 1.55;
     color: var(--ink-soft);
-    margin: 0 0 18px;
+    margin: 0 0 16px;
   }
-  .reach-cta {
-    display: block; width: 100%;
+  .rail-cta {
+    display: inline-block;
     background: var(--burgundy);
     color: var(--ivory);
     border: none;
-    padding: 13px 16px;
+    padding: 11px 22px;
+    border-radius: 999px;
     font-family: var(--sans);
-    font-size: 11px;
-    letter-spacing: 0.2em; text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
     cursor: pointer;
     transition: background 0.2s;
     text-decoration: none;
-    text-align: center;
   }
-  .reach-cta:hover { background: var(--burgundy-deep); }
-  .reach-divider {
-    height: 1px; background: var(--rule);
-    margin: 18px 0;
-  }
-  .reach-contact {
-    display: flex; flex-direction: column; gap: 8px;
-    font-family: var(--sans);
-    font-size: 11px;
-    color: var(--ink-soft);
-    letter-spacing: 0.04em;
-  }
-  .reach-contact a {
-    color: var(--ink-soft); text-decoration: none;
-    display: flex; align-items: center; gap: 10px;
-    transition: color 0.2s;
-  }
-  .reach-contact a:hover { color: var(--burgundy); }
-  .reach-contact svg { color: var(--brass); flex-shrink: 0; }
+  .rail-cta:hover { background: var(--burgundy-deep); }
+  .rail-cta.full { display: block; width: 100%; text-align: center; }
 
   /* Share + save block (now under CTA) */
   .share-block {
@@ -1367,27 +1336,22 @@
   </article>
 
   <aside class="right-rail" aria-label="Kontakt und Teilen">
-    <div class="reach-card">
-      <div class="reach-card-inner">
-        <div class="reach-kicker">Persönlich erreichen</div>
-        <div class="reach-portrait" role="img" aria-label="Zuzana"></div>
-        <h4 class="reach-title">Fragen zu Ihrem <em>Prag-Aufenthalt?</em></h4>
-        <p class="reach-text">
-          Schreiben Sie mir direkt. Ich antworte persönlich, meist innerhalb von 24 Stunden — auf Deutsch.
-        </p>
-        <a href="mailto:zuza@pragtour.de" class="reach-cta">Nachricht schreiben →</a>
-        <div class="reach-divider"></div>
-        <div class="reach-contact">
-          <a href="mailto:zuza@pragtour.de">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg>
-            zuza@pragtour.de
-          </a>
-          <a href="tel:+420777123456">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
-            +420 777 123 456
-          </a>
-        </div>
-      </div>
+    <div class="rail-card">
+      <div class="rail-card-image" role="img" aria-label="Altädter Ring von oben"></div>
+      <div class="rail-kicker">Empfohlene Tour</div>
+      <h4 class="rail-title">Prag-Highlights</h4>
+      <p class="rail-text">
+        Private Stadtführungen in Ihrem Tempo — Altstadt, Burg, versteckte Winkel.
+      </p>
+      <a href="#" class="rail-cta">Jetzt buchen</a>
+    </div>
+
+    <div class="rail-card">
+      <h4 class="rail-title">Bleiben Sie in Kontakt</h4>
+      <p class="rail-text">
+        Stellen Sie eine Frage oder nennen Sie Ihr Reisedatum — wir melden uns.
+      </p>
+      <a href="mailto:zuza@pragtour.de" class="rail-cta full">Kontakt aufnehmen</a>
     </div>
 
     <div class="share-block">

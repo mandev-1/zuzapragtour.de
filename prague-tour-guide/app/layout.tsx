@@ -1,11 +1,43 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight } from 'next/font/google';
 import { LanguageProvider } from '../src/context/LanguageContext';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import BlogPromo from '../src/components/BlogPromo';
 import ScrollToTop from '../src/components/ScrollToTop';
 import '../src/index.css';
+import '../src/styles/blog-content.css';
+
+const italiana = Italiana({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const libreCaslon = Libre_Caslon_Text({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-italic',
+  display: 'swap',
+});
+
+const interTight = Inter_Tight({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +60,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
+    <html
+      lang="de"
+      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable}`}
+    >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

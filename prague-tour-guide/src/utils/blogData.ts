@@ -11,6 +11,8 @@ export interface BlogPost {
   contentKey?: string; // For full blog post content
   ogImage?: string;
   noindex?: boolean;
+  titleHtml?: string;
+  titleHtmlDe?: string;
   author: string;
   tags: string[];
   tagsDe?: string[];
@@ -30,6 +32,8 @@ export const blogPosts: BlogPost[] = [
     image: '/images/blog-visitor-card-best-review-bad-product.png',
     ogImage: '/images/blog-visitor-card-best-review-bad-product.png',
     contentKey: 'blog.post35.content',
+    titleHtml: 'Prague Visitor Pass: <em>5 Reasons</em> to Skip It',
+    titleHtmlDe: 'Prague Visitor Pass: <em>5 Gründe</em> dagegen',
     author: 'Ing. Zuzana Manová',
     tags: [
       'Prague Visitor Pass', 'Prague tourist card', 'Prague travel tips', 'Prague budget',
@@ -53,6 +57,8 @@ export const blogPosts: BlogPost[] = [
     image: '/images/blog-tropfsteinwand.png',
     ogImage: '/images/best-tourguide-prag-thumbnail-early-2026.png',
     contentKey: 'blog.post34.content',
+    titleHtml: 'Malá Strana <em>&amp;</em> Charles Bridge: Untold Stories',
+    titleHtmlDe: 'Tropfsteinwand <em>&amp;</em> Karlsbrücke: Geheimtipps',
     author: 'Ing. Zuzana Manová',
     tags: [],
     tagsDe: [

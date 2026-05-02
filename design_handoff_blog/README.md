@@ -178,21 +178,23 @@ Body content uses these primitives (in order of appearance in the reference):
 - **Tags**: sans 11px 0.12em uppercase, 6×14 padding, `1px solid rule`. Hover → burgundy border + text.
 - **AuthorBio**: 36px padding, paper bg, rule.soft border, `120px 1fr` grid, 32px gap. Round 120×120 portrait (brass gradient + italic "Z" placeholder). Right column: kicker → italic 30px name → body 16px credentials paragraph → flex-wrap row of credentials with 5px brass dot bullets.
 
-#### 5c. Right rail — Sticky reach card + share
+#### 5c. Right rail — Sticky tour + contact cards
 
-The big addition. Sticky `top-100`, 24px gap between blocks.
+Sticky `top-100`, 24px gap between blocks. Two calm, quiet cards — the "expensive" feel comes from restraint, not flourish.
 
-**`<ReachCard>`** — the conversion engine.
-- Container: `paper` bg, `1px solid rule`, 28px×24px padding
-- Decorative inner frame: absolutely-positioned `1px solid rule.soft` at 8px inset (the "double frame" expensive look)
-- Content (relative-positioned inside):
-  - Kicker: sans 9px 0.26em uppercase brass-deep with 14×1px brass dash before — "Persönlich erreichen"
-  - Portrait: 84×84 round, brass gradient, italic "Z" placeholder, **3px ivory border + 0 0 0 1px rule outer ring**
-  - Title: display 22px — "Fragen zu Ihrem *Prag-Aufenthalt?*" (em → Cormorant italic burgundy)
-  - Body: body 14px, 1.55 line — "Schreiben Sie mir direkt. Ich antworte persönlich, meist innerhalb von 24 Stunden — auf Deutsch."
-  - **Primary CTA**: full-width burgundy button, ivory text, 13×16 padding, sans 11px 0.2em uppercase — "Nachricht schreiben →". Hover → burgundy-deep.
-  - Divider: 1px rule, 18px vertical margin
-  - Contact list: sans 11px column. Each row is a flex link with 13px brass icon + text. Hover → burgundy. Email + phone.
+**`<RailCard>`** — generic container, used for both blocks.
+- Container: `paper` bg, `1px solid rule.soft` (note: softer than other cards), `22px` padding all sides
+- Optional top image: 4:3, **margin `-22px -22px 18px`** to bleed to the card edges, gradient placeholder for now (replace with real `next/image`)
+- Kicker (optional): sans 10px 0.2em uppercase mute — e.g. "Empfohlene Tour"
+- Title: display 21px, 400, +0.005em — **plain, no `<em>` italics**
+- Body: body 14px, 1.55 line, ink.soft, 16px bottom margin
+- CTA: **rounded pill** — `border-radius: 999px`, burgundy bg, ivory text, sans 13px 500, 0.02em tracking, 11×22 padding, **not uppercase**. `.full` modifier makes it full-width + centered. Hover → burgundy-deep.
+
+Two instances in the reference:
+1. **Tour recommendation** — image, kicker "Empfohlene Tour", title "Prag-Highlights", body "Private Stadtführungen in Ihrem Tempo — Altstadt, Burg, versteckte Winkel.", inline pill "Jetzt buchen"
+2. **Contact** — no image, title "Bleiben Sie in Kontakt", body "Stellen Sie eine Frage oder nennen Sie Ihr Reisedatum — wir melden uns.", full-width pill "Kontakt aufnehmen"
+
+Replaces the earlier "ReachCard" pattern (with portrait + double-frame + uppercase CTA) — that was too aggressive.
 
 **`<ShareBlock>`**
 - Label: sans 10px 0.2em uppercase mute, 1px rule bottom border
@@ -259,7 +261,6 @@ src/components/blog/
   HeroImage.tsx
   TableOfContents.tsx      // takes [{id,label,index}], handles active state
   ReachCard.tsx            // the right-rail CTA — see below for props
-  ShareBlock.tsx
   Grund.tsx                // numbered section: <Grund number="I" label="…" title="…">{children}</Grund>
   PullQuote.tsx
   Callout.tsx              // variant: info | tip | warning
@@ -275,7 +276,7 @@ src/components/blog/
   DropCap.tsx              // optional wrapper, or just an mdx p[0] override
 ```
 
-`ReachCard` props: `{ portrait, kicker, title, body, primaryCta:{label,href}, contacts:[{icon,label,href}] }`. The kicker, title (with `<em>` support), body, and CTA are content; everything else is fixed styling.
+`RailCard` props: `{ image?, kicker?, title, body, cta:{label, href, fullWidth?:boolean} }`. Two instances on the article page: a tour recommendation (with image) and a contact card (no image, full-width CTA).
 
 For MDX/blog content, register the primitives as MDX components so post authors can write:
 ```mdx
