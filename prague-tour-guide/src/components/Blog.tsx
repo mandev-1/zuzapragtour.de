@@ -68,8 +68,8 @@ const Blog: React.FC = () => {
   }, [sortedPosts, activeFilter, searchQuery, t]);
 
   const isFiltering = activeFilter !== 0 || searchQuery.trim() !== '';
-  const featured = isFiltering ? null : sortedPosts[0];
-  const gridPosts = isFiltering ? filteredPosts : filteredPosts.slice(1);
+  const featured = isFiltering ? null : (sortedPosts.find(p => p.id === '35') ?? sortedPosts[0]);
+  const gridPosts = isFiltering ? filteredPosts : filteredPosts.filter(p => p !== featured);
 
   function thumbOf(src: string): string {
     const dir = src.substring(0, src.lastIndexOf('/'));

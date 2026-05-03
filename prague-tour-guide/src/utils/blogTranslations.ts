@@ -3774,7 +3774,7 @@ export const blogTranslations = {
 <p>Beide Versionen sind unwahrscheinlich. Trotzdem: Wer Bruncvík auf seinem Brückenpfeiler-Felsen übersieht, hat die Karlsbrücke nur halb gesehen.</p>
 
 <figure class="blog-inline-image">
-  <img src="/images/charles-bridge-pretty-picture.jpg" alt="Karlsbrücke Prag — historische Steinbrücke mit Barockstatuen über der Moldau" loading="lazy" />
+  <img src="/images/blog-charles-bridge-statues-sunny-crowded-bridge.jpg" alt="Karlsbrücke Prag — sonniger Tag mit Menschenmenge und Barockstatuen auf der Steinbrücke" loading="lazy" />
   <figcaption class="image-credit">Die Karlsbrücke hat 16 Bögen, 30 Statuen — und einen Ritter auf einem Flussfelsen, den fast niemand bemerkt.</figcaption>
 </figure>
 
@@ -4492,5 +4492,325 @@ export const blogTranslations = {
   </div>
 </div>
 </div>`,
+  },
+
+  // ─── Post 36: Was man in Prag nicht tun sollte ────────────────────────────
+  'blog.post36.title': {
+    en: 'What Not to Do in Prague',
+    de: 'Was man in Prag nicht tun sollte',
+  },
+  'blog.post36.excerpt': {
+    en: 'Tourist traps, false Trdelník myths, and why you should never change money on Charles Bridge. An honest list from twelve years of guiding.',
+    de: 'Touristenfallen, falsche Trdelník-Mythen, und warum Sie auf der Karlsbrücke kein Geld wechseln sollten. Eine ehrliche Liste aus zwölf Jahren Stadtführungen — fünf Dinge, die Sie sich ersparen können.',
+  },
+  'blog.post36.date': {
+    en: 'May 14, 2026',
+    de: '14. Mai 2026',
+  },
+  'blog.post36.content': {
+    de: `<p id="einleitung">
+  Es gibt Listen, die ich ungern schreibe — und diese ist eine davon.
+  Denn ich liebe meine Stadt, und ich möchte nicht, dass Sie Prag
+  durch das Raster eines Reisewarn-Artikels betrachten. Andererseits:
+  Wer eine Woche lang Gäste durch die Altstadt führt, hört dieselben
+  Geschichten immer wieder. Vom verlorenen Geld, vom enttäuschten
+  Abendessen, vom <em>Souvenir</em>, das sich später als chinesische
+  Massenware entpuppte.
+</p>
+
+<p>
+  Die fünf Punkte, die ich hier zusammengetragen habe, sind keine
+  Ausnahmefälle. Es sind die Fehler, die ich bei <strong>jeder zweiten
+  Tour</strong> in den Erzählungen meiner Gäste wiederfinde — Menschen,
+  die Prag eigentlich gut vorbereitet besucht hatten. Das macht sie
+  besonders ärgerlich. Und besonders vermeidbar.
+</p>
+
+<div class="callout-box">
+  <div class="callout-box__label">Vorab in einer Zeile</div>
+  <p class="callout-box__text">
+    Diese Liste ersetzt keinen Reiseführer. Sie ist eine ehrliche
+    Bestandsaufnahme dessen, was an einem typischen Wochenende in Prag
+    regelmäßig schiefläuft — und wie Sie es sich, Ihrer Zeit und Ihrem
+    Geldbeutel ersparen.
+  </p>
+</div>
+
+<p>
+  Wenn Sie nach dem Lesen das Gefühl haben, Prag sei eine Stadt voller
+  Fallen — keine Sorge. Es ist im Gegenteil eine der ehrlichsten
+  Hauptstädte Europas. Nur die Touristenmeile zwischen Pulverturm und
+  Karlsbrücke, jene fünfhundert Meter, durch die täglich vierzigtausend
+  Menschen strömen, ist eine eigene kleine Welt. Wer sie versteht, hat
+  Prag fast gewonnen.
+</p>
+
+<h2 id="grund-1">Wechseln Sie <em>niemals</em> Geld auf der Karlsbrücke</h2>
+
+<p>
+  Beginnen wir mit jenem Klassiker, den ich seit Jahren auf jeder
+  Tour erwähne — und den meine Gäste trotzdem regelmäßig ignorieren.
+  Die Wechselstuben rund um die Karlsbrücke, am Altstädter Ring und
+  entlang der Celetná sind nicht einfach nur teuer. Sie sind eine
+  eigene Disziplin der angewandten Täuschung.
+</p>
+
+<p>
+  Der Trick funktioniert immer gleich: Im Schaufenster prangt ein
+  sensationeller Kurs — etwa <em>1 Euro = 26 CZK</em> in großen
+  Lettern. Daneben, in winzigen Buchstaben und auf Tschechisch,
+  steht das Wort <em>„prodej"</em> — Verkauf. Sie wollen aber
+  kaufen. Der tatsächliche Ankaufskurs liegt dann bei 18, manchmal
+  bei nur 16 Kronen. Bei einem Tausch von 200 Euro verlieren Sie
+  gut <strong>achtzig Euro</strong> binnen zwanzig Sekunden.
+</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Was 200 Euro tatsächlich bringen — eine reale Stichprobe</p>
+  <div class="cost-table-row"><span class="cost-table-label">Wechselstube Karlsbrücke (Tarif „Tourist")</span><span class="cost-table-amount">3.240 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Wechselstube Wenzelsplatz (Mittelklasse)</span><span class="cost-table-amount">4.620 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Geldautomat einer ČSOB- oder Komerční-Filiale</span><span class="cost-table-amount">4.910 CZK</span></div>
+  <div class="cost-table-row total"><span class="cost-table-label">Differenz Karlsbrücke ↔ Bankautomat</span><span class="cost-table-amount">1.670 CZK</span></div>
+  <p class="cost-table-footnote">Das entspricht einem Drei-Gänge-Menü für zwei in einem sehr guten Restaurant.</p>
+</div>
+
+<p>
+  Hinzu kommt eine zweite, noch ärgerlichere Variante: Der Wechsler
+  zählt Ihnen die Scheine auf den Tresen, schiebt sie zurück, fragt
+  nach Ihrer Quittung — und in dieser kurzen Bewegung verschwinden
+  zwei Tausender. Die tschechische Polizei kennt das Phänomen seit
+  Jahren. Strafanzeigen werden routinemäßig aufgenommen, Geld
+  zurückgezahlt jedoch fast nie.
+</p>
+
+<h3>Was Sie stattdessen tun</h3>
+
+<p>
+  Heben Sie tschechische Kronen direkt am Automaten einer Filiale ab
+  — <strong>ČSOB</strong>, <strong>Komerční Banka</strong> oder
+  <strong>Česká spořitelna</strong>. Meiden Sie die freistehenden,
+  oft pinkfarbenen <em>Euronet</em>-Automaten an Touristenstraßen;
+  sie verlangen versteckte Wechselgebühren von bis zu zwölf Prozent.
+  Wenn Sie unbedingt eine Wechselstube nutzen möchten, gehen Sie
+  zur <em>eXchange s.r.o.</em> in der Kaprova-Straße — sie hat als
+  einzige in der Innenstadt seit Jahren faire Kurse und wird auch
+  von Pragern frequentiert.
+</p>
+
+<blockquote>
+  Wenn der Kurs im Schaufenster zu schön aussieht, dann ist er
+  es auch. Es gibt in Prag keine Ausnahme von dieser Regel.
+  <cite>— Aus zwölf Jahren Stadtführungen</cite>
+</blockquote>
+
+<h2 id="grund-2">Halten Sie den Trdelník bitte nicht für <em>böhmisch</em></h2>
+
+<p>
+  Sie sehen ihn an jeder Ecke: den dampfenden Hohlteig auf rotierender
+  Walze, mit Zucker und Zimt bestäubt, oft gefüllt mit Eis oder
+  Nutella. Der <em>Trdelník</em> gilt im Reiseführer als „böhmische
+  Spezialität" — und es gibt kaum eine Behauptung, die einer
+  Pragerin beim Lesen schmerzhafter aufstößt.
+</p>
+
+<p>
+  Die Wahrheit ist banaler. Der Trdelník stammt nicht aus Böhmen,
+  sondern aus dem siebenbürgischen Skalitz — heute slowakisch — und
+  kam erst <strong>nach 2000</strong> in Prag an. Vor der Jahrtausendwende
+  kannte ihn hier niemand. Er wurde von zwei findigen Geschäftsleuten
+  als <em>„traditional Bohemian pastry"</em> in den touristischen
+  Kanon eingeführt, gemeinsam mit der bewährten Inszenierung: offene
+  Flammen, glänzendes Kupfer, Duft. Eine Bühne für Instagram, mehr
+  nicht.
+</p>
+
+<p>
+  Das Original — der slowakische <em>Skalický trdelník</em> — ist
+  übrigens ein nüchternes, leicht süßes Hefegebäck mit Walnüssen,
+  ohne Eisfüllung, ohne Schokoladenüberzug. Was Sie auf der Celetná
+  für 180 Kronen gereicht bekommen, hätte jede tschechische Großmutter
+  als <em>„nesmysl"</em> bezeichnet — Unsinn.
+</p>
+
+<h3>Was wirklich böhmisches Gebäck ist</h3>
+
+<ul>
+  <li><strong>Koláč</strong> — runder Hefekuchen mit Mohn, Quark oder Powidl. In jeder ehrlichen Pekařství.</li>
+  <li><strong>Větrník</strong> — Brandteigring mit Karamellcreme, eine Pragerin Sünde der 1960er.</li>
+  <li><strong>Kremrole</strong> — knuspriges Hörnchen mit Eischneecreme, am besten in der <em>Cukrárna Myšák</em>.</li>
+  <li><strong>Buchteln</strong> — gefüllte Hefeküchlein, traditionell mit Powidl, in der <em>U Bansethů</em> seit 1844.</li>
+</ul>
+
+<p>
+  Sie werden auf Ihrer Runde ohnehin am Staroměstské náměstí und am Pulverturm vorbeikommen — das ist kaum zu vermeiden. Nutzen Sie die Gelegenheit: Die <a href="https://www.cukrarskala.cz/" target="_blank" rel="noopener">Cukrárna Skála</a> liegt direkt an der Route und gilt unter Pragern als eine der besten Konditoreien der Stadt. Koláče, Větrníky, Kremrole — alles hausgemacht, kein Trdelník weit und breit.
+</p>
+
+<p>
+  Wenn Sie also etwas Süßes mit nach Hause nehmen wollen, das wirklich
+  an dieser Stadt hängt — gehen Sie zwei Straßen weiter, weg vom
+  Touristenzug, in die nächste Konditorei mit handgeschriebener
+  Tafel. Dort beginnt das echte Prag.
+</p>
+
+<h2 id="grund-3">Essen Sie nicht in Lokalen mit <em>Speisekarten in sechs Sprachen</em></h2>
+
+<p>
+  Es gibt eine einfache Faustregel, die in fast jeder europäischen
+  Großstadt funktioniert, in Prag aber besonders zuverlässig: Je mehr
+  Sprachen die Speisekarte bietet, desto schlechter ist das Essen.
+  Lokale am Altstädter Ring, an der Karlsbrücke und entlang der
+  Pařížská tragen ihre Karten in sechs, manchmal acht Sprachen vor
+  die Tür. Das ist kein Service. Das ist eine Warnung.
+</p>
+
+<p>
+  Hinzu kommen drei Mechanismen, die in Prag bemerkenswert
+  konsequent angewendet werden. Wer sie kennt, kann sie umgehen —
+  wer sie nicht kennt, zahlt am Ende des Abends siebzig Euro für
+  ein mittelmäßiges Gulasch.
+</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Drei stille Posten auf der Rechnung</p>
+  <div class="cost-table-row"><span class="cost-table-label">„Couvert" — Brot, das niemand bestellt hat</span><span class="cost-table-amount">+ 60–120 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Vorportionierte Beilagen, einzeln berechnet</span><span class="cost-table-amount">+ 80–150 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">„Service charge" 12 % zusätzlich zum Trinkgeld</span><span class="cost-table-amount">+ 12 %</span></div>
+  <div class="cost-table-row total"><span class="cost-table-label">Mittlere Mehrkosten pro Person</span><span class="cost-table-amount">≈ 8 €</span></div>
+  <p class="cost-table-footnote">Bei zwei Personen entspricht das einem zusätzlichen Hauptgang.</p>
+</div>
+
+<p>
+  Das Brot, das ungefragt auf den Tisch kommt — bitte
+  zurückweisen oder gar nicht erst anrühren. Die Beilagen, die der
+  Kellner aufzählt, sind oft separat zu zahlen, ohne Hinweis auf der
+  Karte. Und jene <em>„service charge"</em> ist in der Tschechischen
+  Republik nicht üblich; sie wird ausschließlich Touristen
+  berechnet. Streichen Sie sie auf der Rechnung. Niemand wird
+  widersprechen.
+</p>
+
+<h3>Wo Sie stattdessen essen</h3>
+
+<p>
+  Echtes Prag isst nicht am Altstädter Ring. Es isst in Vinohrady,
+  in Holešovice, in Karlín. Drei Tipps, die ich seit Jahren
+  weitergebe — und die nicht in den großen Reiseführern stehen:
+</p>
+
+<ul>
+  <li><strong>Lokál Dlouhá</strong> — modernes Wirtshaus, ehrliches Pilsner Urquell vom Tank, böhmische Hausmannskost. Knapp außerhalb des Touristenrings.</li>
+  <li><strong>U Modré Kachničky</strong> — Wildgerichte und alte Prager Küche in einem stillen Innenhof an der Kleinseite.</li>
+  <li><strong>Eska</strong> — Karlín, neue tschechische Küche, beste Sauerteigbäckerei der Stadt im Vorraum.</li>
+</ul>
+
+<h2 id="grund-4">Steigen Sie nicht ins <em>erstbeste Taxi</em></h2>
+
+<p>
+  Es gibt in Prag eine ehrliche Taxibranche und eine zweite, die
+  seit den neunziger Jahren erfolgreich gegen jede Reform überlebt.
+  Letztere parkt mit Vorliebe vor dem Hotel InterContinental, vor
+  dem Pulverturm und vor dem Bahnhof Hlavní nádraží. Erkennbar an
+  Fahrzeugen ohne Firmenlogo, mit handgemalten Tarifen am Fenster
+  und einem Taxameter, der gern doppelt läuft.
+</p>
+
+<p>
+  Eine Fahrt vom Flughafen Václav Havel ins Stadtzentrum kostet
+  regulär etwa <strong>650 Kronen</strong>. Mit einem inoffiziellen
+  Wagen wurden meinen Gästen schon <strong>3.200 Kronen</strong>
+  berechnet — bezahlbar nur in bar, Quittung selbstverständlich
+  nicht möglich. Die Polizei kennt auch hier das Phänomen, doch
+  die Beweisführung ist mühsam.
+</p>
+
+<h3>Was Sie stattdessen tun</h3>
+
+<p>
+  Nutzen Sie <strong>Bolt</strong> oder <strong>Liftago</strong> —
+  beide funktionieren wie Uber, sind in Prag dominant und transparent
+  bepreist. Eine Fahrt vom Flughafen ins Hotel kostet je nach
+  Tageszeit 380 bis 520 Kronen, der Preis steht vor Fahrtbeginn
+  fest. Wenn Sie ein klassisches Taxi bevorzugen, rufen Sie
+  <em>AAA Radiotaxi</em> oder <em>Tick Tack</em> direkt an; beide
+  haben deutschsprachige Disposition und feste Tarife.
+</p>
+
+<p>
+  Vom Flughafen ins Zentrum gibt es zudem den <em>Airport Express</em>
+  (AE-Bus) zum Hauptbahnhof für 100 Kronen — bequemer, als sein Ruf
+  vermuten lässt, und in zweiunddreißig Minuten am Ziel.
+</p>
+
+<h2 id="grund-5">Kaufen Sie kein <em>„böhmisches Kristall"</em> in der Altstadt</h2>
+
+<p>
+  Die Geschichte der böhmischen Glaskunst ist eine der schönsten
+  Europas. Sie reicht ins dreizehnte Jahrhundert zurück, hat
+  Hofschulen in Steinschönau und Haida hervorgebracht, und Marken
+  wie <em>Moser</em>, <em>Lasvit</em> oder die alten <em>Bohemia
+  Crystalex</em>-Hütten von Nový Bor sind weltweit angesehen.
+  Was Sie auf der Karlsgasse als <em>„Bohemian Crystal"</em>
+  angeboten bekommen, hat damit selten etwas zu tun.
+</p>
+
+<p>
+  Eine Stichprobe meiner Tour aus dem Frühjahr 2025: Von zwölf
+  besuchten <em>„Crystal Shops"</em> in der Pařížská, Karlova und
+  am Altstädter Ring führten <strong>neun</strong> ausschließlich
+  importierte Massenware aus China und der Türkei. Drei boten
+  echtes böhmisches Kristall — gemischt mit Kopien, ohne erkennbare
+  Trennung im Regal. Preisaufschläge gegenüber dem Werkverkauf:
+  zwischen 180 und 340 Prozent.
+</p>
+
+<div class="callout-box">
+  <div class="callout-box__label">Drei Merkmale echten böhmischen Kristalls</div>
+  <p class="callout-box__text">
+    Bleigehalt mindestens 24 % (steht eingeschliffen am Boden) ·
+    Manuelle Schliffmarken statt maschineller Symmetrie · Klang
+    beim Anschlagen tief und nachhallend, nicht hell und kurz.
+  </p>
+</div>
+
+<h3>Wo Sie wirklich böhmisches Glas kaufen</h3>
+
+<ul>
+  <li><strong>Moser</strong> — Flagship-Boutique am Staroměstské náměstí, eigene Hütte in Karlsbad seit 1857.</li>
+  <li><strong>Lasvit</strong> — Showroom in der Václavské náměstí, zeitgenössisches Studio-Glas.</li>
+  <li><strong>Artěl</strong> — kleines Atelier in der Celetná, handgeätzte Karaffen und Gläser nach Art-déco-Vorlagen.</li>
+</ul>
+
+<h2 id="fazit">Eine Stadt, die <em>ehrlich</em> ist — wenn man ihr zuhört</h2>
+
+<p>
+  Wenn Sie diese fünf Punkte überfliegen, könnte der Eindruck
+  entstehen, Prag sei eine Stadt, vor der man sich in Acht nehmen
+  müsse. Das wäre falsch. Die Tricks, die ich hier beschrieben habe,
+  spielen sich auf einer sehr kleinen Bühne ab — vielleicht ein
+  Quadratkilometer zwischen Pulverturm, Karlsbrücke und Wenzelsplatz.
+  Verlassen Sie diese Bühne um zwei Straßen, und Sie sind in einer
+  der angenehmsten, ruhigsten Hauptstädte Europas.
+</p>
+
+<p>
+  Mein wichtigster Rat fasst sich in einem Satz zusammen: <em>Gehen
+  Sie immer zwei Straßen weiter.</em> Zwei Straßen weg vom Altstädter
+  Ring liegt das Café Louvre, in dem Kafka und Einstein verkehrten.
+  Zwei Straßen weg vom Wenzelsplatz beginnt Vinohrady mit seinen
+  Jugendstilfassaden. Zwei Straßen weg von der Karlsbrücke, auf
+  der Kampa-Insel, gibt es ein Wechselbüro, das den realen Kurs
+  bietet, und ein Restaurant mit drei Tischen, in dem Sie für
+  siebenhundert Kronen besser essen als für das Doppelte am
+  Altstädter Ring.
+</p>
+
+<p>
+  Prag belohnt Aufmerksamkeit. Die Stadt verlangt nicht, dass Sie
+  misstrauisch werden — nur, dass Sie wachsam bleiben. Im Übrigen
+  gilt, was meine Großmutter mir mit auf den Weg gab, als ich vor
+  zwölf Jahren mit dem Führen begann: <em>„Důvěřuj, ale prověřuj."</em>
+  Vertraue, aber prüfe. Damit kommt man in dieser Stadt erstaunlich
+  weit.
+</p>`,
   },
 };

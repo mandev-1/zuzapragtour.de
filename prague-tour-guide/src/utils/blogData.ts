@@ -22,6 +22,25 @@ export interface BlogPost {
 // This will be replaced by API/CMS data in the future
 export const blogPosts: BlogPost[] = [
   {
+    id: '36',
+    slug: 'was-man-in-prag-nicht-tun-sollte',
+    titleKey: 'blog.post36.title',
+    excerptKey: 'blog.post36.excerpt',
+    dateKey: 'blog.post36.date',
+    date: '2026-05-14',
+    image: '/images/blog-prazsky-hrad-chandelier-top-square-regular-good-illustrative.jpg',
+    ogImage: '/images/blog-prazsky-hrad-chandelier-top-square-regular-good-illustrative.jpg',
+    contentKey: 'blog.post36.content',
+    titleHtmlDe: 'Was man in Prag <em>nicht</em> tun sollte',
+    author: 'Ing. Zuzana Manová',
+    tags: [],
+    tagsDe: [
+      'Prag Reisetipps', 'Touristenfallen Prag', 'Prag Geldwechsel', 'Trdelník',
+      'Prag Restaurants Tipps', 'Prag Taxi', 'Böhmisches Kristall', 'Prag Insider',
+    ],
+    language: 'de',
+  },
+  {
     id: '35',
     slug: 'prague-visitor-pass-not-worth-it',
     slugDe: 'prague-visitor-pass-lohnt-sich-nicht',

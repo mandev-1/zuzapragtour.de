@@ -65,7 +65,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
                 ].join(' ')}
               >
                 {it.index && (
-                  <span className="mr-2 font-display text-[13px] italic text-brass">
+                  <span className="mr-2 font-italic text-[13px] italic text-brass">
                     {it.index}
                   </span>
                 )}
