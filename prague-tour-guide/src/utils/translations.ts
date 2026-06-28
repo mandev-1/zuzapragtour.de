@@ -422,7 +422,7 @@ export const translations = {
   },
   'tours.page.heading': {
     en: 'Private Prague tours',
-    de: 'Prag auf Deutsch erleben',
+    de: 'Private Touren in Prag auf Deutsch – Ihre Stadtführerin',
   },
   'tours.page.lead': {
     en: 'Popular itineraries or a fully custom experience — built around what you want to see.',
@@ -468,7 +468,7 @@ export const translations = {
   // Tour 1: Castle
   'tour.castle.title': {
     en: 'Prague Castle & Royal District',
-    de: 'Prager Burg & Königliches Viertel',
+    de: 'Prager Burg – Stadtführung Prag auf Deutsch',
   },
   'tour.castle.description': {
     en: 'Explore the magnificent Prague Castle complex, St. Vitus Cathedral, and Golden Lane. Discover centuries of royal history in this UNESCO World Heritage site.',
@@ -498,7 +498,7 @@ export const translations = {
   // Tour 2: Old Town & Jewish Quarter
   'tour.oldtown.title': {
     en: 'Old Town & Jewish Quarter',
-    de: 'Altstadt & Jüdisches Viertel',
+    de: 'Altstadt & Jüdisches Viertel – Prag Stadtführerin',
   },
   'tour.oldtown.description': {
     en: 'Walk through the medieval streets of Old Town, visit the Astronomical Clock, and explore the historic Jewish Quarter with an expert certified guide.',
@@ -528,7 +528,7 @@ export const translations = {
   // Tour 3: Hidden Prague
   'tour.hidden.title': {
     en: 'Hidden Prague',
-    de: 'Verstecktes Prag',
+    de: 'Verstecktes Prag – Deutschsprachige Stadtführerin',
   },
   'tour.hidden.description': {
     en: 'Discover secret gardens, hidden courtyards, and local spots that most tourists never find. Experience Prague like a local!',
@@ -588,7 +588,7 @@ export const translations = {
   // Tour 5: Custom
   'tour.custom.title': {
     en: 'Custom Private Tour',
-    de: 'Individuelle Privattour',
+    de: 'Individuelle Privattour Prag auf Deutsch',
   },
   'tour.custom.description': {
     en: 'Create your own perfect Prague experience! Whether you want history, architecture, food, or a mix of everything, we\'ll design a tour just for you.',
@@ -1285,8 +1285,8 @@ export const translations = {
     de: 'Prag Reiseblog',
   },
   'blog.subtitle': {
-    en: 'Tips, stories, and insights about exploring Prague',
-    de: 'Tipps, Geschichten und Einblicke über die Erkundung Prags',
+    en: 'Insider tips, guide knowledge, and travel information for Prague — from a certified Prague expert',
+    de: 'Insider-Tipps, Stadtführer-Wissen und Reiseinformationen für Prag — von einer zertifizierten Prag-Expertin',
   },
   'blog.cta.defaultTitle': {
     en: 'Ready to explore Prague?',

@@ -1,15 +1,14 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+'use client';
 
-/**
- * Scrolls the window on client-side navigation. Without this, React Router
- * keeps the previous scroll position (e.g. long blog post → book page stays scrolled down).
- * URLs with #hash scroll to that element after the target route has painted.
- */
-const ScrollToTop: React.FC = () => {
-  const { pathname, search, hash } = useLocation();
+import { useEffect, Suspense } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 
-  React.useLayoutEffect(() => {
+const ScrollToTopInner: React.FC = () => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const hash = typeof window !== 'undefined' ? window.location.hash : '';
+
+  useEffect(() => {
     if (!hash) {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
       return;
@@ -32,15 +31,19 @@ const ScrollToTop: React.FC = () => {
     let attempts = 0;
     const timer = window.setInterval(() => {
       attempts += 1;
-      if (tryScroll() || attempts > 40) {
-        clearInterval(timer);
-      }
+      if (tryScroll() || attempts > 40) clearInterval(timer);
     }, 50);
 
     return () => clearInterval(timer);
-  }, [pathname, search, hash]);
+  }, [pathname, searchParams, hash]);
 
   return null;
 };
+
+const ScrollToTop: React.FC = () => (
+  <Suspense fallback={null}>
+    <ScrollToTopInner />
+  </Suspense>
+);
 
 export default ScrollToTop;

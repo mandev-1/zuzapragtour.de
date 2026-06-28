@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { translate, TranslationKey } from '../utils/translations';
 
@@ -9,35 +11,33 @@ interface LanguageContextType {
   t: (key: TranslationKey) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType>({
+  language: 'de',
+  setLanguage: () => {},
+  t: (key: TranslationKey) => translate(key, 'de'),
+});
 
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
+export const useLanguage = () => useContext(LanguageContext);
 
 interface LanguageProviderProps {
   children: ReactNode;
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  // Initialize from localStorage if available; default to German
-  const [language, setLanguage] = useState<Language>(() => {
-    try {
-      const saved = localStorage.getItem('zpt.lang');
-      if (saved === 'en' || saved === 'de') return saved;
-    } catch {}
-    return 'de';
-  });
+  // Always start with 'de' to match server-rendered HTML (avoids hydration mismatch).
+  // localStorage is read after mount in useEffect.
+  const [language, setLanguage] = useState<Language>('de');
 
-  // Persist language changes
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('zpt.lang') as Language | null;
+      if (saved === 'en' || saved === 'de') setLanguage(saved);
+    } catch {}
+  }, []);
+
   useEffect(() => {
     try {
       localStorage.setItem('zpt.lang', language);
-      // Also reflect on document element immediately for SSR-like correctness
       if (typeof document !== 'undefined') {
         document.documentElement.lang = language;
       }

@@ -9,8 +9,10 @@ const vm = require('vm');
 
 const ROOT = path.join(__dirname, '..');
 const BLOG_TS = path.join(ROOT, 'src', 'utils', 'blogData.ts');
+const TOURS_TS = path.join(ROOT, 'src', 'data', 'tours.ts');
 const SITEMAP_XML = path.join(ROOT, 'public', 'sitemap.xml');
-const SITE = 'https://zuzapragtour.de';
+const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
+const SITE = (pkg.homepage || 'https://zuzapragtour.de').replace(/\/$/, '');
 
 function todayISO() {
   return new Date().toISOString().slice(0, 10);
@@ -33,6 +35,15 @@ function latestISOFromFiles(files) {
   return dates.length ? dates[dates.length - 1] : todayISO();
 }
 
+function readTours() {
+  const src = fs.readFileSync(TOURS_TS, 'utf8');
+  const match = src.match(/export const tours[^=]*=\s*(\[[\s\S]*?\]);/);
+  if (!match) throw new Error('Could not locate tours array in tours.ts');
+  const tours = vm.runInNewContext(`const data = ${match[1]}; data;`, {}, { timeout: 1000 });
+  if (!Array.isArray(tours)) throw new Error('Parsed tours is not an array');
+  return tours.map(t => ({ slug: t.slug, slugDe: t.slugDe, image: t.image || null }));
+}
+
 function readBlogPosts() {
   const src = fs.readFileSync(BLOG_TS, 'utf8');
   const match = src.match(/export const blogPosts[^=]*=\s*(\[[\s\S]*?\]);/);
@@ -51,6 +62,7 @@ function readBlogPosts() {
     date: p.date || todayISO(),
     image: p.image || null,
     titleKey: p.titleKey || '',
+    noindex: p.noindex || false,
   }));
 }
 
@@ -75,6 +87,7 @@ function urlBlock(loc, { lastmod, changefreq, priority, image, hreflang } = {}) 
 }
 
 function generate() {
+  const tourDefs = readTours();
   const posts = readBlogPosts();
   const pageFiles = {
     '/': [
@@ -112,19 +125,34 @@ function generate() {
   parts.push('');
   // Core pages
   parts.push(urlBlock(`${SITE}/`, { lastmod: pageLastMod['/'], changefreq: 'weekly', priority: '1.0' }));
-  parts.push(urlBlock(`${SITE}/privacy`, { lastmod: pageLastMod['/privacy'], changefreq: 'yearly', priority: '0.3' }));
-  parts.push(urlBlock(`${SITE}/terms`, { lastmod: pageLastMod['/terms'], changefreq: 'yearly', priority: '0.3' }));
   parts.push(urlBlock(`${SITE}/tours`, { lastmod: pageLastMod['/tours'], changefreq: 'weekly', priority: '0.9' }));
   parts.push(urlBlock(`${SITE}/contact`, { lastmod: pageLastMod['/contact'], changefreq: 'monthly', priority: '0.8' }));
   parts.push(urlBlock(`${SITE}/blog`, { lastmod: pageLastMod['/blog'], changefreq: 'weekly', priority: '0.9' }));
-  parts.push(urlBlock(`${SITE}/book`, { lastmod: pageLastMod['/book'], changefreq: 'weekly', priority: '0.85' }));
   parts.push(urlBlock(`${SITE}/zuzana-manova`, { lastmod: pageLastMod['/zuzana-manova'], changefreq: 'monthly', priority: '0.9', image: { loc: `${SITE}/images/zuzana-portrait.jpg`, title: 'Zuzana Manová – Prague Tour Guide' } }));
+
+  // Tour detail pages — DE is canonical, EN is alternate
+  parts.push('');
+  const toursLastmod = latestISOFromFiles([
+    path.join(ROOT, 'src', 'data', 'tours.ts'),
+    path.join(ROOT, 'src', 'pages', 'TourPage.tsx'),
+  ]);
+  tourDefs.forEach(t => {
+    const enLoc = `${SITE}/tours/${t.slug}`;
+    const deLoc = `${SITE}/tours/${t.slugDe}`;
+    const hreflang = [
+      { lang: 'de', href: deLoc },
+      { lang: 'en', href: enLoc },
+      { lang: 'x-default', href: deLoc },
+    ];
+    const image = t.image ? { loc: `${SITE}${t.image}`, title: '' } : null;
+    parts.push(urlBlock(deLoc, { lastmod: toursLastmod, changefreq: 'monthly', priority: '0.85', image, hreflang }));
+  });
 
   // Blog posts — DE is the primary/canonical language.
   // When a DE slug exists, only the DE URL goes in the sitemap (EN URL has noindex).
   // When no DE slug exists, the EN URL is included as usual.
   parts.push('');
-  posts.forEach(p => {
+  posts.filter(p => !p.noindex).forEach(p => {
     const enLoc = `${SITE}/blog/${p.slug}`;
     const deLoc = p.slugDe ? `${SITE}/blog/${p.slugDe}` : null;
     const image = p.image ? { loc: `${SITE}${p.image}`, title: '' } : null;
@@ -148,7 +176,7 @@ function generate() {
 
   const xml = parts.join('\n');
   fs.writeFileSync(SITEMAP_XML, xml, 'utf8');
-  console.log(`Sitemap updated with ${posts.length} blog posts -> ${path.relative(ROOT, SITEMAP_XML)}`);
+  console.log(`Sitemap updated with ${tourDefs.length} tours + ${posts.length} blog posts -> ${path.relative(ROOT, SITEMAP_XML)}`);
 }
 
 try {

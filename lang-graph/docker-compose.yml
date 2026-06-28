@@ -1,0 +1,6 @@
+services:
+  seo-agent:
+    build: .
+    env_file: .env
+    volumes:
+      - ./credentials:/app/credentials:ro

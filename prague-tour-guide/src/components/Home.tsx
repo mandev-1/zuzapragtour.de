@@ -1,68 +1,112 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
-import type { TranslationKey } from '../utils/translations';
 import TripAdvisorWidget from './TripAdvisorWidget';
 import TourHqWidget from './TourHqWidget';
-import { TRIPADVISOR_LISTING_URL } from '../constants/tripAdvisor';
 
-const pub = (path: string) => `${process.env.PUBLIC_URL}${path}`;
-
-/** Responsive hero assets (resized from charles-bridge-min.jpg; max 1600px wide for LCP). */
-const HERO_SRC = pub('/images/charles-bridge-hero-1600.jpg');
-const HERO_SRC_SET = [
-  `${pub('/images/charles-bridge-hero-800.jpg')} 800w`,
-  `${pub('/images/charles-bridge-hero-1200.jpg')} 1200w`,
-  `${pub('/images/charles-bridge-hero-1600.jpg')} 1600w`,
-].join(', ');
-
-type TeaserTour = {
-  titleKey: TranslationKey;
-  durationKey: TranslationKey;
-  image: string;
-  popular: boolean;
-};
-
-const TEASER_TOURS: TeaserTour[] = [
+/* ─── Static review data ─────────────────────────────────────── */
+const REVIEWS = [
   {
-    titleKey: 'tour.oldtown.title',
-    durationKey: 'tour.oldtown.duration',
-    image: '/images/blog-jewish-quarter-2-min.jpg',
-    popular: true,
+    de: {
+      quote: 'Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.',
+      author: 'Thomas K.',
+      source: 'TripAdvisor',
+    },
+    en: {
+      quote: "Zuzana's personal connection to the city makes this tour something truly unique. Absolutely unforgettable.",
+      author: 'David M.',
+      source: 'TripAdvisor',
+    },
   },
   {
-    titleKey: 'tour.castle.title',
-    durationKey: 'tour.castle.duration',
-    image: '/images/prague-castle.jpg',
-    popular: false,
+    de: {
+      quote: 'Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen, und sie hält die Energie lebendig und mitreißend.',
+      author: 'Monika H.',
+      source: 'TourHQ Verifiziert',
+    },
+    en: {
+      quote: 'An absolute highlight of our European trip. Her knowledge of architecture and history is unmatched, and she keeps the energy alive.',
+      author: 'Sarah Jenkins',
+      source: 'TourHQ Verified',
+    },
   },
   {
-    titleKey: 'tour.custom.title',
-    durationKey: 'tour.custom.duration',
-    image: '/images/blog-night-prague-min.jpg',
-    popular: false,
+    de: {
+      quote: 'Perfekt für unsere Familie. Sie hat es geschafft, die Kinder mit lokalen Legenden zu faszinieren, während sie den Erwachsenen eine Meisterklasse in böhmischer Geschichte gab.',
+      author: 'Familie Schneider',
+      source: 'Private Buchung',
+    },
+    en: {
+      quote: 'Perfect for our family. She managed to fascinate the kids with local legends while giving the adults a masterclass in Bohemian history.',
+      author: 'The Thompsons',
+      source: 'Private Booking',
+    },
   },
 ];
 
-const TESTIMONIAL = {
-  de: {
-    quote:
-      'Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.',
-    author: 'Michael T., USA',
-    platform: 'TripAdvisor',
+/* ─── Tour rows ──────────────────────────────────────────────── */
+const TOURS_DE = [
+  {
+    num: '01',
+    title: 'Altstadt & Jüdisches Viertel',
+    duration: '4 Stunden',
+    meta: 'Private Gruppe',
+    desc: 'Ein tiefes Eintauchen in das mittelalterliche Herz Prags, auf den Spuren von 1.000 Jahren Legenden und Überlieferungen.',
+    slug: 'old-town-jewish-quarter',
   },
-  en: {
-    quote:
-      "Zuzana's personal connection to the city makes this tour something truly unique. Absolutely unforgettable.",
-    author: 'Michael T., USA',
-    platform: 'TripAdvisor',
+  {
+    num: '02',
+    title: 'Das alchemistische Prag',
+    duration: '3 Stunden',
+    meta: 'Versteckte Juwelen',
+    desc: 'Entdecken Sie die mystische und geheimnisvolle Seite der Prager Geschichte, von der Astrologie bis zur Alchemie.',
+    slug: 'alchemy-mysterious-prague',
   },
-};
+  {
+    num: '03',
+    title: 'Böhmische Kunst & Architektur',
+    duration: '5 Stunden',
+    meta: 'Expertenfokus',
+    desc: 'Ein kuratierter Spaziergang durch Jugendstil, Kubismus und die barocke Pracht der Kleinseite.',
+    slug: 'art-architecture-baroque',
+  },
+];
 
+const TOURS_EN = [
+  {
+    num: '01',
+    title: 'Old Town & Jewish Quarter',
+    duration: '4 hours',
+    meta: 'Private group',
+    desc: 'A deep dive into the medieval heart of Prague, tracing 1,000 years of legends and lore.',
+    slug: 'old-town-jewish-quarter',
+  },
+  {
+    num: '02',
+    title: 'Alchemical Prague',
+    duration: '3 hours',
+    meta: 'Hidden gems',
+    desc: "Discover the mystical and mysterious side of Prague's history, from astrology to alchemy.",
+    slug: 'alchemy-mysterious-prague',
+  },
+  {
+    num: '03',
+    title: 'Bohemian Art & Architecture',
+    duration: '5 hours',
+    meta: 'Expert focus',
+    desc: 'A curated walk through Art Nouveau, Cubism, and the baroque splendour of Malá Strana.',
+    slug: 'art-architecture-baroque',
+  },
+];
+
+/* ─── Component ──────────────────────────────────────────────── */
 const Home: React.FC = () => {
   const { t, language } = useLanguage();
-  const testimonial = TESTIMONIAL[language === 'en' ? 'en' : 'de'];
+  const de = language !== 'en';
+  const tours  = de ? TOURS_DE  : TOURS_EN;
+  const reviews = REVIEWS.map(r => de ? r.de : r.en);
 
   React.useEffect(() => {
     if (window.location.hash === '#about') {
@@ -73,277 +117,383 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-surface">
-      <section className="relative h-[min(77vh,46rem)] w-full overflow-hidden">
-        <div className="absolute inset-0">
+    <div className="bg-[#fbf9f5] text-[#1b1c1a]">
+
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="relative min-h-[80vh] flex items-center pt-16 pb-16 overflow-hidden">
+
+        {/* Background image + scrim */}
+        <div className="absolute inset-0 z-0">
           <img
-            className="h-full w-full object-cover"
-            src={HERO_SRC}
-            srcSet={HERO_SRC_SET}
-            sizes="100vw"
-            width={1600}
-            height={1029}
+            className="w-full h-full object-cover"
+            src={'/images/charles-bridge-hero-1600.jpg'}
             alt={t('home.hero.imageAlt')}
             fetchPriority="high"
-            decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fbf9f5] via-[#fbf9f5]/60 to-transparent" />
         </div>
-        <div className="relative mx-auto flex h-full w-full max-w-6xl flex-col justify-end px-5 pb-12 sm:px-8 md:pb-24">
-          <div className="mx-auto w-full max-w-3xl">
-            {/* Badge — single line on mobile, no wrapping */}
-            <motion.span
-              className="mb-4 hidden rounded-full bg-secondary-container px-4 py-1.5 font-label text-xs font-bold uppercase tracking-widest text-on-secondary-container sm:mb-6 sm:inline-block"
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {t('home.badge')}
-            </motion.span>
 
-            {/* H1 — clamp prevents line-break overflow on small screens */}
-            <h1
-              className="mb-5 font-headline leading-tight text-surface-container-lowest"
-              style={{ fontSize: 'clamp(1.75rem, 8vw, 4rem)' }}
-            >
-              {t('home.hero.line1')}
-              <br />
-              <span className="text-secondary-container">{t('home.hero.line2')}</span>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full">
+
+          {/* Copy */}
+          <div className="space-y-6">
+            {/* Eyebrow pill */}
+            <div className="inline-flex items-center space-x-2 bg-[#7b5800]/10 px-3 py-1 rounded-full font-bold text-xs tracking-widest uppercase text-[#7b5800]">
+              <span
+                className="material-symbols-outlined text-sm"
+                style={{ fontVariationSettings: "'FILL' 1", fontSize: '14px' }}
+              >
+                star
+              </span>
+              <span>{de ? 'Zertifizierte Expertin' : 'Certified Expert'}</span>
+            </div>
+
+            {/* H1 */}
+            <h1 className="font-headline text-5xl md:text-7xl leading-tight font-bold text-[#1b1c1a]">
+              {de ? (
+                <>
+                  Entdecken Sie <br />
+                  <span className="italic text-[#6c0008]">Prag</span><br />
+                  <span className="italic text-[#1b1c1a]">mit Zuzana Manová</span>
+                </>
+              ) : (
+                <>
+                  Discover <br />
+                  <span className="italic text-[#6c0008]">Prague</span><br />
+                  <span className="italic text-[#1b1c1a]">with Zuzana Manová</span>
+                </>
+              )}
             </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {/* Trust signals — stack on narrow phones; row from sm up */}
-              <div className="mb-6 flex flex-col gap-2 text-sm font-medium text-surface-container-lowest sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
-                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
-                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">schedule</span>
-                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta1')}</span>
-                </div>
-                <span className="hidden text-white/30 sm:inline">·</span>
-                <div className="flex min-w-0 items-start gap-1.5 sm:items-center">
-                  <span className="material-symbols-outlined mt-0.5 shrink-0 text-base sm:mt-0">group</span>
-                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta2')}</span>
-                </div>
-                <span className="hidden text-white/30 sm:inline">·</span>
-                <a
-                  href={TRIPADVISOR_LISTING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden min-w-0 items-center gap-1.5 transition-opacity hover:opacity-90 sm:flex"
-                >
-                  <span
-                    className="material-symbols-outlined shrink-0 text-base text-secondary-container"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    star
-                  </span>
-                  <span className="min-w-0 leading-snug sm:whitespace-nowrap">{t('home.meta3')}</span>
-                </a>
-              </div>
+            {/* Subtitle */}
+            <p className="text-xl text-[#58413f] max-w-lg font-body leading-relaxed">
+              {t('hero.subtitle')}
+            </p>
 
-              {/* CTAs — always side by side */}
-              <div className="flex items-center gap-3">
-                <Link
-                  to="/book#contact-title"
-                  className="rounded-lg bg-primary px-5 py-3 font-label text-sm font-semibold text-on-primary shadow-md transition-opacity hover:opacity-90 active:scale-95 sm:px-7 sm:py-3.5"
-                >
-                  {t('hero.sendEnquiry')}
-                </Link>
-                <Link
-                  to="/tours"
-                  className="rounded-lg border border-white/40 bg-white/10 px-5 py-3 font-label text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20 sm:px-6 sm:py-3.5"
-                >
-                  {t('hero.exploreTours')} →
-                </Link>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/book#contact-title"
+                className="flex items-center justify-center gap-2 rounded-md px-8 py-3 text-lg font-bold text-white shadow-lg shadow-[#6c0008]/20"
+                style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
+              >
+                {t('hero.sendEnquiry')}
+                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>arrow_forward</span>
+              </Link>
+              <Link
+                href="/tours"
+                className="flex items-center justify-center rounded-md bg-white/80 backdrop-blur-md border border-[#e0bfbc]/30 text-[#1b1c1a] px-8 py-3 text-lg font-semibold hover:bg-white transition-all"
+              >
+                {t('hero.exploreTours')}
+              </Link>
+            </div>
+          </div>
+
+          {/* Portrait card (desktop only) */}
+          <div className="hidden lg:block relative">
+            <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#7b5800]/10 rounded-full blur-3xl" />
+            <div className="relative z-10 bg-white p-4 rounded-xl shadow-2xl rotate-2 max-w-sm mx-auto">
+              <img
+                src={'/images/zuzana-portrait.jpg'}
+                alt="Zuzana Manová"
+                className="rounded-lg aspect-[4/5] object-cover w-full"
+                style={{ objectPosition: 'center 20%' }}
+              />
+              <div
+                className="absolute -bottom-6 -right-6 p-4 rounded-lg shadow-xl text-white max-w-[240px]"
+                style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
+              >
+                <p className="font-headline italic text-base leading-snug">
+                  {de
+                    ? '"Prag ist eine vielschichtige Geschichte, lassen Sie uns diese gemeinsam lesen."'
+                    : '"Prague is a layered story — let us read it together."'}
+                </p>
+                <p className="text-xs uppercase tracking-widest mt-2 opacity-80">— Zuzana</p>
               </div>
-              <p className="mt-3 font-label text-xs text-surface-container-lowest/60">{t('hero.responsePromise')}</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8 md:py-16">
-        <div className="mb-12">
-          <div className="mb-5 flex items-center justify-between gap-4">
-            <h2 className="font-headline text-xl text-primary sm:text-2xl md:text-3xl">{t('home.tours.teaser.title')}</h2>
-            <Link
-              to="/tours"
-              className="shrink-0 font-label text-sm font-semibold text-primary underline-offset-4 hover:underline"
-            >
-              {t('home.tours.teaser.viewAll')} →
-            </Link>
+      {/* ── Tour Highlights ──────────────────────────────────── */}
+      <section className="py-12 bg-[#f5f3ef]" id="tours">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Heading row */}
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div>
+              <span className="font-bold tracking-[0.2em] uppercase text-sm block mb-2 text-[#7b5800]">
+                {t('home.tours.teaser.title')}
+              </span>
+              <h2 className="font-headline text-4xl font-bold text-[#1b1c1a]">
+                {de ? 'Ausgewählte Erlebnisse' : 'Selected Experiences'}
+              </h2>
+            </div>
+            <p className="font-body text-sm text-[#58413f] max-w-md leading-relaxed">
+              {de
+                ? 'Maßgeschneiderte Routen für anspruchsvolle Reisende, mit Fokus auf Authentizität, Geschichte und dem lokalen Puls der Stadt.'
+                : 'Tailor-made routes for discerning travellers, focused on authenticity, history and the local pulse of the city.'}
+            </p>
           </div>
-          {/* Mobile: horizontal scroll snap. Desktop: 3-col grid */}
-          <div className="-mx-5 flex gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
-            {TEASER_TOURS.map((tour, i) => (
-              <motion.div
-                key={tour.titleKey}
-                className="relative flex w-[72vw] flex-none flex-col overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-sm transition-shadow hover:shadow-md sm:w-auto"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: i * 0.08 }}
-                viewport={{ once: true }}
+
+          {/* Tour rows */}
+          <div className="grid grid-cols-1 gap-1">
+            {tours.map((tour, i) => (
+              <div
+                key={tour.num}
+                className={`group bg-[#fbf9f5] py-6 px-8 flex flex-col md:flex-row justify-between items-center transition-all hover:bg-white${i < tours.length - 1 ? ' border-b border-[#e0bfbc]/20' : ''}`}
               >
-                {tour.popular && (
-                  <span className="absolute left-3 top-3 z-10 rounded-full bg-primary px-3 py-0.5 font-label text-xs font-bold text-on-primary">
-                    {t('tour.badge.popular')}
+                <div className="flex items-center gap-6 mb-4 md:mb-0">
+                  <span className="text-3xl font-headline italic text-[#e0bfbc] group-hover:text-[#6c0008] transition-colors">
+                    {tour.num}
                   </span>
-                )}
-                <div className="h-44 overflow-hidden">
-                  <img
-                    src={pub(tour.image)}
-                    alt={t(tour.titleKey)}
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="mb-1 font-headline text-lg text-primary">{t(tour.titleKey)}</h3>
-                  <div className="mb-4 flex items-center gap-1.5 font-label text-sm text-on-surface-variant">
-                    <span className="material-symbols-outlined text-base">schedule</span>
-                    {t(tour.durationKey)}
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-[#6c0008] transition-colors">
+                      {tour.title}
+                    </h3>
+                    <div className="flex items-center gap-4 mt-1">
+                      <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-[#7b5800]">
+                        <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>schedule</span>
+                        {tour.duration}
+                      </span>
+                      <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-[#58413f]">
+                        <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>group</span>
+                        {tour.meta}
+                      </span>
+                    </div>
                   </div>
+                </div>
+                <div className="flex items-center gap-8">
+                  <p className="hidden lg:block text-[#58413f] max-w-xs text-xs leading-relaxed font-body">
+                    {tour.desc}
+                  </p>
                   <Link
-                    to={`/book?tour=${encodeURIComponent(t(tour.titleKey))}#contact-title`}
-                    className="mt-auto rounded-lg border-2 border-primary px-4 py-2 text-center font-label text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-on-primary"
+                    href={`/book?tour=${encodeURIComponent(tour.title)}#contact-title`}
+                    className="text-[#6c0008] font-bold flex items-center gap-1 text-sm whitespace-nowrap"
                   >
-                    {t('tour.sendEnquiry')}
+                    {de ? 'Details' : 'Details'}
+                    <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" style={{ fontSize: '18px' }}>chevron_right</span>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
+      </section>
 
-        <div
-          id="about"
-          className="mb-20 scroll-mt-28 overflow-hidden rounded-2xl bg-surface-container-low shadow-lg md:flex md:flex-row"
-        >
-          {/* Portrait — large, roughly half-width on desktop */}
-          <div className="relative flex-none md:w-[44%]">
-            <img
-              className="h-72 w-full object-cover sm:h-80 md:h-full md:min-h-[26rem]"
-              style={{
-                /* Face is in the lower third of this image — anchor there on mobile,
-                   shift up slightly on desktop where the full height shows more */
-                objectPosition: 'center 42%',
-              }}
-              src={pub('/images/zuzana-portrait.jpg')}
-              alt="Zuzana Manová"
-            />
-            {/* Certification badge */}
-            <div className="absolute bottom-4 left-4 flex items-center gap-2.5 rounded-full bg-secondary/95 px-4 py-2 shadow-md backdrop-blur-sm">
-              <span className="material-symbols-outlined text-lg text-on-primary" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-              <span className="font-label text-xs font-bold leading-tight text-on-primary">
-                {t('about.badge.line1')}<br />{t('about.badge.line2')}
-              </span>
+      {/* ── About Zuzana ─────────────────────────────────────── */}
+      <section className="py-12 overflow-hidden" id="about">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            {/* Portrait column */}
+            <div className="lg:col-span-5 relative">
+              <div className="rounded-xl overflow-hidden aspect-[3/4] relative z-10 shadow-2xl bg-[#eae8e4]">
+                <img
+                  className="w-full h-full object-cover"
+                  src={'/images/zuzana-portrait.jpg'}
+                  alt="Zuzana Manová"
+                  style={{ objectPosition: 'center 20%' }}
+                  loading="lazy"
+                />
+              </div>
+              {/* Decorative border offset */}
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 border-4 border-[#7b5800]/20 rounded-lg -z-0" />
+              {/* Watermark */}
+              <div className="absolute top-1/2 -left-10 -translate-y-1/2 hidden xl:block">
+                <span className="font-headline italic select-none text-[#e4e2de]/50"
+                  style={{ fontSize: '8rem', lineHeight: 1 }}>
+                  Zuzana
+                </span>
+              </div>
+            </div>
+
+            {/* Copy column */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="space-y-2">
+                <span className="font-bold tracking-[0.2em] uppercase text-sm text-[#6c0008]">
+                  {de ? 'Lernen Sie Zuzana kennen' : 'Meet Zuzana'}
+                </span>
+                <h2 className="font-headline text-4xl font-bold text-[#1b1c1a] leading-tight">
+                  {de
+                    ? <>Prag, erzählt mit <span className="italic font-normal">Leidenschaft</span></>
+                    : <>Prague, told with <span className="italic font-normal">passion</span></>}
+                </h2>
+              </div>
+
+              <div className="space-y-4 text-base text-[#58413f] font-body leading-relaxed">
+                <p>{t('about.intro')}</p>
+                <p>{t('about.expertise')}</p>
+                <p>{t('about.promise')}</p>
+              </div>
+
+              {/* Stat grid */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-4">
+                <div>
+                  <p className="font-headline text-2xl text-[#6c0008] font-bold">40+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#58413f] font-bold">
+                    {de ? 'Jahre Erfahrung' : 'Years guiding'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-headline text-2xl text-[#6c0008] font-bold">4,9k</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#58413f] font-bold">
+                    {de ? 'Touren kuratiert' : 'Tours curated'}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-headline text-2xl text-[#6c0008] font-bold">5,0</p>
+                  <p className="text-[10px] uppercase tracking-widest text-[#58413f] font-bold">
+                    {de ? 'Sterne Bewertung' : 'Star rating'}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Copy */}
-          <div className="flex flex-col justify-center space-y-5 p-8 md:p-10 lg:p-12">
-            <h2 className="font-headline text-2xl text-on-surface md:text-3xl lg:text-4xl">
-              {t('home.section.story.title')}
+      {/* ── City Gallery ─────────────────────────────────────── */}
+      <section className="py-12 bg-[#1b1c1a] text-[#fbf9f5]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10 space-y-2">
+            <span className="font-bold tracking-[0.2em] uppercase text-sm text-[#fdc34d]">
+              {de ? 'Von meinen Gästen' : 'From my guests'}
+            </span>
+            <h2 className="font-headline text-4xl font-bold italic">
+              {de ? 'Fotos von unseren Touren' : 'Photos from our tours'}
             </h2>
-            <p className="leading-relaxed text-on-surface-variant">{t('about.intro')}</p>
-            <p className="leading-relaxed text-on-surface-variant">{t('about.expertise')}</p>
-            <p className="leading-relaxed text-on-surface-variant">{t('about.promise')}</p>
-            <div className="flex flex-wrap gap-3 pt-2">
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4" style={{ height: 600 }}>
+            <div className="col-span-2 row-span-2 overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={'/images/guest-photo-tourguide.jpg'}
+                alt="Zuzana with guests on a Prague tour"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-[#6c0008]/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+            <div className="overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={'/images/guest-photo-night.jpeg'}
+                alt="Prague at night"
+                loading="lazy"
+              />
+            </div>
+            <div className="overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={'/images/guest-photo-food.jpeg'}
+                alt="Czech food on a Prague tour"
+                loading="lazy"
+              />
+            </div>
+            <div className="col-span-2 overflow-hidden relative group rounded-lg">
+              <img
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src={'/images/blog-boat-prague.jpg'}
+                alt="Boat on the Vltava river in Prague"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Social Proof ─────────────────────────────────────── */}
+      <section className="py-12 bg-[#efeeea]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10 space-y-2">
+            {/* Stars */}
+            <div className="flex justify-center items-center gap-2 text-[#7b5800] mb-2">
+              {[1,2,3,4,5].map(s => (
+                <span
+                  key={s}
+                  className="material-symbols-outlined text-sm"
+                  style={{ fontVariationSettings: "'FILL' 1", fontSize: '18px' }}
+                >
+                  star
+                </span>
+              ))}
+            </div>
+            <h2 className="font-headline text-3xl font-bold text-[#1b1c1a]">
+              {de ? 'Unvergessliche Erinnerungen' : 'Unforgettable Memories'}
+            </h2>
+            <p className="text-[#58413f] uppercase tracking-widest text-[10px] font-bold">
+              {t('home.reviews.groupTitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {reviews.map((review, i) => (
+              <div key={i} className="bg-[#fbf9f5] p-6 rounded-xl shadow-lg shadow-[#1b1c1a]/5 flex flex-col justify-between">
+                <p className="text-[#58413f] font-body italic mb-6 text-sm leading-relaxed">
+                  "{review.quote}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#e4e2de] flex items-center justify-center flex-shrink-0">
+                    <span className="font-bold text-sm text-[#58413f]">{review.author[0]}</span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-xs">{review.author}</p>
+                    <p className="text-[9px] text-[#7b5800] font-bold uppercase tracking-widest">{review.source}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Widget strip */}
+          <div className="border-t border-[#e0bfbc] pt-10">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <TripAdvisorWidget />
+              <TourHqWidget />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Final CTA ────────────────────────────────────────── */}
+      <section className="py-12 px-6">
+        <div
+          className="max-w-5xl mx-auto rounded-[1.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl"
+          style={{ background: 'linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%)' }}
+        >
+          {/* Texture overlay */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden rounded-[1.5rem]">
+            <img
+              className="w-full h-full object-cover mix-blend-overlay"
+              src={'/images/prague-castle.jpg'}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="relative z-10 space-y-6">
+            <h2 className="font-headline text-3xl md:text-5xl font-bold text-white leading-tight">
+              {de ? <>Bereit, Prag <br /> zu entdecken?</> : <>Ready to discover <br /> Prague?</>}
+            </h2>
+            <p className="text-base text-white/80 max-w-2xl mx-auto font-body">
+              {de
+                ? 'Begrenzte Verfügbarkeit für private Buchungen. Kontaktieren Sie Zuzana noch heute, um Ihre individuelle Reiseroute zu planen.'
+                : 'Limited availability for private bookings. Contact Zuzana today to plan your personal itinerary.'}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/tours"
-                className="rounded-lg bg-primary px-6 py-3 font-label text-sm font-semibold text-on-primary shadow-sm transition-opacity hover:opacity-90 active:scale-[0.98]"
+                href="/book#contact-title"
+                className="bg-white text-[#6c0008] px-8 py-3 rounded-md text-base font-bold hover:bg-[#fbf9f5] transition-all shadow-xl"
+              >
+                {t('hero.sendEnquiry')}
+              </Link>
+              <Link
+                href="/tours"
+                className="bg-transparent border border-white/40 text-white px-8 py-3 rounded-md text-base font-bold hover:bg-white/10 transition-all"
               >
                 {t('hero.exploreTours')}
               </Link>
-              <Link
-                to="/zuzana-manova"
-                className="rounded-lg border-2 border-primary px-6 py-3 font-label text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-on-primary"
-              >
-                {t('nav.zuzana')}
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-20 grid grid-cols-2 gap-6 lg:grid-cols-4">
-          {[
-            { image: '/images/prague-castle.jpg', title: t('features.historic.title'), desc: t('features.historic.desc') },
-            { image: '/images/blog-jewish-quarter-2-min.jpg', title: t('features.groups.title'), desc: t('features.groups.desc') },
-            { image: '/images/blog-hidden-gems-min.jpg', title: t('features.expert.title'), desc: t('features.expert.desc') },
-            { image: '/images/blog-hidden-gems-2-min.jpg', title: t('features.gems.title'), desc: t('features.gems.desc') },
-          ].map((f, i) => (
-            <motion.div
-              key={f.title}
-              className="overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest shadow-sm"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-36 overflow-hidden sm:h-40">
-                <img src={pub(f.image)} alt={f.title} className="h-full w-full object-cover" loading="lazy" />
-              </div>
-              <div className="p-4">
-                <h3 className="mb-1 font-headline text-base text-primary">{f.title}</h3>
-                <p className="text-sm leading-relaxed text-on-surface-variant">{f.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mb-20 space-y-8">
-          <h3 className="font-headline text-2xl text-primary">{t('home.gallery.title')}</h3>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-            <div className="col-span-2 row-span-2 md:col-span-2 md:row-span-2">
-              <img
-                className="h-full min-h-[12rem] w-full rounded-lg object-cover"
-                src={pub('/images/prague-castle.jpg')}
-                alt=""
-              />
-            </div>
-            <div className="h-40 md:h-48">
-              <img
-                className="h-full w-full rounded-lg object-cover"
-                src={pub('/images/charles-bridge-2-min.jpg')}
-                alt=""
-              />
-            </div>
-            <div className="h-40 md:h-48">
-              <img
-                className="h-full w-full rounded-lg object-cover"
-                src={pub('/images/old-town-square.jpg')}
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-20 space-y-8">
-          <h3 className="font-headline text-2xl text-primary">{t('home.reviews.groupTitle')}</h3>
-
-          <blockquote className="rounded-xl border border-outline-variant/20 bg-surface-container-lowest p-6 shadow-sm">
-            <p className="mb-4 text-lg italic leading-relaxed text-on-surface-variant">
-              <span aria-hidden="true">&ldquo;</span>
-              {testimonial.quote}
-              <span aria-hidden="true">&rdquo;</span>
-            </p>
-            <footer className="font-label text-sm text-on-surface-variant">
-              — {testimonial.author}
-              <span className="ml-2 text-secondary">· {testimonial.platform} ★★★★★</span>
-            </footer>
-          </blockquote>
-
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-8">
-            <div className="space-y-4">
-              <h4 className="font-headline text-lg text-primary md:text-xl">{t('home.tripadvisor.sectionTitle')}</h4>
-              <TripAdvisorWidget />
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-headline text-lg text-primary md:text-xl">{t('home.tourhq.sectionTitle')}</h4>
-              <TourHqWidget />
             </div>
           </div>
         </div>

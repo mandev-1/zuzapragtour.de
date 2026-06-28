@@ -9,6 +9,12 @@
   body {
     @apply bg-surface text-on-surface font-body antialiased selection:bg-secondary-container selection:text-on-secondary-container;
   }
+
+  /* Article pages: selection color overrides */
+  .article-layout-root ::selection {
+    background-color: #6B1F2A;
+    color: #F5EFE4;
+  }
 }
 
 @layer components {
@@ -44,5 +50,22 @@
   }
   .btn-small {
     @apply px-4 py-2 text-sm;
+  }
+}
+
+@layer utilities {
+  /* Hide global site Header on article and blog-index pages */
+  body:has(.article-layout-root) header:not(.article-masthead),
+  body:has(.blog-index-root) header:not(.article-masthead) {
+    display: none !important;
+  }
+  body:has(.article-layout-root) main,
+  body:has(.blog-index-root) main {
+    padding-top: 0 !important;
+  }
+  /* Hide global footer on blog-index (it renders its own) */
+  body:has(.blog-index-root) > footer,
+  body:has(.blog-index-root) #__next > footer {
+    display: none !important;
   }
 }

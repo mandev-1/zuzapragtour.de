@@ -3,9 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const SITE = 'https://zuzapragtour.de';
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8'));
+const SITE = (pkg.homepage || 'https://zuzapragtour.de').replace(/\/$/, '');
 const SITEMAP_URL = `${SITE}/sitemap.xml`;
-const INDEXNOW_KEY = '0ba5d917a5ee483c9c875df26cd223d0';
+const INDEXNOW_KEY = '5cb4403216bc477196df12d6e2fbbd43';
 
 /* ── 1. Sitemap ping (Google + Bing) ───────────────────────────── */
 
@@ -41,10 +42,8 @@ function collectAllUrls() {
     `${SITE}/`,
     `${SITE}/tours`,
     `${SITE}/contact`,
-    `${SITE}/book`,
     `${SITE}/blog`,
-    `${SITE}/privacy`,
-    `${SITE}/terms`,
+    `${SITE}/zuzana-manova`,
   ];
 
   try {
@@ -53,8 +52,12 @@ function collectAllUrls() {
     if (match) {
       const posts = vm.runInNewContext(`const data = ${match[1]}; data;`, {}, { timeout: 1000 });
       for (const p of posts) {
-        urls.push(`${SITE}/blog/${p.slug}`);
-        if (p.slugDe) urls.push(`${SITE}/blog/${p.slugDe}`);
+        if (p.noindex) continue;
+        if (p.slugDe) {
+          urls.push(`${SITE}/blog/${p.slugDe}`);
+        } else {
+          urls.push(`${SITE}/blog/${p.slug}`);
+        }
       }
     }
   } catch (e) {

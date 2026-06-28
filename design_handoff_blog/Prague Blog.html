@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prague Visitor Pass: Drei Gründe dagegen — Zuza Pragtour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --ivory: #F5EFE4;
+    --ivory-deep: #EDE4D3;
+    --paper: #FAF6EC;
+    --ink: #1A1714;
+    --ink-soft: #3A332C;
+    --ink-mute: #6B6055;
+    --rule: #D9CFBC;
+    --rule-soft: #E8DFCC;
+    --burgundy: #6B1F2A;
+    --burgundy-deep: #4F1620;
+    --brass: #A88654;
+    --brass-deep: #8C6A3C;
+    --sage: #8A9282;
+    --measure: 660px;
+    --serif-display: 'Italiana', 'Cormorant Garamond', 'Times New Roman', serif;
+    --serif-body: 'Libre Caslon Text', 'EB Garamond', Georgia, serif;
+    --serif-italic: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    --sans: 'Inter Tight', 'Helvetica Neue', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    font-size: 19px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "liga", "onum";
+  }
+
+  ::selection { background: var(--burgundy); color: var(--ivory); }
+
+  /* Top progress bar */
+  .progress-rail {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 2px; z-index: 100; background: transparent;
+  }
+  .progress-bar {
+    height: 100%; width: 0%;
+    background: var(--burgundy);
+    transition: width 0.1s linear;
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--rule);
+    background: var(--ivory);
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(8px);
+  }
+  .masthead-inner {
+    max-width: 1320px; margin: 0 auto;
+    padding: 18px 48px;
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+    gap: 32px;
+  }
+  .mast-meta {
+    font-family: var(--sans);
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-mute);
+    display: flex; gap: 24px; align-items: center;
+  }
+  .mast-meta .dot { width: 4px; height: 4px; background: var(--burgundy); border-radius: 50%; display: inline-block; }
+  .mast-logo {
+    font-family: var(--serif-italic);
+    font-size: 24px; font-weight: 400; letter-spacing: 0.01em;
+    color: var(--ink);
+    text-align: center;
+    font-style: italic;
+  }
+  .mast-logo .amp { color: var(--burgundy); font-weight: 400; }
+  .mast-nav {
+    display: flex; justify-content: flex-end; gap: 28px;
+    font-family: var(--sans); font-size: 12px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .mast-nav a { color: inherit; text-decoration: none; }
+  .mast-nav a:hover { color: var(--burgundy); }
+
+  /* Hero */
+  .hero {
+    padding: 80px 48px 60px;
+    max-width: 1320px; margin: 0 auto;
+  }
+  .hero-kicker {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--burgundy);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 28px;
+  }
+  .hero-kicker .rule { width: 36px; height: 1px; background: var(--burgundy); }
+  .hero-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: clamp(44px, 5.4vw, 78px);
+    line-height: 1.05;
+    letter-spacing: 0.005em;
+    margin: 0 0 32px;
+    max-width: 16ch;
+    color: var(--ink);
+    font-feature-settings: "liga", "dlig";
+  }
+  .hero-title em {
+    font-family: var(--serif-italic);
+    font-style: italic; color: var(--burgundy);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .hero-deck {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 0 40px;
+    font-weight: 400;
+  }
+  .hero-byline {
+    display: flex; align-items: center; gap: 20px;
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-mute);
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    max-width: 660px;
+  }
+  .byline-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, #C9A87A 0%, #8C6A3C 100%);
+    display: grid; place-items: center;
+    font-family: var(--serif-display); font-style: italic;
+    font-size: 18px; color: var(--ivory);
+    flex-shrink: 0;
+  }
+  .byline-name {
+    color: var(--ink); font-weight: 500;
+    font-family: var(--sans);
+    letter-spacing: 0.02em;
+  }
+  .byline-meta { color: var(--ink-mute); }
+  .byline-sep { color: var(--rule); }
+
+  /* Hero image */
+  .hero-image {
+    margin: 20px auto 0;
+    max-width: 1240px;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #8B6E47 0%, #5C4329 50%, #3A2918 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-image::after {
+    content: "Astronomische Uhr · Altstädter Ring · Praha";
+    position: absolute; bottom: 20px; left: 24px;
+    font-family: 'Courier New', monospace; font-size: 10px;
+    color: rgba(245, 239, 228, 0.55); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .hero-image::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(135deg, transparent 0, transparent 12px, rgba(0,0,0,0.06) 12px, rgba(0,0,0,0.06) 13px),
+      radial-gradient(ellipse at 30% 40%, rgba(212,180,131,0.4) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 70%, rgba(107,31,42,0.3) 0%, transparent 50%);
+  }
+
+  /* Article container with TOC sidebar */
+  .article-shell {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 100px 48px 80px;
+    display: grid;
+    grid-template-columns: 200px 1fr 260px;
+    gap: 56px;
+    align-items: start;
+  }
+
+  /* TOC */
+  .toc {
+    position: sticky; top: 100px;
+    font-family: var(--sans);
+    font-size: 12px;
+  }
+  .toc-label {
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute); font-size: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .toc-list a {
+    color: var(--ink-soft); text-decoration: none;
+    display: block; padding-left: 12px;
+    border-left: 1px solid var(--rule);
+    transition: all 0.2s;
+    line-height: 1.4;
+  }
+  .toc-list a:hover { color: var(--burgundy); border-left-color: var(--burgundy); }
+  .toc-list a.active { color: var(--burgundy); border-left-color: var(--burgundy); border-left-width: 2px; padding-left: 11px; }
+  .toc-num {
+    font-family: var(--serif-display); font-style: italic;
+    color: var(--brass); margin-right: 8px;
+    font-size: 13px;
+  }
+
+  /* Right rail */
+  .right-rail {
+    position: sticky; top: 100px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+
+  /* Right-rail cards — calmer, softer */
+  .rail-card {
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    padding: 22px;
+  }
+  .rail-card-image {
+    aspect-ratio: 4 / 3;
+    margin: -22px -22px 18px;
+    background: linear-gradient(135deg, #C9956B 0%, #8B5A2B 50%, #4F3018 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .rail-card-image::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(135deg, transparent 0, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px),
+      radial-gradient(ellipse at 60% 30%, rgba(255, 240, 210, 0.3) 0%, transparent 60%);
+  }
+  .rail-card-image::after {
+    content: "Altädter Ring";
+    position: absolute; bottom: 12px; left: 14px;
+    font-family: 'Courier New', monospace; font-size: 9px;
+    color: rgba(245, 239, 228, 0.6); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .rail-kicker {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+  }
+  .rail-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    margin: 0 0 10px;
+  }
+  .rail-text {
+    font-family: var(--serif-body);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+  .rail-cta {
+    display: inline-block;
+    background: var(--burgundy);
+    color: var(--ivory);
+    border: none;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .rail-cta:hover { background: var(--burgundy-deep); }
+  .rail-cta.full { display: block; width: 100%; text-align: center; }
+
+  /* Share + save block (now under CTA) */
+  .share-block {
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .share-label {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .share-row { display: flex; gap: 10px; }
+  .share-btn {
+    width: 32px; height: 32px;
+    border: 1px solid var(--rule);
+    background: transparent;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--ink-soft);
+  }
+  .share-btn:hover {
+    border-color: var(--burgundy);
+    color: var(--burgundy);
+    background: rgba(107, 31, 42, 0.04);
+  }
+  .save-count {
+    font-family: var(--sans); font-size: 10px;
+    color: var(--ink-mute);
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+  }
+  .save-count strong { color: var(--ink); font-weight: 500; }
+
+  /* Article body */
+  .article {
+    max-width: var(--measure);
+    margin: 0 auto;
+  }
+
+  .article p {
+    font-family: var(--serif-body);
+    font-size: 19px;
+    line-height: 1.72;
+    color: var(--ink-soft);
+    margin: 0 0 1.4em;
+    text-wrap: pretty;
+    hanging-punctuation: first last;
+  }
+
+  /* Drop cap */
+  .article > p:first-of-type::first-letter,
+  .dropcap::first-letter {
+    font-family: var(--serif-display);
+    font-weight: 500;
+    font-size: 5.4em;
+    line-height: 0.85;
+    float: left;
+    margin: 0.05em 0.08em 0 -0.04em;
+    color: var(--burgundy);
+    font-feature-settings: "lnum";
+  }
+
+  .article h2 {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    margin: 2.2em 0 0.6em;
+    max-width: 22ch;
+  }
+  .article h2 em { font-family: var(--serif-italic); font-style: italic; color: var(--burgundy); letter-spacing: -0.005em; }
+
+  .article h3 {
+    font-family: var(--serif-italic);
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 2em 0 0.5em;
+  }
+
+  .article a {
+    color: var(--burgundy);
+    text-decoration: underline;
+    text-decoration-color: var(--brass);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    transition: all 0.15s;
+  }
+  .article a:hover {
+    color: var(--burgundy-deep);
+    text-decoration-color: var(--burgundy);
+  }
+
+  .article strong { color: var(--ink); font-weight: 600; }
+
+  /* Numbered Gründe — the structural backbone */
+  .grund {
+    margin: 5em 0 4em;
+    position: relative;
+  }
+  .grund-marker {
+    display: flex; align-items: baseline; gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .grund-num {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 0.9;
+    color: var(--burgundy);
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+  .grund-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 6px;
+  }
+  .grund-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    margin: 0;
+  }
+  .grund-title em { font-family: var(--serif-italic); font-style: italic; color: var(--burgundy); letter-spacing: -0.005em; }
+
+  /* Pull quote */
+  .pullquote {
+    margin: 3em -40px;
+    padding: 0 0 0 40px;
+    border-left: 2px solid var(--burgundy);
+    position: relative;
+  }
+  .pullquote::before {
+    content: "„";
+    position: absolute;
+    top: -0.3em; left: 0.05em;
+    font-family: var(--serif-display);
+    font-size: 100px;
+    color: var(--brass);
+    line-height: 1;
+    opacity: 0.3;
+  }
+  .pullquote-text {
+    font-family: var(--serif-italic);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0 0 16px;
+    letter-spacing: -0.005em;
+  }
+  .pullquote-attr {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  /* Inline images */
+  .figure {
+    margin: 3em 0;
+  }
+  .figure.wide {
+    margin-left: -120px;
+    margin-right: -120px;
+  }
+  .figure.full {
+    margin-left: calc(-1 * (50vw - var(--measure) / 2 - 24px));
+    margin-right: calc(-1 * (50vw - var(--measure) / 2 - 24px));
+    width: auto;
+  }
+  .figure-image {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    background: linear-gradient(135deg, #6B5340 0%, #3D2D1F 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .figure-image.river {
+    background: linear-gradient(135deg, #5C7A8B 0%, #C9A87A 50%, #8B6E47 100%);
+  }
+  .figure-image.market {
+    background: linear-gradient(180deg, #8B5A2B 0%, #4F3018 100%);
+  }
+  .figure-image.castle {
+    background: linear-gradient(135deg, #A88654 0%, #6B1F2A 100%);
+  }
+  .figure-image::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(135deg, transparent 0, transparent 14px, rgba(0,0,0,0.04) 14px, rgba(0,0,0,0.04) 15px),
+      radial-gradient(ellipse at 60% 40%, rgba(255, 240, 210, 0.25) 0%, transparent 60%);
+  }
+  .figure-image::after {
+    content: attr(data-caption);
+    position: absolute; bottom: 16px; left: 20px;
+    font-family: 'Courier New', monospace; font-size: 10px;
+    color: rgba(245, 239, 228, 0.6); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .figcaption {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-mute);
+    margin-top: 14px;
+    padding-left: 16px;
+    border-left: 1px solid var(--brass);
+    max-width: 64ch;
+  }
+  .figcaption-credit {
+    font-family: var(--sans); font-style: normal;
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-mute); opacity: 0.7;
+    margin-left: 12px;
+  }
+
+  /* Ornament divider */
+  .ornament {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    margin: 4em 0;
+    color: var(--brass);
+  }
+  .ornament .line { width: 80px; height: 1px; background: var(--brass); opacity: 0.5; }
+  .ornament .glyph {
+    font-family: var(--serif-display);
+    font-size: 24px; font-style: italic;
+    line-height: 1;
+  }
+
+  /* Tip / warning callout */
+  .callout {
+    margin: 2.5em 0;
+    padding: 28px 32px;
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    border-left: 3px solid var(--brass);
+    position: relative;
+  }
+  .callout-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--brass-deep);
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .callout-label::before {
+    content: ""; width: 14px; height: 1px; background: var(--brass);
+  }
+  .callout-text {
+    font-family: var(--serif-body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .callout-text strong { color: var(--ink); }
+
+  /* Cost table */
+  .cost-table {
+    margin: 2.5em 0;
+    padding: 32px;
+    background: var(--paper);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .cost-title {
+    font-family: var(--sans);
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 20px;
+  }
+  .cost-row {
+    display: grid; grid-template-columns: 1fr auto;
+    padding: 12px 0;
+    border-bottom: 1px dotted var(--rule);
+    font-family: var(--serif-body);
+    font-size: 17px;
+    color: var(--ink-soft);
+    align-items: baseline;
+  }
+  .cost-row:last-child { border-bottom: none; padding-top: 18px; margin-top: 6px; border-top: 1px solid var(--ink); }
+  .cost-row.total { font-weight: 600; color: var(--ink); }
+  .cost-amount {
+    font-family: var(--serif-display);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .cost-row.total .cost-amount { color: var(--burgundy); font-size: 24px; }
+  .cost-vs {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
+    margin-top: 16px;
+  }
+
+  /* Numbered list inside content */
+  .article ul {
+    list-style: none; padding: 0;
+    margin: 1.5em 0;
+  }
+  .article ul li {
+    font-family: var(--serif-body);
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 0.8em;
+  }
+  .article ul li::before {
+    content: "—";
+    position: absolute; left: 0; top: 0;
+    color: var(--brass);
+    font-weight: 500;
+  }
+
+  /* Article footer / tags */
+  .article-footer {
+    margin-top: 5em;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 32px;
+  }
+  .tag {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 6px 14px;
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tag:hover { border-color: var(--burgundy); color: var(--burgundy); }
+
+  /* Author bio */
+  .author-bio {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 32px;
+    padding: 36px;
+    background: var(--paper);
+    border: 1px solid var(--rule-soft);
+    margin: 3em 0;
+    align-items: start;
+  }
+  .author-portrait {
+    width: 120px; height: 120px;
+    background: linear-gradient(135deg, #C9A87A 0%, #6B4329 100%);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .author-portrait::after {
+    content: "Z"; position: absolute; inset: 0;
+    display: grid; place-items: center;
+    font-family: var(--serif-display); font-style: italic;
+    font-size: 56px; color: var(--ivory); font-weight: 300;
+  }
+  .author-kicker {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 8px;
+  }
+  .author-name {
+    font-family: var(--serif-italic);
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .author-credentials {
+    font-family: var(--serif-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+  .author-creds-list {
+    display: flex; flex-wrap: wrap; gap: 16px 24px;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .author-creds-list span { display: flex; align-items: center; gap: 8px; }
+  .author-creds-list span::before {
+    content: ""; width: 5px; height: 5px;
+    background: var(--brass);
+    border-radius: 50%;
+  }
+
+  /* Newsletter inline */
+  .newsletter {
+    margin: 4em 0;
+    padding: 60px 48px;
+    background: var(--ink);
+    color: var(--ivory);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .newsletter::before, .newsletter::after {
+    content: ""; position: absolute;
+    width: 1px; background: var(--brass); opacity: 0.5;
+  }
+  .newsletter::before { top: 16px; bottom: 16px; left: 16px; }
+  .newsletter::after { top: 16px; bottom: 16px; right: 16px; }
+  .newsletter-kicker {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 18px;
+  }
+  .newsletter-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+    color: var(--ivory);
+    margin: 0 0 12px;
+    max-width: 22ch;
+    margin-left: auto; margin-right: auto;
+  }
+  .newsletter-title em { font-family: var(--serif-italic); font-style: italic; color: var(--brass); letter-spacing: -0.005em; }
+  .newsletter-deck {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 17px;
+    color: rgba(245, 239, 228, 0.75);
+    max-width: 52ch;
+    margin: 0 auto 32px;
+  }
+  .newsletter-form {
+    display: flex; gap: 0;
+    max-width: 460px; margin: 0 auto;
+    border-bottom: 1px solid var(--brass);
+  }
+  .newsletter-form input {
+    flex: 1; background: transparent; border: none;
+    color: var(--ivory);
+    font-family: var(--serif-body); font-size: 17px;
+    padding: 14px 4px;
+    outline: none;
+  }
+  .newsletter-form input::placeholder { color: rgba(245, 239, 228, 0.4); font-style: italic; }
+  .newsletter-form button {
+    background: transparent; border: none;
+    color: var(--brass);
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 14px 0 14px 20px; cursor: pointer;
+    transition: color 0.2s;
+  }
+  .newsletter-form button:hover { color: var(--ivory); }
+
+  /* Related articles */
+  .related {
+    max-width: 1320px; margin: 80px auto 0;
+    padding: 80px 48px;
+    border-top: 1px solid var(--rule);
+  }
+  .related-header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 48px;
+  }
+  .related-title {
+    font-family: var(--serif-italic);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--ink);
+    margin: 0;
+  }
+  .related-link {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--burgundy); text-decoration: none;
+    border-bottom: 1px solid var(--burgundy);
+    padding-bottom: 4px;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .related-card { cursor: pointer; }
+  .related-card-image {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #6B5340, #3D2D1F);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s;
+  }
+  .related-card:hover .related-card-image { transform: scale(1.02); }
+  .related-card-image::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(135deg, transparent 0, transparent 12px, rgba(0,0,0,0.05) 12px, rgba(0,0,0,0.05) 13px),
+      radial-gradient(ellipse at 50% 40%, rgba(255, 240, 210, 0.2) 0%, transparent 60%);
+  }
+  .related-card-image.c1 { background: linear-gradient(135deg, #6B1F2A, #2A0D11); }
+  .related-card-image.c2 { background: linear-gradient(135deg, #8A9282, #3D4A3D); }
+  .related-card-image.c3 { background: linear-gradient(135deg, #A88654, #4F3018); }
+  .related-card-kicker {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--burgundy); margin-bottom: 10px;
+  }
+  .related-card-title {
+    font-family: var(--serif-display);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .related-card-title em { font-family: var(--serif-italic); font-style: italic; color: var(--burgundy); letter-spacing: -0.005em; }
+  .related-card-meta {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  /* Footer */
+  .site-footer {
+    background: var(--ink);
+    color: var(--ivory);
+    padding: 80px 48px 40px;
+    margin-top: 80px;
+  }
+  .footer-inner {
+    max-width: 1320px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 48px;
+  }
+  .footer-brand {
+    font-family: var(--serif-italic);
+    font-style: italic;
+    font-size: 30px;
+    color: var(--ivory);
+    margin: 0 0 16px;
+  }
+  .footer-brand em { color: var(--brass); }
+  .footer-tagline {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(245, 239, 228, 0.6);
+    line-height: 1.5;
+    max-width: 32ch;
+  }
+  .footer-col h4 {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--brass);
+    margin: 0 0 18px;
+    font-weight: 500;
+  }
+  .footer-col ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .footer-col a {
+    font-family: var(--serif-body);
+    font-size: 16px;
+    color: rgba(245, 239, 228, 0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--brass); }
+  .footer-bottom {
+    max-width: 1320px; margin: 60px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(168, 134, 84, 0.2);
+    display: flex; justify-content: space-between;
+    font-family: var(--sans); font-size: 11px;
+    color: rgba(245, 239, 228, 0.4);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* Reservation strip */
+  .reservation-strip {
+    background: var(--burgundy);
+    color: var(--ivory);
+    padding: 50px 48px;
+  }
+  .reservation-inner {
+    max-width: 1320px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 40px;
+  }
+  .reservation-text {
+    font-family: var(--serif-italic);
+    font-style: italic;
+    font-size: 34px;
+    margin: 0;
+    color: var(--ivory);
+  }
+  .reservation-text em {
+    font-family: var(--serif-display);
+    font-style: normal;
+    color: var(--brass);
+    letter-spacing: 0.01em;
+  }
+  .reservation-cta {
+    background: var(--ivory);
+    color: var(--burgundy);
+    border: none;
+    padding: 18px 32px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .reservation-cta:hover { background: var(--brass); color: var(--ivory); }
+
+  @media (max-width: 1100px) {
+    .article-shell { grid-template-columns: 1fr; max-width: var(--measure); padding: 60px 24px; gap: 0; }
+    .toc, .right-rail { display: none; }
+    .figure.wide, .figure.full { margin-left: 0; margin-right: 0; }
+    .pullquote { margin-left: 0; margin-right: 0; }
+  }
+  @media (max-width: 720px) {
+    .hero { padding: 40px 24px; }
+    .masthead-inner { grid-template-columns: 1fr; }
+    .mast-meta, .mast-nav { display: none; }
+    .related-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .author-bio { grid-template-columns: 1fr; }
+    .reservation-inner { flex-direction: column; align-items: flex-start; }
+    .grund-num { font-size: 64px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-rail"><div class="progress-bar" id="progressBar"></div></div>
+
+<header class="masthead" data-screen-label="Masthead">
+  <div class="masthead-inner">
+    <div class="mast-meta">
+      <span>Prag · Mai 2026</span>
+      <span class="dot"></span>
+      <span>Editorial №&nbsp;47</span>
+    </div>
+    <div class="mast-logo">Zuza <span class="amp">&amp;</span> Pragtour</div>
+    <nav class="mast-nav">
+      <a href="#">Touren</a>
+      <a href="#">Reisen</a>
+      <a href="#">Journal</a>
+      <a href="#">Über</a>
+      <a href="#">Reservieren</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" data-screen-label="Hero">
+  <div class="hero-kicker">
+    <span class="rule"></span>
+    Reise-Journal · Praktischer Rat
+  </div>
+  <h1 class="hero-title">Prague Visitor&nbsp;Pass: <em>drei Gründe</em> dagegen.</h1>
+  <p class="hero-deck">
+    Eine ehrliche Auseinandersetzung mit dem offiziellen Stadtpass — und warum
+    er für anspruchsvolle Reisende selten die richtige Wahl ist. Aus zwölf
+    Jahren Praxis als Pragerin und Stadtführerin.
+  </p>
+  <div class="hero-byline">
+    <div class="byline-avatar">Z</div>
+    <div>
+      <div class="byline-name">Zuzana Procházková</div>
+      <div class="byline-meta">Lizenzierte Stadtführerin · 12 min Lesezeit</div>
+    </div>
+    <div style="margin-left: auto; text-align: right;">
+      <div class="byline-meta">Veröffentlicht am</div>
+      <div class="byline-name" style="font-size: 13px;">14.&nbsp;Mai&nbsp;2026</div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-image" role="img" aria-label="Astronomische Uhr am Altstädter Ring"></div>
+
+<div class="article-shell">
+
+  <aside class="toc" aria-label="Inhaltsverzeichnis">
+    <div class="toc-label">In diesem Artikel</div>
+    <ul class="toc-list">
+      <li><a href="#einleitung" class="active"><span class="toc-num">i</span>Einleitung</a></li>
+      <li><a href="#grund-1"><span class="toc-num">1</span>Was der Pass enthält</a></li>
+      <li><a href="#grund-2"><span class="toc-num">2</span>Verlorene Lebenszeit</a></li>
+      <li><a href="#grund-3"><span class="toc-num">3</span>Falsche Versprechen</a></li>
+      <li><a href="#fazit"><span class="toc-num">iv</span>Mein Fazit</a></li>
+      <li><a href="#alternativen"><span class="toc-num">v</span>Bessere Alternativen</a></li>
+    </ul>
+  </aside>
+
+  <article class="article" data-screen-label="Article body">
+
+    <p id="einleitung">
+      Wenn ich eine Frage in meiner Inbox am häufigsten bekomme, dann ist es
+      diese: <em>„Lohnt sich der Prague Visitor Pass für unseren Aufenthalt?"</em>
+      Die Antwort, so ungern ich sie gebe, ist in den meisten Fällen ein
+      klares Nein. In den vergangenen zwei Jahren habe ich den Pass für
+      Hunderte von Gästen durchgerechnet — für Paare auf Hochzeitsreise, für
+      Geschäftsleute auf Kurztrip, für anspruchsvolle Reisende, die Prag
+      jenseits der Touristenströme erleben möchten.
+    </p>
+
+    <p>
+      Der Prague Visitor Pass wird von der Stadtverwaltung aggressiv beworben.
+      Auf Plakaten, in Hotels, auf den Bildschirmen am Flughafen Václav
+      Havel. Er verspricht freien Zutritt zu mehr als sechzig Sehenswürdig­keiten,
+      kostenlose Fahrten mit der Moldauschifffahrt, und „Ersparnisse von
+      bis zu 60 %". Doch wer rechnet, stellt schnell fest: Diese Zahl gilt
+      nur für eine sehr bestimmte Sorte Reisender — und Sie gehören vermutlich
+      nicht dazu.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">Vorab in einer Zeile</div>
+      <p class="callout-text">
+        Für Reisende mit Pragaufenthalten von <strong>zwei bis vier Tagen</strong>,
+        die zwei bis drei Hauptattraktionen besuchen möchten, ist der Pass
+        in <strong>91 % aller von uns geprüften Fälle</strong> teurer als
+        der direkte Eintritt — bei zugleich geringerer Flexibilität.
+      </p>
+    </div>
+
+    <p>
+      Auf den folgenden Seiten möchte ich Ihnen erklären, warum. Nicht aus
+      Polemik, sondern aus jahrelanger Erfahrung mit Gästen, die nach drei
+      Tagen Prag enttäuscht im Café Slavia saßen, weil sie ein Drittel
+      ihrer Zeit in Schlangen verbracht hatten. Prag verdient mehr.
+    </p>
+
+    <div class="ornament" aria-hidden="true">
+      <span class="line"></span>
+      <span class="glyph">❦</span>
+      <span class="line"></span>
+    </div>
+
+    <!-- GRUND 1 -->
+    <section class="grund" id="grund-1">
+      <div class="grund-marker">
+        <div class="grund-num">I.</div>
+        <div>
+          <div class="grund-label">Erster Grund</div>
+          <h2 class="grund-title">Was der Pass <em>tatsächlich</em> enthält — und was nicht</h2>
+        </div>
+      </div>
+
+      <p>
+        Der Pass kostet, je nach Gültigkeitsdauer, zwischen 64 und 124 Euro
+        pro Person. Klingt zunächst überschaubar. Doch bei näherem Hinsehen
+        offenbart sich ein Konstruktionsfehler: Die wirklich begehrten
+        Sehenswürdigkeiten Prags sind <strong>nicht enthalten</strong>.
+      </p>
+
+      <p>
+        Die Prager Burg etwa — das eigentliche Wahrzeichen der Stadt —
+        gehört nicht zum Stadtinventar, sondern zum Präsidialamt der
+        Tschechischen Republik. Sie zahlen den vollen Eintritt von 450
+        Kronen, Pass hin oder her. Auch die Klosterbibliothek von Strahov,
+        deren barocker Theologischer Saal zu den schönsten Räumen Mitteleuropas
+        zählt, bleibt außen vor. Vom Lobkowicz-Palais ganz zu schweigen.
+      </p>
+
+      <div class="cost-table">
+        <div class="cost-title">Eine typische Rechnung — Paar, drei Tage</div>
+        <div class="cost-row">
+          <span>Prager Burg (Rundgang B)</span>
+          <span class="cost-amount">36&nbsp;€</span>
+        </div>
+        <div class="cost-row">
+          <span>Strahov-Bibliothek</span>
+          <span class="cost-amount">12&nbsp;€</span>
+        </div>
+        <div class="cost-row">
+          <span>Astronomische Uhr (Turmaufstieg)</span>
+          <span class="cost-amount">14&nbsp;€</span>
+        </div>
+        <div class="cost-row">
+          <span>Jüdisches Museum</span>
+          <span class="cost-amount">22&nbsp;€</span>
+        </div>
+        <div class="cost-row total">
+          <span>Direkter Eintritt, pro Person</span>
+          <span class="cost-amount">84&nbsp;€</span>
+        </div>
+        <div class="cost-vs">
+          Im Vergleich: 3-Tages-Pass · 98&nbsp;€ — und davon ist Position 1 nicht abgedeckt.
+        </div>
+      </div>
+
+      <p>
+        Was im Pass tatsächlich enthalten ist, sind kleinere Museen — das
+        Mucha-Museum, das Smetana-Museum, das Apple Museum (ja, wirklich) —
+        sowie ein paar Aussichtstürme und der ÖPNV. Letzteren bekommen Sie
+        an jedem Automaten für 120 Kronen pro Tag. Rechnen Sie selbst.
+      </p>
+    </section>
+
+    <div class="ornament" aria-hidden="true">
+      <span class="line"></span>
+      <span class="glyph">❦</span>
+      <span class="line"></span>
+    </div>
+
+    <figure class="figure wide">
+      <div class="figure-image river" data-caption="Karlsbrücke · Vltava · Morgennebel"></div>
+      <figcaption class="figcaption">
+        Die Moldau bei Sonnenaufgang von der Mánes-Brücke aus.
+        <span class="figcaption-credit">Foto · Z. Procházková</span>
+      </figcaption>
+    </figure>
+
+    <!-- GRUND 2 -->
+    <section class="grund" id="grund-2">
+      <div class="grund-marker">
+        <div class="grund-num">II.</div>
+        <div>
+          <div class="grund-label">Zweiter Grund</div>
+          <h2 class="grund-title">Verlorene Lebenszeit — die <em>versteckte Währung</em></h2>
+        </div>
+      </div>
+
+      <p>
+        Hier kommen wir zum Punkt, der mir als Stadtführerin am meisten am
+        Herzen liegt. Denn Geld, ehrlich gesagt, ist für die meisten unserer
+        Gäste nicht das entscheidende Argument. Zeit ist es.
+      </p>
+
+      <p>
+        Der Pass funktioniert über eine App. Diese App muss bei jedem
+        Eingang aktiviert, ein QR-Code gescannt, oft eine Reservierung
+        eingelöst werden. In der Hochsaison stehen Sie an manchen
+        Sehenswürdig­keiten in <strong>zwei Schlangen gleichzeitig</strong>:
+        einer für die App-Inhaber, einer für Direkt­besucher. Die letztere
+        ist regelmäßig kürzer.
+      </p>
+
+      <div class="pullquote">
+        <p class="pullquote-text">
+          Zwei Tage lang haben wir mit der App gekämpft, statt Prag zu sehen.
+          Beim dritten Mal haben wir aufgegeben.
+        </p>
+        <div class="pullquote-attr">— Familie K., München · Frühjahr 2026</div>
+      </div>
+
+      <p>
+        Das System ist nicht für anspruchsvolle Reisende konzipiert,
+        sondern für Reisegruppen mit straffem Programm. Wenn Sie Prag
+        wirklich erleben möchten — wenn Sie morgens auf der Kampa-Insel
+        frühstücken, mittags durch die Buchhandlungen der Týn­gasse
+        stöbern und abends in einer der Kellerweinstuben sitzen wollen —
+        dann ist der Pass kein Werkzeug. Er ist ein Korsett.
+      </p>
+    </section>
+
+    <figure class="figure wide">
+      <div class="figure-image market" data-caption="Trdelník · Havelmarkt · Altstadt"></div>
+      <figcaption class="figcaption">
+        Trdelník am Havelmarkt — eine touristische Erfindung des 21. Jahrhunderts,
+        nicht etwa böhmische Tradition. Das echte Gebäck heißt Koláč.
+        <span class="figcaption-credit">Foto · Z. Procházková</span>
+      </figcaption>
+    </figure>
+
+    <div class="ornament" aria-hidden="true">
+      <span class="line"></span>
+      <span class="glyph">❦</span>
+      <span class="line"></span>
+    </div>
+
+    <!-- GRUND 3 -->
+    <section class="grund" id="grund-3">
+      <div class="grund-marker">
+        <div class="grund-num">III.</div>
+        <div>
+          <div class="grund-label">Dritter Grund</div>
+          <h2 class="grund-title">Falsche Versprechen, <em>fehlende Tiefe</em></h2>
+        </div>
+      </div>
+
+      <p>
+        Der dritte Grund ist der bedeutendste — und der unsichtbarste. Der
+        Pass suggeriert, dass möglichst viele Sehenswürdigkeiten gleich­bedeutend
+        seien mit einem gelungenen Aufenthalt. Das Gegenteil ist der Fall.
+      </p>
+
+      <p>
+        Wer Prag in dieser Logik abarbeitet, sieht am Ende drei Dutzend
+        Räume und nichts davon richtig. Er erinnert sich an die Fassade
+        des Estates Theaters, in dem Mozart den <em>Don Giovanni</em>
+        uraufführte — aber nicht daran, wie das Foyer riecht. Er hat das
+        Mucha-Museum „abgehakt" — aber das Pavianstal-Fenster im Veitsdom
+        nicht eine Minute lang betrachtet.
+      </p>
+
+      <h3>Was wir stattdessen empfehlen</h3>
+
+      <p>
+        Anspruchsvolles Reisen heißt: weniger sehen, dafür langsamer.
+        Eine private Stadtführung mit einer ortskundigen Person, die Sie
+        in zwei Stunden mehr lehrt als drei Tage Pass-Hetze. Ein Tisch
+        in der <em>U Modré Kachničky</em>, wo Wenzel Havel verkehrte. Eine
+        Stunde im Klementinum, das im Pass übrigens nicht enthalten ist.
+      </p>
+
+      <ul>
+        <li>Eine geführte Privattour, zugeschnitten auf Ihre Interessen</li>
+        <li>Reservierungen in Restaurants, die nicht im Reiseführer stehen</li>
+        <li>Direkter Eintritt zu den Orten, die Sie wirklich bewegen</li>
+        <li>Ein Konzert in der Spanischen Synagoge, statt einer Touristen-Show</li>
+      </ul>
+    </section>
+
+    <figure class="figure wide">
+      <div class="figure-image castle" data-caption="Pražský Hrad · Goldenes Gässchen · Abendlicht"></div>
+      <figcaption class="figcaption">
+        Das Goldene Gässchen auf der Burg, kurz nach Schließung der
+        regulären Öffnungszeiten — ein Privileg geführter Abendtouren.
+        <span class="figcaption-credit">Foto · Z. Procházková</span>
+      </figcaption>
+    </figure>
+
+    <!-- FAZIT -->
+    <section class="grund" id="fazit">
+      <div class="grund-marker">
+        <div class="grund-num">IV.</div>
+        <div>
+          <div class="grund-label">Mein Fazit</div>
+          <h2 class="grund-title">Was ich Ihnen <em>wirklich</em> empfehle</h2>
+        </div>
+      </div>
+
+      <p>
+        Ich verkaufe keine Pässe. Ich führe Menschen durch eine Stadt, die
+        ich liebe. Und ich habe in den vergangenen Jahren eine einfache
+        Beobachtung gemacht: Die Gäste, die mit dem geringsten Plan
+        kommen, gehen mit den schönsten Erinnerungen.
+      </p>
+
+      <p>
+        Wenn Sie Prag besuchen, lassen Sie den Pass im Hotelzimmer.
+        Buchen Sie zwei Stunden mit einer guten Stadtführerin. Lassen
+        Sie sich von ihr in ein Café führen, das nicht in Ihrem Reiseführer
+        steht. Bestellen Sie einen Becherovka. Schauen Sie aus dem Fenster.
+        Das ist Prag.
+      </p>
+    </section>
+
+    <div class="ornament" aria-hidden="true">
+      <span class="line"></span>
+      <span class="glyph">❦</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="newsletter">
+      <div class="newsletter-kicker">Das Pragtour-Journal</div>
+      <h3 class="newsletter-title">Briefe aus <em>Praha</em>, einmal monatlich.</h3>
+      <p class="newsletter-deck">
+        Reise-Notizen, Restaurant-Empfehlungen abseits der Pfade und
+        kleine Geschichten aus zwölf Jahren Stadtführungen — direkt in
+        Ihren Posteingang.
+      </p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Bestätigt ✓';">
+        <input type="email" placeholder="Ihre E-Mail-Adresse" />
+        <button type="submit">Abonnieren →</button>
+      </form>
+    </div>
+
+    <div class="article-footer">
+      <div class="tags">
+        <span class="tag">Prag</span>
+        <span class="tag">Stadtpass</span>
+        <span class="tag">Reisetipp</span>
+        <span class="tag">Sehenswürdigkeiten</span>
+        <span class="tag">Geld sparen</span>
+      </div>
+
+      <div class="author-bio">
+        <div class="author-portrait" role="img" aria-label="Zuzana Procházková"></div>
+        <div>
+          <div class="author-kicker">Über die Autorin</div>
+          <h4 class="author-name">Zuzana Procházková</h4>
+          <p class="author-credentials">
+            Lizenzierte Stadtführerin und Gründerin von Zuza &amp; Pragtour. In
+            Prag geboren, an der Karls-Universität in Kunstgeschichte
+            promoviert. Begleitet seit zwölf Jahren deutschsprachige Gäste
+            durch ihre Heimatstadt — von Staatschefs bis zu Hochzeitsreisenden.
+          </p>
+          <div class="author-creds-list">
+            <span>Karls-Universität Prag</span>
+            <span>Akkreditiert seit 2014</span>
+            <span>Mitglied AGUEC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <aside class="right-rail" aria-label="Kontakt und Teilen">
+    <div class="rail-card">
+      <div class="rail-card-image" role="img" aria-label="Altädter Ring von oben"></div>
+      <div class="rail-kicker">Empfohlene Tour</div>
+      <h4 class="rail-title">Prag-Highlights</h4>
+      <p class="rail-text">
+        Private Stadtführungen in Ihrem Tempo — Altstadt, Burg, versteckte Winkel.
+      </p>
+      <a href="#" class="rail-cta">Jetzt buchen</a>
+    </div>
+
+    <div class="rail-card">
+      <h4 class="rail-title">Bleiben Sie in Kontakt</h4>
+      <p class="rail-text">
+        Stellen Sie eine Frage oder nennen Sie Ihr Reisedatum — wir melden uns.
+      </p>
+      <a href="mailto:zuza@pragtour.de" class="rail-cta full">Kontakt aufnehmen</a>
+    </div>
+
+    <div class="share-block">
+      <div class="share-label">Teilen</div>
+      <div class="share-row">
+        <button class="share-btn" aria-label="E-Mail">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg>
+        </button>
+        <button class="share-btn" aria-label="Kopieren">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V5a1 1 0 00-1-1H5a1 1 0 00-1 1v10a1 1 0 001 1h3"/></svg>
+        </button>
+        <button class="share-btn" aria-label="Drucken">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="8" rx="1"/><path d="M6 17h12v4H6z"/></svg>
+        </button>
+        <button class="share-btn" aria-label="Speichern">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+        </button>
+      </div>
+      <div class="save-count"><strong>247</strong> Leser haben diesen Artikel gespeichert</div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- Related -->
+<section class="related" data-screen-label="Related articles">
+  <div class="related-header">
+    <h3 class="related-title">Weiterlesen</h3>
+    <a href="#" class="related-link">Gesamtes Journal →</a>
+  </div>
+  <div class="related-grid">
+    <article class="related-card">
+      <div class="related-card-image c1"></div>
+      <div class="related-card-kicker">Praktischer Rat · 8 min</div>
+      <h4 class="related-card-title">Wo man in Prag <em>wirklich</em> isst.</h4>
+      <div class="related-card-meta">Zuzana Procházková · April 2026</div>
+    </article>
+    <article class="related-card">
+      <div class="related-card-image c2"></div>
+      <div class="related-card-kicker">Geschichte · 14 min</div>
+      <h4 class="related-card-title">Die <em>verborgenen</em> Innenhöfe der Altstadt.</h4>
+      <div class="related-card-meta">Zuzana Procházková · März 2026</div>
+    </article>
+    <article class="related-card">
+      <div class="related-card-image c3"></div>
+      <div class="related-card-kicker">Reise-Journal · 6 min</div>
+      <h4 class="related-card-title">Ein Wochenende in <em>Český Krumlov</em>.</h4>
+      <div class="related-card-meta">Zuzana Procházková · Februar 2026</div>
+    </article>
+  </div>
+</section>
+
+<!-- Reservation -->
+<section class="reservation-strip" data-screen-label="Reservation strip">
+  <div class="reservation-inner">
+    <p class="reservation-text">Bereit, <em>Prag</em> richtig zu erleben?</p>
+    <button class="reservation-cta">Privattour reservieren →</button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" data-screen-label="Footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand">Zuza <em>&amp;</em> Pragtour</p>
+      <p class="footer-tagline">
+        Private Stadtführungen für anspruchsvolle Reisende. Seit 2014. Auf
+        Deutsch, in Prag.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Touren</h4>
+      <ul>
+        <li><a href="#">Altstadt &amp; Burg</a></li>
+        <li><a href="#">Jüdisches Viertel</a></li>
+        <li><a href="#">Kulinarisches Prag</a></li>
+        <li><a href="#">Privattour nach Maß</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Journal</h4>
+      <ul>
+        <li><a href="#">Reisetipps</a></li>
+        <li><a href="#">Restaurants</a></li>
+        <li><a href="#">Geschichte</a></li>
+        <li><a href="#">Newsletter</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="#">zuza@pragtour.de</a></li>
+        <li><a href="#">+420 777 123 456</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Reservieren</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2014–2026 Zuza &amp; Pragtour</span>
+    <span>Praha 1 · Česká republika</span>
+  </div>
+</footer>
+
+<div id="tweaksRoot"></div>
+
+<script>
+  // Reading progress
+  const bar = document.getElementById('progressBar');
+  function updateProgress() {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (scrolled / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  // TOC active state
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const sections = ['einleitung','grund-1','grund-2','grund-3','fazit','alternativen']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  function updateToc() {
+    const y = window.scrollY + 200;
+    let active = sections[0];
+    for (const s of sections) {
+      if (s.offsetTop <= y) active = s;
+    }
+    tocLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + (active?.id || ''));
+    });
+  }
+  window.addEventListener('scroll', updateToc, { passive: true });
+  updateToc();
+</script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks.jsx"></script>
+
+</body>
+</html>

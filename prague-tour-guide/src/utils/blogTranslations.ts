@@ -7,10 +7,156 @@ export const blogTranslations = {
     de: 'Prag Reiseblog',
   },
 
+  // Post 30
+  'blog.post30.title': {
+    en: 'Boat Trips in Prague on the Vltava',
+    de: 'Bootsfahrt in Prag: Was die Moldau bietet',
+  },
+  'blog.post30.excerpt': {
+    en: 'From rented rowboats near Slovanský ostrov to evening dinner cruises with a view of the illuminated castle — the Vltava offers more on-water options than most visitors realise. A practical overview of what exists, what it costs, and what is actually worth doing.',
+    de: 'Vom gemieteten Ruderboot beim Slovanský ostrov bis zur Abend-Dinner-Cruise mit Blick auf die beleuchtete Burg — die Moldau bietet mehr Möglichkeiten auf dem Wasser, als die meisten Besucher ahnen. Ein praktischer Überblick darüber, was es gibt, was es kostet und was sich wirklich lohnt.',
+  },
+  'blog.post30.date': {
+    en: 'April 25, 2026',
+    de: '25. April 2026',
+  },
+  'blog.post30.content': {
+    en: `<p class="lead">The Vltava runs through the heart of Prague, and most visitors see it only from above — from the Charles Bridge, from the castle hill, from the railings of the embankment. That is a missed opportunity. From the water, Prague looks fundamentally different: the towers and bridges appear in their true proportion, the hills fall into place, and the city suddenly makes a different kind of sense. An hour on the river is one of the best things you can do here — and there is something suitable for everyone, whether you want to drift quietly in a rented rowboat, sit over dinner on a cruise ship, or paddle a kayak under the bridges.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-boat-prague.jpg" alt="View of Prague Castle and Charles Bridge from the Vltava river" loading="lazy" /><div class="image-credit">The view from the water is the one most visitors never see — and it is the best one</div></div>
+
+<h2>Rented rowboats and pedal boats — the classic Prague option</h2>
+
+<p>The most local and most affordable way to get onto the Vltava is simply to rent a rowboat or pedal boat for an hour. The main rental point is at <strong>Slovanský ostrov</strong> (also called Žofín Island), the small island in the river just south of the National Theatre. Boats are available from April through October, weather permitting. A rowboat costs around 150–180 CZK per thirty minutes; pedal boats are similar. You take the boat out, paddle at your own pace, and return it when you are done.</p>
+
+<p>What makes this option special is the freedom. No schedule, no commentary, no group. You row where you want — upstream toward the Palacký Bridge with the view of Vyšehrad, or downstream under the Jiráskův Bridge toward the National Theatre with the castle framing the skyline behind it. In the early morning or on a weekday afternoon, you can have stretches of the river almost to yourself.</p>
+
+<p>A second rental point operates near <strong>Čechův most</strong> on the left bank, giving you access to a quieter stretch of river toward the northern weir. This is not a polished tourist experience — the boats are simple, the piers are modest, nobody hands you a map. That is partly why it works.</p>
+
+<h2>Vltava river cruises — for first-time visitors</h2>
+
+<p>Several companies operate scheduled sightseeing cruises from the embankment near <strong>Čechův most</strong> and <strong>Rašínovo nábřeží</strong>. The standard cruise runs one to two hours, passes under the Charles Bridge in both directions, and covers the main stretch between Vyšehrad and the northern railway bridge. Prices run 350–500 CZK per adult for a one-hour cruise.</p>
+
+<p>The largest operator is <strong>Prague Boats</strong>, running glassed-in and open-deck vessels departing several times daily. Their one-hour commentary cruise is the most straightforward option for first-time visitors — you see the castle panorama, the Vyšehrad cliffs, and the embankment architecture without planning anything. Tickets available at the pier.</p>
+
+<p>Best on clear days or in the late afternoon when the light on the castle is warmest. Avoid midday in peak summer — flat light, full boats.</p>
+
+<h2>Evening and dinner cruises</h2>
+
+<p>For a special evening, a dinner cruise is worth considering. Several operators run two- to three-hour departures from the central embankment, typically from 19:00 or 19:30. The boat moves slowly along the illuminated city while a fixed-price dinner is served. The castle lit at night from the water, with its reflection in the river, is genuinely striking — one of the better evening views the city offers.</p>
+
+<p>Prices run from around 900 CZK to 1,400 CZK per person depending on operator and menu. The food is serviceable rather than exceptional — this is not the reason to go. The reason is the view and the unhurried pace. Book in advance in July and August. Shoulder season (May, June, September) is easier to book last-minute.</p>
+
+<h2>Pražské Benátky — gondola boats and water taxis</h2>
+
+<p><strong>Pražské Benátky</strong> (Prague Venice) operates gondola-style covered boats along the <strong>Čertovka</strong> canal in Malá Strana — the narrow channel running behind Kampa Island. The canal is only a few hundred metres long, but the setting is unusual: old mill buildings on both sides, slowly turning water wheels, the noise of the city muffled behind the walls. It is quiet in a way that is hard to find in central Prague. Rides depart from the landing near the Kampa Museum and last about fifteen to twenty minutes.</p>
+
+<p>The company also runs water taxis between embankment points — practical if you want to cross between Malá Strana and the Old Town without going around by bridge.</p>
+
+<h2>Kayaking on the Vltava</h2>
+
+<p>Kayak and canoe rentals are available near <strong>Císařský ostrov</strong> (Emperor's Island) in the Troja district. This stretch is calmer and less trafficked than the central embankment, and the island itself — a nature reserve with old-growth floodplain forest — is an unusual paddling destination within city limits. Half-day rentals run around 400–600 CZK per kayak.</p>
+
+<p>The route from the island toward the city centre passes through a surprisingly green section of river before the urban embankment begins near Holešovice — about two to three hours at a comfortable pace. This is also the starting point for multi-day Vltava trips heading south toward Český Krumlov, with campsites and boat return points along the route.</p>
+
+<h2>What does a boat trip in Prague cost?</h2>
+
+<table class="blog-table">
+  <thead><tr><th>Option</th><th>Price (approx.)</th><th>Duration</th></tr></thead>
+  <tbody>
+    <tr><td>Rowboat / pedal boat rental</td><td>150–200 CZK</td><td>30 min</td></tr>
+    <tr><td>Sightseeing cruise</td><td>350–500 CZK / person</td><td>1–2 hours</td></tr>
+    <tr><td>Dinner cruise</td><td>900–1,400 CZK / person</td><td>2–3 hours</td></tr>
+    <tr><td>Čertovka canal ride (Pražské Benátky)</td><td>200–300 CZK / person</td><td>15–20 min</td></tr>
+    <tr><td>Kayak rental (Císařský ostrov)</td><td>400–600 CZK / kayak</td><td>half day</td></tr>
+  </tbody>
+</table>
+
+<h2>When is the best time for a boat trip in Prague?</h2>
+
+<p>The season runs April through October. May, June, and September are the best months: warm enough to sit outside, long daylight hours, fewer boats on the water than July and August. The late afternoon light in June — golden, low, falling across Hradčany — is about as good as Prague gets photographically, and from the river it is particularly strong.</p>
+
+<p>July and August work well for evening departures once the midday heat has passed. Spring can be cold on the water — bring a layer even on days that feel warm on land. Avoid weekend mornings in July and August for the rowboats at Slovanský ostrov; weekday mornings are almost always easy.</p>
+
+<div class="blog-cta-box">
+  <h3>Want to build a full day around the river?</h3>
+  <p>I can combine a morning on the water with a walking tour of Malá Strana, Kampa, and the embankment — the neighbourhoods that make the most sense when you have just seen them from below.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Send me a message</a>
+    <a class="btn btn-outline" href="/tours">See all tours</a>
+  </div>
+</div>`,
+    de: `<p class="lead">Die Moldau fließt mitten durch Prag, und die meisten Besucher sehen sie von oben — von der Karlsbrücke, vom Burgberg, von den Geländern der Uferpromenade. Schade eigentlich. Vom Wasser aus sieht die Stadt ganz anders aus: Die Türme und Brücken erscheinen in ihrer richtigen Proportion, die Hügel fügen sich plötzlich zusammen. Ich empfehle meinen Gästen fast immer, sich wenigstens eine Stunde aufs Wasser zu trauen. Es lohnt sich jedes Mal.</p>
+
+<div class="blog-inline-image"><img src="/images/blog-boat-prague.jpg" alt="Blick auf die Prager Burg und die Karlsbrücke von der Moldau" loading="lazy" /><div class="image-credit">Den Blick vom Wasser aus sehen die meisten Besucher nie — dabei ist er der schönste</div></div>
+
+<h2>Ruderboote und Tretboote — der klassische Prager Ausflug</h2>
+
+<p>Der günstigste und meiner Meinung nach schönste Weg auf die Moldau ist ein gemietetes Ruder- oder Tretboot. Den wichtigsten Verleih gibt es am <strong>Slovanský ostrov</strong> (auch Žofín-Insel genannt), der kleinen Flussinsel unmittelbar südlich des Nationaltheaters. Boote sind von April bis Oktober erhältlich, wetterabhängig. Ein Ruderboot kostet etwa 150–180 CZK für dreißig Minuten, Tretboote ähnlich.</p>
+
+<p>Was ich daran mag: die Freiheit. Kein fester Abfahrtsplan, kein Kommentar, keine Gruppe. Man rudert, wohin man möchte — flussaufwärts Richtung Palacký-Brücke mit dem Blick auf Vyšehrad, oder flussabwärts unter der Jiráskův-Brücke hindurch, mit der Burg im Rücken. Früh morgens oder an einem Wochentagnachmittag hat man weite Strecken des Flusses fast für sich allein.</p>
+
+<p>Ein zweiter Verleih befindet sich nahe der <strong>Čechův-Brücke</strong> am linken Ufer, gut für den ruhigeren Abschnitt Richtung Norden. Große Touristenattraktion ist das nicht: die Boote sind schlicht, die Stege sind bescheiden, niemand drückt einem eine Karte in die Hand. Für mich genau das Richtige.</p>
+
+<h2>Moldau-Rundfahrten — für Erstbesucher und schöne Sommertage</h2>
+
+<p>Mehrere Anbieter betreiben regelmäßige Rundfahrten von der Uferpromenade nahe der <strong>Čechův-Brücke</strong> und dem <strong>Rašínovo nábřeží</strong>. Eine Standardrundfahrt dauert ein bis zwei Stunden und führt entlang des Hauptabschnitts zwischen Vyšehrad und der Eisenbahnbrücke im Norden — dabei passiert man die Karlsbrücke in beiden Richtungen. Der Preis liegt in der Regel bei 350–500 CZK pro Erwachsenem für eine einstündige Fahrt.</p>
+
+<p>Der größte Anbieter ist <strong>Prague Boats</strong>, der verglaste und Freideck-Schiffe betreibt, die mehrmals täglich ablegen. Für Erstbesucher ist die einstündige Kommentarfahrt die unkomplizierteste Wahl — Burgpanorama, Vyšehrad-Felsen, Uferarchitektur, kein Aufwand. Tickets gibt es direkt am Pier.</p>
+
+<p>Am schönsten an klaren Tagen oder am späten Nachmittag, wenn das Licht auf der Burg am wärmsten ist. Im Hochsommer lieber den Mittag meiden — flaches Licht, volle Boote.</p>
+
+<h2>Abendfahrten und Dinner-Cruises</h2>
+
+<p>Für einen besonderen Abend lohnt sich eine Dinner-Cruise. Mehrere Anbieter starten zwei- bis dreistündige Fahrten von der zentralen Uferpromenade, typischerweise um 19:00 oder 19:30 Uhr. Das Schiff gleitet langsam an der illuminierten Stadt vorbei, während ein Menü zum Festpreis serviert wird.</p>
+
+<p>Wer Prag noch nie bei Nacht vom Wasser aus gesehen hat, sollte das nachholen. Die Burg spiegelt sich im Fluss, das Licht liegt anders als tagsüber, und man hat zwei Stunden Zeit, das einfach zu genießen. Die Preise liegen je nach Anbieter und Menü zwischen etwa 900 und 1.400 CZK pro Person — das Essen ist solide, aber nicht der Grund für die Fahrt. Für Paare oder alle, die einen ruhigen Abend ohne Kampf um einen Restauranttisch in der Altstadt suchen, ist das wirklich schön. Im Juli und August lohnt sich eine Vorabreservierung; in der Nebensaison reicht meist auch kurzfristig.</p>
+
+<h2>Pražské Benátky — Gondelboote und Wassertaxis</h2>
+
+<p><strong>Pražské Benátky</strong> (Prager Venedig) betreibt überdachte Gondelboote entlang der <strong>Čertovka</strong> in der Kleinseite — dem schmalen Kanal, der hinter der Kampa-Insel verläuft und manchmal als das Kleine Venedig von Prag bezeichnet wird. Der Kanal ist nur wenige hundert Meter lang, aber die Kulisse ist ungewöhnlich: alte Mühlgebäude auf beiden Seiten, langsam drehende Wasserräder, der Stadtlärm gedämpft hinter den Mauern. Es ist ruhig auf eine Art, die man im Prager Zentrum kaum findet. Die Abfahrten erfolgen von der Anlegestelle nahe dem Kampa-Museum und dauern etwa fünfzehn bis zwanzig Minuten.</p>
+
+<p>Pražské Benátky betreibt außerdem Wassertaxis zwischen verschiedenen Punkten am Fluss — praktisch, wenn man zwischen der Kleinseite und der Altstädter Uferpromenade wechseln möchte, ohne den Umweg über eine Brücke zu nehmen.</p>
+
+<h2>Kajak auf der Moldau</h2>
+
+<p>Wer es aktiver mag: Kajak- und Kanuverleih gibt es nahe dem <strong>Císařský ostrov</strong> (Kaiserinsel) im Stadtbezirk Troja im nördlichen Prag. Dieser Flussabschnitt ist ruhiger und weniger befahren als die zentrale Uferpromenade. Die Insel selbst ist ein Naturschutzgebiet mit altem Auwald — mitten in der Stadt, aber überraschend still. Halbtagsmieten kosten ab etwa 400–600 CZK pro Kajak.</p>
+
+<p>Die Route vom Císařský ostrov Richtung Stadtmitte führt durch einen grünen, stillen Flussabschnitt, bevor die städtische Uferpromenade bei Holešovice wieder beginnt — je nach Tempo etwa zwei bis drei Stunden. Von hier starten auch mehrtägige Moldaufahrten in Richtung Süden: Von Prag bis Český Krumlov lässt sich der Fluss über mehrere Tage paddeln, mit Campingplätzen und Bootsrückgabestellen entlang der Strecke. Wer eine Woche hat, sollte das in Betracht ziehen.</p>
+
+<h2>Was kostet eine Bootsfahrt in Prag?</h2>
+
+<table class="blog-table">
+  <thead><tr><th>Option</th><th>Preis (ca.)</th><th>Dauer</th></tr></thead>
+  <tbody>
+    <tr><td>Ruderboot / Tretboot mieten</td><td>150–200 CZK</td><td>30 Minuten</td></tr>
+    <tr><td>Sightseeing-Rundfahrt</td><td>350–500 CZK / Person</td><td>1–2 Stunden</td></tr>
+    <tr><td>Dinner-Cruise</td><td>900–1.400 CZK / Person</td><td>2–3 Stunden</td></tr>
+    <tr><td>Čertovka-Kanalfahrt (Pražské Benátky)</td><td>200–300 CZK / Person</td><td>15–20 Minuten</td></tr>
+    <tr><td>Kajak-Verleih (Císařský ostrov)</td><td>400–600 CZK / Kajak</td><td>halber Tag</td></tr>
+  </tbody>
+</table>
+
+<h2>Wann ist die beste Zeit für eine Bootsfahrt in Prag?</h2>
+
+<p>Die Saison läuft von April bis Oktober. Mai, Juni und September sind am angenehmsten: warm genug für draußen, lange Tage, weniger Betrieb auf dem Wasser als im Hochsommer. Im Juni liegt das Licht am späten Nachmittag flach über Hradčany, golden und langgestreckt — vom Wasser aus ist das wirklich besonders.</p>
+
+<p>Juli und August eignen sich gut für Abendfahrten, wenn die Mittagshitze nachgelassen hat. Im Frühjahr kann es auf dem Wasser kalt sein — eine Jacke einpacken, auch an Tagen, die an Land warm wirken. Der Fluss ist spürbar kühler als die Stadtstraßen. An Wochenenden im Hochsommer empfiehlt sich ein früher Start beim Ruderbootverleih am Slovanský ostrov; an Wochentagen morgens ist es fast immer unkompliziert.</p>
+
+<div class="blog-cta-box">
+  <h3>Einen ganzen Tag rund um den Fluss planen?</h3>
+  <p>Ich kombiniere eine Stunde auf dem Wasser gerne mit einer Führung durch die Kleinseite, Kampa und die Uferpromenade — die Viertel, die am meisten Sinn ergeben, wenn man sie gerade von unten gesehen hat.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Private%20Prague%20Tour#contact-title">Nachricht schreiben</a>
+    <a class="btn btn-outline" href="/tours">Alle Touren ansehen</a>
+  </div>
+</div>`,
+  },
+
   // Post 29
   'blog.post29.title': {
-    en: 'Three walled gardens in Malá Strana that most tourists walk straight past',
-    de: 'Drei ummauerte Gärten in der Prager Kleinseite, an denen fast alle vorbeigehen',
+    en: 'Three Hidden Gardens in Malá Strana',
+    de: 'Drei verborgene Gärten in Malá Strana',
   },
   'blog.post29.excerpt': {
     en: 'Vojanovy sady, the Palace Gardens below Prague Castle, and Wallenstein Garden are all within ten minutes of each other in Malá Strana. One is free and over 750 years old. One costs 80 crowns and gives you a view straight up to the castle. One belongs to the Senate and has a demon wall. Here is how to visit all three.',
@@ -129,8 +275,8 @@ export const blogTranslations = {
 
   // Post 28
   'blog.post28.title': {
-    en: 'Wallenstein Garden: Prague\'s strangest baroque park (and it\'s free)',
-    de: 'Waldsteingarten Prag: Tropfsteinwand, gestohlene Skulpturen und der tschechische Senat',
+    en: 'Wallenstein Garden: Prague\'s Baroque Secret',
+    de: 'Waldsteingarten Prag: Tropfsteinwand & Barock',
   },
   'blog.post28.excerpt': {
     en: 'Hidden behind a gate in Malá Strana, Wallenstein Garden is one of Prague\'s most overlooked spaces — a 400-year-old baroque park with demon-faced grottos, sculptures stolen to Sweden, and a very unusual owner.',
@@ -237,8 +383,8 @@ export const blogTranslations = {
 
   // Post 27
   'blog.post27.title': {
-    en: 'Prague public transport: tickets, apps, and what actually works',
-    de: 'Öffentlicher Verkehr in Prag: Tickets, Apps und was wirklich funktioniert',
+    en: 'Prague Public Transport: Tickets & Apps',
+    de: 'Öffentlicher Verkehr Prag: Tickets & Apps',
   },
   'blog.post27.excerpt': {
     en: 'Trams, metro, buses: one ticket system, but several ways to pay. Here is how to buy fares without stress, which app locals use first, and where to double-check prices before you travel.',
@@ -407,8 +553,8 @@ export const blogTranslations = {
 
   // Post 26
   'blog.post26.title': {
-    en: 'How to get Czech crowns in Prague: Revolut, ATMs, and the scams to avoid',
-    de: 'Geld wechseln in Prag: Revolut, Bankautomaten und die Fallen, die Sie kennen sollten',
+    en: 'Czech Crowns in Prague: Revolut & ATMs',
+    de: 'Geld wechseln Prag: Revolut & Bankautomaten',
   },
   'blog.post26.excerpt': {
     en: 'The Czech Republic uses its own currency — not euros. Here is how to get Czech crowns at a fair rate, why Revolut is the best tool for the job, and which exchange traps to walk straight past.',
@@ -564,8 +710,8 @@ export const blogTranslations = {
 
   // Post 24 (new)
   'blog.post24.title': {
-    en: 'How to choose the right Prague tour guide for you',
-    de: 'So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis',
+    en: 'How to Choose the Right Prague Tour Guide',
+    de: 'Den richtigen Prag-Stadtführer finden',
   },
   'blog.post24.excerpt': {
     en: 'A friendly, honest guide to finding the perfect guide – what to look for, what to ask, and how to make your Prague visit truly personal.',
@@ -724,8 +870,8 @@ export const blogTranslations = {
 
   // Post 25 (new)
   'blog.post25.title': {
-    en: 'Every museum in Prague worth your time (and a few that are not)',
-    de: 'Alle Museen in Prag, die sich lohnen (und ein paar, die es nicht tun)',
+    en: 'Prague Museums: Which Are Worth Your Time?',
+    de: 'Prager Museen: Welche lohnen sich wirklich?',
   },
   'blog.post25.excerpt': {
     en: 'An honest, exhaustive list of Prague museums with ticket links, prices, and which ones the Visitor Pass covers.',
@@ -1232,12 +1378,12 @@ export const blogTranslations = {
 
   // Post 14 (Top places to visit right now)
   'blog.post14.title': {
-    en: 'Top Places to Visit in Prague Right Now (2025): Icons, Parks, Art, and Nightlife',
-    de: 'Top‑Orte, die Sie jetzt in Prag besuchen sollten (2025): Ikonen, Parks, Kunst & Nachtleben',
+    en: 'Top Places to Visit in Prague (2025)',
+    de: 'Top-Orte in Prag 2025: Was Sie sehen müssen',
   },
   'blog.post14.excerpt': {
-    en: 'From Charles Bridge and Old Town Square to Petřín Gardens, Riegrovy Sady, the National Gallery, and rooftop bars—here’s where to go in Prague right now, with practical tips for 2025 days and nights.',
-    de: 'Von Karlsbrücke und Altstädter Ring über Petřín‑Gärten, Riegrovy Sady, die Nationalgalerie bis zu Rooftop‑Bars—hier geht’s 2025 in Prag hin, mit praktischen Tages‑ und Abendtipps.',
+    en: 'From Charles Bridge and Old Town Square to Petřín Gardens, Riegrovy Sady, the National Gallery, and rooftop bars—here\'s where to go in Prague right now, with practical tips for 2025 days and nights.',
+    de: 'Von Karlsbrücke und Altstädter Ring über Petřín‑Gärten, Riegrovy Sady, die Nationalgalerie bis zu Rooftop‑Bars—hier geht\'s 2025 in Prag hin, mit praktischen Tages‑ und Abendtipps.',
   },
   'blog.post14.date': {
     en: 'October 26, 2025',
@@ -1245,7 +1391,7 @@ export const blogTranslations = {
   },
   'blog.post14.content': {
     en: `<h2>Top Places to Visit in Prague Right Now (2025)</h2>
-<p class=”lead”>Prague works at any hour. Sunrise on <strong>Charles Bridge</strong>, quiet lawns in <strong>Petřín Gardens</strong>, design museums when it rains, glowing rooftops after dark. I always tell guests: plan your day by the light, not by a checklist. Here’s how I’d do it now.</p>
+<p class=”lead”>Prague works at any hour. Sunrise on <strong>Charles Bridge</strong>, quiet lawns in <strong>Petřín Gardens</strong>, design museums when it rains, glowing rooftops after dark. I always tell guests: plan your day by the light, not by a checklist. Here's how I'd do it now.</p>
 
 <h3>A few practical notes before you start</h3>
 <ul>
@@ -1257,10 +1403,10 @@ export const blogTranslations = {
 <hr />
 <h2>1) The Classics — Worth It, If You Time Them Right</h2>
 <h3>Charles Bridge (Karlův most)</h3>
-<p>The bridge at blue hour is something I never get tired of showing people. Come early to see <strong>statues, towers, and castle views</strong> without the midday crowds. From the <em>Old Town Bridge Tower</em> side, look toward the Castle for that long diagonal of arches and spires. It’s the photograph everyone takes for a reason.</p>
+<p>The bridge at blue hour is something I never get tired of showing people. Come early to see <strong>statues, towers, and castle views</strong> without the midday crowds. From the <em>Old Town Bridge Tower</em> side, look toward the Castle for that long diagonal of arches and spires. It's the photograph everyone takes for a reason.</p>
 
 <h3>Old Town Square (Staroměstské náměstí)</h3>
-<p>At the northwest corner, the <strong>Astronomical Clock</strong> performs on the hour. Early mornings give you pastel façades and soft light on the cobblestones. Late evenings are just as good. Wander the side lanes — Ungelt courtyard, Týn Church, the passages toward <em>Pařížská</em> are all within a few minutes’ walk.</p>
+<p>At the northwest corner, the <strong>Astronomical Clock</strong> performs on the hour. Early mornings give you pastel façades and soft light on the cobblestones. Late evenings are just as good. Wander the side lanes — Ungelt courtyard, Týn Church, the passages toward <em>Pařížská</em> are all within a few minutes' walk.</p>
 
 <h3>Prague Castle Courtyards & St. Vitus Vistas</h3>
 <p>The courtyards are free to enter. Late afternoon is my preferred time, when the city below turns amber. The <strong>III. Courtyard</strong> frames St. Vitus Cathedral beautifully; the South Gardens give you a long sweep of rooftops and the river. Walk down through <em>Lesser Town</em> to Kampa to finish it properly.</p>
@@ -1268,10 +1414,10 @@ export const blogTranslations = {
 <hr />
 <h2>2) Green Spaces Worth Seeking Out</h2>
 <h3>Petřín Gardens (Petřínské sady)</h3>
-<p>Petřín is Prague’s gentle hillside — orchards, viewpoints, winding paths. Near the Lookout Tower you get <strong>castle-and-river panoramas</strong> that work in every season. Spring blossoms, summer shade, autumn gold, winter stillness. It connects easily to Strahov and the Castle ridge.</p>
+<p>Petřín is Prague's gentle hillside — orchards, viewpoints, winding paths. Near the Lookout Tower you get <strong>castle-and-river panoramas</strong> that work in every season. Spring blossoms, summer shade, autumn gold, winter stillness. It connects easily to Strahov and the Castle ridge.</p>
 
 <h3>Riegrovy Sady (Vinohrady)</h3>
-<p>Locals come here for <strong>sunset views</strong> toward the Castle. The meadow on the western edge has that famous skyline. Bring a picnic or use it as a starting point before heading into Vinohrady’s cafés and beer spots.</p>
+<p>Locals come here for <strong>sunset views</strong> toward the Castle. The meadow on the western edge has that famous skyline. Bring a picnic or use it as a starting point before heading into Vinohrady's cafés and beer spots.</p>
 
 <h3>Letná Park (Letenské sady)</h3>
 <p>From the old “Stalin” lookout you get <strong>several bridges in one frame</strong>. Photographers love the blue-hour light trails; families love the open paths. Good for any viewpoint day.</p>
@@ -1282,10 +1428,10 @@ export const blogTranslations = {
 <hr />
 <h2>3) Art, Design, and What to Do When It Rains</h2>
 <h3>National Gallery Prague (Trade Fair Palace)</h3>
-<p>For modern and contemporary art, the <strong>Trade Fair Palace</strong> (Veletržní palác) is the right choice. Big spaces, good rotating exhibitions. Plan 90 to 120 minutes, check what’s showing before you go.</p>
+<p>For modern and contemporary art, the <strong>Trade Fair Palace</strong> (Veletržní palác) is the right choice. Big spaces, good rotating exhibitions. Plan 90 to 120 minutes, check what's showing before you go.</p>
 
 <h3>Museum of Decorative Arts (Uměleckoprůmyslové museum)</h3>
-<p>One thing I love about this museum: it covers <strong>design, photography, glass, posters, and fashion</strong> all in one building, and it’s always well laid out. Easy to combine with the riverbank and the Old Town loop.</p>
+<p>One thing I love about this museum: it covers <strong>design, photography, glass, posters, and fashion</strong> all in one building, and it's always well laid out. Easy to combine with the riverbank and the Old Town loop.</p>
 
 <h3>Rudolfinum & DOX (worth knowing about)</h3>
 <p><strong>Rudolfinum</strong> runs art exhibitions beside the Philharmonic; <strong>DOX</strong> in Holešovice focuses on architecture and contemporary work. Both are good wet-weather options.</p>
@@ -1317,14 +1463,14 @@ export const blogTranslations = {
 </ul>
 
 <h3>Cocktails and Rooftop Ideas</h3>
-<p>Beyond Terasa U Prince, there are good hotel rooftops, river-view lounges, and a handful of proper speakeasies scattered through the centre. Casual-smart is the right dress code. Bar staff appreciate punctuality if you’ve reserved.</p>
+<p>Beyond Terasa U Prince, there are good hotel rooftops, river-view lounges, and a handful of proper speakeasies scattered through the centre. Casual-smart is the right dress code. Bar staff appreciate punctuality if you've reserved.</p>
 
 <h3>Craft Beer and Classic Pubs</h3>
-<p>Czech beer is serious here, and I mean that as a compliment. Explore <strong>rotating taps from microbreweries</strong>, seasonal styles, and tasting flights. Around <em>Vinohrady and Žižkov</em> you’ll find places that work for both beginners and people who actually read tap lists. Food is usually simple: cheese, pickled things, something hearty nearby.</p>
+<p>Czech beer is serious here, and I mean that as a compliment. Explore <strong>rotating taps from microbreweries</strong>, seasonal styles, and tasting flights. Around <em>Vinohrady and Žižkov</em> you'll find places that work for both beginners and people who actually read tap lists. Food is usually simple: cheese, pickled things, something hearty nearby.</p>
 
 <div class="blog-cta-box">
   <h3>Plan a Night Out That Fits You</h3>
-  <p>Tell me your vibe—rooftop views, speakeasy tasting, or a craft‑beer loop—and I’ll map a safe, walkable route with reservations and last‑tram timing.</p>
+  <p>Tell me your vibe—rooftop views, speakeasy tasting, or a craft‑beer loop—and I'll map a safe, walkable route with reservations and last‑tram timing.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Custom%20Private%20Tour#contact-title">Book a private night tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Ask for recommendations</a>
@@ -1343,7 +1489,7 @@ export const blogTranslations = {
 <p>A classic stretch for photographers: good facades, tram lines, and the Castle sitting above the Philharmonic roof.</p>
 
 <hr />
-<h2>7) How I’d Put a Day Together</h2>
+<h2>7) How I'd Put a Day Together</h2>
 <ul>
   <li><strong>Sunrise:</strong> Charles Bridge, then a wander through the Old Town lanes</li>
   <li><strong>Late morning:</strong> Petřín or Letná for views</li>
@@ -1361,12 +1507,12 @@ export const blogTranslations = {
 </ul>
 
 <div class="did-you-know"><h4>Further Resources</h4>
-  <p>For what’s on right now, the most reliable sources are local media event calendars and community threads updated through 2025.</p>
+  <p>For what's on right now, the most reliable sources are local media event calendars and community threads updated through 2025.</p>
 </div>
 
 <div class="blog-cta-box">
-  <h3>Want a plan built around today’s weather and your energy?</h3>
-  <p>I’ll put together a <strong>walkable day-to-night route</strong> — landmarks, parks, a museum stop if the weather calls for it, and a proper finish on a rooftop or in a good pub. Timed to the light and your pace.</p>
+  <h3>Want a plan built around today's weather and your energy?</h3>
+  <p>I'll put together a <strong>walkable day-to-night route</strong> — landmarks, parks, a museum stop if the weather calls for it, and a proper finish on a rooftop or in a good pub. Timed to the light and your pace.</p>
   <div class="cta-buttons">
     <a class="btn btn-primary" href="/book?tour=Custom%20Private%20Tour#contact-title">Book a custom private tour</a>
     <a class="btn btn-outline" href="/contact#contact-title">Contact me</a>
@@ -1533,7 +1679,7 @@ export const blogTranslations = {
   },
   'blog.post1.content': {
     en: `<h2>When Is the Best Time to Visit Prague?</h2>
-<p>People ask me this constantly, and my honest answer: every season has something real going for it. It depends what you’re after. <strong>Spring</strong> is quieter and the light is beautiful. <strong>Summer</strong> is busy but the evenings are long. <strong>Autumn</strong> is probably my personal favourite. <strong>Winter</strong> gets cold but the Christmas markets are genuinely worth it.</p>
+<p>People ask me this constantly, and my honest answer: every season has something real going for it. It depends what you're after. <strong>Spring</strong> is quieter and the light is beautiful. <strong>Summer</strong> is busy but the evenings are long. <strong>Autumn</strong> is probably my personal favourite. <strong>Winter</strong> gets cold but the Christmas markets are genuinely worth it.</p>
 <h3>Spring (March–May)</h3>
 <ul>
   <li>Cherry blossoms on Petřín in April, and quiet mornings on <a href="/tours">Charles Bridge</a> before the tour groups arrive</li>
@@ -1556,7 +1702,7 @@ export const blogTranslations = {
   <li><strong>Christmas markets</strong> on Old Town Square and the Castle district — not to be missed</li>
   <li>Snow-dusted courtyards are almost empty. Good for museums and warm cafés between walks.</li>
 </ul>
-<p class="lead">Want a seasonal private route that works around when you’re actually here? <a href="/contact#contact-title">Contact me</a> and I’ll plan something that fits your time and interests.</p>`,
+<p class="lead">Want a seasonal private route that works around when you're actually here? <a href="/contact#contact-title">Contact me</a> and I'll plan something that fits your time and interests.</p>`,
     de: `<h2>Wann ist die beste Reisezeit für Prag?</h2>
 <p>Diese Frage bekomme ich ständig, und meine ehrliche Antwort: Jede Jahreszeit hat etwas Echtes zu bieten. Es kommt darauf an, was Sie suchen. <strong>Frühling</strong> ist ruhiger und das Licht ist schön. <strong>Sommer</strong> ist belebter, aber die Abende sind lang. <strong>Herbst</strong> ist persönlich mein Favorit. <strong>Winter</strong> ist kalt, aber die Weihnachtsmärkte sind es wirklich wert.</p>
 <h3>Frühling (März–Mai)</h3>
@@ -1586,8 +1732,8 @@ export const blogTranslations = {
 
   // Post 2 (Hidden Gems) — abbreviated header and excerpt; content intact in base file previously
   'blog.post2.title': {
-    en: 'Hidden Gems of Prague: Realistic, Walkable, Beautiful',
-    de: 'Prag Geheimtipps: Realistisch, begehbar, schön',
+    en: 'Hidden Gems of Prague: Realistic & Walkable',
+    de: 'Prag Geheimtipps: Realistisch & schön',
   },
   'blog.post2.excerpt': {
     en: 'A walkable selection of courtyards, gardens, and cafés that feel truly local—without racing across the city.',
@@ -1661,7 +1807,7 @@ export const blogTranslations = {
   },
   'blog.post3.content': {
     en: `<h2>Prague After Dark</h2>
-<p>The city changes completely at night. The tour groups leave, the light softens, and suddenly <strong>the bridges, the church facades, and the cobblestones</strong> look the way they do in films. I’ve been walking these routes at night for decades and I still find things to notice.</p>
+<p>The city changes completely at night. The tour groups leave, the light softens, and suddenly <strong>the bridges, the church facades, and the cobblestones</strong> look the way they do in films. I've been walking these routes at night for decades and I still find things to notice.</p>
 <h3>The Hour Before Dark</h3>
 <ul>
   <li>Charles Bridge silhouettes and Vltava reflections — best just before the lights come on fully</li>
@@ -1672,7 +1818,7 @@ export const blogTranslations = {
   <li>Lesser Town lanterns and the quiet alleys behind Malostranské náměstí — a different place after 21:00</li>
   <li>Old Town architectural details in soft light that daytime visitors miss entirely</li>
 </ul>
-<p class="lead">Book a private <a href="/tours">night tour</a> — I’ll show you the viewpoints worth the walk and the photo spots that aren’t on any list yet.</p>`,
+<p class="lead">Book a private <a href="/tours">night tour</a> — I'll show you the viewpoints worth the walk and the photo spots that aren't on any list yet.</p>`,
     de: `<h2>Prag nach Einbruch der Dunkelheit</h2>
 <p>Die Stadt verändert sich völlig bei Nacht. Die Reisegruppen gehen, das Licht wird weicher, und plötzlich sehen <strong>die Brücken, die Kirchenfassaden und das Kopfsteinpflaster</strong> aus wie im Film. Ich laufe diese Routen seit Jahrzehnten nachts und entdecke immer noch etwas Neues.</p>
 <h3>Die Stunde vor der Dunkelheit</h3>
@@ -1694,7 +1840,7 @@ export const blogTranslations = {
     de: 'Das Jüdische Viertel: Geschichte und Erbe',
   },
   'blog.post4.excerpt': {
-    en: "Explore the rich history of Prague's Jewish Quarter, one of Europe’s most significant Jewish heritage sites...",
+    en: "Explore the rich history of Prague's Jewish Quarter, one of Europe's most significant Jewish heritage sites...",
     de: 'Erkunden Sie die reiche Geschichte des Prager Jüdischen Viertels, einer der bedeutendsten jüdischen Stätten Europas...',
   },
   'blog.post4.date': {
@@ -1703,14 +1849,14 @@ export const blogTranslations = {
   },
   'blog.post4.content': {
     en: `<h2>The Jewish Quarter: Memory and History</h2>
-<p>Josefov is one of the most important Jewish heritage sites in Europe, and it’s also one of the places where I feel the weight of guiding most strongly. I hold a <em>special certification</em> for this area, and I take the responsibility seriously — both the history and the way it’s told.</p>
+<p>Josefov is one of the most important Jewish heritage sites in Europe, and it's also one of the places where I feel the weight of guiding most strongly. I hold a <em>special certification</em> for this area, and I take the responsibility seriously — both the history and the way it's told.</p>
 <h3>What to See</h3>
 <ul>
   <li>Pinkas Synagogue: the walls are inscribed with the names of over 77,000 Bohemian and Moravian Jewish victims of the Holocaust. Nothing prepares you for the scale of it.</li>
-  <li>Old-New Synagogue: Europe’s oldest active synagogue, built around 1270. Still in use today.</li>
+  <li>Old-New Synagogue: Europe's oldest active synagogue, built around 1270. Still in use today.</li>
   <li>The Old Jewish Cemetery: burials stacked twelve deep over centuries. The crowded tombstones are not a design choice — they reflect a community that ran out of space.</li>
 </ul>
-<p class="lead">For a visit that does justice to the history, <a href="/contact#contact-title">contact me</a>. I tailor the pace and depth to what you’re looking for.</p>`,
+<p class="lead">For a visit that does justice to the history, <a href="/contact#contact-title">contact me</a>. I tailor the pace and depth to what you're looking for.</p>`,
     de: `<h2>Das Jüdische Viertel: Erinnerung und Geschichte</h2>
 <p>Josefov ist eines der bedeutendsten jüdischen Erbe-Stätten Europas, und es ist auch einer der Orte, an dem ich das Gewicht des Führens am stärksten spüre. Ich habe eine <em>Sonderzertifizierung</em> für diesen Bereich, und ich nehme die Verantwortung ernst — sowohl die Geschichte als auch die Art, wie sie erzählt wird.</p>
 <h3>Was zu sehen ist</h3>
@@ -1728,7 +1874,7 @@ export const blogTranslations = {
     de: 'Top 21 Instagram-taugliche Orte in Prag',
   },
   'blog.post5.excerpt': {
-    en: 'From iconic bridges to hidden courtyards—discover Prague’s most photogenic locations and exact spots for the perfect shot.',
+    en: 'From iconic bridges to hidden courtyards—discover Prague\'s most photogenic locations and exact spots for the perfect shot.',
     de: 'Von ikonischen Brücken bis zu versteckten Höfen—entdecken Sie Prags fotogenste Orte und präzise Spots für das perfekte Foto.',
   },
   'blog.post5.date': {
@@ -1736,8 +1882,8 @@ export const blogTranslations = {
     de: '12. Oktober 2025',
   },
   'blog.post5.content': {
-    en: `<h2>Prague’s Best Photo Spots</h2>
-<p>These are <strong>21 locations I actually use</strong> on tours and photo walks. Not a random roundup — these are places where the light, the angle, or the access makes a difference. Arrive early, watch the light, and don’t climb on things or block people trying to get past.</p>
+    en: `<h2>Prague's Best Photo Spots</h2>
+<p>These are <strong>21 locations I actually use</strong> on tours and photo walks. Not a random roundup — these are places where the light, the angle, or the access makes a difference. Arrive early, watch the light, and don't climb on things or block people trying to get past.</p>
 <ol>
   <li><h3>Charles Bridge (Statues & Towers)</h3><p>Best at dawn from the Old Town tower towards the Castle.</p></li>
   <li><h3>Prague Castle Viewpoints</h3><p>Lookouts by St. Wenceslas Vineyard and Hradčanské náměstí.</p></li>
@@ -1761,7 +1907,7 @@ export const blogTranslations = {
   <li><h3>St. Nicholas Church (Mala Strana)</h3><p>Domes and curves—inside and out.</p></li>
   <li><h3>Štefánik Bridge Lookout</h3><p>Multiple bridges in one frame at sunset.</p></li>
   </ol>
-<p class="lead">Want a sunrise-to-night photo route planned around your schedule? <a href="/contact#contact-title">Message me</a> and I’ll put together a private tour.</p>`,
+<p class="lead">Want a sunrise-to-night photo route planned around your schedule? <a href="/contact#contact-title">Message me</a> and I'll put together a private tour.</p>`,
     de: `<h2>Prags beste Fotospots</h2>
 <p>Das sind <strong>21 Orte, die ich wirklich nutze</strong> — auf Führungen und Fotowalks. Keine zufällige Zusammenstellung: Das sind Orte, bei denen Licht, Winkel oder Zugang einen Unterschied machen. Früh ankommen, Licht beachten, nicht auf Dinge steigen oder Leute blockieren.</p>
 <ol>
@@ -1792,8 +1938,8 @@ export const blogTranslations = {
 
   // Post 6 (Havel) — abbreviated header and excerpt; content remains as authored
   'blog.post6.title': {
-    en: 'Václav Havel in Prague: A Walking Tour of Freedom',
-    de: 'Václav Havel in Prag: Ein Spaziergang der Freiheit',
+    en: 'Václav Havel in Prague: A Walk of Freedom',
+    de: 'Václav Havel in Prag: Der Weg der Freiheit',
   },
   'blog.post6.excerpt': {
     en: "Follow the footsteps of Václav Havel across Prague—Velvet Revolution sites, civic forums, theaters, and cafés that shaped a nation's path to freedom.",
@@ -1804,22 +1950,22 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post6.content': {
-    en: `<h2>Prague Through Havel’s Eyes</h2>
+    en: `<h2>Prague Through Havel's Eyes</h2>
 <p>Václav Havel — <strong>playwright, dissident, later president</strong> — left a living map across Prague. This tour follows places where art, civic courage, and history ran into each other. I find new things to say on it every time I lead it.</p>
 <h3>Rašín Embankment: Where It Starts</h3>
-<p>We begin at <strong>Rašínovo nábřeží</strong>, near Havel’s former residence. Look at the building: a <em>female relief</em>, traces of the <em>communist past</em>, and a <em>globe on the roof</em>. Once you know what you’re looking for, it’s hard to walk past without stopping.</p>
+<p>We begin at <strong>Rašínovo nábřeží</strong>, near Havel's former residence. Look at the building: a <em>female relief</em>, traces of the <em>communist past</em>, and a <em>globe on the roof</em>. Once you know what you're looking for, it's hard to walk past without stopping.</p>
 <h3>Quiet Refuge by the River</h3>
 <p>At the <strong>Vltava restaurant</strong>, Havel often sat in the back, facing the wall. A habit from surveillance times. It was where he went to <em>think and write</em>, away from politics and public rooms.</p>
 <div class="blog-inline-image"><img src="/images/blog-havel-2.jpg" alt="Václav Havel tour – riverside reflections" loading="lazy" /></div>
 <h3>Café Slavia and Olga</h3>
-<p>We visit the legendary <strong>Café Slavia</strong>—a center of intellectual life. Here Havel met artists, politicians, and his great love, <em>Olga</em>. Their bond, rooted in everyday humanity, anchored Havel’s extraordinary public life.</p>
+<p>We visit the legendary <strong>Café Slavia</strong>—a center of intellectual life. Here Havel met artists, politicians, and his great love, <em>Olga</em>. Their bond, rooted in everyday humanity, anchored Havel's extraordinary public life.</p>
 <h3>Dissident Years and Theatres</h3>
-<p>We explore Havel’s creative ground at <strong>Divadlo Na zábradlí</strong> and the difficult chapters of <em>interrogations and prison</em> near <strong>Bartolomějská</strong> (today’s Unitas Hotel).</p>
+<p>We explore Havel's creative ground at <strong>Divadlo Na zábradlí</strong> and the difficult chapters of <em>interrogations and prison</em> near <strong>Bartolomějská</strong> (today's Unitas Hotel).</p>
 <h3>From Civic Forum to the Castle</h3>
 <p>At <strong>Laterna magika</strong>, the <em>Civic Forum</em> held daily briefings during the Velvet Revolution. On <strong>Wenceslas Square</strong> and <strong>Národní</strong>, we recall 17 November. Finally, we reflect in the <strong>Prague Castle</strong> courtyards—symbols reshaped by a playwright-president.</p>
 <h3>What This Route Is Actually About</h3>
 <p>Beyond plaques and dates, what I want to show is the <strong>citizen Havel</strong> — humorous, genuinely open, comfortable talking to anyone. This is a walk about what it means to hold onto your humanity when the system is designed to wear it down.</p>
-<p class="lead">Want the full route or to explore some places on your own? <a href="/book?tour=V%C3%A1clav%20Havel%20Tour:%20Sites%20of%20Freedom#contact-title">Message me</a> and I’ll tailor it to your time and interests.</p>
+<p class="lead">Want the full route or to explore some places on your own? <a href="/book?tour=V%C3%A1clav%20Havel%20Tour:%20Sites%20of%20Freedom#contact-title">Message me</a> and I'll tailor it to your time and interests.</p>
 <p><em>Further reading:</em> <a href="https://www.pragerzeitung.cz/typisch-havel/" target="_blank" rel="noopener">Prager Zeitung: Typisch Havel</a></p>`,
     de: `<h2>Auf den Spuren von Václav Havel</h2>
 <p>Václav Havel — <strong>Dramatiker, Dissident, später Präsident</strong> — hat eine lebendige Karte über Prag hinterlassen. Diese Führung folgt Orten, an denen Kunst, Zivilcourage und Geschichte aufeinandertrafen. Ich entdecke bei jeder Führung etwas Neues daran.</p>
@@ -1842,11 +1988,11 @@ export const blogTranslations = {
 
   // Post 7 (Klementinum Library)
   'blog.post7.title': {
-    en: 'Did You Know? Prague’s Most Beautiful Library is at the Klementinum',
-    de: 'Wussten Sie schon? Prags schönste Bibliothek ist im Klementinum',
+    en: 'Most Beautiful Library in Prague: Klementinum',
+    de: 'Prags schönste Bibliothek: das Klementinum',
   },
   'blog.post7.excerpt': {
-    en: 'Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here’s how to see it and what to know.',
+    en: 'Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here\'s how to see it and what to know.',
     de: 'Betreten Sie den Barocksaal des Klementinums—von vielen als eine der schönsten Bibliotheken der Welt bezeichnet. So sehen Sie sie und das sollten Sie wissen.',
   },
   'blog.post7.date': {
@@ -1855,14 +2001,14 @@ export const blogTranslations = {
   },
   'blog.post7.content': {
     en: `<h2>Klementinum: The Baroque Library</h2>
-<p>Right in the middle of the Old Town, the <strong>Klementinum</strong> has a <em>Baroque Library Hall</em> that people consistently call one of the most beautiful libraries they’ve ever seen. Frescoed ceilings, antique globes, oak bookcases stacked to the ceiling. I’ve brought guests here hundreds of times and the reaction is always the same.</p>
-<h3>What You’ll See</h3>
+<p>Right in the middle of the Old Town, the <strong>Klementinum</strong> has a <em>Baroque Library Hall</em> that people consistently call one of the most beautiful libraries they've ever seen. Frescoed ceilings, antique globes, oak bookcases stacked to the ceiling. I've brought guests here hundreds of times and the reaction is always the same.</p>
+<h3>What You'll See</h3>
 <ul>
   <li><strong>Baroque Library Hall:</strong> Historical volumes, celestial globes, and allegorical ceiling frescoes. Access is by guided tour only.</li>
   <li><strong>Astronomical Tower:</strong> Views over Prague and the Vltava. Worth the climb.</li>
   <li><strong>Meridian Room:</strong> Where they used sunlight to set the time before modern clocks. Small room, genuine curiosity.</li>
 </ul>
-<div class="did-you-know"><h4>Did you know?</h4><p>The Klementinum ran one of Central Europe’s oldest weather stations — continuous measurements going back centuries. The longest climate record in the region.</p></div>
+<div class="did-you-know"><h4>Did you know?</h4><p>The Klementinum ran one of Central Europe's oldest weather stations — continuous measurements going back centuries. The longest climate record in the region.</p></div>
 <div class="blog-inline-image"><img src="/images/klementinum-library-2.jpg" alt="Klementinum Baroque Library—mid view" loading="lazy" /></div>
 <h3>Practical Notes</h3>
 <p>Visits are guided tours with fixed time slots. Capacity is limited and <strong>photography rules change</strong> — check before you go. I can help with <a href="/contact#contact-title">tickets</a> and combine the Klementinum into a <a href="/tours">longer Old Town route</a>.</p>
@@ -1898,11 +2044,11 @@ export const blogTranslations = {
 
   // Post 8 (Klementinum Tower)
   'blog.post8.title': {
-    en: 'Klementinum Astronomical Tower: Views, Time, and Stories',
-    de: 'Astronomischer Turm im Klementinum: Aussicht, Zeit und Geschichten',
+    en: 'Klementinum Astronomical Tower: Views & Stories',
+    de: 'Klementinum: Astronomischer Turm & Aussicht',
   },
   'blog.post8.excerpt': {
-    en: 'Climb the Klementinum’s Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight.',
+    en: 'Climb the Klementinum\'s Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight.',
     de: 'Erklimmen Sie den Astronomischen Turm des Klementinums und entdecken Sie das Meridianzimmer—wo Zeit einst mit Sonnenlicht gemessen wurde.',
   },
   'blog.post8.date': {
@@ -1914,7 +2060,7 @@ export const blogTranslations = {
 <p>The <strong>Astronomical Tower</strong> at the Klementinum pairs baroque science with something genuinely hard to forget. After the climb, you get a <em>360° panorama</em>: Prague Castle, Charles Bridge, Old Town roofs spread out below you.</p>
 <div class="blog-inline-image"><img src="/images/klementinum-tower-2.jpg" alt="Klementinum Astronomical Tower—panoramic view" loading="lazy" /></div>
 <h3>The Meridian Room</h3>
-<p>Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It’s a rare window into how cities coordinated daily life.</p>
+<p>Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It's a rare window into how cities coordinated daily life.</p>
 <div class="did-you-know"><h4>Did you know?</h4><p>Observations at the Klementinum helped standardize noon in Prague—long before radio signals and GPS.</p></div>
 <h3>Practical Notes</h3>
 <ul>
@@ -1940,8 +2086,8 @@ export const blogTranslations = {
 
   // Post 9 (Prague in November)
   'blog.post9.title': {
-    en: 'What to Do in Prague in November (2025): Things to See Now',
-    de: 'Was tun in Prag im November (2025): Das sollten Sie jetzt sehen',
+    en: 'Prague in November 2025: Things to Do',
+    de: 'Was tun in Prag im November 2025?',
   },
   'blog.post9.excerpt': {
     en: 'Concerts, galleries, river walks, warm cafés—and realistic tips for weather and timings. Your calm November plan in Prague.',
@@ -1953,20 +2099,20 @@ export const blogTranslations = {
   },
   'blog.post9.content': {
     en: `<h2>Prague in November: Calm, Cultural, Cozy</h2>
-<p>November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city full of <em>music and exhibitions</em>. Here’s a grounded plan for enjoying the month without rushing.</p>
+<p>November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city full of <em>music and exhibitions</em>. Here's a grounded plan for enjoying the month without rushing.</p>
 <h3>What to Do</h3>
 <ul>
   <li>Evening concerts: classical and jazz (Rudolfinum, small clubs)</li>
   <li>Galleries and museums: avoid cold spells while seeing the best works</li>
   <li>Evening river walks and bridges. Dress warm.</li>
 </ul>
-<div class="did-you-know"><h4>Did you know?</h4><p>Some of Prague’s most atmospheric nights happen in late autumn. Mist on the river, lantern-lit streets. I always suggest at least one evening walk, even in November.</p></div>
+<div class="did-you-know"><h4>Did you know?</h4><p>Some of Prague's most atmospheric nights happen in late autumn. Mist on the river, lantern-lit streets. I always suggest at least one evening walk, even in November.</p></div>
 <h3>Weather and What to Wear</h3>
 <ul>
   <li>Expect 5–10°C with early sunsets.</li>
   <li>Layers, rain jacket, and good shoes for cobblestones.</li>
 </ul>
-<p class="lead">Want a calm schedule with maps and ticket timings? <a href="/contact#contact-title">Ask me</a> and I’ll tailor your November.</p>`,
+<p class="lead">Want a calm schedule with maps and ticket timings? <a href="/contact#contact-title">Ask me</a> and I'll tailor your November.</p>`,
     de: `<h2>Prag im November: ruhig, kulturell, gemütlich</h2>
 <p>Im November hat Prag <strong>weniger Menschen</strong>, <strong>gute Verfügbarkeiten</strong> und reichlich <em>Musik und Ausstellungen</em>. Hier ein realistischer Plan, der ohne Hektik auskommt.</p>
 <h3>Was tun?</h3>
@@ -1998,8 +2144,8 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post10.content': {
-    en: `<h2>Prague’s Garden Highlights</h2>
-<p>Prague’s gardens form a quiet lattice through the city—baroque terraces, palace steps, and riverside lawns. Here’s how to see the best with time and calm in mind.</p>
+    en: `<h2>Prague's Garden Highlights</h2>
+<p>Prague's gardens form a quiet lattice through the city—baroque terraces, palace steps, and riverside lawns. Here's how to see the best with time and calm in mind.</p>
 <h3>Palace Gardens Below Prague Castle</h3>
 <ul>
   <li><strong>Ledebour & Small Palaces:</strong> Terraces and formal patterns ideal for photos.</li>
@@ -2040,8 +2186,8 @@ export const blogTranslations = {
 
   // Post 11 (Strahov Monastery)
   'blog.post11.title': {
-    en: 'Strahov Monastery: Quiet Views, Library, and Lore',
-    de: 'Strahov-Kloster: Ruhige Blicke, Bibliothek und Legenden',
+    en: 'Strahov Monastery: Views, Library & Lore',
+    de: 'Strahov-Kloster: Bibliothek & Aussicht',
   },
   'blog.post11.excerpt': {
     en: 'Climb gently above Lesser Town for calm views, a legendary library (with permits), and a classic Prague monastery walk.',
@@ -2052,8 +2198,8 @@ export const blogTranslations = {
     de: '18. Oktober 2025',
   },
   'blog.post11.content': {
-    en: `<h2>Strahov’s Quiet Power</h2>
-<p>Above Lesser Town, <strong>Strahov Monastery</strong> offers a reflective climb and sweeping views. It’s where I bring guests who want space, texture, and a sense of Prague’s layered history.</p>
+    en: `<h2>Strahov's Quiet Power</h2>
+<p>Above Lesser Town, <strong>Strahov Monastery</strong> offers a reflective climb and sweeping views. It's where I bring guests who want space, texture, and a sense of Prague's layered history.</p>
 <h3>Viewpoints & The Walk</h3>
 <ul>
   <li><strong>Petřín terraces:</strong> Soft slopes with city vistas, good in all light.</li>
@@ -2073,7 +2219,7 @@ export const blogTranslations = {
   <li>Morning and late afternoon bring softer light and fewer people.</li>
   <li>Comfortable shoes—cobblestones and slopes between Petřín and the Castle.</li>
 </ul>
-<p class="lead">Want a quiet <strong>Strahov + Castle</strong> route with the best overlooks? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Book a private tour</a>—I’ll match the pace to yours.</p>`,
+<p class="lead">Want a quiet <strong>Strahov + Castle</strong> route with the best overlooks? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Book a private tour</a>—I'll match the pace to yours.</p>`,
     de: `<h2>Strahovs stille Kraft</h2>
 <p>Oberhalb der Kleinseite bietet das <strong>Strahov-Kloster</strong> einen besinnlichen Aufstieg und weite Blicke. Ein Ort für Gäste, die Raum, Texturen und die Schichten Prager Geschichte spüren möchten.</p>
 <h3>Aussichten & Weg</h3>
@@ -2100,8 +2246,8 @@ export const blogTranslations = {
 
   // Post 12 (Kafka in Prague)
   'blog.post12.title': {
-    en: 'Franz Kafka in Prague: All Places to Visit + Walking Itinerary',
-    de: 'Franz Kafka in Prag: Alle Orte – Rundgang & Reiseroute',
+    en: 'Franz Kafka in Prague: Places & Walking Tour',
+    de: 'Franz Kafka in Prag: Alle Orte & Rundgang',
   },
   'blog.post12.excerpt': {
     en: 'The definitive Kafka-in-Prague route: birthplace, plaques, cafés, museum, Golden Lane and more—timed, map-friendly, and doable in half a day.',
@@ -2115,21 +2261,21 @@ export const blogTranslations = {
     en: `<h2>Kafka in Prague: All Places to Visit (With Route)</h2>
 <p class="lead"><strong>Franz Kafka (1883–1924)</strong> wrote in a Prague shaped by <em>German–Czech–Jewish</em> culture. Use this map-friendly <strong>itinerary</strong> to see every essential Kafka place in half a day.</p>
 <h3>Stop 1 — Birthplace by Týn Church (Old Town)</h3>
-<p>The original building is gone, but the <strong>site by Týn Church</strong> anchors Kafka’s early years steps from Old Town Square.</p>
+<p>The original building is gone, but the <strong>site by Týn Church</strong> anchors Kafka's early years steps from Old Town Square.</p>
 <h3>Stop 2 — Old Town Plaques & Charles University</h3>
 <p>Find <strong>plaques and addresses</strong> where Kafka lived or studied around <strong>Charles University</strong> and the Old Town grid.</p>
 <h3>Stop 3 — Kafka Statue & Jewish Quarter Context</h3>
 <p>Visit the <strong>Kafka statue</strong> near the Spanish Synagogue and add the <strong>Jewish Museum sites</strong> for the period context.</p>
 <div class="blog-inline-image"><img src="/images/blog-kafka-2.jpg" alt="Franz Kafka — Rotating Head by David Černý near Národní třída" loading="lazy" /><div class="image-credit">Franz Kafka – Rotating Head by David Černý (near Národní třída / Quadrio)</div></div>
 <h3>Optional — Franz Kafka “Rotating Head” (David Černý)</h3>
-<p>The kinetic sculpture by <strong>David Černý</strong>—often called the <em>Rotating Head</em>—stands by <strong>Quadrio</strong> close to <strong>Národní třída</strong>. It’s an easy add-on between the Old Town and the café stops.</p>
-<h3>Stop 4 — Kafka’s Golden Lane House (Prague Castle)</h3>
+<p>The kinetic sculpture by <strong>David Černý</strong>—often called the <em>Rotating Head</em>—stands by <strong>Quadrio</strong> close to <strong>Národní třída</strong>. It's an easy add-on between the Old Town and the café stops.</p>
+<h3>Stop 4 — Kafka's Golden Lane House (Prague Castle)</h3>
 <p>A small house in <strong>Golden Lane</strong> served as a writing retreat—combine with a <a href="/tours">Prague Castle walk</a> for top views.</p>
 <h3>Stop 5 — Cafés: Louvre & Slavia</h3>
-<p>Classic cafés on Národní—<strong>Café Louvre</strong> and <strong>Café Slavia</strong>—tie into Prague’s literary circles. Perfect rest stops.</p>
+<p>Classic cafés on Národní—<strong>Café Louvre</strong> and <strong>Café Slavia</strong>—tie into Prague's literary circles. Perfect rest stops.</p>
 <h3>Stop 6 — Franz Kafka Museum (Lesser Town)</h3>
 <p>On the river, the <strong>Franz Kafka Museum</strong> is an hour of manuscripts, photos and multimedia—ideal at the end of the loop.</p>
-<div class="did-you-know"><h4>Did you know?</h4><p>Kafka’s <em>day job</em> at the <strong>Workers’ Accident Insurance Institute</strong> helped shape his themes of bureaucracy and modernity.</p></div>
+<div class="did-you-know"><h4>Did you know?</h4><p>Kafka's <em>day job</em> at the <strong>Workers' Accident Insurance Institute</strong> helped shape his themes of bureaucracy and modernity.</p></div>
 <h3>Timing & Route (3–4 hours)</h3>
 <ul>
   <li>Old Town core (Birthplace, plaques): 45–60 min</li>
@@ -2150,7 +2296,7 @@ export const blogTranslations = {
 </div>
 <div class="blog-cta-box">
   <h3>Want a calm, guide-led Kafka route?</h3>
-  <p>With the Rotating Head, hidden Old Town plaques and museum timing—paced to <strong>your</strong> tempo. <a href="/book?tour=Kafka%20Itinerary#contact-title">Book a private tour</a> and I’ll tailor the route, timings and tickets.</p>
+  <p>With the Rotating Head, hidden Old Town plaques and museum timing—paced to <strong>your</strong> tempo. <a href="/book?tour=Kafka%20Itinerary#contact-title">Book a private tour</a> and I'll tailor the route, timings and tickets.</p>
 </div>
 <p>Do it point-to-point on foot or book a <a href="/book?tour=Kafka%20Itinerary#contact-title">Kafka private tour</a> for navigation, tickets and context.</p>`,
     de: `<h2>Kafka in Prag: Alle Orte (mit Route)</h2>
@@ -2198,8 +2344,8 @@ export const blogTranslations = {
 
   // Post 13 (Prettiest Winter Views)
   'blog.post13.title': {
-    en: 'Which Places Are the Prettiest to Visit in Prague in Winter? Top 12 Views',
-    de: 'Welche Orte sind im Winter in Prag am schönsten? Top 12 Aussichtspunkte',
+    en: 'Prague in Winter: Top 12 Views',
+    de: 'Prag im Winter: Top 12 Aussichtspunkte',
   },
   'blog.post13.excerpt': {
     en: 'Prague in winter glows with warm light, quiet alleys, and magical views. Here are the 12 prettiest Old Town vantage points—walkable, photogenic, and cozy.',
@@ -2348,8 +2494,8 @@ export const blogTranslations = {
 
   // ─── Post 23: Prague Visitor Pass — honest review ─────────────────────────
   'blog.post23.title': {
-    en: 'The Prague Visitor Pass: why I tell every client to get one',
-    de: 'Der Prague Visitor Pass: warum ich jedem Gast dazu rate',
+    en: 'Prague Visitor Pass: Why I Recommend It',
+    de: 'Prague Visitor Pass: Meine Empfehlung',
   },
   'blog.post23.excerpt': {
     en: 'After 40 years of guiding in Prague I have watched tourists overpay for individual tickets hundreds of times. The Prague Visitor Pass fixes most of that. Here is the honest maths.',
@@ -2548,8 +2694,8 @@ export const blogTranslations = {
 
   // ─── Post 22: Prague IMAX, Kafka's Grave & the Vinohrady Neighbourhood ───
   'blog.post22.title': {
-    en: 'IMAX Prague, Kafka\'s Grave & the Best Farmers\' Market in Town: A Vinohrady Half-Day',
-    de: 'IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady',
+    en: 'Vinohrady Half-Day: IMAX, Kafka & Market',
+    de: 'Vinohrady: IMAX, Kafkas Grab & Bauernmarkt',
   },
   'blog.post22.excerpt': {
     en: 'The only IMAX in the Czech Republic, Franz Kafka\'s final resting place, and a farmers\' market that even drew Leonardo DiCaprio — all within walking distance in Prague\'s Vinohrady and Žižkov neighbourhoods.',
@@ -2714,8 +2860,8 @@ export const blogTranslations = {
 
   // ─── Post 21: Dan Brown – The Secret of Secrets & Prague ─────────────────
   'blog.post21.title': {
-    en: 'Dan Brown\'s The Secret of Secrets: 10,000 Pages, One Book — and Why Prague Was Always Part of the Story',
-    de: 'Dan Browns Das Geheimnis der Geheimnisse: 10.000 Seiten, ein Buch — und warum Prag immer Teil der Geschichte war',
+    en: 'Dan Brown\'s Secret of Secrets & Prague',
+    de: 'Dan Brown: Das Geheimnis der Geheimnisse',
   },
   'blog.post21.excerpt': {
     en: 'Dan Brown reportedly wrote over 10,000 pages before distilling his new novel to fewer than 700. That obsessive pursuit of hidden truth — encoded symbols, buried history, cities that lie to your face — is exactly what Prague has been doing for a thousand years.',
@@ -2876,8 +3022,8 @@ export const blogTranslations = {
 
   // ─── Post 15: Spring in Prague ───────────────────────────────────────────
   'blog.post15.title': {
-    en: 'Spring in Prague: The Best Things to Do (March, April & May Guide)',
-    de: 'Prag im Frühling: Die besten Aktivitäten (März, April & Mai)',
+    en: 'Prague in Spring: Best Things to Do',
+    de: 'Prag im Frühling: Die besten Aktivitäten',
   },
   'blog.post15.excerpt': {
     en: 'Cherry blossoms on Petřín Hill, Easter markets on Old Town Square, and the Prague Spring Music Festival — here\'s everything you need to know about visiting Prague in spring.',
@@ -2982,8 +3128,8 @@ export const blogTranslations = {
 
   // ─── Post 16: Summer in Prague ───────────────────────────────────────────
   'blog.post16.title': {
-    en: 'Summer in Prague: What to Do, See & Eat (June, July & August Guide)',
-    de: 'Prag im Sommer: Was tun, sehen & essen (Juni, Juli & August)',
+    en: 'Prague in Summer: What to Do, See & Eat',
+    de: 'Prag im Sommer: Was tun, sehen & essen',
   },
   'blog.post16.excerpt': {
     en: 'Riverside bars on Náplavka, open-air cinemas, sunset rooftops, and early-morning Charles Bridge walks — your complete guide to Prague in summer without the crowds ruining it.',
@@ -3098,8 +3244,8 @@ export const blogTranslations = {
 
   // ─── Post 17: Autumn in Prague ───────────────────────────────────────────
   'blog.post17.title': {
-    en: 'Autumn in Prague: Golden Light, Wine Harvest & Fall Things to Do',
-    de: 'Prag im Herbst: Goldenes Licht, Weinlese & Herbstaktivitäten',
+    en: 'Prague in Autumn: Golden Light & Wine',
+    de: 'Prag im Herbst: Goldenes Licht & Weinlese',
   },
   'blog.post17.excerpt': {
     en: 'September to November is Prague at its most cinematic: amber foliage in Stromovka, the Signal Festival lighting up the Old Town, and the first Christmas market stalls appearing in November.',
@@ -3204,8 +3350,8 @@ export const blogTranslations = {
 
   // ─── Post 18: Prague Food Guide ──────────────────────────────────────────
   'blog.post18.title': {
-    en: 'Prague Food Guide: What to Eat, Where to Go & Local Favourites',
-    de: 'Prag Kulinarikführer: Was essen, wo hingehen & lokale Lieblinge',
+    en: 'Prague Food Guide: What to Eat & Local Picks',
+    de: 'Prag Kulinarik: Was essen & lokale Lieblinge',
   },
   'blog.post18.excerpt': {
     en: 'From svíčková and tank beer to the Náplavka Saturday market and Vinohrady wine bars — a local\'s guide to eating and drinking well in Prague.',
@@ -3336,8 +3482,8 @@ export const blogTranslations = {
 
   // ─── Post 19: Prague Castle Complete Guide ───────────────────────────────
   'blog.post19.title': {
-    en: 'Prague Castle: The Complete Visitor\'s Guide (What to See, Tips & Hours)',
-    de: 'Prager Burg: Der vollständige Besucherführer (Was sehen, Tipps & Zeiten)',
+    en: 'Prague Castle: Complete Visitor\'s Guide',
+    de: 'Prager Burg: Vollständiger Besucherführer',
   },
   'blog.post19.excerpt': {
     en: 'The world\'s largest ancient castle complex — and most visitors see just 10% of it. Here\'s how to navigate St. Vitus Cathedral, the Golden Lane, the Royal Gardens, and everything in between.',
@@ -3470,8 +3616,8 @@ export const blogTranslations = {
 
   // ─── Post 20: Day Trips from Prague ──────────────────────────────────────
   'blog.post20.title': {
-    en: 'Best Day Trips from Prague: Kutná Hora, Český Krumlov & More',
-    de: 'Die besten Tagesausflüge von Prag: Kutná Hora, Český Krumlov & mehr',
+    en: 'Best Day Trips from Prague: Kutná Hora',
+    de: 'Tagesausflüge von Prag: Kutná Hora & mehr',
   },
   'blog.post20.excerpt': {
     en: 'A bone church, a fairy-tale castle town, a Habsburg hunting lodge, and a sobering Holocaust memorial — six unmissable day trips reachable from Prague by train or bus.',
@@ -3566,5 +3712,1105 @@ export const blogTranslations = {
     <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
   </div>
 </div>`,
+  },
+
+  'blog.post34.title': { en: 'Malá Strana & Charles Bridge: Untold Stories', de: 'Tropfsteinwand & Karlsbrücke: Geheimtipps' },
+  'blog.post34.excerpt': {
+    en: 'A Swedish art heist from 1648, a knight on a river pillar nobody notices, and a bridge whose foundation stone was laid at a minute calculated by astrologers — here\'s the walk nobody takes.',
+    de: 'Ein Kunstdiebstahl aus dem Jahr 1648, ein Ritter auf einem Flusspfeiler, den kaum jemand bemerkt, und eine Brücke, deren Grundstein auf die Minute genau von Astrologen berechnet wurde — hier ist der Spaziergang, den kaum jemand kennt.',
+  },
+  'blog.post34.date': { en: 'April 30, 2026', de: '30. April 2026' },
+  'blog.post34.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Ich führe Menschen durch Malá Strana, seitdem ich Führungen mache. Und trotzdem finde ich noch Dinge, die mich überraschen. Dieser Artikel ist für alle, die die Karlsbrücke schon kennen — und trotzdem noch nicht alles gesehen haben.</p>
+
+<h2>Der Waldsteingarten: ein Garten mit Kunstdiebstahlgeschichte</h2>
+
+<p>Der <a href="https://prague.eu/cs/objevujte/valdstejnska-zahrada/" target="_blank" rel="noopener noreferrer">Waldsteingarten (Valdštejnská zahrada)</a> liegt einen Steinwurf vom Malostranské náměstí entfernt und ist kostenlos zugänglich — was schon mal ein gutes Zeichen ist. Gebaut wurde er zwischen 1623 und 1630 für Albrecht von Wallenstein, einen der mächtigsten Feldherren des Dreißigjährigen Krieges und einen Mann, der offenbar keine halben Sachen mochte: Er ließ dafür 23 Häuser, drei Gärten und eine Ziegelei abreißen.</p>
+
+<p>Der Garten hat eine Sala terrena (ein offenes Gartenloggia-Gebäude mit Fresken), einen Teich, Pfauen, Eulen in Steinnischen und — die Hauptattraktion — die Tropfsteinwand.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-gardens-2.jpg" alt="Waldsteingarten Prag — Tropfsteinwand und Barockgarten in Malá Strana" loading="lazy" />
+  <figcaption class="image-credit">Der Waldsteingarten: einer der schönsten Barockgärten Prags — und kostenlos zugänglich.</figcaption>
+</figure>
+
+<h2>Die Tropfsteinwand: fake, aber trotzdem großartig</h2>
+
+<p>Die Tropfsteinwand ist eine lange Kunstfelsenwand aus Kalkstein und Tufstein, die eine natürliche Grotte imitiert. Sie ist komplett künstlich — das war auch so geplant. So etwas nennt man eine Grotte oder Rustika-Wand: ein Barocktrend, bei dem Gärten natürlich wirkende Felsformationen bekamen, obwohl kein einziger Stein dort gewachsen ist.</p>
+
+<p>In den Nischen der Wand leben echte Eulen. Nicht dekorativ — tatsächlich echte Eulen, die den Garten als Zuhause betrachten. Und am Boden davor: ein Pfau. Der Pfau hat keine Angst vor Touristen. Das lernt man schnell.</p>
+
+<p>Was die meisten Besucher nicht wissen: Die Bronzestatuen im Garten sind Kopien. Die Originale — eine Gruppe von Götter- und Heldenstatuen des niederländischen Bildhauers Adriaen de Vries, einem der bedeutendsten Künstler seiner Zeit — wurden 1648 von schwedischen Soldaten gestohlen. Sie kamen gegen Ende des Dreißigjährigen Krieges nach Prag, plünderten den Waldsteingarten und transportierten die Skulpturen nach Schweden. Heute stehen sie im Schlosspark von Drottningholm bei Stockholm.</p>
+
+<p>Die tschechische Seite hat mehrfach höflich um Rückgabe gebeten. Die Antwort war bisher freundlich und ergebnislos.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-tropfsteinwand-zwei.png" alt="Tropfsteinwand Waldsteingarten Prag — Kunstfelsenwand mit Eulen in Malá Strana" loading="lazy" />
+  <figcaption class="image-credit">Die Tropfsteinwand aus der Nähe — inklusive der Eulen, die sich dort dauerhaft eingerichtet haben.</figcaption>
+</figure>
+
+<h2>Čertovka: das Prager Venedig, das niemand so nennt</h2>
+
+<p>Verlassen Sie den Waldsteingarten und gehen Sie Richtung Karlsbrücke — aber nicht über die Brücke. Biegen Sie davor links ab auf die Cihelná, dann unter den Brückenbögen hindurch auf die Kampa-Insel.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/photo-guests-mala-strana.jpeg" alt="Malá Strana Prag — enge Gassen und Barockarchitektur in der Prager Kleinseite" loading="lazy" />
+  <figcaption class="image-credit">Malá Strana — das Viertel, das zwischen Karlsbrücke und Burgberg eingeklemmt ist und deshalb noch immer wie im 18. Jahrhundert aussieht.</figcaption>
+</figure>
+
+<p>Die Čertovka ist der schmale Kanal, der Kampa vom Rest von Malá Strana trennt. „Čert" heißt Teufel — der Kanal wurde nach einer legendär schlechtgelaunten Müllersfrau benannt, die früher am Ufer wohnte. Das Mühlenrad der Grand-Priory-Mühle dreht sich noch heute, angetrieben vom Wasser des Kanals.</p>
+
+<p>Technisches Detail für alle, die sowas mögen: Das Wasser für die Čertovka wird aus der Vltava über ein System von Wehren und Schleusen abgezweigt, das noch aus dem Mittelalter stammt. Das Wassergefälle ist gering, aber für Mahlzwecke ausreichend. Die Mühle ist seit dem 15. Jahrhundert dokumentiert.</p>
+
+<p>Vom Nordufer der Kampa aus — direkt unter den Bögen der Karlsbrücke — fotografiert man die Brücke von unten. Das ist der Winkel, den Touristen meistens verpassen, weil sie schon oben auf der Brücke stehen.</p>
+
+<h2>Bruncvík: der Ritter, den fast niemand sieht</h2>
+
+<p>Auf einem der Brückenpfeiler der Karlsbrücke, auf der Seite zur Kampa-Insel, steht eine kleine Statue auf einem Fels im Wasser: Bruncvík, ein legendärer böhmischer Ritter, der das Wappen von Prag trägt und ein Schwert hält.</p>
+
+<p>Er steht dort seit 1884 — ein Ersatz für eine gotische Statue, die bei einer Überschwemmung weggespült wurde. Das Schwert in seiner Hand ist laut Legende das magische Schwert, mit dem er einmal einen Löwen besiegte. Die andere Version der Legende besagt, das Schwert ist im Pfeiler verborgen und wird im Moment der größten Not Böhmens von allein auftauchen.</p>
+
+<p>Beide Versionen sind unwahrscheinlich. Trotzdem: Wer Bruncvík auf seinem Brückenpfeiler-Felsen übersieht, hat die Karlsbrücke nur halb gesehen.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-charles-bridge-statues-sunny-crowded-bridge.jpg" alt="Karlsbrücke Prag — sonniger Tag mit Menschenmenge und Barockstatuen auf der Steinbrücke" loading="lazy" />
+  <figcaption class="image-credit">Die Karlsbrücke hat 16 Bögen, 30 Statuen — und einen Ritter auf einem Flussfelsen, den fast niemand bemerkt.</figcaption>
+</figure>
+
+<h2>Der Grundstein: ein Datum, das kein Zufall ist</h2>
+
+<p>Der Grundstein der Karlsbrücke wurde am 9. Juli 1357 gelegt. Das klingt unspektakulär — bis man das Datum als Zahl schreibt: 1-3-5-7-9-7-5-3-1. Ein vollständiges Zahlenpalindrom. Und die Uhrzeit? 5:31 Uhr morgens.</p>
+
+<p>Das ist kein Zufall. Kaiser Karl IV. ließ den Termin von Astrologen berechnen, die glaubten, dass Zahlenpalindrome besondere Stabilität verleihen. Die Brücke sollte für die Ewigkeit gebaut sein — und tatsächlich steht sie heute noch, 670 Jahre später, und trägt täglich zehntausende Fußgänger.</p>
+
+<p>Die Vorgängerbrücke, die Judithbrücke aus dem 12. Jahrhundert, hatte das nicht so genau genommen und wurde 1342 von einer Flut zerstört. Mag Zufall sein. Oder auch nicht.</p>
+
+<h2>Johannes von Nepomuk: das Kreuz im Pflaster</h2>
+
+<p>Auf der Brücke, auf der Nordseite, gibt es eine kleine Bronzeplatte mit einem Kreuz im Pflaster. Das ist die Stelle, von der Johannes von Nepomuk am 20. März 1393 in die Moldau geworfen wurde — auf Befehl von König Wenzel IV.</p>
+
+<p>Johannes war Generalvikar des Erzbistums Prag und weigerte sich angeblich, dem König das Beichtgeheimnis der Königin zu verraten. Die Statue von Johannes auf der Brücke ist die älteste — von 1683, also früher als alle anderen dreißig. An der Plinthe gibt es zwei Bronzereliefs. Beide sind von so vielen Händen berührt worden, dass das Metall hochglänzend poliert ist. Angeblich bringt das Berühren Glück und garantiert die Rückkehr nach Prag.</p>
+
+<p>Ich sage meinen Gästen immer, dass das eine Legende ist. Und dann berühren sie es trotzdem alle.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/photo-guests-mala-strana-from-castle.jpeg" alt="Blick von der Prager Burg auf Malá Strana und die Karlsbrücke über die Moldau" loading="lazy" />
+  <figcaption class="image-credit">Von der Burg aus sieht man, wie sich alles zusammenfügt: Malá Strana, die Brücke, die Moldau — und irgendwo da unten Bruncvík auf seinem Felsen.</figcaption>
+</figure>
+
+<h2>Der beste Zeitpunkt</h2>
+
+<p>Früh morgens — vor 8:00 Uhr — ist der Waldsteingarten noch leer, die Brücke gehört fast Ihnen allein, und die Čertovka hat das beste Licht. Der Garten öffnet je nach Saison zwischen 7:30 und 10:00 Uhr.</p>
+
+<p>Abends nach 19:00 Uhr funktioniert auch gut: Die Brücke leert sich, die Lichtstimmung über dem Wasser ist außergewöhnlich, und die Eulen im Waldsteingarten sind aktiver.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/guest-photo-night.jpeg" alt="Prag bei Nacht — Beleuchtung der Prager Kleinseite und der Moldau" loading="lazy" />
+  <figcaption class="image-credit">Prag nach Einbruch der Dunkelheit — der Zeitpunkt, auf den es sich zu warten lohnt.</figcaption>
+</figure>
+
+<h2>Die Route</h2>
+
+<ol>
+  <li><strong><a href="https://prague.eu/cs/objevujte/valdstejnska-zahrada/" target="_blank" rel="noopener noreferrer">Waldsteingarten</a></strong> (Valdštejnská 14, Eintritt frei) — Tropfsteinwand, Eulen, Pfau, Kopien der gestohlenen de-Vries-Statuen · <a href="https://www.senat.cz/informace/pro_verejnost/valdstejnska_zahrada/" target="_blank" rel="noopener noreferrer">Senát-Seite</a> · <a href="https://www.npu.cz/cs/hrady-a-zamky/tipy-na-vylet/17887-valdstejnska-zahrada" target="_blank" rel="noopener noreferrer">NPÚ-Eintrag</a></li>
+  <li><strong>Čertovka-Kanal &amp; Kampa-Insel</strong> — Mühlenrad, Blick von unten auf die Brückenbögen</li>
+  <li><strong>Bruncvík</strong> — Ritter auf dem Brückenpfeiler-Felsen, Südseite Kampa</li>
+  <li><strong><a href="https://prague.eu/cs/objevujte/karluv-most/" target="_blank" rel="noopener noreferrer">Karlsbrücke</a></strong> — Kreuz im Pflaster, Nepomuk-Bronzereliefs berühren, Palindromdatum im Kopf behalten</li>
+</ol>
+
+<p>Gesamtdistanz: ca. 2 km. Zeit: 1,5 bis 2 Stunden — je nachdem, wie lange man bei den Eulen bleibt. Länger als man plant, meistens.</p>
+
+<p>Bewertungen und weitere Tipps zu diesen Orten finden Sie auf <a href="https://www.tripadvisor.com/Attractions-g274707-Activities-zfn7246866-Prague_Bohemia.html" target="_blank" rel="noopener noreferrer">TripAdvisor</a>.</p>
+
+<div class="blog-cta-box">
+  <h3>Mit jemandem, der die Geschichten kennt</h3>
+  <p>Ich führe Sie durch diese Route — mit den Details, die in keinem Reiseführer stehen, und ohne Gruppenbus.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Malá%20Strana%20Geheimtipps#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: '',
+  },
+
+  'blog.post33.title': { en: 'What to Do in Prague: The Best Places', de: 'Was kann man in Prag machen? Aktivitäten' },
+  'blog.post33.excerpt': {
+    en: 'The best places and activities in Prague — from the castle to the river, from Czech beer culture to hidden neighborhoods.',
+    de: 'Die besten Orte und Aktivitäten in Prag — von der Burg bis zur Moldau, von der tschechischen Bierkultur bis zu den Vierteln, die die meisten Touristen nie finden.',
+  },
+  'blog.post33.date': { en: 'April 26, 2026', de: '26. April 2026' },
+  'blog.post33.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Ich führe seit Jahren Menschen durch Prag — Paare, Familien, Alleinreisende, Gruppen. Die Frage, die ich am häufigsten höre, noch bevor wir losgehen: „Was muss man hier unbedingt gesehen haben?" Diese Antwort ist lang. Hier ist sie.</p>
+
+<h2>1. Pražský hrad — die Burg</h2>
+
+<p>Die Prager Burg ist die größte zusammenhängende Burganlage der Welt. Das merkt man, wenn man sie betritt: Sie ist keine einzelne Sehenswürdigkeit, sondern eine Stadt in der Stadt — mit einem Dom, mehreren Palästen, einer Gasse, einem Weinberg und einer Wachablösung täglich um 12:00 Uhr am Haupttor.</p>
+
+<ul>
+  <li>Den <strong>Veitsdom</strong> von innen — besonders die Mucha-Fenster im Morgenlicht.</li>
+  <li>Den <strong>Alten Königspalast</strong> mit dem Wladislawsaal, in dem früher Pferdeturniere stattfanden.</li>
+  <li>Das <strong>Zlatá ulička</strong> — bunte Häuschen, in denen Kafka schrieb und Burgwächter wohnten.</li>
+</ul>
+
+<p>Kombiticket B reicht für die meisten Besucher (250 CZK). Den Burgbereich selbst zu betreten ist kostenlos.</p>
+
+<h2>2. Karlsbrücke — zur richtigen Zeit</h2>
+
+<p>Die Karlsbrücke braucht keine Einleitung. Aber sie braucht das richtige Timing. Vor 8:00 Uhr morgens oder nach 19:00 Uhr abends ist sie eine andere Brücke — ruhig, ohne Gedränge, mit Blick auf eine Stadt, die noch nicht ganz wach ist.</p>
+
+<p>Wer 130 CZK übrig hat: Der Altstädter Brückenturm gibt den Blick von oben auf alle 30 Barockstatuen und den Burgberg dahinter. Einer der schönsten Aussichtspunkte der Stadt, und kaum jemand geht hinauf.</p>
+
+<h2>3. Staroměstské náměstí — der Altstädter Ring</h2>
+
+<p>Stündlich von 9:00 bis 23:00 Uhr schlägt die Orloj. Ein Skelett läutet, zwölf Apostel drehen sich, ein Hahn kräht. 45 Sekunden, dann Applaus. Man kann es kitschig finden — aber ich habe noch keine Gruppe gehabt, die nicht hingeschaut hat.</p>
+
+<p>Der Platz selbst ist architektonisch ungewöhnlich: gotische Kirche, barocke Kuppeln, Renaissance-Giebel — alles nebeneinander. Der Rathausturm (250 CZK) gibt den besten Überblick. Die Restaurants direkt am Platz mit englischer Karte sind eine Touristenfalle — 50 Meter in die Dlouhá, und das Preis-Leistungs-Verhältnis verdoppelt sich.</p>
+
+<h2>4. Josefov — das jüdische Viertel</h2>
+
+<p>Das ehemalige jüdische Ghetto wurde Ende des 19. Jahrhunderts fast vollständig abgerissen. Was übrig blieb: sechs Synagogen, der Alte Jüdische Friedhof und das Alte Rathaus mit der rückwärts laufenden Uhr.</p>
+
+<p>Der Alte Jüdische Friedhof ist einer der ältesten erhaltenen jüdischen Friedhöfe Europas — Gräber übereinander, weil der Platz nie reichte. Eintritt über das Jüdische Museum Prag, Kombiticket ab 350 CZK.</p>
+
+<h2>5. Malá Strana &amp; Kampa-Insel</h2>
+
+<p>Malá Strana liegt zwischen der Karlsbrücke und dem Burgberg — ein Viertel aus Barockpalais, Weinbergen und Gassen, in denen die Zeit etwas langsamer läuft als im Rest der Stadt.</p>
+
+<p>Die Kampa-Insel ist mein persönlicher Lieblingsort in Prag. Ein kleiner Park direkt am Wasser, Blick auf die Brückenbögen, fast keine Touristenläden. Die John-Lennon-Mauer zwei Minuten entfernt — entstanden nach Lennons Tod 1980, immer wieder übermalt, immer wieder neu beschrieben.</p>
+
+<h2>6. Vyšehrad</h2>
+
+<p>Vyšehrad ist die ältere Burg — älter als die Prager Burg, wenn man der Legende glaubt. Heute ist sie eine Festungsanlage auf einem Felsen über der Vltava, mit einem Nationalfriedhof, in dem Dvořák, Smetana und Mucha begraben sind.</p>
+
+<p>Warum ich Vyšehrad empfehle: keine Reisebusse, keine Souvenirläden in Sichtweite, und der Blick von den Klippen auf den Fluss ist einer der besten der Stadt — kostenlos.</p>
+
+<h2>7. Bootsfahrt auf der Moldau</h2>
+
+<p>Prag vom Wasser aus ist ein anderes Prag. Die Karlsbrücke von unten, die Burgsilhouette, die Weinberge am Ufer. Optionen: geführte Abendfahrten ab ca. 500 CZK, Tretboote und Ruderboote zum Selbstfahren am Slovanský ostrov, oder Kajak für sportlichere Gäste.</p>
+
+<p>Das Ruderboot für alle, die lieber selbst bestimmen, wo sie hinfahren: wenig Geld, kein Voranmelden, und man kommt an Stellen, die kein Ausflugsboot anfährt.</p>
+
+<h2>8. Letná-Park</h2>
+
+<p>Letná liegt auf einem Hügel nördlich der Altstadt. Am Ende des Parks öffnet sich das beste kostenlose Stadtpanorama: alle Brücken, die Altstadt, die Burg. Der Biergarten darunter — Pilsner Urquell vom Fass, entspannteste Atmosphäre der Stadt, kein Eintritt, kein Reservieren.</p>
+
+<h2>9. Tschechisches Essen &amp; Bier</h2>
+
+<p>Tschechien hat pro Kopf den höchsten Bierkonsum der Welt. Das liegt am Bier. Pilsner Urquell, Kozel, Bernard — alle besser vom Fass, in einem echten Prager Lokal (Pivnice), nicht im Touristenrestaurant am Platz.</p>
+
+<p>Empfehlenswert ohne Touristenaufschlag: Lokál Dlouhá (Dlouhá 33), U Medvídků (Na Perštýně 7), Pivovarský dům (Ječná 15).</p>
+
+<p>Beim Essen: <em>Svíčková na smetaně</em> ist das tschechische Nationalgericht — Rinderfilet in Rahmsauce mit Knödeln. Den Trdelník am Touristenstand können Sie stehenlassen: es ist keine tschechische Tradition, sondern ein importiertes Touristenprodukt aus den letzten Jahren.</p>
+
+<h2>10. Petřín-Hügel</h2>
+
+<p>Petřín ist der bewaldete Hügel zwischen Malá Strana und dem Burgberg. Oben: ein Aussichtsturm, gebaut 1891 als kleinere Version des Eiffelturms (150 CZK, 299 Stufen oder Aufzug). Die Standseilbahn hinauf kostet eine normale Fahrkarte (30 CZK) und fährt alle 15 Minuten.</p>
+
+<h2>11. Jazz, Konzerte, Nachtleben</h2>
+
+<p>Prag hat eine lebendige Jazzszene. Reduta Jazz Club (Národní 20 — hier spielte Bill Clinton 1994 Saxofon), AghaRTA (Železná 16), Jazz Dock (Janáčkovo nábřeží 2, direkt am Wasser). Abendkonzerte ab ca. 200–300 CZK.</p>
+
+<p>Klassische Konzerte in historischen Kirchen gibt es fast täglich. Für echte Konzertprogramme: Rudolfinum oder Nationaltheater.</p>
+
+<h2>12. Was sich beim Einkaufen lohnt</h2>
+
+<p>Böhmisches Glas — gut, wenn vom Hersteller (Moser-Galerie, Na Příkopě). Holzmarionetten — tschechisches Handwerk mit langer Tradition, kaufenswert in Werkstätten. Böhmischer Granat — der dunkelrote Halbedelstein aus Böhmen, echte Stücke erkennt man am Preis und am Händler mit Zertifikat.</p>
+
+<p>Was ich abraten würde: Matroschkas, Bier-Souvenirs vom Marktstand, alles mit dem Prager Gesicht drauf. Das wird anderswo hergestellt.</p>
+
+<div class="blog-cta-box">
+  <h3>Prag mit jemandem, der es kennt</h3>
+  <p>Ich zeige Ihnen die Version von Prag, die in keinem Reiseführer steht — auf Deutsch, in Ihrem Tempo, ohne Gruppe.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prag%20Stadtf%C3%BChrung#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: '',
+  },
+
+  'blog.post32.title': { en: 'Top 12 Photo Spots in Prague to Visit', de: 'Die 12 schönsten Fotospots in Prag' },
+  'blog.post32.excerpt': {
+    en: 'From Charles Bridge at dawn to a hidden Letná viewpoint most tourists walk straight past — here are the 12 Prague spots worth pointing your camera at, with timing tips for each.',
+    de: 'Von der Karlsbrücke im Morgengrauen bis zu einem versteckten Aussichtspunkt im Letná-Park, den die meisten Touristen einfach überlaufen — hier sind die 12 Prager Orte, an denen sich das Fotografieren wirklich lohnt.',
+  },
+  'blog.post32.date': { en: 'April 26, 2026', de: '26. April 2026' },
+  'blog.post32.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Prag ist eine der meistfotografierten Städte Europas. Das Problem: Neunzig Prozent aller Prag-Fotos zeigen dieselben fünf Motive, gemacht zur gleichen Tageszeit, von der gleichen Stelle aus. Ich zeige Ihnen, wo die wirklich guten Bilder entstehen — und wann.</p>
+
+<h2>1. Karlsbrücke — aber um 6:00 Uhr morgens</h2>
+
+<p>Die Karlsbrücke ist tagsüber überfüllt. Morgens um 6:00 Uhr gehört sie Ihnen. Nebel liegt manchmal noch über der Vltava, die Straßenlaternen brennen noch, und die 30 Barockheiligen stehen still. Das ist das Bild.</p>
+
+<p>Bester Standort: Mitte der Brücke, Blick Richtung Burgberg. Die Burg im Hintergrund, eine Heiligenfigur im Vordergrund. Kein Stativ nötig — legen Sie die Kamera auf die Balustrade.</p>
+
+<p>Wenn Nebel vorhergesagt ist: sofort aufstehen. Nebliger Frühmorgen auf der Karlsbrücke ist eines der beeindruckendsten Motive der Stadt.</p>
+
+<h2>2. Altstädter Brückenturm — von oben</h2>
+
+<p>130 CZK Eintritt. Der Turm öffnet um 10:00 Uhr. Von oben sehen Sie die Brücke von hinten — alle 30 Statuen in einer Reihe, die Burg am Ende. Das ist das Foto, das man von der Brücke selbst nicht machen kann.</p>
+
+<p>Tipp: Kommen Sie kurz nach dem Öffnen. Die erste Stunde ist ruhig.</p>
+
+<h2>3. Letná-Park — die Biergartenaussicht</h2>
+
+<p>Der Biergarten im Letná-Park hat eine Terrasse mit dem besten Panorama über die Altstadt, das ich kenne. Kostenloser Eintritt, Sie brauchen kein Getränk zu kaufen. Die goldene Stunde trifft diesen Ort im Sommer gegen 19:00 Uhr.</p>
+
+<p>Vom Metronom aus — dem riesigen Metronom auf dem Sockel, wo früher Stalins Statue stand — haben Sie zusätzlich einen freien Blick auf den Sonnenuntergang über der Stadt. Die meisten Touristen laufen einfach daran vorbei.</p>
+
+<h2>4. Vyšehrad-Klippen</h2>
+
+<p>Vyšehrad liegt südlich der Innenstadt, 20 Minuten mit der Metro. Vom Südende der Festungsmauern aus blicken Sie steil auf die Vltava hinunter — Fluss, Brücken, Stadtsilhouette. Kein Eintritt. Fast keine Touristen.</p>
+
+<p>Die Kirche St. Peter und Paul dahinter ist ein gutes zweites Motiv: neugotisch, mit zwei Türmen, die aus der Ferne besser lesbar sind als von nah.</p>
+
+<h2>5. Nerudova — die Häuserschilder</h2>
+
+<p>Die Nerudova-Straße führt von Malostranské náměstí hinauf zur Burg. Jedes Haus hat ein historisches Symbol über dem Eingang: ein roter Adler, drei Geigen, zwei Sonnen. Das sind die alten Hausnummern — vor dem Straßennummernsystem.</p>
+
+<p>Bestes Licht: Vormittag, wenn die Sonne von Osten in die Straße fällt. Die Schilder sind dann gut beleuchtet, ohne hartes Gegenlicht.</p>
+
+<h2>6. Malá Strana von der Kampa-Insel</h2>
+
+<p>Die Kampa-Insel liegt direkt unter der Karlsbrücke, durch einen schmalen Kanal von Malá Strana getrennt. Vom nördlichen Ufer aus fotografieren Sie die Brückenbögen von unten — mit den Heiligenfiguren oben und dem Wasser darunter. Ungewöhnlicher Winkel, kaum jemand macht ihn.</p>
+
+<p>Das Čertovka-Mühlenrad daneben ist ein weiteres gutes Motiv — besonders bei Abendlicht.</p>
+
+<h2>7. Prager Burg von der Malostranská-Seite</h2>
+
+<p>Die meisten Fotos der Prager Burg entstehen von der Altstadt aus — zu weit weg, zu komprimiert. Das bessere Bild entsteht von der Malostranská Metro-Station aus: Sie sehen die Burg direkt über den Dächern von Malá Strana. Gehen Sie von der Station aus ein paar Schritte Richtung Fluss und schauen Sie zurück.</p>
+
+<h2>8. Josefov — die Jugendstil-Fassaden</h2>
+
+<p>Das jüdische Viertel Josefov wurde Ende des 19. Jahrhunderts fast vollständig abgerissen und mit Jugendstilhäusern neu bebaut. Die Pařížská-Straße ist die bekannteste — aber die Seitenstraßen Maiselova und Široka haben die schöneren Fassadendetails ohne die Luxusboutiquen davor.</p>
+
+<p>Bestes Licht: bewölkter Tag. Jugendstildetails brauchen diffuses Licht, kein hartes Sonnenlicht.</p>
+
+<h2>9. Strahov-Bibliothek (Innenraum)</h2>
+
+<p>Das Strahov-Kloster hat zwei barocke Bibliothekssäle, die zu den schönsten Innenräumen Mitteleuropas gehören. Fotografieren ist erlaubt (ohne Stativ). 150 CZK Eintritt.</p>
+
+<p>Sie schauen durch Eisengitter in die Säle hinein — das verhindert, dass Besucher hineingehen und Bücher berühren. Das Gitter gehört zum Bild: es gibt die Rahmung.</p>
+
+<p>Tipp: Kommen Sie unter der Woche vor 10:00 Uhr. Reisegruppen kommen meist gegen 11:00 Uhr.</p>
+
+<h2>10. Wenzelsplatz von oben — Nationalmuseum-Treppe</h2>
+
+<p>Der Wenzelsplatz ist schwer zu fotografieren, weil er so lang und schmal ist. Die einzige Position, von der er vollständig zu sehen ist: die Treppe des Nationalmuseums am oberen Ende. Von dort sehen Sie die gesamte Länge des Platzes mit der Wenzelstatue im Vordergrund.</p>
+
+<p>Abends, wenn die Straßenlaternen brennen und der Verkehr Lichtstreifen zieht: das ist der Moment für dieses Bild.</p>
+
+<h2>11. Zlatá ulička — Details statt Weitwinkel</h2>
+
+<p>Im Inneren der Burg lohnt sich das Zlatá ulička weniger für Weitwinkelfotos als für Details: Türrahmen in kräftigen Farben, niedrige Fenster, Handwerksschilder. Jedes Haus ist anders gestrichen. Das sind die Bilder, die aus Prag-Alben herausstechen, weil sie nicht wie Postkarten aussehen.</p>
+
+<h2>12. Čechův most bei Nacht</h2>
+
+<p>Die Čechův most ist die Jugendstilbrücke nördlich der Altstadt — vergoldet, mit Jugendstillampen. Tagsüber eher unscheinbar. Nachts, beleuchtet und im Wasser gespiegelt, ist sie eine der schönsten Brücken der Stadt.</p>
+
+<p>Standort: Náplavka-Ufer auf der Altstadtseite, Blick Richtung Holešovice. Stativ empfohlen — oder Handgelenk auf dem Geländer abstützen.</p>
+
+<h2>Allgemeine Tipps</h2>
+
+<ul>
+  <li><strong>Goldene Stunde:</strong> Ca. 30 Minuten nach Sonnenaufgang und vor Sonnenuntergang. Im April ist Sonnenaufgang gegen 6:10 Uhr, Sonnenuntergang gegen 20:15 Uhr.</li>
+  <li><strong>Bewölkte Tage:</strong> Für Gebäudedetails, Jugendstil und Innenräume besser als pralle Sonne.</li>
+  <li><strong>Regen:</strong> Nasse Kopfsteinpflastergassen spiegeln Licht. Ungeplant gut.</li>
+  <li><strong>Frühmorgens:</strong> Vor 8:00 Uhr sind Karlsbrücke, Altstädter Ring und Burggelände nahezu leer.</li>
+</ul>
+
+<p>Wenn Sie eine geführte Fototour machen möchten — zu den weniger bekannten Winkeln, mit den richtigen Zeitfenstern — führe ich auch das durch. Schreiben Sie mir.</p>
+
+<div class="blog-cta-box">
+  <h3>Prag fotografieren mit einer Ortskundigen</h3>
+  <p>Ich kenne die Stellen, die auf keiner Karte stehen — und wann das Licht stimmt.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Fotospots%20Prag#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: `<div class="blog-post-content">
+<p class="lead">Prague is one of the most photographed cities in Europe. The problem: ninety percent of Prague photos show the same five subjects, taken at the same time of day, from the same spot. Here are the 12 places where the really good pictures happen — and when to be there.</p>
+
+<h2>1. Charles Bridge — but at 6am</h2>
+
+<p>Charles Bridge is overcrowded during the day. At 6am, it's yours. Mist sometimes still sits over the Vltava, the street lamps are still on, and the 30 baroque saints stand quiet. That's the shot.</p>
+
+<p>Best position: center of the bridge, facing the castle hill. Castle in the background, a saint statue up front. No tripod needed — rest the camera on the balustrade.</p>
+
+<p>If fog is forecast: get up immediately. Misty early morning on Charles Bridge is one of the most striking subjects in the city.</p>
+
+<h2>2. Old Town Bridge Tower — from the top</h2>
+
+<p>130 CZK entry. The tower opens at 10am. From the top you see the bridge from behind — all 30 statues in a row, the castle at the end. That's the photo you can't take from the bridge itself.</p>
+
+<p>Tip: arrive just after opening. The first hour is quiet.</p>
+
+<h2>3. Letná Park — the beer garden view</h2>
+
+<p>The Letná Park beer garden has a terrace with the best panorama over the Old Town I know. Free to enter, no need to buy a drink. Golden hour hits this spot around 7pm in summer.</p>
+
+<p>From the Metronome — the giant metronome on the plinth where Stalin's statue once stood — you get an unobstructed view of the sunset over the city. Most tourists walk straight past it.</p>
+
+<h2>4. Vyšehrad cliffs</h2>
+
+<p>Vyšehrad is south of the center, 20 minutes by metro. From the southern end of the fortress walls you look steeply down onto the Vltava — river, bridges, city skyline. No entry fee. Almost no tourists.</p>
+
+<p>The Church of St. Peter and Paul behind you is a good second subject: neo-Gothic, with two towers that read better from a distance than up close.</p>
+
+<h2>5. Nerudova — the house signs</h2>
+
+<p>Nerudova Street runs from Malostranské náměstí up to the castle. Every house has a historical symbol above the entrance: a red eagle, three violins, two suns. These are the old house numbers — from before the street numbering system.</p>
+
+<p>Best light: morning, when the sun comes from the east into the street. The signs are well lit without harsh backlight.</p>
+
+<h2>6. Malá Strana from Kampa Island</h2>
+
+<p>Kampa Island sits directly under Charles Bridge, separated from Malá Strana by a narrow channel. From the northern bank you photograph the bridge arches from below — saints visible above, water below. An unusual angle almost nobody uses.</p>
+
+<p>The Čertovka mill wheel nearby is another good subject — especially in evening light.</p>
+
+<h2>7. Prague Castle from the Malostranská side</h2>
+
+<p>Most photos of Prague Castle are taken from the Old Town — too far away, too compressed. The better picture is from the Malostranská metro station: you see the castle directly above the rooftops of Malá Strana. Walk a few steps from the station toward the river and look back.</p>
+
+<h2>8. Josefov — the Art Nouveau facades</h2>
+
+<p>The Jewish Quarter Josefov was almost entirely demolished in the late 19th century and rebuilt with Art Nouveau apartment buildings. Pařížská Street is the best known — but the side streets Maiselova and Široka have better facade details without the luxury boutiques in front of them.</p>
+
+<p>Best light: overcast day. Art Nouveau details need diffuse light, not harsh sun.</p>
+
+<h2>9. Strahov Library (interior)</h2>
+
+<p>The Strahov Monastery has two Baroque library halls that rank among the most beautiful interiors in Central Europe. Photography is permitted (no tripod). 150 CZK entry.</p>
+
+<p>You look in through iron grilles — this prevents visitors from entering and touching the books. The grille is part of the picture: it gives you the framing.</p>
+
+<p>Tip: come on a weekday before 10am. Tour groups tend to arrive around 11.</p>
+
+<h2>10. Wenceslas Square from above — National Museum steps</h2>
+
+<p>Wenceslas Square is hard to photograph because it's so long and narrow. The only position from which it's fully visible: the steps of the National Museum at the upper end. From there you see the full length of the square with the Wenceslas statue in the foreground.</p>
+
+<p>In the evening, when the street lamps are on and traffic draws light streaks: that's the moment for this shot.</p>
+
+<h2>11. Golden Lane — details over wide angles</h2>
+
+<p>Inside the castle, Zlatá ulička rewards detail shots more than wide angles: door frames in bold colors, low windows, craft signs. Each house is painted differently. These are the pictures that stand out from Prague albums precisely because they don't look like postcards.</p>
+
+<h2>12. Čechův most at night</h2>
+
+<p>Čechův most is the Art Nouveau bridge north of the Old Town — gilded, with Art Nouveau lamps. Unremarkable in daylight. At night, lit up and reflected in the water, it's one of the most beautiful bridges in the city.</p>
+
+<p>Position: Náplavka embankment on the Old Town side, looking toward Holešovice. Tripod recommended — or brace your wrist on the railing.</p>
+
+<h2>General tips</h2>
+
+<ul>
+  <li><strong>Golden hour:</strong> About 30 minutes after sunrise and before sunset. In April, sunrise is around 6:10am, sunset around 8:15pm.</li>
+  <li><strong>Overcast days:</strong> Better than full sun for building details, Art Nouveau, and interiors.</li>
+  <li><strong>Rain:</strong> Wet cobblestones reflect light. Unexpectedly good.</li>
+  <li><strong>Early morning:</strong> Before 8am, Charles Bridge, Old Town Square, and the castle grounds are nearly empty.</li>
+</ul>
+
+<p>If you'd like a guided photography walk — to the less obvious angles, with the right timing — I do those too. Get in touch.</p>
+
+<div class="blog-cta-box">
+  <h3>Photograph Prague with someone who knows it</h3>
+  <p>I know the spots that aren't on any map — and when the light is right.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20Photo%20Walk#contact-title">Book a tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>
+</div>`,
+  },
+
+  'blog.post31.title': { en: 'One Day in Prague: 5 Places Worth Your Time', de: 'Ein Tag in Prag: Die 5 Orte, die sich lohnen' },
+  'blog.post31.excerpt': {
+    en: 'Only one day in Prague? Here\'s the route I give my guests: from Národní třída across the castle and back through the Old Town — on foot, without rushing.',
+    de: 'Nur einen Tag in Prag? Ich zeige Ihnen die Route, die ich meinen Gästen gebe: von Národní třída über die Burg bis zum Altstädter Ring — zu Fuß, ohne Hetze.',
+  },
+  'blog.post31.date': { en: 'April 25, 2026', de: '25. April 2026' },
+  'blog.post31.content': {
+    de: `<div class="blog-post-content">
+<p class="lead">Einer meiner Gäste — ein Banker aus Frankfurt, der auf dem Weg nach Wien war — sagte mir einmal: „Ich habe nur heute." Kein Stress in der Stimme, einfach eine Tatsache. Meine Antwort: „Das reicht."</p>
+
+<p>Prag lässt sich nicht erschöpfen. Das wäre vermessen. Aber in einem einzigen Tag kann man die Seele der Stadt spüren — vorausgesetzt, man wählt die richtige Route. Hier ist die, die ich meinen Gästen gebe.</p>
+
+<h2>Vorab: Wo Sie schlafen sollten</h2>
+
+<p>Wenn Sie nur einen Tag haben, ist die Lage des Hotels nicht Komfort — sie ist Strategie. Ein Hotel mit Spa in der Innenstadt bedeutet: Sie starten ausgeruht, ohne Transfers, und können am Abend zurück, ohne Stunden in einem Taxi zu verbringen.</p>
+
+<p>Gute Lagen für diesen Rundgang: zwischen Národní třída und dem Wenzelsplatz, oder direkt in der Nähe des Altstädter Rings. Das Grand Hotel Bohemia, das Icon Hotel &amp; Lounge oder das Be Smart Mánes — alle drei haben Wellness-Bereiche und liegen exakt auf dieser Route.</p>
+
+<h2>Platz 1: Národní třída — Ihr Morgen beginnt hier</h2>
+
+<p>Treffen Sie sich um 9:00 Uhr im Café Louvre, Národní 20. Es gibt es seit 1902. Kafka saß hier, Einstein auch. Die Milchkaffees kommen in großen weißen Tassen. Das Croissant ist nicht das, wofür Sie hergekommen sind, aber der Raum ist es.</p>
+
+<p>Draußen auf der Národní třída, ein paar Schritte Richtung Vltava, finden Sie ein kleines Denkmal in einem Eingang: Hände, die aus der Wand ragen. Hier waren am 17. November 1989 Studenten, Polizeiknüppel, und der Beginn des Endes der kommunistischen Tschechoslowakei. Ein stilles Denkmal, fast zu unscheinbar für das, was es festhält.</p>
+
+<p>Von dort spazieren Sie die Národní zur Kreuzung mit der Spálená, biegen rechts auf die Na Příkopě — die Einkaufsmeile Prags. Nicht zwingend aufregend (Zara, H&amp;M, Sephora), aber wenn jemand in Ihrer Gruppe shoppen möchte: hier ist die Zeit dafür.</p>
+
+<h2>Platz 2: Pražský hrad — Die Burg</h2>
+
+<p>Gegen 11:00 Uhr nehmen Sie die Tram 22 von der Haltestelle Národní divadlo (zwei Minuten zu Fuß vom Café Louvre). Vier Stationen bis Pohořelec, dann zu Fuß bergab durch den Hradčany-Platz zum Burgeingang.</p>
+
+<p>Was Sie sehen müssen:</p>
+
+<ul>
+  <li><strong>Veitsdom</strong>: Außen romanisch und gotisch durcheinander, innen fast dunkel — bis das Licht durch die Mucha-Fenster fällt. Kostenloser Eintritt in den Vorchor. Für das innere Kirchenschiff und die Königsgruft: Kombiticket B, 250 CZK.</li>
+  <li><strong>Alter Königspalast</strong>: Der Wladislawsaal ist einer der größten säulenlosen gotischen Säle Mitteleuropas. Er wurde auch für Pferdeturniere genutzt. Die Wendeltreppe im Inneren — der Reiterstieg — ist breit genug für ein Pferd. Daran erkennt man, für wen Architektur in dieser Zeit gedacht war.</li>
+  <li><strong>Zlatá ulička</strong>: Die bunten Häuschen wurden ursprünglich von Burgwächtern und Handwerkern bewohnt. Kafka schrieb dort eine Zeit lang — seine Schwester mietete Haus Nr. 22 im Winter 1916/17. Heute Souvenirläden, aber die Architektur lohnt sich.</li>
+</ul>
+
+<p>Planen Sie etwa 1,5 bis 2 Stunden ein.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/prague-castle-cathedral.jpg" alt="Veitsdom Prager Burg — gotischer Dom auf dem Hradschin in Prag" loading="lazy" />
+  <figcaption class="image-credit">Der Veitsdom dominiert das Burggelände — im Inneren fallen die Mucha-Fenster sofort auf.</figcaption>
+</figure>
+
+<h2>Platz 3: Zlaté schody &amp; Malá Strana — Der Abstieg</h2>
+
+<p>Verlassen Sie die Burg durch das Ostportal und gehen Sie die Zlaté schody (Goldene Treppe) hinab. Das ist die stille Seite, die Touristen meistens übersehen — wenige Stufen, Weinbergmauern, und plötzlich Malá Strana zu Ihren Füßen.</p>
+
+<p>Unten angekommen: biegen Sie links in die Nerudova. Sie ist steil und gepflastert und zieht sich den Burgberg hinunter. Fast jedes Haus hat ein historisches Schild über dem Eingang — die alten Hausnummern in Form von Zeichen: ein Bär, eine Sonne, drei Geigen. Vor der Erfindung der Straßennummern war das das System.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/photo-guests-mala-strana.jpeg" alt="Malá Strana Prag — Blick auf die Kleinseite mit Barockkirchen und engen Gassen" loading="lazy" />
+  <figcaption class="image-credit">Malá Strana — das Viertel zwischen Karlsbrücke und Burgberg.</figcaption>
+</figure>
+
+<p>Am Fuß der Nerudova liegt das Malostranské náměstí — der Hauptplatz der Kleinseite. Die Barockkirche St. Nikolaus dominiert ihn; Eintritt kostet etwas, aber das Innere ist theatralischer als viele Opernhäuser. Wenn Sie Hunger haben: das Restaurant U Malého Glena (Karmelitská 23) ist kein Touristenlokal. Oder für etwas Schnelleres: Lokál Malá Strana, Míšeňská 12.</p>
+
+<h2>Platz 4: Karlův most — Die Brücke</h2>
+
+<p>Die Karlsbrücke ist am frühen Morgen oder nach 18:00 Uhr leer. Um 14:00 Uhr ist sie es nicht. Das ist die ehrliche Auskunft.</p>
+
+<p>Trotzdem: Sie müssen sie überqueren, denn die Aussicht von der Brücke ist eine der schönsten in Europa. Burgsilhouette im Westen, die Kuppeln von Malá Strana, dann die Türme der Altstadt, wenn man sich umdreht.</p>
+
+<p>Die 30 Barockheiligen entlang der Balustrade sind Kopien — die Originale sind im Lapidarium im Výstaviště-Park, falls Sie die echten sehen wollen. Empfehlenswert für alle, die sich länger als zwei Tage in Prag aufhalten.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/charles-bridge-pretty-picture.jpg" alt="Karlsbrücke Prag — historische Steinbrücke mit Barockheiligen über der Moldau" loading="lazy" />
+  <figcaption class="image-credit">Die Karlsbrücke — am eindrucksvollsten früh morgens oder nach 18 Uhr.</figcaption>
+</figure>
+
+<p>Kleiner Tipp: Für 130 CZK können Sie den Altstädter Brückenturm besteigen — einer der schönsten gotischen Tortürme Europas, und die Aussicht von oben auf die Brücke und den Fluss ist außergewöhnlich.</p>
+
+<h2>Platz 5: Staroměstské náměstí — Der Altstädter Ring</h2>
+
+<p>Vom Ende der Karlsbrücke sind es fünf Minuten zu Fuß. Der Altstädter Ring ist der dramatischste Stadtplatz, den ich kenne — und ich kenne einige.</p>
+
+<p>Die <strong>Orloj</strong> schlägt stündlich. Das Spektakel dauert etwa 45 Sekunden: ein Skelett läutet, die zwölf Apostel drehen sich, ein Hahn kräht. Die Menge applaudiert. Sie können dafür anstehen oder einfach zufällig vorbeikommen — die Uhr tickt zuverlässig.</p>
+
+<p>Der <strong>Turm des Altstädter Rathauses</strong> (250 CZK) gibt Ihnen den besten Blick über die Dächer der Altstadt. Von hier sehen Sie, wie Prag gebaut ist: konzentrische Ringe um die Kirche Unserer Lieben Frau vor dem Týn, gotische Türme neben barocken Kuppeln neben Renaissance-Giebeln.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/old-town-square.jpg" alt="Altstädter Ring Prag — Orloj astronomische Uhr und Týnkirche" loading="lazy" />
+  <figcaption class="image-credit">Staroměstské náměstí — der Altstädter Ring mit der Orloj und der Týnkirche.</figcaption>
+</figure>
+
+<p>Was Sie auf dem Platz vermeiden sollten: die Restaurants mit englischer Speisekarte direkt am Platz. Gehen Sie stattdessen 50 Meter in eine Seitenstraße — Lokál Dlouhá (Dlouhá 33) ist perfekt für ein Abendessen mit Pilsner Urquell.</p>
+
+<h2>Die Rückkehr</h2>
+
+<p>Von der Staroměstská-Metro sind es zwei Stationen bis Národní třída (Linie B, grün). Sie sind zurück, wo Sie begonnen haben. Wenn das Hotel einen Saunabereich hat: das ist jetzt genau das Richtige.</p>
+
+<p>Die Gesamtroute sind ungefähr 8 bis 10 Kilometer zu Fuß. Sie werden Treppen hochgehen, unebenes Pflaster begehen, und wahrscheinlich an einer Stelle kurz stehenbleiben und denken: Wann komme ich wieder. Das ist normal.</p>
+
+<h2>Was ich meinen Gästen sage</h2>
+
+<p>Prag ist schön, aber es ist auch dicht. Nicht wegen der Distanzen — wegen der Geschichten. An jeder Ecke gibt es eine. Man kann nicht alles auf einmal verarbeiten. Ein Tag gibt Ihnen genug, um zu verstehen, warum die Menschen wiederkommen.</p>
+
+<p>Wenn Sie möchten, zeige ich Ihnen das alles persönlich — mit den Geschichten hinter den Sehenswürdigkeiten, ohne Hetze, ohne Gruppenbus.</p>
+
+<div class="blog-cta-box">
+  <h3>Einen Tag gut verbringen</h3>
+  <p>Ich begleite Sie durch diese Route — auf Deutsch, Englisch oder Tschechisch, im eigenen Tempo.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Stadtf%C3%BChrung%20Prag#contact-title">Tour anfragen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+    en: `<div class="blog-post-content">
+<p class="lead">One of my guests — a banker from Frankfurt on his way to Vienna — told me once: "I only have today." No stress in his voice, just a fact. My answer: "That's enough."</p>
+
+<p>You can't exhaust Prague in a day. But you can feel the soul of the city — if you pick the right route. Here's the one I give my guests.</p>
+
+<h2>First: Where to stay</h2>
+
+<p>If you only have one day, your hotel location isn't comfort — it's strategy. A hotel with a spa in the center means you start rested, no transfers, and can return in the evening without spending an hour in traffic.</p>
+
+<p>Good locations for this route: between Národní třída and Wenceslas Square, or right near Old Town Square. Grand Hotel Bohemia, Icon Hotel &amp; Lounge, or Be Smart Mánes — all three have wellness areas and sit exactly on this route.</p>
+
+<h2>Stop 1: Národní třída — Your morning starts here</h2>
+
+<p>Meet at Café Louvre, Národní 20, at 9:00. It's been here since 1902. Kafka sat here, so did Einstein. The lattes come in large white cups. The croissant isn't why you came, but the room is.</p>
+
+<p>Outside on Národní, a few steps toward the river, there's a small monument in a doorway: hands reaching from the wall. On November 17, 1989, students were beaten here by police — the beginning of the end for communist Czechoslovakia. A quiet memorial, almost too understated for what it marks.</p>
+
+<p>From there, walk Národní to the junction with Spálená, turn right onto Na Příkopě — Prague's main shopping strip. Not exactly thrilling (Zara, H&amp;M, Sephora), but if anyone in your group wants to shop, this is where to do it.</p>
+
+<h2>Stop 2: Pražský hrad — The Castle</h2>
+
+<p>Around 11:00, take Tram 22 from the Národní divadlo stop (two minutes on foot from Café Louvre). Four stops to Pohořelec, then walk downhill through Hradčany Square to the castle entrance.</p>
+
+<p>What you need to see:</p>
+
+<ul>
+  <li><strong>St. Vitus Cathedral</strong>: Romanesque and Gothic layered on top of each other outside; nearly dark inside until light comes through the Mucha windows. Free entry to the outer nave. For the inner nave and royal crypt: Combo Ticket B, 250 CZK.</li>
+  <li><strong>Old Royal Palace</strong>: The Vladislav Hall is one of the largest Gothic halls in Central Europe built without columns. It was also used for horse tournaments. The Riders' Staircase inside is wide enough for a horse — you can tell who the architecture was built for.</li>
+  <li><strong>Zlatá ulička (Golden Lane)</strong>: The colored houses were originally occupied by castle guards and craftsmen. Kafka wrote there for a period — his sister rented house No. 22 in the winter of 1916/17. Souvenir shops now, but the architecture is worth it.</li>
+</ul>
+
+<p>Allow 1.5 to 2 hours.</p>
+
+<h2>Stop 3: Zlaté schody &amp; Malá Strana — The descent</h2>
+
+<p>Leave the castle through the east portal and walk down Zlaté schody (Golden Steps). This is the quiet side — the one most tourists miss. A few flights of stairs, vineyard walls, and suddenly Malá Strana below you.</p>
+
+<p>At the bottom, turn left onto Nerudova. It's steep, cobblestoned, and winds down the castle hill. Almost every house has a historical sign above the entrance — the old house numbers in the form of symbols: a bear, a sun, three violins. Before street numbers, this was the system.</p>
+
+<p>At the foot of Nerudova lies Malostranské náměstí — the main square of Malá Strana. The baroque St. Nicholas Church dominates it; entry costs a little, but the interior is more theatrical than most opera houses. If you're hungry: U Malého Glena (Karmelitská 23) is not a tourist trap. Or for something quicker: Lokál Malá Strana, Míšeňská 12.</p>
+
+<h2>Stop 4: Karlův most — The Bridge</h2>
+
+<p>Charles Bridge is empty early in the morning or after 6pm. At 2pm, it isn't. That's the honest answer.</p>
+
+<p>Still: you have to cross it, because the view from the bridge is one of the best in Europe. The castle silhouette to the west, the domes of Malá Strana, then the towers of the Old Town when you turn around.</p>
+
+<p>The 30 baroque saint statues along the balustrade are copies — the originals are in the Lapidarium at Výstaviště Park, if you want to see the real ones. Worth it for anyone spending more than two days in Prague.</p>
+
+<p>Small tip: for 130 CZK you can climb the Old Town Bridge Tower — one of the most beautiful Gothic gate towers in Europe, and the view from the top down onto the bridge and the river is exceptional.</p>
+
+<h2>Stop 5: Staroměstské náměstí — Old Town Square</h2>
+
+<p>From the end of Charles Bridge it's five minutes on foot. Old Town Square is the most dramatic city square I know — and I know a few.</p>
+
+<p>The <strong>Orloj (Astronomical Clock)</strong> strikes on the hour. The display lasts about 45 seconds: a skeleton rings a bell, the twelve apostles rotate, a rooster crows. The crowd applauds. You can queue for it or simply happen to be there — the clock is reliable.</p>
+
+<p>The <strong>Old Town Hall Tower</strong> (250 CZK) gives you the best view over the Old Town rooftops. From here you see how Prague is built: concentric rings around the Church of Our Lady before Týn, Gothic towers next to Baroque domes next to Renaissance gables.</p>
+
+<p>What to avoid on the square: the restaurants with English menus right on the plaza. Go 50 meters into a side street instead — Lokál Dlouhá (Dlouhá 33) is perfect for dinner with a Pilsner Urquell.</p>
+
+<h2>Getting back</h2>
+
+<p>From Staroměstská metro it's two stops to Národní třída (Line B, green). You're back where you started. If the hotel has a sauna: now is exactly the right time.</p>
+
+<p>The full route is about 8 to 10 kilometers on foot. You'll climb stairs, walk uneven cobblestones, and probably stop somewhere and think: when am I coming back. That's normal.</p>
+
+<h2>What I tell my guests</h2>
+
+<p>Prague is beautiful but it's also dense. Not because of the distances — because of the stories. Every corner has one. You can't take it all in at once. One day gives you enough to understand why people come back.</p>
+
+<p>If you'd like, I can show you all of this in person — with the stories behind the sights, no rush, no group bus.</p>
+
+<div class="blog-cta-box">
+  <h3>Make the most of your day</h3>
+  <p>I'll take you through this route — in English, German, or Czech, at your own pace.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20City%20Tour#contact-title">Book a tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>
+</div>`,
+  },
+
+  // ─── Post 35: Prague Visitor Pass — why it's not worth it ─────────────────
+  'blog.post35.title': {
+    en: 'Prague Visitor Pass: 5 Reasons to Skip It',
+    de: 'Prague Visitor Pass: 5 Gründe dagegen',
+  },
+  'blog.post35.excerpt': {
+    en: 'I wrote a glowing review of the Prague Visitor Pass. Now the honest counterpoint: for most visitors — young travellers here for the vibe, and over-60s who already get half-price transport — the pass simply does not make sense.',
+    de: 'Ich habe einen positiven Artikel über den Prague Visitor Pass geschrieben. Jetzt die ehrliche Gegenseite: Für die meisten Besucher — junge Reisende, die wegen der Atmosphäre kommen, und Gäste über 60, die bereits halben Fahrpreis zahlen — macht der Pass keinen Sinn.',
+  },
+  'blog.post35.date': {
+    en: 'May 1, 2026',
+    de: '1. Mai 2026',
+  },
+  'blog.post35.content': {
+    en: `<div class="blog-content">
+<h2>5 reasons the Prague Visitor Pass is not worth it</h2>
+
+<p class="lead">A few weeks ago I published an article explaining <a href="/blog/prague-visitor-pass-honest-review">when the Prague Visitor Pass makes sense</a>. It does — for a specific kind of visitor. But after 40 years of guiding, I have to be equally honest about the other side: for most people who come to Prague, the pass is not a good fit. Here are five reasons why.</p>
+
+<h2>1. Young visitors are not here for museums</h2>
+
+<p>I see it every season. Young couples and friend groups arrive in Prague and they want Charles Bridge at sunrise, a glass of Moravian wine in a courtyard off Malá Strana, a proper espresso in one of the city's exceptional cafés, a walk through the castle district, maybe a beautiful piece of clothing from a boutique on Dlouhá or Pařížská. They are here for the city, not the institutions.</p>
+
+<p>The Prague Visitor Pass is built around museum and gallery entry. If you plan to visit the National Museum, all four National Gallery locations, the Jewish Quarter, Prague Castle's paid areas, and the Zoo — you will get value. But most young visitors to Prague do not do that itinerary. They would rather spend an afternoon in Vinohrady with coffee and conversation than work through a checklist of heritage sites.</p>
+
+<p>Prague has developed a quietly serious café culture over the last decade, and it rewards exploration far more than a city card does. If you are looking for exceptional coffee, I recommend the <a href="https://www.thewaytocoffee.com/prague-center/" target="_blank" rel="noopener noreferrer">The Way to Coffee Prague guide</a> and <a href="https://www.youtube.com/watch?v=Yjbyzj2K1Fg" target="_blank" rel="noopener noreferrer">this video on Prague's coffee scene</a>. You will spend a fraction of the Visitor Pass price and have a far better morning.</p>
+
+<h2>2. Prague's most beautiful things are free</h2>
+
+<p>Charles Bridge: free. Walking across it at 7 in the morning with mist on the Vltava: free. Old Town Square, the astronomical clock from below, the façades of Staré Město: free. The view from Letná park over the river: free. Malá Strana's streets, the Čertovka channel, the lane under the bridge tower: free. The basic Prague Castle courtyards: free.</p>
+
+<p>I am not dismissing the paid attractions — some are extraordinary. But the reason people fall in love with Prague is overwhelmingly the walkable, breathable city itself. The Visitor Pass adds nothing to that.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-secret-of-secrets-prague.jpg" alt="Prague old town — the streets and atmosphere that draw visitors back" loading="lazy" />
+  <figcaption class="image-credit">The city itself is the attraction. No pass required.</figcaption>
+</figure>
+
+<h2>3. Over-60 visitors already get half-price public transport</h2>
+
+<p>More than two thirds of my clients are over 60 years old. Prague draws older, experienced travellers who appreciate history, architecture, and a slower pace — and this is a wonderful thing. But it also means the Visitor Pass numbers rarely work out for them.</p>
+
+<p>A 72-hour public transport pass in Prague costs <strong>340 CZK</strong> — around €14. Visitors over 60 pay <strong>170 CZK</strong>. That is three days of unlimited trams, metro, and buses for roughly €7. The Prague Visitor Pass, which bundles transport with attraction entry, starts significantly higher and rarely recovers the difference — especially since over-60 visitors already receive discounts at many individual attractions.</p>
+
+<p>For tickets, download the <a href="https://pidlitacka.cz/en/pricing" target="_blank" rel="noopener noreferrer"><strong>PID Lítačka</strong></a> app — the official Prague transport app, available in English. You can buy and validate tickets directly on your phone. No queuing at a machine, no paper to lose. <a href="https://apps.apple.com/cz/app/pid-l%C3%ADta%C4%8Dka/id983071129" target="_blank" rel="noopener noreferrer">Download on the App Store.</a></p>
+
+<h2>4. The pass only pays off if you are a serious museum visitor</h2>
+
+<p>I did the maths in my <a href="/blog/prague-visitor-pass-honest-review">earlier article</a>: the 72-hour pass at around 3,300 CZK requires a meaningful stack of paid attractions before it breaks even. If you genuinely want to visit the National Museum, the Alfons Mucha Museum, Prague Castle's palace interiors, at least one National Gallery location, and the Jewish Quarter — all within 72 hours — then yes, it can work.</p>
+
+<p>Most people are not that kind of visitor. Three days in Prague typically means one full sightseeing day, one half-day of wandering, and one day of eating, drinking, and shopping. That itinerary does not justify the pass.</p>
+
+<h2>5. There are better things to spend that money on</h2>
+
+<p>The 72-hour Visitor Pass costs roughly €130–140. That same money, spent differently in Prague, could be: a private walking tour with a local guide, two long lunches with wine in good restaurants, several evenings at a wine bar in Vinohrady, a beautiful piece of Czech glass or jewellery, or a proper tour of the city's exceptional coffee bars.</p>
+
+<p>Prague rewards spontaneity and depth of experience. A city card rewards quantity and coverage. Those are different travel philosophies — and the second one is not how most people actually enjoy this city.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-food-prague.jpg" alt="Czech food in Prague — a long lunch with wine is a better use of your budget than a tourist pass" loading="lazy" />
+  <figcaption class="image-credit">A long lunch with wine in a good Prague restaurant. That is what €130 looks like when spent well.</figcaption>
+</figure>
+
+<h2>Who should still get the pass</h2>
+
+<p>I do not want to be unfair to it. If you are staying four or five days, have a genuine appetite for museums and galleries, and are under 60, the maths can work in your favour. I explained exactly when in my <a href="/blog/prague-visitor-pass-honest-review">earlier article</a>. But for the majority of visitors I meet — young people here for the atmosphere, and older guests who already benefit from age discounts — the Prague Visitor Pass is genuinely hard for me to recommend.</p>
+
+<p>See the city. Drink good coffee. Walk slowly. You will not miss the pass.</p>
+
+<div class="blog-cta-box">
+  <h3>Let me show you Prague properly</h3>
+  <p>No checklist. No rushing between ticket queues. Just the city, the stories, and your pace.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20City%20Tour#contact-title">Book a tour</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Ask a question</a>
+  </div>
+</div>
+</div>`,
+    de: `<div class="blog-content">
+<h2>5 Gründe, warum sich der Prague Visitor Pass nicht lohnt</h2>
+
+<p class="lead">Vor einigen Wochen habe ich einen Artikel veröffentlicht, der erklärt, <a href="/blog/prague-visitor-pass-ehrliche-bewertung">wann sich der Prague Visitor Pass lohnt</a>. Das tut er — für einen bestimmten Reisenden. Aber nach 40 Jahren als Stadtführerin muss ich auch die andere Seite ehrlich benennen: Für die meisten Menschen, die nach Prag kommen, ist der Pass keine gute Wahl. Hier sind fünf Gründe.</p>
+
+<h2>1. Junge Besucher kommen nicht wegen der Museen</h2>
+
+<p>Ich sehe es jede Saison. Junge Paare und Freundesgruppen kommen nach Prag und wollen die Karlsbrücke im Morgengrauen, ein Glas mährischen Wein in einem Innenhof in Malá Strana, einen guten Espresso in einem der außergewöhnlichen Cafés der Stadt, einen Spaziergang durch das Burgviertel — vielleicht noch ein schönes Kleidungsstück aus einer Boutique in der Dlouhá oder Pařížská. Sie sind wegen der Stadt hier, nicht wegen der Institutionen.</p>
+
+<p>Der Prague Visitor Pass ist auf Museums- und Galerieeintritte ausgelegt. Wer das Nationalmuseum, alle vier Nationalgalerie-Standorte, das Jüdische Viertel, die kostenpflichtigen Bereiche der Prager Burg und den Zoo besuchen will — für den kann er sich lohnen. Aber die meisten jungen Besucher in Prag machen dieses Programm nicht. Sie verbringen einen Nachmittag lieber in Vinohrady mit Kaffee und Gesprächen als eine Liste von Kulturstätten abzuarbeiten.</p>
+
+<p>Prag hat in den letzten zehn Jahren eine ernstzunehmende Cafékultur entwickelt, die Erkundung weit mehr belohnt als eine Stadtkarte. Wer außergewöhnliche Cafés sucht, dem empfehle ich den <a href="https://www.thewaytocoffee.com/prague-center/" target="_blank" rel="noopener noreferrer">Prague-Guide von The Way to Coffee</a> und <a href="https://www.youtube.com/watch?v=Yjbyzj2K1Fg" target="_blank" rel="noopener noreferrer">dieses Video zur Prager Kaffeeszene</a>. Man gibt einen Bruchteil des Pass-Preises aus und hat einen weit schöneren Morgen.</p>
+
+<h2>2. Das Schönste in Prag ist kostenlos</h2>
+
+<p>Die Karlsbrücke: kostenlos. Um 7 Uhr morgens über sie gehen, mit Nebel über der Moldau: kostenlos. Altstädter Ring, die Astronomische Uhr von unten, die Fassaden der Altstadt: kostenlos. Der Blick vom Letná-Park über den Fluss: kostenlos. Die Gassen der Kleinseite, der Čertovka-Kanal, der Gang unter dem Brückenturm: kostenlos. Die Vorhöfe der Prager Burg: kostenlos.</p>
+
+<p>Ich sage damit nicht, dass die kostenpflichtigen Attraktionen nichts wert sind — manche sind außergewöhnlich. Aber der Grund, warum Menschen sich in Prag verlieben, ist fast immer die begehbare, atmende Stadt selbst. Der Visitor Pass fügt dem nichts hinzu.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-secret-of-secrets-prague.jpg" alt="Prager Altstadt — die Gassen und Atmosphäre, die Besucher immer wieder zurückbringt" loading="lazy" />
+  <figcaption class="image-credit">Die Stadt selbst ist die Attraktion. Kein Pass nötig.</figcaption>
+</figure>
+
+<h2>3. Besucher über 60 bekommen den ÖPNV schon zum halben Preis</h2>
+
+<p>Mehr als zwei Drittel meiner Gäste sind über 60 Jahre alt. Prag zieht ältere, erfahrene Reisende an, die Geschichte, Architektur und ein ruhigeres Tempo zu schätzen wissen — das ist eine schöne Sache. Aber genau deshalb rechnet sich der Visitor Pass für sie selten.</p>
+
+<p>Eine 72-Stunden-Fahrkarte für Prags öffentliche Verkehrsmittel kostet <strong>340 CZK</strong> — rund 14 Euro. Besucher über 60 zahlen <strong>170 CZK</strong>. Das sind drei Tage unbegrenzte Straßenbahn-, U-Bahn- und Busfahrten für etwa 7 Euro. Der Prague Visitor Pass, der Transport mit Eintritten bündelt, kostet erheblich mehr — und die Differenz wird durch Ermäßigungen, die ältere Besucher an vielen Attraktionen sowieso erhalten, selten ausgeglichen.</p>
+
+<p>Für Tickets empfehle ich die <a href="https://pidlitacka.cz/en/pricing" target="_blank" rel="noopener noreferrer"><strong>PID Lítačka</strong></a> App herunterzuladen — die offizielle Prager ÖPNV-App, auf Englisch verfügbar. Tickets kaufen und entwerten direkt auf dem Smartphone. Kein Anstehen am Automaten, kein Papier, das man verlieren kann. <a href="https://apps.apple.com/cz/app/pid-l%C3%ADta%C4%8Dka/id983071129" target="_blank" rel="noopener noreferrer">Im App Store herunterladen.</a></p>
+
+<h2>4. Der Pass lohnt sich nur für ernsthafte Museumsbesucher</h2>
+
+<p>Ich habe in meinem <a href="/blog/prague-visitor-pass-ehrliche-bewertung">früheren Artikel</a> nachgerechnet: Der 72-Stunden-Pass für rund 3.300 CZK erfordert eine beachtliche Anzahl bezahlter Attraktionen, bevor er sich rentiert. Wer wirklich das Nationalmuseum, das Alfons-Mucha-Museum, die Palasträume der Prager Burg, mindestens einen Nationalgalerie-Standort und das Jüdische Viertel besuchen möchte — alles innerhalb von 72 Stunden — dem kann er Sinn machen.</p>
+
+<p>Die meisten Besucher sind nicht dieser Typ. Drei Tage in Prag bedeuten für die meisten: ein voller Sightseeing-Tag, ein halber Tag zum Schlendern, ein Tag zum Essen, Trinken und Einkaufen. Dieses Programm rechtfertigt den Pass nicht.</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Eine typische Rechnung — Paar, drei Tage</p>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Prager Burg (Rundgang B)</span>
+    <span class="cost-table-amount">36 €</span>
+  </div>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Strahov-Bibliothek</span>
+    <span class="cost-table-amount">12 €</span>
+  </div>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Astronomische Uhr (Turmaufstieg)</span>
+    <span class="cost-table-amount">14 €</span>
+  </div>
+  <div class="cost-table-row">
+    <span class="cost-table-label">Jüdisches Museum</span>
+    <span class="cost-table-amount">22 €</span>
+  </div>
+  <div class="cost-table-row total">
+    <span class="cost-table-label">Direkter Eintritt, pro Person</span>
+    <span class="cost-table-amount">84 €</span>
+  </div>
+  <p class="cost-table-footnote">Im Vergleich: 3-Tages-Pass · 98 € — und davon ist Position 1 nicht abgedeckt.</p>
+</div>
+
+<h2>5. Es gibt Besseres, wofür man dieses Geld ausgeben kann</h2>
+
+<p>Der 72-Stunden-Visitor-Pass kostet rund 130–140 Euro. Dieses Geld, anders in Prag verwendet: eine private Stadtführung mit einem lokalen Guide, zwei ausgedehnte Mittagessen mit Wein in guten Restaurants, mehrere Abende in einer Weinbar in Vinohrady, ein schönes Stück böhmisches Glas oder Schmuck — oder eine Runde durch die außergewöhnlichen Kaffeebars der Stadt.</p>
+
+<p>Prag belohnt Spontaneität und Erlebnistiefe. Eine Stadtkarte belohnt Quantität und Abdeckung. Das sind verschiedene Reisephilosophien — und die zweite ist nicht die Art, wie die meisten Menschen diese Stadt wirklich genießen.</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-food-prague.jpg" alt="Tschechisches Essen in Prag — ein ausgedehntes Mittagessen mit Wein ist sinnvoller als ein Touristenpass" loading="lazy" />
+  <figcaption class="image-credit">Ein ausgedehntes Mittagessen mit Wein in einem guten Prager Restaurant. So sehen 130 Euro aus, wenn man sie gut ausgibt.</figcaption>
+</figure>
+
+<h2>Wer den Pass trotzdem holen sollte</h2>
+
+<p>Ich möchte nicht ungerecht sein. Wer vier oder fünf Tage bleibt, echtes Interesse an Museen und Galerien hat und unter 60 ist, kann durchaus auf seine Kosten kommen. Ich habe das in meinem <a href="/blog/prague-visitor-pass-ehrliche-bewertung">früheren Artikel</a> erklärt. Aber für die Mehrzahl der Gäste, die ich begleite — junge Menschen, die wegen der Atmosphäre der Stadt kommen, und ältere Besucher, die von Altersermäßigungen bereits profitieren — ist der Prague Visitor Pass ehrlich gesagt schwer zu empfehlen.</p>
+
+<p>Erleben Sie die Stadt. Trinken Sie guten Kaffee. Gehen Sie langsam. Den Pass werden Sie nicht vermissen.</p>
+
+<div class="blog-cta-box">
+  <h3>Ich zeige Ihnen Prag — richtig</h3>
+  <p>Keine Checkliste. Kein Hetzen von Ticketschlange zu Ticketschlange. Nur die Stadt, die Geschichten und Ihr Tempo.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Prague%20City%20Tour#contact-title">Tour buchen</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>
+</div>`,
+  },
+
+  // ─── Post 36: Was man in Prag nicht tun sollte ────────────────────────────
+  'blog.post36.title': {
+    en: 'What Not to Do in Prague',
+    de: 'Was man in Prag nicht tun sollte',
+  },
+  'blog.post36.excerpt': {
+    en: 'Tourist traps, false Trdelník myths, and why you should never change money on Charles Bridge. An honest list from twelve years of guiding.',
+    de: 'Touristenfallen, falsche Trdelník-Mythen, und warum Sie auf der Karlsbrücke kein Geld wechseln sollten. Eine ehrliche Liste aus zwölf Jahren Stadtführungen — fünf Dinge, die Sie sich ersparen können.',
+  },
+  'blog.post36.date': {
+    en: 'May 14, 2026',
+    de: '14. Mai 2026',
+  },
+  'blog.post36.content': {
+    de: `<p id="einleitung">
+  Es gibt Listen, die ich ungern schreibe — und diese ist eine davon.
+  Denn ich liebe meine Stadt, und ich möchte nicht, dass Sie Prag
+  durch das Raster eines Reisewarn-Artikels betrachten. Andererseits:
+  Wer eine Woche lang Gäste durch die Altstadt führt, hört dieselben
+  Geschichten immer wieder. Vom verlorenen Geld, vom enttäuschten
+  Abendessen, vom <em>Souvenir</em>, das sich später als chinesische
+  Massenware entpuppte.
+</p>
+
+<p>
+  Die fünf Punkte, die ich hier zusammengetragen habe, sind keine
+  Ausnahmefälle. Es sind die Fehler, die ich bei <strong>jeder zweiten
+  Tour</strong> in den Erzählungen meiner Gäste wiederfinde — Menschen,
+  die Prag eigentlich gut vorbereitet besucht hatten. Das macht sie
+  besonders ärgerlich. Und besonders vermeidbar.
+</p>
+
+<div class="callout-box">
+  <div class="callout-box__label">Vorab in einer Zeile</div>
+  <p class="callout-box__text">
+    Diese Liste ersetzt keinen Reiseführer. Sie ist eine ehrliche
+    Bestandsaufnahme dessen, was an einem typischen Wochenende in Prag
+    regelmäßig schiefläuft — und wie Sie es sich, Ihrer Zeit und Ihrem
+    Geldbeutel ersparen.
+  </p>
+</div>
+
+<p>
+  Wenn Sie nach dem Lesen das Gefühl haben, Prag sei eine Stadt voller
+  Fallen — keine Sorge. Es ist im Gegenteil eine der ehrlichsten
+  Hauptstädte Europas. Nur die Touristenmeile zwischen Pulverturm und
+  Karlsbrücke, jene fünfhundert Meter, durch die täglich vierzigtausend
+  Menschen strömen, ist eine eigene kleine Welt. Wer sie versteht, hat
+  Prag fast gewonnen.
+</p>
+
+<h2 id="grund-1">Wechseln Sie <em>niemals</em> Geld auf der Karlsbrücke</h2>
+
+<p>
+  Beginnen wir mit jenem Klassiker, den ich seit Jahren auf jeder
+  Tour erwähne — und den meine Gäste trotzdem regelmäßig ignorieren.
+  Die Wechselstuben rund um die Karlsbrücke, am Altstädter Ring und
+  entlang der Celetná sind nicht einfach nur teuer. Sie sind eine
+  eigene Disziplin der angewandten Täuschung.
+</p>
+
+<p>
+  Der Trick funktioniert immer gleich: Im Schaufenster prangt ein
+  sensationeller Kurs — etwa <em>1 Euro = 26 CZK</em> in großen
+  Lettern. Daneben, in winzigen Buchstaben und auf Tschechisch,
+  steht das Wort <em>„prodej"</em> — Verkauf. Sie wollen aber
+  kaufen. Der tatsächliche Ankaufskurs liegt dann bei 18, manchmal
+  bei nur 16 Kronen. Bei einem Tausch von 200 Euro verlieren Sie
+  gut <strong>achtzig Euro</strong> binnen zwanzig Sekunden.
+</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Was 200 Euro tatsächlich bringen — eine reale Stichprobe</p>
+  <div class="cost-table-row"><span class="cost-table-label">Wechselstube Karlsbrücke (Tarif „Tourist")</span><span class="cost-table-amount">3.240 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Wechselstube Wenzelsplatz (Mittelklasse)</span><span class="cost-table-amount">4.620 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Geldautomat einer ČSOB- oder Komerční-Filiale</span><span class="cost-table-amount">4.910 CZK</span></div>
+  <div class="cost-table-row total"><span class="cost-table-label">Differenz Karlsbrücke ↔ Bankautomat</span><span class="cost-table-amount">1.670 CZK</span></div>
+  <p class="cost-table-footnote">Das entspricht einem Drei-Gänge-Menü für zwei in einem sehr guten Restaurant.</p>
+</div>
+
+<p>
+  Hinzu kommt eine zweite, noch ärgerlichere Variante: Der Wechsler
+  zählt Ihnen die Scheine auf den Tresen, schiebt sie zurück, fragt
+  nach Ihrer Quittung — und in dieser kurzen Bewegung verschwinden
+  zwei Tausender. Die tschechische Polizei kennt das Phänomen seit
+  Jahren. Strafanzeigen werden routinemäßig aufgenommen, Geld
+  zurückgezahlt jedoch fast nie.
+</p>
+
+<h3>Was Sie stattdessen tun</h3>
+
+<p>
+  Heben Sie tschechische Kronen direkt am Automaten einer Filiale ab
+  — <strong>ČSOB</strong>, <strong>Komerční Banka</strong> oder
+  <strong>Česká spořitelna</strong>. Meiden Sie die freistehenden,
+  oft pinkfarbenen <em>Euronet</em>-Automaten an Touristenstraßen;
+  sie verlangen versteckte Wechselgebühren von bis zu zwölf Prozent.
+  Wenn Sie unbedingt eine Wechselstube nutzen möchten, gehen Sie
+  zur <em>eXchange s.r.o.</em> in der Kaprova-Straße — sie hat als
+  einzige in der Innenstadt seit Jahren faire Kurse und wird auch
+  von Pragern frequentiert.
+</p>
+
+<blockquote>
+  Wenn der Kurs im Schaufenster zu schön aussieht, dann ist er
+  es auch. Es gibt in Prag keine Ausnahme von dieser Regel.
+  <cite>— Aus zwölf Jahren Stadtführungen</cite>
+</blockquote>
+
+<h2 id="grund-2">Halten Sie den Trdelník bitte nicht für <em>böhmisch</em></h2>
+
+<p>
+  Sie sehen ihn an jeder Ecke: den dampfenden Hohlteig auf rotierender
+  Walze, mit Zucker und Zimt bestäubt, oft gefüllt mit Eis oder
+  Nutella. Der <em>Trdelník</em> gilt im Reiseführer als „böhmische
+  Spezialität" — und es gibt kaum eine Behauptung, die einer
+  Pragerin beim Lesen schmerzhafter aufstößt.
+</p>
+
+<p>
+  Die Wahrheit ist banaler. Der Trdelník stammt nicht aus Böhmen,
+  sondern aus dem siebenbürgischen Skalitz — heute slowakisch — und
+  kam erst <strong>nach 2000</strong> in Prag an. Vor der Jahrtausendwende
+  kannte ihn hier niemand. Er wurde von zwei findigen Geschäftsleuten
+  als <em>„traditional Bohemian pastry"</em> in den touristischen
+  Kanon eingeführt, gemeinsam mit der bewährten Inszenierung: offene
+  Flammen, glänzendes Kupfer, Duft. Eine Bühne für Instagram, mehr
+  nicht.
+</p>
+
+<p>
+  Das Original — der slowakische <em>Skalický trdelník</em> — ist
+  übrigens ein nüchternes, leicht süßes Hefegebäck mit Walnüssen,
+  ohne Eisfüllung, ohne Schokoladenüberzug. Was Sie auf der Celetná
+  für 180 Kronen gereicht bekommen, hätte jede tschechische Großmutter
+  als <em>„nesmysl"</em> bezeichnet — Unsinn.
+</p>
+
+<h3>Was wirklich böhmisches Gebäck ist</h3>
+
+<ul>
+  <li><strong>Koláč</strong> — runder Hefekuchen mit Mohn, Quark oder Powidl. In jeder ehrlichen Pekařství.</li>
+  <li><strong>Větrník</strong> — Brandteigring mit Karamellcreme, eine Pragerin Sünde der 1960er.</li>
+  <li><strong>Kremrole</strong> — knuspriges Hörnchen mit Eischneecreme, am besten in der <em>Cukrárna Myšák</em>.</li>
+  <li><strong>Buchteln</strong> — gefüllte Hefeküchlein, traditionell mit Powidl, in der <em>U Bansethů</em> seit 1844.</li>
+</ul>
+
+<p>
+  Sie werden auf Ihrer Runde ohnehin am Staroměstské náměstí und am Pulverturm vorbeikommen — das ist kaum zu vermeiden. Nutzen Sie die Gelegenheit: Die <a href="https://www.cukrarskala.cz/" target="_blank" rel="noopener">Cukrárna Skála</a> liegt direkt an der Route und gilt unter Pragern als eine der besten Konditoreien der Stadt. Koláče, Větrníky, Kremrole — alles hausgemacht, kein Trdelník weit und breit.
+</p>
+
+<p>
+  Wenn Sie also etwas Süßes mit nach Hause nehmen wollen, das wirklich
+  an dieser Stadt hängt — gehen Sie zwei Straßen weiter, weg vom
+  Touristenzug, in die nächste Konditorei mit handgeschriebener
+  Tafel. Dort beginnt das echte Prag.
+</p>
+
+<h2 id="grund-3">Essen Sie nicht in Lokalen mit <em>Speisekarten in sechs Sprachen</em></h2>
+
+<p>
+  Es gibt eine einfache Faustregel, die in fast jeder europäischen
+  Großstadt funktioniert, in Prag aber besonders zuverlässig: Je mehr
+  Sprachen die Speisekarte bietet, desto schlechter ist das Essen.
+  Lokale am Altstädter Ring, an der Karlsbrücke und entlang der
+  Pařížská tragen ihre Karten in sechs, manchmal acht Sprachen vor
+  die Tür. Das ist kein Service. Das ist eine Warnung.
+</p>
+
+<p>
+  Hinzu kommen drei Mechanismen, die in Prag bemerkenswert
+  konsequent angewendet werden. Wer sie kennt, kann sie umgehen —
+  wer sie nicht kennt, zahlt am Ende des Abends siebzig Euro für
+  ein mittelmäßiges Gulasch.
+</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Drei stille Posten auf der Rechnung</p>
+  <div class="cost-table-row"><span class="cost-table-label">„Couvert" — Brot, das niemand bestellt hat</span><span class="cost-table-amount">+ 60–120 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Vorportionierte Beilagen, einzeln berechnet</span><span class="cost-table-amount">+ 80–150 CZK</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">„Service charge" 12 % zusätzlich zum Trinkgeld</span><span class="cost-table-amount">+ 12 %</span></div>
+  <div class="cost-table-row total"><span class="cost-table-label">Mittlere Mehrkosten pro Person</span><span class="cost-table-amount">≈ 8 €</span></div>
+  <p class="cost-table-footnote">Bei zwei Personen entspricht das einem zusätzlichen Hauptgang.</p>
+</div>
+
+<p>
+  Das Brot, das ungefragt auf den Tisch kommt — bitte
+  zurückweisen oder gar nicht erst anrühren. Die Beilagen, die der
+  Kellner aufzählt, sind oft separat zu zahlen, ohne Hinweis auf der
+  Karte. Und jene <em>„service charge"</em> ist in der Tschechischen
+  Republik nicht üblich; sie wird ausschließlich Touristen
+  berechnet. Streichen Sie sie auf der Rechnung. Niemand wird
+  widersprechen.
+</p>
+
+<h3>Wo Sie stattdessen essen</h3>
+
+<p>
+  Echtes Prag isst nicht am Altstädter Ring. Es isst in Vinohrady,
+  in Holešovice, in Karlín. Drei Tipps, die ich seit Jahren
+  weitergebe — und die nicht in den großen Reiseführern stehen:
+</p>
+
+<ul>
+  <li><strong>Lokál Dlouhá</strong> — modernes Wirtshaus, ehrliches Pilsner Urquell vom Tank, böhmische Hausmannskost. Knapp außerhalb des Touristenrings.</li>
+  <li><strong>U Modré Kachničky</strong> — Wildgerichte und alte Prager Küche in einem stillen Innenhof an der Kleinseite.</li>
+  <li><strong>Eska</strong> — Karlín, neue tschechische Küche, beste Sauerteigbäckerei der Stadt im Vorraum.</li>
+</ul>
+
+<h2 id="grund-4">Steigen Sie nicht ins <em>erstbeste Taxi</em></h2>
+
+<p>
+  Es gibt in Prag eine ehrliche Taxibranche und eine zweite, die
+  seit den neunziger Jahren erfolgreich gegen jede Reform überlebt.
+  Letztere parkt mit Vorliebe vor dem Hotel InterContinental, vor
+  dem Pulverturm und vor dem Bahnhof Hlavní nádraží. Erkennbar an
+  Fahrzeugen ohne Firmenlogo, mit handgemalten Tarifen am Fenster
+  und einem Taxameter, der gern doppelt läuft.
+</p>
+
+<p>
+  Eine Fahrt vom Flughafen Václav Havel ins Stadtzentrum kostet
+  regulär etwa <strong>650 Kronen</strong>. Mit einem inoffiziellen
+  Wagen wurden meinen Gästen schon <strong>3.200 Kronen</strong>
+  berechnet — bezahlbar nur in bar, Quittung selbstverständlich
+  nicht möglich. Die Polizei kennt auch hier das Phänomen, doch
+  die Beweisführung ist mühsam.
+</p>
+
+<h3>Was Sie stattdessen tun</h3>
+
+<p>
+  Nutzen Sie <strong>Bolt</strong> oder <strong>Liftago</strong> —
+  beide funktionieren wie Uber, sind in Prag dominant und transparent
+  bepreist. Eine Fahrt vom Flughafen ins Hotel kostet je nach
+  Tageszeit 380 bis 520 Kronen, der Preis steht vor Fahrtbeginn
+  fest. Wenn Sie ein klassisches Taxi bevorzugen, rufen Sie
+  <em>AAA Radiotaxi</em> oder <em>Tick Tack</em> direkt an; beide
+  haben deutschsprachige Disposition und feste Tarife.
+</p>
+
+<p>
+  Vom Flughafen ins Zentrum gibt es zudem den <em>Airport Express</em>
+  (AE-Bus) zum Hauptbahnhof für 100 Kronen — bequemer, als sein Ruf
+  vermuten lässt, und in zweiunddreißig Minuten am Ziel.
+</p>
+
+<h2 id="grund-5">Kaufen Sie kein <em>„böhmisches Kristall"</em> in der Altstadt</h2>
+
+<p>
+  Die Geschichte der böhmischen Glaskunst ist eine der schönsten
+  Europas. Sie reicht ins dreizehnte Jahrhundert zurück, hat
+  Hofschulen in Steinschönau und Haida hervorgebracht, und Marken
+  wie <em>Moser</em>, <em>Lasvit</em> oder die alten <em>Bohemia
+  Crystalex</em>-Hütten von Nový Bor sind weltweit angesehen.
+  Was Sie auf der Karlsgasse als <em>„Bohemian Crystal"</em>
+  angeboten bekommen, hat damit selten etwas zu tun.
+</p>
+
+<p>
+  Eine Stichprobe meiner Tour aus dem Frühjahr 2025: Von zwölf
+  besuchten <em>„Crystal Shops"</em> in der Pařížská, Karlova und
+  am Altstädter Ring führten <strong>neun</strong> ausschließlich
+  importierte Massenware aus China und der Türkei. Drei boten
+  echtes böhmisches Kristall — gemischt mit Kopien, ohne erkennbare
+  Trennung im Regal. Preisaufschläge gegenüber dem Werkverkauf:
+  zwischen 180 und 340 Prozent.
+</p>
+
+<div class="callout-box">
+  <div class="callout-box__label">Drei Merkmale echten böhmischen Kristalls</div>
+  <p class="callout-box__text">
+    Bleigehalt mindestens 24 % (steht eingeschliffen am Boden) ·
+    Manuelle Schliffmarken statt maschineller Symmetrie · Klang
+    beim Anschlagen tief und nachhallend, nicht hell und kurz.
+  </p>
+</div>
+
+<h3>Wo Sie wirklich böhmisches Glas kaufen</h3>
+
+<ul>
+  <li><strong>Moser</strong> — Flagship-Boutique am Staroměstské náměstí, eigene Hütte in Karlsbad seit 1857.</li>
+  <li><strong>Lasvit</strong> — Showroom in der Václavské náměstí, zeitgenössisches Studio-Glas.</li>
+  <li><strong>Artěl</strong> — kleines Atelier in der Celetná, handgeätzte Karaffen und Gläser nach Art-déco-Vorlagen.</li>
+</ul>
+
+<h2 id="fazit">Eine Stadt, die <em>ehrlich</em> ist — wenn man ihr zuhört</h2>
+
+<p>
+  Wenn Sie diese fünf Punkte überfliegen, könnte der Eindruck
+  entstehen, Prag sei eine Stadt, vor der man sich in Acht nehmen
+  müsse. Das wäre falsch. Die Tricks, die ich hier beschrieben habe,
+  spielen sich auf einer sehr kleinen Bühne ab — vielleicht ein
+  Quadratkilometer zwischen Pulverturm, Karlsbrücke und Wenzelsplatz.
+  Verlassen Sie diese Bühne um zwei Straßen, und Sie sind in einer
+  der angenehmsten, ruhigsten Hauptstädte Europas.
+</p>
+
+<p>
+  Mein wichtigster Rat fasst sich in einem Satz zusammen: <em>Gehen
+  Sie immer zwei Straßen weiter.</em> Zwei Straßen weg vom Altstädter
+  Ring liegt das Café Louvre, in dem Kafka und Einstein verkehrten.
+  Zwei Straßen weg vom Wenzelsplatz beginnt Vinohrady mit seinen
+  Jugendstilfassaden. Zwei Straßen weg von der Karlsbrücke, auf
+  der Kampa-Insel, gibt es ein Wechselbüro, das den realen Kurs
+  bietet, und ein Restaurant mit drei Tischen, in dem Sie für
+  siebenhundert Kronen besser essen als für das Doppelte am
+  Altstädter Ring.
+</p>
+
+<p>
+  Prag belohnt Aufmerksamkeit. Die Stadt verlangt nicht, dass Sie
+  misstrauisch werden — nur, dass Sie wachsam bleiben. Im Übrigen
+  gilt, was meine Großmutter mir mit auf den Weg gab, als ich vor
+  zwölf Jahren mit dem Führen begann: <em>„Důvěřuj, ale prověřuj."</em>
+  Vertraue, aber prüfe. Damit kommt man in dieser Stadt erstaunlich
+  weit.
+</p>`,
   },
 };

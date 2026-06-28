@@ -1,18 +1,18 @@
 {
-  "name": "prague-tour-guide",
+  "name": "zuzapragtour-de",
+  "brandName": "Zuzana Manova Prague Tours",
   "version": "1.0.0",
   "description": "Zuza Prague Tours - Professional Prague tour guide services with Zuzana Manova",
   "private": true,
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "prebuild": "node scripts/generate-thumbnails.cjs && node scripts/generate-sitemap.js && node scripts/generate-route-meta.cjs",
+    "dev": "next dev",
+    "start": "next dev",
+    "prebuild": "node scripts/generate-thumbnails.cjs",
+    "build": "next build",
+    "postbuild": "node scripts/ping-sitemaps.js",
     "new:blog": "node scripts/new-blog-post.cjs",
     "thumbs": "node scripts/generate-thumbnails.cjs",
-    "thumbs:force": "node scripts/generate-thumbnails.cjs --force",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "postbuild": "node scripts/ping-sitemaps.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "thumbs:force": "node scripts/generate-thumbnails.cjs --force"
   },
   "keywords": [
     "Prague tours",
@@ -28,12 +28,9 @@
   "license": "MIT",
   "dependencies": {
     "framer-motion": "^11.0.0",
+    "next": "^14.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.4",
-    "react-router-dom": "^6.20.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
@@ -41,24 +38,8 @@
     "@types/react-dom": "^18.2.17",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.9",
-    "tailwindcss": "^3.4.19"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.0.0"
   },
   "homepage": "https://zuzapragtour.de",
   "repository": {
