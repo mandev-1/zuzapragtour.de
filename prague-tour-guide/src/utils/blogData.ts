@@ -17,10 +17,15 @@ export interface BlogPost {
   tags: string[];
   tagsDe?: string[];
   language: 'de' | 'en' | 'both';
+  /** True for block-based CMS articles (content/journal/*.json). Skips the
+   *  legacy "Grund" listicle decoration in BlogPostPage. */
+  isJournal?: boolean;
 }
 
-// This will be replaced by API/CMS data in the future
-export const blogPosts: BlogPost[] = [
+import { journalPosts } from './journalGenerated';
+
+// Legacy hand-authored posts (bilingual HTML in blogTranslations.ts).
+const rawBlogPosts: BlogPost[] = [
   {
     id: '36',
     slug: 'was-man-in-prag-nicht-tun-sollte',
@@ -861,6 +866,22 @@ export const blogPosts: BlogPost[] = [
     language: 'both',
   },
 ];
+
+// Journal CMS articles (block-based, generated from content/journal/*.json) are
+// merged with the legacy posts and sorted newest-first by ISO date. A PUBLISHED
+// journal article supersedes a legacy post sharing its slug (journalPosts holds
+// only published articles — drafts are excluded by the generator), so migrating
+// a post and publishing it cleanly replaces the legacy twin with no duplicate
+// route. Drafts don't supersede anything: the legacy version keeps rendering.
+const journalSlugs = new Set<string>();
+for (const p of journalPosts) {
+  journalSlugs.add(p.slug);
+  if (p.slugDe) journalSlugs.add(p.slugDe);
+}
+export const blogPosts: BlogPost[] = [
+  ...journalPosts,
+  ...rawBlogPosts.filter((p) => !journalSlugs.has(p.slug) && !(p.slugDe && journalSlugs.has(p.slugDe))),
+].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
 // API endpoint structure (for future implementation)
 export const BlogAPI = {

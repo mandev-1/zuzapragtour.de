@@ -33,6 +33,11 @@ module.exports = {
           DEFAULT: '#A88654',
           deep: '#8C6A3C',
         },
+        // Editorial golds — hero/eyebrow gold on light, lamp gold on dark
+        gold: {
+          olive: '#7B5800',
+          lamp: '#FDC34D',
+        },
         sage: {
           DEFAULT: '#8A9282',
         },
@@ -128,13 +133,22 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(1rem)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        kenburns: {
+          '0%': { transform: 'scale(1.06)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'fade-in-up': 'fadeInUp 0.7s ease-out',
+        kenburns: 'kenburns 18s ease-out forwards',
       },
       borderRadius: {
         DEFAULT: '0.375rem',
+      },
+      transitionTimingFunction: {
+        // Signature gentle ease used across the premium editorial surfaces.
+        brand: 'cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

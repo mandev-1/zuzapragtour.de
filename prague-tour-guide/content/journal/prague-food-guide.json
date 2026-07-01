@@ -1,0 +1,261 @@
+{
+  "slug": "prague-food-guide",
+  "slugDe": "prag-kulinarik-guide",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-02-15",
+  "dateDisplay": {
+    "de": "15. Februar 2026",
+    "en": "February 15, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-food-prague.jpg",
+  "title": {
+    "de": "Prag Kulinarik: Was essen & lokale Lieblinge",
+    "en": "Prague Food Guide: What to Eat & Local Picks"
+  },
+  "excerpt": {
+    "de": "Von Svíčková und Tankbier bis zum Náplavka-Samstagmarkt und Vinohrady-Weinbars — ein Einheimischenführer zum guten Essen und Trinken in Prag.",
+    "en": "From svíčková and tank beer to the Náplavka Saturday market and Vinohrady wine bars — a local's guide to eating and drinking well in Prague."
+  },
+  "tags": {
+    "de": [
+      "Prag Essen",
+      "Tschechische Küche",
+      "Svíčková",
+      "Tschechisches Bier",
+      "Wo essen Prag",
+      "Prag Restaurants",
+      "Prag Kulinarik",
+      "Tschechische Traditionsküche",
+      "Náplavka Markt"
+    ],
+    "en": [
+      "Prague food",
+      "Czech cuisine",
+      "Svíčková",
+      "Czech beer",
+      "Where to eat Prague",
+      "Prague restaurants",
+      "Prague food guide",
+      "Czech traditional food",
+      "Náplavka market"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag Kulinarikführer: Was essen, wo hingehen & lokale Lieblinge",
+        "en": "Prague Food Guide: What to Eat, Where to Go & Local Favourites"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Die tschechische Küche ist ehrlich, herzhaft und tief in der mitteleuropäischen Tradition verwurzelt. Aber das moderne Prag hat Craft-Beer-Bars, Naturweinkeller, vietnamesische Märkte und einfallsreiche Spitzenküche auf diese Tradition aufgeschichtet. So essen Sie gut — von Straßenessen bis zu weißen Tischdecken.",
+        "en": "Czech cuisine is honest, hearty, and deeply rooted in Central European tradition. But modern Prague has layered craft beer bars, natural wine shops, Vietnamese markets, and inventive fine dining on top of that tradition. Here's how to eat well — from street food to white tablecloths."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die tschechischen Klassiker: Was Sie zuerst probieren sollten",
+        "en": "The Czech Classics: What to Try First"
+      }
+    },
+    {
+      "t": "h2",
+      "html": "Svíčková na smetaně"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das nationale Wohlfühlgericht: langsam geschmortes Rinderfilet in einer Wurzelgemüse-Sahnesoße, serviert mit Knödeln, Schlagsahne und Preiselbeerkonfitüre. Jede tschechische Familie hat ihr eigenes Rezept. In Prag finden Sie es am besten in traditionellen Hospody (Kneipen) statt in Touristenrestaurants.",
+        "en": "The national comfort dish: slow-braised beef sirloin in a root-vegetable cream sauce, served with bread dumplings (knedlíky), whipped cream, and cranberry jam. Every Czech family has a version. In Prague, seek it in traditional hospody (pubs) rather than tourist restaurants."
+      }
+    },
+    {
+      "t": "h2",
+      "html": "Vepřo knedlo zelo"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Schweinebraten, Knödel, Sauerkraut. Einfach, sättigend, zutiefst befriedigend. Die Qualität des Knödels — weich innen, leicht zähe Kruste — verrät alles über die Küche.",
+        "en": "Roast pork, bread dumplings, sauerkraut. Simple, filling, deeply satisfying. The quality of the dumpling — soft inside, slightly chewy crust — tells you everything about the kitchen."
+      }
+    },
+    {
+      "t": "h2",
+      "html": "Smažený sýr"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Panierter und gebratener Edamer Käse, serviert mit Tatarsoße. Ein beliebtes tschechisches Fast Food an Straßenkiosken und in Kneipen. Mindestens einmal probieren.",
+        "en": "Breaded and fried Edam cheese, served with tartare sauce. A beloved Czech fast food found at street kiosks and pubs alike. Try it at least once."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Knedlíky (Knödel)",
+        "en": "Knedlíky (Dumplings)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Brot- oder Kartoffelknödel begleiten fast jedes Hauptgericht. Sie sind das Fundament, das die Soße aufsaugt. Brotknödel (houskové) sind die häufigsten; Kartoffelknödel (bramborové) sind dichter und erdiger.",
+        "en": "Bread or potato dumplings appear alongside almost every main dish. They're the foundation that soaks up the sauce. Bread dumplings (houskové) are the most common; potato (bramborové) are denser and earthier."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Tschechisches Bier: Eine Kultur, nicht nur ein Getränk",
+        "en": "Czech Beer: A Culture, Not Just a Drink"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Tschechische Republik hat den höchsten Pro-Kopf-Bierkonsum weltweit und braut seit dem 12. Jahrhundert. Das Wichtigste:",
+        "en": "The Czech Republic has the highest per-capita beer consumption globally and has been brewing since the 12th century. Key things to know:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Pilsner Urquell</strong> (aus Plzeň) — das originale Pilsner, am besten unfiltriert (nefiltrovaný) wo verfügbar.",
+          "en": "<strong>Pilsner Urquell</strong> (from Plzeň) — the original pilsner, best served unfiltered (nefiltrovaný) where available."
+        },
+        {
+          "de": "<strong>Kozel, Gambrinus, Budvar</strong> — hochwertige Alltagslager in der ganzen Stadt.",
+          "en": "<strong>Kozel, Gambrinus, Budvar</strong> — quality everyday lagers found across the city."
+        },
+        {
+          "de": "<strong>Craft-Beer-Szene</strong> — Prags Mikrobrauerei-Explosion bedeutet rotierende Zapfhähne in Dutzenden von Bars. Probieren Sie Matuška, Pivovar Maják oder Vinohradský pivovar.",
+          "en": "<strong>Craft beer scene</strong> — Prague's microbrewery explosion means rotating taps in dozens of bars. Try Matuška, Pivovar Maják, or Vinohradský pivovar."
+        },
+        {
+          "de": "<strong>Tankové pivo</strong> — Tankbier direkt aus unpasteurisierten Tanks. Frischer und cremiger als Flasche oder Fass.",
+          "en": "<strong>Tankové pivo</strong> — tank beer served directly from unpasteurised tanks. Fresher and creamier than bottle or keg."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wo man in Prag gut isst",
+        "en": "Where to Eat Well in Prague"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Lokál (mehrere Standorte)",
+        "en": "Lokál (multiple locations)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Goldstandard für traditionelle tschechische Küche und Tank-Pilsner-Urquell. Immer voll, immer konstant. Für das Abendessen vorbestellen.",
+        "en": "The gold standard for traditional Czech food and tank Pilsner Urquell. Always busy, always consistent. Book ahead for dinner."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Naše Maso (Dlouhá-Straße)",
+        "en": "Naše Maso (Dlouhá street)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein Metzger-Deli-Hybrid, geliebt von Einheimischen. Hervorragendes Tatar und Aufschnitt zum Stehessen an der Theke. Nur zu Mittagszeiten geöffnet.",
+        "en": "A butcher-deli hybrid beloved by locals. Outstanding tartar steak and cold cuts to eat standing at a counter. Lunch hours only."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stadtviertel Vinohrady & Žižkov",
+        "en": "Vinohrady & Žižkov neighbourhood"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das beste Viertel für unabhängige Restaurants, Naturweinbars und Nachbarschaftsgastronomie ohne Touristenpreise. Probieren Sie Restaurants an der Mánesova, Blanická und rund um den Náměstí Míru.",
+        "en": "The best area for independent restaurants, natural wine bars, and neighbourhood dining without tourist pricing. Try restaurants on Mánesova, Blanická, and around Náměstí Míru."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Straßenessen & Märkte",
+        "en": "Street Food & Markets"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Náplavka Bauernmarkt</strong> (samstags) — handwerkliches Brot, Käse, Charcuterie und Straßenessen von kleinen tschechischen Erzeugern.",
+          "en": "<strong>Náplavka Farmers' Market</strong> (Saturdays) — artisan bread, cheese, charcuterie, and street food from small Czech producers."
+        },
+        {
+          "de": "<strong>Pražská tržnice (Prager Markt, Holešovice)</strong> — ein weitläufiger Indoor-Outdoor-Markt mit vietnamesischen Essensständen, Metzgern und Produkten. Authentisch, günstig und weit von Touristenzonen entfernt.",
+          "en": "<strong>Pražská tržnice (Prague Market, Holešovice)</strong> — a sprawling indoor-outdoor market with Vietnamese food stalls, butchers, and produce. Authentic, cheap, and far from tourist zones."
+        },
+        {
+          "de": "<strong>Trdelník</strong> — das Schornsteingeback ist überall im Touristenzentrum. Es ist keine traditionelle tschechische Spezialität, aber an einem kalten Tag warm und befriedigend.",
+          "en": "<strong>Trdelník</strong> — the chimney pastry is everywhere in the tourist centre. It's not traditional Czech, but it's warm and satisfying on a cold day."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Tipps zum Essen",
+        "en": "Practical Food Tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Mittagessen (11:00–14:00 Uhr) ist die Zeit, wenn tschechische Küchen glänzen — viele Restaurants bieten Mittagsmenüs (denní menu) zu hervorragenden Preisen an.",
+          "en": "Lunch (11:00–14:00) is when Czech kitchens shine — many restaurants offer lunch menus (denní menu) at excellent prices."
+        },
+        {
+          "de": "Restaurants in Touristengebieten rund um den Altstädter Ring und die Karlsbrücke sind nicht unbedingt schlecht, aber immer teurer. Zwei Straßen weiter gehen für besseres Preis-Leistungs-Verhältnis.",
+          "en": "Tourist-area restaurants cluster around Old Town Square and Charles Bridge. Walk two streets away for better value."
+        },
+        {
+          "de": "Tschechische Restaurants stellen oft automatisch Brot auf den Tisch und berechnen es — man kann ablehnen.",
+          "en": "Czech restaurants commonly add bread to the table automatically and charge for it — you can decline."
+        },
+        {
+          "de": "Trinkgeld: 10 % werden bei Tischservice geschätzt und erwartet.",
+          "en": "Tipping: 10% is appreciated and expected for table service."
+        }
+      ]
+    }
+  ]
+}

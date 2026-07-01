@@ -1,0 +1,59 @@
+/* ============================================================
+   Zuza Prague Tours — Typography tokens
+   Four-voice serif-led system. Display = Italiana (airy, high-
+   contrast caps), Body = Libre Caslon Text, Italic accent =
+   Cormorant Garamond, UI/eyebrow = Inter Tight.
+   Legacy marketing aliases: Noto Serif + Plus Jakarta Sans.
+   ============================================================ */
+
+:root {
+  /* ── Families ──────────────────────────────────── */
+  --font-display: 'Italiana', 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body:    'Libre Caslon Text', 'EB Garamond', Georgia, serif;
+  --font-italic:  'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --font-sans:    'Inter Tight', 'Helvetica Neue', system-ui, sans-serif;
+  /* Legacy marketing voices (homepage register) */
+  --font-headline: 'Noto Serif', Georgia, Cambria, serif;
+  --font-label:    'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* ── Fluid display sizes ───────────────────────── */
+  --text-display-xl: clamp(2.75rem, 5vw + 1rem, 4.5rem); /* @kind spacing */
+  --text-display-lg: clamp(2.25rem, 4vw + 0.75rem, 3.5rem); /* @kind spacing */
+  --text-display-md: clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem); /* @kind spacing */
+
+  /* ── Static type ramp ──────────────────────────── */
+  --text-h2: 2rem;          /* 32px section heading (Italiana) */
+  --text-h3: 1.5rem;        /* 24px italic sub-head (Cormorant) */
+  --text-xl: 1.25rem;
+  --text-lg: 1.1875rem;     /* prose-lg / lead */
+  --text-prose: 1.1875rem;  /* 19px article body */
+  --text-base: 1.0625rem;   /* 17px UI prose */
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+  --text-eyebrow: 0.6875rem; /* 11px tracked label */
+
+  /* ── Line heights ──────────────────────────────── */
+  --leading-display: 1.05;
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-body: 1.72;     /* editorial reading measure */
+  --leading-relaxed: 1.6;
+
+  /* ── Letter spacing ────────────────────────────── */
+  --tracking-display: -0.025em;
+  --tracking-tight: -0.005em;
+  --tracking-normal: 0;
+  --tracking-eyebrow: 0.18em;  /* uppercase labels */
+  --tracking-wide: 0.24em;     /* tightest small-caps labels */
+
+  /* ── Weights ───────────────────────────────────── */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ── Measure ───────────────────────────────────── */
+  --measure-narrow: 36rem;
+  --measure: 44rem;     /* prose column */
+  --measure-ch: 66ch;
+}

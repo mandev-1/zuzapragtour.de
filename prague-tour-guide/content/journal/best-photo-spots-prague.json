@@ -1,0 +1,357 @@
+{
+  "slug": "best-photo-spots-prague",
+  "slugDe": "beste-fotospots-prag",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-04-26",
+  "dateDisplay": {
+    "de": "26. April 2026",
+    "en": "April 26, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/guest-photo-food.jpeg",
+  "title": {
+    "de": "Die 12 schönsten Fotospots in Prag",
+    "en": "Top 12 Photo Spots in Prague to Visit"
+  },
+  "excerpt": {
+    "de": "Von der Karlsbrücke im Morgengrauen bis zu einem versteckten Aussichtspunkt im Letná-Park, den die meisten Touristen einfach überlaufen — hier sind die 12 Prager Orte, an denen sich das Fotografieren wirklich lohnt.",
+    "en": "From Charles Bridge at dawn to a hidden Letná viewpoint most tourists walk straight past — here are the 12 Prague spots worth pointing your camera at, with timing tips for each."
+  },
+  "tags": {
+    "de": [
+      "beste Fotospots Prag",
+      "Prag Fotografie",
+      "Prag Instagram",
+      "Prag Fotolocations",
+      "Prag Aussichtspunkte",
+      "Prag Sonnenaufgang Foto",
+      "Karlsbrücke Foto",
+      "Prager Burg Aussicht",
+      "Prag geheime Fotospots",
+      "Altstädter Ring Prag Foto",
+      "Letná Park Prag",
+      "Vyšehrad Prag"
+    ],
+    "en": [
+      "best photo spots Prague",
+      "Prague photography",
+      "Prague Instagram spots",
+      "where to take pictures Prague",
+      "Prague views",
+      "Prague sunrise photography",
+      "Charles Bridge photo",
+      "Prague Castle view",
+      "Prague hidden photo spots",
+      "Old Town Square Prague photo",
+      "Letna Park Prague view",
+      "Vysehrad Prague"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Prag ist eine der meistfotografierten Städte Europas. Das Problem: Neunzig Prozent aller Prag-Fotos zeigen dieselben fünf Motive, gemacht zur gleichen Tageszeit, von der gleichen Stelle aus. Ich zeige Ihnen, wo die wirklich guten Bilder entstehen — und wann.",
+        "en": "Prague is one of the most photographed cities in Europe. The problem: ninety percent of Prague photos show the same five subjects, taken at the same time of day, from the same spot. Here are the 12 places where the really good pictures happen — and when to be there."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "1. Karlsbrücke — aber um 6:00 Uhr morgens",
+        "en": "1. Charles Bridge — but at 6am"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Karlsbrücke ist tagsüber überfüllt. Morgens um 6:00 Uhr gehört sie Ihnen. Nebel liegt manchmal noch über der Vltava, die Straßenlaternen brennen noch, und die 30 Barockheiligen stehen still. Das ist das Bild.",
+        "en": "Charles Bridge is overcrowded during the day. At 6am, it's yours. Mist sometimes still sits over the Vltava, the street lamps are still on, and the 30 baroque saints stand quiet. That's the shot."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Bester Standort: Mitte der Brücke, Blick Richtung Burgberg. Die Burg im Hintergrund, eine Heiligenfigur im Vordergrund. Kein Stativ nötig — legen Sie die Kamera auf die Balustrade.",
+        "en": "Best position: center of the bridge, facing the castle hill. Castle in the background, a saint statue up front. No tripod needed — rest the camera on the balustrade."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Nebel vorhergesagt ist: sofort aufstehen. Nebliger Frühmorgen auf der Karlsbrücke ist eines der beeindruckendsten Motive der Stadt.",
+        "en": "If fog is forecast: get up immediately. Misty early morning on Charles Bridge is one of the most striking subjects in the city."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "2. Altstädter Brückenturm — von oben",
+        "en": "2. Old Town Bridge Tower — from the top"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "130 CZK Eintritt. Der Turm öffnet um 10:00 Uhr. Von oben sehen Sie die Brücke von hinten — alle 30 Statuen in einer Reihe, die Burg am Ende. Das ist das Foto, das man von der Brücke selbst nicht machen kann.",
+        "en": "130 CZK entry. The tower opens at 10am. From the top you see the bridge from behind — all 30 statues in a row, the castle at the end. That's the photo you can't take from the bridge itself."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Tipp: Kommen Sie kurz nach dem Öffnen. Die erste Stunde ist ruhig.",
+        "en": "Tip: arrive just after opening. The first hour is quiet."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "3. Letná-Park — die Biergartenaussicht",
+        "en": "3. Letná Park — the beer garden view"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Biergarten im Letná-Park hat eine Terrasse mit dem besten Panorama über die Altstadt, das ich kenne. Kostenloser Eintritt, Sie brauchen kein Getränk zu kaufen. Die goldene Stunde trifft diesen Ort im Sommer gegen 19:00 Uhr.",
+        "en": "The Letná Park beer garden has a terrace with the best panorama over the Old Town I know. Free to enter, no need to buy a drink. Golden hour hits this spot around 7pm in summer."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vom Metronom aus — dem riesigen Metronom auf dem Sockel, wo früher Stalins Statue stand — haben Sie zusätzlich einen freien Blick auf den Sonnenuntergang über der Stadt. Die meisten Touristen laufen einfach daran vorbei.",
+        "en": "From the Metronome — the giant metronome on the plinth where Stalin's statue once stood — you get an unobstructed view of the sunset over the city. Most tourists walk straight past it."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "4. Vyšehrad-Klippen",
+        "en": "4. Vyšehrad cliffs"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vyšehrad liegt südlich der Innenstadt, 20 Minuten mit der Metro. Vom Südende der Festungsmauern aus blicken Sie steil auf die Vltava hinunter — Fluss, Brücken, Stadtsilhouette. Kein Eintritt. Fast keine Touristen.",
+        "en": "Vyšehrad is south of the center, 20 minutes by metro. From the southern end of the fortress walls you look steeply down onto the Vltava — river, bridges, city skyline. No entry fee. Almost no tourists."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Kirche St. Peter und Paul dahinter ist ein gutes zweites Motiv: neugotisch, mit zwei Türmen, die aus der Ferne besser lesbar sind als von nah.",
+        "en": "The Church of St. Peter and Paul behind you is a good second subject: neo-Gothic, with two towers that read better from a distance than up close."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "5. Nerudova — die Häuserschilder",
+        "en": "5. Nerudova — the house signs"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Nerudova-Straße führt von Malostranské náměstí hinauf zur Burg. Jedes Haus hat ein historisches Symbol über dem Eingang: ein roter Adler, drei Geigen, zwei Sonnen. Das sind die alten Hausnummern — vor dem Straßennummernsystem.",
+        "en": "Nerudova Street runs from Malostranské náměstí up to the castle. Every house has a historical symbol above the entrance: a red eagle, three violins, two suns. These are the old house numbers — from before the street numbering system."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Bestes Licht: Vormittag, wenn die Sonne von Osten in die Straße fällt. Die Schilder sind dann gut beleuchtet, ohne hartes Gegenlicht.",
+        "en": "Best light: morning, when the sun comes from the east into the street. The signs are well lit without harsh backlight."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "6. Malá Strana von der Kampa-Insel",
+        "en": "6. Malá Strana from Kampa Island"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Kampa-Insel liegt direkt unter der Karlsbrücke, durch einen schmalen Kanal von Malá Strana getrennt. Vom nördlichen Ufer aus fotografieren Sie die Brückenbögen von unten — mit den Heiligenfiguren oben und dem Wasser darunter. Ungewöhnlicher Winkel, kaum jemand macht ihn.",
+        "en": "Kampa Island sits directly under Charles Bridge, separated from Malá Strana by a narrow channel. From the northern bank you photograph the bridge arches from below — saints visible above, water below. An unusual angle almost nobody uses."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Čertovka-Mühlenrad daneben ist ein weiteres gutes Motiv — besonders bei Abendlicht.",
+        "en": "The Čertovka mill wheel nearby is another good subject — especially in evening light."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "7. Prager Burg von der Malostranská-Seite",
+        "en": "7. Prague Castle from the Malostranská side"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die meisten Fotos der Prager Burg entstehen von der Altstadt aus — zu weit weg, zu komprimiert. Das bessere Bild entsteht von der Malostranská Metro-Station aus: Sie sehen die Burg direkt über den Dächern von Malá Strana. Gehen Sie von der Station aus ein paar Schritte Richtung Fluss und schauen Sie zurück.",
+        "en": "Most photos of Prague Castle are taken from the Old Town — too far away, too compressed. The better picture is from the Malostranská metro station: you see the castle directly above the rooftops of Malá Strana. Walk a few steps from the station toward the river and look back."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "8. Josefov — die Jugendstil-Fassaden",
+        "en": "8. Josefov — the Art Nouveau facades"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das jüdische Viertel Josefov wurde Ende des 19. Jahrhunderts fast vollständig abgerissen und mit Jugendstilhäusern neu bebaut. Die Pařížská-Straße ist die bekannteste — aber die Seitenstraßen Maiselova und Široka haben die schöneren Fassadendetails ohne die Luxusboutiquen davor.",
+        "en": "The Jewish Quarter Josefov was almost entirely demolished in the late 19th century and rebuilt with Art Nouveau apartment buildings. Pařížská Street is the best known — but the side streets Maiselova and Široka have better facade details without the luxury boutiques in front of them."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Bestes Licht: bewölkter Tag. Jugendstildetails brauchen diffuses Licht, kein hartes Sonnenlicht.",
+        "en": "Best light: overcast day. Art Nouveau details need diffuse light, not harsh sun."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "9. Strahov-Bibliothek (Innenraum)",
+        "en": "9. Strahov Library (interior)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Strahov-Kloster hat zwei barocke Bibliothekssäle, die zu den schönsten Innenräumen Mitteleuropas gehören. Fotografieren ist erlaubt (ohne Stativ). 150 CZK Eintritt.",
+        "en": "The Strahov Monastery has two Baroque library halls that rank among the most beautiful interiors in Central Europe. Photography is permitted (no tripod). 150 CZK entry."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Sie schauen durch Eisengitter in die Säle hinein — das verhindert, dass Besucher hineingehen und Bücher berühren. Das Gitter gehört zum Bild: es gibt die Rahmung.",
+        "en": "You look in through iron grilles — this prevents visitors from entering and touching the books. The grille is part of the picture: it gives you the framing."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Tipp: Kommen Sie unter der Woche vor 10:00 Uhr. Reisegruppen kommen meist gegen 11:00 Uhr.",
+        "en": "Tip: come on a weekday before 10am. Tour groups tend to arrive around 11."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "10. Wenzelsplatz von oben — Nationalmuseum-Treppe",
+        "en": "10. Wenceslas Square from above — National Museum steps"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Wenzelsplatz ist schwer zu fotografieren, weil er so lang und schmal ist. Die einzige Position, von der er vollständig zu sehen ist: die Treppe des Nationalmuseums am oberen Ende. Von dort sehen Sie die gesamte Länge des Platzes mit der Wenzelstatue im Vordergrund.",
+        "en": "Wenceslas Square is hard to photograph because it's so long and narrow. The only position from which it's fully visible: the steps of the National Museum at the upper end. From there you see the full length of the square with the Wenceslas statue in the foreground."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Abends, wenn die Straßenlaternen brennen und der Verkehr Lichtstreifen zieht: das ist der Moment für dieses Bild.",
+        "en": "In the evening, when the street lamps are on and traffic draws light streaks: that's the moment for this shot."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "11. Zlatá ulička — Details statt Weitwinkel",
+        "en": "11. Golden Lane — details over wide angles"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im Inneren der Burg lohnt sich das Zlatá ulička weniger für Weitwinkelfotos als für Details: Türrahmen in kräftigen Farben, niedrige Fenster, Handwerksschilder. Jedes Haus ist anders gestrichen. Das sind die Bilder, die aus Prag-Alben herausstechen, weil sie nicht wie Postkarten aussehen.",
+        "en": "Inside the castle, Zlatá ulička rewards detail shots more than wide angles: door frames in bold colors, low windows, craft signs. Each house is painted differently. These are the pictures that stand out from Prague albums precisely because they don't look like postcards."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "12. Čechův most bei Nacht",
+        "en": "12. Čechův most at night"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Čechův most ist die Jugendstilbrücke nördlich der Altstadt — vergoldet, mit Jugendstillampen. Tagsüber eher unscheinbar. Nachts, beleuchtet und im Wasser gespiegelt, ist sie eine der schönsten Brücken der Stadt.",
+        "en": "Čechův most is the Art Nouveau bridge north of the Old Town — gilded, with Art Nouveau lamps. Unremarkable in daylight. At night, lit up and reflected in the water, it's one of the most beautiful bridges in the city."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Standort: Náplavka-Ufer auf der Altstadtseite, Blick Richtung Holešovice. Stativ empfohlen — oder Handgelenk auf dem Geländer abstützen.",
+        "en": "Position: Náplavka embankment on the Old Town side, looking toward Holešovice. Tripod recommended — or brace your wrist on the railing."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Allgemeine Tipps",
+        "en": "General tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Goldene Stunde:</strong> Ca. 30 Minuten nach Sonnenaufgang und vor Sonnenuntergang. Im April ist Sonnenaufgang gegen 6:10 Uhr, Sonnenuntergang gegen 20:15 Uhr.",
+          "en": "<strong>Golden hour:</strong> About 30 minutes after sunrise and before sunset. In April, sunrise is around 6:10am, sunset around 8:15pm."
+        },
+        {
+          "de": "<strong>Bewölkte Tage:</strong> Für Gebäudedetails, Jugendstil und Innenräume besser als pralle Sonne.",
+          "en": "<strong>Overcast days:</strong> Better than full sun for building details, Art Nouveau, and interiors."
+        },
+        {
+          "de": "<strong>Regen:</strong> Nasse Kopfsteinpflastergassen spiegeln Licht. Ungeplant gut.",
+          "en": "<strong>Rain:</strong> Wet cobblestones reflect light. Unexpectedly good."
+        },
+        {
+          "de": "<strong>Frühmorgens:</strong> Vor 8:00 Uhr sind Karlsbrücke, Altstädter Ring und Burggelände nahezu leer.",
+          "en": "<strong>Early morning:</strong> Before 8am, Charles Bridge, Old Town Square, and the castle grounds are nearly empty."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie eine geführte Fototour machen möchten — zu den weniger bekannten Winkeln, mit den richtigen Zeitfenstern — führe ich auch das durch. Schreiben Sie mir.",
+        "en": "If you'd like a guided photography walk — to the less obvious angles, with the right timing — I do those too. Get in touch."
+      }
+    }
+  ]
+}

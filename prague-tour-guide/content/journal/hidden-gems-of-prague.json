@@ -1,0 +1,148 @@
+{
+  "slug": "hidden-gems-of-prague",
+  "slugDe": "prag-geheimtipps-versteckte-orte",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2024-01-08",
+  "dateDisplay": {
+    "de": "8. Januar 2024",
+    "en": "January 8, 2024"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-hidden-gems-min.jpg",
+  "title": {
+    "de": "Prag Geheimtipps: Realistisch & schön",
+    "en": "Hidden Gems of Prague: Realistic & Walkable"
+  },
+  "excerpt": {
+    "de": "Eine gehbare Auswahl aus Höfen, Gärten und Cafés, die sich wirklich lokal anfühlen—ohne durch die Stadt zu hetzen.",
+    "en": "A walkable selection of courtyards, gardens, and cafés that feel truly local—without racing across the city."
+  },
+  "tags": {
+    "de": [
+      "Geheimtipps",
+      "Lokale Tipps",
+      "Abseits der Touristenpfade"
+    ],
+    "en": [
+      "Hidden Gems",
+      "Local Tips",
+      "Off the Beaten Path"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Verstecktes Prag — realistisch und begehbar",
+        "en": "Hidden Prague — Realistic and Walkable"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die meisten meiner Lieblingsecken liegen in der Altstadt und Kleinseite, zu Fuß miteinander verbunden. Das ist eine 2- bis 3-stündige Runde, die ich wirklich mit Ihnen gehen würde — keine Liste von Orten, für die man ein Auto bräuchte.",
+        "en": "Most of my favourite spots are in Old Town and Lesser Town, within walking distance of each other. This is a 2 to 3 hour loop I'd actually do with you — not a list of places you'd need a car to connect."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Höfe und Passagen (Altstadt)",
+        "en": "Courtyards and Passages (Old Town)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Ungelt (Týn-Hof)</strong>: ein mittelalterlicher Handelshof hinter der Teynkirche. Die meisten Touristen gehen am Eingang vorbei ohne ihn zu bemerken.",
+          "en": "<strong>Ungelt (Týn Courtyard)</strong>: a medieval trade court behind Týn Church. Most tourists walk past the entrance without noticing it."
+        },
+        {
+          "de": "<strong>Palais Clam-Gallas</strong>: barocker Innenhof, saisonaler Zugang — vorher prüfen lohnt sich.",
+          "en": "<strong>Clam-Gallas Palace</strong>: baroque courtyard, seasonal access — worth checking ahead."
+        },
+        {
+          "de": "<strong>Franziskanergarten</strong>: ein wirklich ruhiger grüner Platz, fünf Minuten vom Wenzelsplatz. Gut für eine Pause in der Tagesmitte.",
+          "en": "<strong>Franciscan Garden</strong>: a genuinely calm green space five minutes from Wenceslas Square. Good for a sit-down in the middle of the day."
+        },
+        {
+          "de": "<strong>Passage zum Platýz</strong>: alte Details und stille Arkaden. Leicht zu übersehen.",
+          "en": "<strong>Passage to Platýz</strong>: old décor and quiet arcades. Easy to miss."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Kleinseite (Malá Strana)",
+        "en": "Lesser Town (Malá Strana)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Vrtba-Garten</strong> (saisonal): terrassierter Barockgarten mit Stadtblicken. Eines der am besten gehüteten Geheimnisse im Prager Zentrum.",
+          "en": "<strong>Vrtba Garden</strong> (seasonal): terraced baroque garden with city views. One of the best kept secrets in central Prague."
+        },
+        {
+          "de": "<strong>Wallenstein-Garten</strong>: Pfauen, Tropfsteinwand und Senatsarkaden. Überraschend wenige wissen, dass der Eintritt kostenlos ist.",
+          "en": "<strong>Wallenstein Garden</strong>: peacocks, a dripstone wall, and Senate arcades. Surprisingly few people know this is free."
+        },
+        {
+          "de": "<strong>Kampa-Hintergassen</strong>: Mühlräder und stille Ecken entlang des Čertovka-Kanals.",
+          "en": "<strong>Kampa backstreets</strong>: mill wheels and quiet corners along the Čertovka channel."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Cafés, in denen es sich lohnt zu sitzen",
+        "en": "Cafés Worth Sitting In"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Café Louvre</strong> (1902): Billardzimmer, ordentliche Patisserie, eine literarische Atmosphäre die nicht gespielt wirkt.",
+          "en": "<strong>Café Louvre</strong> (1902): billiard room, decent pastries, the kind of literary atmosphere that isn't faked."
+        },
+        {
+          "de": "<strong>Café Slavia</strong>: Blick auf das Nationaltheater, Art-Déco-Interieur. Havel kam früher hierher.",
+          "en": "<strong>Café Slavia</strong>: views across to the National Theatre, art-deco interior. Havel used to come here."
+        },
+        {
+          "de": "<strong>Café Nová scéna</strong>: Glasfassade, modernistisches Flair, meist weniger voll als die älteren Cafés.",
+          "en": "<strong>Nová scéna café</strong>: glass façade, modernist feel, usually less crowded than the older cafés."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "So würde ich die Runde angehen",
+        "en": "How I'd Do the Loop"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Altstädter Ring → Ungelt → Clam-Gallas → Karlsbrücke (Seitenblicke) → Vrtba oder Wallenstein → Kampa → Abschluss am Nationaltheater mit Kaffee. <em>Soll ich Sie führen?</em> <a href=\"/book?tour=Verstecktes%20Prag#contact-title\">Private Tour buchen</a>.",
+        "en": "Old Town Square → Ungelt → Clam-Gallas → Charles Bridge side views → Vrtba or Wallenstein → Kampa → finish at the National Theatre with a coffee. <em>Want me to take you?</em> <a href=\"/book?tour=Hidden%20Prague#contact-title\">Book a private Hidden Prague tour</a>."
+      }
+    }
+  ]
+}

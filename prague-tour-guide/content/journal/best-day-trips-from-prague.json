@@ -1,0 +1,205 @@
+{
+  "slug": "best-day-trips-from-prague",
+  "slugDe": "beste-tagesausfluege-von-prag",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-01-15",
+  "dateDisplay": {
+    "de": "15. Januar 2026",
+    "en": "January 15, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-day-trips.jpg",
+  "title": {
+    "de": "Tagesausflüge von Prag: Kutná Hora & mehr",
+    "en": "Best Day Trips from Prague: Kutná Hora"
+  },
+  "excerpt": {
+    "de": "Eine Knochenkirche, eine Märchenschlossstadt, eine habsburgische Jagdresidenz und ein erschütterndes Holocaust-Mahnmal — sechs unvergessliche Tagesausflüge von Prag mit Zug oder Bus.",
+    "en": "A bone church, a fairy-tale castle town, a Habsburg hunting lodge, and a sobering Holocaust memorial — six unmissable day trips reachable from Prague by train or bus."
+  },
+  "tags": {
+    "de": [
+      "Tagesausflüge von Prag",
+      "Kutná Hora",
+      "Český Krumlov",
+      "Karlštejn",
+      "Theresienstadt",
+      "Karlsbad",
+      "Konopiště",
+      "Tschechische Schlösser",
+      "UNESCO Tschechien",
+      "Prag Ausflüge"
+    ],
+    "en": [
+      "Day trips from Prague",
+      "Kutná Hora",
+      "Český Krumlov",
+      "Karlštejn",
+      "Terezín",
+      "Karlovy Vary",
+      "Konopiště",
+      "Czech castles",
+      "UNESCO Czech Republic",
+      "Prague excursions"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die besten Tagesausflüge von Prag: Kutná Hora, Český Krumlov & mehr",
+        "en": "Best Day Trips from Prague: Kutná Hora, Český Krumlov & More"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Prag ist eine außergewöhnliche Basis für mitteleuropäische Tagesausflüge. Innerhalb von 1–3 Stunden mit Zug oder Bus erreichen Sie eine UNESCO-mittelalterliche Silberbergbaustadt, eine Märchenschlossstadt an einer Flussbiegung, ein kaiserliches Kurbad und ein erschütterndes Holocaust-Mahnmal. Hier sind die sechs besten Tagesausflüge von Prag.",
+        "en": "Prague is an exceptional base for Central European day trips. Within 1–3 hours by train or bus, you can reach a UNESCO medieval silver-mining town, a fairy-tale castle town on a river bend, an 18th-century imperial spa, and a haunting memorial to the victims of the Holocaust. Here are the six best day trips from Prague."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Kutná Hora (1 Stunde mit dem Zug)",
+        "en": "Kutná Hora (1 hour by train)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Einst eine der wichtigsten Städte Europas dank seiner Silberminen, ist Kutná Hora heute ein UNESCO-Weltkulturerbe. Zwei Highlights:",
+        "en": "Once one of Europe's most important cities thanks to its silver mines, Kutná Hora is now a UNESCO World Heritage Site. Two highlights:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Sedlec Ossarium (Knochenkirche)</strong> — eine kleine Kapelle, dekoriert mit den Knochen von etwa 40.000–70.000 Menschen. Gespenstisch, bizarr und unvergesslich. Früh ankommen, um Reisebussen zuvorzukommen.",
+          "en": "<strong>Sedlec Ossuary (Bone Church)</strong> — a small chapel decorated with the bones of approximately 40,000–70,000 people. Haunting, bizarre, and unforgettable. Arrive early to beat tour buses."
+        },
+        {
+          "de": "<strong>Kathedrale der Heiligen Barbara</strong> — eine atemberaubende spätgotische Kathedrale, 1388 begonnen, noch unfertig als das Silber ausging. Eines der schönsten gotischen Interieurs Mitteleuropas.",
+          "en": "<strong>Cathedral of St. Barbara</strong> — a breathtaking late Gothic cathedral begun in 1388, still unfinished when the silver ran out. One of the finest Gothic interiors in Central Europe."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Anreise: Direktzüge vom Praha Hlavní nádraží, ca. 55 Minuten.",
+        "en": "How to get there: Direct trains from Praha Hlavní nádraží, approx. 55 minutes."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Český Krumlov (3 Stunden mit Bus oder Auto)",
+        "en": "Český Krumlov (3 hours by bus or car)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eine UNESCO-gelistete Stadt, umschlungen von einer Hufeiseniegung der Moldau, dominiert vom zweitgrößten Schloss der Tschechischen Republik. Die Altstadt ist wunderschön erhalten — Kopfsteinpflastergassen, Barocktheater und Schlossgärten. Am besten werktags im Frühling oder Herbst besuchen, um Sommermassen zu vermeiden. Direktbusse vom Busbahnhof Na Knížecí, ca. 3 Stunden.",
+        "en": "A UNESCO-listed town wrapped in a horseshoe bend of the Vltava River, dominated by the second-largest castle in the Czech Republic. The old town is beautifully preserved — cobblestone lanes, a Baroque theatre, and castle gardens. Best visited on a weekday in spring or autumn to avoid summer crowds. Direct buses from Na Knížecí bus station, about 3 hours."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Burg Karlštejn (40 Minuten mit dem Zug)",
+        "en": "Karlštejn Castle (40 minutes by train)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die meistbesuchte tschechische Burg nach der Prager Burg. Kaiser Karl IV. ließ sie im 14. Jahrhundert bauen, um die böhmischen Kronjuwelen und heiligen Reliquien zu schützen. Der Anmarsch durch das Dorf unterhalb ist genauso malerisch wie die Burg selbst. Züge fahren häufig vom Praha Hlavní nádraží.",
+        "en": "The most visited Czech castle after Prague Castle. Emperor Charles IV built it in the 14th century to safeguard the Bohemian crown jewels and holy relics. The approach through the village below the castle is as picturesque as the castle itself. Trains run frequently from Praha Hlavní nádraží."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Theresienstadt (1 Stunde mit dem Bus)",
+        "en": "Terezín (1 hour by bus)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eine ehemalige habsburgische Militärfestung, die im Zweiten Weltkrieg zu einem NS-Konzentrationslager und Ghetto wurde. Die Gedenkstätte Theresienstadt ist eine der wichtigsten Holocaust-Gedenkstätten in Mitteleuropa. Einen ganzen Tag einplanen; die Erfahrung ist ernüchternd und wesentlich. Busse vom Busbahnhof Florenc.",
+        "en": "A former Habsburg military fortress that became a Nazi concentration camp and ghetto during WWII. The Terezín Memorial is one of the most important Holocaust memorial sites in Central Europe. Allow a full day; the experience is sobering and essential. Buses from Florenc bus station."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Karlsbad (2 Stunden mit dem Bus)",
+        "en": "Karlovy Vary (2 hours by bus)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das bekannteste der böhmischen Kurstädte, bekannt für heiße Mineralquellen, elegante Kolonnaden und das Internationale Filmfestival Karlovy Vary (Juli). Spazieren Sie die Kurkolonnade entlang, trinken Sie aus den Quellen (Kurbecher mitbringen — es ist Teil des Rituals) und bewundern Sie die prächtigen Hotels des 19. Jahrhunderts. Direktbusse von Florenc, ca. 2 Stunden.",
+        "en": "The most famous of the Bohemian spa towns, known for hot mineral springs, elegant colonnades, and the Karlovy Vary International Film Festival (July). Walk the spa colonnade, drink from the springs (bring a spa cup — it's part of the ritual), and admire the grand 19th-century hotels. Direct buses from Florenc, about 2 hours."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Schloss Konopiště (1 Stunde mit dem Zug + kurzer Fußweg)",
+        "en": "Konopiště Castle (1 hour by train + short walk)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Jagdresidenz von Erzherzog Franz Ferdinand — dessen Ermordung 1914 den Ersten Weltkrieg auslöste. Das Innere ist fast genau so erhalten, wie er es hinterließ, mit einer außergewöhnlichen Sammlung von Jagdtrophäen und Waffen. Von schönem Gelände umgeben. Zug nach Benešov u Prahy, dann 3 km Fußweg oder lokaler Bus.",
+        "en": "The hunting residence of Archduke Franz Ferdinand — whose assassination in 1914 triggered WWI. The interior is preserved almost exactly as he left it, with an extraordinary collection of hunting trophies and weapons. Surrounded by beautiful grounds. Train to Benešov u Prahy, then a 3 km walk or local bus."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Tagesausflug-Tipps",
+        "en": "Practical Day Trip Tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Tschechische Züge sind günstig und komfortabel — buchen Sie über <em>cd.cz</em> (Tschechische Bahn).",
+          "en": "Czech trains are inexpensive and comfortable — book via <em>cd.cz</em> (Czech Railways)."
+        },
+        {
+          "de": "Für Český Krumlov sind Busse (RegioJet, FlixBus) oft schneller und direkter als Züge.",
+          "en": "For Český Krumlov, buses (RegioJet, FlixBus) are often faster and more direct than trains."
+        },
+        {
+          "de": "Früh starten — die meisten Sehenswürdigkeiten öffnen um 09:00 und schließen um 17:00–18:00 Uhr; bei Öffnung ankommen vermeidet Reisegruppen.",
+          "en": "Start early — most sites open at 09:00 and close 17:00–18:00; arriving at opening avoids coach groups."
+        },
+        {
+          "de": "Kutná Hora ist leicht in einem halben Tag zu erledigen; Český Krumlov erfordert mindestens einen vollen Tag.",
+          "en": "Kutná Hora is easy to do in a half-day; Český Krumlov requires a full day minimum."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "slug": "franz-kafka-places-in-prague",
+  "slugDe": "franz-kafka-orte-in-prag",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-19",
+  "dateDisplay": {
+    "de": "19. Oktober 2025",
+    "en": "October 19, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-kafka.jpg",
+  "title": {
+    "de": "Franz Kafka in Prag: Alle Orte & Rundgang",
+    "en": "Franz Kafka in Prague: Places & Walking Tour"
+  },
+  "excerpt": {
+    "de": "Die vollständige Kafka-Route in Prag: Geburtshaus, Tafeln, Cafés, Museum, Goldenes Gässchen u. mehr—mit Zeiten, Karte und in einem halben Tag machbar.",
+    "en": "The definitive Kafka-in-Prague route: birthplace, plaques, cafés, museum, Golden Lane and more—timed, map-friendly, and doable in half a day."
+  },
+  "tags": {
+    "de": [
+      "Kafka",
+      "Franz Kafka",
+      "Kafka in Prag",
+      "Kafka Route",
+      "Kafka Rundgang",
+      "Kafka Museum Prag",
+      "Goldenes Gässchen Kafka",
+      "Altstadt Prag",
+      "Jüdisches Viertel Prag",
+      "Literarischer Spaziergang",
+      "Prager Kultur",
+      "Prag besuchen"
+    ],
+    "en": [
+      "Kafka",
+      "Franz Kafka",
+      "Kafka in Prague",
+      "Kafka itinerary",
+      "Kafka walking route",
+      "Kafka Museum Prague",
+      "Golden Lane Kafka",
+      "Old Town Prague",
+      "Jewish Quarter Prague",
+      "Prague literary walk",
+      "Prague culture",
+      "Visit Prague"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Kafka in Prag: Alle Orte (mit Route)",
+        "en": "Kafka in Prague: All Places to Visit (With Route)"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "<strong>Franz Kafka (1883–1924)</strong> schrieb in einem Prag zwischen <em>deutscher, tschechischer und jüdischer</em> Kultur. Mit dieser <strong>Itinerar</strong> sehen Sie alle wichtigen Kafka-Orte in einem halben Tag.",
+        "en": "<strong>Franz Kafka (1883–1924)</strong> wrote in a Prague shaped by <em>German–Czech–Jewish</em> culture. Use this map-friendly <strong>itinerary</strong> to see every essential Kafka place in half a day."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 1 — Geburtshaus bei der Teynkirche (Altstadt)",
+        "en": "Stop 1 — Birthplace by Týn Church (Old Town)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das ursprüngliche Haus existiert nicht mehr, doch der <strong>Ort an der Teynkirche</strong> markiert Kafkas frühe Jahre, nur Schritte vom Altstädter Ring.",
+        "en": "The original building is gone, but the <strong>site by Týn Church</strong> anchors Kafka's early years steps from Old Town Square."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 2 — Tafeln & Karlsuniversität",
+        "en": "Stop 2 — Old Town Plaques & Charles University"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Finden Sie <strong>Gedenktafeln und Adressen</strong>, an denen Kafka lebte oder studierte—rund um die <strong>Karlsuniversität</strong> und das Altstadtgitter.",
+        "en": "Find <strong>plaques and addresses</strong> where Kafka lived or studied around <strong>Charles University</strong> and the Old Town grid."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 3 — Kafka-Statue & Kontext Jüdisches Viertel",
+        "en": "Stop 3 — Kafka Statue & Jewish Quarter Context"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Besuchen Sie die <strong>Kafka-Statue</strong> nahe der Spanischen Synagoge und fügen Sie die <strong>Stätten des Jüdischen Museums</strong> für den Zeitkontext hinzu.",
+        "en": "Visit the <strong>Kafka statue</strong> near the Spanish Synagogue and add the <strong>Jewish Museum sites</strong> for the period context."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/blog-kafka-2.jpg"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Optional — „Rotierender Kopf“ (David Černý)",
+        "en": "Optional — Franz Kafka “Rotating Head” (David Černý)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die kinetische Skulptur von <strong>David Černý</strong>—der <em>Rotierende Kopf</em>—steht am <strong>Quadrio</strong> nahe der <strong>Národní třída</strong>. Leicht zwischen Altstadt und Café‑Stopps einzubauen.",
+        "en": "The kinetic sculpture by <strong>David Černý</strong>—often called the <em>Rotating Head</em>—stands by <strong>Quadrio</strong> close to <strong>Národní třída</strong>. It's an easy add-on between the Old Town and the café stops."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 4 — Kafkas Häuschen im Goldenen Gässchen (Burg)",
+        "en": "Stop 4 — Kafka's Golden Lane House (Prague Castle)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein kleines Haus im <strong>Goldenen Gässchen</strong> diente als Schreibrefugium—ideal kombinierbar mit einem <a href=\"/tours\">Burgspaziergang</a>.",
+        "en": "A small house in <strong>Golden Lane</strong> served as a writing retreat—combine with a <a href=\"/tours\">Prague Castle walk</a> for top views."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 5 — Cafés: Louvre & Slavia",
+        "en": "Stop 5 — Cafés: Louvre & Slavia"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Klassische Cafés an der Národní—<strong>Café Louvre</strong> und <strong>Café Slavia</strong>—knüpfen an Prags literarische Kreise an. Perfekte Pausenstopps.",
+        "en": "Classic cafés on Národní—<strong>Café Louvre</strong> and <strong>Café Slavia</strong>—tie into Prague's literary circles. Perfect rest stops."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 6 — Franz-Kafka-Museum (Kleinseite)",
+        "en": "Stop 6 — Franz Kafka Museum (Lesser Town)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am Fluss bietet das <strong>Kafka-Museum</strong> eine Stunde Handschriften, Fotos und Medien—ideal zum Abschluss des Rundgangs.",
+        "en": "On the river, the <strong>Franz Kafka Museum</strong> is an hour of manuscripts, photos and multimedia—ideal at the end of the loop."
+      }
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Wussten Sie schon?",
+        "en": "Did you know?"
+      },
+      "html": {
+        "de": "<p>Kafkas <em>Tagesjob</em> bei der <strong>Arbeiter-Unfallversicherungsanstalt</strong> prägte seine Themen von Bürokratie und Moderne.</p>",
+        "en": "<p>Kafka's <em>day job</em> at the <strong>Workers' Accident Insurance Institute</strong> helped shape his themes of bureaucracy and modernity.</p>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Zeitplanung & Route (3–4 Stunden)",
+        "en": "Timing & Route (3–4 hours)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Altstadtkern (Geburtshaus, Tafeln): 45–60 Min",
+          "en": "Old Town core (Birthplace, plaques): 45–60 min"
+        },
+        {
+          "de": "Jüdisches Viertel + Statue: 30–45 Min",
+          "en": "Jewish Quarter + statue: 30–45 min"
+        },
+        {
+          "de": "Optional: Rotierender Kopf (Quadrio): 10–15 Min",
+          "en": "Optional: Rotating Head (Quadrio): 10–15 min"
+        },
+        {
+          "de": "Burg/Goldenes Gässchen optional: 45–60 Min (Ticket)",
+          "en": "Castle Golden Lane add-on: 45–60 min (ticketed)"
+        },
+        {
+          "de": "Cafés (Louvre/Slavia): 20–30 Min Pause",
+          "en": "Cafés (Louvre/Slavia): 20–30 min break"
+        },
+        {
+          "de": "Kafka-Museum: 45–60 Min",
+          "en": "Kafka Museum: 45–60 min"
+        },
+        {
+          "de": "Wege zwischen Stopps: ca. 30–45 Min",
+          "en": "Walking links between stops: ~30–45 min total"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Machen Sie es zu Fuß oder buchen Sie eine <a href=\"/book?tour=Kafka%20Itinerary#contact-title\">Kafka-Privatführung</a> mit Navigation, Tickets und Kontext.",
+        "en": "Do it point-to-point on foot or book a <a href=\"/book?tour=Kafka%20Itinerary#contact-title\">Kafka private tour</a> for navigation, tickets and context."
+      }
+    }
+  ]
+}

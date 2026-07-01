@@ -1,0 +1,91 @@
+/* ============================================================
+   Zuza Prague Tours — Color tokens
+   A warm, editorial palette: ivory paper grounds, deep burgundy
+   primary, brass/gold accents, near-black ink for type.
+   Lifted from the live site (tailwind.config.js + blog-content.css
+   + Home.tsx). Two registers share one palette:
+     · Editorial  — the refined journal/tours/contact register
+     · Marketing  — the warmer, slightly brighter homepage register
+   ============================================================ */
+
+:root {
+  /* ── Paper / ground ────────────────────────────── */
+  --ivory: #F5EFE4;          /* deepest warm ground (article selection) */
+  --ivory-deep: #EDE4D3;
+  --paper: #FAF6EC;          /* editorial page background */
+  --paper-warm: #F5F1EA;
+  --canvas: #FBF9F5;         /* marketing page background */
+  --canvas-alt: #F5F3EF;     /* alternating marketing band */
+  --canvas-mute: #EFEEEA;    /* tinted band (reviews) */
+
+  /* ── Ink / type ────────────────────────────────── */
+  --ink: #1A1714;            /* primary text */
+  --ink-2: #1B1C1A;          /* marketing near-black */
+  --ink-soft: #3A332C;       /* body on light */
+  --ink-mute: #6B6055;       /* muted captions / eyebrows */
+  --ink-warm: #58413F;       /* marketing muted body (warm brown) */
+
+  /* ── Burgundy (primary brand) ──────────────────── */
+  --burgundy: #6B1F2A;       /* editorial primary */
+  --burgundy-deep: #4F1620;  /* hover / pressed */
+  --crimson: #6C0008;        /* marketing primary (gradient start) */
+  --crimson-bright: #8E1B1B; /* marketing gradient end */
+  --accent: #8A1F1F;         /* button / link accent */
+  --accent-hover: #6E1818;
+  --accent-soft: #F5E6E6;    /* tinted error/accent ground */
+
+  /* ── Brass / gold (secondary accent) ───────────── */
+  --brass: #A88654;          /* rules, underlines, ornaments */
+  --brass-deep: #8C6A3C;     /* labels on paper */
+  --gold-olive: #7B5800;     /* marketing eyebrow gold */
+  --gold-lamp: #FDC34D;      /* gallery eyebrow on dark */
+
+  /* ── Sage (rare cool accent) ───────────────────── */
+  --sage: #8A9282;
+
+  /* ── Rose (decorative warm grey) ───────────────── */
+  --rose: #E0BFBC;           /* marketing dividers / numerals */
+
+  /* ── Rules / hairlines ─────────────────────────── */
+  --rule: #D9CFBC;
+  --rule-soft: #E8DFCC;
+
+  /* ── Stone neutral scale ───────────────────────── */
+  --stone-50:  #FAF8F4;
+  --stone-100: #F0EBE2;
+  --stone-200: #E0D8C9;
+  --stone-300: #C7BBA6;
+  --stone-400: #A89880;
+  --stone-500: #857563;
+  --stone-600: #645849;
+  --stone-700: #453D33;
+  --stone-800: #2B2620;
+  --stone-900: #1A1613;
+
+  /* ── Semantic surfaces ─────────────────────────── */
+  --surface: var(--paper);
+  --surface-card: #FFFFFF;
+  --surface-raised: var(--paper-warm);
+  --surface-sunken: var(--canvas-mute);
+  --surface-dark: var(--ink);          /* dark footer / gallery */
+  --on-surface: var(--ink);
+  --on-surface-mute: var(--ink-mute);
+  --on-dark: var(--ivory);
+  --on-dark-mute: var(--stone-400);
+
+  /* ── Semantic intent ───────────────────────────── */
+  --text-heading: var(--ink);
+  --text-body: var(--ink-soft);
+  --text-muted: var(--ink-mute);
+  --text-link: var(--burgundy);
+  --text-link-hover: var(--burgundy-deep);
+  --border-default: var(--rule);
+  --border-strong: var(--ink);
+
+  /* ── States ────────────────────────────────────── */
+  --error: #BA1A1A;
+  --success: #3F6B4A;
+
+  /* ── Signature gradient (marketing CTA / buttons) ─ */
+  --grad-burgundy: linear-gradient(135deg, #6C0008 0%, #8E1B1B 100%); /* @kind color */
+}

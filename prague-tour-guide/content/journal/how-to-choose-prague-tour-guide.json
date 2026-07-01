@@ -1,0 +1,329 @@
+{
+  "slug": "how-to-choose-prague-tour-guide",
+  "slugDe": "wie-man-den-besten-prag-stadtfuehrer-waehlt",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-04-13",
+  "dateDisplay": {
+    "de": "13. April 2026",
+    "en": "April 13, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/charles-bridge-min.jpg",
+  "title": {
+    "de": "Den richtigen Prag-Stadtführer finden",
+    "en": "How to Choose the Right Prague Tour Guide"
+  },
+  "excerpt": {
+    "de": "Ein freundlicher, ehrlicher Leitfaden, um den perfekten Guide zu finden – worauf man achten sollte, welche Fragen man stellen kann und wie Ihr Prag-Besuch wirklich persönlich wird.",
+    "en": "A friendly, honest guide to finding the perfect guide – what to look for, what to ask, and how to make your Prague visit truly personal."
+  },
+  "tags": {
+    "de": [
+      "Prag Stadtführer",
+      "Prag Reiseführer wählen",
+      "Prag private Tour",
+      "Prag Rundgang",
+      "zertifizierter Stadtführer Prag",
+      "Prag Reisetipps",
+      "Prag Touristenfallen",
+      "privat vs Gruppenführung Prag"
+    ],
+    "en": [
+      "Prague tour guide",
+      "how to choose a tour guide",
+      "Prague private tour",
+      "Prague walking tour",
+      "certified tour guide Prague",
+      "Prague travel tips",
+      "Prague tourist traps",
+      "private vs group tour Prague"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "So finden Sie den richtigen Stadtführer für Ihr Prag-Erlebnis",
+        "en": "How to choose the right Prague tour guide for you"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Prag ist eine dieser Städte, die immer schöner wird, je mehr man über sie erfährt. Ein guter Stadtführer macht genau das möglich – er verwandelt einen Spaziergang an schönen Gebäuden vorbei in einen Spaziergang <em>durch</em> Geschichten, Erinnerungen und kleine Geheimnisse, die einen dazu bringen, sich in die Stadt zu verlieben. Ich mache das seit 1986, und ich entdecke immer noch Neues. Hier ist mein freundlicher Rat, wie Sie den Guide finden, der Ihren Besuch wirklich besonders macht.",
+        "en": "Prague is one of those cities that gets better the more you know about it. A good guide makes that happen — they turn a walk past beautiful buildings into a walk <em>through</em> stories, memories, and little secrets that make you fall in love with the place. I have been doing this since 1986, and I still discover new things. Here is my friendly advice on finding the guide who will make your visit truly special."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<iframe style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" src=\"https://www.youtube.com/embed/xgNK3ntJQ8Y\" title=\"Prag Stadtführer — was man sehen und erleben kann\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe>",
+        "en": "<iframe style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" src=\"https://www.youtube.com/embed/xgNK3ntJQ8Y\" title=\"Prague city guide — what to see and do\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe>"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<em>Eine wunderbare Einführung in das, was Prag so magisch macht — und warum der richtige Guide den Unterschied ausmacht.</em>",
+        "en": "<em>A lovely introduction to what makes Prague so magical — and why the right guide can make all the difference.</em>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Privatführung oder Gruppenrundgang? Beides kann wunderbar sein",
+        "en": "Private guide or group tour? Both can be wonderful"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gruppenführungen sind eine großartige Möglichkeit, sich zu orientieren. Man läuft mit einer lebhaften Gruppe, hört die Highlights und bekommt ein Gefühl für die Stadt — meist für 15–25 EUR pro Person. Sie sind gesellig, machen Spaß und sind perfekt, wenn man gerade angekommen ist und einen Überblick möchte.",
+        "en": "Group tours are a great way to get your bearings. You walk with a lively group, hear the highlights, and get a feel for the city — usually for 15–25 EUR per person. They are social, fun, and perfect if you have just arrived and want an overview."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein privater Guide ist ein anderes Erlebnis. Die Tour wird ganz auf <em>Sie</em> zugeschnitten: Ihr Tempo, Ihre Interessen, Ihre Fragen. Wenn Sie im Jüdischen Viertel verweilen möchten, weil die Geschichte Sie berührt, machen wir das. Wenn Ihre Kinder müde werden und Sie zehn Minuten in einem Garten sitzen wollen, machen wir auch das. Sie bestimmen die Startzeit, und wenn es regnet, gehen wir einfach in ein Cafe und machen weiter, wenn die Sonne zurückkommt.",
+        "en": "A private guide is a different experience. The tour is shaped around <em>you</em>: your pace, your interests, your questions. If you want to linger in the Jewish Quarter because the history moves you, we do that. If your children are getting tired and you want to sit in a garden for ten minutes, we do that too. You set the start time, and if it rains, we simply duck into a cafe and carry on when the sun comes back."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Für Familien, Paare oder kleine Freundesgruppen ist ein privater Guide pro Person oft nur wenig teurer — und das Erlebnis ist unvergleichlich persönlicher.",
+        "en": "For families, couples, or small groups of friends, a private guide often works out to only a little more per person — and the experience is incomparably more personal."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was einen Guide wirklich großartig macht",
+        "en": "What makes a guide truly great"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die besten Guides sind diejenigen, die ihre Stadt aufrichtig lieben. Man spürt es in der Art, wie sie erzählen, in den kleinen Umwegen, die sie vorschlagen, in den Geschichten, die in keinem Reiseführer stehen.",
+        "en": "The best guides are the ones who genuinely love their city. You can feel it in the way they talk, the little detours they suggest, the stories they share that are not in any guidebook."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Hier sind einige Zeichen, dass Sie jemand Besonderes gefunden haben:",
+        "en": "Here are some signs you have found someone special:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Sie fragen zuerst nach Ihnen.</strong> Noch bevor die Tour beginnt, möchten sie wissen, was Sie interessiert, was Sie schon gesehen haben, was Sie an Prag begeistert.",
+          "en": "<strong>They ask about you first.</strong> Before the tour even starts, they want to know what you are interested in, what you have already seen, what excited you about Prague."
+        },
+        {
+          "de": "<strong>Sie erzählen persönliche Geschichten.</strong> Nicht nur Fakten aus einem Lehrbuch, sondern Momente aus ihrem eigenen Leben in der Stadt — die Ecke, an der sie als Kind gespielt haben, das Cafe, in dem sie nach der Samtenen Revolution gefeiert haben.",
+          "en": "<strong>They tell personal stories.</strong> Not just facts from a textbook, but moments from their own life in the city — the corner where they played as a child, the cafe where they celebrated after the Velvet Revolution."
+        },
+        {
+          "de": "<strong>Sie sind flexibel.</strong> Ein wunderbarer Guide passt die Route spontan an. Wenn etwas Ihre Aufmerksamkeit erregt, kennt er die Geschichte dahinter.",
+          "en": "<strong>They are flexible.</strong> A wonderful guide adjusts the route on the fly. If something catches your eye, they know the story behind it."
+        },
+        {
+          "de": "<strong>Sie haben Qualifikationen, auf die sie stolz sind.</strong> In Tschechien können Guides eine offizielle Zertifizierung durch Prüfungen in Geschichte, Architektur und Kunst erwerben. Für das Jüdische Viertel bietet das <a href=\"https://www.jewishmuseum.cz\" target=\"_blank\" rel=\"noopener noreferrer\">Jüdische Museum in Prag</a> eine eigene Spezial-Akkreditierung an. Diese Qualifikationen bedeuten, dass der Guide in sein Handwerk investiert hat.",
+          "en": "<strong>They have credentials they are proud of.</strong> In the Czech Republic, guides can earn an official certification through exams in history, architecture, and art. For the Jewish Quarter, the <a href=\"https://www.jewishmuseum.cz\" target=\"_blank\" rel=\"noopener noreferrer\">Jewish Museum in Prague</a> offers its own specialist accreditation. These qualifications mean the guide has invested in their craft."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Sprache ist Teil der Magie",
+        "en": "Language is part of the magic"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eine Tour in der eigenen Sprache ist einfach ein reicheres Erlebnis. Man versteht den Humor, die Nuancen, die Emotionen hinter den Geschichten. Wenn Sie deutschsprachig sind, suchen Sie einen Guide, der regelmäßig auf Deutsch führt — jemanden, für den es ein lebendiger, alltäglicher Teil der Arbeit ist, nicht nur eine Zeile im Lebenslauf.",
+        "en": "A tour in your own language is simply a richer experience. You catch the humour, the nuance, the emotion behind the stories. If you are a German-speaking visitor, look for a guide who conducts tours in German regularly — someone for whom it is a living, breathing part of their work, not just a line on a CV."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein schneller Test: Schreiben Sie dem Guide vor der Buchung eine Nachricht auf Deutsch. Die Wärme und Natürlichkeit der Antwort verraten Ihnen alles.",
+        "en": "A quick way to tell? Send them a message in your language before you book. The warmth and fluency of their reply will tell you everything."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Erfahrung und Leidenschaft gehören zusammen",
+        "en": "Experience and passion go hand in hand"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich führe seit 40 Jahren, aber einige der besten Touren, von denen ich gehört habe, wurden von jüngeren Guides gegeben, die sich leidenschaftlich für ein bestimmtes Thema begeistern — tschechische Architektur, Kafka, jüdisches Erbe, die Kunstszene. Entscheidend ist nicht die Anzahl der Jahre, sondern ob der Guide die Stadt wirklich <em>kennt</em> und sie mit Freude teilt.",
+        "en": "I have been guiding for 40 years, but some of the best tours I have ever heard about were given by younger guides who are deeply passionate about a specific subject — Czech architecture, Kafka, Jewish heritage, the art scene. What matters is not the number of years but whether the guide truly <em>knows</em> the city and cares about sharing it."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Versuchen Sie eine einfache Frage: „Was ist Ihr Lieblingsort in Prag und warum?\" Ein Guide, dessen Augen aufleuchten und der Ihnen eine persönliche, begeisterte Antwort gibt, ist jemand, der Ihren Tag wunderbar machen wird.",
+        "en": "Try asking a simple question: \"What is your favourite spot in Prague and why?\" A guide who lights up and gives you a personal, enthusiastic answer is someone who will make your day wonderful."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Direktbuchung: eine herzliche Empfehlung",
+        "en": "Booking directly: a warm recommendation"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Buchungsplattformen und Agenturen können praktisch sein, und es gibt gute Guides auf allen. Aber wenn Sie einen Guide gefunden haben, der Ihnen gefällt — über seine Website, Bewertungen oder eine Empfehlung — hat die direkte Kontaktaufnahme einige schöne Vorteile:",
+        "en": "Booking platforms and agencies can be convenient, and there are good guides on all of them. But if you find a guide you like — through their website, reviews, or a recommendation — reaching out directly has some lovely advantages:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Sie wissen genau, wer Sie führen wird (keine kurzfristigen Vertretungen)",
+          "en": "You know exactly who will be guiding you (no last-minute substitutions)"
+        },
+        {
+          "de": "Sie können Ihre Interessen besprechen und die Tour im Voraus anpassen",
+          "en": "You can discuss your interests and tailor the tour in advance"
+        },
+        {
+          "de": "Es ist oft günstiger, da kein Vermittler dazwischen steht",
+          "en": "It is often more affordable, since there is no middleman"
+        },
+        {
+          "de": "Sie beginnen eine persönliche Verbindung aufzubauen, noch bevor Sie in Prag ankommen",
+          "en": "You start building a personal connection before you even arrive in Prague"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Bewertungen mit Freude lesen",
+        "en": "Reading reviews with joy"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Bewertungen sind eine wunderbare Möglichkeit, Ihren Guide zu finden. Wenn Sie Rezensionen auf TripAdvisor, Google oder <a href=\"https://www.tourhq.com/guide/CZ56896/zuzana-manova\" target=\"_blank\" rel=\"noopener noreferrer\">TourHQ</a> lesen, achten Sie auf die, die Sie zum Lächeln bringen:",
+        "en": "Reviews are a wonderful way to find your guide. When reading TripAdvisor, Google, or <a href=\"https://www.tourhq.com/guide/CZ56896/zuzana-manova\" target=\"_blank\" rel=\"noopener noreferrer\">TourHQ</a> reviews, look for the ones that make you smile:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Menschen, die den Guide namentlich erwähnen — das bedeutet, es war persönlich",
+          "en": "People who mention the guide by name — that means it was personal"
+        },
+        {
+          "de": "Konkrete Geschichten darüber, was sie gesehen oder gelernt haben — das Zeichen einer Tour, die echten Eindruck hinterlassen hat",
+          "en": "Specific stories about what they saw or learned — the sign of a tour that left a real impression"
+        },
+        {
+          "de": "Besucher, die die Tour verlängert oder ein zweites Mal gebucht haben — das schönste Kompliment, das ein Guide bekommen kann",
+          "en": "Visitors who extended the tour or came back for a second one — the highest compliment a guide can receive"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die besten Bewertungen sind nicht die, die sagen „Tolle Tour, kann ich empfehlen.\" Es sind die, in denen jemand einen ganzen Absatz über eine Geschichte schreibt, die der Guide an der Karlsbrücke erzählt hat, oder über einen versteckten Innenhof, den er allein nie gefunden hätte.",
+        "en": "The best reviews are not the ones that say \"great tour, would recommend.\" They are the ones where someone writes a whole paragraph about a story the guide told them at the Charles Bridge, or a hidden courtyard they would never have found on their own."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Ein paar hilfreiche Fragen vor der Buchung",
+        "en": "A few helpful things to ask"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eine kurze Nachricht vor der Buchung kann Ihnen viel verraten. Hier sind fünf freundliche Fragen:",
+        "en": "Before you book, a short message can tell you a lot. Here are five friendly questions:"
+      }
+    },
+    {
+      "t": "list",
+      "ordered": true,
+      "items": [
+        {
+          "de": "<strong>Führen Sie persönlich?</strong> Die schönsten Touren sind mit der Person, mit der man im Kontakt war.",
+          "en": "<strong>Will you be guiding personally?</strong> The loveliest tours are with the person you have been communicating with."
+        },
+        {
+          "de": "<strong>Können wir die Route gemeinsam gestalten?</strong> Ein toller Guide wird begeistert Ja sagen.",
+          "en": "<strong>Can we shape the route together?</strong> A great guide will say yes enthusiastically."
+        },
+        {
+          "de": "<strong>Was ist im Preis enthalten?</strong> Eintrittsgelder, Transport, Treffpunkt — gut, das vorher zu wissen.",
+          "en": "<strong>What is included in the price?</strong> Entrance fees, transport, meeting point — good to know upfront."
+        },
+        {
+          "de": "<strong>Was passiert bei Regen?</strong> Flexibilität ist das Zeichen eines Guides, dem Ihr Erlebnis wirklich am Herzen liegt.",
+          "en": "<strong>What happens if it rains?</strong> Flexibility is the mark of a guide who genuinely cares about your experience."
+        },
+        {
+          "de": "<strong>Was lieben Sie persönlich am meisten an Prag?</strong> Die Antwort verrät Ihnen, ob dies jemand ist, der Ihren Besuch unvergesslich machen wird.",
+          "en": "<strong>What do you personally love most about Prague?</strong> Their answer will tell you whether this is someone who will make your visit unforgettable."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Ein wenig über mich",
+        "en": "A little about me"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich bin <a href=\"/zuzana-manova\">Zuzana Manová</a>, und ich teile Prag mit Besuchern seit 1986 — durch den Kommunismus, die Samtene Revolution und all die wunderbaren Veränderungen seither. Ich besitze die tschechische Stadtführer-Zertifizierung und eine Spezial-Akkreditierung des Jüdischen Museums in Prag. Ich führe auf Deutsch und Englisch, beides nutze ich jede einzelne Woche.",
+        "en": "I am <a href=\"/zuzana-manova\">Zuzana Manová</a>, and I have been sharing Prague with visitors since 1986 — through Communism, the Velvet Revolution, and all the wonderful changes since. I hold the Czech Republic guide certification and a specialist accreditation from the Jewish Museum in Prague. I guide in German and English, both of which I use every single week."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Jede Tour, die ich gebe, ist privat und persönlich. Ich lerne gerne die Menschen kennen, die ich führe — woher sie kommen, was sie neugierig macht, was sie überrascht. Ich bin tausende Male durch diese Straßen gegangen, und sie erfüllen mich immer noch mit Freude. Ich würde das gerne mit Ihnen teilen.",
+        "en": "Every tour I give is private and personal. I love getting to know the people I guide — where they are from, what they are curious about, what surprises them. I have walked these streets thousands of times, and they still fill me with joy. I would love to share that with you."
+      }
+    }
+  ]
+}

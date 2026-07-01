@@ -237,6 +237,56 @@ const Blog: React.FC = () => {
         </div>
       </section>
 
+      {/* Editorial about section — unique crawlable content for SEO */}
+      <section className="mx-auto max-w-shell border-t border-rule px-6 py-[80px] md:px-12">
+        <div className="grid gap-12 md:grid-cols-[1fr_1.6fr]">
+          <div>
+            <div className="mb-5 font-sans text-[10px] uppercase tracking-[0.28em] text-ink-mute">
+              {language === 'de' ? 'Über dieses Journal' : 'About this Journal'}
+            </div>
+            <h2 className="font-display text-[36px] font-normal leading-[1.1] text-ink [&_em]:font-italic [&_em]:italic [&_em]:text-burgundy">
+              {language === 'de' ? <>Prag — ehrlich, <em>auf Deutsch</em></> : <>Prague — honest, <em>in German</em></>}
+            </h2>
+          </div>
+          <div className="space-y-5 font-body text-[18px] leading-[1.7] text-ink-soft">
+            {language === 'de' ? (
+              <>
+                <p>
+                  Dieses Journal ist kein Reiseführer im klassischen Sinn. Es ist die Sammlung dessen, was ich meinen
+                  Gästen sage — bevor die Tour beginnt, wenn niemand zuhört, und wenn sie am Ende fragen: „Wohin wirklich?"
+                  Ich bin in Prag geboren, an der Karls-Universität ausgebildet, seit über einem Jahrzehnt staatlich
+                  zertifizierte Stadtführerin. Prag ist nicht mein Job. Es ist meine Stadt.
+                </p>
+                <p>
+                  Die Artikel hier behandeln, was die großen Reiseportale weglassen: welche Wechselstuben Sie meiden
+                  sollten, warum der Trdelník keine böhmische Tradition ist, welche Restaurants in Vinohrady und Karlín
+                  wirklich kochen — und warum die Karlsbrücke um 6 Uhr morgens eine andere Stadt ist als um 14 Uhr.
+                  Prag Insider-Tipps, Touristenfallen, böhmische Küche, versteckte Sehenswürdigkeiten und die Geschichten
+                  hinter den Fassaden der Prager Altstadt.
+                </p>
+                <p>
+                  Alles auf Deutsch. Alles aus erster Hand.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  This journal is not a travel guide in the conventional sense. It is the collection of what I tell my
+                  guests — before the tour starts, when nobody is listening, and when they ask at the end: "Where should
+                  we really go?" I was born in Prague, trained at Charles University, and have been a state-certified
+                  guide for over a decade. Prague is not my job. It is my city.
+                </p>
+                <p>
+                  The articles here cover what the big travel portals leave out: which exchange booths to avoid, why
+                  Trdelník is not a Bohemian tradition, which restaurants in Vinohrady and Karlín actually cook —
+                  and why Charles Bridge at 6am is a different city than at 2pm.
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter band */}
       <div className="relative mx-auto mb-[60px] max-w-shell border border-rule-soft bg-paper px-12 py-16 text-center before:absolute before:bottom-3 before:left-3 before:top-3 before:w-px before:bg-brass before:opacity-40 after:absolute after:bottom-3 after:right-3 after:top-3 after:w-px after:bg-brass after:opacity-40">
         <div className="mb-4 font-sans text-[11px] uppercase tracking-[0.3em] text-brass-deep">

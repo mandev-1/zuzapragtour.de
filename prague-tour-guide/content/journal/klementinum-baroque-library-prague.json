@@ -1,0 +1,152 @@
+{
+  "slug": "klementinum-baroque-library-prague",
+  "slugDe": "klementinum-barock-bibliothek-prag",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-18",
+  "dateDisplay": {
+    "de": "18. Oktober 2025",
+    "en": "October 18, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/klementinum-library.jpg",
+  "title": {
+    "de": "Prags schönste Bibliothek: das Klementinum",
+    "en": "Most Beautiful Library in Prague: Klementinum"
+  },
+  "excerpt": {
+    "de": "Betreten Sie den Barocksaal des Klementinums—von vielen als eine der schönsten Bibliotheken der Welt bezeichnet. So sehen Sie sie und das sollten Sie wissen.",
+    "en": "Step into the Baroque Library Hall at the Klementinum—often called one of the most beautiful libraries in the world. Here's how to see it and what to know."
+  },
+  "tags": {
+    "de": [
+      "Klementinum",
+      "Bibliothek",
+      "Geschichte",
+      "Altstadt"
+    ],
+    "en": [
+      "Klementinum",
+      "Library",
+      "History",
+      "Old Town"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Klementinum: Die Barockbibliothek",
+        "en": "Klementinum: The Baroque Library"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Mitten in der Prager Altstadt hat das <strong>Klementinum</strong> einen <em>Barockbibliothekssaal</em>, den Menschen konsequent als eine der schönsten Bibliotheken bezeichnen, die sie je gesehen haben. Freskendecke, antike Globen, Eichenregale bis zur Decke. Ich bringe Gäste seit Jahrzehnten hierher und die Reaktion ist jedes Mal dieselbe.",
+        "en": "Right in the middle of the Old Town, the <strong>Klementinum</strong> has a <em>Baroque Library Hall</em> that people consistently call one of the most beautiful libraries they've ever seen. Frescoed ceilings, antique globes, oak bookcases stacked to the ceiling. I've brought guests here hundreds of times and the reaction is always the same."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was Sie sehen",
+        "en": "What You'll See"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Barockbibliothekssaal:</strong> Historische Bände, Himmelsgloben und allegorische Deckenfresken. Zugang nur per Führung.",
+          "en": "<strong>Baroque Library Hall:</strong> Historical volumes, celestial globes, and allegorical ceiling frescoes. Access is by guided tour only."
+        },
+        {
+          "de": "<strong>Astronomischer Turm:</strong> Panorama über Prag und die Moldau. Der Aufstieg lohnt sich.",
+          "en": "<strong>Astronomical Tower:</strong> Views over Prague and the Vltava. Worth the climb."
+        },
+        {
+          "de": "<strong>Meridianzimmer:</strong> Wo man mit Sonnenlicht die Zeit stellte, bevor es moderne Uhren gab. Kleiner Raum, echte Kuriosität.",
+          "en": "<strong>Meridian Room:</strong> Where they used sunlight to set the time before modern clocks. Small room, genuine curiosity."
+        }
+      ]
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Wussten Sie schon?",
+        "en": "Did you know?"
+      },
+      "html": {
+        "de": "<p>Das Klementinum betrieb eine der ältesten Wetterstationen Mitteleuropas — kontinuierliche Messungen über Jahrhunderte. Der längste Klimadatensatz der Region.</p>",
+        "en": "<p>The Klementinum ran one of Central Europe's oldest weather stations — continuous measurements going back centuries. The longest climate record in the region.</p>"
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/klementinum-library-2.jpg"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Hinweise",
+        "en": "Practical Notes"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Besichtigungen sind Führungen mit festen Zeitfenstern. Die Kapazität ist begrenzt und <strong>Fotoregeln ändern sich</strong> — vorher prüfen. Gern helfe ich bei <a href=\"/contact#contact-title\">Tickets</a> und kombiniere das Klementinum in eine <a href=\"/tours\">längere Altstadtroute</a>.",
+        "en": "Visits are guided tours with fixed time slots. Capacity is limited and <strong>photography rules change</strong> — check before you go. I can help with <a href=\"/contact#contact-title\">tickets</a> and combine the Klementinum into a <a href=\"/tours\">longer Old Town route</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Tipps",
+        "en": "Tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "10–15 Minuten vor dem Termin ankommen.",
+          "en": "Arrive 10–15 minutes before your slot."
+        },
+        {
+          "de": "Fernglas hilft für die Deckenfresken — Details lohnen den näheren Blick.",
+          "en": "Binoculars help for the ceiling frescoes — details are worth seeing up close."
+        },
+        {
+          "de": "Später Nachmittag gibt dem Astronomischen Turm besseres Licht.",
+          "en": "Late afternoon timing gives you the Astronomical Tower in better light."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Offizielle Ressource:</strong> <a href=\"https://prague.eu/de/objevujte/astronomischer-turm-und-barocke-bibliothek-des-klementinums/\" target=\"_blank\" rel=\"noopener\">Prague.eu — Astronomischer Turm & Barockbibliothek</a>. Aktuelle Öffnungszeiten und Buchung dort.",
+        "en": "<strong>Official resource:</strong> <a href=\"https://prague.eu/en/objevujte/the-clementinum-astronomical-tower-and-baroque-library/\" target=\"_blank\" rel=\"noopener\">Prague.eu — Klementinum Astronomical Tower & Baroque Library</a>. Current opening hours and booking there."
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Möchten Sie einen privaten Spaziergang mit Abschluss im Klementinum und Turmblick? <a href=\"/book?tour=Individuelle%20Privattour#contact-title\">Route anfragen</a>.",
+        "en": "Want a private walk that ends at the Klementinum with tower views? <a href=\"/book?tour=Custom%20Private%20Tour#contact-title\">Ask about a route</a>."
+      }
+    }
+  ]
+}

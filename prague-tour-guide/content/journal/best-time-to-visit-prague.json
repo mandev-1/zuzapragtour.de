@@ -1,0 +1,154 @@
+{
+  "slug": "best-time-to-visit-prague",
+  "slugDe": "beste-reisezeit-prag",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2024-01-15",
+  "dateDisplay": {
+    "de": "15. Januar 2024",
+    "en": "January 15, 2024"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-best-time-min.jpg",
+  "title": {
+    "de": "Beste Reisezeit für Prag: Ein Saisonführer",
+    "en": "Best Time to Visit Prague: A Seasonal Guide"
+  },
+  "excerpt": {
+    "de": "Entdecken Sie die perfekte Jahreszeit, um Prag zu erkunden. Von blühenden Frühlingsgärten bis zu magischen Wintermärkten...",
+    "en": "Discover the perfect season to explore Prague based on your preferences. From blooming spring gardens to magical winter markets..."
+  },
+  "tags": {
+    "de": [
+      "Reisetipps",
+      "Jahreszeiten",
+      "Planung"
+    ],
+    "en": [
+      "Travel Tips",
+      "Seasons",
+      "Planning"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wann ist die beste Reisezeit für Prag?",
+        "en": "When Is the Best Time to Visit Prague?"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Diese Frage bekomme ich ständig, und meine ehrliche Antwort: Jede Jahreszeit hat etwas Echtes zu bieten. Es kommt darauf an, was Sie suchen. <strong>Frühling</strong> ist ruhiger und das Licht ist schön. <strong>Sommer</strong> ist belebter, aber die Abende sind lang. <strong>Herbst</strong> ist persönlich mein Favorit. <strong>Winter</strong> ist kalt, aber die Weihnachtsmärkte sind es wirklich wert.",
+        "en": "People ask me this constantly, and my honest answer: every season has something real going for it. It depends what you're after. <strong>Spring</strong> is quieter and the light is beautiful. <strong>Summer</strong> is busy but the evenings are long. <strong>Autumn</strong> is probably my personal favourite. <strong>Winter</strong> gets cold but the Christmas markets are genuinely worth it."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Frühling (März–Mai)",
+        "en": "Spring (March–May)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Kirschblüten auf dem Petřín im April, ruhige Morgen auf der <a href=\"/tours\">Karlsbrücke</a> bevor die Reisegruppen ankommen",
+          "en": "Cherry blossoms on Petřín in April, and quiet mornings on <a href=\"/tours\">Charles Bridge</a> before the tour groups arrive"
+        },
+        {
+          "de": "Gutes Wetter für <strong>Altstadt- und Jüdisches-Viertel</strong>-Spaziergänge ohne Überhitzung",
+          "en": "Good weather for <strong>Old Town and Jewish Quarter</strong> walks without overheating"
+        },
+        {
+          "de": "Spürbar weniger Besucher als im Sommer",
+          "en": "Noticeably fewer crowds than summer"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Sommer (Juni–August)",
+        "en": "Summer (June–August)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Lange goldene Abende, Open-Air-Konzerte und Sonnenuntergangs-Rooftops",
+          "en": "Long golden evenings, open-air concerts, and sunset rooftops"
+        },
+        {
+          "de": "Gut für <a href=\"/tours\">Prager Burg</a> und Flussspaziergänge — früh oder spät kommen um den Mittagsandrang zu vermeiden",
+          "en": "Good for <a href=\"/tours\">Prague Castle</a> courtyards and river walks — just come early or late to avoid the midday rush"
+        },
+        {
+          "de": "Unterkunft im Voraus buchen. Hochsaison füllt sich schnell.",
+          "en": "Book accommodation in advance. Peak season fills fast."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Herbst (September–November)",
+        "en": "Autumn (September–November)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Amber- und rotes Laub in der Stromovka und auf dem Petřín — Oktober ist meiner Meinung nach der beste Monat hier",
+          "en": "Amber and red foliage in Stromovka and on Petřín hill — October is the best month here in my view"
+        },
+        {
+          "de": "Angenehme Temperaturen, Besucher werden nach Mitte Oktober weniger",
+          "en": "Comfortable temperatures and the crowds thin after mid-October"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Winter (Dezember–Februar)",
+        "en": "Winter (December–February)"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Weihnachtsmärkte</strong> am Altstädter Ring und im Burgareal — nicht verpassen",
+          "en": "<strong>Christmas markets</strong> on Old Town Square and the Castle district — not to be missed"
+        },
+        {
+          "de": "Schneebedeckte Höfe sind fast leer. Gut für Museen und warme Cafés zwischen den Spaziergängen.",
+          "en": "Snow-dusted courtyards are almost empty. Good for museums and warm cafés between walks."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Wünschen Sie eine saisonale Privattour, die zu Ihrem Aufenthalt passt? <a href=\"/contact#contact-title\">Kontaktieren Sie mich</a> und ich plane etwas, das Ihrer Zeit und Ihren Interessen entspricht.",
+        "en": "Want a seasonal private route that works around when you're actually here? <a href=\"/contact#contact-title\">Contact me</a> and I'll plan something that fits your time and interests."
+      }
+    }
+  ]
+}

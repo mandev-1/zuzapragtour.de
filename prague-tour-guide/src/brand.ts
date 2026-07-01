@@ -29,6 +29,18 @@ export const BRAND = {
   /** Social / review platforms */
   tripadvisor:
     'https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html',
+  /** TripAdvisor "write a review" deep link (used by the /bewerten funnel) */
+  tripadvisorWriteReview:
+    'https://www.tripadvisor.de/UserReview-g274707-d10450040-Zuza_Prague_Tours-Prague_Bohemia.html',
+  /**
+   * Google Business review link. Opens Zuzana's Google profile
+   * ("Zuza Prag Tours", knowledge-graph id /g/11w4f9s10x) where
+   * "Write a review" is one tap away.
+   * TODO: for a one-tap deep link into the review dialog, replace with
+   * https://search.google.com/local/writereview?placeid=<PLACE_ID>
+   * (grab <PLACE_ID> from the Google Business Profile "Ask for reviews" link).
+   */
+  googleReview: 'https://share.google/o68FfevojsSVDpK47',
   tourhq:    'https://www.tourhq.com/guide/CZ56896/zuzana-manova',
   instagram: 'https://www.instagram.com/erlebnis_tour_prag/',
 

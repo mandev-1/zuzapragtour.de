@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Prager Burg &amp; St.-Veits-Dom · Zuzana Manová</title>
+<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .thero { position: relative; min-height: 74svh; display: flex; align-items: flex-end; overflow: hidden; }
+  .thero__bg { position: absolute; inset: 0; z-index: 0; }
+  .thero__bg img { width: 100%; height: 100%; object-fit: cover; }
+  .thero__scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,16,12,0.82) 0%, rgba(20,16,12,0.15) 55%, rgba(20,16,12,0.3) 100%); }
+  .thero__inner { position: relative; z-index: 2; width: 100%; padding-bottom: clamp(2.5rem, 6vh, 4.5rem); padding-top: 9rem; }
+  .thero .crumb { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,239,228,0.7); margin-bottom: 1.4rem; display: inline-flex; gap: 0.5rem; }
+  .thero .crumb a { color: rgba(245,239,228,0.7); }
+  .thero .crumb a:hover { color: var(--ivory); }
+  .thero h1 { margin: 0; color: var(--ivory); font-family: var(--font-display); font-weight: 400; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.02; letter-spacing: -0.02em; max-width: 18ch; }
+  .thero__meta { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-top: 1.6rem; color: var(--ivory); }
+  .thero__meta span { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,239,228,0.88); }
+  .thero__meta .material-symbols-outlined { font-size: 17px; color: var(--gold-lamp); }
+
+  .tbody { padding: clamp(3rem, 7vh, 6rem) 0 clamp(4rem, 9vh, 7rem); }
+  .tbody__grid { display: grid; grid-template-columns: 1fr 360px; gap: clamp(2.5rem, 5vw, 5rem); align-items: start; }
+  .lead { font-family: var(--font-italic); font-style: italic; font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.45; color: var(--burgundy); margin: 0 0 1.6rem; }
+  .tbody p { font-family: var(--font-body); font-size: 1.075rem; line-height: 1.78; color: var(--ink-soft); margin: 0 0 1.3rem; }
+  .tbody h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin: 2.6rem 0 1.2rem; }
+  .itin { list-style: none; margin: 0; padding: 0; }
+  .itin li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 1.1rem; padding: 1.1rem 0; border-top: 1px solid var(--rule); }
+  .itin li:last-child { border-bottom: 1px solid var(--rule); }
+  .itin .n { font-family: var(--font-display); color: var(--brass); font-size: 1.1rem; }
+  .itin .t { font-family: var(--font-sans); font-weight: 600; font-size: 0.98rem; color: var(--ink); margin: 0.15rem 0 0.3rem; }
+  .itin .d { font-family: var(--font-body); font-size: 0.98rem; line-height: 1.55; color: var(--ink-mute); margin: 0; }
+
+  /* Booking card (glass) */
+  .bookcard { position: sticky; top: 110px; border: 1px solid rgba(58,51,44,0.08); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.25) 50%), rgba(255,255,255,0.55); -webkit-backdrop-filter: blur(18px) saturate(135%); backdrop-filter: blur(18px) saturate(135%); box-shadow: 0 16px 44px rgba(26,23,20,0.10), inset 0 1px 0 rgba(255,255,255,0.85); padding: 1.8rem; }
+  .bookcard h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; margin: 0 0 0.3rem; }
+  .bookcard .from { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 1.4rem; }
+  .bookcard dl { margin: 0 0 1.5rem; display: grid; gap: 0.9rem; }
+  .bookcard .di { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--rule-soft); }
+  .bookcard .di:last-child { border-bottom: none; padding-bottom: 0; }
+  .bookcard dt { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); }
+  .bookcard dd { margin: 0; font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink); text-align: right; }
+  .bookcard .btn { width: 100%; justify-content: center; margin-bottom: 0.7rem; }
+  .bookcard .call { display: block; text-align: center; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-mute); }
+  .bookcard .call a { color: var(--burgundy); }
+  @media (max-width: 880px) {
+    .tbody__grid { grid-template-columns: 1fr; }
+    .bookcard { position: static; }
+  }
+
+  .related { background: var(--ivory-deep); padding: clamp(3.5rem, 8vh, 6rem) 0; }
+  .related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 2rem; }
+  .rcard { background: var(--surface-card); border: 1px solid var(--rule); overflow: hidden; }
+  .rcard img { width: 100%; height: 180px; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+  .rcard:hover img { transform: scale(1.05); }
+  .rcard__b { padding: 1.2rem 1.3rem 1.4rem; }
+  .rcard__b h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; margin: 0 0 0.4rem; }
+  .rcard__b .m { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-deep); }
+  @media (max-width: 760px) { .related__grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="inner" data-page="tours">
+
+  <header class="nav solid" id="nav"></header>
+
+  <section class="thero">
+    <div class="thero__bg"><img src="../../../assets/images/prague-castle.jpg" alt="Prager Burg"></div>
+    <div class="thero__scrim"></div>
+    <div class="thero__inner shell">
+      <span class="crumb"><a href="tours.html">Touren</a> <span>/</span> Die Prager Burg</span>
+      <h1>Die Prager Burg &amp; St.-Veits-Dom</h1>
+      <div class="thero__meta">
+        <span><span class="material-symbols-outlined">schedule</span>3,5 Stunden</span>
+        <span><span class="material-symbols-outlined">group</span>Private Gruppe</span>
+        <span><span class="material-symbols-outlined">translate</span>Auf Deutsch</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+  <section class="tbody">
+    <div class="shell tbody__grid">
+      <div>
+        <p class="lead">Der größte zusammenhängende Burgkomplex der Welt — und ein Spaziergang durch tausend Jahre böhmischer Geschichte.</p>
+        <p>Wir beginnen oben, bevor die Reisegruppen eintreffen, und arbeiten uns durch die Höfe, in denen Könige gekrönt und Republiken ausgerufen wurden. Ich erzähle Ihnen nicht nur, was Sie sehen — sondern warum es noch immer wichtig ist.</p>
+        <p>Der Höhepunkt ist der St.-Veits-Dom: sechs Jahrhunderte Bauzeit, das Grab des heiligen Wenzel und ein Glasfenster von Alfons Mucha, das im Nachmittagslicht zu leuchten beginnt.</p>
+
+        <h3 class="display">Was wir sehen</h3>
+        <ol class="itin">
+          <li><span class="n">I</span><div><div class="t">Der erste Burghof &amp; das Matthiastor</div><p class="d">Die Wachablösung und der barocke Eingang zur Residenz der Präsidenten.</p></div></li>
+          <li><span class="n">II</span><div><div class="t">St.-Veits-Dom</div><p class="d">Gotische Gewölbe, die Wenzelskapelle und das Mucha-Fenster.</p></div></li>
+          <li><span class="n">III</span><div><div class="t">Der Alte Königspalast</div><p class="d">Der Vladislav-Saal und der Ort des Prager Fenstersturzes.</p></div></li>
+          <li><span class="n">IV</span><div><div class="t">St.-Georgs-Basilika</div><p class="d">Die älteste erhaltene Kirche der Burg, romanisch und still.</p></div></li>
+          <li><span class="n">V</span><div><div class="t">Das Goldene Gässchen</div><p class="d">Winzige Häuschen, Alchemisten-Legenden und Kafkas Schreibstube.</p></div></li>
+        </ol>
+      </div>
+
+      <aside class="bookcard">
+        <h4 class="display">Diese Tour buchen</h4>
+        <p class="from">Privatführung · auf Anfrage</p>
+        <dl>
+          <div class="di"><dt>Dauer</dt><dd>3,5 Stunden</dd></div>
+          <div class="di"><dt>Gruppe</dt><dd>Privat, nur Sie</dd></div>
+          <div class="di"><dt>Treffpunkt</dt><dd>Nach Absprache</dd></div>
+          <div class="di"><dt>Sprache</dt><dd>Deutsch</dd></div>
+        </dl>
+        <a href="kontakt.html" class="btn solid">Anfrage senden <span class="material-symbols-outlined">arrow_forward</span></a>
+        <span class="call">oder rufen Sie an: <a href="tel:+420721231933">+420 721 231 933</a></span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="shell">
+      <span class="kicker">Vielleicht auch interessant</span>
+      <div class="related__grid">
+        <a class="rcard" href="tour-detail.html"><img src="../../../assets/images/jewish-quarter.jpg" alt="Jüdisches Viertel"><div class="rcard__b"><h4 class="display">Altstadt &amp; Jüdisches Viertel</h4><div class="m">4 Stunden · Akkreditiert</div></div></a>
+        <a class="rcard" href="tour-detail.html"><img src="../../../assets/images/night-prague.jpg" alt="Alchemistisches Prag"><div class="rcard__b"><h4 class="display">Das alchemistische Prag</h4><div class="m">3 Stunden · Nach Einbruch</div></div></a>
+        <a class="rcard" href="tour-detail.html"><img src="../../../assets/images/hidden-gems.jpg" alt="Verstecktes Prag"><div class="rcard__b"><h4 class="display">Verstecktes Prag</h4><div class="m">2,5 Stunden · Abseits</div></div></a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+  <script src="site.js"></script>
+</body>
+</html>

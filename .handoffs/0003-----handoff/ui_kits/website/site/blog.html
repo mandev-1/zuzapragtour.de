@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journal · Zuzana Manová</title>
+<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .j-wrap { padding: clamp(2.5rem, 5vh, 4rem) 0 clamp(4rem, 9vh, 7rem); }
+
+  /* Featured lead article */
+  .j-feature { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; padding-bottom: clamp(2.5rem, 5vh, 4rem); border-bottom: 1px solid var(--rule); }
+  .j-feature__media { overflow: hidden; aspect-ratio: 16/11; background: var(--ivory-deep); }
+  .j-feature__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease-out); }
+  .j-feature:hover .j-feature__media img { transform: scale(1.04); }
+  .j-feature .cat { font-family: var(--font-sans); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-deep); display: inline-flex; align-items: center; gap: 0.6rem; }
+  .j-feature .cat::before { content: ""; width: 22px; height: 1px; background: var(--brass); }
+  .j-feature h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.08; margin: 1rem 0 0.9rem; }
+  .j-feature h2 em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+  .j-feature p { font-family: var(--font-body); font-size: 1.075rem; line-height: 1.7; color: var(--ink-soft); margin: 0 0 1.4rem; max-width: 34rem; }
+  .j-feature .meta { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+  @media (max-width: 860px) { .j-feature { grid-template-columns: 1fr; } }
+
+  /* Grid of posts */
+  .j-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.6rem, 3vw, 2.6rem); margin-top: clamp(2.5rem, 5vh, 4rem); }
+  .post { display: flex; flex-direction: column; }
+  .post__media { overflow: hidden; aspect-ratio: 3/2; background: var(--ivory-deep); margin-bottom: 1.1rem; }
+  .post__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+  .post:hover .post__media img { transform: scale(1.05); }
+  .post .cat { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-deep); }
+  .post h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; line-height: 1.16; margin: 0.5rem 0 0.5rem; }
+  .post p { font-family: var(--font-body); font-size: 0.98rem; line-height: 1.6; color: var(--ink-mute); margin: 0 0 0.9rem; }
+  .post .meta { margin-top: auto; font-family: var(--font-sans); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-mute); }
+  @media (max-width: 860px) { .j-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .j-grid { grid-template-columns: 1fr; } }
+
+  .j-news { background: var(--ink); color: var(--ivory); padding: clamp(3.5rem, 8vh, 5.5rem) 0; text-align: center; margin-top: clamp(3rem, 6vh, 5rem); }
+  .j-news .kicker { color: var(--stone-400); justify-content: center; }
+  .j-news .kicker::before, .j-news .kicker.center::after { background: var(--brass); }
+  .j-news h2 { color: var(--ivory); font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 1.1rem auto 1.6rem; max-width: 24ch; }
+  .j-news h2 em { color: var(--gold-lamp); }
+</style>
+</head>
+<body class="inner" data-page="blog">
+
+  <header class="nav solid" id="nav"></header>
+
+  <div class="page-banner">
+    <div class="shell">
+      <span class="kicker">Das Journal</span>
+      <h1 class="display">Geschichten aus <em>Prag</em>.</h1>
+      <p class="sub">Notizen einer Stadtführerin — über Jahreszeiten, versteckte Ecken und die Geschichten, die diese Stadt im Gedächtnis behält.</p>
+    </div>
+  </div>
+
+  <main>
+  <section class="j-wrap">
+    <div class="shell">
+
+      <a class="j-feature reveal" href="article.html">
+        <div class="j-feature__media"><img src="../../../assets/images/autumn-prague.jpg" alt="Prag im Herbst"></div>
+        <div>
+          <span class="cat">Reiseführer</span>
+          <h2>Die beste Zeit, um <em>Prag</em> zu besuchen</h2>
+          <p>Jede Jahreszeit erzählt eine andere Geschichte. Hier ist, wann die Stadt sich Ihnen am ehrlichsten zeigt — und warum der November mein Geheimtipp ist.</p>
+          <span class="meta">9 Min. Lesezeit · Mai 2026</span>
+        </div>
+      </a>
+
+      <div class="j-grid">
+        <a class="post reveal" href="article.html">
+          <div class="post__media"><img src="../../../assets/images/hidden-gems.jpg" alt="Versteckte Höfe"></div>
+          <span class="cat">Verstecktes Prag</span>
+          <h3 class="display">Versteckte Höfe der Altstadt</h3>
+          <p>Sieben Innenhöfe, die kein Reiseführer kennt — und wie Sie hineinkommen.</p>
+          <span class="meta">6 Min. · April 2026</span>
+        </a>
+        <a class="post reveal d1" href="article.html">
+          <div class="post__media"><img src="../../../assets/images/kafka.jpg" alt="Kafkas Prag"></div>
+          <span class="cat">Literatur</span>
+          <h3 class="display">Auf Kafkas Spuren</h3>
+          <p>Ein Spaziergang durch das deutsche Prag, von der Geburtsstätte bis zum Schloss.</p>
+          <span class="meta">7 Min. · März 2026</span>
+        </a>
+        <a class="post reveal d2" href="article.html">
+          <div class="post__media"><img src="../../../assets/images/night-prague.jpg" alt="Prag bei Nacht"></div>
+          <span class="cat">Atmosphäre</span>
+          <h3 class="display">Prag nach Einbruch der Dunkelheit</h3>
+          <p>Warum die Stadt nachts am schönsten ist — und am wenigsten überlaufen.</p>
+          <span class="meta">5 Min. · Februar 2026</span>
+        </a>
+        <a class="post reveal" href="article.html">
+          <div class="post__media"><img src="../../../assets/images/jewish-quarter.jpg" alt="Jüdisches Viertel"></div>
+          <span class="cat">Geschichte</span>
+          <h3 class="display">Das Erbe des Josefov</h3>
+          <p>Sechs Synagogen, ein alter Friedhof und tausend Jahre Geschichte.</p>
+          <span class="meta">8 Min. · Januar 2026</span>
+        </a>
+        <a class="post reveal d1" href="article.html">
+          <div class="post__media"><img src="../../../assets/images/boat-vltava.jpg" alt="Moldau"></div>
+          <span class="cat">Ausflüge</span>
+          <h3 class="display">Prag vom Wasser aus</h3>
+          <p>Die Moldau, ihre Inseln und der beste Blick auf die Karlsbrücke.</p>
+          <span class="meta">5 Min. · Dezember 2025</span>
+        </a>
+        <a class="post reveal d2" href="article.html">
+          <div class="post__media"><img src="../../../assets/images/charles-bridge-statue.jpg" alt="Karlsbrücke"></div>
+          <span class="cat">Wahrzeichen</span>
+          <h3 class="display">Die Statuen der Karlsbrücke</h3>
+          <p>Dreißig Heilige, eine Legende und worauf man wirklich achten sollte.</p>
+          <span class="meta">6 Min. · November 2025</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="j-news">
+    <div class="shell">
+      <span class="kicker center">Bleiben Sie in Verbindung</span>
+      <h2 class="display">Planen Sie einen Besuch? Lassen Sie uns <em>sprechen</em>.</h2>
+      <a href="kontakt.html" class="btn cream">Kontakt aufnehmen <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+  <script src="site.js"></script>
+</body>
+</html>

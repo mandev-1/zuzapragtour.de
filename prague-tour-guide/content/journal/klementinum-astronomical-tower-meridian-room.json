@@ -1,0 +1,120 @@
+{
+  "slug": "klementinum-astronomical-tower-meridian-room",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-18",
+  "dateDisplay": {
+    "de": "18. Oktober 2025",
+    "en": "October 18, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/klementinum-tower.jpg",
+  "title": {
+    "de": "Klementinum: Astronomischer Turm & Aussicht",
+    "en": "Klementinum Astronomical Tower: Views & Stories"
+  },
+  "excerpt": {
+    "de": "Erklimmen Sie den Astronomischen Turm des Klementinums und entdecken Sie das Meridianzimmer—wo Zeit einst mit Sonnenlicht gemessen wurde.",
+    "en": "Climb the Klementinum's Astronomical Tower for sweeping views, then discover the Meridian Room—where time was once measured by sunlight."
+  },
+  "tags": {
+    "de": [
+      "Klementinum",
+      "Astronomie",
+      "Aussichten",
+      "Altstadt"
+    ],
+    "en": [
+      "Klementinum",
+      "Astronomy",
+      "Views",
+      "Old Town"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Von barocker Wissenschaft zum Skyline-Blick",
+        "en": "From Baroque Science to Skyline Vistas"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der <strong>Astronomische Turm</strong> des Klementinums verbindet barocke Wissenschaft mit einer Aussicht, die man nicht schnell vergisst. Nach dem Aufstieg liegt ein <em>360°-Panorama</em> vor einem: Burg, Karlsbrücke, Altstadtdächer.",
+        "en": "The <strong>Astronomical Tower</strong> at the Klementinum pairs baroque science with something genuinely hard to forget. After the climb, you get a <em>360° panorama</em>: Prague Castle, Charles Bridge, Old Town roofs spread out below you."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/klementinum-tower-2.jpg"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Das Meridianzimmer",
+        "en": "The Meridian Room"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vor Atomuhren stellte man die Zeit hier mit einer <strong>Meridianlinie</strong> und einem Sonnenstrahl ein. Ein seltenes Fenster in die Koordination des städtischen Alltags.",
+        "en": "Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It's a rare window into how cities coordinated daily life."
+      }
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Wussten Sie schon?",
+        "en": "Did you know?"
+      },
+      "html": {
+        "de": "<p>Beobachtungen im Klementinum halfen, die Mittagszeit in Prag zu standardisieren—lange vor Funksignalen und GPS.</p>",
+        "en": "<p>Observations at the Klementinum helped standardize noon in Prague—long before radio signals and GPS.</p>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Hinweise",
+        "en": "Practical Notes"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Nur Treppen; der Aufstieg ist moderat, aber stetig.",
+          "en": "Stairs only; the climb is moderate but steady."
+        },
+        {
+          "de": "Wetter beeinflusst die Sicht—klare Nachmittage sind ideal.",
+          "en": "Weather can affect visibility—clear afternoons are ideal."
+        },
+        {
+          "de": "Kombinierbar mit Altstadtgang und <a href=\"/tours\">Karlsbrücken-Route</a>.",
+          "en": "Combine with an Old Town walk and a <a href=\"/tours\">Charles Bridge route</a>."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Wünschen Sie eine maßgeschneiderte Runde mit Zeitfenstern und gutem Licht? <a href=\"/contact#contact-title\">Schreiben Sie mir</a>.",
+        "en": "Want a tailor-made circuit with timed entries and great light? <a href=\"/contact#contact-title\">Message me</a>."
+      }
+    }
+  ]
+}

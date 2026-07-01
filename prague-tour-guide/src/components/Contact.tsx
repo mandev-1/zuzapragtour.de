@@ -1,6 +1,24 @@
+'use client';
+
+/**
+ * Contact — premium "quiet-luxury editorial" direction (0003 kontakt.html).
+ *
+ * Serves BOTH /contact and /book (booking variant). The redesign matches the
+ * handoff's kontakt.html mockup 1:1 (bilingual): the "Erzählen Sie mir, was Sie
+ * interessiert." banner, a personal aside with brand details, and a glass
+ * enquiry card whose form has a real Tour <select> (driven by src/data/tours.ts).
+ *
+ * The real Netlify mechanics are preserved: form name "contact"/"booking",
+ * data-netlify, the bot-field honeypot, the field names (name/email/tour/date/
+ * message — declared in app/layout.tsx), the POST submit handler + success
+ * state, and the #contact-title anchor that header/footer links target.
+ */
+
 import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { BRAND } from '../brand';
+import { tours } from '../data/tours';
+import { Kicker, Reveal, btnClass, SHELL } from './site/SiteUI';
 
 type ContactProps = {
   variant?: 'default' | 'booking';
@@ -12,16 +30,30 @@ const encode = (data: Record<string, string>) =>
     .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
     .join('&');
 
+const WA = `https://wa.me/${BRAND.phoneRaw.replace(/[^0-9]/g, '')}`;
+
+const labelClass = 'mb-[0.4rem] block font-sans text-[12px] text-stone-700';
 const inputClass =
-  'w-full rounded-md border border-stone-200 bg-transparent px-4 py-3 font-body text-sm text-ink placeholder:text-stone-400 transition-colors focus:border-ink focus:outline-none';
+  'w-full rounded-md border border-stone-200 bg-white/60 px-4 py-3 font-body text-[0.98rem] text-ink placeholder:text-ink-mute transition-colors duration-200 focus:border-ink focus:outline-none';
 
 const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitle }) => {
   const { t, language } = useLanguage();
-  const [formData, setFormData] = useState({ name: '', email: '', date: '', phone: '', message: '' });
-  const [submitting,  setSubmitting]  = useState(false);
-  const [submitted,   setSubmitted]   = useState(false);
+  const de = language !== 'en';
+  const isBooking = variant === 'booking';
+
+  const undecided = de ? 'Noch unentschlossen' : 'Still undecided';
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    tour: selectedTourTitle || t(tours[0].titleKey as any),
+    date: '',
+    message: '',
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const nameInputRef = useRef<HTMLInputElement>(null);
+  const formCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)');
@@ -30,8 +62,28 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
     return () => window.cancelAnimationFrame(id);
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // On desktop, when the guest arrives via the #contact-title anchor (the booking
+  // CTAs across the site point at /book#contact-title and /contact#contact-title,
+  // which only land on the heading), glide the enquiry card into view a beat after
+  // load so the actionable Anfrageformular — not just the title — is what greets them.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (window.location.hash !== '#contact-title') return;
+    if (!window.matchMedia('(min-width: 768px)').matches) return;
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const timer = window.setTimeout(() => {
+      const card = formCardRef.current;
+      if (!card) return;
+      const headerClear = 96; // clear the fixed site header + a little air
+      const top = card.getBoundingClientRect().top + window.scrollY - headerClear;
+      window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+    }, 300);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,7 +91,6 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
     setSubmitError(false);
     const formName = isBooking ? 'booking' : 'contact';
     const payload: Record<string, string> = { 'form-name': formName, 'bot-field': '', ...formData };
-    if (isBooking && selectedTourTitle) payload['tourTitle'] = selectedTourTitle;
     try {
       const res = await fetch('/', {
         method: 'POST',
@@ -47,7 +98,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
         body: encode(payload),
       });
       if (res.ok) setSubmitted(true);
-      else        setSubmitError(true);
+      else setSubmitError(true);
     } catch {
       setSubmitError(true);
     } finally {
@@ -55,224 +106,204 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
     }
   };
 
-  const isBooking = variant === 'booking';
+  /* Brand contact details (phone / WhatsApp / e-mail / response time). */
+  const details: { icon: string; label: string; value: string; href?: string }[] = [
+    { icon: 'call', label: de ? 'Telefon' : 'Phone', value: BRAND.phone, href: `tel:${BRAND.phoneRaw}` },
+    { icon: 'chat', label: 'WhatsApp', value: de ? 'Direkt schreiben' : 'Message directly', href: WA },
+    { icon: 'mail', label: 'E-Mail', value: BRAND.email, href: `mailto:${BRAND.email}` },
+    { icon: 'schedule', label: de ? 'Antwortzeit' : 'Response time', value: de ? 'In der Regel unter 24 Stunden' : 'Usually under 24 hours' },
+  ];
 
   return (
-    <div className="bg-paper pb-24">
+    <div className="premium-inner pb-[clamp(3rem,7vh,6rem)] text-ink antialiased">
 
-      {/* Header */}
-      <div className="border-b border-stone-200 px-5 py-10 text-center md:py-14">
-        <p className="mb-3 font-eyebrow text-eyebrow uppercase text-stone-500">
-          {isBooking ? t('contact.booking.header.title') : t('contact.header.title')}
-        </p>
-        <h1 id="contact-title" className="scroll-mt-24 font-headline text-display-md text-ink">
-          {isBooking ? t('contact.booking.header.title') : t('contact.header.title')}
-        </h1>
-        <p className="mx-auto mt-4 max-w-prose font-body text-prose text-stone-600">
-          {isBooking ? t('contact.booking.header.subtitle') : t('contact.header.subtitle')}
-        </p>
-      </div>
-
-      {/* Main grid */}
-      <div className="mx-auto grid max-w-editorial grid-cols-1 gap-12 px-5 py-12 md:px-10 lg:grid-cols-12 lg:gap-16 lg:py-16">
-
-        {/* Form */}
-        <motion.div
-          className="order-1 lg:order-2 lg:col-span-7"
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
+      {/* ── Header band (keeps #contact-title anchor) ───────────────── */}
+      <header className="relative border-b border-rule pb-[clamp(2.5rem,5vh,4rem)] pt-[clamp(2.5rem,6vw,4.5rem)]">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute z-0 hidden select-none leading-none text-brass opacity-[0.02] min-[1180px]:block"
+          style={{ right: 'max(1rem, calc(50vw - 605px))', top: 'clamp(3.5rem, 9vh, 6rem)', fontSize: 'clamp(3.2rem, 6.5vw, 6rem)', transform: 'rotate(-9deg)' }}
         >
-          {submitted ? (
-            <div className="border border-green-200 bg-green-50 px-6 py-14 text-center">
-              <h2 className="mb-2 font-headline text-2xl text-green-800">
-                {language === 'de' ? 'Anfrage gesendet!' : 'Message sent!'}
-              </h2>
-              <p className="mx-auto max-w-sm font-body text-sm leading-relaxed text-green-700">
-                {language === 'de'
-                  ? 'Vielen Dank! Ich melde mich in der Regel innerhalb von 24 Stunden bei Ihnen.'
-                  : 'Thank you! I usually respond within 24 hours.'}
+          ★
+        </span>
+        <div className={`relative z-[1] ${SHELL}`}>
+          <Kicker>{de ? 'Kontakt & Buchung' : 'Contact & Booking'}</Kicker>
+          <h1
+            id="contact-title"
+            className="mt-4 scroll-mt-28 font-display text-[clamp(2.6rem,6vw,4.6rem)] font-normal leading-[1.02] tracking-[-0.02em] text-ink [text-wrap:balance]"
+          >
+            {de ? <>Erzählen Sie mir, was Sie <em className="font-italic italic text-burgundy">interessiert</em>.</> : <>Tell me what <em className="font-italic italic text-burgundy">interests</em> you.</>}
+          </h1>
+          <p className="mt-[1.4rem] max-w-[40rem] font-body text-[clamp(1.05rem,1.4vw,1.2rem)] leading-[1.65] text-ink-mute">
+            {de
+              ? 'Keine Agentur, kein Callcenter. Sie schreiben mir, und ich antworte persönlich — in der Regel innerhalb von 24 Stunden.'
+              : 'No agency, no call centre. You write to me, and I reply personally — usually within 24 hours.'}
+          </p>
+        </div>
+      </header>
+
+      {/* ── Body: aside (left) + enquiry form (right) ───────────────── */}
+      <section className="relative pt-[clamp(2.5rem,5vh,4rem)]">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute z-0 hidden select-none leading-none text-brass opacity-[0.02] min-[1180px]:block"
+          style={{ right: 'max(1rem, calc(50vw - 612px))', top: 'clamp(1.5rem, 4vh, 3rem)', fontSize: 'clamp(2.6rem, 5vw, 4.6rem)', transform: 'rotate(7deg)' }}
+        >
+          ★
+        </span>
+
+        <div className={`relative z-[1] ${SHELL}`}>
+          <div className="grid grid-cols-1 gap-x-[clamp(2.5rem,6vw,5rem)] gap-y-[clamp(2.5rem,6vw,3.5rem)] lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+
+            {/* Aside — personal intro + brand details */}
+            <Reveal className="order-2 lg:order-1">
+              <Kicker>{de ? 'Direkt mit Zuzana' : 'Directly with Zuzana'}</Kicker>
+              <p className="mb-[1.2rem] mt-4 font-italic text-[clamp(1.4rem,2.4vw,1.85rem)] italic leading-[1.42] text-burgundy">
+                {de ? 'Jede gute Tour beginnt mit einem Gespräch.' : 'Every good tour begins with a conversation.'}
               </p>
-            </div>
-          ) : (
-            <div className="border border-stone-200">
-              <div className="border-b border-stone-200 px-6 py-4">
-                <p className="font-eyebrow text-eyebrow uppercase text-stone-500">
-                  {isBooking ? t('form.booking.title') : t('form.title')}
-                </p>
-              </div>
+              <p className="mb-[1.6rem] max-w-[34rem] font-body text-[1.05rem] leading-[1.7] text-ink-soft">
+                {de
+                  ? 'Sagen Sie mir, wer mitkommt und was Sie sehen möchten — oder lassen Sie sich einfach von mir leiten. Ich melde mich persönlich bei Ihnen zurück.'
+                  : "Tell me who's coming and what you'd like to see — or simply let me guide you. I'll get back to you personally."}
+              </p>
 
-              <form
-                name={isBooking ? 'booking' : 'contact'}
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                className="space-y-5 p-6"
-                onSubmit={handleSubmit}
-              >
-                <input type="hidden" name="form-name" value={isBooking ? 'booking' : 'contact'} />
-                <p className="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-                {isBooking && selectedTourTitle && (
-                  <>
-                    <input type="hidden" name="tourTitle" value={selectedTourTitle} />
-                    <div className="border-l-2 border-stone-300 py-1 pl-4">
-                      <p className="font-eyebrow text-eyebrow uppercase text-stone-400">{t('form.selectedTour')}</p>
-                      <p className="font-body text-sm text-ink">{selectedTourTitle}</p>
+              <div className="grid gap-[1.2rem] border-t border-rule pt-[1.6rem]">
+                {details.map((d) => {
+                  const ext = d.href?.startsWith('http');
+                  return (
+                    <div key={d.label} className="flex items-start gap-[0.9rem]">
+                      <span className="material-symbols-outlined mt-[2px] text-[20px] text-burgundy" aria-hidden>{d.icon}</span>
+                      <div>
+                        <div className="font-sans text-[10px] uppercase tracking-[0.18em] text-ink-mute">{d.label}</div>
+                        <div className="mt-[2px] font-sans text-[0.98rem] text-ink">
+                          {d.href ? (
+                            <a
+                              href={d.href}
+                              target={ext ? '_blank' : undefined}
+                              rel={ext ? 'noopener noreferrer' : undefined}
+                              className="underline underline-offset-4 transition-colors hover:text-burgundy"
+                            >
+                              {d.value}
+                            </a>
+                          ) : (
+                            d.value
+                          )}
+                        </div>
+                      </div>
                     </div>
+                  );
+                })}
+              </div>
+            </Reveal>
+
+            {/* Form — glass enquiry card */}
+            <Reveal delay={80} className="order-1 lg:order-2">
+              <div ref={formCardRef} className="overflow-hidden rounded-xl border border-[rgba(58,51,44,0.08)] bg-white/70 shadow-[0_16px_44px_rgba(26,23,20,0.10)] backdrop-blur-[18px]">
+                {submitted ? (
+                  <div className="px-6 py-[clamp(3rem,7vw,4.5rem)] text-center">
+                    <span className="material-symbols-outlined text-[40px] text-burgundy" aria-hidden style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                    <h2 className="mt-3 font-display text-[1.8rem] font-normal text-ink">
+                      {de ? 'Anfrage gesendet' : 'Request sent'}
+                    </h2>
+                    <p className="mx-auto mt-2 max-w-[26rem] font-body text-[1rem] leading-[1.6] text-ink-soft">
+                      {de
+                        ? 'Vielen Dank! Ich melde mich in der Regel innerhalb von 24 Stunden persönlich bei Ihnen.'
+                        : "Thank you! I'll get back to you personally, usually within 24 hours."}
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <div className="border-b border-rule px-[clamp(1.4rem,3vw,1.8rem)] py-[1.3rem]">
+                      <Kicker>{de ? 'Anfrageformular' : 'Enquiry form'}</Kicker>
+                    </div>
+
+                    <form
+                      name={isBooking ? 'booking' : 'contact'}
+                      data-netlify="true"
+                      netlify-honeypot="bot-field"
+                      className="grid gap-[1.2rem] px-[clamp(1.4rem,3vw,1.8rem)] py-[clamp(1.6rem,3vw,1.9rem)]"
+                      onSubmit={handleSubmit}
+                    >
+                      <input type="hidden" name="form-name" value={isBooking ? 'booking' : 'contact'} />
+                      <p className="hidden"><label>Don&apos;t fill this out: <input name="bot-field" /></label></p>
+
+                      <div className="grid grid-cols-1 gap-[1.2rem] sm:grid-cols-2">
+                        <div>
+                          <label htmlFor="name" className={labelClass}>{t('form.name')} *</label>
+                          <input ref={nameInputRef} id="name" name="name" type="text" required placeholder={de ? 'Ihr Name' : 'Your name'} value={formData.name} onChange={handleChange} className={inputClass} />
+                        </div>
+                        <div>
+                          <label htmlFor="email" className={labelClass}>{t('form.email')} *</label>
+                          <input id="email" name="email" type="email" required placeholder={de ? 'ihre@email.de' : 'you@email.com'} value={formData.email} onChange={handleChange} className={inputClass} />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 gap-[1.2rem] sm:grid-cols-2">
+                        <div>
+                          <label htmlFor="tour" className={labelClass}>Tour</label>
+                          <select id="tour" name="tour" value={formData.tour} onChange={handleChange} className={inputClass}>
+                            {tours.map((tr) => {
+                              const title = t(tr.titleKey as any);
+                              return <option key={tr.id} value={title}>{title}</option>;
+                            })}
+                            <option value={undecided}>{undecided}</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label htmlFor="date" className={labelClass}>{de ? 'Wunschtermin' : 'Preferred date'}</label>
+                          <input id="date" name="date" type="text" placeholder={de ? 'z. B. Mai 2026' : 'e.g. May 2026'} value={formData.date} onChange={handleChange} className={inputClass} />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label htmlFor="message" className={labelClass}>{de ? 'Nachricht' : 'Message'}</label>
+                        <textarea
+                          id="message" name="message" rows={4}
+                          value={formData.message} onChange={handleChange}
+                          placeholder={de ? 'Erzählen Sie mir von Ihrer Gruppe und was Sie in Prag sehen möchten…' : "Tell me about your group and what you'd like to see in Prague…"}
+                          className={`${inputClass} min-h-[120px] resize-y`}
+                        />
+                      </div>
+
+                      {submitError && (
+                        <p className="rounded-md bg-burgundy/5 px-4 py-2.5 text-center font-body text-[0.9rem] text-burgundy-deep">
+                          {de
+                            ? 'Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie mir per WhatsApp.'
+                            : 'Something went wrong. Please try again or reach me on WhatsApp.'}
+                        </p>
+                      )}
+
+                      <button
+                        type="submit"
+                        disabled={submitting}
+                        className={`${btnClass('solid')} w-full justify-center disabled:opacity-60`}
+                      >
+                        {submitting ? (de ? 'Wird gesendet…' : 'Sending…') : (de ? 'Anfrage senden' : 'Send enquiry')}
+                        <span className="material-symbols-outlined text-[17px] transition-transform duration-300 group-hover:translate-x-1" aria-hidden>arrow_forward</span>
+                      </button>
+
+                      <p className="text-center font-sans text-[12px] text-stone-400">
+                        {de ? 'Ihre Daten sind sicher und werden nicht weitergegeben.' : 'Your data is safe and will not be shared.'}
+                      </p>
+                    </form>
                   </>
                 )}
+              </div>
+            </Reveal>
 
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className="mb-1.5 block font-label text-sm text-stone-700">{t('form.name')} *</label>
-                    <input ref={nameInputRef} id="name" name="name" type="text" required value={formData.name} onChange={handleChange} className={inputClass} />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="mb-1.5 block font-label text-sm text-stone-700">{t('form.email')} *</label>
-                    <input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} className={inputClass} />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="date" className="mb-1.5 block font-label text-sm text-stone-700">{t('form.date')}</label>
-                    <input
-                      id="date" name="date" type="text"
-                      placeholder={language === 'de' ? 'z. B. Mai 2025' : 'e.g. May 2025'}
-                      value={formData.date} onChange={handleChange} className={inputClass}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="mb-1.5 block font-label text-sm text-stone-700">{t('form.phone.optional')}</label>
-                    <input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} className={inputClass} />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="mb-1.5 block font-label text-sm text-stone-700">
-                    {isBooking ? t('form.booking.message') : t('form.message')}
-                  </label>
-                  <textarea
-                    id="message" name="message" rows={4}
-                    value={formData.message} onChange={handleChange}
-                    placeholder={isBooking ? t('form.booking.messagePlaceholderShort') : t('form.messagePlaceholder')}
-                    className={`${inputClass} resize-none`}
-                  />
-                </div>
-
-                {submitError && (
-                  <p className="bg-red-50 px-4 py-2 text-center font-body text-sm text-red-700">
-                    {language === 'de'
-                      ? 'Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie mir per WhatsApp.'
-                      : 'Something went wrong. Please try again or reach me on WhatsApp.'}
-                  </p>
-                )}
-
-                <button
-                  type="submit" disabled={submitting}
-                  className="w-full rounded-md bg-ink py-3.5 font-label text-sm font-medium text-paper transition-colors hover:bg-ink-soft disabled:opacity-60"
-                >
-                  {submitting
-                    ? (language === 'de' ? 'Wird gesendet…' : 'Sending…')
-                    : (isBooking ? t('form.booking.submit') : t('form.submit'))}
-                </button>
-                <p className="text-center font-label text-xs text-stone-400">
-                  {language === 'de' ? 'Ihre Daten sind sicher und werden nicht weitergegeben' : 'Your data is safe and will not be shared'}
-                </p>
-              </form>
-            </div>
-          )}
-        </motion.div>
-
-        {/* Sidebar */}
-        <motion.div
-          className="order-2 space-y-8 lg:order-1 lg:col-span-5"
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }}
-        >
-          <div className="flex items-start gap-4">
-            <img
-              src="/images/zuzana-portrait.jpg" alt="Zuzana Manová"
-              className="h-16 w-16 flex-shrink-0 rounded-sm object-cover md:h-20 md:w-20"
-              style={{ objectPosition: 'center 20%' }}
-            />
-            <div>
-              <h2 className="font-headline text-lg text-ink md:text-xl">
-                {isBooking ? t('contact.booking.intro.title') : t('contact.intro.title')}
-              </h2>
-              <p className="mt-1 font-body text-sm leading-relaxed text-stone-600">
-                {isBooking ? t('contact.booking.intro.text') : t('contact.intro.text')}
-              </p>
-            </div>
-          </div>
-
-          {isBooking && selectedTourTitle && /jewish|jüdisch/i.test(selectedTourTitle) && (
-            <div className="border-l-2 border-stone-300 py-1 pl-4">
-              <h3 className="mb-1 font-headline text-sm text-ink">{t('contact.jewish.credential.title')}</h3>
-              <p className="font-body text-sm leading-relaxed text-stone-600">{t('contact.jewish.credential.text')}</p>
-            </div>
-          )}
-
-          <div className="space-y-5 border-t border-stone-200 pt-6">
-            <div>
-              <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">{t('contact.phone.title')}</p>
-              <a href="tel:+420721231933" className="font-label text-sm text-ink underline-offset-4 hover:underline">+420 721 231 933</a>
-            </div>
-            <div>
-              <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">WhatsApp</p>
-              <a href="https://wa.me/420721231933" target="_blank" rel="noopener noreferrer"
-                className="font-label text-sm text-ink underline-offset-4 hover:underline">
-                {isBooking ? t('contact.booking.phone.whatsapp') : t('contact.phone.whatsapp')}
-              </a>
-            </div>
-            <div>
-              <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">{t('contact.email.title')}</p>
-              <a href="mailto:zuzanamanova@email.cz" className="font-label text-sm text-ink underline-offset-4 hover:underline">
-                zuzanamanova@email.cz
-              </a>
-            </div>
-            <div>
-              <p className="mb-0.5 font-eyebrow text-eyebrow uppercase text-stone-400">{t('contact.response.title')}</p>
-              <p className="font-body text-sm text-stone-600">{t('contact.response.text')}</p>
-            </div>
-          </div>
-
-          <div className="border-t border-stone-200 pt-6">
-            <blockquote className="font-headline text-base italic leading-relaxed text-ink">
-              <span aria-hidden>&ldquo;</span>{t('contact.review.quote')}<span aria-hidden>&rdquo;</span>
-            </blockquote>
-            <p className="mt-3 font-eyebrow text-eyebrow uppercase text-stone-400">— {t('contact.review.author')}</p>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* FAQ */}
-      <section className="border-t border-stone-200">
-        <div className="mx-auto max-w-prose px-5 py-14 md:px-10">
-          <h2 className="mb-8 font-headline text-xl text-ink">{t('contact.faq.title')}</h2>
-          <div className="divide-y divide-stone-200">
-            {(
-              [
-                { q: 'contact.faq.q1', a: 'contact.faq.a1' },
-                { q: 'contact.faq.q2', a: 'contact.faq.a2' },
-                { q: 'contact.faq.q3', a: 'contact.faq.a3' },
-              ] as const
-            ).map(({ q, a }) => (
-              <details key={q} className="group py-1">
-                <summary className="cursor-pointer list-none py-4 font-headline text-base text-ink">
-                  {t(q as any)}
-                </summary>
-                <p className="pb-4 font-body text-sm leading-relaxed text-stone-600">{t(a as any)}</p>
-              </details>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Sticky WhatsApp (mobile only) */}
+      {/* ── Sticky WhatsApp (mobile only) ───────────────────────────── */}
       <a
-        href="https://wa.me/420721231933"
-        target="_blank" rel="noopener noreferrer"
-        className="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[#25d366] px-6 py-3 font-label text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 md:hidden"
+        href={WA}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[#25d366] px-6 py-3 font-sans text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 md:hidden"
         aria-label="WhatsApp"
       >
+        <span className="material-symbols-outlined text-[18px]" aria-hidden>chat</span>
         {t('contact.whatsapp.sticky')}
       </a>
     </div>

@@ -1,6 +1,7 @@
 // Translations for the Prague Tour Guide Website
 // German (DE) and English (EN)
 import { blogTranslations } from './blogTranslations';
+import { journalContent } from './journalGenerated';
 
 export const translations = {
   'nav.home': {
@@ -1256,7 +1257,11 @@ export const translations = {
     en: 'Quick Links',
     de: 'Schnelllinks',
   },
-  
+  'footer.review': {
+    en: 'Leave a review',
+    de: 'Tour bewerten',
+  },
+
   // Reviews / Social Proof
   'reviews.tripadvisor': {
     en: 'Rated 4.9/5 on TripAdvisor',
@@ -2191,6 +2196,12 @@ export const translations = {
 export type TranslationKey = keyof typeof translations;
 
 export const translate = (key: TranslationKey, language: 'en' | 'de'): string => {
+  // Journal CMS content (generated). German-only articles fall back to `de`
+  // so an English visitor still sees the article rather than the raw key.
+  if ((journalContent as any)[key]) {
+    const entry = (journalContent as any)[key];
+    return entry?.[language] || entry?.de || key;
+  }
   // Prefer blog translations from the separate module when available
   if ((blogTranslations as any)[key]) {
     return (blogTranslations as any)[key]?.[language] || key;

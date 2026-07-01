@@ -1,0 +1,167 @@
+{
+  "slug": "strahov-monastery-prague",
+  "slugDe": "strahov-kloster-prag",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-19",
+  "dateDisplay": {
+    "de": "18. Oktober 2025",
+    "en": "October 18, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/strahov-monastery.jpg",
+  "title": {
+    "de": "Strahov-Kloster: Bibliothek & Aussicht",
+    "en": "Strahov Monastery: Views, Library & Lore"
+  },
+  "excerpt": {
+    "de": "Sanft oberhalb der Kleinseite: ruhige Blicke, legendäre Bibliothek (mit Genehmigung) und ein klassischer Prager Klosterweg.",
+    "en": "Climb gently above Lesser Town for calm views, a legendary library (with permits), and a classic Prague monastery walk."
+  },
+  "tags": {
+    "de": [
+      "Strahover Kloster",
+      "Prager Aussichtspunkte",
+      "Barockbibliotheken",
+      "Petřín",
+      "Burggebiet",
+      "Altstadtblicke",
+      "Prag besuchen",
+      "Prag Reiseroute",
+      "Fotografie"
+    ],
+    "en": [
+      "Strahov Monastery",
+      "Prague viewpoints",
+      "Baroque libraries",
+      "Petřín",
+      "Prague Castle area",
+      "Old Town views",
+      "Visit Prague",
+      "Prague itinerary",
+      "Photography"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Strahovs stille Kraft",
+        "en": "Strahov's Quiet Power"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Oberhalb der Kleinseite bietet das <strong>Strahov-Kloster</strong> einen besinnlichen Aufstieg und weite Blicke. Ein Ort für Gäste, die Raum, Texturen und die Schichten Prager Geschichte spüren möchten.",
+        "en": "Above Lesser Town, <strong>Strahov Monastery</strong> offers a reflective climb and sweeping views. It's where I bring guests who want space, texture, and a sense of Prague's layered history."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Aussichten & Weg",
+        "en": "Viewpoints & The Walk"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Petřín-Terrassen:</strong> Sanfte Hänge mit Stadtblicken—bei jedem Licht schön.",
+          "en": "<strong>Petřín terraces:</strong> Soft slopes with city vistas, good in all light."
+        },
+        {
+          "de": "<strong>Klosterkamm:</strong> Ruhige Wege zu Dächern und Schloss-Silhouetten.",
+          "en": "<strong>Monastery ridge:</strong> Quiet paths to rooftops and castle silhouettes."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Bibliothek & Legenden",
+        "en": "Library & Lore"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Philosophischer & Theologischer Saal:</strong> Zutritt und Fotografie <strong>oft nur mit Genehmigung</strong>.",
+          "en": "<strong>Philosophical & Theological Halls:</strong> Access and photography <strong>often by permit only</strong>."
+        },
+        {
+          "de": "<strong>Strahov-Brauerei:</strong> Traditioneller Stopp zum Aufwärmen nach dem Gang.",
+          "en": "<strong>Strahov Brewery:</strong> A traditional stop to warm up after the walk."
+        }
+      ]
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Wussten Sie schon?",
+        "en": "Did you know?"
+      },
+      "html": {
+        "de": "<p>Zu den Sammlungen gehören <strong>Globen und Kuriositäten</strong>, verwandt in Geist und Atmosphäre mit der <a href=\"/blog/klementinum-baroque-library-prague\">Barockbibliothek im Klementinum</a>.</p>",
+        "en": "<p>Collections include <strong>globes and curiosities</strong>, cousin in spirit to the <a href=\"/blog/klementinum-baroque-library-prague\">Klementinum Baroque Library</a>.</p>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Routenideen",
+        "en": "Route Ideas"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Kombinieren Sie Strahov mit <a href=\"/blog/top-prague-gardens-to-visit\">Palast- und Klostergärten</a> zu einer malerischen Runde, oder steigen Sie über die <em>Kleinseite</em> ab zu <a href=\"/blog/top-21-instagrammable-places-in-prague\">ikonischen Fotospots</a>.",
+        "en": "Pair Strahov with <a href=\"/blog/top-prague-gardens-to-visit\">palace and monastery gardens</a>, or descend via <em>Malá Strana</em> into <a href=\"/blog/top-21-instagrammable-places-in-prague\">classic photo spots</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Tipps",
+        "en": "Practical Tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Öffnungszeiten</strong> der Basilika und Bibliothek prüfen; Bibliothekszugang oft nur mit Führung oder Genehmigung.",
+          "en": "Check <strong>opening hours</strong> for the basilica and library; library access often guided or by permit."
+        },
+        {
+          "de": "Morgen oder später Nachmittag bieten sanftes Licht und weniger Besucher.",
+          "en": "Morning and late afternoon bring softer light and fewer people."
+        },
+        {
+          "de": "Bequeme Schuhe—Pflaster und Steigungen zwischen Petřín und Burg können anspruchsvoll sein.",
+          "en": "Comfortable shoes—cobblestones and slopes between Petřín and the Castle."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Möchten Sie eine ruhige <strong>Strahov + Burg</strong>-Route mit den besten Aussichtspunkten? <a href=\"/book?tour=Individuelle%20Privattour#contact-title\">Private Tour buchen</a>—ich passe den Spaziergang an Ihr Tempo an.",
+        "en": "Want a quiet <strong>Strahov + Castle</strong> route with the best overlooks? <a href=\"/book?tour=Custom%20Private%20Tour#contact-title\">Book a private tour</a>—I'll match the pace to yours."
+      }
+    }
+  ]
+}

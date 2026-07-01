@@ -39,7 +39,10 @@ const BlogPromo: React.FC = () => {
   const [visible, setVisible] = React.useState(false);
   const [exiting, setExiting] = React.useState(false);
 
-  const isHidden = pathname === '/' || pathname === `/blog/${PROMO_SLUG}`;
+  const isHidden =
+    pathname === '/' ||
+    pathname === `/blog/${PROMO_SLUG}` ||
+    (pathname ?? '').startsWith('/bewerten');
 
   React.useEffect(() => {
     if (isHidden) return;

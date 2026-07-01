@@ -1,0 +1,212 @@
+{
+  "slug": "spring-in-prague",
+  "slugDe": "prag-im-fruehling",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-04-01",
+  "dateDisplay": {
+    "de": "1. April 2026",
+    "en": "April 1, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-spring-prague.jpg",
+  "title": {
+    "de": "Prag im Frühling: Die besten Aktivitäten",
+    "en": "Prague in Spring: Best Things to Do"
+  },
+  "excerpt": {
+    "de": "Kirschblüten auf dem Petřínhügel, Ostermärkte auf dem Altstädter Ring und das Prager Frühling Musikfestival — alles, was Sie für einen Prag-Besuch im Frühling wissen müssen.",
+    "en": "Cherry blossoms on Petřín Hill, Easter markets on Old Town Square, and the Prague Spring Music Festival — here's everything you need to know about visiting Prague in spring."
+  },
+  "tags": {
+    "de": [
+      "Prag im Frühling",
+      "Frühling in Prag",
+      "Prag Kirschblüten",
+      "Petřín Blüten",
+      "Ostern Prag",
+      "Prag März April Mai",
+      "Prag Frühlingsevents",
+      "Prager Frühling Festival"
+    ],
+    "en": [
+      "Spring in Prague",
+      "Prague in spring",
+      "Prague cherry blossoms",
+      "Petřín blossoms",
+      "Easter Prague",
+      "Prague March April May",
+      "Prague spring events",
+      "Prague Spring Festival"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag im Frühling: was Sie Monat für Monat erwartet",
+        "en": "Spring in Prague: what to do, month by month"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Im März zeigen sich die ersten Schneeglöckchen in Prags Gärten, im April füllen Kirschblüten die Hügelparks, und im Mai verwandelt sich die Stadt in ein Open-Air-Festivalgelände. Der Frühling kommt, bevor die Sommermassen eintreffen, und er fotografiert sich besser als jede andere Jahreszeit hier.",
+        "en": "March brings the first snowdrops to Prague's gardens, April fills the hilltop parks with cherry blossoms, and May turns the city into an open-air festival ground. Spring arrives before the summer crowds, and it photographs better than any other season here."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wann beginnt der Frühling und was erwartet Sie",
+        "en": "When spring starts and what to expect"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>März</strong> ist kühl (5 bis 12 °C) und ruhig. Gut für Museen, <a href=\"https://www.hrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Burgführungen</a> und die ersten Außenplätze in Cafés. <strong>April</strong> ist der Monat, in dem es losgeht: Blüten auf dem Petřín und in den Palastgärten, Ostermärkte auf dem Altstädter Ring, lange Abende. <strong>Mai</strong> wärmt sich auf 18 bis 22 °C und bringt das <a href=\"https://www.festival.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Frühling Musikfestival</a>, die Nacht der Museen und bunte Märkte in der ganzen Stadt.",
+        "en": "<strong>March</strong> is cool (5 to 12 °C) and quiet. Good for museums, <a href=\"https://www.hrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">castle tours</a>, and claiming the first outdoor café seats of the year. <strong>April</strong> is when things turn: blossoms at Petřín and the Palace Gardens, Easter markets on Old Town Square, long evenings. <strong>May</strong> warms to 18 to 22 °C and brings the <a href=\"https://www.festival.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Spring International Music Festival</a>, the Night of the Museums, and colourful markets citywide."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Kirschblüten und wo Sie sie finden",
+        "en": "Cherry blossoms and where to find them"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Petřínhügel",
+        "en": "Petřín Hill"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Obstgärten auf dem Petřín strahlen Mitte April in Rosa und Weiß. Vom <a href=\"https://www.prague.eu/en/object/places/176/petrinska-rozhledna-petrin-lookout-tower\" target=\"_blank\" rel=\"noopener noreferrer\">Aussichtsturm</a> oben sehen Sie die Blüten mit der ganzen Skyline dahinter.",
+        "en": "The orchards on Petřín burst into pink and white blossom mid-April. The <a href=\"https://www.prague.eu/en/object/places/176/petrinska-rozhledna-petrin-lookout-tower\" target=\"_blank\" rel=\"noopener noreferrer\">Lookout Tower</a> at the top gives you the blossoms with the whole skyline behind them."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Palastgärten unterhalb der Prager Burg",
+        "en": "Palace Gardens below Prague Castle"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Diese terrassierten Barockgärten öffnen im April und ziehen sich den Burghügel hinunter. Tulpen, Glyzinien, Dachblicke. Vor 10:00 Uhr haben Sie sie fast für sich allein.",
+        "en": "These terraced Baroque gardens open in April and cascade down the Castle hill. Tulips, wisteria, views over the rooftops. Get there before 10:00 to have them mostly to yourself."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Vrtba-Garten (UNESCO)",
+        "en": "Vrtba Garden (UNESCO)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein Barockgarten, versteckt in Malá Strana. Formelle Blumenbeete, eine von Statuen gesäumte Treppe und ein Blick, der immer wieder Leute überrascht, die ihn von einer Seitenstraße aus nicht erwartet hätten. Weniger Besucher, als man denkt.",
+        "en": "A Baroque garden hidden in Malá Strana. Formal flowerbeds, a stairway lined with statues, and a view that keeps surprising people who did not expect it from a side street. Fewer visitors than you would think."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stromovka und Letná Park",
+        "en": "Stromovka and Letná Park"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Für einen ruhigeren Morgen füllt sich die <a href=\"https://www.prague.eu/en/object/places/1139/stromovka\" target=\"_blank\" rel=\"noopener noreferrer\">Stromovka</a> mit Joggern, Radfahrern und Familien. Der Letná Park hat den Biergarten, auf den den ganzen Winter alle gewartet haben; er öffnet um Ostern.",
+        "en": "For a slower morning, <a href=\"https://www.prague.eu/en/object/places/1139/stromovka\" target=\"_blank\" rel=\"noopener noreferrer\">Stromovka</a> fills up with joggers, cyclists, and families. Letná Park has the beer garden that everyone is waiting for all winter; it opens around Easter."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Ostern in Prag",
+        "en": "Easter in Prague"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prags Ostermärkte (Ende März bis April) füllen den <a href=\"https://www.prague.eu/en/object/places/3130/old-town-square\" target=\"_blank\" rel=\"noopener noreferrer\">Altstädter Ring</a> und das Burgareal mit handbemalten Eiern, gegrillten Würsten, Met und Volkshandwerk. Weniger hektisch als die Weihnachtsmärkte und wärmer, als man denkt.",
+        "en": "Prague's Easter markets (late March through April) fill <a href=\"https://www.prague.eu/en/object/places/3130/old-town-square\" target=\"_blank\" rel=\"noopener noreferrer\">Old Town Square</a> and the Castle district with hand-painted eggs, grilled sausages, mead, and folk crafts. Less hectic than the Christmas markets and warmer than you would think."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Frühlingsevents, die eine Planung lohnen",
+        "en": "Spring events worth planning around"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong><a href=\"https://www.festival.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Frühling Internationales Musikfestival</a></strong> (Mai bis Juni). Konzerte im Smetana-Saal und Rudolfinum, unter anderem. Karten verkaufen sich früh.",
+          "en": "<strong><a href=\"https://www.festival.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Spring International Music Festival</a></strong> (May to June). Concerts in Smetana Hall and the Rudolfinum, among other historic venues. Tickets sell early."
+        },
+        {
+          "de": "<strong>Nacht der Museen</strong> (Mitte Mai). Dutzende Museen öffnen kostenlos bis Mitternacht. Gut für Familien.",
+          "en": "<strong>Night of Museums</strong> (mid-May). Dozens of museums open free until midnight. Good for families."
+        },
+        {
+          "de": "<strong><a href=\"https://www.runczech.com/en/events/prague-marathon\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Marathon</a></strong> (Mai). Von den Flussuferanlagen aus sehenswert, auch wenn man nicht mitläuft.",
+          "en": "<strong><a href=\"https://www.runczech.com/en/events/prague-marathon\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Marathon</a></strong> (May). Worth watching from the riverbanks even if you are not running."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Frühlingstipps",
+        "en": "Practical spring tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Mehrere Schichten einpacken. Morgens kann es 8 °C sein, nachmittags im Mai bis zu 20 °C.",
+          "en": "Pack layers. Mornings can be 8 °C while afternoons reach 20 °C in May."
+        },
+        {
+          "de": "Gärten öffnen im April (meist um Ostern) und schließen im Oktober. Öffnungszeiten vorab prüfen.",
+          "en": "Gardens open in April (usually around Easter) and close in October. Check hours before visiting."
+        },
+        {
+          "de": "Unterkunft für Ostermärkte zwei bis drei Monate im Voraus buchen. Aprilwochenenden füllen sich schnell.",
+          "en": "Book Easter-weekend accommodation two to three months ahead. April weekends fill quickly."
+        },
+        {
+          "de": "Das Frühlingslicht ist weich. Die goldene Stunde beginnt im Mai gegen 19 bis 20 Uhr, gut für Fotos von überall am Fluss.",
+          "en": "Spring light is soft. Golden hour arrives around 19:00 to 20:00 in May, good for photos from anywhere along the river."
+        }
+      ]
+    }
+  ]
+}

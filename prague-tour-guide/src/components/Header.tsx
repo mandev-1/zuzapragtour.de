@@ -6,50 +6,43 @@ import { usePathname } from 'next/navigation';
 import { useLanguage } from '../context/LanguageContext';
 import { isPragkennerSite } from '../config/siteBrand';
 
-const NavLink: React.FC<{
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-}> = ({ href, children, className, onClick }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href || (href !== '/' && (pathname ?? '').startsWith(href));
-  const defaultClass = [
-    'font-label text-sm tracking-wide transition-colors',
-    isActive ? 'text-ink' : 'text-stone-500 hover:text-ink',
-  ].join(' ');
-  return (
-    <Link href={href} className={className ?? defaultClass} onClick={onClick}>
-      {children}
-    </Link>
-  );
-};
+/** Primary nav — premium 0003 design. /blog is labelled "Journal". */
+const NAV: { href: string; key?: string; label?: string }[] = [
+  { href: '/tours', key: 'nav.tours' },
+  { href: '/zuzana-manova', key: 'nav.zuzana' },
+  { href: '/blog', label: 'Journal' },
+  { href: '/contact', key: 'nav.contact' },
+];
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { t } = useLanguage();
+  const pathname = usePathname();
   const close = () => setIsMenuOpen(false);
 
-  const nav = (
-    <nav className="hidden items-center gap-8 lg:flex">
-      <NavLink href="/tours">{t('nav.tours')}</NavLink>
-      <NavLink href="/zuzana-manova">{t('nav.zuzana')}</NavLink>
-      <NavLink href="/blog">{t('nav.blog')}</NavLink>
-      <NavLink href="/contact">{t('nav.contact')}</NavLink>
-      <a
-        href="tel:+420721231933"
-        className="font-label text-sm tracking-wide text-stone-500 transition-colors hover:text-ink"
-      >
-        +420 721 231 933
-      </a>
-      <Link
-        href="/book#contact-title"
-        className="rounded-md border border-ink px-4 py-2 font-label text-sm text-ink transition-colors hover:bg-ink hover:text-paper"
-      >
-        {t('contact.booking.header.title')}
-      </Link>
-    </nav>
-  );
+  // Transparent over the cinematic home hero; turns glassy-solid once the guest
+  // scrolls past it. Every other page (and the open mobile menu) ships solid.
+  const isHome = pathname === '/';
+  const [solid, setSolid] = React.useState(!isHome);
+  React.useEffect(() => {
+    if (!isHome) {
+      setSolid(true);
+      return;
+    }
+    const onScroll = () => setSolid(window.scrollY > window.innerHeight * 0.7);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isHome]);
+  const light = isHome && !solid && !isMenuOpen;
+
+  const isActive = (href: string) => pathname === href || (href !== '/' && (pathname ?? '').startsWith(href));
+  const navLabel = (n: (typeof NAV)[number]) => (n.label ? n.label : t(n.key as any));
+
+  const linkClass = (active: boolean) =>
+    `font-sans text-[12px] uppercase tracking-[0.14em] transition-colors duration-200 ${
+      light ? (active ? 'text-ivory' : 'text-ivory/80 hover:text-ivory') : active ? 'text-ink' : 'text-ink-mute hover:text-ink'
+    }`;
 
   const brand = (
     <Link href="/" className="flex shrink-0 items-center gap-3" onClick={close}>
@@ -63,16 +56,29 @@ const Header: React.FC = () => {
           decoding="async"
         />
       ) : (
-        <>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink font-headline text-sm font-medium text-paper">
-            Z
-          </span>
-          <span className="font-headline text-base font-medium tracking-tight text-ink sm:text-lg">
-            Zuzana Manová
-          </span>
-        </>
+        <span className={`font-display text-[1.35rem] tracking-[0.02em] transition-colors duration-300 ${light ? 'text-ivory' : 'text-ink'}`}>
+          Zuza <b className="font-normal">&amp;</b> Pragtour
+        </span>
       )}
     </Link>
+  );
+
+  const desktopNav = (
+    <nav className="hidden items-center gap-[2.4rem] lg:flex">
+      {NAV.map((n) => (
+        <Link key={n.href} href={n.href} className={linkClass(isActive(n.href))}>
+          {navLabel(n)}
+        </Link>
+      ))}
+      <Link
+        href="/book#contact-title"
+        className={`border px-[1.3rem] py-[0.7rem] font-sans text-[12px] uppercase tracking-[0.14em] transition-colors duration-300 ${
+          light ? 'border-ivory/55 text-ivory hover:bg-ivory hover:text-ink' : 'border-ink text-ink hover:bg-ink hover:text-paper'
+        }`}
+      >
+        {t('contact.booking.header.title')}
+      </Link>
+    </nav>
   );
 
   const hamburger = (
@@ -83,29 +89,46 @@ const Header: React.FC = () => {
       aria-expanded={isMenuOpen}
       aria-label="Menu"
     >
-      <span className={`h-px w-5 bg-ink transition-transform ${isMenuOpen ? 'translate-y-1 rotate-45' : ''}`} />
-      <span className={`h-px w-5 bg-ink transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
-      <span className={`h-px w-5 bg-ink transition-transform ${isMenuOpen ? '-translate-y-[5px] -rotate-45' : ''}`} />
+      <span className={`h-px w-6 transition-transform ${light ? 'bg-ivory' : 'bg-ink'} ${isMenuOpen ? 'translate-y-[7px] rotate-45' : ''}`} />
+      <span className={`h-px w-6 transition-opacity ${light ? 'bg-ivory' : 'bg-ink'} ${isMenuOpen ? 'opacity-0' : ''}`} />
+      <span className={`h-px w-6 transition-transform ${light ? 'bg-ivory' : 'bg-ink'} ${isMenuOpen ? '-translate-y-[7px] -rotate-45' : ''}`} />
     </button>
   );
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-stone-200 bg-paper/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-editorial items-center justify-between px-5 py-4 lg:px-8 lg:py-5">
-        {isPragkennerSite ? <>{hamburger}{nav}{brand}</> : <>{brand}{nav}{hamburger}</>}
+    <header
+      className={`fixed top-0 z-50 w-full transition-[background-color,border-color,padding] duration-300 ${
+        light
+          ? 'border-b border-transparent bg-transparent'
+          : 'border-b border-rule/70 bg-[rgba(250,246,236,0.82)] backdrop-blur-[16px] backdrop-saturate-150'
+      }`}
+    >
+      <div
+        className={`flex items-center justify-between px-[clamp(1.5rem,5vw,5rem)] transition-[padding] duration-300 ${
+          light ? 'py-[1.5rem]' : 'py-[1.05rem]'
+        }`}
+      >
+        {brand}
+        {desktopNav}
+        {hamburger}
       </div>
 
       {isMenuOpen && (
-        <div className="border-t border-stone-200 bg-paper lg:hidden">
-          <div className="mx-auto flex max-w-editorial flex-col divide-y divide-stone-100 px-5 py-2">
-            <NavLink href="/tours" className="py-4 font-label text-base text-ink" onClick={close}>{t('nav.tours')}</NavLink>
-            <NavLink href="/zuzana-manova" className="py-4 font-label text-base text-ink" onClick={close}>{t('nav.zuzana')}</NavLink>
-            <NavLink href="/blog" className="py-4 font-label text-base text-ink" onClick={close}>{t('nav.blog')}</NavLink>
-            <NavLink href="/contact" className="py-4 font-label text-base text-ink" onClick={close}>{t('nav.contact')}</NavLink>
-            <a href="tel:+420721231933" className="py-4 font-label text-base text-stone-600">+420 721 231 933</a>
+        <div className="border-t border-rule bg-[rgba(250,246,236,0.97)] backdrop-blur-[16px] lg:hidden">
+          <div className="flex flex-col">
+            {NAV.map((n) => (
+              <Link
+                key={n.href}
+                href={n.href}
+                className="border-b border-rule-soft px-[clamp(1.5rem,5vw,5rem)] py-[1.1rem] font-sans text-[13px] uppercase tracking-[0.14em] text-ink"
+                onClick={close}
+              >
+                {navLabel(n)}
+              </Link>
+            ))}
             <Link
               href="/book#contact-title"
-              className="my-3 rounded-md bg-ink py-3 text-center font-label text-sm text-paper"
+              className="px-[clamp(1.5rem,5vw,5rem)] py-[1.1rem] font-sans text-[13px] uppercase tracking-[0.14em] text-burgundy"
               onClick={close}
             >
               {t('contact.booking.header.title')}

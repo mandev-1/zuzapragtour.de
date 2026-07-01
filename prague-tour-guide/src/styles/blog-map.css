@@ -1,0 +1,136 @@
+/* ============================================================================
+   Journal map blocks (Leaflet, hydrated by src/utils/journalMaps.ts).
+   On-brand styling for CARTO Positron maps: numbered burgundy markers, the
+   itinerary stop list, captions and the embed iframe. Colours match
+   blog-content.css (burgundy #6B1F2A, brass #A88654).
+   ============================================================================ */
+
+.jmap-wrap {
+  margin: 3em 0;
+  border: 1px solid #E8DFCC;
+  border-radius: 10px;
+  background: #fff;
+  padding: 14px;
+}
+
+.jmap-title {
+  font-family: var(--font-display, 'Italiana', serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: #1A1714;
+  margin: 2px 0 12px;
+}
+
+.jmap {
+  position: relative;
+  isolation: isolate; /* contain Leaflet's high z-index panes so the map can't paint over the header */
+  width: 100%;
+  height: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #F3EEE2;
+  border: 1px solid #E8DFCC;
+}
+
+.jmap-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.jmap-cap {
+  margin: 12px 0 0;
+  padding-left: 14px;
+  border-left: 1px solid #A88654;
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #6B6055;
+}
+
+/* ── Itinerary list (also the no-JS / offline fallback) ── */
+.jmap-stops {
+  list-style: none;
+  margin: 16px 0 2px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+}
+@media (max-width: 640px) {
+  .jmap-stops { grid-template-columns: 1fr; }
+}
+.jmap-stops li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+.jmap-stops li::before { content: none; } /* override blog-content ul markers */
+.jmap-n {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #6B1F2A;
+  color: #F5EFE4;
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jmap-st {
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1714;
+}
+.jmap-sn {
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 13px;
+  color: #6B6055;
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+/* ── Leaflet marker + popup, on-brand (scoped to journal maps) ── */
+.jmap .jmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #6B1F2A;
+  color: #F5EFE4;
+  font-family: var(--font-display, 'Italiana', serif);
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(107, 31, 42, 0.5);
+  border: 2px solid #FAF6EC;
+}
+.jmap .leaflet-popup-content-wrapper {
+  background: #FAF6EC;
+  color: #1A1714;
+  border-radius: 3px;
+}
+.jmap .leaflet-popup-content { margin: 0.7rem 0.9rem; }
+.jmap .pop-t {
+  font-family: var(--font-display, 'Italiana', serif);
+  font-size: 1.05rem;
+  color: #1A1714;
+  display: block;
+}
+.jmap .pop-n {
+  font-family: var(--font-body, 'Libre Caslon Text', Georgia, serif);
+  font-size: 0.82rem;
+  color: #6B6055;
+  margin-top: 0.2rem;
+  display: block;
+  line-height: 1.45;
+}
+.jmap .leaflet-popup-tip { background: #FAF6EC; }

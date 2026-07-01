@@ -164,6 +164,34 @@
   display: block;
 }
 
+/* Cropped image: fixed aspect box, focal point via inline object-position. */
+.blog-img-crop {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Edition cross-link note (revision published alongside its predecessor). */
+.blog-edition-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0 0 2.5em;
+  padding: 12px 18px;
+  background: #FAF6EC;
+  border: 1px solid #E8DFCC;
+  border-left: 3px solid #A88654;
+  font-family: var(--font-sans, 'Inter Tight', sans-serif);
+  font-size: 13px;
+  color: #6B6055;
+}
+.blog-edition-note a {
+  color: #6B1F2A;
+  font-weight: 600;
+  text-decoration: none;
+}
+.blog-edition-note a:hover { text-decoration: underline; }
+
 .blog-content figcaption,
 .image-credit {
   margin-top: 12px;

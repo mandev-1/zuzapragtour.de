@@ -1,0 +1,105 @@
+{
+  "slug": "prague-at-night-magical-experience",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2024-01-01",
+  "dateDisplay": {
+    "de": "1. Januar 2024",
+    "en": "January 1, 2024"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-night-prague-min.jpg",
+  "title": {
+    "de": "Prag bei Nacht: Ein magisches Erlebnis",
+    "en": "Prague at Night: A Magical Experience"
+  },
+  "excerpt": {
+    "de": "Entdecken Sie die bezaubernde Schönheit Prags nach Einbruch der Dunkelheit. Von beleuchteten Brücken bis zu romantischen Abendspaziergängen...",
+    "en": "Discover the enchanting beauty of Prague after dark. From illuminated bridges to romantic evening walks, experience the magic of nocturnal Prague..."
+  },
+  "tags": {
+    "de": [
+      "Nachtführungen",
+      "Prager Nachtleben",
+      "Fotografie"
+    ],
+    "en": [
+      "Night Tours",
+      "Prague Nightlife",
+      "Photography"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag nach Einbruch der Dunkelheit",
+        "en": "Prague After Dark"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Stadt verändert sich völlig bei Nacht. Die Reisegruppen gehen, das Licht wird weicher, und plötzlich sehen <strong>die Brücken, die Kirchenfassaden und das Kopfsteinpflaster</strong> aus wie im Film. Ich laufe diese Routen seit Jahrzehnten nachts und entdecke immer noch etwas Neues.",
+        "en": "The city changes completely at night. The tour groups leave, the light softens, and suddenly <strong>the bridges, the church facades, and the cobblestones</strong> look the way they do in films. I've been walking these routes at night for decades and I still find things to notice."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die Stunde vor der Dunkelheit",
+        "en": "The Hour Before Dark"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Karlsbrücken-Silhouetten und Vltava-Reflexionen — am besten kurz bevor die Beleuchtung voll angeht",
+          "en": "Charles Bridge silhouettes and Vltava reflections — best just before the lights come on fully"
+        },
+        {
+          "de": "Schloss-Skyline von den Flussuferstellen, wo man den ganzen Burgrücken in einem Bild hat",
+          "en": "Prague Castle skyline from the riverbank spots, where you get the whole ridge in one frame"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Nach Einbruch der Dunkelheit",
+        "en": "After Dark"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Laternen der Kleinseite und die stillen Gassen hinter dem Malostranské náměstí — ein anderer Ort nach 21:00 Uhr",
+          "en": "Lesser Town lanterns and the quiet alleys behind Malostranské náměstí — a different place after 21:00"
+        },
+        {
+          "de": "Architekturdetails der Altstadt im sanften Licht, die Tagesbesucher völlig verpassen",
+          "en": "Old Town architectural details in soft light that daytime visitors miss entirely"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Buchen Sie eine private <a href=\"/tours\">Nachttour</a> — ich zeige Ihnen die Aussichtspunkte, die den Weg wert sind, und die Fotospots, die noch auf keiner Liste stehen.",
+        "en": "Book a private <a href=\"/tours\">night tour</a> — I'll show you the viewpoints worth the walk and the photo spots that aren't on any list yet."
+      }
+    }
+  ]
+}

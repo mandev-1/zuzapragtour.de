@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import BlogPostPage from '../../../src/screens/BlogPostPage';
 import { blogPosts } from '../../../src/utils/blogData';
 import { blogTranslations } from '../../../src/utils/blogTranslations';
+import { journalContent } from '../../../src/utils/journalGenerated';
 import { BRAND } from '../../../src/brand';
 
 type Props = { params: { slug: string } };
@@ -21,7 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const lang = post.slugDe === slug ? 'de' : 'en';
-  const tr = blogTranslations as Record<string, { en: string; de: string }>;
+  // Some entries are single-language (e.g. a draft post with only `de`); the
+  // reads below already guard with optional chaining + a fallback.
+  const tr = { ...blogTranslations, ...journalContent } as Record<string, { en?: string; de?: string }>;
   const title = (lang === 'de' ? tr[post.titleKey]?.de : tr[post.titleKey]?.en) ?? post.slug;
   const excerpt = (lang === 'de' ? tr[post.excerptKey]?.de : tr[post.excerptKey]?.en) ?? '';
   const canonical = `${BRAND.domain}/blog/${slug}`;

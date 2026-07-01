@@ -1,0 +1,157 @@
+{
+  "slug": "top-21-instagrammable-places-in-prague",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-12",
+  "dateDisplay": {
+    "de": "12. Oktober 2025",
+    "en": "October 12, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/charles-bridge-2-min.jpg",
+  "title": {
+    "de": "Top 21 Instagram-taugliche Orte in Prag",
+    "en": "Top 21 Instagrammable Places in Prague"
+  },
+  "excerpt": {
+    "de": "Von ikonischen Brücken bis zu versteckten Höfen—entdecken Sie Prags fotogenste Orte und präzise Spots für das perfekte Foto.",
+    "en": "From iconic bridges to hidden courtyards—discover Prague's most photogenic locations and exact spots for the perfect shot."
+  },
+  "tags": {
+    "de": [
+      "Fotografie",
+      "Instagram",
+      "Aussichtspunkte",
+      "Reiseroute"
+    ],
+    "en": [
+      "Photography",
+      "Instagram",
+      "Viewpoints",
+      "Itinerary"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prags beste Fotospots",
+        "en": "Prague's Best Photo Spots"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das sind <strong>21 Orte, die ich wirklich nutze</strong> — auf Führungen und Fotowalks. Keine zufällige Zusammenstellung: Das sind Orte, bei denen Licht, Winkel oder Zugang einen Unterschied machen. Früh ankommen, Licht beachten, nicht auf Dinge steigen oder Leute blockieren.",
+        "en": "These are <strong>21 locations I actually use</strong> on tours and photo walks. Not a random roundup — these are places where the light, the angle, or the access makes a difference. Arrive early, watch the light, and don't climb on things or block people trying to get past."
+      }
+    },
+    {
+      "t": "list",
+      "ordered": true,
+      "items": [
+        {
+          "de": "<h3>Karlsbrücke (Statuen & Türme)</h3><p>Am besten bei Sonnenaufgang vom Altstädter Turm Richtung Schloss.</p>",
+          "en": "<h3>Charles Bridge (Statues & Towers)</h3><p>Best at dawn from the Old Town tower towards the Castle.</p>"
+        },
+        {
+          "de": "<h3>Burg-Aussichtspunkte</h3><p>Blicke beim Wenzelsweinberg und auf dem Hradschin-Platz.</p>",
+          "en": "<h3>Prague Castle Viewpoints</h3><p>Lookouts by St. Wenceslas Vineyard and Hradčanské náměstí.</p>"
+        },
+        {
+          "de": "<h3>Altstädter Ring</h3><p>Astronomische Uhr im Detail, Weitwinkel bei Sonnenaufgang.</p>",
+          "en": "<h3>Old Town Square</h3><p>Astronomical Clock details and wide shots at sunrise.</p>"
+        },
+        {
+          "de": "<h3>Letná-Park</h3><p>Flussschleifen und Brückenpanorama.</p>",
+          "en": "<h3>Letná Park</h3><p>River S-curves and bridge panorama.</p>"
+        },
+        {
+          "de": "<h3>Vrtba-Garten</h3><p>Barockterrassen und Dächer (saisonal).</p>",
+          "en": "<h3>Vrtba Garden</h3><p>Baroque terraces and city roofs (seasonal).</p>"
+        },
+        {
+          "de": "<h3>Gassen der Kleinseite</h3><p>Laternenlicht und Pastellfassaden.</p>",
+          "en": "<h3>Mala Strana Alleys</h3><p>Lantern-lit streets and pastel facades.</p>"
+        },
+        {
+          "de": "<h3>John-Lennon-Mauer</h3><p>Bunte Kulisse im Wandel.</p>",
+          "en": "<h3>John Lennon Wall</h3><p>Colorful backdrop with constant change.</p>"
+        },
+        {
+          "de": "<h3>Petřín-Aussicht</h3><p>Stadtbild mit Bäumen, Blüte im Frühling.</p>",
+          "en": "<h3>Petřín Lookout</h3><p>City skyline with trees and blossom in spring.</p>"
+        },
+        {
+          "de": "<h3>Rudolfinum & Ufer</h3><p>Schlossreflexe zur Blauen Stunde.</p>",
+          "en": "<h3>Rudolfinum & Riverbank</h3><p>Castle reflections at blue hour.</p>"
+        },
+        {
+          "de": "<h3>Gemeindehaus</h3><p>Jugendstil-Details und Café-Interieurs.</p>",
+          "en": "<h3>Municipal House</h3><p>Art Nouveau details and café interiors.</p>"
+        },
+        {
+          "de": "<h3>Wallenstein-Garten</h3><p>Pfauen, Arkaden, Tropfsteinwand.</p>",
+          "en": "<h3>Wallenstein Garden</h3><p>Peacocks, arcades, and the dripstone wall.</p>"
+        },
+        {
+          "de": "<h3>Vyšehrad</h3><p>Vltava-Blicke und neugotische Türme.</p>",
+          "en": "<h3>Vyšehrad Fortifications</h3><p>Vltava vistas and neo-Gothic spires.</p>"
+        },
+        {
+          "de": "<h3>Pulverturm</h3><p>Gotische Texturen, dramatische Perspektive.</p>",
+          "en": "<h3>Powder Tower</h3><p>Gothic textures and dramatic perspective.</p>"
+        },
+        {
+          "de": "<h3>Klementinum-Hof</h3><p>Elegante Symmetrie und Säulengänge.</p>",
+          "en": "<h3>Clementinum Courtyard</h3><p>Elegant symmetry and stone colonnades.</p>"
+        },
+        {
+          "de": "<h3>Strahov-Kloster</h3><p>Bibliotheken (mit Genehmigung) und Panorama.</p>",
+          "en": "<h3>Strahov Monastery</h3><p>Libraries (with permits) and sweeping views.</p>"
+        },
+        {
+          "de": "<h3>Kafka-Kopf</h3><p>Spiegelungen in Bewegung.</p>",
+          "en": "<h3>Kafka Head</h3><p>Moving mirrors—great for creative reflections.</p>"
+        },
+        {
+          "de": "<h3>Das Tanzende Haus</h3><p>Moderne im Kontrast zur klassischen Uferfront.</p>",
+          "en": "<h3>Dancing House</h3><p>Modern contrast with classic riverfront.</p>"
+        },
+        {
+          "de": "<h3>Alter Jüdischer Friedhof</h3><p>Respektvolle Winkel—kein Blitz, keine Posen.</p>",
+          "en": "<h3>Old Jewish Cemetery</h3><p>Respectful angles—no flash, no posing.</p>"
+        },
+        {
+          "de": "<h3>Karlsbrücke von Kampa</h3><p>Romantische Bilder durch Weiden.</p>",
+          "en": "<h3>Charles Bridge from Kampa</h3><p>Romantic shots through willows.</p>"
+        },
+        {
+          "de": "<h3>St.-Nikolaus (Kleinseite)</h3><p>Kuppeln und Kurven—innen wie außen.</p>",
+          "en": "<h3>St. Nicholas Church (Mala Strana)</h3><p>Domes and curves—inside and out.</p>"
+        },
+        {
+          "de": "<h3>Štefánik-Brücke</h3><p>Mehrere Brücken im Bild bei Sonnenuntergang.</p>",
+          "en": "<h3>Štefánik Bridge Lookout</h3><p>Multiple bridges in one frame at sunset.</p>"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Möchten Sie eine Foto-Route von Sonnenaufgang bis Nacht, die zu Ihrem Plan passt? <a href=\"/contact#contact-title\">Schreiben Sie mir</a> und ich stelle eine private Tour zusammen.",
+        "en": "Want a sunrise-to-night photo route planned around your schedule? <a href=\"/contact#contact-title\">Message me</a> and I'll put together a private tour."
+      }
+    }
+  ]
+}

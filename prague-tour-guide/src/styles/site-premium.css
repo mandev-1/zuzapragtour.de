@@ -1,0 +1,50 @@
+/* ============================================================
+   Premium editorial chrome for the marketing site (0003).
+   Ported from the handoff's site.css. The global Header/Footer
+   already provide the nav/footer; this adds the inner-page
+   warm-white + faint-geometry ground and the Ken-Burns hero.
+
+   Inner pages opt in by putting `premium-inner` on their root
+   element. The home/funnel manage their own backgrounds.
+   ============================================================ */
+
+/* Inner (non-home) pages: warm-white ground + faint geometry */
+body:has(.premium-inner) {
+  background-color: #FCFBF8;
+}
+body:has(.premium-inner)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(46% 34% at 8% -4%, rgba(168, 134, 84, 0.05), transparent 70%),
+    radial-gradient(42% 30% at 104% 4%, rgba(224, 191, 188, 0.07), transparent 72%),
+    linear-gradient(rgba(58, 51, 44, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 51, 44, 0.032) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  -webkit-mask-image: radial-gradient(135% 80% at 50% 0%, #000 60%, transparent 100%);
+  mask-image: radial-gradient(135% 80% at 50% 0%, #000 60%, transparent 100%);
+}
+/* Keep real content above the fixed geometry layer */
+body:has(.premium-inner) main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ken-Burns hero zoom (home + tour-detail heroes). */
+@keyframes kenburns {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* No-JS / reduced-motion safety: never let reveal content stay hidden. */
+@media (scripting: none) {
+  .reveal,
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

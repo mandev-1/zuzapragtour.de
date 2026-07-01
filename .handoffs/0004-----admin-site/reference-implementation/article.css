@@ -1,0 +1,156 @@
+/* ============================================================
+   Zuza Prague Tours — Journal article styles (magazine build)
+   Reading-progress bar · sticky scroll-spy TOC rail · meta facts
+   bar · fact boxes · galleries · Leaflet maps with numbered stops
+   and an accompanying itinerary. Pairs with site.css + journal.js.
+   ============================================================ */
+
+::selection { background: var(--burgundy); color: var(--ivory); }
+
+/* Reading progress (very top, above nav) */
+.read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--burgundy); z-index: 200; transition: width 0.12s linear; }
+
+/* ── Header ─────────────────────────────────────────── */
+.a-head { padding: calc(6rem + 2vw) 0 0; }
+.a-head .crumb { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); display: inline-flex; gap: 0.5rem; }
+.a-head .crumb a:hover { color: var(--ink); }
+.a-kick { display: flex; gap: 1rem; align-items: center; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-deep); margin: 1.5rem 0; }
+.a-kick span.r { width: 18px; height: 1px; background: var(--brass); }
+.a-head h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.04; letter-spacing: -0.02em; margin: 0 0 1.4rem; max-width: 20ch; }
+.a-head h1 em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+.a-stand { font-family: var(--font-italic); font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.45; color: var(--ink-mute); max-width: 42rem; margin: 0 0 2rem; }
+.a-byline { display: flex; align-items: center; gap: 0.8rem; padding: 1.4rem 0; border-top: 1px solid var(--rule); max-width: 42rem; }
+.a-byline img { width: 44px; height: 44px; border-radius: 999px; object-fit: cover; object-position: center 18%; }
+.a-byline .n { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--ink); }
+.a-byline .r { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); }
+
+/* Meta facts bar (Dauer · Strecke · Beste Zeit · Niveau) */
+.a-meta { display: flex; flex-wrap: wrap; gap: 1.4rem 2.4rem; margin: 0 0 2.2rem; padding: 1.1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); max-width: 42rem; }
+.a-meta .k { font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-mute); }
+.a-meta .v { font-family: var(--font-display); font-size: 1.2rem; color: var(--ink); margin-top: 0.25rem; }
+.a-meta .v em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+
+.a-figure { margin: 2.4rem 0 0; }
+.a-figure img { width: 100%; height: clamp(280px, 45vh, 480px); object-fit: cover; }
+.a-figure figcaption { margin-top: 0.9rem; padding-left: 1rem; border-left: 1px solid var(--brass); font-family: var(--font-body); font-size: 0.9rem; font-style: italic; color: var(--ink-mute); }
+
+/* ── Body: content + sticky rail grid ───────────────── */
+.a-body { padding: clamp(2.5rem, 5vh, 3.5rem) 0 clamp(3.5rem, 7vh, 5rem); }
+.a-layout { display: block; }
+.a-col { min-width: 0; }
+@media (min-width: 1080px) {
+  .a-layout { display: grid; grid-template-columns: minmax(0, 1fr) 256px; gap: clamp(2.5rem, 4vw, 4.5rem); align-items: start; }
+}
+
+.a-col p { font-family: var(--font-body); font-size: 1.1875rem; line-height: 1.72; color: var(--ink-soft); margin: 0 0 1.5em; }
+.a-col p.first::first-letter { font-family: var(--font-display); font-size: 3.6em; line-height: 0.72; float: left; color: var(--burgundy); margin: 0.08em 0.1em 0 0; font-weight: 400; }
+.a-col p a { color: var(--burgundy); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--brass); }
+.a-col h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.18; margin: 1.8em 0 0.6em; scroll-margin-top: 90px; }
+.a-col h2 em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+.a-col > ul { margin: 0 0 1.5em; padding: 0; list-style: none; }
+.a-col > ul li { position: relative; padding-left: 1.6rem; margin-bottom: 0.7rem; font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.6; color: var(--ink-soft); }
+.a-col > ul li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; background: var(--brass); transform: rotate(45deg); }
+.a-col > ul li strong { color: var(--ink); font-weight: 600; }
+
+.pq { position: relative; margin: 2.6em 0; padding: 0.2rem 0 0.2rem 2rem; border-left: 2px solid var(--burgundy); }
+.pq p { font-family: var(--font-italic); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 1.9rem); line-height: 1.34; color: var(--ink); margin: 0; }
+.pq .by { display: block; margin-top: 0.8rem; font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); }
+
+.callout { margin: 2.4em 0; padding: 1.6rem 1.8rem; background: var(--ivory-deep); border-left: 3px solid var(--brass); }
+.callout .l { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-deep); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+.callout .l::before { content: ""; width: 14px; height: 1px; background: var(--brass); }
+.callout p { margin: 0 0 0.6rem; font-family: var(--font-body); font-size: 1.05rem; line-height: 1.6; color: var(--ink-soft); }
+.callout p:last-child { margin-bottom: 0; }
+.callout ul { margin: 0.4rem 0 0; padding: 0; list-style: none; }
+.callout ul li { position: relative; padding-left: 1.3rem; margin-bottom: 0.45rem; font-family: var(--font-body); font-size: 1rem; line-height: 1.5; color: var(--ink-soft); }
+.callout ul li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 6px; height: 6px; background: var(--brass); transform: rotate(45deg); }
+.callout ul li strong { color: var(--ink); }
+
+.ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 3rem 0; }
+.ornament span.r { width: 70px; height: 1px; background: var(--brass); opacity: 0.5; }
+.ornament span.g { font-family: var(--font-italic); font-style: italic; font-size: 1.5rem; color: var(--brass); }
+
+/* Fact box ("Gut zu wissen") */
+.facts { margin: 2.4em 0; border: 1px solid var(--rule); background: var(--surface-card); }
+.facts__h { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-deep); padding: 0.95rem 1.4rem; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 0.6rem; }
+.facts__h::before { content: ""; width: 14px; height: 1px; background: var(--brass); }
+.facts__b { padding: 0.3rem 1.4rem 0.9rem; }
+.facts__row { display: flex; justify-content: space-between; gap: 1.2rem; padding: 0.7rem 0; border-bottom: 1px solid var(--rule-soft); }
+.facts__row:last-child { border-bottom: none; }
+.facts__k { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-mute); letter-spacing: 0.03em; }
+.facts__v { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: var(--ink); text-align: right; }
+
+/* Gallery */
+.gallery2 { margin: 2.4em 0; }
+.gallery2__row { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 0.7rem; }
+.gallery2__row img { width: 100%; height: clamp(170px, 26vh, 240px); object-fit: cover; }
+.gallery2 figcaption { margin-top: 0.85rem; padding-left: 1rem; border-left: 1px solid var(--brass); font-family: var(--font-body); font-size: 0.9rem; font-style: italic; color: var(--ink-mute); }
+
+/* ── Maps (Leaflet) ─────────────────────────────────── */
+.jmap-wrap { margin: 2.6em 0; }
+.jmap-title { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-deep); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.9rem; }
+.jmap-title::before { content: ""; width: 14px; height: 1px; background: var(--brass); }
+.jmap { width: 100%; height: clamp(320px, 52vh, 460px); border: 1px solid var(--rule); background: var(--ivory-deep); position: relative; z-index: 0; }
+.jmap-cap { margin-top: 0.85rem; padding-left: 1rem; border-left: 1px solid var(--brass); font-family: var(--font-body); font-size: 0.9rem; font-style: italic; color: var(--ink-mute); }
+
+/* numbered itinerary that accompanies a map */
+.stops { list-style: none; margin: 1.3rem 0 0; padding: 0; }
+.stops li { display: grid; grid-template-columns: 2.1rem 1fr; gap: 0.9rem; padding: 0.85rem 0; border-bottom: 1px solid var(--rule-soft); }
+.stops li:first-child { border-top: 1px solid var(--rule-soft); }
+.stops .n { font-family: var(--font-display); color: var(--burgundy); font-size: 1.1rem; line-height: 1.3; }
+.stops .t { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+.stops .d { font-family: var(--font-body); font-size: 0.95rem; line-height: 1.5; color: var(--ink-mute); margin-top: 0.15rem; }
+
+/* numbered burgundy stop marker */
+.jmark { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--burgundy); color: var(--ivory); font-family: var(--font-display); font-size: 14px; line-height: 1; border: 2px solid var(--paper); box-shadow: 0 2px 8px rgba(26,23,20,0.35); }
+
+.leaflet-container { font-family: var(--font-sans); background: var(--ivory-deep); }
+.leaflet-popup-content-wrapper { background: var(--paper); color: var(--ink); border-radius: 3px; box-shadow: var(--shadow-lg); }
+.leaflet-popup-content { margin: 0.85rem 1rem; }
+.leaflet-popup-content .pop-t { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); display: block; }
+.leaflet-popup-content .pop-n { font-family: var(--font-body); font-size: 0.85rem; color: var(--ink-mute); margin-top: 0.2rem; display: block; line-height: 1.45; }
+.leaflet-popup-tip { background: var(--paper); }
+.leaflet-bar a { color: var(--ink) !important; background: var(--paper) !important; }
+.leaflet-bar a:hover { background: var(--ivory-deep) !important; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--ink-mute) !important; }
+
+/* ── Sticky rail (TOC + facts + CTA) ────────────────── */
+.a-rail { display: none; }
+@media (min-width: 1080px) { .a-rail { display: block; } }
+.a-rail__sticky { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 1.6rem; }
+.toc__h { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 0.6rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--rule); }
+.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+.toc__link { display: block; padding: 0.42rem 0 0.42rem 0.9rem; margin-left: -1px; font-family: var(--font-sans); font-size: 0.82rem; line-height: 1.4; color: var(--ink-mute); border-left: 2px solid var(--rule); transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out); }
+.toc__link:hover { color: var(--ink); }
+.toc__link.active { color: var(--burgundy); border-left-color: var(--burgundy); }
+.a-rail .facts { margin: 0; }
+.a-rail__cta { width: 100%; justify-content: center; }
+
+/* Back to top */
+.to-top { position: fixed; right: 1.4rem; bottom: 1.4rem; width: 46px; height: 46px; border-radius: 50%; background: var(--ink); color: var(--ivory); display: grid; place-items: center; border: 0; opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out); z-index: 90; }
+.to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.to-top .material-symbols-outlined { font-size: 22px; }
+
+/* ── Footer CTA + related ───────────────────────────── */
+.a-foot { background: var(--ivory-deep); padding: clamp(3rem, 6vh, 5rem) 0; }
+.a-foot__cta { background: var(--surface-card); border: 1px solid var(--rule); padding: 2.5rem; text-align: center; max-width: 46rem; margin: 0 auto; }
+.a-foot__cta h3 { font-family: var(--font-italic); font-style: italic; font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--burgundy); margin: 0 0 0.8rem; }
+.a-foot__cta p { font-family: var(--font-body); font-size: 1.05rem; color: var(--ink-mute); margin: 0 auto 1.6rem; max-width: 34rem; }
+
+.a-more { padding: clamp(3rem, 6vh, 5rem) 0; }
+.a-more__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-top: 1.8rem; }
+.mcard { display: block; overflow: hidden; }
+.mcard img { width: 100%; height: 170px; object-fit: cover; margin-bottom: 0.9rem; transition: transform 0.8s var(--ease-out); }
+.mcard:hover img { transform: scale(1.05); }
+.mcard .cat { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-deep); }
+.mcard h4 { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; margin: 0.3rem 0 0.3rem; }
+.mcard p { font-family: var(--font-body); font-size: 0.95rem; line-height: 1.55; color: var(--ink-mute); margin: 0; }
+@media (max-width: 760px) { .a-more__grid { grid-template-columns: 1fr; } }
+
+/* Header offset to match content column on desktop */
+@media (min-width: 900px) {
+  .a-head > .shell--prose { max-width: 1240px; margin-inline: auto; padding-left: clamp(1.5rem, 5vw, 5rem); padding-right: clamp(1.5rem, 5vw, 5rem); }
+  .a-head > .shell--prose > * { max-width: 44rem; }
+}
+
+.j-empty { padding: 6rem 0; text-align: center; font-family: var(--font-body); color: var(--ink-mute); }

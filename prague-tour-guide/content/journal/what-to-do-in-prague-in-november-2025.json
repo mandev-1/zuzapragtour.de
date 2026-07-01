@@ -1,0 +1,130 @@
+{
+  "slug": "what-to-do-in-prague-in-november-2025",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-16",
+  "dateDisplay": {
+    "de": "16. Oktober 2025",
+    "en": "October 16, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/old-town-square.jpg",
+  "title": {
+    "de": "Was tun in Prag im November 2025?",
+    "en": "Prague in November 2025: Things to Do"
+  },
+  "excerpt": {
+    "de": "Konzerte, Galerien, Moldauspaziergänge, warme Cafés—plus realistische Tipps zu Wetter und Zeiten. Ihr entspannter November-Plan in Prag.",
+    "en": "Concerts, galleries, river walks, warm cafés—and realistic tips for weather and timings. Your calm November plan in Prague."
+  },
+  "tags": {
+    "de": [
+      "Prag im November",
+      "Was tun in Prag",
+      "Prag Events November",
+      "Aktivitäten in Prag",
+      "Prag November Wetter",
+      "Prag Reiseroute",
+      "Prag besuchen",
+      "Prag Reiseführer"
+    ],
+    "en": [
+      "Prague in November",
+      "Things to do in Prague",
+      "Prague events November",
+      "Things to do in Prague now",
+      "Prague November weather",
+      "Prague itinerary",
+      "Visit Prague",
+      "Prague travel guide"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag im November: ruhig, kulturell, gemütlich",
+        "en": "Prague in November: Calm, Cultural, Cozy"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im November hat Prag <strong>weniger Menschen</strong>, <strong>gute Verfügbarkeiten</strong> und reichlich <em>Musik und Ausstellungen</em>. Hier ein realistischer Plan, der ohne Hektik auskommt.",
+        "en": "November in Prague means <strong>fewer crowds</strong>, <strong>good availability</strong>, and a city full of <em>music and exhibitions</em>. Here's a grounded plan for enjoying the month without rushing."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was tun?",
+        "en": "What to Do"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Abendkonzerte: Klassik und Jazz (Rudolfinum, kleine Clubs)",
+          "en": "Evening concerts: classical and jazz (Rudolfinum, small clubs)"
+        },
+        {
+          "de": "Galerien und Museen: Kälte meiden und die besten Werke sehen",
+          "en": "Galleries and museums: avoid cold spells while seeing the best works"
+        },
+        {
+          "de": "Abendliche Flussspaziergänge und Brücken. Warm anziehen.",
+          "en": "Evening river walks and bridges. Dress warm."
+        }
+      ]
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Wussten Sie schon?",
+        "en": "Did you know?"
+      },
+      "html": {
+        "de": "<p>Manche der stimmungsvollsten Nächte Prags gibt es im Spätherbst. Nebel über dem Fluss, Laternen in Gassen. Ich empfehle immer mindestens einen Abendspaziergang, auch im November.</p>",
+        "en": "<p>Some of Prague's most atmospheric nights happen in late autumn. Mist on the river, lantern-lit streets. I always suggest at least one evening walk, even in November.</p>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wetter und Kleidung",
+        "en": "Weather and What to Wear"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Erwarten Sie 5–10°C mit frühem Sonnenuntergang.",
+          "en": "Expect 5–10°C with early sunsets."
+        },
+        {
+          "de": "Schichten, Regenjacke und gute Schuhe fürs Kopfsteinpflaster.",
+          "en": "Layers, rain jacket, and good shoes for cobblestones."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Wünschen Sie einen ruhigen Plan mit Karten und Ticketzeiten? <a href=\"/contact#contact-title\">Fragen Sie mich</a> und ich gestalte Ihren November.",
+        "en": "Want a calm schedule with maps and ticket timings? <a href=\"/contact#contact-title\">Ask me</a> and I'll tailor your November."
+      }
+    }
+  ]
+}

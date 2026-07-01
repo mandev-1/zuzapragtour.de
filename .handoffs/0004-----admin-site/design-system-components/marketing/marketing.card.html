@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Marketing — Tour Rows & Reviews" subtitle="Numbered tour highlight rows and guest testimonial cards" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--canvas-alt); padding: 24px; }
+  .lab { font-family: var(--font-sans); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 12px; }
+  .band { background: var(--canvas); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xs); }
+  .reviews { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-presets="react">
+    const { TourRow, ReviewCard } = window.ZuzaPragueToursDesignSystem_748186;
+    function Demo() {
+      return (
+        <>
+          <p className="lab">Tour highlight rows</p>
+          <div className="band">
+            <TourRow num="01" title="Altstadt & Jüdisches Viertel" duration="4 Stunden" meta="Private Gruppe"
+              description="Ein tiefes Eintauchen in das mittelalterliche Herz Prags." />
+            <TourRow num="02" title="Das alchemistische Prag" duration="3 Stunden" meta="Versteckte Juwelen"
+              description="Die mystische und geheimnisvolle Seite der Prager Geschichte." last />
+          </div>
+          <p className="lab" style={{ marginTop: 24 }}>Guest reviews</p>
+          <div className="reviews">
+            <ReviewCard quote="Zuzanas persönliche Geschichte mit der Stadt macht diese Führung einzigartig." author="Thomas K." source="TripAdvisor" />
+            <ReviewCard quote="Ein absolutes Highlight unserer Europareise. Ihr Wissen ist unübertroffen." author="Monika H." source="TourHQ Verifiziert" />
+          </div>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

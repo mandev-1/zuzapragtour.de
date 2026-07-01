@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bewerten Sie Ihre Tour · Zuza Prague Tours</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; color: var(--ink);
+    font-family: var(--font-body); -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    /* Clean warm-white ground with a whisper of warmth at the edges */
+    background-color: #FCFBF8;
+    background-image:
+      radial-gradient(48% 36% at 10% -4%, rgba(168,134,84,0.055), transparent 70%),
+      radial-gradient(44% 32% at 105% 6%, rgba(224,191,188,0.08), transparent 72%);
+    background-attachment: fixed;
+  }
+  /* Faint geometric grid — modern, light, very subtle */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(58,51,44,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(58,51,44,0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(125% 95% at 50% 0%, #000 58%, transparent 100%);
+    mask-image: radial-gradient(125% 95% at 50% 0%, #000 58%, transparent 100%);
+  }
+  /* Faint concentric rings — a quiet geometric accent, top-right */
+  body::after {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image: repeating-radial-gradient(circle at 96% 4%, transparent 0 46px, rgba(168,134,84,0.05) 46px 47px, transparent 47px 94px);
+    -webkit-mask-image: radial-gradient(72% 46% at 95% 2%, #000, transparent 78%);
+    mask-image: radial-gradient(72% 46% at 95% 2%, #000, transparent 78%);
+  }
+  /* (static background — no motion) */
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; }
+
+  /* Funnel is a single focused column, mobile-first */
+  .wrap { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 2.25rem); }
+
+  /* ── Atoms ──────────────────────────────────────────── */
+  .kicker { font-family: var(--font-sans); font-size: 11px; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: var(--brass-deep); display: inline-flex; align-items: center; gap: 0.7rem; }
+  .kicker::before { content: ""; width: 24px; height: 1px; background: var(--brass); opacity: 0.7; }
+  .kicker.solo::before { display: none; }
+  .display { font-family: var(--font-display); font-weight: 400; line-height: 1.06; letter-spacing: -0.015em; color: var(--ink); }
+  .display em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+  .muted { color: var(--ink-mute); }
+
+  /* Big tap-friendly buttons */
+  .btn { display: flex; align-items: center; justify-content: center; gap: 0.7rem; width: 100%; min-height: 58px; padding: 0 1.4rem; border: 1px solid transparent; border-radius: var(--radius-md); font-family: var(--font-sans); font-size: 1rem; font-weight: 600; letter-spacing: 0.01em; transition: transform var(--dur-fast) var(--ease-out), background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+  .btn:active { transform: scale(0.985); }
+  .btn--burgundy { background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0) 46%), var(--burgundy); color: var(--ivory); box-shadow: 0 10px 26px rgba(107,31,42,0.24), inset 0 1px 0 rgba(255,255,255,0.24); }
+  .btn--burgundy:hover { background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0) 46%), var(--burgundy-deep); }
+  .btn--ink { background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0) 46%), var(--ink); color: var(--paper); box-shadow: inset 0 1px 0 rgba(255,255,255,0.16); }
+  .btn--ink:hover { background: var(--ink-soft); }
+  .btn--outline { background: rgba(255,255,255,0.42); color: var(--ink); border-color: rgba(255,255,255,0.6); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7); }
+  .btn--outline:hover { border-color: var(--brass); }
+  .btn .logo { width: 22px; height: 22px; flex-shrink: 0; }
+
+  .pill { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem; border-radius: var(--radius-pill); background: rgba(123,88,0,0.10); color: var(--gold-olive); font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  section { padding: clamp(2.75rem, 8vw, 4rem) 0; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--rule) 18%, var(--rule) 82%, transparent); }
+
+  /* ── Top bar ────────────────────────────────────────── */
+  .top { position: sticky; top: 0; z-index: 60; background: rgba(250,246,236,0.55); -webkit-backdrop-filter: blur(20px) saturate(150%); backdrop-filter: blur(20px) saturate(150%); border-bottom: 1px solid rgba(255,255,255,0.5); box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 8px 24px rgba(26,23,20,0.05); }
+  .top__in { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem clamp(1.25rem, 5vw, 2.25rem); max-width: 600px; margin: 0 auto; }
+  .top__brand { font-family: var(--font-display); font-size: 1.15rem; }
+  .top__brand b { color: var(--burgundy); font-weight: 400; }
+  .top__rating { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  .top__rating svg { width: 14px; height: 14px; }
+
+  /* ── Hero ───────────────────────────────────────────── */
+  .hero { text-align: center; padding-top: clamp(2.25rem, 7vw, 3.25rem); }
+  .hero__avatar { width: 84px; height: 84px; border-radius: 999px; object-fit: cover; object-position: center 18%; margin: 0 auto 1.25rem; box-shadow: 0 0 0 1px rgba(255,255,255,0.7), 0 0 0 7px rgba(255,255,255,0.18), 0 14px 32px rgba(26,23,20,0.16); }
+  .hero h1 { margin: 0.9rem 0 0; font-size: clamp(2.1rem, 8.5vw, 3rem); }
+  .hero__sub { margin: 1rem auto 0; max-width: 30rem; font-size: 1.075rem; line-height: 1.6; color: var(--ink-soft); }
+
+  /* ── Personal thank-you (rapport) ───────────────────── */
+  .thanks { text-align: center; }
+  .thanks__title { font-size: clamp(1.9rem, 7vw, 2.55rem); margin: 0.9rem auto 0; max-width: 17ch; line-height: 1.12; }
+  .thanks__body { margin: 1.2rem auto 0; max-width: 33rem; font-family: var(--font-body); font-size: 1.075rem; line-height: 1.72; color: var(--ink-soft); }
+  .thanks__sign { margin: 1.7rem 0 0; font-family: var(--font-italic); font-style: italic; font-size: 1.1rem; color: var(--ink-mute); }
+  .thanks__name { margin: 0.15rem 0 0; font-family: var(--font-italic); font-style: italic; font-size: 1.95rem; line-height: 1; color: var(--burgundy); }
+
+  /* ── Stars ──────────────────────────────────────────── */
+  .stars { display: flex; justify-content: center; gap: 0.4rem; width: -webkit-fit-content; width: fit-content; margin: 1.9rem auto 0.7rem; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.30); -webkit-backdrop-filter: blur(10px) saturate(140%); backdrop-filter: blur(10px) saturate(140%); border: 1px solid rgba(255,255,255,0.5); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 6px 18px rgba(26,23,20,0.08); }
+  .star { background: none; border: 0; padding: 6px; line-height: 0; border-radius: 8px; -webkit-tap-highlight-color: transparent; }
+  .star svg { width: 44px; height: 44px; display: block; transition: transform var(--dur-fast) var(--ease-out); }
+  .star svg path { fill: transparent; stroke: var(--brass); stroke-width: 1.4px; transition: fill var(--dur-fast) var(--ease-out), stroke var(--dur-fast) var(--ease-out); }
+  .star.on svg path { fill: var(--gold-olive); stroke: var(--gold-olive); }
+  .star:active svg { transform: scale(0.9); }
+  .stars__hint { text-align: center; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-mute); }
+
+  /* ── Result panel (revealed) ────────────────────────── */
+  .result { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.5s var(--ease-out), opacity 0.5s var(--ease-out); }
+  .result.open { max-height: 1100px; opacity: 1; margin-top: 1.6rem; }
+  .panel { position: relative; border: 1px solid rgba(58,51,44,0.07); background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.2) 46%), rgba(255,255,255,0.55); -webkit-backdrop-filter: blur(22px) saturate(135%); backdrop-filter: blur(22px) saturate(135%); border-radius: var(--radius-xl); padding: clamp(1.4rem, 5vw, 2rem); box-shadow: 0 16px 44px rgba(26,23,20,0.10), 0 1px 2px rgba(26,23,20,0.04), inset 0 1px 0 rgba(255,255,255,0.9); }
+  .panel h2 { margin: 0 0 0.5rem; font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; }
+  .panel p { margin: 0 0 1.3rem; font-size: 1rem; line-height: 1.6; color: var(--ink-soft); }
+  .panel .stack { display: flex; flex-direction: column; gap: 0.75rem; }
+  .panel .micro { margin: 1rem 0 0; text-align: center; font-family: var(--font-sans); font-size: 12px; color: var(--ink-mute); }
+  .panel .alt { display: block; margin-top: 1rem; text-align: center; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.04em; color: var(--burgundy); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ── Steps ──────────────────────────────────────────── */
+  .steps { list-style: none; margin: 1.75rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1.1rem; }
+  .step { display: flex; gap: 1rem; align-items: flex-start; }
+  .step__n { flex-shrink: 0; width: 34px; height: 34px; border-radius: 999px; border: 1px solid var(--brass); color: var(--burgundy); font-family: var(--font-display); font-size: 1.05rem; display: flex; align-items: center; justify-content: center; }
+  .step__t { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; color: var(--ink); margin: 0.35rem 0 0.2rem; }
+  .step__d { font-size: 0.95rem; line-height: 1.5; color: var(--ink-mute); margin: 0; }
+
+  /* ── Write helper ───────────────────────────────────── */
+  .helper { background: linear-gradient(135deg, rgba(255,255,255,0.65), rgba(255,255,255,0.2) 48%), rgba(255,255,255,0.5); border: 1px solid rgba(58,51,44,0.07); -webkit-backdrop-filter: blur(20px) saturate(135%); backdrop-filter: blur(20px) saturate(135%); border-radius: var(--radius-xl); padding: clamp(1.4rem, 5vw, 2rem); box-shadow: 0 16px 40px rgba(26,23,20,0.08), 0 1px 2px rgba(26,23,20,0.04), inset 0 1px 0 rgba(255,255,255,0.85); }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 1.1rem 0 1.3rem; }
+  .chip { padding: 0.5rem 0.95rem; border-radius: var(--radius-pill); border: 1px solid rgba(255,255,255,0.6); background: rgba(255,255,255,0.4); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); font-family: var(--font-sans); font-size: 13px; color: var(--ink-soft); box-shadow: inset 0 1px 0 rgba(255,255,255,0.7); transition: all var(--dur-fast) var(--ease-out); }
+  .chip.on { background: rgba(107,31,42,0.86); border-color: rgba(107,31,42,0.4); color: var(--ivory); box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 4px 14px rgba(107,31,42,0.22); }
+  .helper textarea { width: 100%; min-height: 96px; resize: vertical; border: 1px solid rgba(255,255,255,0.6); border-radius: var(--radius-md); background: rgba(255,255,255,0.5); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.6); padding: 0.9rem 1rem; font-family: var(--font-body); font-size: 0.98rem; line-height: 1.55; color: var(--ink); }
+  .helper textarea:focus { outline: none; border-color: rgba(107,31,42,0.5); background: rgba(255,255,255,0.66); }
+  .helper__row { display: flex; gap: 0.75rem; margin-top: 0.9rem; }
+  .helper__row .btn { min-height: 50px; font-size: 0.95rem; }
+
+  /* ── Note from Zuzana ───────────────────────────────── */
+  .note { text-align: center; }
+  .note blockquote { margin: 1.4rem 0 0; font-family: var(--font-italic); font-style: italic; font-size: clamp(1.45rem, 5.5vw, 1.85rem); line-height: 1.45; color: var(--ink); }
+  .note blockquote em { color: var(--burgundy); }
+  .note .sig { margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.75rem; }
+  .note .sig img { width: 46px; height: 46px; border-radius: 999px; object-fit: cover; object-position: center 18%; }
+  .note .sig div { text-align: left; }
+  .note .sig .n { font-family: var(--font-display); font-size: 1.05rem; }
+  .note .sig .r { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); }
+
+  /* ── Proof ──────────────────────────────────────────── */
+  .proof { background: radial-gradient(115% 92% at 50% -12%, #2A251E 0%, #1A1714 54%, #120F0C 100%); color: var(--ivory); border: 1px solid rgba(168,134,84,0.30); border-radius: var(--radius-2xl); padding: clamp(1.8rem, 6vw, 2.6rem); text-align: center; box-shadow: 0 30px 70px rgba(26,23,20,0.32), inset 0 1px 0 rgba(255,255,255,0.06); }
+  .proof .big { font-family: var(--font-display); font-size: clamp(3rem, 14vw, 4rem); line-height: 1; color: var(--gold-lamp); }
+  .proof .stars-static { display: inline-flex; gap: 3px; margin: 0.6rem 0 0.4rem; }
+  .proof .stars-static svg { width: 17px; height: 17px; }
+  .proof .stars-static svg path { fill: var(--gold-lamp); }
+  .proof .count { font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,239,228,0.6); }
+  .proof .quotes { display: grid; gap: 1rem; margin-top: 1.8rem; text-align: left; }
+  .proof .q { border-top: 1px solid rgba(245,239,228,0.16); padding-top: 1rem; }
+  .proof .q p { margin: 0 0 0.5rem; font-family: var(--font-italic); font-style: italic; font-size: 1.05rem; line-height: 1.45; color: var(--ivory); }
+  .proof .q .who { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-lamp); }
+
+  /* ── Other ways ─────────────────────────────────────── */
+  .ways { display: grid; gap: 0.8rem; margin-top: 1.5rem; }
+  .way { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; border: 1px solid rgba(58,51,44,0.07); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.15) 65%), rgba(255,255,255,0.45); -webkit-backdrop-filter: blur(14px) saturate(130%); backdrop-filter: blur(14px) saturate(130%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 6px 18px rgba(26,23,20,0.05); transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+  .way:hover { border-color: rgba(168,134,84,0.65); transform: translateY(-1px); }
+  .way__ic { width: 40px; height: 40px; flex-shrink: 0; border-radius: 999px; background: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.6); box-shadow: inset 0 1px 0 rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; }
+  .way__ic svg { width: 20px; height: 20px; }
+  .way__t { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+  .way__d { font-size: 0.85rem; color: var(--ink-mute); }
+  .way__arrow { margin-left: auto; color: var(--brass); }
+
+  /* ── Footer ─────────────────────────────────────────── */
+  .foot { text-align: center; padding: 2.5rem 0 7rem; }
+  .foot p { margin: 0.3rem 0; font-family: var(--font-sans); font-size: 12px; color: var(--ink-mute); }
+  .foot a { color: var(--burgundy); }
+
+  /* ── Sticky dock (mobile) ───────────────────────────── */
+  .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; display: flex; gap: 0.6rem; padding: 0.7rem clamp(1rem, 5vw, 1.5rem); background: rgba(250,246,236,0.6); -webkit-backdrop-filter: blur(22px) saturate(150%); backdrop-filter: blur(22px) saturate(150%); border-top: 1px solid rgba(255,255,255,0.55); box-shadow: 0 -10px 30px rgba(26,23,20,0.10), inset 0 1px 0 rgba(255,255,255,0.6); transform: translateY(110%); transition: transform 0.4s var(--ease-out); }
+  .dock.show { transform: translateY(0); }
+  .dock .btn { min-height: 52px; font-size: 0.92rem; }
+  @media (min-width: 720px) { .dock { display: none; } }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .result { transition: none; } }
+
+  /* Toast */
+  .toast { position: fixed; left: 50%; bottom: 90px; transform: translateX(-50%) translateY(20px); z-index: 80; background: var(--ink); color: var(--ivory); padding: 0.7rem 1.2rem; border-radius: var(--radius-pill); font-family: var(--font-sans); font-size: 13px; opacity: 0; pointer-events: none; transition: opacity 0.3s, transform 0.3s; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* Share dialog */
+  .sheet { position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 1.25rem; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease-out); }
+  .sheet.open { opacity: 1; pointer-events: auto; }
+  .sheet__scrim { position: absolute; inset: 0; background: rgba(20,16,12,0.5); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .sheet__card { position: relative; width: 100%; max-width: 420px; max-height: 90vh; overflow: auto; background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.3) 52%), rgba(255,252,247,0.94); -webkit-backdrop-filter: blur(22px) saturate(135%); backdrop-filter: blur(22px) saturate(135%); border: 1px solid rgba(255,255,255,0.6); border-radius: var(--radius-xl); box-shadow: 0 30px 70px rgba(26,23,20,0.28), inset 0 1px 0 rgba(255,255,255,0.85); padding: clamp(1.5rem, 5vw, 2rem); transform: translateY(16px) scale(0.98); transition: transform 0.3s var(--ease-out); }
+  .sheet.open .sheet__card { transform: none; }
+  .sheet__close { position: absolute; top: 0.9rem; right: 0.9rem; width: 34px; height: 34px; border: 0; border-radius: 999px; background: rgba(58,51,44,0.07); color: var(--ink); display: grid; place-items: center; }
+  .sheet__close .material-symbols-outlined { font-size: 20px; }
+  .sheet__card h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem,5vw,1.9rem); line-height: 1.16; margin: 0.7rem 0 0.5rem; color: var(--ink); }
+  .sheet__card h2 em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+  .sheet__card > p { margin: 0 0 1.3rem; font-family: var(--font-body); font-size: 1rem; line-height: 1.55; color: var(--ink-soft); }
+  .share-list { display: flex; flex-direction: column; gap: 0.7rem; }
+  .share-opt { display: flex; align-items: center; gap: 0.9rem; width: 100%; text-align: left; padding: 0.8rem 1rem; border: 1px solid var(--rule); border-radius: var(--radius-md); background: rgba(255,255,255,0.62); color: var(--ink); cursor: pointer; transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+  .share-opt:hover { border-color: var(--brass); transform: translateY(-1px); }
+  .share-opt__ic { width: 38px; height: 38px; flex-shrink: 0; border-radius: 999px; display: grid; place-items: center; }
+  .share-opt__ic svg { width: 20px; height: 20px; display: block; }
+  .share-opt__ic.wa { background: #25D366; }
+  .share-opt__ic.mail { background: var(--burgundy); }
+  .share-opt__ic.copy { background: var(--ink); }
+  .share-opt__txt { display: flex; flex-direction: column; gap: 2px; }
+  .share-opt__t { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; }
+  .share-opt__d { font-family: var(--font-sans); font-size: 0.8rem; color: var(--ink-mute); }
+  .share-opt > .material-symbols-outlined { margin-left: auto; color: var(--brass); font-size: 18px; }
+</style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top">
+    <div class="top__in">
+      <span class="top__brand">Zuza <b>&amp;</b> Pragtour</span>
+      <span class="top__rating">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z" fill="#7B5800"/></svg>
+        4,9 · 514 Bewertungen
+      </span>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- Hero / the ask -->
+    <section class="hero" id="top">
+      <img class="hero__avatar" src="../../assets/images/zuzana-portrait.jpg" alt="Zuzana Manová">
+      <span class="kicker solo">Schön, dass wir uns getroffen haben</span>
+      <h1 class="display">Wie war Ihr Tag in <em>Prag</em>?</h1>
+      <p class="hero__sub">Ihre Meinung bedeutet mir sehr viel — und sie hilft dem nächsten Reisenden, den Weg zu mir zu finden.</p>
+
+      <div class="stars" id="stars" role="radiogroup" aria-label="Bewertung">
+        <button class="star" data-v="1" aria-label="1 Stern"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg></button>
+        <button class="star" data-v="2" aria-label="2 Sterne"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg></button>
+        <button class="star" data-v="3" aria-label="3 Sterne"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg></button>
+        <button class="star" data-v="4" aria-label="4 Sterne"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg></button>
+        <button class="star" data-v="5" aria-label="5 Sterne"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg></button>
+      </div>
+      <p class="stars__hint" id="starHint">Tippen Sie auf die Sterne · dauert nur 1 Minute</p>
+
+      <!-- Result -->
+      <div class="result" id="result">
+        <!-- positive -->
+        <div class="panel" id="panelPos" hidden>
+          <h2 class="display">Das freut mich von <em>Herzen</em>.</h2>
+          <p>Würden Sie sich eine Minute nehmen und es mit anderen teilen? Wählen Sie einfach eine Plattform:</p>
+          <div class="stack">
+            <a class="btn btn--burgundy" id="googleBtn" href="#" target="_blank" rel="noopener">
+              <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.4 29.2 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 5.1 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.2-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 7.1 29.5 5 24 5 16.3 5 9.7 9.3 6.3 14.7z" transform="translate(0 -2)"/><path fill="#4CAF50" d="M24 45c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 36 26.7 37 24 37c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 40.6 16.2 45 24 45z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C39.9 36.5 45 31 45 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+              Bei Google bewerten
+            </a>
+            <a class="btn btn--ink" id="taBtn" href="#" target="_blank" rel="noopener">
+              <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#34E0A1"/><circle cx="15" cy="24" r="6" fill="#fff"/><circle cx="33" cy="24" r="6" fill="#fff"/><circle cx="15" cy="24" r="2.6" fill="#000"/><circle cx="33" cy="24" r="2.6" fill="#000"/><path d="M9 17c3-3.5 7-5 15-5s12 1.5 15 5" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+              Auf TripAdvisor bewerten
+            </a>
+          </div>
+          <p class="micro">Kein Konto? Beide Plattformen führen Sie in Sekunden durch die Anmeldung.</p>
+        </div>
+        <!-- constructive -->
+        <div class="panel" id="panelNeg" hidden>
+          <h2 class="display">Danke für Ihre <em>Ehrlichkeit</em>.</h2>
+          <p>Es ist mir wichtig, dass Sie zufrieden sind. Schreiben Sie mir bitte direkt — ich möchte verstehen, was ich besser machen kann.</p>
+          <div class="stack">
+            <a class="btn btn--burgundy" href="https://wa.me/420721231933" target="_blank" rel="noopener">
+              <svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 2a8 8 0 11-4.1 14.9l-.3-.2-2.8.7.8-2.7-.2-.3A8 8 0 0112 4zm-2.6 4.1c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.9 4.5 3.9 2.2.9 2.7.7 3.2.7s1.5-.6 1.8-1.3c.2-.6.2-1.2.1-1.3l-.7-.3s-1.2-.6-1.4-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.1-.2.1-.4 0-.2-.1-1-.4-1.8-1.1-.7-.6-1.1-1.3-1.3-1.5-.1-.2 0-.3.1-.4l.3-.4.3-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4z"/></svg>
+              Direkt über WhatsApp
+            </a>
+            <a class="btn btn--outline" href="mailto:zuzanamanova@email.cz">Per E-Mail schreiben</a>
+          </div>
+          <a class="alt" id="altPublic" href="#">Trotzdem eine öffentliche Bewertung abgeben →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- A personal thank-you — build rapport before the mechanics -->
+    <section class="reveal thanks">
+      <span class="kicker solo">Ein persönliches Wort</span>
+      <h2 class="display thanks__title">Danke, dass Sie mit mir durch <em>Prag</em> gegangen sind.</h2>
+      <p class="thanks__body">Es war mir eine echte Freude, Ihnen meine Stadt zu zeigen. Ihre Neugier, Ihre Fragen und Ihre Gesellschaft haben diesen Tag zu etwas Besonderem gemacht — ich hoffe, Sie nehmen ein paar Geschichten mit nach Hause, die bleiben.</p>
+      <p class="thanks__sign">Von Herzen,</p>
+      <p class="thanks__name">Zuzana</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- How it works -->
+    <section class="reveal">
+      <span class="kicker">In drei Schritten</span>
+      <h2 class="display" style="font-size:clamp(1.7rem,6vw,2.2rem);margin:0.8rem 0 0">So hinterlassen Sie eine Bewertung</h2>
+      <ol class="steps">
+        <li class="step"><span class="step__n">1</span><div><p class="step__t">Plattform wählen</p><p class="step__d">Google oder TripAdvisor — ganz wie Sie möchten.</p></div></li>
+        <li class="step"><span class="step__n">2</span><div><p class="step__t">Fünf Sterne vergeben</p><p class="step__d">Ein Tipp genügt. Ein Konto ist meist schon vorhanden.</p></div></li>
+        <li class="step"><span class="step__n">3</span><div><p class="step__t">Ein paar Worte schreiben</p><p class="step__d">Zwei, drei Sätze reichen völlig. Brauchen Sie Inspiration? Siehe unten.</p></div></li>
+      </ol>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Write helper -->
+    <section class="reveal">
+      <span class="kicker">Eine kleine Hilfe</span>
+      <h2 class="display" style="font-size:clamp(1.7rem,6vw,2.2rem);margin:0.8rem 0 1.2rem">Nicht sicher, was Sie schreiben sollen?</h2>
+      <div class="helper">
+        <p class="muted" style="margin:0;font-size:0.95rem;line-height:1.55">Tippen Sie an, was Ihnen in Erinnerung geblieben ist — ich stelle einen Vorschlag zusammen, den Sie kopieren und anpassen können.</p>
+        <div class="chips" id="chips">
+          <button class="chip" data-p="Zuzanas Geschichten und ihre Leidenschaft">Zuzanas Geschichten</button>
+          <button class="chip" data-p="die Tour durch das Jüdische Viertel">Jüdisches Viertel</button>
+          <button class="chip" data-p="die versteckten Höfe abseits der Touristenpfade">Versteckte Höfe</button>
+          <button class="chip" data-p="ihr tiefes Wissen über Geschichte und Architektur">Ihr Wissen</button>
+          <button class="chip" data-p="die Führung auf Deutsch">Auf Deutsch</button>
+          <button class="chip" data-p="wie gut es für unsere Familie gepasst hat">Für Familien</button>
+        </div>
+        <textarea id="draft" readonly aria-label="Bewertungsvorschlag"></textarea>
+        <div class="helper__row">
+          <button class="btn btn--burgundy" id="copyBtn">Vorschlag kopieren</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Note from Zuzana -->
+    <section class="note reveal">
+      <span class="kicker solo">Warum es zählt</span>
+      <blockquote>„Als unabhängige Führerin habe ich kein Marketing-Budget — nur Ihre Worte. Jede Bewertung hilft einem weiteren Reisenden, mich zu <em>finden</em>.“</blockquote>
+      <div class="sig">
+        <img src="../../assets/images/zuzana-portrait.jpg" alt="Zuzana Manová">
+        <div><div class="n">Zuzana Manová</div><div class="r">Zertifizierte Stadtführerin</div></div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Proof -->
+    <section class="reveal">
+      <div class="proof">
+        <div class="big">4,9</div>
+        <div class="stars-static">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+        </div>
+        <div class="count">514 Bewertungen · Sie sind in guter Gesellschaft</div>
+        <div class="quotes">
+          <div class="q"><p>„Absolut unvergesslich. Zuzanas Verbindung zur Stadt ist einzigartig.“</p><span class="who">Thomas K. · TripAdvisor</span></div>
+          <div class="q"><p>„Ein Highlight unserer Europareise. Ihr Wissen ist unübertroffen.“</p><span class="who">Monika H. · TourHQ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Other ways to help -->
+    <section class="reveal">
+      <span class="kicker">Noch mehr helfen?</span>
+      <h2 class="display" style="font-size:clamp(1.7rem,6vw,2.2rem);margin:0.8rem 0 0">Weitere kleine Gesten</h2>
+      <div class="ways">
+        <a class="way" id="shareBtn" href="#">
+          <span class="way__ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B1F2A" stroke-width="1.6"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></span>
+          <div><div class="way__t">Die Seite teilen</div><div class="way__d">Empfehlen Sie Zuzana an Reisefreunde.</div></div>
+          <span class="way__arrow">→</span>
+        </a>
+        <a class="way" href="https://www.instagram.com/erlebnis_tour_prag/" target="_blank" rel="noopener">
+          <span class="way__ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B1F2A" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#6B1F2A" stroke="none"/></svg></span>
+          <div><div class="way__t">Auf Instagram folgen</div><div class="way__d">@erlebnis_tour_prag</div></div>
+          <span class="way__arrow">→</span>
+        </a>
+        <a class="way" href="https://zuzapragtour.de/tours" target="_blank" rel="noopener">
+          <span class="way__ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B1F2A" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><div class="way__t">Eine weitere Tour</div><div class="way__d">Kommen Sie für eine andere Seite Prags zurück.</div></div>
+          <span class="way__arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>Zuza Prague Tours · Ing. Zuzana Manová</p>
+      <p><a href="tel:+420721231933">+420 721 231 933</a> · <a href="mailto:zuzanamanova@email.cz">zuzanamanova@email.cz</a></p>
+      <p style="margin-top:0.8rem;color:var(--stone-400)">© 2026 · Vielen Dank für Ihren Besuch in Prag.</p>
+    </footer>
+  </main>
+
+  <!-- Sticky dock (mobile) -->
+  <div class="dock" id="dock">
+    <a class="btn btn--burgundy" id="dockGoogle" href="#" target="_blank" rel="noopener">
+      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.4 29.2 35 24 35c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 5.1 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.2-.1-2.3-.4-3.5z"/></svg>
+      Google
+    </a>
+    <a class="btn btn--ink" id="dockTa" href="#" target="_blank" rel="noopener">
+      <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#34E0A1"/><circle cx="15" cy="24" r="5.5" fill="#fff"/><circle cx="33" cy="24" r="5.5" fill="#fff"/><circle cx="15" cy="24" r="2.4" fill="#000"/><circle cx="33" cy="24" r="2.4" fill="#000"/></svg>
+      TripAdvisor
+    </a>
+  </div>
+
+  <div class="toast" id="toast">In die Zwischenablage kopiert</div>
+
+  <!-- Share / recommend dialog -->
+  <div class="sheet" id="shareSheet" role="dialog" aria-modal="true" aria-labelledby="shareSheetTitle" hidden>
+    <div class="sheet__scrim" data-share-close></div>
+    <div class="sheet__card">
+      <button class="sheet__close" id="shareSheetClose" aria-label="Schließen" data-share-close><span class="material-symbols-outlined">close</span></button>
+      <span class="kicker solo">Weiterempfehlen</span>
+      <h2 id="shareSheetTitle">Kennen Sie jemanden, der <em>Prag</em> besucht?</h2>
+      <p>Empfehlen Sie mich einem Freund oder einer Freundin — die schönste Art, Danke zu sagen.</p>
+      <div class="share-list">
+        <a class="share-opt" id="shareWhatsApp" target="_blank" rel="noopener">
+          <span class="share-opt__ic wa"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 0112 3.8zm-2.5 4.2c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.5 1 2.7c.1.2 1.8 2.9 4.4 3.9 2.2.9 2.6.7 3.1.7s1.5-.6 1.7-1.2c.2-.6.2-1.1.2-1.2l-.7-.4s-1.1-.5-1.3-.6c-.2-.1-.4-.1-.5.1l-.7.9c-.1.1-.3.1-.4.1-.2-.1-1-.4-1.8-1.1-.7-.6-1.1-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.4l-.6-1.6c-.2-.4-.4-.4-.5-.4z"/></svg></span>
+          <span class="share-opt__txt"><span class="share-opt__t">Per WhatsApp empfehlen</span><span class="share-opt__d">An Freunde senden, die Prag besuchen</span></span>
+          <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+        <a class="share-opt" id="shareEmail">
+          <span class="share-opt__ic mail"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></span>
+          <span class="share-opt__txt"><span class="share-opt__t">Per E-Mail empfehlen</span><span class="share-opt__d">Eine persönliche Empfehlung schreiben</span></span>
+          <span class="material-symbols-outlined">open_in_new</span>
+        </a>
+        <button class="share-opt" id="shareCopyLink" type="button">
+          <span class="share-opt__ic copy"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><path d="M10 13.5a3.5 3.5 0 005 0l3-3a3.5 3.5 0 00-5-5l-1 1"/><path d="M14 10.5a3.5 3.5 0 00-5 0l-3 3a3.5 3.5 0 005 5l1-1"/></svg></span>
+          <span class="share-opt__txt"><span class="share-opt__t">Link kopieren</span><span class="share-opt__d">zuzapragtour.de</span></span>
+          <span class="material-symbols-outlined">content_copy</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Links (replace GOOGLE_PLACE_ID with the real one) ──
+    const LINKS = {
+      google: 'https://search.google.com/local/writereview?placeid=REPLACE_WITH_GOOGLE_PLACE_ID',
+      tripadvisor: 'https://www.tripadvisor.de/UserReview-g274707-d10450040-Zuza_Prague_Tours-Prague_Bohemia.html'
+    };
+    ['googleBtn','dockGoogle'].forEach(id => { const e = document.getElementById(id); if (e) e.href = LINKS.google; });
+    ['taBtn','dockTa'].forEach(id => { const e = document.getElementById(id); if (e) e.href = LINKS.tripadvisor; });
+
+    // ── Star rating ──
+    const stars = [...document.querySelectorAll('#stars .star')];
+    const result = document.getElementById('result');
+    const panelPos = document.getElementById('panelPos');
+    const panelNeg = document.getElementById('panelNeg');
+    const hint = document.getElementById('starHint');
+    let rated = 0;
+    const paint = (n) => stars.forEach((s, i) => s.classList.toggle('on', i < n));
+    stars.forEach((s) => {
+      const v = +s.dataset.v;
+      s.addEventListener('mouseenter', () => paint(v));
+      s.addEventListener('mouseleave', () => paint(rated));
+      s.addEventListener('click', () => {
+        rated = v; paint(v);
+        const positive = v >= 4;
+        panelPos.hidden = !positive;
+        panelNeg.hidden = positive;
+        hint.textContent = positive ? 'Wunderbar — danke!' : 'Danke für Ihr Feedback.';
+        result.classList.add('open');
+        showDock(positive);
+        setTimeout(() => result.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
+      });
+    });
+    document.getElementById('altPublic').addEventListener('click', (e) => {
+      e.preventDefault(); panelNeg.hidden = true; panelPos.hidden = false;
+    });
+
+    // ── Sticky dock ──
+    const dock = document.getElementById('dock');
+    let dockForced = false;
+    const showDock = () => { dockForced = true; dock.classList.add('show'); };
+    const onScroll = () => { if (!dockForced && window.scrollY > window.innerHeight * 0.9) dock.classList.add('show'); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // ── Write helper ──
+    const draftBase = 'Eine wundervolle Privatführung durch Prag mit Zuzana.';
+    const chips = [...document.querySelectorAll('#chips .chip')];
+    const draft = document.getElementById('draft');
+    const buildDraft = () => {
+      const picked = chips.filter(c => c.classList.contains('on')).map(c => c.dataset.p);
+      let t = draftBase;
+      if (picked.length) {
+        const list = picked.length === 1 ? picked[0]
+          : picked.slice(0, -1).join(', ') + ' und ' + picked[picked.length - 1];
+        t += ' Besonders in Erinnerung geblieben sind mir ' + list + '.';
+      }
+      t += ' Von Herzen zu empfehlen!';
+      draft.value = t;
+    };
+    chips.forEach(c => c.addEventListener('click', () => { c.classList.toggle('on'); buildDraft(); }));
+    buildDraft();
+
+    const toast = document.getElementById('toast');
+    const ping = (msg) => { toast.textContent = msg; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1900); };
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(draft.value); }
+      catch (e) { draft.removeAttribute('readonly'); draft.select(); document.execCommand('copy'); draft.setAttribute('readonly',''); }
+      ping('Vorschlag kopiert — jetzt einfügen');
+    });
+
+    // ── Share / recommend dialog ──
+    (function () {
+      const sheet = document.getElementById('shareSheet');
+      const openBtn = document.getElementById('shareBtn');
+      if (!sheet || !openBtn) return;
+      const url = 'https://zuzapragtour.de';
+      const msg = 'Ich kann Zuzana als private Stadtführerin in Prag wärmstens empfehlen! ' + url;
+      document.getElementById('shareWhatsApp').href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+      document.getElementById('shareEmail').href = 'mailto:?subject=' + encodeURIComponent('Eine Empfehlung für Prag') + '&body=' + encodeURIComponent(msg);
+      const open = () => { sheet.hidden = false; void sheet.offsetHeight; sheet.classList.add('open'); };
+      const close = () => { sheet.classList.remove('open'); setTimeout(() => { sheet.hidden = true; }, 320); };
+      openBtn.addEventListener('click', (e) => { e.preventDefault(); open(); });
+      sheet.querySelectorAll('[data-share-close]').forEach((el) => el.addEventListener('click', close));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) close(); });
+      document.getElementById('shareCopyLink').addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(url); } catch (_) {}
+        ping('Link kopiert'); close();
+      });
+      document.getElementById('shareWhatsApp').addEventListener('click', () => setTimeout(close, 120));
+      document.getElementById('shareEmail').addEventListener('click', () => setTimeout(close, 120));
+    })();
+
+    // ── Reveals ──
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: 0.12 });
+      reveals.forEach(el => io.observe(el));
+      setTimeout(() => reveals.forEach(el => el.classList.add('in')), 1600);
+    } else { reveals.forEach(el => el.classList.add('in')); }
+  </script>
+</body>
+</html>

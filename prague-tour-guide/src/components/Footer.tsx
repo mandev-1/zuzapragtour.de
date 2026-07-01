@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLanguage } from '../context/LanguageContext';
 
 const TripAdvisorIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -26,9 +27,13 @@ const InstagramIcon: React.FC<{ className?: string }> = ({ className }) => (
 const Footer: React.FC = () => {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
+  // The home page renders its own full-bleed CTA section, so skip this
+  // duplicate dark CTA band there (keep it on every other page).
+  const isHome = usePathname() === '/';
 
   return (
     <footer className="w-full">
+      {!isHome && (
       <div className="bg-ink">
         <div className="mx-auto flex max-w-editorial flex-col gap-6 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-10">
           <div>
@@ -46,6 +51,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      )}
 
       <div className="bg-paper">
         <div className="mx-auto grid max-w-editorial grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4 md:px-10">
@@ -81,6 +87,7 @@ const Footer: React.FC = () => {
                 { href: '/blog',                   label: t('nav.blog') },
                 { href: '/contact#contact-title',  label: t('nav.contact') },
                 { href: '/book#contact-title',     label: t('contact.booking.header.title') },
+                { href: '/bewerten',               label: t('footer.review') },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="font-label text-sm text-stone-600 underline-offset-4 transition-colors hover:text-ink hover:underline">
                   {label}

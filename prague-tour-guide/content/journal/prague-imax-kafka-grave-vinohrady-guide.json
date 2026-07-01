@@ -1,0 +1,328 @@
+{
+  "slug": "prague-imax-kafka-grave-vinohrady-guide",
+  "slugDe": "prag-imax-kafka-grab-vinohrady-guide",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-04-13",
+  "dateDisplay": {
+    "de": "13. April 2026",
+    "en": "April 13, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/atriumflora-b.jpg",
+  "title": {
+    "de": "Vinohrady: IMAX, Kafkas Grab & Bauernmarkt",
+    "en": "Vinohrady Half-Day: IMAX, Kafka & Market"
+  },
+  "excerpt": {
+    "de": "Das einzige IMAX der Tschechischen Republik, Franz Kafkas letzte Ruhestätte und ein Bauernmarkt, der sogar Leonardo DiCaprio anzog — alles zu Fuß erreichbar in Prags Vierteln Vinohrady und Žižkov.",
+    "en": "The only IMAX in the Czech Republic, Franz Kafka's final resting place, and a farmers' market that even drew Leonardo DiCaprio — all within walking distance in Prague's Vinohrady and Žižkov neighbourhoods."
+  },
+  "tags": {
+    "de": [
+      "IMAX Prag",
+      "Cinema City Flora",
+      "Franz Kafka Grab",
+      "Prag Vinohrady",
+      "Jiřák Bauernmarkt",
+      "Prag Aktivitäten",
+      "Prag Žižkov",
+      "Neuer Jüdischer Friedhof Prag",
+      "Christopher Nolan Odyssey",
+      "Leonardo DiCaprio Prag",
+      "Prag Drehorte"
+    ],
+    "en": [
+      "IMAX Prague",
+      "Cinema City Flora",
+      "Franz Kafka grave",
+      "Prague Vinohrady",
+      "Jiřák farmers market",
+      "Prague things to do",
+      "Prague Žižkov",
+      "New Jewish Cemetery Prague",
+      "Christopher Nolan Odyssey",
+      "Leonardo DiCaprio Prague",
+      "Prague film locations"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "IMAX Prag, Kafkas Grab & der beste Bauernmarkt der Stadt: Ein halber Tag in Vinohrady",
+        "en": "IMAX Prague, Kafka's Grave & the Best Farmers' Market in Town: A Vinohrady Half-Day"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Die meisten Prag-Besucher verlassen das Dreieck zwischen Burg, Altstädter Ring und Karlsbrücke nie. Das ist ein Fehler. Eine Metrostation östlich des Zentrums liegt ein Viertel-Cluster — Vinohrady und Žižkov —, das ein Blockbuster-Kino, eines der wichtigsten Literaturgräber Europas und den besten Freiluftmarkt der Stadt in einen einzigen entspannten Vor- oder Nachmittag packt. So geht's.",
+        "en": "Most visitors to Prague never leave the triangle between the Castle, Old Town Square and Charles Bridge. That is a mistake. One metro stop east of the centre sits a neighbourhood cluster — Vinohrady and Žižkov — that packs a blockbuster cinema, one of the most important literary graves in Europe, and the city's finest open-air market into a single unhurried morning or afternoon. Here is how to do it."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/atriumflora-b.jpg"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 1 — IMAX im Cinema City Flora",
+        "en": "Stop 1 — IMAX at Cinema City Flora"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die <strong>IMAX-Leinwand im Palác Flora</strong> (Vinohradská 151, Prag 3) ist das einzige IMAX der Tschechischen Republik. Die Leinwand misst 25 × 14 Meter, die Projektion ist digital mit Dual-Laser, und das Dolby-Soundsystem füllt einen eigens gebauten Saal im Obergeschoss des Flora-Einkaufszentrums. Metrostation: <strong>Flora</strong>, Linie A — Sie steigen von der Rolltreppe und stehen praktisch am Kartenschalter.",
+        "en": "The <strong>IMAX screen at Palác Flora</strong> (Vinohradská 151, Prague 3) is the only IMAX in the Czech Republic. The screen measures 25 × 14 metres, the projection is dual-laser digital, and the Dolby sound system fills a purpose-built auditorium on the top floor of the Flora shopping centre. Metro stop: <strong>Flora</strong>, line A — you step off the escalator and you are practically at the ticket counter."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was 2026 im IMAX Prag läuft",
+        "en": "What's coming to IMAX Prague in 2026"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Spielplan 2026 ist vollgepackt. Highlights, für die sich eine Vorbestellung lohnt:",
+        "en": "The 2026 slate is stacked. Highlights worth booking ahead for:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>The Odyssey</strong> (17. Juli) — Christopher Nolans nächstes Epos, gedreht auf 70-mm-IMAX-Film. Prag hat bereits den Vorverkauf gestartet; das wird ausverkauft sein.",
+          "en": "<strong>The Odyssey</strong> (July 17) — Christopher Nolan's next epic, shot on 70 mm IMAX film. Prague has already launched pre-sales; this will sell out."
+        },
+        {
+          "de": "<strong>The Mandalorian & Grogu</strong> (22. Mai) — Star Wars zurück auf der großen Leinwand.",
+          "en": "<strong>The Mandalorian & Grogu</strong> (May 22) — Star Wars on the big screen again."
+        },
+        {
+          "de": "<strong>Toy Story 5</strong> (19. Juni) — Pixars Rückkehr zur Reihe.",
+          "en": "<strong>Toy Story 5</strong> (June 19) — Pixar's return to the franchise."
+        },
+        {
+          "de": "<strong>Sunrise on the Reaping</strong> (20. November) — das neue Hunger-Games-Prequel.",
+          "en": "<strong>Sunrise on the Reaping</strong> (November 20) — the new Hunger Games prequel."
+        },
+        {
+          "de": "<strong>Avengers: Doomsday</strong> (18. Dezember) — das Marvel-Event des Jahres.",
+          "en": "<strong>Avengers: Doomsday</strong> (December 18) — the Marvel event of the year."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Aktuelle Spielzeiten und Tickets finden Sie bei <a href=\"https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB\" target=\"_blank\" rel=\"noopener noreferrer\">Cinema City Flora</a>. Nachmittagsvorstellungen unter der Woche sind ruhiger; Wochenenden füllen sich schnell.",
+        "en": "Check <a href=\"https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB\" target=\"_blank\" rel=\"noopener noreferrer\">Cinema City Flora</a> for the latest schedule and tickets. Weekday afternoon screenings are quieter; weekends fill fast."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Infos",
+        "en": "Practical details"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Öffnungszeiten:</strong> Mo–Fr 13:30–22:30 · Sa–So 10:30–22:30",
+          "en": "<strong>Hours:</strong> Mon–Fri 13:30–22:30 · Sat–Sun 10:30–22:30"
+        },
+        {
+          "de": "<strong>Parken:</strong> 3 Stunden gratis in der OC-Flora-Tiefgarage (an der Kasse entwerten)",
+          "en": "<strong>Parking:</strong> 3 hours free in the OC Flora garage (validate at the box office)"
+        },
+        {
+          "de": "<strong>Barrierefreiheit:</strong> Voller Rollstuhlzugang einschließlich Parkhaus; Assistenzhunde willkommen",
+          "en": "<strong>Accessibility:</strong> Full wheelchair access including parking; assistance dogs welcome"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 2 — Franz Kafkas Grab",
+        "en": "Stop 2 — Franz Kafka's Grave"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vom Flora-Einkaufszentrum gehen Sie etwa 15 Minuten östlich die Izraelská entlang (oder fahren eine Metrostation bis <strong>Želivského</strong>) zum <strong>Neuen Jüdischen Friedhof</strong> (<em>Nový židovský hřbitov</em>, Izraelská 1, Prag 3). Hier wurde <strong>Franz Kafka</strong> 1924 begraben, neben seinen Eltern Hermann und Julie.",
+        "en": "From the Flora shopping centre, walk east along Izraelská for about 15 minutes (or take the metro one stop to <strong>Želivského</strong>) to reach the <strong>New Jewish Cemetery</strong> (<em>Nový židovský hřbitov</em>, Izraelská 1, Prague 3). This is where <strong>Franz Kafka</strong> was buried in 1924, alongside his parents Hermann and Julie."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Grab — <strong>Feld 21-14-21</strong> — ist mit einem schlanken, sechseckigen kubistischen Granitgrabstein markiert, der aus den Reihen herausragt. Nach dem Haupttor rechts abbiegen und dem Außenzaun folgen; das Grab liegt links. Schilder weisen den Weg, aber die Stille des Friedhofs macht das Suchen zum Teil des Erlebnisses.",
+        "en": "The grave — <strong>plot 21-14-21</strong> — is marked by a slender, hexagonal cubist-style granite tombstone that stands out among the rows. Turn right after the main gate and follow the outside fence; the grave is on the left. Signs point the way, but the quiet of the cemetery makes finding it part of the experience."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was Sie vor dem Besuch wissen sollten",
+        "en": "What to know before you visit"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Eintritt:</strong> Kostenlos",
+          "en": "<strong>Admission:</strong> Free"
+        },
+        {
+          "de": "<strong>Geschlossen:</strong> Samstags und an jüdischen Feiertagen",
+          "en": "<strong>Closed:</strong> Saturdays and Jewish holidays"
+        },
+        {
+          "de": "<strong>Kopfbedeckung:</strong> Männer sollten den Kopf bedecken; am Eingang gibt es meist Leihkäppchen",
+          "en": "<strong>Head covering:</strong> Men are expected to cover their heads; coverings are usually available at the entrance"
+        },
+        {
+          "de": "<strong>Tradition:</strong> Besucher legen einen kleinen Stein auf das Grab als Zeichen des Respekts — keine Blumen",
+          "en": "<strong>Tradition:</strong> Visitors leave a small stone on the grave as a mark of respect — not flowers"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gegenüber von Kafkas Grabstein finden Sie eine Gedenktafel für <strong>Max Brod</strong>, seinen engsten Freund und den Mann, der Kafkas Anweisung missachtete, seine Manuskripte zu verbrennen — der Grund, warum <em>Der Prozess</em>, <em>Das Schloss</em> und <em>Amerika</em> überhaupt existieren. Der Friedhof beherbergt auch die Gräber der Schriftsteller <strong>Ota Pavel</strong> und <strong>Jiří Orten</strong>.",
+        "en": "Across from Kafka's tombstone you will find a memorial plaque to <strong>Max Brod</strong>, his closest friend and the man who defied Kafka's instruction to burn his manuscripts — the reason <em>The Trial</em>, <em>The Castle</em>, and <em>Amerika</em> exist at all. The cemetery also holds the graves of writers <strong>Ota Pavel</strong> and <strong>Jiří Orten</strong>."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stopp 3 — Der Bauernmarkt am Jiřího z Poděbrad",
+        "en": "Stop 3 — The Farmers' Market at Jiřího z Poděbrad"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gehen Sie zurück Richtung Westen zum <strong>Náměstí Jiřího z Poděbrad</strong> (die Einheimischen sagen „Jiřák\"), eine Metrostation von Flora auf Linie A. Der Platz beherbergt Prags beliebtesten <strong>Bauernmarkt</strong>, der von Mittwoch bis Samstag vom Frühling bis Herbst läuft.",
+        "en": "Head back west to <strong>Náměstí Jiřího z Poděbrad</strong> (locals call it \"Jiřák\"), one metro stop from Flora on line A. The square hosts Prague's best-loved <strong>farmers' market</strong>, running Wednesday to Saturday from spring through autumn."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Marktzeiten",
+        "en": "Market hours"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Mittwoch – Freitag:</strong> 8:00 – 18:00",
+          "en": "<strong>Wednesday – Friday:</strong> 8:00 – 18:00"
+        },
+        {
+          "de": "<strong>Samstag:</strong> 8:00 – 14:00",
+          "en": "<strong>Saturday:</strong> 8:00 – 14:00"
+        },
+        {
+          "de": "<strong>Geschlossen:</strong> Sonntag – Dienstag",
+          "en": "<strong>Closed:</strong> Sunday – Tuesday"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Stände bieten saisonale tschechische Produkte — frisches Gemüse, handwerklichen Käse, Räucherfleisch, Honig, Gebäck, Fermentiertes und heißes Essen zum Sofort-Genießen. Die Marktregel: regional, möglichst abfallarm — statt Plastik gibt es Stoffbeutel.",
+        "en": "The stalls sell seasonal Czech produce — fresh vegetables, artisan cheeses, smoked meats, honey, pastries, fermented goods, and hot food to eat on the spot. The market's own rule is locally sourced, low-waste: they hand out textile bags instead of plastic."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die Hollywood-Verbindung",
+        "en": "The Hollywood connection"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im Frühjahr 2026 war <strong>Leonardo DiCaprio</strong> in Prag für die Dreharbeiten zu Martin Scorseses <em>What Happens at Night</em> — ein 35-tägiger Dreh in Tschechien, der Anfang April abgeschlossen wurde. DiCaprio spielt neben <strong>Jennifer Lawrence</strong> und <strong>Mads Mikkelsen</strong> in der Verfilmung von Peter Camerons Roman. Während seines Aufenthalts hielt er sich bedeckt, doch Einheimische behaupten, ihn an den Jiřák-Ständen gesehen zu haben. Die Social-Media-Seite des Marktes spielte mit: <em>„Manchmal kommt Leonardo DiCaprio vorbei.\"</em> Ob er den Syrečky gekauft hat oder nicht — dass das Gerücht plausibel klingt, sagt etwas über die Art dieses Viertels: leise ausgezeichnet, nicht an Touristen-Beeindruckung interessiert und sehr gut im Sattmachen.",
+        "en": "In spring 2026, <strong>Leonardo DiCaprio</strong> was in Prague for the filming of Martin Scorsese's <em>What Happens at Night</em> — a 35-day Czech shoot that wrapped in early April. DiCaprio co-stars alongside <strong>Jennifer Lawrence</strong> and <strong>Mads Mikkelsen</strong> in the adaptation of Peter Cameron's novel. During his stay he kept a low profile, but locals insist he was spotted browsing the Jiřák stalls. The market's own social media played along: <em>\"Sometimes Leonardo DiCaprio passes by.\"</em> Whether or not he bought the syrečky, the fact that the rumour is plausible says something about the kind of neighbourhood this is — quietly excellent, not interested in impressing tourists, and very good at feeding people."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "DiCaprio wurde auch im <strong>Ständetheater</strong> gesichtet (wo Mozart <em>Don Giovanni</em> uraufführte), machte eine private Tour zu den <em>Amadeus</em>-Drehorten und verbrachte Ostern auf <strong>Burg Karlštejn</strong>. Scorseses Produktion nutzte Drehorte in Prag, Žatec, Úštěk und Ratboř.",
+        "en": "DiCaprio was also seen at the <strong>Estates Theatre</strong> (where Mozart premiered <em>Don Giovanni</em>), took a private tour of the <em>Amadeus</em> filming locations, and spent Easter at <strong>Karlštejn Castle</strong>. Scorsese's production used locations across Prague, Žatec, Úštěk, and Ratboř."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "So planen Sie die Route",
+        "en": "Putting It Together: A Suggested Route"
+      }
+    },
+    {
+      "t": "list",
+      "ordered": true,
+      "items": [
+        {
+          "de": "<strong>Vormittag</strong> — Metro zum <strong>Jiřího z Poděbrad</strong> (Linie A). Über den Bauernmarkt schlendern, Kaffee und Trdelník oder Langoš holen.",
+          "en": "<strong>Morning</strong> — Metro to <strong>Jiřího z Poděbrad</strong> (line A). Browse the farmers' market, grab coffee and a trdelník or langos."
+        },
+        {
+          "de": "<strong>Später Vormittag</strong> — Zu Fuß oder eine Station bis <strong>Flora</strong>. IMAX-Programm prüfen; passt ein Film, gleich buchen.",
+          "en": "<strong>Late morning</strong> — Walk or ride one stop to <strong>Flora</strong>. Check IMAX showtimes; if a film fits your schedule, book it now."
+        },
+        {
+          "de": "<strong>Mittag</strong> — Weiter östlich zum <strong>Neuen Jüdischen Friedhof</strong> (15 Min. zu Fuß oder eine Metrostation bis Želivského). Kafkas Grab besuchen.",
+          "en": "<strong>Midday</strong> — Continue east to the <strong>New Jewish Cemetery</strong> (15 min walk or one metro stop to Želivského). Visit Kafka's grave."
+        },
+        {
+          "de": "<strong>Nachmittag</strong> — Zurück zu Flora für die IMAX-Vorstellung oder ins Zentrum. Die ganze Runde dauert bei gemütlichem Tempo 3–4 Stunden.",
+          "en": "<strong>Afternoon</strong> — Return to Flora for your IMAX screening, or head back to the centre. The whole loop takes 3–4 hours at a comfortable pace."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Warum dieses Viertel zählt",
+        "en": "Why This Neighbourhood Matters"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vinohrady und Žižkov sind das Prag, das lebt, wenn es nicht für Besucher auftritt. Die Architektur ist Jugendstil und Kubismus, die Cafés sind ungehetzt, die Parks (Riegrovy sady, Havlíčkovy sady) haben die besten Sonnenuntergangspanoramen der Stadt, und die Preise liegen merklich unter dem touristischen Kern. Diese Runde — IMAX, Kafka, Markt — zu einer Prag-Reise hinzuzufügen, gibt Ihnen eine Version der Stadt, die die meisten Besucher nie sehen.",
+        "en": "Vinohrady and Žižkov are where Prague lives when it is not performing for visitors. The architecture is Art Nouveau and Cubist, the cafés are unhurried, the parks (Riegrovy sady, Havlíčkovy sady) have the best sunset views in the city, and the prices are noticeably lower than in the tourist core. Adding this loop to a Prague trip — IMAX, Kafka, market — gives you a version of the city that most visitors never see."
+      }
+    }
+  ]
+}

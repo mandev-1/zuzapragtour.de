@@ -1,0 +1,391 @@
+{
+  "slug": "prague-visitor-pass-honest-review",
+  "slugDe": "prague-visitor-pass-ehrliche-bewertung",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-04-13",
+  "dateDisplay": {
+    "de": "13. April 2026",
+    "en": "April 13, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/old-town-square.jpg",
+  "title": {
+    "de": "Prague Visitor Pass: Meine Empfehlung",
+    "en": "Prague Visitor Pass: Why I Recommend It"
+  },
+  "excerpt": {
+    "de": "Nach 40 Jahren als Stadtführerin in Prag habe ich hunderte Male zugesehen, wie Touristen für Einzeltickets zu viel bezahlen. Der Prague Visitor Pass löst das meiste davon. Hier die ehrliche Rechnung.",
+    "en": "After 40 years of guiding in Prague I have watched tourists overpay for individual tickets hundreds of times. The Prague Visitor Pass fixes most of that. Here is the honest maths."
+  },
+  "tags": {
+    "de": [
+      "Prague Visitor Pass",
+      "Prag Touristenkarte",
+      "Prag Geld sparen",
+      "Prag öffentliche Verkehrsmittel",
+      "Prager Burg Tickets",
+      "Prager Judenviertel",
+      "Prager Zoo",
+      "Kutná Hora Tagesausflug",
+      "Prag Reisetipps",
+      "Prag Budget Ratgeber"
+    ],
+    "en": [
+      "Prague Visitor Pass",
+      "Prague tourist card",
+      "Prague money saving",
+      "Prague public transport",
+      "Prague Castle tickets",
+      "Prague Jewish Quarter",
+      "Prague Zoo",
+      "Kutná Hora day trip",
+      "Prague travel tips",
+      "Prague budget guide"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Der Prague Visitor Pass: warum ich jedem Gast dazu rate",
+        "en": "The Prague Visitor Pass: why I tell every client to get one"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Ich führe Menschen durch Prag seit Mitte der 1980er Jahre. Jede Woche fragt mich jemand, ob sich der <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Visitor Pass</a> lohnt. Kurze Antwort: ja, fast immer. Die längere Antwort braucht etwa fünf Minuten und etwas Kopfrechnen. Genau darum geht es in diesem Artikel.",
+        "en": "I have been guiding people through Prague since the mid-1980s. Every week someone asks me whether the <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Visitor Pass</a> is worth the money. The short answer: yes, almost always. The longer answer takes about five minutes and a bit of arithmetic, which is what this article is."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was der Pass eigentlich ist",
+        "en": "What the pass actually is"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Visitor Pass</a> ist die offizielle Touristenkarte der Stadt. Man kauft ihn für 48, 72 oder 120 Stunden und bekommt freien Eintritt (oder Ermäßigung) in mehr als 70 Attraktionen, dazu unbegrenzte Nutzung der öffentlichen Verkehrsmittel in ganz Prag, einschließlich Flughafenbus. Es gibt ihn als physische Karte oder als e-Pass auf dem Handy. <a href=\"https://www.praguecitytourism.cz/de\" target=\"_blank\" rel=\"noopener noreferrer\">Prague City Tourism</a> hat ein gutes Video dazu gemacht:",
+        "en": "The <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Visitor Pass</a> is the city's official tourist card. You buy it for 48, 72, or 120 hours and it gives you free entry (or a discount) to more than 70 attractions, plus unlimited public transport across Prague, including the airport bus. It comes as a physical card or an e-Pass on your phone. <a href=\"https://www.praguecitytourism.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prague City Tourism</a> put together a good video overview if you want the quick version:"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<iframe style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" src=\"https://www.youtube.com/embed/wVxJrR02gKs\" title=\"Prague Visitor Pass Überblick von Prague City Tourism\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe>",
+        "en": "<iframe style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" src=\"https://www.youtube.com/embed/wVxJrR02gKs\" title=\"Prague Visitor Pass overview by Prague City Tourism\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen loading=\"lazy\"></iframe>"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Aktuelle Preise in tschechischen Kronen:",
+        "en": "Current prices in Czech crowns:"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<thead><tr><th></th><th>48 h</th><th>72 h</th><th>120 h</th></tr></thead>\n  <tbody>\n    <tr><td>Erwachsene</td><td>2 700 CZK</td><td>3 300 CZK</td><td>3 900 CZK</td></tr>\n    <tr><td>Studenten (15-25)</td><td>2 050 CZK</td><td>2 500 CZK</td><td>2 900 CZK</td></tr>\n    <tr><td>Kinder</td><td>1 350 CZK</td><td>1 650 CZK</td><td>1 950 CZK</td></tr>\n  </tbody>",
+        "en": "<thead><tr><th></th><th>48 h</th><th>72 h</th><th>120 h</th></tr></thead>\n  <tbody>\n    <tr><td>Adults</td><td>2 700 CZK</td><td>3 300 CZK</td><td>3 900 CZK</td></tr>\n    <tr><td>Students (15-25)</td><td>2 050 CZK</td><td>2 500 CZK</td><td>2 900 CZK</td></tr>\n    <tr><td>Children</td><td>1 350 CZK</td><td>1 650 CZK</td><td>1 950 CZK</td></tr>\n  </tbody>"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Zum aktuellen Kurs sind das ungefähr 108 EUR / 132 EUR / 156 EUR für Erwachsene. Behalten Sie diese Zahlen im Kopf.",
+        "en": "At current rates that is roughly 108 EUR / 132 EUR / 156 EUR for an adult. Keep those numbers in mind."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die Rechnung, die mich überzeugt hat",
+        "en": "The maths that convinced me"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Was ein typischer 3-Tage-Besucher ohne Pass zahlt, wenn er Tickets einzeln kauft:",
+        "en": "Here is what a typical 3-day visitor pays without the pass, buying tickets individually:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<a href=\"https://www.hrad.cz/en/prague-castle-for-visitors\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Burg</a> (große Runde): 400 CZK",
+          "en": "<a href=\"https://www.hrad.cz/en/prague-castle-for-visitors\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Castle</a> circuit (long tour): 400 CZK"
+        },
+        {
+          "de": "<a href=\"https://www.staromestskaradnicepraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Altstädter Rathaus</a> und Astronomische Uhr (Turmaufstieg): 300 CZK",
+          "en": "<a href=\"https://www.staromestskaradnicepraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Old Town Hall</a> and Astronomical Clock tower: 300 CZK"
+        },
+        {
+          "de": "<a href=\"https://www.jewishmuseum.cz/en/info/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">Jüdisches Viertel</a> (Vollticket): 500 CZK",
+          "en": "<a href=\"https://www.jewishmuseum.cz/en/info/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">Jewish Quarter</a> (full ticket): 500 CZK"
+        },
+        {
+          "de": "<a href=\"https://www.zoopraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Zoo</a>: 350 CZK",
+          "en": "<a href=\"https://www.zoopraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Zoo</a>: 350 CZK"
+        },
+        {
+          "de": "<a href=\"https://www.praha-vysehrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Vyšehrad</a>-Kasematten: 150 CZK",
+          "en": "<a href=\"https://www.praha-vysehrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Vyšehrad</a> casemates: 150 CZK"
+        },
+        {
+          "de": "Einer der sieben Prager Türme: 150-250 CZK",
+          "en": "One of the seven Prague towers: 150-250 CZK"
+        },
+        {
+          "de": "Flussrundfahrt: 400 CZK",
+          "en": "A river cruise: 400 CZK"
+        },
+        {
+          "de": "<a href=\"https://www.muzeumprahy.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Museum der Stadt Prag</a>: 200 CZK",
+          "en": "<a href=\"https://www.muzeumprahy.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Museum of the City of Prague</a>: 200 CZK"
+        },
+        {
+          "de": "72-Stunden-Fahrschein: 330 CZK",
+          "en": "72-hour public transport pass: 330 CZK"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Zusammen sind das rund 2 800-3 000 CZK. Der 72-Stunden-Visitor-Pass kostet 3 300 CZK und beinhaltet all das oben plus rund 60 weitere Orte, in die man einfach reinspazieren kann. Wenn man ein Museum oder eine Galerie mehr mitnimmt, hat man schon gespart. Und man umgeht die Ticketschlange am Altstädter Rathaus, was an einem Samstagmorgen im Juni allein schon Gold wert ist.",
+        "en": "That adds up to somewhere around 2 800-3 000 CZK. The 72-hour Visitor Pass costs 3 300 CZK and includes all of the above plus another 60-odd venues you can walk into on a whim. If you squeeze in one more museum or gallery, you are ahead. And you skip ticket queues at the Old Town Hall, which alone is worth something on a Saturday morning in June."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wer nur 48 Stunden in Prag ist und die Burg, das Jüdische Viertel und öffentliche Verkehrsmittel nutzen will, kommt mit der 2 700 CZK-Karte mindestens auf Null raus oder spart.",
+        "en": "If you are only in Prague for 48 hours and plan to see the Castle, the Jewish Quarter, and use public transport, you still break even or come out ahead on the 2 700 CZK card."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der 120-Stunden-Pass lohnt sich besonders für Leute, die einen Tagesausflug nach Kutna Hora planen. Dazu gleich mehr.",
+        "en": "The 120-hour pass makes sense for people adding a day trip to Kutna Hora. More on that below."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Der Nahverkehr-Faktor",
+        "en": "The public transport angle"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Diesen Teil unterschätzen die meisten. Ein 72-Stunden-<a href=\"https://www.dpp.cz/en/fares/fare-pricelist\" target=\"_blank\" rel=\"noopener noreferrer\">Fahrschein</a> für Prags Nahverkehr kostet allein 330 CZK. Der Visitor Pass enthält unbegrenzte Fahrten für die gesamte Gültigkeitsdauer, einschließlich Airport Express (der sonst 150 CZK hin und zurück kostet). Man bekommt also effektiv 330-480 CZK Transportwert obendrauf. Das verschiebt die Rechnung erheblich.",
+        "en": "This is the part people underestimate. A 72-hour <a href=\"https://www.dpp.cz/en/fares/fare-pricelist\" target=\"_blank\" rel=\"noopener noreferrer\">public transport pass</a> in Prague costs 330 CZK on its own. The Visitor Pass includes unlimited transport for its entire validity, including the Airport Express bus (which otherwise costs 150 CZK return). So you are effectively getting 330-480 CZK of transport thrown in. That changes the break-even calculation a lot."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Außerdem hört man auf zu überlegen, ob sich eine Tramfahrt \"lohnt\", und steigt einfach ein. Prag ist angenehmer, wenn man nicht versucht, überall hinzulaufen um Geld zu sparen.",
+        "en": "It also means you stop thinking about whether a tram ride is \"worth it\" and just hop on. Prague is more pleasant when you are not trying to walk everywhere to save money."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Der Kutna-Hora-Trick",
+        "en": "The Kutna Hora trick"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Pass deckt jetzt auch einen Tagesausflug nach <a href=\"https://www.kutnahora.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Kutna Hora</a> ab, inklusive Hin- und Rückfahrt. Kutna Hora ist eine UNESCO-Stadt, etwa eine Stunde östlich von Prag mit dem Zug. Dort gibt es das <a href=\"https://www.sedlec.info/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Sedlec-Beinhaus</a> (die Knochenkirche), die <a href=\"https://www.khfarnost.cz/cathedral-of-st-barbara\" target=\"_blank\" rel=\"noopener noreferrer\">Barbarakathedrale</a> und das <a href=\"https://www.cms-kh.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Tschechische Silbermuseum</a>. Normalerweise zahlt man Zugfahrt plus Einzeleintritte. Mit dem 120-Stunden-Pass ist alles drin. Wenn Kutna Hora ohnehin auf der Liste stand, rechnet sich der 5-Tage-Pass locker.",
+        "en": "The pass now covers a day trip to <a href=\"https://www.kutnahora.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Kutna Hora</a>, including transport there and back. Kutna Hora is a UNESCO town about an hour east of Prague by train. It has the <a href=\"https://www.sedlec.info/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Sedlec Ossuary</a> (the bone church), the <a href=\"https://www.khfarnost.cz/cathedral-of-st-barbara\" target=\"_blank\" rel=\"noopener noreferrer\">Cathedral of St Barbara</a>, and the <a href=\"https://www.cms-kh.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Czech Museum of Silver</a>. Normally you would pay for the train plus individual entries. With the 120-hour pass all of that is included. If a Kutna Hora trip was already on your list, the 5-day pass pays for itself comfortably."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was tatsächlich enthalten ist",
+        "en": "What is actually included"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich zähle hier nicht alle 70+ Orte auf (die <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">vollständige Liste gibt es auf der offiziellen Seite</a>). Aber die, die meine Gäste am häufigsten nutzen:",
+        "en": "I am not going to list all 70+ venues (the <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">full list is on the official site</a>). But the ones my clients use most:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<a href=\"https://www.hrad.cz/en/prague-castle-for-visitors\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Burg</a> (vollständige Runde)",
+          "en": "<a href=\"https://www.hrad.cz/en/prague-castle-for-visitors\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Castle</a> (full circuit)"
+        },
+        {
+          "de": "<a href=\"https://www.staromestskaradnicepraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Altstädter Rathaus</a> mit Turmzugang",
+          "en": "<a href=\"https://www.staromestskaradnicepraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Old Town Hall</a> with Astronomical Clock tower access"
+        },
+        {
+          "de": "Sieben Prager Türme (<a href=\"https://www.muzeumprahy.cz/en/petrin-lookout-tower/\" target=\"_blank\" rel=\"noopener noreferrer\">Petřín-Aussichtsturm</a>, <a href=\"https://www.muzeumprahy.cz/en/powder-tower/\" target=\"_blank\" rel=\"noopener noreferrer\">Pulverturm</a> usw.)",
+          "en": "Seven Prague towers (<a href=\"https://www.muzeumprahy.cz/en/petrin-lookout-tower/\" target=\"_blank\" rel=\"noopener noreferrer\">Petrin Lookout Tower</a>, <a href=\"https://www.muzeumprahy.cz/en/powder-tower/\" target=\"_blank\" rel=\"noopener noreferrer\">Powder Gate</a>, etc.)"
+        },
+        {
+          "de": "<a href=\"https://www.klementinum.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Klementinum</a>-Führung",
+          "en": "<a href=\"https://www.klementinum.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">The Klementinum</a> tour"
+        },
+        {
+          "de": "<a href=\"https://www.jewishmuseum.cz/en/info/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">Jüdisches Viertel</a>",
+          "en": "<a href=\"https://www.jewishmuseum.cz/en/info/visit/\" target=\"_blank\" rel=\"noopener noreferrer\">Jewish Quarter sites</a>"
+        },
+        {
+          "de": "<a href=\"https://www.zoopraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prager Zoo</a>",
+          "en": "<a href=\"https://www.zoopraha.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prague Zoo</a>"
+        },
+        "<a href=\"https://www.praha-vysehrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Vyšehrad</a>",
+        {
+          "de": "<a href=\"https://www.muzeumprahy.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Museum der Stadt Prag</a> und seine Zweigstellen",
+          "en": "<a href=\"https://www.muzeumprahy.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Museum of the City of Prague</a> and its branches"
+        },
+        {
+          "de": "Flussrundfahrt auf der Moldau",
+          "en": "River cruise on the Vltava"
+        },
+        {
+          "de": "Historische Straßenbahn Linie 42",
+          "en": "Historic Tram 42 ride"
+        },
+        {
+          "de": "Geführte Stadtrundgänge von <a href=\"https://www.praguecitytourism.cz/de\" target=\"_blank\" rel=\"noopener noreferrer\">Prague City Tourism</a>",
+          "en": "Guided walking tours from <a href=\"https://www.praguecitytourism.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prague City Tourism</a>"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Jede Attraktion kann einmal besucht werden. Es gibt kein Tageslimit für die Anzahl der Besuche.",
+        "en": "You can visit each venue once. There is no daily limit on how many you visit."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wo man ihn kauft",
+        "en": "Where to buy it"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vier Möglichkeiten:",
+        "en": "Four options:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Online auf <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">praguevisitorpass.eu</a> (e-Pass direkt aufs Handy)",
+          "en": "Online at <a href=\"https://praguevisitorpass.eu/\" target=\"_blank\" rel=\"noopener noreferrer\">praguevisitorpass.eu</a> (e-Pass delivered to your phone)"
+        },
+        {
+          "de": "Die Touristeninformationszentren von <a href=\"https://www.praguecitytourism.cz/de\" target=\"_blank\" rel=\"noopener noreferrer\">Prague City Tourism</a>",
+          "en": "The <a href=\"https://www.praguecitytourism.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Prague City Tourism</a> information centres around town"
+        },
+        {
+          "de": "Der Priority-Schalter im Altstädter Rathaus",
+          "en": "The priority counter at Old Town Hall"
+        },
+        {
+          "de": "Die Handy-App",
+          "en": "The mobile app"
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich würde online kaufen, bevor Sie ankommen, damit Sie nicht am ersten Morgen in einer Schlange stehen. Der e-Pass funktioniert an allen Orten, an denen ich ihn getestet habe.",
+        "en": "I would buy online before arriving so you do not waste part of your first morning standing in a queue. The e-Pass works fine at every venue I have tested it at."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wann er sich nicht lohnt",
+        "en": "When it is not worth it"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich will ehrlich sein. Wenn Sie nur einen Tag in Prag sind, nur durch die Altstadt spazieren und die Karlsbrücke überqueren wollen und keine Innenräume besichtigen, zahlt sich der Pass nicht aus. Genauso, wenn Sie nur wegen Restaurants und Nachtleben hier sind. Aber das trifft vielleicht auf einen von zwanzig meiner Gäste zu.",
+        "en": "I want to be honest about this. If you are in Prague for one day, only plan to walk the Old Town and cross the Charles Bridge, and do not want to enter any paid attractions, the pass will not pay for itself. Same if you are here purely for restaurants and nightlife. But that describes maybe one in twenty of my clients."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Für fast alle anderen, die zwei oder mehr Tage bleiben und auch nur eine Handvoll Sehenswürdigkeiten von innen sehen, spart die Karte Geld. Oft ziemlich viel.",
+        "en": "For almost everyone else spending two or more days and visiting even a handful of indoor sites, the card saves money. Often a lot of it."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Ein kleiner Umwelthinweis",
+        "en": "A small environmental note"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wer die physische Karte bekommt und sie nicht als Andenken behalten will, kann sie in eine Rückgabebox am Altstädter Rathaus oder im Touristenzentrum am Flughafen werfen. Sie werden wiederverwendet. Finde ich gut.",
+        "en": "If you get the physical card and do not want to keep it as a souvenir, you can drop it into a return box at the Old Town Hall or the airport tourist centre. They reuse them. I appreciate that."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Meine Empfehlung",
+        "en": "My recommendation"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Kaufen Sie den Pass. Im Ernst. Ich habe zu oft zugesehen, wie Leute 500 CZK im Jüdischen Viertel zahlen, dann 400 CZK auf der Burg, dann 300 CZK am Altstädter Rathaus, dann 330 CZK für einen Fahrschein, dann 400 CZK für eine Flussrundfahrt, und am Ende des zweiten Tages haben sie mehr ausgegeben als die 72-Stunden-Karte gekostet hätte. Sie haben auch in mehr Schlangen gestanden.",
+        "en": "Buy the pass. Seriously. I have watched too many people pay 500 CZK at the Jewish Quarter, then 400 CZK at the Castle, then 300 CZK at Old Town Hall, then 330 CZK for a transport ticket, then 400 CZK for a river cruise, and by the end of day two they have spent more than the 72-hour card would have cost. They also waited in more queues."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Holen Sie sich die Karte, laden Sie sie aufs Handy, und hören Sie auf, über Eintrittspreise nachzudenken. Prag ist besser, wenn man in Orte reingeht, weil sie interessant aussehen, und nicht, weil man vorher ausgerechnet hat, ob der Eintritt gerechtfertigt ist.",
+        "en": "Get the card, put it on your phone, and stop thinking about ticket prices. Prague is better when you wander into places because they look interesting, not because you already calculated whether the entry fee is justified."
+      }
+    }
+  ]
+}

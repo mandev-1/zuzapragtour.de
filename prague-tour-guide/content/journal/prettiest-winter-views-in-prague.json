@@ -1,0 +1,153 @@
+{
+  "slug": "prettiest-winter-views-in-prague",
+  "slugDe": "prag-schoenste-orte-aussichten-im-winter",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-25",
+  "dateDisplay": {
+    "de": "25. Oktober 2025",
+    "en": "October 25, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-winter-ots.png",
+  "title": {
+    "de": "Prag im Winter: Top 12 Aussichtspunkte",
+    "en": "Prague in Winter: Top 12 Views"
+  },
+  "excerpt": {
+    "de": "Prag leuchtet im Winter in warmem Licht: stille Gassen, magische Ausblicke. Hier sind 12 der schönsten Altstadt-Perspektiven—fußläufig, fotogen und behaglich.",
+    "en": "Prague in winter glows with warm light, quiet alleys, and magical views. Here are the 12 prettiest Old Town vantage points—walkable, photogenic, and cozy."
+  },
+  "tags": {
+    "de": [
+      "Prag im Winter",
+      "Schönste Aussichtspunkte Prag",
+      "Altstadt Prag",
+      "Karlsbrücke",
+      "Fotospots",
+      "Reiseroute",
+      "Was tun in Prag",
+      "Wohin in Prag",
+      "Prag im Winter besuchen"
+    ],
+    "en": [
+      "Winter in Prague",
+      "Prettiest views Prague",
+      "Old Town Prague",
+      "Charles Bridge",
+      "Photography spots",
+      "Itinerary",
+      "Things to do in Prague",
+      "Where to go in Prague",
+      "Visit Prague in winter"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag im Winter aus Sicht einer Einheimischen: 12 Blickwinkel, die die Kälte wert sind",
+        "en": "Winter Prague through a local's eyes: 12 views worth the cold"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Die Wintersonne geht flach über der <a href=\"https://www.prague.eu/en/object/places/93/charles-bridge\" target=\"_blank\" rel=\"noopener noreferrer\">Karlsbrücke</a> auf, die Stadt sitzt im Nebel, und die Pflastersteine sind kalt genug, um sie durch die Schuhe zu spüren. Ich bin diese Straßen in jedem Januar-Wetter seit vierzig Jahren gegangen. Hier sind die Orte, zu denen ich immer wiederkomme.",
+        "en": "The winter sun comes up low over <a href=\"https://www.prague.eu/en/object/places/93/charles-bridge\" target=\"_blank\" rel=\"noopener noreferrer\">Charles Bridge</a>, the city sits in mist, and the cobblestones are cold enough to feel through your shoes. I have walked these streets in every kind of January weather for forty years. Here are the spots I keep going back to."
+      }
+    },
+    {
+      "t": "list",
+      "ordered": true,
+      "items": [
+        {
+          "de": "<h3>1. Karlsbrücke (vom Altstadter Brückenturm zur Burg)</h3>\n    <p>Am Beginn der Brücke stehen, Richtung Prager Burg schauen. In der tiefen Wintersonne oder der blauen Stunde werfen die Statuen lange Schatten. Früh kommen. Einheimische gehen schweigend vorbei, und die Kälte lohnt sich.</p>",
+          "en": "<h3>1. Charles Bridge (from the Old Town Tower toward the Castle)</h3>\n    <p>Standing where the bridge begins, looking toward Prague Castle. In winter's low sun or blue dusk the statues cast long shadows. Get there early. Locals cross in silence, and the cold is worth it.</p>"
+        },
+        {
+          "de": "<h3>2. Altstädter Ring (Ecken der Astronomischen Uhr)</h3>\n    <p>Pastellfarbene Gebäude im Winterlicht, die <a href=\"https://www.prague.eu/en/object/places/3129/astronomical-clock\" target=\"_blank\" rel=\"noopener noreferrer\">Astronomische Uhr</a> an der Nordwestecke. Weniger Menschen als im Sommer, bessere Fotos.</p>",
+          "en": "<h3>2. Old Town Square (the Astronomical Clock corners)</h3>\n    <p>Pastel buildings in winter light, the <a href=\"https://www.prague.eu/en/object/places/3129/astronomical-clock\" target=\"_blank\" rel=\"noopener noreferrer\">Astronomical Clock</a> at the northwest corner. Fewer people than summer, better photographs.</p>"
+        },
+        {
+          "de": "<h3>3. Kaprovastraße zum Rudolfinum</h3>\n    <p>Laternen und Straßenbahnschienen entlang langer Fassaden folgen. Die Burg taucht aus Winkeln auf, die man aus dieser Richtung nicht erwartet.</p>",
+          "en": "<h3>3. Kaprova Street to the Rudolfinum</h3>\n    <p>Follow the lamplight and tram tracks past long facades. The Castle appears at angles you do not expect from this direction.</p>"
+        },
+        {
+          "de": "<h3>4. Schützeninsel (Střelecký Ostrov)</h3>\n    <p>Eine ruhige Insel, auf der die Moldau Brücken und Theaterdächer spiegelt. Wasserreflexionen sind fruh oder spat am besten, wenn das Licht flach ist.</p>",
+          "en": "<h3>4. Střelecký Ostrov (Shooter's Island)</h3>\n    <p>A quiet island where the Vltava mirrors bridges and theatre rooftops. The water reflections are best early or late, when the light is low.</p>"
+        },
+        {
+          "de": "<h3>5. Nationaltheater-Ufer (Národní Divadlo)</h3>\n    <p>Am Flussufer wird es bei Dämmerung golden. Dampf steigt von den Straßenbahnen auf der Národní-Straße auf. Wenn Sie Prag im Winter fotografieren, ist das ein Bild, das Sie wollen.</p>",
+          "en": "<h3>5. Národní Divadlo (National Theatre) riverside</h3>\n    <p>The riverbank here turns gold at dusk. Steam rises from trams on Národní Street. If you photograph Prague in winter, this is a shot you will want.</p>"
+        },
+        {
+          "de": "<h3>6. Letna-Aussichtspunkt (Letenská pláň)</h3>\n    <p>Ein Stuck außerhalb der Altstadt. Das Panorama aus Brücken und Stadtschichten von hier oben hat keine Konkurrenz. Bei Dämmerung mischen sich die Lichtspüren des Verkehrs mit dem Winternebel.</p>",
+          "en": "<h3>6. Letna lookout (Letenská pláň)</h3>\n    <p>A little beyond Old Town. The panorama of bridges and city layers from up here has no competition. At dusk the light trails from traffic mix with the winter haze.</p>"
+        },
+        {
+          "de": "<h3>7. Rudolfinum-Kai</h3>\n    <p>Zur blauen Stunde sehen Sie hier die Burg im Fluss gespiegelt, eingerahmt von Brückenbögen. Langzeitbelichtungen funktionieren gut, wenn die Hände die Kälte aushalten.</p>",
+          "en": "<h3>7. Rudolfinum embankment</h3>\n    <p>Blue hour here gives you the Castle reflected in the river, framed by bridge arches. Long exposures work well if your hands can take the cold.</p>"
+        },
+        {
+          "de": "<h3>8. Kampa-Seite der Karlsbrücke</h3>\n    <p>Unter den Bögen finden Sie weidenumrahmte Winteransichten. Ruhig, und die Art Blick, der in ein anderes Jahrhundert zu gehören scheint.</p>",
+          "en": "<h3>8. Kampa side of Charles Bridge</h3>\n    <p>Step under the arches for willow-framed winter scenes. Quiet, and the kind of view that looks like it belongs in a different century.</p>"
+        },
+        {
+          "de": "<h3>9. Altstadter Brückenturm (obere Terrasse)</h3>\n    <p>Wenn geöffnet, hochsteigen für die Symmetrie: Brücke, Fluss, Burg. Extra Schichten mitbringen. Der Wind da oben ist echt.</p>",
+          "en": "<h3>9. Old Town Bridge Tower (upper terrace)</h3>\n    <p>If open, climb it for the symmetry: bridge, river, Castle. Bring extra layers. The wind is real up there.</p>"
+        },
+        {
+          "de": "<h3>10. Pařížská Straße zur Teynkirche</h3>\n    <p>Exklusive Läden und neugotische Türme. Bei Nacht und Regen entstehen gute Spiegelungen über die ganze Strecke.</p>",
+          "en": "<h3>10. Pařížská Street to the Týn Church</h3>\n    <p>High-end shops and neo-Gothic spires. At night, rain and puddles make for good reflections along the whole stretch.</p>"
+        },
+        {
+          "de": "<h3>11. Clárov (bei der Mánes-Brücke)</h3>\n    <p>Ein Flussufer für Burgblicke ohne Menschenmassen. Funktioniert gut bei Sonnenaufgang oder leichtem Schnee.</p>",
+          "en": "<h3>11. Clárov (by Mánes Bridge)</h3>\n    <p>A riverbank spot for Castle views without the crowds. Works well at sunrise or when it snows lightly.</p>"
+        },
+        {
+          "de": "<h3>12. Josefov-Passagen (nahe Kaprova)</h3>\n    <p>Ruhige Passagen und Innenhöfe im <a href=\"https://www.jewishmuseum.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Jüdischen Viertel</a>. Warmes Fensterlicht, Winterdekoration und sehr wenige Menschen.</p>",
+          "en": "<h3>12. Josefov passages (near Kaprova)</h3>\n    <p>Quiet passages and courtyards in the <a href=\"https://www.jewishmuseum.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Jewish Quarter</a>. Warm window light, winter decorations, and very few people.</p>"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Wintertipps",
+        "en": "Practical winter tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Morgens und zur blauen Stunde fotografieren. Mittagslicht ist flach und kalt.",
+          "en": "Aim for sunrise and blue hour. Midday light is flat and cold."
+        },
+        {
+          "de": "Handschuhe, die mit der Kamera funktionieren. Rutschfeste Schuhe. Beides nicht verhandelbar.",
+          "en": "Gloves that work with your camera. Non-slip shoes. Both non-negotiable."
+        },
+        {
+          "de": "Pausen im <a href=\"https://www.cafelouvre.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Café Louvre</a> oder im <a href=\"https://www.cafeslavia.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Café Slavia</a> einlegen.",
+          "en": "Take breaks at <a href=\"https://www.cafelouvre.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Café Louvre</a> or <a href=\"https://www.cafeslavia.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Café Slavia</a>."
+        },
+        {
+          "de": "Auf Eis achten und Einheimische vorbeilassen. Die gehen schneller, weil sie wissen, wo es glatt ist.",
+          "en": "Watch for ice, and let locals pass. They are walking faster because they know where it is slippery."
+        }
+      ]
+    }
+  ]
+}

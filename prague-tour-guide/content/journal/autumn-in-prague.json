@@ -1,0 +1,209 @@
+{
+  "slug": "autumn-in-prague",
+  "slugDe": "prag-im-herbst",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-03-01",
+  "dateDisplay": {
+    "de": "1. März 2026",
+    "en": "March 1, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-autumn-prague.jpg",
+  "title": {
+    "de": "Prag im Herbst: Goldenes Licht & Weinlese",
+    "en": "Prague in Autumn: Golden Light & Wine"
+  },
+  "excerpt": {
+    "de": "Von September bis November zeigt Prag seine kinofilmreifste Seite: bernsteinfarbenes Laub in Stromovka, das Signal Festival, das die Altstadt erhellt, und die ersten Weihnachtsmarktstände im November.",
+    "en": "September to November is Prague at its most cinematic: amber foliage in Stromovka, the Signal Festival lighting up the Old Town, and the first Christmas market stalls appearing in November."
+  },
+  "tags": {
+    "de": [
+      "Prag im Herbst",
+      "Prag Herbst",
+      "Prag Oktober",
+      "Prag September",
+      "Signal Festival Prag",
+      "Herbstlaub Prag",
+      "Weinlese Prag",
+      "Was tun Prag Herbst"
+    ],
+    "en": [
+      "Autumn in Prague",
+      "Prague in fall",
+      "Prague October",
+      "Prague September",
+      "Signal Festival Prague",
+      "Prague foliage",
+      "Wine harvest Prague",
+      "Things to do Prague autumn"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag im Herbst: Laubfärbung, Weinlese und warum Oktober der beste Monat ist",
+        "en": "Autumn in Prague: foliage, wine harvest, and why October is the best month to visit"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Von September bis November sieht Prag so aus, wie Sie es sich vorstellen: bernsteinfarbenes und purpurrotes Laub in der Stromovka und auf dem Petřín, der erste Svařák (Glühwein) an den frühen Weihnachtsmarktständen, Nebel über dem Fluss am Morgen. Weniger Touristen als im Sommer, besseres Licht, und die Stadt wird gerade ruhig genug, um interessant zu sein.",
+        "en": "September through November is when Prague looks the way it does in your head: amber and crimson foliage in Stromovka and on Petřín, the first svařák (mulled wine) at early Christmas market stalls, mist over the river in the morning. Fewer tourists than summer, better light, and the city slows down just enough to be interesting."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Drei verschiedene Herbstphasen",
+        "en": "Three distinct autumn phases"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>September</strong> ist warm (18 bis 22 °C), der Sommer hält noch an. Terrassen sind offen, die Tage sind lang, die Festivalsaison geht weiter. <strong>Oktober</strong> bringt den Höhepunkt der Laubfärbung und das Finale des Dvořák-Festivals. <strong>November</strong> wird ruhig: Nebel zieht über den Fluss, die ersten Weihnachtsmärkte erscheinen, und die Stadt fühlt sich an, als gehöre sie den Leuten, die hier leben.",
+        "en": "<strong>September</strong> is warm (18 to 22 °C) with summer still holding on. Terraces are open, days are long, and the festival season continues. <strong>October</strong> brings peak foliage and the Dvořák Festival finale. <strong>November</strong> turns quiet: mist rolls across the river, the first Christmas markets appear, and the city feels like it belongs to the people who live here."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wohin im Herbst",
+        "en": "Where to go in autumn"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Stromovka Park im Oktober",
+        "en": "Stromovka Park in October"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prags größter Park leuchtet im Oktober in Gold und tiefem Rot. Ein Morgenspaziergang hier, bevor die Stadt aufwacht, ist den Wecker wert. Der Park verbindet sich leicht mit Holešovice für einen Kaffee danach. Probieren Sie <a href=\"https://www.instagram.com/vnitroblock/\" target=\"_blank\" rel=\"noopener noreferrer\">Vnitroblock</a> oder eines der Cafés rund um das Strossmayerovo náměstí.",
+        "en": "Prague's largest park turns gold and deep red in October. A morning walk here before the city wakes is worth setting an alarm for. The park connects easily to Holešovice for coffee after. Try <a href=\"https://www.instagram.com/vnitroblock/\" target=\"_blank\" rel=\"noopener noreferrer\">Vnitroblock</a> or any of the cafés around Strossmayerovo náměstí."
+      }
+    },
+    {
+      "t": "h2",
+      "html": "Divoká Šárka"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein Felstal am Rande Prags. Die Herbstfarben sind gut, das Wochenend-Wanderpublikum ist eher lokal als touristisch, und die Anfahrt ist nur eine <a href=\"https://www.prague.eu/en/object/places/823/divoka-sarka\" target=\"_blank\" rel=\"noopener noreferrer\">Straßenbahnfahrt vom Zentrum</a>. Kostenlos.",
+        "en": "A rocky valley on the edge of Prague. The autumn colours are good, the weekend hiking crowd is local rather than tourist, and getting there is just a <a href=\"https://www.prague.eu/en/object/places/823/divoka-sarka\" target=\"_blank\" rel=\"noopener noreferrer\">tram ride from the centre</a>. Free."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Vinohrady und Žižkov im Herbst",
+        "en": "Vinohrady and Žižkov in fall"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die baumgesäumten Alleen von Vinohrady, besonders Mánesova und Blanická, sind im Oktober am besten. Spazieren gehen, dann in einer der Weinbars des Viertels einkehren, die gerade auf ihre Herbstkarte umstellen.",
+        "en": "The tree-lined avenues of Vinohrady, especially Mánesova and Blanická, are at their best in October. Walk them, then sit down in one of the neighbourhood's wine bars that are switching to their autumn menus."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Vyšehrad im Herbstnebel",
+        "en": "Vyšehrad in autumn mist"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der hoch gelegene <a href=\"https://www.praha-vysehrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Vyšehrad</a> hat Stadtblicke und einen berühmten Friedhof. Im Nebel bekommt er eine Qualität, die das Burgviertel nicht hat: Ruhe. Weniger besucht, mehr Platz zum Nachdenken.",
+        "en": "The hilltop <a href=\"https://www.praha-vysehrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Vyšehrad</a> has city views and a famous cemetery. In the mist it gets a quality that the Castle district does not have: quiet. Less visited, more space to think."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Weinlese und Food-Festivals",
+        "en": "Wine harvest and food festivals"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im September kommen mährische Weinlesefeste nach Prag. Halten Sie Ausschau nach <strong>Vinobraní na Václavském náměstí</strong> (Weinlese auf dem Wenzelsplatz): Weinstände, Volksmusik und der neue Burčák (teilvergorener Wein). Burčák gibt es nur wenige Wochen im Jahr. Er schmeckt süß und harmlos, und er ist es nicht.",
+        "en": "September brings Moravian wine harvest festivals to Prague. Look out for <strong>Vinobraní na Václavském náměstí</strong> (wine harvest on Wenceslas Square): wine stalls, folk music, and the new season's burčák (partially fermented wine). Burčák is only available for a few weeks each year. It tastes sweet and harmless and it is not."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Herbst-Events",
+        "en": "Autumn events"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong><a href=\"https://www.signalfestival.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Signal Festival</a></strong> (Oktober). Lichtkunstinstallationen auf Altstadtfassaden und an Denkmälern nach Einbruch der Dunkelheit. Kostenlos. Unter der Woche weniger voll.",
+          "en": "<strong><a href=\"https://www.signalfestival.com/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Signal Festival</a></strong> (October). Light art installations on Old Town facades and monuments after dark. Free to wander. Weekday evenings are less crowded."
+        },
+        {
+          "de": "<strong><a href=\"https://www.dvorakovapraha.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Dvořák Prag Festival</a> Finale</strong> (September). Letzte Freiluftkonzerte am Rudolfinum und auf Stadtplätzen.",
+          "en": "<strong><a href=\"https://www.dvorakovapraha.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Dvořák Prague Festival</a> finale</strong> (September). Final outdoor concerts at Rudolfinum and city squares."
+        },
+        {
+          "de": "<strong>Vorbereitung der Weihnachtsmärkte</strong> (Ende November). Der Altstädter Ring verwandelt sich vor dem Advent mit den ersten hölzernen Buden und Lichtern.",
+          "en": "<strong>Christmas market preparations</strong> (late November). Old Town Square transforms before Advent with the first wooden stalls and lights."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Herbsttipps",
+        "en": "Practical autumn tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Oktober ist der Monat, in dem alles zusammenkommt: Laub am Höhepunkt, Massen werden nach Monatsmitte dünner, das Licht bekommt diesen flachen Winkel.",
+          "en": "October is when everything aligns: foliage peaks, crowds thin after mid-month, the light gets that low-angle quality."
+        },
+        {
+          "de": "Wasserfeste Schicht mitbringen. Herbstregen ist leicht, aber häufig, besonders im November.",
+          "en": "Bring a waterproof layer. Autumn rain is light but frequent, especially in November."
+        },
+        {
+          "de": "Prags unabhängige Cafés sind am besten, wenn man eine Stunde lang einen warmen Platz braucht. Probieren Sie <a href=\"https://www.doubleshot.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Doubleshot</a> oder <a href=\"https://kavfrancouzskeho.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Kaváren Francouzského</a>.",
+          "en": "Prague's independent coffee shops are at their best when you need a warm seat for an hour. Try <a href=\"https://www.doubleshot.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Doubleshot</a> or <a href=\"https://kavfrancouzskeho.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Kaváren Francouzského</a>."
+        },
+        {
+          "de": "Signal-Festival-Nächte sind im Zentrum voll. Unter der Woche hingehen.",
+          "en": "Signal Festival nights get crowded in the centre. Go on a weekday."
+        }
+      ]
+    }
+  ]
+}

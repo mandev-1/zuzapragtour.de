@@ -1,0 +1,90 @@
+{
+  "slug": "jewish-quarter-history-and-heritage",
+  "slugDe": "juedisches-viertel-prag-geschichte-und-erbe",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2023-12-20",
+  "dateDisplay": {
+    "de": "20. Dezember 2023",
+    "en": "December 20, 2023"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-jewish-quarter-min.jpg",
+  "title": {
+    "de": "Das Jüdische Viertel: Geschichte und Erbe",
+    "en": "The Jewish Quarter: History and Heritage"
+  },
+  "excerpt": {
+    "de": "Erkunden Sie die reiche Geschichte des Prager Jüdischen Viertels, einer der bedeutendsten jüdischen Stätten Europas...",
+    "en": "Explore the rich history of Prague's Jewish Quarter, one of Europe's most significant Jewish heritage sites..."
+  },
+  "tags": {
+    "de": [
+      "Geschichte",
+      "Jüdisches Viertel",
+      "Kultur"
+    ],
+    "en": [
+      "History",
+      "Jewish Quarter",
+      "Culture"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Das Jüdische Viertel: Erinnerung und Geschichte",
+        "en": "The Jewish Quarter: Memory and History"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Josefov ist eines der bedeutendsten jüdischen Erbe-Stätten Europas, und es ist auch einer der Orte, an dem ich das Gewicht des Führens am stärksten spüre. Ich habe eine <em>Sonderzertifizierung</em> für diesen Bereich, und ich nehme die Verantwortung ernst — sowohl die Geschichte als auch die Art, wie sie erzählt wird.",
+        "en": "Josefov is one of the most important Jewish heritage sites in Europe, and it's also one of the places where I feel the weight of guiding most strongly. I hold a <em>special certification</em> for this area, and I take the responsibility seriously — both the history and the way it's told."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was zu sehen ist",
+        "en": "What to See"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Pinkas-Synagoge: Die Wände tragen die Namen von über 77.000 böhmischen und mährischen jüdischen Holocaust-Opfern. Die Dimension überrascht jeden, der zum ersten Mal davor steht.",
+          "en": "Pinkas Synagogue: the walls are inscribed with the names of over 77,000 Bohemian and Moravian Jewish victims of the Holocaust. Nothing prepares you for the scale of it."
+        },
+        {
+          "de": "Altneu-Synagoge: Die älteste aktive Synagoge Europas, um 1270 erbaut. Wird bis heute genutzt.",
+          "en": "Old-New Synagogue: Europe's oldest active synagogue, built around 1270. Still in use today."
+        },
+        {
+          "de": "Alter Jüdischer Friedhof: Bestattungen über Jahrhunderte hinweg zwölf Schichten tief. Die gedrängten Grabsteine sind keine Gestaltungsentscheidung — sie zeigen, dass der Gemeinde der Platz ausging.",
+          "en": "The Old Jewish Cemetery: burials stacked twelve deep over centuries. The crowded tombstones are not a design choice — they reflect a community that ran out of space."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Für einen Besuch, der der Geschichte gerecht wird, <a href=\"/contact#contact-title\">kontaktieren Sie mich</a>. Ich passe Tempo und Tiefe an das an, was Sie suchen.",
+        "en": "For a visit that does justice to the history, <a href=\"/contact#contact-title\">contact me</a>. I tailor the pace and depth to what you're looking for."
+      }
+    }
+  ]
+}

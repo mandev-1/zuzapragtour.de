@@ -1,0 +1,226 @@
+{
+  "slug": "summer-in-prague",
+  "slugDe": "prag-im-sommer",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-03-15",
+  "dateDisplay": {
+    "de": "15. März 2026",
+    "en": "March 15, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-summer-prague.jpg",
+  "title": {
+    "de": "Prag im Sommer: Was tun, sehen & essen",
+    "en": "Prague in Summer: What to Do, See & Eat"
+  },
+  "excerpt": {
+    "de": "Flussuferkneipen an der Náplavka, Open-Air-Kinos, Sonnenuntergangs-Rooftops und morgendliche Spaziergänge auf der Karlsbrücke — Ihr kompletter Leitfaden für Prag im Sommer.",
+    "en": "Riverside bars on Náplavka, open-air cinemas, sunset rooftops, and early-morning Charles Bridge walks — your complete guide to Prague in summer without the crowds ruining it."
+  },
+  "tags": {
+    "de": [
+      "Prag im Sommer",
+      "Sommer in Prag",
+      "Prag Juni Juli August",
+      "Was tun Prag Sommer",
+      "Prag Outdoor",
+      "Náplavka Prag",
+      "Prag Biergarten",
+      "Prag Sommerevents"
+    ],
+    "en": [
+      "Summer in Prague",
+      "Prague in summer",
+      "Prague June July August",
+      "Things to do Prague summer",
+      "Prague outdoor",
+      "Náplavka Prague",
+      "Prague beer garden",
+      "Prague summer events"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prag im Sommer: was tun und wohin die Einheimischen gehen",
+        "en": "Summer in Prague: what to do and where locals actually go"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Von Juni bis August: Freiluftbühnen, Flussuferkneipen, Abendkonzerte in Palasthöfen und die längsten goldenen Stunden des Jahres. Ja, es wird belebter. Aber die Einheimischen verlassen die Stadt nicht; sie wissen einfach, welche Ecken ruhig bleiben.",
+        "en": "June through August brings outdoor stages, riverside bars, evening concerts in palace courtyards, and the longest golden hours of the year. Yes, it gets busy. But the locals do not leave town; they just know which corners stay calm."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Sommerwetter und was Sie erwartet",
+        "en": "Summer weather and what to expect"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Juni</strong> ist warm (18 bis 24 °C) mit gelegentlichem Regen, noch angenehm und voller Kulturveranstaltungen. <strong>Juli und August</strong> bringen den Höhepunkt: 25 bis 32 °C, lange sonnige Tage (Sonnenuntergang gegen 21:00 Uhr) und die meisten Besucher. Morgens gehören den Sehenswürdigkeiten; nachmittags sind Gärten, Galerien und das Flussufer besser.",
+        "en": "<strong>June</strong> is warm (18 to 24 °C) with occasional rain, still comfortable and full of cultural events. <strong>July and August</strong> bring the peak: 25 to 32 °C, long sunny days (sunset near 21:00), and the highest visitor numbers. Mornings belong to the iconic sites; afternoons are better spent in gardens, galleries, and along the river."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wo man einen Sommernachmittag verbringt",
+        "en": "Where to spend a summer afternoon"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Náplavka-Uferpromenade",
+        "en": "Náplavka riverside"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Schiffskneipen, Food Trucks, <a href=\"https://www.prague.eu/en/object/places/3145/naplavka-farmers-market\" target=\"_blank\" rel=\"noopener noreferrer\">Bauernmärkte samstags</a> und Live-Musik beim Sonnenuntergang. Von der Palacký-Brücke nach Süden gehen für die volle Strecke. Am Wochenende abends ist es voll, und das gehört dazu.",
+        "en": "Barge bars, food trucks, <a href=\"https://www.prague.eu/en/object/places/3145/naplavka-farmers-market\" target=\"_blank\" rel=\"noopener noreferrer\">farmers' markets on Saturdays</a>, and live music as the sun sets. Walk south from Palacký Bridge for the full stretch. It gets packed on weekend evenings, and that is part of the point."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Open-Air-Kinos",
+        "en": "Open-air cinemas"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Mehrere Freiluftkinos laufen von Juni bis September. <a href=\"https://www.kinoletna.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Kino Letní Letná</a> im Letná Park ist das, zu dem die Einheimischen immer wiederkommen. Wein, Sterne, ein Film, den man wahrscheinlich schon kennt, aber in besserer Umgebung.",
+        "en": "Several outdoor cinemas run from June to September. <a href=\"https://www.kinoletna.cz/\" target=\"_blank\" rel=\"noopener noreferrer\">Kino Letní Letná</a> in Letná Park is the one locals keep coming back to. Wine, stars, a film you have probably seen before but in a better setting."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Letná Biergarten",
+        "en": "Letná beer garden"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Kaltes Pilsner Urquell, Stadtblicke über den Fluss und Einheimische aller Altersgruppen. Vor 18:00 Uhr kommen, um eine Bank zu finden. Danach steht man, was auch in Ordnung ist.",
+        "en": "Cold Pilsner Urquell, city views across the river, and locals of all ages. Arrive before 18:00 to find a bench. After that, you stand, which is also fine."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Schwimmen und Abkühlen",
+        "en": "Swimming and cooling off"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Naturschutzgebiet Císařský ostrov (Kaiserinsel) ist der Ort, an den Einheimische für Flussuferpaziergänge und Picknicks gehen. Der <a href=\"https://www.prague.eu/en/object/places/823/divoka-sarka\" target=\"_blank\" rel=\"noopener noreferrer\">Divoká-Šárka</a>-Stausee bietet Sommerschwimmen, etwa 20 Minuten mit der Straßenbahn vom Zentrum.",
+        "en": "The Císařský ostrov (Emperor's Island) nature reserve is where locals go for riverside walks and picnics. <a href=\"https://www.prague.eu/en/object/places/823/divoka-sarka\" target=\"_blank\" rel=\"noopener noreferrer\">Divoká Šárka</a> reservoir has summer swimming, about 20 minutes by tram from the centre."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Sommerveranstaltungen",
+        "en": "Summer events"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong><a href=\"https://www.dvorakovapraha.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Dvořák Prag Festival</a></strong> (August bis September). Freiluftklassikkonzerte, darunter ein kostenloses Eröffnungskonzert auf dem Náměstí Míru.",
+          "en": "<strong><a href=\"https://www.dvorakovapraha.cz/en/\" target=\"_blank\" rel=\"noopener noreferrer\">Dvořák Prague Festival</a></strong> (August to September). Outdoor classical concerts, including a free opening concert at Náměstí Míru."
+        },
+        {
+          "de": "<strong>Shakespeare auf der Prager Burg</strong>. Sommertheater in den Burggärten. Karten sind schnell weg; früh prüfen.",
+          "en": "<strong>Shakespeare at Prague Castle</strong>. Summer theatre in the castle gardens. Tickets sell out; check early."
+        },
+        {
+          "de": "<strong>Palasthofkonzerte</strong>. Viele historische Räume veranstalten Abendkonzerte von Juni bis August. Auf <a href=\"https://goout.net/en/prague/\" target=\"_blank\" rel=\"noopener noreferrer\">GoOut</a> nach Veranstaltungen suchen.",
+          "en": "<strong>Palace courtyard concerts</strong>. Many historic spaces host evening concerts from June to August. Check <a href=\"https://goout.net/en/prague/\" target=\"_blank\" rel=\"noopener noreferrer\">GoOut</a> for listings."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wie man den schlimmsten Massen ausweicht",
+        "en": "How to avoid the worst of the crowds"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Karlsbrücke:</strong> vor 07:30 Uhr oder nach 21:00 Uhr. Sie leert sich und wird ein anderer Ort.",
+          "en": "<strong>Charles Bridge:</strong> before 07:30 or after 21:00. It empties out and becomes a different place."
+        },
+        {
+          "de": "<strong>Prager Burg:</strong> Dienstag bis Donnerstag morgens ruhiger. <a href=\"https://www.hrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Tickets online</a> im Voraus kaufen.",
+          "en": "<strong>Prague Castle:</strong> Tuesday to Thursday mornings are calmer. <a href=\"https://www.hrad.cz/en\" target=\"_blank\" rel=\"noopener noreferrer\">Buy tickets online</a> in advance."
+        },
+        {
+          "de": "<strong>Altstädter Ring:</strong> Massen zwischen 10:00 und 17:00 Uhr. Abends wiederkommen, wenn die Reisegruppen weg sind.",
+          "en": "<strong>Old Town Square:</strong> crowds peak from 10:00 to 17:00. Come back at night when the tour groups have left."
+        },
+        {
+          "de": "<strong>Restaurants:</strong> fürs Abendessen (19:30 bis 21:00 Uhr) reservieren. Dachterrassen im Juli und August erfordern Vorabreservierung, sonst sitzt man nicht.",
+          "en": "<strong>Restaurants:</strong> reserve for dinner (19:30 to 21:00). Rooftop terraces in July and August require advance booking or you will not sit down."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Sommertipps",
+        "en": "Practical summer tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Ausreichend trinken. Kopfsteinpflasterstraßen in der vollen Sonne fühlen sich heißer an als die Prognose vermuten lässt.",
+          "en": "Stay hydrated. Cobblestone streets in full sun feel hotter than the forecast suggests."
+        },
+        {
+          "de": "Leichte Regenjacke einpacken. Nachmittagsgewitter sind im Juli häufig.",
+          "en": "Pack a light rain jacket. Afternoon thunderstorms are common in July."
+        },
+        {
+          "de": "Sonnencreme bei Terrassenführungen und Flussuferpaziergängen. Das reflektierte Licht vom Fluss und Stein ist stärker, als viele erwarten.",
+          "en": "Sunscreen on terrace tours and riverside walks. Reflected light off the river and stone is stronger than people expect."
+        },
+        {
+          "de": "Die meisten Sehenswürdigkeiten haben im Sommer längere Öffnungszeiten. Vorher prüfen.",
+          "en": "Most attractions have longer summer hours. Verify before visiting."
+        }
+      ]
+    }
+  ]
+}

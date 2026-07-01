@@ -14,6 +14,7 @@ import RailCard from '../components/blog/RailCard';
 import RelatedGrid, { RelatedItem } from '../components/blog/RelatedGrid';
 import Masthead from '../components/blog/Masthead';
 import ArticleFooter from '../components/blog/ArticleFooter';
+import { mountJournalMaps } from '../utils/journalMaps';
 
 function extractHeadings(html: string): { id: string; text: string }[] {
   const matches = Array.from(html.matchAll(/<h2[^>]*>(.*?)<\/h2>/gi));
@@ -70,12 +71,21 @@ const BlogPostPage: React.FC = () => {
 
   const post = blogPosts.find((p: any) => p.slug === slug || p.slugDe === slug);
 
+  const isJournal = !!(post as any)?.isJournal;
   const rawContent = post?.contentKey ? t(post.contentKey as any) : '';
-  const processedContent = React.useMemo(
-    () => processGrundSections(injectHeadingIds(rawContent)),
-    [rawContent]
-  );
+  const processedContent = React.useMemo(() => {
+    const withIds = injectHeadingIds(rawContent);
+    // Journal (CMS) articles are narrative — skip the legacy "Grund" listicle
+    // section decoration; keep heading IDs so the table of contents still works.
+    return isJournal ? withIds : processGrundSections(withIds);
+  }, [rawContent, isJournal]);
   const headings = React.useMemo(() => extractHeadings(rawContent), [rawContent]);
+
+  // Hydrate any journal map blocks (Leaflet) once the article HTML is in the DOM.
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    if (isJournal) mountJournalMaps(contentRef.current);
+  }, [processedContent, isJournal]);
 
   if (!post) {
     notFound();
@@ -139,7 +149,7 @@ const BlogPostPage: React.FC = () => {
       >
         <div className="blog-content">
           {post.contentKey ? (
-            <div dangerouslySetInnerHTML={{ __html: processedContent }} />
+            <div ref={contentRef} dangerouslySetInnerHTML={{ __html: processedContent }} />
           ) : (
             <>
               <p className="lead">{t(post.excerptKey as any)}</p>

@@ -5,11 +5,12 @@
   "description": "Zuza Prague Tours - Professional Prague tour guide services with Zuzana Manova",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/generate-journal.cjs && next dev",
     "start": "next dev",
-    "prebuild": "node scripts/generate-thumbnails.cjs",
+    "prebuild": "node scripts/generate-thumbnails.cjs && node scripts/generate-journal.cjs",
     "build": "next build",
     "postbuild": "node scripts/ping-sitemaps.js",
+    "gen:journal": "node scripts/generate-journal.cjs",
     "new:blog": "node scripts/new-blog-post.cjs",
     "thumbs": "node scripts/generate-thumbnails.cjs",
     "thumbs:force": "node scripts/generate-thumbnails.cjs --force"

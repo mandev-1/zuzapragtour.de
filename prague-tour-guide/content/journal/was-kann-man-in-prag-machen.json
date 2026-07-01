@@ -1,0 +1,275 @@
+{
+  "slug": "was-kann-man-in-prag-machen",
+  "languages": [
+    "de"
+  ],
+  "status": "draft",
+  "date": "2026-04-26",
+  "dateDisplay": {
+    "de": "26. April 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": ""
+  },
+  "hero": "/images/old-town-square.jpg",
+  "title": {
+    "de": "Was kann man in Prag machen? Aktivitäten"
+  },
+  "excerpt": {
+    "de": "Die besten Orte und Aktivitäten in Prag — von der Burg bis zur Moldau, von der tschechischen Bierkultur bis zu den Vierteln, die die meisten Touristen nie finden."
+  },
+  "tags": {
+    "de": [
+      "was kann man in Prag machen",
+      "Prag Sehenswürdigkeiten",
+      "beste Orte Prag",
+      "Prag Aktivitäten",
+      "Prag Tipps",
+      "Prag Highlights",
+      "was tun in Prag",
+      "Prag Urlaub",
+      "Prag besuchen",
+      "Prag Ausflug",
+      "Prag Stadtführung",
+      "Prag Geheimtipps",
+      "Sehenswürdigkeiten Prag Altstadt"
+    ],
+    "en": []
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Ich führe seit Jahren Menschen durch Prag — Paare, Familien, Alleinreisende, Gruppen. Die Frage, die ich am häufigsten höre, noch bevor wir losgehen: „Was muss man hier unbedingt gesehen haben?\" Diese Antwort ist lang. Hier ist sie."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "1. Pražský hrad — die Burg"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Prager Burg ist die größte zusammenhängende Burganlage der Welt. Das merkt man, wenn man sie betritt: Sie ist keine einzelne Sehenswürdigkeit, sondern eine Stadt in der Stadt — mit einem Dom, mehreren Palästen, einer Gasse, einem Weinberg und einer Wachablösung täglich um 12:00 Uhr am Haupttor."
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Den <strong>Veitsdom</strong> von innen — besonders die Mucha-Fenster im Morgenlicht."
+        },
+        {
+          "de": "Den <strong>Alten Königspalast</strong> mit dem Wladislawsaal, in dem früher Pferdeturniere stattfanden."
+        },
+        {
+          "de": "Das <strong>Zlatá ulička</strong> — bunte Häuschen, in denen Kafka schrieb und Burgwächter wohnten."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Kombiticket B reicht für die meisten Besucher (250 CZK). Den Burgbereich selbst zu betreten ist kostenlos."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "2. Karlsbrücke — zur richtigen Zeit"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Karlsbrücke braucht keine Einleitung. Aber sie braucht das richtige Timing. Vor 8:00 Uhr morgens oder nach 19:00 Uhr abends ist sie eine andere Brücke — ruhig, ohne Gedränge, mit Blick auf eine Stadt, die noch nicht ganz wach ist."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wer 130 CZK übrig hat: Der Altstädter Brückenturm gibt den Blick von oben auf alle 30 Barockstatuen und den Burgberg dahinter. Einer der schönsten Aussichtspunkte der Stadt, und kaum jemand geht hinauf."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "3. Staroměstské náměstí — der Altstädter Ring"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Stündlich von 9:00 bis 23:00 Uhr schlägt die Orloj. Ein Skelett läutet, zwölf Apostel drehen sich, ein Hahn kräht. 45 Sekunden, dann Applaus. Man kann es kitschig finden — aber ich habe noch keine Gruppe gehabt, die nicht hingeschaut hat."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Platz selbst ist architektonisch ungewöhnlich: gotische Kirche, barocke Kuppeln, Renaissance-Giebel — alles nebeneinander. Der Rathausturm (250 CZK) gibt den besten Überblick. Die Restaurants direkt am Platz mit englischer Karte sind eine Touristenfalle — 50 Meter in die Dlouhá, und das Preis-Leistungs-Verhältnis verdoppelt sich."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "4. Josefov — das jüdische Viertel"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das ehemalige jüdische Ghetto wurde Ende des 19. Jahrhunderts fast vollständig abgerissen. Was übrig blieb: sechs Synagogen, der Alte Jüdische Friedhof und das Alte Rathaus mit der rückwärts laufenden Uhr."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Alte Jüdische Friedhof ist einer der ältesten erhaltenen jüdischen Friedhöfe Europas — Gräber übereinander, weil der Platz nie reichte. Eintritt über das Jüdische Museum Prag, Kombiticket ab 350 CZK."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "5. Malá Strana &amp; Kampa-Insel"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Malá Strana liegt zwischen der Karlsbrücke und dem Burgberg — ein Viertel aus Barockpalais, Weinbergen und Gassen, in denen die Zeit etwas langsamer läuft als im Rest der Stadt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Kampa-Insel ist mein persönlicher Lieblingsort in Prag. Ein kleiner Park direkt am Wasser, Blick auf die Brückenbögen, fast keine Touristenläden. Die John-Lennon-Mauer zwei Minuten entfernt — entstanden nach Lennons Tod 1980, immer wieder übermalt, immer wieder neu beschrieben."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "6. Vyšehrad"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vyšehrad ist die ältere Burg — älter als die Prager Burg, wenn man der Legende glaubt. Heute ist sie eine Festungsanlage auf einem Felsen über der Vltava, mit einem Nationalfriedhof, in dem Dvořák, Smetana und Mucha begraben sind."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Warum ich Vyšehrad empfehle: keine Reisebusse, keine Souvenirläden in Sichtweite, und der Blick von den Klippen auf den Fluss ist einer der besten der Stadt — kostenlos."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "7. Bootsfahrt auf der Moldau"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag vom Wasser aus ist ein anderes Prag. Die Karlsbrücke von unten, die Burgsilhouette, die Weinberge am Ufer. Optionen: geführte Abendfahrten ab ca. 500 CZK, Tretboote und Ruderboote zum Selbstfahren am Slovanský ostrov, oder Kajak für sportlichere Gäste."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Ruderboot für alle, die lieber selbst bestimmen, wo sie hinfahren: wenig Geld, kein Voranmelden, und man kommt an Stellen, die kein Ausflugsboot anfährt."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "8. Letná-Park"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Letná liegt auf einem Hügel nördlich der Altstadt. Am Ende des Parks öffnet sich das beste kostenlose Stadtpanorama: alle Brücken, die Altstadt, die Burg. Der Biergarten darunter — Pilsner Urquell vom Fass, entspannteste Atmosphäre der Stadt, kein Eintritt, kein Reservieren."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "9. Tschechisches Essen &amp; Bier"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Tschechien hat pro Kopf den höchsten Bierkonsum der Welt. Das liegt am Bier. Pilsner Urquell, Kozel, Bernard — alle besser vom Fass, in einem echten Prager Lokal (Pivnice), nicht im Touristenrestaurant am Platz."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Empfehlenswert ohne Touristenaufschlag: Lokál Dlouhá (Dlouhá 33), U Medvídků (Na Perštýně 7), Pivovarský dům (Ječná 15)."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Beim Essen: <em>Svíčková na smetaně</em> ist das tschechische Nationalgericht — Rinderfilet in Rahmsauce mit Knödeln. Den Trdelník am Touristenstand können Sie stehenlassen: es ist keine tschechische Tradition, sondern ein importiertes Touristenprodukt aus den letzten Jahren."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "10. Petřín-Hügel"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Petřín ist der bewaldete Hügel zwischen Malá Strana und dem Burgberg. Oben: ein Aussichtsturm, gebaut 1891 als kleinere Version des Eiffelturms (150 CZK, 299 Stufen oder Aufzug). Die Standseilbahn hinauf kostet eine normale Fahrkarte (30 CZK) und fährt alle 15 Minuten."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "11. Jazz, Konzerte, Nachtleben"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag hat eine lebendige Jazzszene. Reduta Jazz Club (Národní 20 — hier spielte Bill Clinton 1994 Saxofon), AghaRTA (Železná 16), Jazz Dock (Janáčkovo nábřeží 2, direkt am Wasser). Abendkonzerte ab ca. 200–300 CZK."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Klassische Konzerte in historischen Kirchen gibt es fast täglich. Für echte Konzertprogramme: Rudolfinum oder Nationaltheater."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "12. Was sich beim Einkaufen lohnt"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Böhmisches Glas — gut, wenn vom Hersteller (Moser-Galerie, Na Příkopě). Holzmarionetten — tschechisches Handwerk mit langer Tradition, kaufenswert in Werkstätten. Böhmischer Granat — der dunkelrote Halbedelstein aus Böhmen, echte Stücke erkennt man am Preis und am Händler mit Zertifikat."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Was ich abraten würde: Matroschkas, Bier-Souvenirs vom Marktstand, alles mit dem Prager Gesicht drauf. Das wird anderswo hergestellt."
+      }
+    }
+  ]
+}

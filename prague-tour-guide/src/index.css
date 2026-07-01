@@ -68,4 +68,19 @@
   body:has(.blog-index-root) #__next > footer {
     display: none !important;
   }
+
+  /* Review funnel (/bewerten): standalone & chrome-light — its own slim top
+     bar + footer replace the global Header/Footer, hero sits flush to the top. */
+  body:has(.review-funnel-root) > header,
+  body:has(.review-funnel-root) > footer {
+    display: none !important;
+  }
+  body:has(.review-funnel-root) main {
+    padding-top: 0 !important;
+  }
+
+  /* Premium homepage: hero sits flush under the transparent-over-photo header. */
+  body:has(.home-premium-root) main {
+    padding-top: 0 !important;
+  }
 }

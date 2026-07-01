@@ -1,0 +1,275 @@
+<!-- @dsCard group="Website" viewport="1280x820" name="Full Site — Home" subtitle="Premium multi-page site · home" -->
+<!-- @startingPoint section="Website" subtitle="Full premium multi-page site (navigable)" viewport="1280x900" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zuzana Manová · Private Prag-Touren</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; }
+  .hero__bg { position: absolute; inset: 0; z-index: 0; }
+  .hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; transform: scale(1.06); animation: kenburns 18s ease-out forwards; }
+  @keyframes kenburns { to { transform: scale(1); } }
+  .hero__scrim { position: absolute; inset: 0; background:
+      linear-gradient(to top, rgba(20,16,12,0.78) 0%, rgba(20,16,12,0.12) 42%, rgba(20,16,12,0.18) 100%),
+      linear-gradient(to right, rgba(20,16,12,0.55) 0%, transparent 55%); }
+  .hero__inner { position: relative; z-index: 2; width: 100%; padding-bottom: clamp(3rem, 7vh, 6rem); padding-top: 8rem; }
+  .hero__kicker { color: var(--ivory); margin-bottom: 1.8rem; }
+  .hero__kicker::before { background: var(--gold-lamp); opacity: 1; }
+  .hero h1 { margin: 0; color: var(--ivory); font-size: clamp(3.2rem, 8.5vw, 7rem); line-height: 0.98; letter-spacing: -0.02em; font-family: var(--font-display); font-weight: 400; text-wrap: balance; }
+  .hero h1 em { font-family: var(--font-italic); font-style: italic; color: var(--ivory); }
+  .hero__sub { margin: 1.8rem 0 2.6rem; max-width: 32rem; font-family: var(--font-body); font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.6; color: rgba(245,239,228,0.9); }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .hero__seal {
+    position: absolute; right: clamp(1.5rem, 5vw, 5rem); bottom: clamp(3rem, 7vh, 6rem); z-index: 2;
+    width: 132px; height: 132px; border-radius: 999px; border: 1px solid rgba(245,239,228,0.4);
+    display: grid; place-items: center; text-align: center; color: var(--ivory);
+    font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; line-height: 2.1;
+    -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  }
+  .hero__seal span { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0; display: block; margin: 0.1rem 0; }
+  @media (max-width: 720px) { .hero__seal { display: none; } }
+
+  .manifesto { position: relative; overflow: hidden; padding: clamp(3.25rem, 6vh, 4.75rem) 0; text-align: center; }
+  .manifesto > :not(.manifesto__stars) { position: relative; z-index: 1; }
+  .manifesto p { margin: 1rem auto 0; max-width: 44rem; font-family: var(--font-italic); font-style: italic; font-size: clamp(1.45rem, 2.6vw, 2.1rem); line-height: 1.32; color: var(--ink); }
+  .manifesto p em { color: var(--burgundy); }
+  /* Stars as a faint oversized background geometry, centered behind the quote */
+  .manifesto__stars { position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; gap: clamp(0.75rem, 3vw, 2.25rem); color: var(--brass); opacity: 0.03; pointer-events: none; }
+  .manifesto__stars span { font-size: clamp(3.25rem, 11vw, 8rem); line-height: 1; }
+  .manifesto .sig { margin-top: 1.1rem; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-mute); }
+
+  .tours { padding: clamp(3rem, 7vh, 6rem) 0 clamp(4rem, 9vh, 7rem); border-top: 1px solid var(--rule); }
+  .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: clamp(2.5rem, 5vh, 4rem); flex-wrap: wrap; }
+  .section-head h2 { margin: 1rem 0 0; font-size: clamp(2.2rem, 4vw, 3.4rem); }
+  .section-head .note { max-width: 24rem; font-family: var(--font-body); font-size: 1rem; line-height: 1.65; color: var(--ink-mute); }
+  .tours__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  .tours__list { border-top: 1px solid var(--rule); }
+  .tour { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 1.5rem; padding: 1.7rem 0.4rem; border-bottom: 1px solid var(--rule); cursor: pointer; transition: padding var(--dur-base) var(--ease-out); color: inherit; }
+  .tour__num { font-family: var(--font-display); font-size: 1rem; color: var(--brass); width: 2.2rem; transition: color var(--dur-base) var(--ease-out); }
+  .tour__title { font-family: var(--font-display); font-size: clamp(1.35rem, 2.2vw, 1.9rem); font-weight: 400; line-height: 1.12; color: var(--ink); transition: color var(--dur-base) var(--ease-out); }
+  .tour__meta { font-family: var(--font-sans); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); white-space: nowrap; }
+  .tour__arrow { font-size: 18px; color: var(--brass); opacity: 0; transform: translateX(-6px); transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+  .tour.active { padding-left: 1.1rem; }
+  .tour.active .tour__num, .tour.active .tour__title { color: var(--burgundy); }
+  .tour.active .tour__arrow { opacity: 1; transform: translateX(0); }
+  .tours__preview { position: sticky; top: 120px; aspect-ratio: 4/5; overflow: hidden; background: var(--ivory-deep); }
+  .tours__preview figure { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 0.7s var(--ease-out); }
+  .tours__preview figure.show { opacity: 1; }
+  .tours__preview img { width: 100%; height: 100%; object-fit: cover; }
+  .tours__preview figcaption { position: absolute; left: 0; bottom: 0; right: 0; padding: 2rem 1.6rem 1.4rem; background: linear-gradient(to top, rgba(20,16,12,0.7), transparent); color: var(--ivory); font-family: var(--font-italic); font-style: italic; font-size: 1.05rem; }
+  @media (max-width: 900px) { .tours__grid { grid-template-columns: 1fr; } .tours__preview { display: none; } .tour__meta { display: none; } }
+
+  .about { padding: clamp(4rem, 9vh, 7rem) 0; background: var(--ivory-deep); }
+  .about__grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(2.5rem, 6vw, 5.5rem); align-items: center; }
+  .about__portrait { position: relative; }
+  .about__portrait img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 18%; }
+  .about__portrait::after { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid var(--brass); z-index: -1; }
+  .about__body p { font-family: var(--font-body); font-size: 1.075rem; line-height: 1.78; color: var(--ink-soft); margin: 0 0 1.2rem; }
+  .about__body p.first { font-family: var(--font-italic); font-style: italic; font-size: 1.55rem; line-height: 1.45; color: var(--burgundy); margin-bottom: 1.6rem; }
+  .stats { display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 3.5rem); margin-top: 2.4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+  .stat .n { font-family: var(--font-display); font-size: clamp(2rem, 3.4vw, 2.9rem); color: var(--burgundy); line-height: 1; }
+  .stat .l { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-mute); margin-top: 0.6rem; }
+  @media (max-width: 820px) { .about__grid { grid-template-columns: 1fr; } }
+
+  .gallery { background: var(--ink); color: var(--ivory); padding: clamp(4rem, 9vh, 7rem) 0; }
+  .gallery .kicker { color: var(--gold-lamp); }
+  .gallery .kicker::before { background: var(--gold-lamp); }
+  .gallery h2 { color: var(--ivory); }
+  .gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; gap: 14px; margin-top: clamp(2rem, 4vh, 3rem); }
+  .gallery__grid figure { margin: 0; overflow: hidden; position: relative; }
+  .gallery__grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease-out); }
+  .gallery__grid figure:hover img { transform: scale(1.07); }
+  .gallery__grid .wide { grid-column: span 2; }
+  .gallery__grid .tall { grid-row: span 2; }
+  @media (max-width: 760px) { .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; } }
+
+  .reviews { padding: clamp(4rem, 9vh, 7rem) 0; border-top: 1px solid var(--rule); }
+  .reviews__head { text-align: center; margin-bottom: clamp(2.5rem, 5vh, 4rem); }
+  .reviews__stars { color: var(--gold-olive); display: flex; justify-content: center; gap: 5px; margin-bottom: 1.2rem; }
+  .reviews__stars .material-symbols-outlined { font-size: 18px; font-variation-settings: 'FILL' 1; }
+  .reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--rule); }
+  .review { padding: 2.6rem clamp(1.4rem, 2.5vw, 2.4rem); border-right: 1px solid var(--rule); display: flex; flex-direction: column; }
+  .review:last-child { border-right: none; }
+  .review p { font-family: var(--font-italic); font-style: italic; font-size: 1.2rem; line-height: 1.5; color: var(--ink); margin: 0 0 1.8rem; flex: 1; }
+  .review .who { font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--ink); }
+  .review .src { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-deep); margin-top: 0.35rem; }
+  @media (max-width: 820px) { .reviews__grid { grid-template-columns: 1fr; } .review { border-right: none; border-bottom: 1px solid var(--rule); } .review:last-child { border-bottom: none; } }
+
+  .cta { position: relative; padding: clamp(5rem, 13vh, 9rem) 0; text-align: center; overflow: hidden; color: var(--ivory); }
+  .cta__bg { position: absolute; inset: 0; z-index: 0; }
+  .cta__bg img { width: 100%; height: 100%; object-fit: cover; }
+  .cta__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(79,22,32,0.82), rgba(20,16,12,0.86)); }
+  .cta__inner { position: relative; z-index: 2; }
+  .cta .kicker { color: var(--gold-lamp); justify-content: center; }
+  .cta .kicker::before, .cta .kicker.center::after { background: var(--gold-lamp); opacity: 0.8; }
+  .cta h2 { color: var(--ivory); font-size: clamp(2.4rem, 5vw, 4rem); margin: 1.4rem auto 1.6rem; max-width: 18ch; }
+  .cta h2 em { color: var(--ivory); }
+  .cta__sub { max-width: 38rem; margin: 0 auto 2.6rem; font-family: var(--font-body); font-size: 1.1rem; line-height: 1.65; color: rgba(245,239,228,0.82); }
+  @media (max-width: 600px) { .hero h1 { font-size: clamp(2.5rem, 12vw, 3.4rem); } .hero__inner { padding-top: 7rem; } .manifesto p { font-size: clamp(1.45rem, 6vw, 1.9rem); } }
+</style>
+</head>
+<body class="home" data-page="home">
+
+  <header class="nav" id="nav"></header>
+
+  <section class="hero" id="top">
+    <div class="hero__bg"><img src="assets/images/vltava-bridges-hero.jpg" alt="Blick über die Moldau und ihre Brücken im goldenen Abendlicht"></div>
+    <div class="hero__scrim"></div>
+    <div class="hero__seal">Certified<span>Prague</span>Est. 1986</div>
+    <div class="hero__inner shell">
+      <span class="kicker hero__kicker">Zertifizierte Prag-Expertin</span>
+      <h1>Entdecken Sie<br><em>Prag</em>, vertraulich.</h1>
+      <p class="hero__sub">Private Stadtführungen mit Zuzana Manová — vierzig Jahre Geschichten, für ein Publikum von einem.</p>
+      <div class="hero__actions">
+        <a href="kontakt.html" class="btn cream">Anfrage senden <span class="material-symbols-outlined">arrow_forward</span></a>
+        <a href="tours.html" class="ulink" style="color:var(--ivory)">Touren ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+  <section class="manifesto shell">
+    <span class="kicker center">Eine persönliche Einladung</span>
+    <p>„Prag ist eine vielschichtige Geschichte — <em>lassen Sie uns diese gemeinsam lesen.</em>“</p>
+    <div class="manifesto__stars" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+    <div class="sig">— Ing. Zuzana Manová</div>
+  </section>
+
+  <section class="tours" id="tours">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Ausgewählte Erlebnisse</span>
+          <h2 class="display">Jede Tour beginnt<br>mit Ihrer <em>Neugier</em>.</h2>
+        </div>
+        <p class="note">Maßgeschneiderte Routen für anspruchsvolle Reisende — Authentizität, Geschichte und der lokale Puls der Stadt.</p>
+      </div>
+      <div class="tours__grid">
+        <div class="tours__list" id="tourList">
+          <a class="tour active" data-i="0" href="tour-detail.html">
+            <span class="tour__num">01</span>
+            <div><div class="tour__title">Die Prager Burg &amp; St.-Veits-Dom</div></div>
+            <span class="tour__meta">3,5 Std · Privat</span>
+            <span class="material-symbols-outlined tour__arrow">arrow_forward</span>
+          </a>
+          <a class="tour" data-i="1" href="tours.html">
+            <span class="tour__num">02</span>
+            <div><div class="tour__title">Altstadt &amp; Jüdisches Viertel</div></div>
+            <span class="tour__meta">4 Std · Akkreditiert</span>
+            <span class="material-symbols-outlined tour__arrow">arrow_forward</span>
+          </a>
+          <a class="tour" data-i="2" href="tours.html">
+            <span class="tour__num">03</span>
+            <div><div class="tour__title">Das alchemistische Prag</div></div>
+            <span class="tour__meta">3 Std · Nach Einbruch</span>
+            <span class="material-symbols-outlined tour__arrow">arrow_forward</span>
+          </a>
+          <a class="tour" data-i="3" href="tours.html">
+            <span class="tour__num">04</span>
+            <div><div class="tour__title">Verstecktes Prag</div></div>
+            <span class="tour__meta">2,5 Std · Abseits</span>
+            <span class="material-symbols-outlined tour__arrow">arrow_forward</span>
+          </a>
+          <a class="tour" data-i="4" href="tours.html">
+            <span class="tour__num">05</span>
+            <div><div class="tour__title">Prag &amp; deutsches Erbe</div></div>
+            <span class="tour__meta">2,75 Std · Kafka</span>
+            <span class="material-symbols-outlined tour__arrow">arrow_forward</span>
+          </a>
+        </div>
+        <div class="tours__preview" id="tourPreview">
+          <figure class="show"><img src="assets/images/prague-castle.jpg" alt="Prager Burg"><figcaption>Tausend Jahre Macht, Glaube und Architektur.</figcaption></figure>
+          <figure><img src="assets/images/josefov.jpg" alt="Klausen-Synagoge und Alter Jüdischer Friedhof im Josefov"><figcaption>Das bewegende Erbe des Josefov.</figcaption></figure>
+          <figure><img src="assets/images/night-prague.jpg" alt="Prag bei Nacht"><figcaption>Astrologie, Alchemie und Legenden.</figcaption></figure>
+          <figure><img src="assets/images/hidden-gems.jpg" alt="Verstecktes Prag"><figcaption>Höfe und Gassen, die kein Reiseführer kennt.</figcaption></figure>
+          <figure><img src="assets/images/kafka.jpg" alt="Kafkas Prag"><figcaption>Auf den Spuren des deutschen Prag.</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="shell about__grid">
+      <div class="about__portrait reveal"><img src="assets/images/zuzana-portrait.jpg" alt="Zuzana Manová"></div>
+      <div class="about__body">
+        <span class="kicker reveal">Lernen Sie Zuzana kennen</span>
+        <h2 class="display reveal d1" style="font-size:clamp(2.2rem,4vw,3.2rem);margin:1rem 0 1.6rem">Prag, erzählt mit <em>Leidenschaft</em>.</h2>
+        <p class="first reveal d1">Seit 1986 führe ich Besucher durch Prag. Vierzig Jahre, in denen ich zusah, wie sich diese Stadt verändert und ihre Geheimnisse bewahrt.</p>
+        <p class="reveal d2">Als Spezialistin für Prager Geschichte besitze ich die offizielle tschechische Zertifizierung und eine Akkreditierung des Jüdischen Museums in Prag.</p>
+        <div class="stats reveal d3">
+          <div class="stat"><div class="n">40+</div><div class="l">Jahre Erfahrung</div></div>
+          <div class="stat"><div class="n">4,9k</div><div class="l">Touren kuratiert</div></div>
+          <div class="stat"><div class="n">5,0</div><div class="l">Sterne Bewertung</div></div>
+        </div>
+        <div style="margin-top:2rem"><a href="zuzana.html" class="ulink">Mehr über Zuzana <span class="material-symbols-outlined">arrow_forward</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="shell">
+      <span class="kicker reveal">Von meinen Gästen</span>
+      <h2 class="display reveal d1" style="font-size:clamp(2rem,4vw,3rem);margin:0.8rem 0 0">Augenblicke <em style="color:var(--gold-lamp)">unterwegs</em></h2>
+      <div class="gallery__grid">
+        <figure class="wide tall reveal"><img src="assets/images/guest-tourguide.jpg" alt="Zuzana mit Gästen"></figure>
+        <figure class="reveal d1"><img src="assets/images/guest-night.jpeg" alt="Prag bei Nacht"></figure>
+        <figure class="reveal d2"><img src="assets/images/guest-food.jpeg" alt="Böhmische Küche"></figure>
+        <figure class="wide reveal d1"><img src="assets/images/boat-vltava.jpg" alt="Boot auf der Moldau"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="shell">
+      <div class="reviews__head">
+        <div class="reviews__stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+        <span class="kicker center">Unvergessliche Erinnerungen</span>
+        <h2 class="display" style="font-size:clamp(2rem,4vw,3rem);margin-top:0.8rem">Worte meiner Gäste</h2>
+      </div>
+      <div class="reviews__grid">
+        <div class="review reveal"><p>„Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.“</p><div class="who">Thomas K.</div><div class="src">TripAdvisor</div></div>
+        <div class="review reveal d1"><p>„Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen.“</p><div class="who">Monika H.</div><div class="src">TourHQ Verifiziert</div></div>
+        <div class="review reveal d2"><p>„Perfekt für unsere Familie. Sie hat die Kinder mit lokalen Legenden fasziniert.“</p><div class="who">Familie Schneider</div><div class="src">Private Buchung</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta__bg"><img src="assets/images/charles-bridge-statue.jpg" alt=""></div>
+    <div class="cta__inner shell">
+      <span class="kicker center">Zertifizierte Expertin · 40 Jahre</span>
+      <h2 class="display">Bereit, Prag zu <em>entdecken</em>?</h2>
+      <p class="cta__sub">Begrenzte Verfügbarkeit für private Buchungen. Kontaktieren Sie Zuzana noch heute, um Ihre individuelle Reiseroute zu planen.</p>
+      <div class="hero__actions" style="justify-content:center">
+        <a href="kontakt.html" class="btn cream">Anfrage senden <span class="material-symbols-outlined">arrow_forward</span></a>
+        <a href="tel:+420721231933" class="ulink" style="color:var(--ivory)">+420 721 231 933</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="site.js"></script>
+  <script>
+    (function () {
+      var list = document.getElementById('tourList');
+      var figs = document.querySelectorAll('#tourPreview figure');
+      if (!list) return;
+      list.querySelectorAll('.tour').forEach(function (row) {
+        var activate = function () {
+          var i = +row.dataset.i;
+          list.querySelectorAll('.tour').forEach(function (r) { r.classList.toggle('active', r === row); });
+          figs.forEach(function (f, fi) { f.classList.toggle('show', fi === i); });
+        };
+        row.addEventListener('mouseenter', activate);
+        row.addEventListener('focusin', activate);
+      });
+    })();
+  </script>
+</body>
+</html>

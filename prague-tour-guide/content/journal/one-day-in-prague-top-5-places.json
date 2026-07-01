@@ -1,0 +1,303 @@
+{
+  "slug": "one-day-in-prague-top-5-places",
+  "slugDe": "ein-tag-in-prag-fuenf-orte",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-04-25",
+  "dateDisplay": {
+    "de": "25. April 2026",
+    "en": "April 25, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/photo-guests-mala-strana-from-castle.jpeg",
+  "title": {
+    "de": "Ein Tag in Prag: Die 5 Orte, die sich lohnen",
+    "en": "One Day in Prague: 5 Places Worth Your Time"
+  },
+  "excerpt": {
+    "de": "Nur einen Tag in Prag? Ich zeige Ihnen die Route, die ich meinen Gästen gebe: von Národní třída über die Burg bis zum Altstädter Ring — zu Fuß, ohne Hetze.",
+    "en": "Only one day in Prague? Here's the route I give my guests: from Národní třída across the castle and back through the Old Town — on foot, without rushing."
+  },
+  "tags": {
+    "de": [
+      "ein Tag in Prag",
+      "Prag Rundgang",
+      "Top 5 Orte Prag",
+      "Prag Sehenswürdigkeiten",
+      "Prag Altstadt",
+      "Prager Burg",
+      "Karlsbrücke",
+      "Malá Strana Prag",
+      "Národní třída Prag",
+      "Prag Stadtführung",
+      "Prag Tagesausflug",
+      "Prag Highlights"
+    ],
+    "en": [
+      "one day in Prague",
+      "Prague itinerary",
+      "top 5 places Prague",
+      "Prague must see",
+      "Prague old town",
+      "Prague Castle",
+      "Charles Bridge",
+      "Mala Strana Prague",
+      "Narodni trida Prague",
+      "Prague walking tour",
+      "Prague day trip",
+      "best places Prague"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Einer meiner Gäste — ein Banker aus Frankfurt, der auf dem Weg nach Wien war — sagte mir einmal: „Ich habe nur heute.\" Kein Stress in der Stimme, einfach eine Tatsache. Meine Antwort: „Das reicht.\""
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag lässt sich nicht erschöpfen. Das wäre vermessen. Aber in einem einzigen Tag kann man die Seele der Stadt spüren — vorausgesetzt, man wählt die richtige Route. Hier ist die, die ich meinen Gästen gebe."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Vorab: Wo Sie schlafen sollten"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie nur einen Tag haben, ist die Lage des Hotels nicht Komfort — sie ist Strategie. Ein Hotel mit Spa in der Innenstadt bedeutet: Sie starten ausgeruht, ohne Transfers, und können am Abend zurück, ohne Stunden in einem Taxi zu verbringen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gute Lagen für diesen Rundgang: zwischen Národní třída und dem Wenzelsplatz, oder direkt in der Nähe des Altstädter Rings. Das Grand Hotel Bohemia, das Icon Hotel &amp; Lounge oder das Be Smart Mánes — alle drei haben Wellness-Bereiche und liegen exakt auf dieser Route."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Platz 1: Národní třída — Ihr Morgen beginnt hier"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Treffen Sie sich um 9:00 Uhr im Café Louvre, Národní 20. Es gibt es seit 1902. Kafka saß hier, Einstein auch. Die Milchkaffees kommen in großen weißen Tassen. Das Croissant ist nicht das, wofür Sie hergekommen sind, aber der Raum ist es."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Draußen auf der Národní třída, ein paar Schritte Richtung Vltava, finden Sie ein kleines Denkmal in einem Eingang: Hände, die aus der Wand ragen. Hier waren am 17. November 1989 Studenten, Polizeiknüppel, und der Beginn des Endes der kommunistischen Tschechoslowakei. Ein stilles Denkmal, fast zu unscheinbar für das, was es festhält."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Von dort spazieren Sie die Národní zur Kreuzung mit der Spálená, biegen rechts auf die Na Příkopě — die Einkaufsmeile Prags. Nicht zwingend aufregend (Zara, H&amp;M, Sephora), aber wenn jemand in Ihrer Gruppe shoppen möchte: hier ist die Zeit dafür."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Platz 2: Pražský hrad — Die Burg"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gegen 11:00 Uhr nehmen Sie die Tram 22 von der Haltestelle Národní divadlo (zwei Minuten zu Fuß vom Café Louvre). Vier Stationen bis Pohořelec, dann zu Fuß bergab durch den Hradčany-Platz zum Burgeingang."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Was Sie sehen müssen:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Veitsdom</strong>: Außen romanisch und gotisch durcheinander, innen fast dunkel — bis das Licht durch die Mucha-Fenster fällt. Kostenloser Eintritt in den Vorchor. Für das innere Kirchenschiff und die Königsgruft: Kombiticket B, 250 CZK."
+        },
+        {
+          "de": "<strong>Alter Königspalast</strong>: Der Wladislawsaal ist einer der größten säulenlosen gotischen Säle Mitteleuropas. Er wurde auch für Pferdeturniere genutzt. Die Wendeltreppe im Inneren — der Reiterstieg — ist breit genug für ein Pferd. Daran erkennt man, für wen Architektur in dieser Zeit gedacht war."
+        },
+        {
+          "de": "<strong>Zlatá ulička</strong>: Die bunten Häuschen wurden ursprünglich von Burgwächtern und Handwerkern bewohnt. Kafka schrieb dort eine Zeit lang — seine Schwester mietete Haus Nr. 22 im Winter 1916/17. Heute Souvenirläden, aber die Architektur lohnt sich."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Planen Sie etwa 1,5 bis 2 Stunden ein."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/prague-castle-cathedral.jpg",
+      "cap": {
+        "de": "Der Veitsdom dominiert das Burggelände — im Inneren fallen die Mucha-Fenster sofort auf."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Platz 3: Zlaté schody &amp; Malá Strana — Der Abstieg"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Verlassen Sie die Burg durch das Ostportal und gehen Sie die Zlaté schody (Goldene Treppe) hinab. Das ist die stille Seite, die Touristen meistens übersehen — wenige Stufen, Weinbergmauern, und plötzlich Malá Strana zu Ihren Füßen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Unten angekommen: biegen Sie links in die Nerudova. Sie ist steil und gepflastert und zieht sich den Burgberg hinunter. Fast jedes Haus hat ein historisches Schild über dem Eingang — die alten Hausnummern in Form von Zeichen: ein Bär, eine Sonne, drei Geigen. Vor der Erfindung der Straßennummern war das das System."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/photo-guests-mala-strana.jpeg",
+      "cap": {
+        "de": "Malá Strana — das Viertel zwischen Karlsbrücke und Burgberg."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am Fuß der Nerudova liegt das Malostranské náměstí — der Hauptplatz der Kleinseite. Die Barockkirche St. Nikolaus dominiert ihn; Eintritt kostet etwas, aber das Innere ist theatralischer als viele Opernhäuser. Wenn Sie Hunger haben: das Restaurant U Malého Glena (Karmelitská 23) ist kein Touristenlokal. Oder für etwas Schnelleres: Lokál Malá Strana, Míšeňská 12."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Platz 4: Karlův most — Die Brücke"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Karlsbrücke ist am frühen Morgen oder nach 18:00 Uhr leer. Um 14:00 Uhr ist sie es nicht. Das ist die ehrliche Auskunft."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Trotzdem: Sie müssen sie überqueren, denn die Aussicht von der Brücke ist eine der schönsten in Europa. Burgsilhouette im Westen, die Kuppeln von Malá Strana, dann die Türme der Altstadt, wenn man sich umdreht."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die 30 Barockheiligen entlang der Balustrade sind Kopien — die Originale sind im Lapidarium im Výstaviště-Park, falls Sie die echten sehen wollen. Empfehlenswert für alle, die sich länger als zwei Tage in Prag aufhalten."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/charles-bridge-pretty-picture.jpg",
+      "cap": {
+        "de": "Die Karlsbrücke — am eindrucksvollsten früh morgens oder nach 18 Uhr."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Kleiner Tipp: Für 130 CZK können Sie den Altstädter Brückenturm besteigen — einer der schönsten gotischen Tortürme Europas, und die Aussicht von oben auf die Brücke und den Fluss ist außergewöhnlich."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Platz 5: Staroměstské náměstí — Der Altstädter Ring"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vom Ende der Karlsbrücke sind es fünf Minuten zu Fuß. Der Altstädter Ring ist der dramatischste Stadtplatz, den ich kenne — und ich kenne einige."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die <strong>Orloj</strong> schlägt stündlich. Das Spektakel dauert etwa 45 Sekunden: ein Skelett läutet, die zwölf Apostel drehen sich, ein Hahn kräht. Die Menge applaudiert. Sie können dafür anstehen oder einfach zufällig vorbeikommen — die Uhr tickt zuverlässig."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der <strong>Turm des Altstädter Rathauses</strong> (250 CZK) gibt Ihnen den besten Blick über die Dächer der Altstadt. Von hier sehen Sie, wie Prag gebaut ist: konzentrische Ringe um die Kirche Unserer Lieben Frau vor dem Týn, gotische Türme neben barocken Kuppeln neben Renaissance-Giebeln."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/old-town-square.jpg",
+      "cap": {
+        "de": "Staroměstské náměstí — der Altstädter Ring mit der Orloj und der Týnkirche."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Was Sie auf dem Platz vermeiden sollten: die Restaurants mit englischer Speisekarte direkt am Platz. Gehen Sie stattdessen 50 Meter in eine Seitenstraße — Lokál Dlouhá (Dlouhá 33) ist perfekt für ein Abendessen mit Pilsner Urquell."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die Rückkehr"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Von der Staroměstská-Metro sind es zwei Stationen bis Národní třída (Linie B, grün). Sie sind zurück, wo Sie begonnen haben. Wenn das Hotel einen Saunabereich hat: das ist jetzt genau das Richtige."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Gesamtroute sind ungefähr 8 bis 10 Kilometer zu Fuß. Sie werden Treppen hochgehen, unebenes Pflaster begehen, und wahrscheinlich an einer Stelle kurz stehenbleiben und denken: Wann komme ich wieder. Das ist normal."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was ich meinen Gästen sage"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag ist schön, aber es ist auch dicht. Nicht wegen der Distanzen — wegen der Geschichten. An jeder Ecke gibt es eine. Man kann nicht alles auf einmal verarbeiten. Ein Tag gibt Ihnen genug, um zu verstehen, warum die Menschen wiederkommen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie möchten, zeige ich Ihnen das alles persönlich — mit den Geschichten hinter den Sehenswürdigkeiten, ohne Hetze, ohne Gruppenbus."
+      }
+    }
+  ]
+}

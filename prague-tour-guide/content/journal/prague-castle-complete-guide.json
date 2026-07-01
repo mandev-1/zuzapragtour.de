@@ -1,0 +1,261 @@
+{
+  "slug": "prague-castle-complete-guide",
+  "slugDe": "prager-burg-vollstaendiger-besucher-guide",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2026-02-01",
+  "dateDisplay": {
+    "de": "1. Februar 2026",
+    "en": "February 1, 2026"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-prague-castle.jpg",
+  "title": {
+    "de": "Prager Burg: Vollständiger Besucherführer",
+    "en": "Prague Castle: Complete Visitor's Guide"
+  },
+  "excerpt": {
+    "de": "Die größte alte Burganlage der Welt — und die meisten Besucher sehen nur 10 % davon. So navigieren Sie durch den Veitsdom, das Goldene Gässchen, den Königlichen Garten und alles dazwischen.",
+    "en": "The world's largest ancient castle complex — and most visitors see just 10% of it. Here's how to navigate St. Vitus Cathedral, the Golden Lane, the Royal Gardens, and everything in between."
+  },
+  "tags": {
+    "de": [
+      "Prager Burg",
+      "Veitsdom",
+      "Goldenes Gässchen",
+      "Alter Königspalast",
+      "Burgtour Prag",
+      "Prager Burg Tickets",
+      "Prager Burg Öffnungszeiten",
+      "Prager Burg besuchen"
+    ],
+    "en": [
+      "Prague Castle",
+      "St Vitus Cathedral",
+      "Golden Lane",
+      "Old Royal Palace",
+      "Prague Castle tour",
+      "Prague Castle tickets",
+      "Prague Castle opening hours",
+      "Visit Prague Castle"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Prager Burg: Der vollständige Besucherführer",
+        "en": "Prague Castle: The Complete Visitor's Guide"
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Die Prager Burg ist die größte alte Burganlage der Welt nach Fläche — über 70.000 Quadratmeter Paläste, Gärten, Kirchen, Galerien und Geschichte, die sich über 1.100 Jahre erstreckt. Die meisten Besucher sehen 10 % davon. Dieser Leitfaden hilft Ihnen, die richtigen 10 % zu sehen — oder viel mehr, wenn Sie die Zeit haben.",
+        "en": "Prague Castle is the largest ancient castle complex in the world by area — over 70,000 square metres of palaces, gardens, churches, galleries, and history spanning 1,100 years. Most visitors see 10% of it. This guide helps you see the right 10% — or much more if you have the time."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Was es gibt: Die wichtigsten Sehenswürdigkeiten",
+        "en": "What's Inside: The Key Sites"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Veitsdom",
+        "en": "St. Vitus Cathedral"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das spirituelle und architektonische Herz Prags. Der Bau begann 1344 und wurde erst 1929 abgeschlossen — fast 600 Jahre Bauzeit. Verpassen Sie nicht die <strong>Wenzelkapelle</strong> (Wände mit Halbedelsteinen eingelegt), die <strong>Buntglasfenster</strong> (darunter eines von Alfons Mucha) und die Krypta mit böhmischen Königen. Eintritt ins Schiff kostenlos; Ticket für das vollständige Innere und den Turmaufstieg erforderlich.",
+        "en": "The spiritual and architectural heart of Prague. Construction began in 1344 and was completed only in 1929 — nearly 600 years of building. Don't miss the <strong>Chapel of St. Wenceslas</strong> (walls inlaid with semi-precious stones), the <strong>stained glass windows</strong> (including one by Alfons Mucha), and the crypt with Bohemian kings. Free to enter the nave; paid ticket for the full interior and tower climb."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Alter Königspalast (Starý královský palác)",
+        "en": "Old Royal Palace (Starý královský palác)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Heimat der <strong>Wladislawsaal</strong> — ein spätgotisches Meisterwerk, so groß, dass darin Reiterturniere abgehalten wurden. Die Böhmische Kanzlei war der Ort des Zweiten Prager Fenstersturzes im Jahr 1618, der den Dreißigjährigen Krieg entfachte.",
+        "en": "Home to the <strong>Vladislav Hall</strong> — a late Gothic masterpiece so large that jousting tournaments were held inside. The Bohemian Chancellery here was where the Second Defenestration of Prague happened in 1618, igniting the Thirty Years' War."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Georgsbasilika",
+        "en": "St. George's Basilica"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die älteste erhaltene Kirche in der Burganlage, gegründet im Jahr 920. Ihre auffällige Barockfassade verbirgt ein bemerkenswert nüchternes und schönes romanisches Inneres — ein ruhiger Kontrast zum Veitsdom.",
+        "en": "The oldest surviving church in the castle complex, founded in 920. Its striking Baroque facade hides a remarkably austere and beautiful Romanesque interior — a quiet contrast to St. Vitus Cathedral."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Goldenes Gässchen (Zlatá ulička)",
+        "en": "Golden Lane (Zlatá ulička)"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Bunte Miniatürhäuser, die im 16. Jahrhundert in die Burgbefestigungsmauer eingebaut wurden. Franz Kafka wohnte kurz 1916–17 in Nr. 22. Heute zeigen die Häuser Ausstellungen zum Burgalltagsleben durch die Jahrhunderte.",
+        "en": "Colourful miniature houses built into the castle fortification wall in the 16th century. Franz Kafka lived at No. 22 briefly in 1916–17. Today the houses contain exhibits on castle life through the centuries."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Burggärten",
+        "en": "Castle Gardens"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der <strong>Königliche Garten</strong> (Nordseite, mit dem Renaissance-Ballspielhaus) und die <strong>Südgärten</strong> (eine Folge von Terrassen mit Stadtblicken) sind beide außergewöhnlich. Die Südgärten verbinden sich hinunter zum Stadtteil Malá Strana.",
+        "en": "The <strong>Royal Garden</strong> (north side, with the Renaissance Ball Game Hall) and the <strong>South Gardens</strong> (a sequence of terraces with city views) are both extraordinary. The South Gardens connect down to the Malá Strana neighbourhood."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Tickets, Zeiten & praktische Logistik",
+        "en": "Tickets, Hours & Practical Logistics"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Burgkomplex ist frei zugänglich. Tickets sind für einzelne Denkmäler erforderlich:",
+        "en": "The castle grounds are free to enter. Tickets are required for individual monuments:"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Rundgang A</strong> — alle wichtigen Sehenswürdigkeiten einschließlich Burggeschichtsausstellung",
+          "en": "<strong>Circuit A</strong> — all major sights including the castle history exhibition"
+        },
+        {
+          "de": "<strong>Rundgang B</strong> — Veitsdom-Inneres, Alter Königspalast, Georgsbasilika, Goldenes Gässchen",
+          "en": "<strong>Circuit B</strong> — St. Vitus Cathedral interior, Old Royal Palace, St. George's Basilica, Golden Lane"
+        },
+        {
+          "de": "Öffnungszeiten: in der Regel 09:00–17:00 Uhr (Winter) und 09:00–18:00 Uhr (Sommer); aktuelle Zeiten auf der offiziellen Website prüfen",
+          "en": "Opening hours: generally 09:00–17:00 (winter) and 09:00–18:00 (summer); check the official website for current hours"
+        },
+        {
+          "de": "Tickets online kaufen, um Warteschlangen an der Kasse zu vermeiden",
+          "en": "Buy tickets online to avoid queuing at the box office"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die besten Besuchszeiten",
+        "en": "Best Times to Visit"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Vor 09:30 Uhr:</strong> Die Innenhöfe sind ruhig und Fotografie ist uneingeschränkt",
+          "en": "<strong>Before 09:30:</strong> the courtyards are quiet and photography is unrestricted by crowds"
+        },
+        {
+          "de": "<strong>Dienstag–Donnerstag:</strong> Spürbar weniger belebt als an Wochenenden",
+          "en": "<strong>Tuesday–Thursday:</strong> noticeably less busy than weekends"
+        },
+        {
+          "de": "<strong>Nach 16:00 Uhr:</strong> Viele Tagesausflügler gehen; das Licht auf dem Veitsdom wird golden",
+          "en": "<strong>After 16:00:</strong> many day-trippers leave; the light on St. Vitus turns golden"
+        },
+        {
+          "de": "<strong>Winter:</strong> Schneebedeckte Innenhöfe sind außergewöhnlich — und fast leer",
+          "en": "<strong>Winter:</strong> snow-dusted courtyards are extraordinary — and almost empty"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Anreise",
+        "en": "Getting There"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Straßenbahn 22</strong> bis Pražský hrad — lässt Sie direkt am Tor aus",
+          "en": "<strong>Tram 22</strong> to Pražský hrad — deposits you directly at the gate"
+        },
+        {
+          "de": "<strong>Fußweg vom Malostranské náměstí</strong> — die klassische Route die Nerudova-Straße hinauf (steil, aber schön)",
+          "en": "<strong>Walk from Malostranské náměstí</strong> — the classic route up Nerudova street (steep but beautiful)"
+        },
+        {
+          "de": "<strong>Fußweg von Pohořelec</strong> (über Strahov) — längerer, weniger überfüllter Zugang über das Kloster",
+          "en": "<strong>Walk from Pohořelec</strong> (via Strahov) — a longer, less-crowded approach via the monastery"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Tipps",
+        "en": "Practical Tips"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Mindestens 2–4 Stunden für den Hauptrundgang einplanen",
+          "en": "Allow 2–4 hours minimum for the key circuit"
+        },
+        {
+          "de": "Bequeme Schuhe tragen — Kopfsteinpflaster und Stufen über eine große Fläche",
+          "en": "Wear comfortable shoes — cobblestones and steps across a large area"
+        },
+        {
+          "de": "Der Wachwechsel findet jede Stunde im Ersten Hof statt; Mittagszeremonie (mit Kapelle) um 12:00 Uhr ist die aufwendigste",
+          "en": "The changing of the guard happens on the hour at the First Courtyard; noon ceremony (with band) is the most elaborate"
+        },
+        {
+          "de": "Taschenkontrollen am Haupttor — ein paar Minuten früher ankommen bei Zeitticket",
+          "en": "Bag checks at the main gate — arrive a few minutes early if you have a timed ticket"
+        }
+      ]
+    }
+  ]
+}

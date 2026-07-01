@@ -1,0 +1,163 @@
+{
+  "slug": "vaclav-havel-tour-prague",
+  "slugDe": "vaclav-havel-prag-spaziergang-der-freiheit",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-18",
+  "dateDisplay": {
+    "de": "18. Oktober 2025",
+    "en": "October 18, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-havel.jpg",
+  "title": {
+    "de": "Václav Havel in Prag: Der Weg der Freiheit",
+    "en": "Václav Havel in Prague: A Walk of Freedom"
+  },
+  "excerpt": {
+    "de": "Folgen Sie den Spuren Václav Havels durch Prag—Schauplätze der Samtenen Revolution, Bürgerforen, Theater und Cafés, die den Weg zur Freiheit prägten.",
+    "en": "Follow the footsteps of Václav Havel across Prague—Velvet Revolution sites, civic forums, theaters, and cafés that shaped a nation's path to freedom."
+  },
+  "tags": {
+    "de": [
+      "Geschichte",
+      "Samtene Revolution",
+      "Kultur",
+      "Havel"
+    ],
+    "en": [
+      "History",
+      "Velvet Revolution",
+      "Culture",
+      "Havel"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Auf den Spuren von Václav Havel",
+        "en": "Prague Through Havel's Eyes"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Václav Havel — <strong>Dramatiker, Dissident, später Präsident</strong> — hat eine lebendige Karte über Prag hinterlassen. Diese Führung folgt Orten, an denen Kunst, Zivilcourage und Geschichte aufeinandertrafen. Ich entdecke bei jeder Führung etwas Neues daran.",
+        "en": "Václav Havel — <strong>playwright, dissident, later president</strong> — left a living map across Prague. This tour follows places where art, civic courage, and history ran into each other. I find new things to say on it every time I lead it."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Rašín-Ufer: Wo es beginnt",
+        "en": "Rašín Embankment: Where It Starts"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wir beginnen am <strong>Rašínovo nábřeží</strong>, beim ehemaligen Wohnhaus Havels. Schauen Sie sich das Gebäude an: ein <em>Frauenrelief</em>, Spuren der <em>kommunistischen Vergangenheit</em>, eine <em>Erdkugel auf dem Dach</em>. Wenn man einmal weiß, wonach man sucht, ist es schwer vorbeizugehen ohne anzuhalten.",
+        "en": "We begin at <strong>Rašínovo nábřeží</strong>, near Havel's former residence. Look at the building: a <em>female relief</em>, traces of the <em>communist past</em>, and a <em>globe on the roof</em>. Once you know what you're looking for, it's hard to walk past without stopping."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Ruhiger Zufluchtsort am Fluss",
+        "en": "Quiet Refuge by the River"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im Restaurant <strong>Vltava</strong> saß Havel oft hinten rechts, mit dem Blick zur Wand—ein Reflex aus Zeiten der Überwachung. Ein Ort zum <em>Nachdenken und Schreiben</em>, fern der politischen Bühne.",
+        "en": "At the <strong>Vltava restaurant</strong>, Havel often sat in the back, facing the wall. A habit from surveillance times. It was where he went to <em>think and write</em>, away from politics and public rooms."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/blog-havel-2.jpg"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Café Slavia und Olga",
+        "en": "Café Slavia and Olga"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im legendären <strong>Café Slavia</strong> traf Havel Künstler, Politiker und seine große Liebe <em>Olga</em>. Ihre Verbundenheit, geerdet im Alltäglichen, trug sein außergewöhnliches öffentliches Leben.",
+        "en": "We visit the legendary <strong>Café Slavia</strong>—a center of intellectual life. Here Havel met artists, politicians, and his great love, <em>Olga</em>. Their bond, rooted in everyday humanity, anchored Havel's extraordinary public life."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Dissidentenjahre und Theater",
+        "en": "Dissident Years and Theatres"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wir sprechen über Havels kreatives Umfeld im <strong>Divadlo Na zábradlí</strong> und über die dunklen Kapitel—<em>Verhöre und Haft</em> in der Nähe der <strong>Bartolomějská</strong> (heutiges Unitas-Hotel).",
+        "en": "We explore Havel's creative ground at <strong>Divadlo Na zábradlí</strong> and the difficult chapters of <em>interrogations and prison</em> near <strong>Bartolomějská</strong> (today's Unitas Hotel)."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Vom Bürgerforum zur Burg",
+        "en": "From Civic Forum to the Castle"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "In der <strong>Laterna magika</strong> gab das <em>Bürgerforum</em> tägliche Pressebriefings während der Samtenen Revolution. Auf dem <strong>Wenzelsplatz</strong> und an der <strong>Nationalallee (Národní)</strong> erinnern wir an den 17. November. Abschließend betrachten wir in den Höfen der <strong>Prager Burg</strong> neu gedeutete Symbole—ein Dramatiker als Präsident.",
+        "en": "At <strong>Laterna magika</strong>, the <em>Civic Forum</em> held daily briefings during the Velvet Revolution. On <strong>Wenceslas Square</strong> and <strong>Národní</strong>, we recall 17 November. Finally, we reflect in the <strong>Prague Castle</strong> courtyards—symbols reshaped by a playwright-president."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Worum es bei dieser Route wirklich geht",
+        "en": "What This Route Is Actually About"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Neben Daten und Tafeln möchte ich den <strong>Bürger Havel</strong> zeigen: humorvoll, wirklich offen, im Gespräch mit jedem. Das ist ein Spaziergang darüber, was es bedeutet, die eigene Menschlichkeit zu bewahren, wenn das System darauf ausgelegt ist, sie zu zermürben.",
+        "en": "Beyond plaques and dates, what I want to show is the <strong>citizen Havel</strong> — humorous, genuinely open, comfortable talking to anyone. This is a walk about what it means to hold onto your humanity when the system is designed to wear it down."
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Möchten Sie die vollständige Route oder einzelne Orte auch selbst erkunden? <a href=\"/book?tour=V%C3%A1clav%20Havel%20Tour:%20Orte%20der%20Freiheit#contact-title\">Schreiben Sie mir</a>—ich passe die Tour an Ihre Zeit und Interessen an.",
+        "en": "Want the full route or to explore some places on your own? <a href=\"/book?tour=V%C3%A1clav%20Havel%20Tour:%20Sites%20of%20Freedom#contact-title\">Message me</a> and I'll tailor it to your time and interests."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<em>Weiterlesen:</em> <a href=\"https://www.pragerzeitung.cz/typisch-havel/\" target=\"_blank\" rel=\"noopener\">Prager Zeitung: Typisch Havel</a>",
+        "en": "<em>Further reading:</em> <a href=\"https://www.pragerzeitung.cz/typisch-havel/\" target=\"_blank\" rel=\"noopener\">Prager Zeitung: Typisch Havel</a>"
+      }
+    }
+  ]
+}

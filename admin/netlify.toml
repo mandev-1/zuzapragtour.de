@@ -1,0 +1,32 @@
+# Netlify config for the ADMIN site → admin.zuzapragtour.de
+#
+# This is a SECOND Netlify site, built from the SAME repo as the public site.
+# In the Netlify UI when creating it: set "Base directory" = admin
+# (Netlify then runs from admin/ and reads this file; paths below are relative to admin/).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Local `netlify dev`: run Vite and proxy to it. targetPort must match
+# vite.config.ts (server.port = 5174); Netlify Dev itself serves on 8888.
+[dev]
+  command = "npm run dev"
+  targetPort = 5174
+  port = 8888
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# No SPA-fallback redirect: the admin is a single page with no client-side routes,
+# so it needs none. (A `/* → /index.html` rewrite here would also be applied by
+# `netlify dev`, swallowing Vite's module requests → blank page. See vite.config.ts.)
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

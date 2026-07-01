@@ -8,6 +8,9 @@ import BlogPromo from '../src/components/BlogPromo';
 import ScrollToTop from '../src/components/ScrollToTop';
 import '../src/index.css';
 import '../src/styles/blog-content.css';
+import '../src/styles/blog-map.css';
+import '../src/styles/site-premium.css';
+import '../src/styles/review-funnel.css';
 
 const italiana = Italiana({
   weight: '400',
@@ -79,10 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Netlify Forms hidden declarations */}
         <form name="contact" data-netlify="true" hidden>
-          <input name="name" /><input name="email" /><input name="message" />
+          <input name="name" /><input name="email" /><input name="tour" /><input name="date" /><input name="message" />
         </form>
         <form name="booking" data-netlify="true" hidden>
-          <input name="name" /><input name="email" /><input name="tour" /><input name="message" />
+          <input name="name" /><input name="email" /><input name="tour" /><input name="date" /><input name="message" />
         </form>
         <LanguageProvider>
           <Header />

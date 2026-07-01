@@ -1,0 +1,145 @@
+{
+  "slug": "top-prague-gardens-to-visit",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "status": "draft",
+  "date": "2025-10-18",
+  "dateDisplay": {
+    "de": "18. Oktober 2025",
+    "en": "October 18, 2025"
+  },
+  "category": "Reiseführer",
+  "readTime": {
+    "de": "",
+    "en": ""
+  },
+  "hero": "/images/blog-gardens.jpg",
+  "title": {
+    "de": "Die schönsten Prager Gärten",
+    "en": "Top Prague Gardens to Visit"
+  },
+  "excerpt": {
+    "de": "Vom Vrtba- bis zum Wallenstein-Garten—die schönsten Gärten Prags mit Zeit- und Routenideen.",
+    "en": "From Vrtba to Wallenstein, here are the prettiest gardens in Prague—plus timing tips and route ideas."
+  },
+  "tags": {
+    "de": [
+      "Prager Gärten",
+      "Schönste Prager Gärten",
+      "Must-See Prag",
+      "Burg Aussichtspunkte",
+      "Vrtba-Garten",
+      "Wallenstein-Garten",
+      "Königlicher Garten",
+      "Palastgärten unter der Burg",
+      "Versteckte Schätze Prag",
+      "Prag Fotospots",
+      "Prag besuchen"
+    ],
+    "en": [
+      "Prague gardens",
+      "Prettiest Prague gardens",
+      "Must-visit Prague",
+      "Prague Castle viewpoints",
+      "Vrtba Garden",
+      "Wallenstein Garden",
+      "Royal Garden",
+      "Palace Gardens below Prague Castle",
+      "Hidden gems Prague",
+      "Prague photo spots",
+      "Visit Prague"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "blocks": [
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die schönsten Gartenblicke",
+        "en": "Prague's Garden Highlights"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prags Gärten bilden ein stilles Geflecht durch die Stadt—barocke Terrassen, Palaststufen und Wiesen am Fluss. So sehen Sie das Beste—mit Zeit und Ruhe.",
+        "en": "Prague's gardens form a quiet lattice through the city—baroque terraces, palace steps, and riverside lawns. Here's how to see the best with time and calm in mind."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Palastgärten unter der Prager Burg",
+        "en": "Palace Gardens Below Prague Castle"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Ledebour- & Kleine Paläste:</strong> Terrassen, formale Muster—ideal für Fotos.",
+          "en": "<strong>Ledebour & Small Palaces:</strong> Terraces and formal patterns ideal for photos."
+        },
+        {
+          "de": "<strong>Große Fürstenberg-Terrasse:</strong> Lange Stufen mit Blicken zur Altstadt.",
+          "en": "<strong>Great Fürstenberg Terrace:</strong> Long steps with elegant vistas to Old Town."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Klassische Favoriten",
+        "en": "Classic Favorites"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<strong>Vrtba-Garten:</strong> Barocke Geometrie und Panorama (saisonal).",
+          "en": "<strong>Vrtba Garden:</strong> Baroque geometry and city panorama (seasonal)."
+        },
+        {
+          "de": "<strong>Wallenstein-Garten:</strong> Pfauen, Arkaden, Tropfsteinwand.",
+          "en": "<strong>Wallenstein Garden:</strong> Peacocks, arcades, and the dripstone wall."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktische Hinweise",
+        "en": "Practical Notes"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Saisonale Öffnungen; Tickets und Schließungen prüfen.",
+          "en": "Seasonal openings; check tickets and closures."
+        },
+        {
+          "de": "Morgen oder Goldene Stunde für weiches Licht.",
+          "en": "Morning or golden hour for softer light."
+        },
+        {
+          "de": "Kombinieren Sie mit Kampa und dem Ufer für einen ruhigen Tag.",
+          "en": "Combine with Kampa and the riverside for a calm day."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Wünschen Sie eine private Route mit Gartentimings und Abkürzungen? <a href=\"/contact#contact-title\">Schreiben Sie mir</a>.",
+        "en": "Prefer a private route with garden timings and shortcuts? <a href=\"/contact#contact-title\">Message me</a>."
+      }
+    }
+  ]
+}
