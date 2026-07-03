@@ -218,7 +218,7 @@ const BlogPostPage: React.FC = () => {
             <aside className="hidden flex-col gap-[1.6rem] lg:sticky lg:top-[100px] lg:flex">
               {tocItems.length > 1 && <TableOfContents items={tocItems} />}
 
-              <div className="overflow-hidden rounded-lg border border-rule bg-white">
+              <div className="relative z-10 overflow-hidden rounded-lg border border-rule bg-white">
                 <div className="border-b border-rule px-[1.2rem] py-[0.9rem] font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-brass-deep">
                   {de ? 'Auf einen Blick' : 'At a glance'}
                 </div>

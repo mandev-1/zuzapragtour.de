@@ -56,7 +56,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
   };
 
   return (
-    <nav aria-label="Inhalt" className="sticky top-[100px] border-t-2 border-ink pt-[1.05rem]">
+    <nav aria-label="Inhalt" className="border-t-2 border-ink pt-[1.05rem]">
       <div className="mb-[0.85rem] font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-ink">
         {title}
       </div>
