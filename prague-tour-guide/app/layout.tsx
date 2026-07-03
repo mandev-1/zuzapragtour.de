@@ -82,13 +82,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
         {ADSENSE_ENABLED && (
-          <Script
-            id="adsbygoogle-loader"
-            async
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          />
+          <>
+            {/* AdSense site verification — required to activate the account */}
+            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+            <Script
+              id="adsbygoogle-loader"
+              async
+              strategy="afterInteractive"
+              crossOrigin="anonymous"
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            />
+          </>
         )}
       </head>
       <body>

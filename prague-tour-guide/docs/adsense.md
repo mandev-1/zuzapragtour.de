@@ -10,6 +10,7 @@ Nothing looks broken before then.
 
 | Piece | File | Purpose |
 |---|---|---|
+| Verification meta | `app/layout.tsx` (`<head>`) | `<meta name="google-adsense-account" content="ca-pub-4497386236985187">` on every page — activates the account. |
 | Loader script | `app/layout.tsx` | Loads `adsbygoogle.js` on every page (via `next/script`, `afterInteractive`). Required for verification + serving. |
 | `ads.txt` | `public/ads.txt` | Authorized-sellers file at `/ads.txt` (required by AdSense). Contains `google.com, pub-4497386236985187, DIRECT, f08c47fec0942fa0`. |
 | Config | `src/config/adsense.ts` | Publisher ID, `ADSENSE_ENABLED` master switch, and the `ADSENSE_SLOTS` map. |
