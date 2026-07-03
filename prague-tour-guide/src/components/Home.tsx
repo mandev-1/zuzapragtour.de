@@ -135,28 +135,34 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 items-start gap-[clamp(2rem,5vw,4.5rem)] min-[900px]:grid-cols-[1.05fr_0.95fr]">
-            <div className="border-t border-rule">
-              {tours.map((tr, i) => (
-                <Link
-                  key={tr.id}
-                  href={`/tours/${de ? tr.slugDe : tr.slug}`}
-                  onMouseEnter={() => setActiveTour(i)}
-                  onFocus={() => setActiveTour(i)}
-                  className={`group flex items-center gap-6 border-b border-rule py-[1.7rem] pr-[0.4rem] transition-[padding] duration-300 ease-brand ${activeTour === i ? 'pl-[1.1rem]' : 'pl-[0.4rem]'}`}
-                >
-                  <span className={`w-[2.2rem] font-display text-base transition-colors duration-300 ${activeTour === i ? 'text-burgundy' : 'text-brass'}`}>{String(i + 1).padStart(2, '0')}</span>
-                  <span className={`flex-1 font-display text-[clamp(1.35rem,2.2vw,1.9rem)] font-normal leading-[1.12] transition-colors duration-300 ${activeTour === i ? 'text-burgundy' : 'text-ink'}`}>{t(tr.titleKey as any)}</span>
-                  <span className="hidden whitespace-nowrap font-sans text-[10.5px] uppercase tracking-[0.18em] text-ink-mute min-[900px]:inline">{t(tr.durationKey as any)}</span>
-                  <span className={`material-symbols-outlined text-[18px] text-brass transition-all duration-300 ${activeTour === i ? 'translate-x-0 opacity-100' : '-translate-x-1.5 opacity-0'}`}>arrow_forward</span>
-                </Link>
-              ))}
-            </div>
+            <ul className="m-0 list-none border-t border-rule p-0">
+              {tours.map((tr, i) => {
+                const active = activeTour === i;
+                const title = t(tr.titleKey as any);
+                return (
+                  <li key={tr.id} className="border-b border-rule">
+                    <Link
+                      href={`/tours/${de ? tr.slugDe : tr.slug}`}
+                      aria-label={`${title} — ${t(tr.durationKey as any)}. ${de ? 'Details ansehen' : 'View details'}.`}
+                      onMouseEnter={() => setActiveTour(i)}
+                      onFocus={() => setActiveTour(i)}
+                      className={`group mx-[-1.2rem] my-[0.4rem] grid grid-cols-[auto_1fr_auto_auto] items-center gap-6 rounded-lg px-[1.2rem] py-[1.55rem] no-underline transition-[background-color,box-shadow] duration-300 ease-brand ${active ? 'bg-[#FDFAF3] shadow-[0_18px_40px_rgba(26,23,20,0.12)]' : 'bg-transparent shadow-none'}`}
+                    >
+                      <span className={`w-[2.2rem] font-display text-base transition-colors duration-300 ${active ? 'text-burgundy' : 'text-brass-deep'}`}>{String(i + 1).padStart(2, '0')}</span>
+                      <span className={`min-w-0 font-display text-[clamp(1.35rem,2.2vw,1.9rem)] font-normal leading-[1.12] transition-colors duration-300 ${active ? 'text-burgundy' : 'text-ink'}`}>{title}</span>
+                      <span className="hidden whitespace-nowrap font-sans text-[10.5px] uppercase tracking-[0.18em] text-ink-mute min-[900px]:inline">{t(tr.durationKey as any)}</span>
+                      <span aria-hidden className={`material-symbols-outlined text-[18px] transition-[opacity,transform] duration-300 ${active ? 'translate-x-0 text-burgundy opacity-100' : '-translate-x-1.5 text-brass-deep opacity-0'}`}>arrow_forward</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
 
-            <div className="sticky top-[120px] hidden aspect-[4/5] overflow-hidden bg-ivory-deep min-[900px]:block">
+            <div aria-hidden className="sticky top-[120px] hidden aspect-[4/5] overflow-hidden rounded-lg bg-ivory-deep shadow-[0_18px_40px_rgba(26,23,20,0.12)] min-[900px]:block">
               {tours.map((tr, i) => (
                 <figure key={tr.id} className={`absolute inset-0 m-0 transition-opacity duration-700 ease-brand ${activeTour === i ? 'opacity-100' : 'opacity-0'}`}>
-                  <img src={tr.image} alt={t(tr.titleKey as any)} className="h-full w-full object-cover" loading="lazy" />
-                  <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(20,16,12,0.7)] to-transparent px-[1.6rem] pb-[1.4rem] pt-8 font-italic text-[1.05rem] italic text-ivory">{t(tr.descriptionKey as any)}</figcaption>
+                  <img src={tr.image} alt="" className="h-full w-full object-cover" loading="lazy" />
+                  <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(20,16,12,0.72)] to-transparent px-[1.6rem] pb-[1.4rem] pt-[2.4rem] font-italic text-[1.1rem] italic text-ivory">{t(tr.descriptionKey as any)}</figcaption>
                 </figure>
               ))}
             </div>

@@ -1,0 +1,79 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Core — Buttons, Icons, Labels, Fields" subtitle="Buttons, eyebrows, badges, icons and form fields" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--paper); font-family: var(--font-sans); padding: 24px; color: var(--ink); }
+  .sec { margin-bottom: 22px; }
+  .lab { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 12px; }
+  .row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .dark { background: var(--ink); padding: 16px; border-radius: var(--radius-lg); }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-presets="react">
+    const { Button, Icon, Eyebrow, Badge, Field, UnderlineLink } = window.ZuzaPragueToursDesignSystem_748186;
+    function Demo() {
+      return (
+        <>
+          <div className="sec">
+            <p className="lab">Buttons</p>
+            <div className="row">
+              <Button variant="primary" icon="arrow_forward">Anfrage senden</Button>
+              <Button variant="ink">Tour buchen</Button>
+              <Button variant="outline">Touren erkunden</Button>
+              <Button variant="link" icon="chevron_right">Details</Button>
+            </div>
+            <div className="row" style={{ marginTop: 12 }}>
+              <Button variant="accent" size="sm">Klein</Button>
+              <Button variant="primary" size="lg" icon="arrow_forward">Groß</Button>
+              <Button variant="ink" disabled>Deaktiviert</Button>
+            </div>
+          </div>
+          <div className="sec">
+            <p className="lab">Eyebrows · Badges · Icons</p>
+            <div className="row">
+              <Eyebrow tone="gold" icon="star">Zertifizierte Expertin</Eyebrow>
+              <Eyebrow tone="brass">Beliebte Touren</Eyebrow>
+              <Badge variant="gold" icon="star">Certified</Badge>
+              <Badge variant="outline">Private Gruppe</Badge>
+              <Icon name="schedule" /><Icon name="group" /><Icon name="place" />
+              <Icon name="star" fill color="var(--gold-olive)" />
+            </div>
+          </div>
+          <div className="sec">
+            <p className="lab">Underline links</p>
+            <div className="row">
+              <UnderlineLink href="#" icon="arrow_forward">Meine Touren ansehen</UnderlineLink>
+              <UnderlineLink href="#" color="var(--burgundy)">Mehr erfahren</UnderlineLink>
+            </div>
+          </div>
+          <div className="sec">
+            <p className="lab">Fields</p>
+            <div className="row" style={{ alignItems: 'flex-start' }}>
+              <div style={{ width: 220 }}><Field label="Name" name="name" required placeholder="Ihr Name" /></div>
+              <div style={{ width: 220 }}><Field label="E-Mail" name="email" type="email" required /></div>
+            </div>
+          </div>
+          <div className="dark">
+            <div className="row">
+              <Eyebrow tone="onDark">Von meinen Gästen</Eyebrow>
+              <Button variant="onDark">Tour buchen</Button>
+              <Button variant="link" style={{ color: 'var(--paper)' }}>WhatsApp</Button>
+              <UnderlineLink href="#" color="var(--gold-lamp)">4,9 ★ TripAdvisor</UnderlineLink>
+            </div>
+          </div>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

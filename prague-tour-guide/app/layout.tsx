@@ -6,7 +6,10 @@ import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import BlogPromo from '../src/components/BlogPromo';
 import ScrollToTop from '../src/components/ScrollToTop';
+import Script from 'next/script';
+import { ADSENSE_CLIENT, ADSENSE_ENABLED } from '../src/config/adsense';
 import '../src/index.css';
+import '../src/styles/site-tokens.css';
 import '../src/styles/blog-content.css';
 import '../src/styles/blog-map.css';
 import '../src/styles/site-premium.css';
@@ -78,14 +81,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        {ADSENSE_ENABLED && (
+          <Script
+            id="adsbygoogle-loader"
+            async
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          />
+        )}
       </head>
       <body>
         {/* Netlify Forms hidden declarations */}
         <form name="contact" data-netlify="true" hidden>
-          <input name="name" /><input name="email" /><input name="tour" /><input name="date" /><input name="message" />
+          <input name="name" /><input name="email" /><input name="phone" /><input name="tour" /><input name="date" /><input name="message" />
         </form>
         <form name="booking" data-netlify="true" hidden>
-          <input name="name" /><input name="email" /><input name="tour" /><input name="date" /><input name="message" />
+          <input name="name" /><input name="email" /><input name="phone" /><input name="tour" /><input name="date" /><input name="message" />
         </form>
         <LanguageProvider>
           <Header />

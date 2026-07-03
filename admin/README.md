@@ -37,6 +37,7 @@ Log in with the `ADMIN_PASSWORD` you set. Without `GITHUB_*`, the dashboard fall
    - `GITHUB_REPO` = `mandev-1/zuzapragtour.de`.
    - `GITHUB_BRANCH` = the branch the public site builds from (e.g. `zuzapragtour.de`).
    - `ANTHROPIC_API_KEY` — *(optional)* enables the **"Aus Stichwörtern"** AI draft generator. `ANTHROPIC_MODEL` overrides the model (default `claude-sonnet-4-6`).
+   - `GOOGLE_PLACES_API_KEY` + `GOOGLE_PLACE_ID` — *(optional)* pull live Google rating + recent reviews into the **Bewertungen** view.
 4. **Subdomain + SSL:** Site → Domain management → add custom domain `admin.zuzapragtour.de`.
    - Best path: keep the apex on **Netlify DNS**; then add the `admin` subdomain to this site and Netlify auto-creates the record + provisions Let's Encrypt SSL.
    - On external DNS: add a `CNAME admin → <this-site>.netlify.app`, then "Verify"/provision SSL in Netlify.

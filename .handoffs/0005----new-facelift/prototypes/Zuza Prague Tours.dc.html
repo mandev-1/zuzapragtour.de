@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/zuza-prague-tours-design-system-748186f1-ed2e-4022-8b40-511f8b3c1bce/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/zuza-prague-tours-design-system-748186f1-ed2e-4022-8b40-511f8b3c1bce/tokens/colors.css">
+<link rel="stylesheet" href="_ds/zuza-prague-tours-design-system-748186f1-ed2e-4022-8b40-511f8b3c1bce/tokens/typography.css">
+<link rel="stylesheet" href="_ds/zuza-prague-tours-design-system-748186f1-ed2e-4022-8b40-511f8b3c1bce/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/zuza-prague-tours-design-system-748186f1-ed2e-4022-8b40-511f8b3c1bce/styles.css">
+<script src="_ds/zuza-prague-tours-design-system-748186f1-ed2e-4022-8b40-511f8b3c1bce/_ds_bundle.js"></script>
+<script src="journal-content-4.js"></script>
+<script src="journal-content-1.js"></script>
+<script src="journal-content-2.js"></script>
+<script src="journal-content-3.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { margin: 0; background: #FCFBF8; color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  @keyframes zkenburns { from { transform: scale(1.08); } to { transform: scale(1); } }
+  @keyframes zfade { from { opacity: 0; } to { opacity: 1; } }
+  .zuza-prose em { font-family: var(--font-italic); font-style: italic; color: var(--burgundy); }
+  .zuza-prose strong { font-weight: 600; color: var(--ink); }
+  .zuza-prose a { color: var(--burgundy); text-decoration: underline; text-underline-offset: 2px; }
+  .jmark { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--burgundy); color: var(--ivory); font-family: var(--font-display); font-size: 14px; line-height: 1; border: 2px solid var(--paper); box-shadow: 0 2px 8px rgba(26,23,20,0.35); }
+  .leaflet-div-icon { background: transparent; border: none; }
+  .leaflet-container { font-family: var(--font-sans); background: var(--ivory-deep); }
+  .leaflet-popup-content-wrapper { background: var(--paper); color: var(--ink); border-radius: 3px; box-shadow: var(--shadow-lg); }
+  .leaflet-popup-content { margin: 0.85rem 1rem; }
+  .leaflet-popup-content .pop-t { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); display: block; }
+  .leaflet-popup-content .pop-n { font-family: var(--font-body); font-size: 0.85rem; color: var(--ink-mute); margin-top: 0.2rem; display: block; line-height: 1.45; }
+  .leaflet-popup-tip { background: var(--paper); }
+  .leaflet-bar a { color: var(--ink) !important; background: var(--paper) !important; }
+  .leaflet-bar a:hover { background: var(--ivory-deep) !important; }
+  .leaflet-container a.leaflet-popup-close-button { color: var(--ink-mute) !important; }
+</style>
+</helmet>
+
+<header style="{{ navStyle }}">
+  <a onClick="{{ goHome }}" style="{{ navBrandStyle }}">Zuza <b style="font-weight:400">&amp;</b> Pragtour</a>
+  <nav style="display:flex;align-items:center;gap:2.2rem;flex-wrap:wrap;justify-content:flex-end">
+    <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="4">
+      <a onClick="{{ n.onClick }}" style="{{ n.style }}" style-hover="{{ n.hoverStyle }}">{{ n.label }}</a>
+    </sc-for>
+    <a onClick="{{ navCtaClick }}" style="{{ navCtaStyle }}" style-hover="{{ navCtaHover }}">Tour buchen</a>
+  </nav>
+</header>
+
+<main>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div id="view-home">
+
+  <section style="position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden">
+    <div style="position:absolute;inset:0;z-index:0">
+      <img src="assets/images/charles-bridge-hero.jpg" alt="Karlsbrücke in Prag bei Abenddämmerung" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:zkenburns 18s var(--ease-out) forwards">
+    </div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,16,12,0.78) 0%, rgba(20,16,12,0.12) 42%, rgba(20,16,12,0.20) 100%), linear-gradient(to right, rgba(20,16,12,0.55) 0%, transparent 58%)"></div>
+    <div id="nav-sentinel" style="position:absolute;top:62vh;left:0;width:1px;height:1px;pointer-events:none"></div>
+    <div style="position:absolute;right:clamp(1.5rem,5vw,5rem);bottom:clamp(3rem,7vh,6rem);z-index:2;width:132px;height:132px;border-radius:999px;border:1px solid rgba(245,239,228,0.4);display:grid;place-items:center;text-align:center;color:var(--ivory);font-family:var(--font-sans);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;line-height:2.1;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)">Certified<span style="font-family:var(--font-display);font-size:1.5rem;letter-spacing:0;display:block;margin:0.1rem 0">Prague</span>Est. 1986</div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1240px;margin:0 auto;padding:8rem clamp(1.5rem,5vw,5rem) clamp(3rem,7vh,6rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--ivory);margin-bottom:1.8rem"><span style="width:28px;height:1px;background:var(--gold-lamp)"></span>Zertifizierte Prag-Expertin</span>
+      <h1 style="margin:0;color:var(--ivory);font-size:clamp(3.2rem,8.5vw,7rem);line-height:0.98;letter-spacing:-0.02em;font-family:var(--font-display);font-weight:400;text-wrap:balance">Entdecken Sie<br><em style="font-family:var(--font-italic);font-style:italic;color:var(--ivory)">Prag</em>, vertraulich.</h1>
+      <p style="margin:1.8rem 0 2.6rem;max-width:32rem;font-family:var(--font-body);font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.6;color:rgba(245,239,228,0.9)">Private Stadtführungen mit Zuzana Manová — vierzig Jahre Geschichten, für ein Publikum von einem.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center">
+        <a onClick="{{ goKontakt }}" style="display:inline-flex;align-items:center;gap:0.7rem;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:1.05rem 1.9rem;border:1px solid var(--ivory);color:var(--ivory);background:transparent;cursor:pointer;transition:background var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)" style-hover="background:var(--ivory);color:var(--ink)">Anfrage senden <span class="material-symbols-outlined" style="font-size:17px">arrow_forward</span></a>
+        <a onClick="{{ goTours }}" style="font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ivory);cursor:pointer;border-bottom:1px solid rgba(245,239,228,0.55);padding-bottom:4px" style-hover="border-bottom-color:var(--ivory)">Touren ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(4.5rem,11vh,9rem) 0;text-align:center">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Eine persönliche Einladung<span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span></span>
+      <p style="margin:1.6rem auto 0;max-width:46rem;font-family:var(--font-italic);font-style:italic;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.34;color:var(--ink)">„Prag ist eine vielschichtige Geschichte — <em style="color:var(--burgundy)">lassen Sie uns diese gemeinsam lesen.</em>“</p>
+      <div style="margin-top:2rem;font-family:var(--font-sans);font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-mute)">— Ing. Zuzana Manová</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="home-tours-heading" style="padding:clamp(3rem,7vh,6rem) 0 clamp(4rem,9vh,7rem);border-top:1px solid var(--rule)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <div data-reveal="1" style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:clamp(2.5rem,5vh,4rem);flex-wrap:wrap">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Ausgewählte Erlebnisse</span>
+          <h2 id="home-tours-heading" style="margin:1rem 0 0;font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(2.2rem,4vw,3.4rem)">Jede Tour beginnt<br>mit Ihrer <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">Neugier</em>.</h2>
+        </div>
+        <p style="max-width:24rem;font-family:var(--font-body);font-size:1rem;line-height:1.65;color:var(--ink-mute)">Maßgeschneiderte Routen für anspruchsvolle Reisende — Authentizität, Geschichte und der lokale Puls der Stadt.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2rem,5vw,4.5rem);align-items:start">
+        <ul data-reveal="1" style="list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)">
+          <sc-for list="{{ homeTours }}" as="t" hint-placeholder-count="5">
+            <li style="border-bottom:1px solid var(--rule)">
+              <a href="{{ t.href }}" aria-label="{{ t.ariaLabel }}" onMouseEnter="{{ t.onEnter }}" onFocus="{{ t.onEnter }}" style="{{ t.rowStyle }}" style-focus="outline:2px solid var(--burgundy);outline-offset:3px">
+                <span aria-hidden="true" style="{{ t.numStyle }}">{{ t.num }}</span>
+                <div><div style="{{ t.titleStyle }}">{{ t.title }}</div></div>
+                <span style="{{ t.metaStyle }}">{{ t.meta }}</span>
+                <span class="material-symbols-outlined" aria-hidden="true" style="{{ t.arrowStyle }}">arrow_forward</span>
+              </a>
+            </li>
+          </sc-for>
+        </ul>
+        <div data-reveal="1" aria-hidden="true" style="position:sticky;top:120px;aspect-ratio:4/5;overflow:hidden;background:var(--ivory-deep);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)">
+          <sc-for list="{{ previewFigs }}" as="f" hint-placeholder-count="1">
+            <figure style="{{ f.style }}">
+              <img data-src="{{ f.img }}" alt="" style="width:100%;height:100%;object-fit:cover">
+              <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.6rem 1.4rem;background:linear-gradient(to top, rgba(20,16,12,0.72), transparent);color:var(--ivory);font-family:var(--font-italic);font-style:italic;font-size:1.1rem">{{ f.cap }}</figcaption>
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(4rem,9vh,7rem) 0;background:var(--ivory-deep)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem);display:grid;grid-template-columns:0.92fr 1.08fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center">
+      <div data-reveal="1" style="position:relative">
+        <img src="assets/images/zuzana-portrait.jpg" alt="Zuzana Manová" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;position:relative;z-index:1">
+        <div style="position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--brass);z-index:0"></div>
+      </div>
+      <div data-reveal="1">
+        <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Lernen Sie Zuzana kennen</span>
+        <h2 style="font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(2.2rem,4vw,3.2rem);margin:1rem 0 1.6rem">Prag, erzählt mit <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">Leidenschaft</em>.</h2>
+        <p style="font-family:var(--font-italic);font-style:italic;font-size:1.55rem;line-height:1.45;color:var(--burgundy);margin:0 0 1.6rem">Seit 1986 führe ich Besucher durch Prag. Vierzig Jahre, in denen ich zusah, wie sich diese Stadt verändert und ihre Geheimnisse bewahrt.</p>
+        <p style="font-family:var(--font-body);font-size:1.075rem;line-height:1.78;color:var(--ink-soft);margin:0 0 1.2rem">Als Spezialistin für Prager Geschichte besitze ich die offizielle tschechische Zertifizierung und eine Akkreditierung des Jüdischen Museums in Prag. Ich bin mit Schulklassen, Familien, Vorständen, Filmteams und dem einen oder anderen Diplomaten durch diese Straßen gegangen.</p>
+        <p style="font-family:var(--font-body);font-size:1.075rem;line-height:1.78;color:var(--ink-soft);margin:0 0 1.2rem">Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(1.5rem,4vw,3.5rem);margin-top:2.4rem;padding-top:2rem;border-top:1px solid var(--rule)">
+          <div><div style="font-family:var(--font-display);font-size:clamp(2rem,3.4vw,2.9rem);color:var(--burgundy);line-height:1">40+</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-top:0.6rem">Jahre Erfahrung</div></div>
+          <div><div style="font-family:var(--font-display);font-size:clamp(2rem,3.4vw,2.9rem);color:var(--burgundy);line-height:1">4,9k</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-top:0.6rem">Touren kuratiert</div></div>
+          <div><div style="font-family:var(--font-display);font-size:clamp(2rem,3.4vw,2.9rem);color:var(--burgundy);line-height:1">5,0</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-top:0.6rem">Sterne Bewertung</div></div>
+        </div>
+        <div style="margin-top:2rem"><a onClick="{{ goZuzana }}" style="font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;border-bottom:1px solid var(--ink);padding-bottom:3px">Mehr über Zuzana <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--ink);color:var(--ivory);padding:clamp(4rem,9vh,7rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span data-reveal="1" style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-lamp)"><span style="width:28px;height:1px;background:var(--gold-lamp);opacity:0.8"></span>Von meinen Gästen</span>
+      <h2 data-reveal="1" style="font-family:var(--font-display);font-weight:400;line-height:1.04;color:var(--ivory);font-size:clamp(2rem,4vw,3rem);margin:0.8rem 0 0">Augenblicke <em style="font-family:var(--font-italic);font-style:italic;color:var(--gold-lamp)">unterwegs</em></h2>
+      <div data-reveal="1" style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px;margin-top:clamp(2rem,4vh,3rem)">
+        <figure style="margin:0;overflow:hidden;grid-column:span 2;grid-row:span 2"><img src="assets/images/guest-tourguide.jpg" alt="Zuzana mit Gästen" style="width:100%;height:100%;object-fit:cover;transition:transform 0.9s var(--ease-out)" style-hover="transform:scale(1.07)"></figure>
+        <figure style="margin:0;overflow:hidden"><img src="assets/images/guest-night.jpeg" alt="Prag bei Nacht" style="width:100%;height:100%;object-fit:cover;transition:transform 0.9s var(--ease-out)" style-hover="transform:scale(1.07)"></figure>
+        <figure style="margin:0;overflow:hidden"><img src="assets/images/guest-food.jpeg" alt="Böhmische Küche" style="width:100%;height:100%;object-fit:cover;transition:transform 0.9s var(--ease-out)" style-hover="transform:scale(1.07)"></figure>
+        <figure style="margin:0;overflow:hidden;grid-column:span 2"><img src="assets/images/boat-vltava.jpg" alt="Boot auf der Moldau" style="width:100%;height:100%;object-fit:cover;transition:transform 0.9s var(--ease-out)" style-hover="transform:scale(1.07)"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(4rem,9vh,7rem) 0;border-top:1px solid var(--rule)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <div style="text-align:center;margin-bottom:clamp(2.5rem,5vh,4rem)">
+        <div style="color:var(--gold-olive);display:flex;justify-content:center;gap:5px;margin-bottom:1.2rem">
+          <span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:18px;font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Unvergessliche Erinnerungen<span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span></span>
+        <h2 style="font-family:var(--font-display);font-weight:400;color:var(--ink);font-size:clamp(2rem,4vw,3rem);margin-top:0.8rem">Worte meiner Gäste</h2>
+      </div>
+      <div data-reveal="1" style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)">
+        <div style="padding:2.6rem clamp(1.4rem,2.5vw,2.4rem);border-right:1px solid var(--rule);display:flex;flex-direction:column">
+          <p style="font-family:var(--font-italic);font-style:italic;font-size:1.2rem;line-height:1.5;color:var(--ink);margin:0 0 1.8rem;flex:1">„Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.“</p>
+          <div style="font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.04em;color:var(--ink)">Thomas K.</div>
+          <div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-deep);margin-top:0.35rem">TripAdvisor</div>
+        </div>
+        <div style="padding:2.6rem clamp(1.4rem,2.5vw,2.4rem);border-right:1px solid var(--rule);display:flex;flex-direction:column">
+          <p style="font-family:var(--font-italic);font-style:italic;font-size:1.2rem;line-height:1.5;color:var(--ink);margin:0 0 1.8rem;flex:1">„Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen.“</p>
+          <div style="font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.04em;color:var(--ink)">Monika H.</div>
+          <div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-deep);margin-top:0.35rem">TourHQ Verifiziert</div>
+        </div>
+        <div style="padding:2.6rem clamp(1.4rem,2.5vw,2.4rem);display:flex;flex-direction:column">
+          <p style="font-family:var(--font-italic);font-style:italic;font-size:1.2rem;line-height:1.5;color:var(--ink);margin:0 0 1.8rem;flex:1">„Perfekt für unsere Familie. Sie hat die Kinder mit lokalen Legenden fasziniert.“</p>
+          <div style="font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.04em;color:var(--ink)">Familie Schneider</div>
+          <div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-deep);margin-top:0.35rem">Private Buchung</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:clamp(5rem,13vh,9rem) 0;text-align:center;overflow:hidden;color:var(--ivory)">
+    <div style="position:absolute;inset:0;z-index:0"><img src="assets/images/charles-bridge-statue.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(rgba(79,22,32,0.82), rgba(20,16,12,0.86))"></div>
+    <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-lamp)"><span style="width:28px;height:1px;background:var(--gold-lamp);opacity:0.8"></span>Zertifizierte Expertin · 40 Jahre<span style="width:28px;height:1px;background:var(--gold-lamp);opacity:0.8"></span></span>
+      <h2 style="font-family:var(--font-display);font-weight:400;color:var(--ivory);font-size:clamp(2.4rem,5vw,4rem);margin:1.4rem auto 1.6rem;max-width:18ch">Bereit, Prag zu <em style="font-family:var(--font-italic);font-style:italic;color:var(--ivory)">entdecken</em>?</h2>
+      <p style="max-width:38rem;margin:0 auto 2.6rem;font-family:var(--font-body);font-size:1.1rem;line-height:1.65;color:rgba(245,239,228,0.82)">Begrenzte Verfügbarkeit für private Buchungen. Kontaktieren Sie Zuzana noch heute, um Ihre individuelle Reiseroute zu planen.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:center">
+        <a onClick="{{ goKontakt }}" style="display:inline-flex;align-items:center;gap:0.7rem;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:1.05rem 1.9rem;border:1px solid var(--ivory);color:var(--ivory);background:transparent;cursor:pointer;transition:background var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)" style-hover="background:var(--ivory);color:var(--ink)">Anfrage senden <span class="material-symbols-outlined" style="font-size:17px">arrow_forward</span></a>
+        <a href="tel:+420721231933" style="font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ivory);border-bottom:1px solid rgba(245,239,228,0.55);padding-bottom:4px" style-hover="border-bottom-color:var(--ivory)">+420 721 231 933</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isArticle }}">
+<div id="view-article">
+  <article>
+    <header style="padding-top:calc(7rem + 1vw)">
+      <div style="max-width:720px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,2rem)">
+        <span style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute);display:inline-flex;gap:0.5rem;margin-bottom:1.4rem"><a onClick="{{ goJournal }}" style="color:var(--burgundy);cursor:pointer">Journal</a><span>/</span> {{ article.category }}</span>
+        <div style="display:inline-flex;align-items:center;gap:0.7rem;font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:1.1rem"><span>{{ article.category }}</span><span style="width:18px;height:1px;background:var(--brass)"></span><span>{{ article.readTime }} Lesezeit</span></div>
+        {{ articleTitleNode }}
+        <p style="font-family:var(--font-italic);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.45;color:var(--ink-soft);margin:1.4rem 0 1.8rem">{{ article.standfirst }}</p>
+        <div style="display:flex;align-items:center;gap:0.9rem;padding-bottom:1.8rem;border-bottom:1px solid var(--rule)">
+          <img src="assets/images/zuzana-portrait.jpg" alt="Zuzana Manová" style="width:46px;height:46px;border-radius:999px;object-fit:cover;object-position:center 18%">
+          <div>
+            <div style="font-family:var(--font-sans);font-weight:600;font-size:0.92rem;color:var(--ink)">Ing. Zuzana Manová</div>
+            <div style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.04em;color:var(--ink-mute)">Zertifizierte Stadtführerin · {{ article.date }}</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:2rem;margin-top:1.4rem">
+          <sc-for list="{{ articleMeta }}" as="m" hint-placeholder-count="4">
+            <div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:0.25rem">{{ m.k }}</div><div style="font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--ink)">{{ m.v }}</div></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="max-width:1080px;margin:2.4rem auto 0;padding-inline:clamp(1.5rem,5vw,2rem)">
+        <figure style="margin:0">
+          <div style="overflow:hidden;border-radius:var(--radius-lg);aspect-ratio:16/9;background:var(--ivory-deep)"><img data-src="{{ articleHeroImg }}" alt="{{ article.titlePlain }}" style="width:100%;height:100%;object-fit:cover"></div>
+          <figcaption style="font-family:var(--font-italic);font-style:italic;font-size:0.95rem;color:var(--ink-mute);margin-top:0.7rem;text-align:center">{{ article.heroCap }}</figcaption>
+        </figure>
+      </div>
+    </header>
+    <div style="padding:clamp(2.5rem,6vh,4rem) 0 clamp(3rem,7vh,5rem)">
+      <div style="max-width:1080px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,2rem);display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(2.5rem,5vw,4rem);align-items:start">
+        <div style="max-width:680px">{{ articleBody }}</div>
+        <aside style="position:sticky;top:100px;display:grid;gap:1.6rem">
+          <sc-if value="{{ showToc }}">
+            <nav style="border-top:1px solid var(--ink);padding-top:1rem">
+              <div style="font-family:var(--font-sans);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:0.9rem">Inhalt</div>
+              <ol style="list-style:none;margin:0;padding:0;display:grid;gap:0.6rem">
+                <sc-for list="{{ tocLinks }}" as="l" hint-placeholder-count="3">
+                  <li><a onClick="{{ l.onClick }}" style="font-family:var(--font-sans);font-size:0.85rem;line-height:1.4;color:var(--ink-mute);cursor:pointer" style-hover="color:var(--burgundy)">{{ l.label }}</a></li>
+                </sc-for>
+              </ol>
+            </nav>
+          </sc-if>
+          <div style="border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-card)">
+            <div style="padding:0.85rem 1.2rem;border-bottom:1px solid var(--rule);font-family:var(--font-sans);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass-deep)">{{ railFactsTitle }}</div>
+            <div style="padding:0.4rem 1.2rem 0.8rem">
+              <sc-for list="{{ railFactsItems }}" as="f" hint-placeholder-count="4">
+                <div style="display:flex;justify-content:space-between;gap:1rem;padding:0.6rem 0;border-bottom:1px solid var(--rule-soft)"><span style="font-family:var(--font-sans);font-size:0.85rem;color:var(--ink-mute)">{{ f.k }}</span><span style="font-family:var(--font-sans);font-size:0.85rem;font-weight:600;color:var(--ink);text-align:right">{{ f.v }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+          <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="accent" full-width="{{ true }}" onClick="{{ goKontakt }}" hint-size="100%,44px">Tour anfragen</x-import>
+        </aside>
+      </div>
+    </div>
+  </article>
+  <section style="background:var(--ivory-deep);padding:clamp(3.5rem,8vh,6rem) 0">
+    <div style="max-width:720px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,2rem);text-align:center">
+      <h3 style="font-family:var(--font-display);font-weight:400;font-size:clamp(1.7rem,3vw,2.3rem);color:var(--ink);margin:0 0 0.9rem">Möchten Sie das selbst erleben?</h3>
+      <p style="font-family:var(--font-body);font-size:1.05rem;line-height:1.7;color:var(--ink-soft);margin:0 auto 1.8rem;max-width:36rem">Begrenzte Verfügbarkeit für private Führungen. Schreiben Sie mir, und wir finden den richtigen Tag.</p>
+      <div style="display:flex;justify-content:center">
+        <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="accent" size="lg" icon="arrow_forward" onClick="{{ goKontakt }}" hint-size="auto,52px">Tour anfragen</x-import>
+      </div>
+    </div>
+  </section>
+  <section style="padding:clamp(3.5rem,8vh,6rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Weiterlesen im Journal</span>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.6rem,3vw,2.6rem);margin-top:2rem">
+        <sc-for list="{{ relatedArticles }}" as="r" hint-placeholder-count="3">
+          <a onClick="{{ r.onClick }}" style="display:flex;flex-direction:column;cursor:pointer;text-decoration:none;color:inherit">
+            <div style="overflow:hidden;aspect-ratio:3/2;background:var(--ivory-deep);margin-bottom:1rem;border-radius:var(--radius-lg)"><img data-src="{{ r.img }}" alt="{{ r.title }}" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s var(--ease-out)" style-hover="transform:scale(1.05)"></div>
+            <span style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-deep)">{{ r.cat }}</span>
+            <h4 style="font-family:var(--font-display);font-weight:400;font-size:1.35rem;line-height:1.16;margin:0.5rem 0 0.5rem;color:var(--ink)">{{ r.title }}</h4>
+            <p style="font-family:var(--font-body);font-size:0.95rem;line-height:1.6;color:var(--ink-mute);margin:0">{{ r.blurb }}</p>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isJournal }}">
+<div id="view-journal">
+  <div style="padding:calc(7rem + 2vw) 0 clamp(2.5rem,5vh,4rem);border-bottom:1px solid var(--rule)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Das Journal</span>
+      <h1 style="margin:1rem 0 0;font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(2.6rem,6vw,4.4rem)">Geschichten aus <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">Prag</em>.</h1>
+      <p style="margin:1.4rem 0 0;max-width:40rem;font-family:var(--font-body);font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.65;color:var(--ink-mute)">Notizen einer Stadtführerin — über Jahreszeiten, versteckte Ecken und die Geschichten, die diese Stadt im Gedächtnis behält.</p>
+    </div>
+  </div>
+  <section style="padding:clamp(2.5rem,5vh,4rem) 0 clamp(4rem,9vh,7rem)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <a onClick="{{ journalFeature.onClick }}" data-reveal="1" style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding-bottom:clamp(2.5rem,5vh,4rem);border-bottom:1px solid var(--rule);cursor:pointer;text-decoration:none;color:inherit">
+        <div style="overflow:hidden;aspect-ratio:16/11;background:var(--ivory-deep);border-radius:var(--radius-lg)"><img data-src="{{ journalFeature.img }}" alt="{{ journalFeature.title }}" style="width:100%;height:100%;object-fit:cover;transition:transform 0.9s var(--ease-out)" style-hover="transform:scale(1.04)"></div>
+        <div>
+          <span style="font-family:var(--font-sans);font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-deep);display:inline-flex;align-items:center;gap:0.6rem"><span style="width:22px;height:1px;background:var(--brass)"></span>{{ journalFeature.cat }}</span>
+          <h2 style="font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;margin:1rem 0 0.9rem;color:var(--ink)">{{ journalFeature.title }}</h2>
+          <p style="font-family:var(--font-body);font-size:1.075rem;line-height:1.7;color:var(--ink-soft);margin:0 0 1.4rem;max-width:34rem">{{ journalFeature.blurb }}</p>
+          <span style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute)">{{ journalFeature.meta }}</span>
+        </div>
+      </a>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.6rem,3vw,2.6rem);margin-top:clamp(2.5rem,5vh,4rem)">
+        <sc-for list="{{ journalGrid }}" as="p" hint-placeholder-count="4">
+          <a onClick="{{ p.onClick }}" data-reveal="1" style="display:flex;flex-direction:column;cursor:pointer;text-decoration:none;color:inherit">
+            <div style="overflow:hidden;aspect-ratio:3/2;background:var(--ivory-deep);margin-bottom:1.1rem;border-radius:var(--radius-lg)"><img data-src="{{ p.img }}" alt="{{ p.title }}" style="width:100%;height:100%;object-fit:cover;transition:transform 0.8s var(--ease-out)" style-hover="transform:scale(1.05)"></div>
+            <span style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass-deep)">{{ p.cat }}</span>
+            <h3 style="font-family:var(--font-display);font-weight:400;font-size:1.5rem;line-height:1.16;margin:0.5rem 0 0.5rem;color:var(--ink)">{{ p.title }}</h3>
+            <p style="font-family:var(--font-body);font-size:0.98rem;line-height:1.6;color:var(--ink-mute);margin:0 0 0.9rem">{{ p.blurb }}</p>
+            <span style="margin-top:auto;font-family:var(--font-sans);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute)">{{ p.meta }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--ink);color:var(--ivory);text-align:center;padding:clamp(3.5rem,8vh,5.5rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--stone-400)"><span style="width:28px;height:1px;background:var(--brass)"></span>Bleiben Sie in Verbindung<span style="width:28px;height:1px;background:var(--brass)"></span></span>
+      <h2 style="font-family:var(--font-display);font-weight:400;color:var(--ivory);font-size:clamp(1.8rem,3.4vw,2.6rem);margin:1.1rem auto 1.6rem;max-width:24ch">Planen Sie einen Besuch? Lassen Sie uns <em style="font-family:var(--font-italic);font-style:italic;color:var(--gold-lamp)">sprechen</em>.</h2>
+      <div style="display:flex;justify-content:center">
+        <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="onDark" size="lg" icon="arrow_forward" onClick="{{ goKontakt }}" hint-size="auto,52px">Kontakt aufnehmen</x-import>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isZuzana }}">
+<div id="view-zuzana">
+  <div style="padding:calc(7rem + 2vw) 0 clamp(2.5rem,5vh,4rem);border-bottom:1px solid var(--rule)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Lernen Sie Zuzana kennen</span>
+      <h1 style="margin:1rem 0 0;font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(2.6rem,6vw,4.4rem)">Prag, erzählt mit <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">Leidenschaft</em>.</h1>
+    </div>
+  </div>
+  <section style="padding:clamp(3rem,6vh,5rem) 0 clamp(3.5rem,7vh,5.5rem)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem);display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center">
+      <div data-reveal="1" style="position:relative">
+        <img src="assets/images/zuzana-portrait.jpg" alt="Ing. Zuzana Manová" style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 16%;position:relative;z-index:1">
+        <div style="position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--brass);z-index:0"></div>
+      </div>
+      <div data-reveal="1">
+        <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Ing. Zuzana Manová</span>
+        <p style="font-family:var(--font-italic);font-style:italic;font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.4;color:var(--burgundy);margin:1.1rem 0 1.4rem">Seit 1986 führe ich Besucher durch Prag — vierzig Jahre, in denen ich zusah, wie sich diese Stadt verändert und ihre Geheimnisse bewahrt.</p>
+        <p style="font-family:var(--font-body);font-size:1.075rem;line-height:1.8;color:var(--ink-soft);margin:0 0 1.2rem">Ich bin deutschsprachige Prag-Expertin und zertifizierte Stadtführerin. Als Spezialistin für Prager Geschichte besitze ich die offizielle tschechische Zertifizierung und eine Akkreditierung des Jüdischen Museums in Prag.</p>
+        <p style="font-family:var(--font-body);font-size:1.075rem;line-height:1.8;color:var(--ink-soft);margin:0 0 1.2rem">In diesen Jahren bin ich mit Schulklassen, Familien, Vorständen, Filmteams und dem einen oder anderen Diplomaten durch diese Straßen gegangen. Jede Gruppe ist anders — und genau das hält die Arbeit lebendig.</p>
+        <p style="font-family:var(--font-body);font-size:1.075rem;line-height:1.8;color:var(--ink-soft);margin:0 0 1.2rem">Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser: Dann entdecken wir es gemeinsam.</p>
+        <div style="margin-top:1.8rem">
+          <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="accent" icon="arrow_forward" onClick="{{ goKontakt }}" hint-size="auto,44px">Eine Tour anfragen</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--ink);color:var(--ivory);padding:clamp(3rem,6vh,4.5rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem);display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center">
+      <div><div style="font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.4rem);color:var(--gold-lamp);line-height:1">40+</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,239,228,0.6);margin-top:0.7rem">Jahre Erfahrung</div></div>
+      <div><div style="font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.4rem);color:var(--gold-lamp);line-height:1">4,9k</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,239,228,0.6);margin-top:0.7rem">Touren kuratiert</div></div>
+      <div><div style="font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.4rem);color:var(--gold-lamp);line-height:1">5,0</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,239,228,0.6);margin-top:0.7rem">Sterne Bewertung</div></div>
+      <div><div style="font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.4rem);color:var(--gold-lamp);line-height:1">1986</div><div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,239,228,0.6);margin-top:0.7rem">Seit dem Jahr</div></div>
+    </div>
+  </section>
+  <section style="padding:clamp(3.5rem,8vh,6rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Qualifikationen</span>
+      <h2 style="font-family:var(--font-display);font-weight:400;color:var(--ink);font-size:clamp(1.9rem,3.4vw,2.7rem);margin:1rem 0 0">Warum mit einer zertifizierten Expertin</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.4rem">
+        <div data-reveal="1" style="border:1px solid var(--rule);background:var(--surface-card);padding:1.8rem;border-radius:var(--radius-lg)"><span class="material-symbols-outlined" style="font-size:26px;color:var(--burgundy)">verified</span><h3 style="font-family:var(--font-display);font-weight:400;font-size:1.35rem;margin:1rem 0 0.5rem;color:var(--ink)">Offiziell zertifiziert</h3><p style="font-family:var(--font-body);font-size:0.98rem;line-height:1.6;color:var(--ink-mute);margin:0">Staatlich anerkannte tschechische Zertifizierung als Stadtführerin für Prag.</p></div>
+        <div data-reveal="1" style="border:1px solid var(--rule);background:var(--surface-card);padding:1.8rem;border-radius:var(--radius-lg)"><span class="material-symbols-outlined" style="font-size:26px;color:var(--burgundy)">history_edu</span><h3 style="font-family:var(--font-display);font-weight:400;font-size:1.35rem;margin:1rem 0 0.5rem;color:var(--ink)">Museums-Akkreditierung</h3><p style="font-family:var(--font-body);font-size:0.98rem;line-height:1.6;color:var(--ink-mute);margin:0">Akkreditiert durch das Jüdische Museum in Prag für Führungen im Josefov.</p></div>
+        <div data-reveal="1" style="border:1px solid var(--rule);background:var(--surface-card);padding:1.8rem;border-radius:var(--radius-lg)"><span class="material-symbols-outlined" style="font-size:26px;color:var(--burgundy)">translate</span><h3 style="font-family:var(--font-display);font-weight:400;font-size:1.35rem;margin:1rem 0 0.5rem;color:var(--ink)">Deutschsprachig</h3><p style="font-family:var(--font-body);font-size:0.98rem;line-height:1.6;color:var(--ink-mute);margin:0">Muttersprachliches Niveau — Geschichten und Nuancen ohne Übersetzungsverlust.</p></div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--ivory-deep);padding:clamp(4rem,9vh,7rem) 0;text-align:center">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Eine persönliche Philosophie<span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span></span>
+      <blockquote style="margin:1.6rem auto 0;max-width:44rem;font-family:var(--font-italic);font-style:italic;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.4;color:var(--ink)">„Prag ist eine vielschichtige Geschichte — <em style="color:var(--burgundy)">lassen Sie uns diese gemeinsam lesen.</em>“</blockquote>
+      <div style="margin-top:1.8rem;font-family:var(--font-sans);font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-mute)">— Ing. Zuzana Manová</div>
+    </div>
+  </section>
+  <section style="padding:clamp(4rem,9vh,6.5rem) 0;text-align:center">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Bereit, sich kennenzulernen?<span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span></span>
+      <h2 style="font-family:var(--font-display);font-weight:400;color:var(--ink);font-size:clamp(2rem,4vw,3rem);margin:1.2rem auto 1.8rem;max-width:22ch">Lassen Sie uns Ihren Tag in Prag <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">planen</em>.</h2>
+      <div style="display:flex;justify-content:center">
+        <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="accent" size="lg" icon="arrow_forward" onClick="{{ goKontakt }}" hint-size="auto,52px">Anfrage senden</x-import>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isTour }}">
+<div id="view-tour" data-screen-label="Tour Detail">
+  <section style="position:relative;min-height:74svh;display:flex;align-items:flex-end;overflow:hidden">
+    <div style="position:absolute;inset:0;z-index:0"><img data-src="{{ tourHeroImg }}" alt="{{ tour.title }}" style="width:100%;height:100%;object-fit:cover"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,16,12,0.82) 0%, rgba(20,16,12,0.15) 55%, rgba(20,16,12,0.30) 100%)"></div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1240px;margin:0 auto;padding:9rem clamp(1.5rem,5vw,5rem) clamp(2.5rem,6vh,4.5rem)">
+      <nav aria-label="Pfad" style="display:flex;align-items:center;gap:0.9rem;margin-bottom:1.4rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase"><span aria-hidden="true" style="width:28px;height:1px;background:var(--gold-lamp);opacity:0.8"></span><a href="#/tours" style="color:rgba(245,239,228,0.78);text-decoration:none" style-hover="color:var(--ivory)" style-focus="outline:2px solid var(--ivory);outline-offset:3px">Touren</a><span aria-hidden="true" style="color:rgba(245,239,228,0.45)">·</span><span style="color:var(--gold-lamp)">Privatführung Nr. {{ tour.num }}</span></nav>
+      <h1 style="margin:0;color:var(--ivory);font-family:var(--font-display);font-weight:400;font-size:clamp(2.6rem,6vw,5rem);line-height:1.02;letter-spacing:-0.02em;max-width:18ch">{{ tour.title }}</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:1.4rem 2rem;margin-top:1.6rem">
+        <span style="display:inline-flex;align-items:center;gap:0.55rem;font-family:var(--font-sans);font-size:1.05rem;color:rgba(245,239,228,0.94)"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:19px;color:var(--gold-lamp)">schedule</span>{{ tour.dur }}</span>
+        <span style="display:inline-flex;align-items:center;gap:0.55rem;font-family:var(--font-sans);font-size:1.05rem;color:rgba(245,239,228,0.94)"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:19px;color:var(--gold-lamp)">group</span>{{ tour.group }}</span>
+        <span style="display:inline-flex;align-items:center;gap:0.55rem;font-family:var(--font-sans);font-size:1.05rem;color:rgba(245,239,228,0.94)"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:19px;color:var(--gold-lamp)">translate</span>Auf {{ tour.language }}</span>
+      </div>
+    </div>
+  </section>
+  <section style="padding:clamp(3rem,7vh,6rem) 0 clamp(4rem,9vh,7rem)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem);display:grid;grid-template-columns:1fr 360px;gap:clamp(2.5rem,5vw,5rem);align-items:start">
+      <div data-reveal="1">
+        <p style="font-family:var(--font-italic);font-style:italic;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.42;color:var(--burgundy);margin:0 0 1.5rem">{{ tour.lead }}</p>
+        <div aria-hidden="true" style="width:64px;height:1px;background:var(--brass);margin:0 0 1.8rem"></div>
+        <sc-for list="{{ tourIntro }}" as="para" hint-placeholder-count="2">
+          <p style="font-family:var(--font-body);font-size:1.1rem;line-height:1.78;color:var(--ink-soft);margin:0 0 1.3rem">{{ para }}</p>
+        </sc-for>
+        <sc-if value="{{ hasItinerary }}">
+          <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep);margin-top:2.8rem"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Der Rundgang</span>
+          <h3 style="font-family:var(--font-display);font-weight:400;font-size:clamp(1.7rem,2.8vw,2.2rem);margin:0.8rem 0 1.2rem;color:var(--ink)">Was wir sehen</h3>
+          <ol style="list-style:none;margin:0;padding:0">
+            <sc-for list="{{ tourItinerary }}" as="it" hint-placeholder-count="5">
+              <li style="border-top:1px solid var(--rule)">
+                <div style="display:grid;grid-template-columns:2.6rem 1fr;gap:1.1rem;padding:1.15rem 1.2rem;margin:0.35rem -1.2rem;border-radius:var(--radius-lg);transition:background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)" style-hover="background:var(--surface-card);box-shadow:var(--shadow-md)">
+                  <span style="font-family:var(--font-display);color:var(--brass-deep);font-size:1.1rem">{{ it.n }}</span>
+                  <div>
+                    <div style="font-family:var(--font-sans);font-weight:600;font-size:1.05rem;color:var(--ink);margin:0.15rem 0 0.3rem">{{ it.t }}</div>
+                    <p style="font-family:var(--font-body);font-size:1rem;line-height:1.58;color:var(--ink-soft);margin:0">{{ it.d }}</p>
+                  </div>
+                </div>
+              </li>
+            </sc-for>
+          </ol>
+        </sc-if>
+      </div>
+      <aside data-reveal="1" style="position:sticky;top:100px;border:1px solid rgba(58,51,44,0.08);border-radius:var(--radius-xl);background:linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.25) 50%), rgba(255,255,255,0.6);backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%);box-shadow:0 16px 44px rgba(26,23,20,0.10), inset 0 1px 0 rgba(255,255,255,0.85);padding:1.8rem">
+        <span style="display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-olive);border:1px solid rgba(123,88,0,0.35);border-radius:var(--radius-pill);padding:0.4rem 0.85rem;margin-bottom:1.1rem"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:14px">verified</span>Zertifizierte Expertin · Seit 1986</span>
+        <h4 style="font-family:var(--font-display);font-weight:400;font-size:1.55rem;margin:0 0 0.35rem;color:var(--ink)">Diese Tour buchen</h4>
+        <p style="font-family:var(--font-sans);font-size:1rem;color:var(--ink-soft);margin:0 0 1.4rem">Privatführung · unverbindlich anfragen</p>
+        <dl style="margin:0 0 1.5rem;display:grid;gap:0.9rem">
+          <div style="display:flex;justify-content:space-between;gap:1rem;padding-bottom:0.9rem;border-bottom:1px solid var(--rule-soft)"><dt style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">Dauer</dt><dd style="margin:0;font-family:var(--font-sans);font-size:1.05rem;color:var(--ink);text-align:right">{{ tour.dur }}</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:1rem;padding-bottom:0.9rem;border-bottom:1px solid var(--rule-soft)"><dt style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">Gruppe</dt><dd style="margin:0;font-family:var(--font-sans);font-size:1.05rem;color:var(--ink);text-align:right">{{ tour.group }}</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:1rem;padding-bottom:0.9rem;border-bottom:1px solid var(--rule-soft)"><dt style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">Treffpunkt</dt><dd style="margin:0;font-family:var(--font-sans);font-size:1.05rem;color:var(--ink);text-align:right">{{ tour.meet }}</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:1rem"><dt style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">Sprache</dt><dd style="margin:0;font-family:var(--font-sans);font-size:1.05rem;color:var(--ink);text-align:right">{{ tour.language }}</dd></div>
+        </dl>
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.9rem">
+          <span aria-hidden="true" style="display:inline-flex;gap:2px;color:var(--gold-olive)"><span class="material-symbols-outlined" style="font-size:15px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:15px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:15px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:15px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:15px;font-variation-settings:'FILL' 1">star</span></span>
+          <span style="font-family:var(--font-sans);font-size:0.92rem;color:var(--ink-soft)">5,0 von 5 · über 4.900 Gäste</span>
+        </div>
+        <div style="margin-bottom:0.9rem">
+          <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="accent" size="lg" icon="arrow_forward" full-width="{{ true }}" onClick="{{ bookTour }}" hint-size="100%,54px">Unverbindliche Anfrage senden</x-import>
+        </div>
+        <p style="display:flex;align-items:center;justify-content:center;gap:0.4rem;font-family:var(--font-sans);font-size:0.9rem;color:var(--ink-soft);margin:0 0 1.1rem"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:15px;color:var(--brass-deep)">lock</span>Kostenlos &amp; ohne Verpflichtung</p>
+        <div style="border-top:1px solid var(--rule-soft);padding-top:1.05rem;text-align:center">
+          <div style="font-family:var(--font-sans);font-size:0.98rem;color:var(--ink-soft)">Lieber persönlich?</div>
+          <a href="tel:+420721231933" style="display:inline-block;margin-top:0.3rem;font-family:var(--font-sans);font-size:1.25rem;font-weight:600;color:var(--burgundy);text-decoration:none" style-focus="outline:3px solid var(--burgundy);outline-offset:3px">+420 721 231 933</a>
+          <div style="font-family:var(--font-sans);font-size:0.92rem;color:var(--ink-mute);margin-top:0.25rem">auch per <a href="https://wa.me/420721231933" target="_blank" rel="noopener" style="color:var(--burgundy)" style-focus="outline:3px solid var(--burgundy);outline-offset:2px">WhatsApp</a></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section aria-labelledby="related-tours-heading" style="background:var(--ivory-deep);padding:clamp(3.5rem,8vh,6rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Vielleicht auch interessant</span>
+      <h2 id="related-tours-heading" style="font-family:var(--font-display);font-weight:400;color:var(--ink);font-size:clamp(1.8rem,3.2vw,2.5rem);margin:0.8rem 0 0">Weitere Wege durch <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">Prag</em></h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2rem">
+        <sc-for list="{{ relatedTours }}" as="r" hint-placeholder-count="3">
+          <a href="{{ r.href }}" aria-label="{{ r.ariaLabel }}" style="background:var(--surface-card);border:1px solid var(--rule);overflow:hidden;border-radius:var(--radius-lg);display:block;text-decoration:none;color:inherit;transition:transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)" style-hover="transform:translateY(-4px);box-shadow:var(--shadow-lg)" style-focus="outline:2px solid var(--burgundy);outline-offset:3px">
+            <div style="overflow:hidden"><img data-src="{{ r.img }}" alt="" style="width:100%;height:190px;object-fit:cover;transition:transform 0.8s var(--ease-out)" style-hover="transform:scale(1.05)"></div>
+            <div style="padding:1.25rem 1.35rem 1.45rem">
+              <h4 style="font-family:var(--font-display);font-weight:400;font-size:1.35rem;margin:0 0 0.45rem;color:var(--ink)">{{ r.title }}</h4>
+              <div style="display:flex;align-items:center;gap:0.45rem;font-family:var(--font-sans);font-size:0.95rem;color:var(--ink-soft)"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;color:var(--brass-deep)">schedule</span>{{ r.metaLine }}</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isKontakt }}">
+<div id="view-kontakt">
+  <div style="padding:calc(7rem + 2vw) 0 clamp(2.5rem,5vh,4rem);border-bottom:1px solid var(--rule)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Kontakt &amp; Buchung</span>
+      <h1 style="margin:1rem 0 0;font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(2.6rem,6vw,4.4rem)">Erzählen Sie mir, was Sie <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">interessiert</em>.</h1>
+      <p style="margin:1.4rem 0 0;max-width:40rem;font-family:var(--font-body);font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.65;color:var(--ink-mute)">Keine Agentur, kein Callcenter. Sie schreiben mir, und ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
+    </div>
+  </div>
+  <section style="padding:clamp(2.5rem,5vh,4rem) 0 clamp(4rem,9vh,7rem)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem);display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(2.5rem,6vw,5rem);align-items:start">
+      <div data-reveal="1">
+        <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Direkt mit Zuzana</span>
+        <p style="font-family:var(--font-italic);font-style:italic;font-size:clamp(1.4rem,2.4vw,1.85rem);line-height:1.42;color:var(--burgundy);margin:1rem 0 1.2rem">Jede gute Tour beginnt mit einem Gespräch.</p>
+        <p style="font-family:var(--font-body);font-size:1.05rem;line-height:1.7;color:var(--ink-soft);margin:0 0 1.6rem">Sagen Sie mir, wer mitkommt und was Sie sehen möchten — oder lassen Sie sich einfach von mir leiten. Ich melde mich persönlich bei Ihnen zurück.</p>
+        <div style="display:flex;align-items:center;gap:1.1rem;padding:1.1rem 1.2rem;background:var(--surface-card);border:1px solid var(--rule);border-radius:var(--radius-lg);margin-bottom:1.6rem">
+          <img src="assets/images/zuzana-portrait.jpg" alt="Ing. Zuzana Manová" style="width:72px;height:72px;border-radius:999px;object-fit:cover;object-position:center 18%;flex-shrink:0">
+          <div>
+            <div style="font-family:var(--font-sans);font-size:1.08rem;font-weight:600;color:var(--ink)">Ing. Zuzana Manová</div>
+            <div style="font-family:var(--font-sans);font-size:0.95rem;line-height:1.45;color:var(--ink-soft);margin-top:0.2rem">Ihre persönliche Ansprechpartnerin — zertifiziert, deutschsprachig, seit 1986.</div>
+          </div>
+        </div>
+        <div style="display:grid;gap:1.35rem;padding-top:1.6rem;border-top:1px solid var(--rule)">
+          <div style="display:flex;gap:1rem;align-items:flex-start"><span class="material-symbols-outlined" style="font-size:22px;color:var(--burgundy);margin-top:2px">call</span><div><div style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">Telefon</div><div style="font-family:var(--font-sans);font-size:1.25rem;font-weight:600;margin-top:0.15rem"><a href="tel:+420721231933" style="color:var(--ink);text-decoration:none" style-hover="color:var(--burgundy)" style-focus="outline:3px solid var(--burgundy);outline-offset:3px">+420 721 231 933</a></div></div></div>
+          <div style="display:flex;gap:1rem;align-items:flex-start"><span class="material-symbols-outlined" style="font-size:22px;color:var(--burgundy);margin-top:2px">chat</span><div><div style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">WhatsApp</div><div style="font-family:var(--font-sans);font-size:1.1rem;margin-top:0.15rem"><a href="https://wa.me/420721231933" target="_blank" rel="noopener" style="color:var(--ink)" style-hover="color:var(--burgundy)" style-focus="outline:3px solid var(--burgundy);outline-offset:3px">Direkt schreiben</a></div></div></div>
+          <div style="display:flex;gap:1rem;align-items:flex-start"><span class="material-symbols-outlined" style="font-size:22px;color:var(--burgundy);margin-top:2px">mail</span><div><div style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">E-Mail</div><div style="font-family:var(--font-sans);font-size:1.1rem;margin-top:0.15rem"><a href="mailto:zuzanamanova@email.cz" style="color:var(--ink)" style-hover="color:var(--burgundy)" style-focus="outline:3px solid var(--burgundy);outline-offset:3px">zuzanamanova@email.cz</a></div></div></div>
+          <div style="display:flex;gap:1rem;align-items:flex-start"><span class="material-symbols-outlined" style="font-size:22px;color:var(--burgundy);margin-top:2px">schedule</span><div><div style="font-family:var(--font-sans);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute)">Antwortzeit</div><div style="font-family:var(--font-sans);font-size:1.1rem;color:var(--ink);margin-top:0.15rem">In der Regel unter 24 Stunden</div></div></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(58,51,44,0.08);border-radius:var(--radius-xl);background:linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.25) 50%), rgba(255,255,255,0.6);backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%);box-shadow:0 16px 44px rgba(26,23,20,0.10), inset 0 1px 0 rgba(255,255,255,0.85);overflow:hidden">
+        <sc-if value="{{ notSent }}">
+          <div style="padding:1.5rem 1.9rem;border-bottom:1px solid var(--rule)">
+            <div style="font-family:var(--font-display);font-size:1.55rem;color:var(--ink)">Unverbindliche Anfrage</div>
+            <div style="font-family:var(--font-sans);font-size:1rem;line-height:1.5;color:var(--ink-soft);margin-top:0.3rem">Kostenlos und ohne Verpflichtung — Zuzana antwortet Ihnen persönlich.</div>
+          </div>
+          <div style="padding:clamp(1.6rem,3vw,2.1rem) clamp(1.4rem,3vw,1.9rem);display:grid;gap:1.9rem">
+
+            <div>
+              <div style="display:flex;align-items:baseline;gap:0.85rem;margin-bottom:0.4rem">
+                <span aria-hidden="true" style="font-family:var(--font-display);font-size:1.6rem;color:var(--brass-deep);line-height:1">1</span>
+                <span id="tour-choice-label" style="font-family:var(--font-sans);font-size:1.15rem;font-weight:600;color:var(--ink)">Welche Tour interessiert Sie?</span>
+              </div>
+              <p style="font-family:var(--font-sans);font-size:0.95rem;line-height:1.5;color:var(--ink-soft);margin:0 0 0.9rem 2.45rem">Eine Auswahl genügt — Sie können alles später mit Zuzana anpassen.</p>
+              <div role="radiogroup" aria-labelledby="tour-choice-label" style="display:grid;grid-template-columns:1fr;gap:0.65rem">
+                <sc-for list="{{ tourOptions }}" as="o" hint-placeholder-count="7">
+                  <label onClick="{{ o.onSelect }}" style="{{ o.style }}">
+                    <input type="radio" name="tour-choice" checked="{{ o.checked }}" onChange="{{ o.onSelect }}" onFocus="{{ o.onFocus }}" onBlur="{{ o.onBlur }}" style="position:absolute;opacity:0;width:1px;height:1px">
+                    <span aria-hidden="true" style="{{ o.ringStyle }}"><span style="{{ o.dotStyle }}"></span></span>
+                    <div style="min-width:0;flex:1">
+                      <div style="{{ o.titleStyle }}">{{ o.label }}</div>
+                      <div style="{{ o.metaStyle }}">{{ o.meta }}</div>
+                    </div>
+                    <span class="material-symbols-outlined" aria-hidden="true" style="{{ o.checkStyle }}">check_circle</span>
+                  </label>
+                </sc-for>
+              </div>
+            </div>
+
+            <div style="border-top:1px solid var(--rule);padding-top:1.6rem">
+              <div style="display:flex;align-items:baseline;gap:0.85rem;margin-bottom:0.4rem">
+                <span aria-hidden="true" style="font-family:var(--font-display);font-size:1.6rem;color:var(--brass-deep);line-height:1">2</span>
+                <span style="font-family:var(--font-sans);font-size:1.15rem;font-weight:600;color:var(--ink)">Wie erreiche ich Sie?</span>
+              </div>
+              <p style="font-family:var(--font-sans);font-size:0.95rem;line-height:1.5;color:var(--ink-soft);margin:0 0 1rem 2.45rem"><span style="color:var(--burgundy)">*</span> Pflichtfeld — alles andere ist freiwillig.</p>
+              <div style="display:grid;gap:1.15rem">
+                <label style="display:block">
+                  <span style="display:block;margin-bottom:0.45rem;font-family:var(--font-sans);font-size:1rem;font-weight:500;color:var(--ink)">Ihr Name <span aria-hidden="true" style="color:var(--burgundy)">*</span></span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Vor- und Nachname" style="width:100%;box-sizing:border-box;border-radius:var(--radius-md);border:1px solid var(--stone-400);background:#fff;padding:0.95rem 1.05rem;font-family:var(--font-body);font-size:1.05rem;color:var(--ink);outline:none" style-focus="border-color:var(--burgundy);box-shadow:0 0 0 3px rgba(107,31,42,0.14)">
+                </label>
+                <label style="display:block">
+                  <span style="display:block;margin-bottom:0.45rem;font-family:var(--font-sans);font-size:1rem;font-weight:500;color:var(--ink)">Ihre E-Mail-Adresse <span aria-hidden="true" style="color:var(--burgundy)">*</span></span>
+                  <input type="email" name="email" autocomplete="email" placeholder="ihre@email.de" style="width:100%;box-sizing:border-box;border-radius:var(--radius-md);border:1px solid var(--stone-400);background:#fff;padding:0.95rem 1.05rem;font-family:var(--font-body);font-size:1.05rem;color:var(--ink);outline:none" style-focus="border-color:var(--burgundy);box-shadow:0 0 0 3px rgba(107,31,42,0.14)">
+                </label>
+                <label style="display:block">
+                  <span style="display:block;margin-bottom:0.45rem;font-family:var(--font-sans);font-size:1rem;font-weight:500;color:var(--ink)">Telefon <span style="font-weight:400;color:var(--ink-mute)">(freiwillig — falls Sie einen Rückruf wünschen)</span></span>
+                  <input type="tel" name="phone" autocomplete="tel" placeholder="z. B. +49 170 1234567" style="width:100%;box-sizing:border-box;border-radius:var(--radius-md);border:1px solid var(--stone-400);background:#fff;padding:0.95rem 1.05rem;font-family:var(--font-body);font-size:1.05rem;color:var(--ink);outline:none" style-focus="border-color:var(--burgundy);box-shadow:0 0 0 3px rgba(107,31,42,0.14)">
+                </label>
+              </div>
+            </div>
+
+            <div style="border-top:1px solid var(--rule);padding-top:1.6rem">
+              <div style="display:flex;align-items:baseline;gap:0.85rem;margin-bottom:0.4rem">
+                <span aria-hidden="true" style="font-family:var(--font-display);font-size:1.6rem;color:var(--brass-deep);line-height:1">3</span>
+                <span style="font-family:var(--font-sans);font-size:1.15rem;font-weight:600;color:var(--ink)">Ihre Wünsche <span style="font-weight:400;color:var(--ink-mute)">(freiwillig)</span></span>
+              </div>
+              <div style="display:grid;gap:1.15rem;margin-top:0.9rem">
+                <label style="display:block">
+                  <span style="display:block;margin-bottom:0.45rem;font-family:var(--font-sans);font-size:1rem;font-weight:500;color:var(--ink)">Wunschtermin</span>
+                  <input type="text" name="date" placeholder="z. B. Mai 2026 — oder noch offen" style="width:100%;box-sizing:border-box;border-radius:var(--radius-md);border:1px solid var(--stone-400);background:#fff;padding:0.95rem 1.05rem;font-family:var(--font-body);font-size:1.05rem;color:var(--ink);outline:none" style-focus="border-color:var(--burgundy);box-shadow:0 0 0 3px rgba(107,31,42,0.14)">
+                </label>
+                <label style="display:block">
+                  <span style="display:block;margin-bottom:0.45rem;font-family:var(--font-sans);font-size:1rem;font-weight:500;color:var(--ink)">Ihre Nachricht</span>
+                  <textarea name="msg" rows="4" placeholder="Erzählen Sie mir gern, wer mitkommt und was Sie besonders interessiert…" style="width:100%;box-sizing:border-box;border-radius:var(--radius-md);border:1px solid var(--stone-400);background:#fff;padding:0.95rem 1.05rem;font-family:var(--font-body);font-size:1.05rem;line-height:1.6;color:var(--ink);outline:none;resize:vertical" style-focus="border-color:var(--burgundy);box-shadow:0 0 0 3px rgba(107,31,42,0.14)"></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div style="border-top:1px solid var(--rule);padding-top:1.5rem;display:grid;gap:1rem">
+              <div style="display:flex;align-items:center;justify-content:center;gap:0.55rem;flex-wrap:wrap">
+                <span style="display:inline-flex;gap:2px;color:var(--gold-olive)"><span class="material-symbols-outlined" style="font-size:17px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:17px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:17px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:17px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:17px;font-variation-settings:'FILL' 1">star</span></span>
+                <span style="font-family:var(--font-sans);font-size:0.98rem;color:var(--ink-soft)">5,0 von 5 · über 4.900 Gäste seit 1986</span>
+              </div>
+              <x-import component-from-global-scope="ZuzaPragueToursDesignSystem_748186.Button" variant="accent" size="lg" icon="arrow_forward" full-width="{{ true }}" onClick="{{ submit }}" hint-size="100%,54px">Unverbindliche Anfrage senden</x-import>
+              <p style="display:flex;align-items:center;justify-content:center;gap:0.45rem;font-family:var(--font-sans);font-size:0.95rem;color:var(--ink-soft);margin:0;text-align:center"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:16px;color:var(--brass-deep)">lock</span>Unverbindlich &amp; kostenlos · Ihre Daten werden vertraulich behandelt</p>
+              <div style="border-top:1px solid var(--rule-soft);padding-top:1.15rem;text-align:center">
+                <div style="font-family:var(--font-sans);font-size:1rem;color:var(--ink-soft)">Sie möchten lieber persönlich sprechen?</div>
+                <a href="tel:+420721231933" style="display:inline-block;margin-top:0.35rem;font-family:var(--font-sans);font-size:1.35rem;font-weight:600;color:var(--burgundy);text-decoration:none" style-focus="outline:3px solid var(--burgundy);outline-offset:3px">+420 721 231 933</a>
+                <div style="font-family:var(--font-sans);font-size:0.95rem;color:var(--ink-mute);margin-top:0.3rem">Ich spreche Deutsch — auch per <a href="https://wa.me/420721231933" target="_blank" rel="noopener" style="color:var(--burgundy)">WhatsApp</a>.</div>
+              </div>
+            </div>
+
+          </div>
+        </sc-if>
+        <sc-if value="{{ sent }}">
+          <div style="padding:3.5rem 1.8rem;text-align:center">
+            <span class="material-symbols-outlined" style="font-size:52px;color:var(--success);font-variation-settings:'FILL' 1">check_circle</span>
+            <h2 style="font-family:var(--font-display);font-weight:400;font-size:2.1rem;color:var(--ink);margin:0.8rem 0 0.6rem">Vielen Dank für Ihre Anfrage!</h2>
+            <p style="font-family:var(--font-body);font-size:1.15rem;line-height:1.65;color:var(--ink-soft);max-width:28rem;margin:0 auto 1.6rem">Ihre Nachricht ist angekommen. Zuzana antwortet Ihnen persönlich — in der Regel innerhalb von 24 Stunden.</p>
+            <div style="display:inline-block;text-align:center;border-top:1px solid var(--rule);padding-top:1.3rem">
+              <div style="font-family:var(--font-sans);font-size:1rem;color:var(--ink-soft)">Sie haben es eilig? Rufen Sie gern an:</div>
+              <a href="tel:+420721231933" style="display:inline-block;margin-top:0.35rem;font-family:var(--font-sans);font-size:1.3rem;font-weight:600;color:var(--burgundy);text-decoration:none">+420 721 231 933</a>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isTours }}">
+<div id="view-tours">
+  <div style="padding:calc(7rem + 2vw) 0 clamp(2.5rem,5vh,4rem);border-bottom:1px solid var(--rule)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--brass-deep)"><span style="width:28px;height:1px;background:var(--brass);opacity:0.7"></span>Touren · Privatführungen</span>
+      <h1 style="margin:1rem 0 0;font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(2.6rem,6vw,4.4rem)">Jede Tour beginnt mit Ihrer <em style="font-family:var(--font-italic);font-style:italic;color:var(--burgundy)">Neugier</em>.</h1>
+      <p style="margin:1.4rem 0 0;max-width:40rem;font-family:var(--font-body);font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.65;color:var(--ink-soft)">Keine festen Skripte, keine Massen. Nur Sie, Prag und vierzig Jahre Geschichten. Wählen Sie einen Ausgangspunkt — den Rest gestalten wir gemeinsam.</p>
+      <div style="display:flex;align-items:center;gap:0.55rem;flex-wrap:wrap;margin-top:1.5rem">
+        <span aria-hidden="true" style="display:inline-flex;gap:2px;color:var(--gold-olive)"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span></span>
+        <span style="font-family:var(--font-sans);font-size:0.98rem;color:var(--ink-soft)">5,0 von 5 · über 4.900 Gäste seit 1986</span>
+      </div>
+    </div>
+  </div>
+  <section style="padding:clamp(2.5rem,5vh,4rem) 0 clamp(4rem,9vh,7rem)">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <sc-for list="{{ toursPage }}" as="t" hint-placeholder-count="6">
+        <a href="{{ t.href }}" aria-label="{{ t.ariaLabel }}" onClick="{{ t.onClick }}" data-reveal="1" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;padding:clamp(2.5rem,5vh,4rem) 0;border-top:1px solid var(--rule);color:inherit;text-decoration:none" style-focus="outline:3px solid var(--burgundy);outline-offset:-3px">
+          <div style="{{ t.mediaStyle }}">
+            <div style="overflow:hidden;aspect-ratio:5/4;background:var(--ivory-deep);border-radius:var(--radius-lg);box-shadow:var(--shadow-md)">
+              <img data-src="{{ t.img }}" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform 0.9s var(--ease-out)" style-hover="transform:scale(1.05)">
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;align-items:center;gap:0.9rem;flex-wrap:wrap">
+              <span style="font-family:var(--font-display);font-size:1.05rem;color:var(--brass-deep);letter-spacing:0.1em">{{ t.num }}</span>
+              <span aria-hidden="true" style="width:34px;height:1px;background:var(--brass);opacity:0.7"></span>
+              <sc-if value="{{ t.hasFlag }}"><span style="font-family:var(--font-sans);font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-olive);border:1px solid rgba(123,88,0,0.35);border-radius:var(--radius-pill);padding:0.35rem 0.8rem">{{ t.flag }}</span></sc-if>
+            </div>
+            <h2 style="margin:0.9rem 0 0;font-family:var(--font-display);font-weight:400;line-height:1.06;letter-spacing:-0.015em;color:var(--ink);font-size:clamp(1.9rem,3.4vw,2.8rem)">{{ t.title }}</h2>
+            <div style="display:flex;align-items:center;gap:0.5rem;margin:1rem 0 1.1rem;font-family:var(--font-sans);font-size:1rem;color:var(--ink-soft)"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:18px;color:var(--brass-deep)">schedule</span>{{ t.facts }}</div>
+            <p style="font-family:var(--font-body);font-size:1.1rem;line-height:1.72;color:var(--ink-soft);margin:0 0 1.7rem;max-width:34rem">{{ t.desc }}</p>
+            <span style="font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:0.6rem;border-bottom:1px solid var(--ink);padding-bottom:4px;transition:color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out)" style-hover="color:var(--burgundy);border-bottom-color:var(--burgundy)">{{ t.cta }} <span class="material-symbols-outlined" aria-hidden="true" style="font-size:17px">arrow_forward</span></span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+  <section style="background:var(--ink);color:var(--ivory);text-align:center;padding:clamp(4rem,9vh,6.5rem) 0">
+    <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--stone-400)"><span style="width:28px;height:1px;background:var(--brass)"></span>Bereit zu beginnen?<span style="width:28px;height:1px;background:var(--brass)"></span></span>
+      <h2 style="font-family:var(--font-display);font-weight:400;color:var(--ivory);font-size:clamp(2rem,4vw,3.2rem);margin:1.2rem auto 1.8rem;max-width:24ch">Erzählen Sie mir, was Sie <em style="font-family:var(--font-italic);font-style:italic;color:var(--gold-lamp)">interessiert</em>.</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:center">
+        <a onClick="{{ goKontakt }}" style="display:inline-flex;align-items:center;gap:0.7rem;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:1.05rem 1.9rem;border:1px solid var(--ivory);color:var(--ivory);background:transparent;cursor:pointer;transition:background var(--dur-base) var(--ease-out),color var(--dur-base) var(--ease-out)" style-hover="background:var(--ivory);color:var(--ink)" style-focus="outline:3px solid var(--ivory);outline-offset:3px">Unverbindliche Anfrage <span class="material-symbols-outlined" aria-hidden="true" style="font-size:17px">arrow_forward</span></a>
+        <a href="tel:+420721231933" style="font-family:var(--font-sans);font-size:1.15rem;font-weight:600;color:var(--ivory);text-decoration:none;border-bottom:1px solid rgba(245,239,228,0.55);padding-bottom:3px" style-hover="border-bottom-color:var(--ivory)" style-focus="outline:3px solid var(--ivory);outline-offset:3px">+420 721 231 933</a>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+</main>
+
+<footer style="background:var(--ink);color:var(--ivory);padding:clamp(3.5rem,7vh,5.5rem) 0 2.5rem">
+  <div style="max-width:1240px;margin:0 auto;padding-inline:clamp(1.5rem,5vw,5rem)">
+    <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(245,239,228,0.13)">
+      <div>
+        <div style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:1rem">Zuza <b style="font-weight:400">&amp;</b> Pragtour</div>
+        <p style="font-family:var(--font-body);font-size:0.95rem;line-height:1.6;color:rgba(245,239,228,0.6);max-width:22rem;margin:0 0 1.4rem">Erleben Sie Prag mit Ihrer deutschsprachigen Expertin und Spezialistin für Prag-Führungen.</p>
+        <a onClick="{{ goTours }}" style="display:inline-flex;align-items:center;gap:0.6rem;font-family:var(--font-sans);font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ivory);cursor:pointer;border:1px solid var(--ivory);padding:0.7rem 1.2rem;margin-bottom:1.3rem" style-hover="background:var(--ivory);color:var(--ink)">Meine Touren ansehen <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></a>
+        <a href="https://www.tripadvisor.de" target="_blank" rel="noopener" style="display:block;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:0.04em;color:var(--gold-lamp)">4,9 ★ TripAdvisor</a>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(245,239,228,0.45);margin:0 0 1.1rem">Kontakt</h4>
+        <a href="tel:+420721231933" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem" style-hover="color:var(--ivory)">+420 721 231 933</a>
+        <a href="mailto:zuzanamanova@email.cz" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem" style-hover="color:var(--ivory)">zuzanamanova@email.cz</a>
+        <a href="https://wa.me/420721231933" target="_blank" rel="noopener" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem" style-hover="color:var(--ivory)">WhatsApp</a>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(245,239,228,0.45);margin:0 0 1.1rem">Schnelllinks</h4>
+        <a onClick="{{ goHome }}" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem;cursor:pointer" style-hover="color:var(--ivory)">Startseite</a>
+        <a onClick="{{ goTours }}" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem;cursor:pointer" style-hover="color:var(--ivory)">Touren</a>
+        <a onClick="{{ goZuzana }}" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem;cursor:pointer" style-hover="color:var(--ivory)">Über Zuzana</a>
+        <a onClick="{{ goJournal }}" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem;cursor:pointer" style-hover="color:var(--ivory)">Journal</a>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(245,239,228,0.45);margin:0 0 1.1rem">Mehr</h4>
+        <a onClick="{{ goKontakt }}" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem;cursor:pointer" style-hover="color:var(--ivory)">Tour buchen</a>
+        <a href="https://www.instagram.com/erlebnis_tour_prag/" target="_blank" rel="noopener" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem" style-hover="color:var(--ivory)">@erlebnis_tour_prag</a>
+        <a href="https://www.tripadvisor.de" target="_blank" rel="noopener" style="display:block;font-family:var(--font-sans);font-size:0.9rem;color:rgba(245,239,228,0.78);margin-bottom:0.65rem" style-hover="color:var(--ivory)">TripAdvisor</a>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:1.8rem;flex-wrap:wrap">
+      <p style="font-family:var(--font-sans);font-size:11px;letter-spacing:0.04em;color:rgba(245,239,228,0.45);margin:0">© 2026 Zuza Prague Tours – Zuzana Manová. Alle Rechte vorbehalten.</p>
+      <div style="display:flex;gap:1.5rem"><span style="font-family:var(--font-sans);font-size:11px;color:rgba(245,239,228,0.45)">Deutschsprachig · Zertifiziert · Seit 1986</span></div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { route: 'home', tourId: 'prager-burg', slug: 'beste-reisezeit', scrolled: false, sent: false, preview: 0, selectedTour: '', focusedTour: '' };
+
+  IMG = 'assets/images/';
+
+  TOURS = [
+    { i:0, slug:'prager-burg', num:'01', title:'Die Prager Burg & St.-Veits-Dom', dur:'3,5 Std', metaShort:'Privat', cardImg:'st-vitus-night.png', detailHero:'prague-castle.jpg', previewImg:'prague-castle.jpg', previewCap:'Tausend Jahre Macht, Glaube und Architektur.',
+      chips:[['3,5 Stunden',0],['Privatführung',0],['Beliebt',1]], group:'Privat, nur Sie', meet:'Nach Absprache', language:'Deutsch',
+      lead:'Der größte zusammenhängende Burgkomplex der Welt — und ein Spaziergang durch tausend Jahre böhmischer Geschichte.',
+      desc:'Tausend Jahre Macht, Glaube und Architektur auf dem größten zusammenhängenden Burgareal der Welt — vom romanischen Fundament bis zur gotischen Pracht des Doms.',
+      intro:['Wir beginnen oben, bevor die Reisegruppen eintreffen, und arbeiten uns durch die Höfe, in denen Könige gekrönt und Republiken ausgerufen wurden. Ich erzähle Ihnen nicht nur, was Sie sehen — sondern warum es noch immer wichtig ist.','Der Höhepunkt ist der St.-Veits-Dom: sechs Jahrhunderte Bauzeit, das Grab des heiligen Wenzel und ein Glasfenster von Alfons Mucha, das im Nachmittagslicht zu leuchten beginnt.'],
+      itinerary:[['I','Der erste Burghof & das Matthiastor','Die Wachablösung und der barocke Eingang zur Residenz der Präsidenten.'],['II','St.-Veits-Dom','Gotische Gewölbe, die Wenzelskapelle und das Mucha-Fenster.'],['III','Der Alte Königspalast','Der Vladislav-Saal und der Ort des Prager Fenstersturzes.'],['IV','St.-Georgs-Basilika','Die älteste erhaltene Kirche der Burg, romanisch und still.'],['V','Das Goldene Gässchen','Winzige Häuschen, Alchemisten-Legenden und Kafkas Schreibstube.']] },
+    { i:1, slug:'altstadt-josefov', num:'02', title:'Altstadt & Jüdisches Viertel', dur:'4 Std', metaShort:'Akkreditiert', cardImg:'jewish-quarter.jpg', detailHero:'jewish-quarter.jpg', previewImg:'josefov.jpg', previewCap:'Das bewegende Erbe des Josefov.',
+      chips:[['4 Stunden',0],['Museums-Akkreditiert',1]], group:'Private Gruppe', meet:'Nach Absprache', language:'Deutsch',
+      lead:'Das mittelalterliche Herz Prags und das bewegende Erbe des Josefov — geführt mit offizieller Akkreditierung des Jüdischen Museums in Prag.',
+      desc:'Das mittelalterliche Herz Prags und das bewegende Erbe des Josefov, geführt mit offizieller Akkreditierung des Jüdischen Museums in Prag.',
+      intro:['Wir verbinden den Altstädter Ring mit seiner astronomischen Uhr und den stillen Gassen von Josefov — sechs Synagogen und der Alte Jüdische Friedhof, an dem sich tausend Jahre Geschichte verdichten. Weil ich die Akkreditierung des Jüdischen Museums besitze, gehen wir langsam und mit der nötigen Sorgfalt.'] },
+    { i:2, slug:'alchemistisches-prag', num:'03', title:'Das alchemistische Prag', dur:'3 Std', metaShort:'Nach Einbruch', cardImg:'night-prague.jpg', detailHero:'night-prague.jpg', previewImg:'night-prague.jpg', previewCap:'Astrologie, Alchemie und Legenden.',
+      chips:[['3 Stunden',0],['Nach Einbruch der Dunkelheit',0]], group:'Private Gruppe', meet:'Nach Absprache', language:'Deutsch',
+      lead:'Die mystische und geheimnisvolle Seite der Prager Geschichte — von der Astrologie am Hofe Rudolfs II. bis zu den Legenden des Goldenen Gässchens.',
+      desc:'Die mystische und geheimnisvolle Seite der Prager Geschichte — von der Astrologie am Hofe Rudolfs II. bis zu den Legenden des Goldenen Gässchens.',
+      intro:['Nach Einbruch der Dunkelheit zeigt Prag seine mystische Seite. Wir folgen den Spuren der Astrologen und Alchemisten am Hofe Rudolfs II. und lauschen den Legenden des Goldenen Gässchens — die Stadt, wie sie die Romantiker sahen: geheimnisvoll, voller Zeichen.'] },
+    { i:3, slug:'verstecktes-prag', num:'04', title:'Verstecktes Prag', dur:'2,5 Std', metaShort:'Abseits', cardImg:'hidden-gems.jpg', detailHero:'hidden-gems.jpg', previewImg:'hidden-gems.jpg', previewCap:'Höfe und Gassen, die kein Reiseführer kennt.',
+      chips:[['2,5 Stunden',0],['Abseits der Pfade',0]], group:'Private Gruppe', meet:'Nach Absprache', language:'Deutsch',
+      lead:'Höfe, Gassen und Geschichten abseits der Touristenpfade — das Prag, das die Einheimischen lieben und das in keinem Reiseführer steht.',
+      desc:'Höfe, Gassen und Geschichten abseits der Touristenpfade — das Prag, das die Einheimischen lieben und das in keinem Reiseführer steht.',
+      intro:['Wir verbringen mehr Zeit abseits der Hauptgassen als auf ihnen: stille Innenhöfe, Glasdach-Passagen und Durchgänge, die kaum ein Tagesbesucher je sieht. Genau dort beginnt die Stadt zu flüstern.'] },
+    { i:4, slug:'deutsches-erbe', num:'05', title:'Prag & deutsches Erbe', dur:'2,75 Std', metaShort:'Kafka', cardImg:'kafka.jpg', detailHero:'kafka.jpg', previewImg:'kafka.jpg', previewCap:'Auf den Spuren des deutschen Prag.',
+      chips:[['2,75 Stunden',0],['Deutschsprachig',0]], group:'Private Gruppe', meet:'Nach Absprache', language:'Deutsch',
+      lead:'Auf den Spuren der deutschsprachigen Geschichte Prags, von Kafka bis zur Prager deutschen Literatur — ein Kapitel, das die Stadt bis heute prägt.',
+      desc:'Auf den Spuren der deutschsprachigen Geschichte Prags, von Kafka bis zur Prager deutschen Literatur — ein Kapitel, das die Stadt bis heute prägt.',
+      intro:['Wir folgen den Spuren der deutschsprachigen Geschichte Prags — von Kafkas Wohnhäusern bis zu den Cafés der Prager deutschen Literatur. Ich erzähle dieses Kapitel in meiner Muttersprache, ohne Übersetzungsverlust.'] },
+    { i:5, slug:'individuelle-tour', num:'06', title:'Individuelle Privattour', dur:'Flexibel', metaShort:'Maßgeschneidert', cardImg:'boat-vltava.jpg', detailHero:'boat-vltava.jpg', previewImg:'boat-vltava.jpg', previewCap:'Ganz Ihre Route, gemeinsam entworfen.',
+      chips:[['Maßgeschneidert',1],['Flexibel',0]], group:'Private Gruppe', meet:'Nach Absprache', language:'Deutsch',
+      lead:'Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser — wir entdecken es gemeinsam.',
+      desc:'Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser — wir entdecken es gemeinsam.',
+      intro:['Es gibt kein festes Skript. Erzählen Sie mir, wer mitkommt und was Sie sehen möchten — Architektur, Geschichte, jüdisches Erbe, Kaffeehäuser, Fotografie — und ich entwerfe eine Route, die nur Ihnen gehört.'] }
+  ];
+
+  componentDidMount() {
+    this._hash = () => this.applyHash();
+    window.addEventListener('hashchange', this._hash);
+    this.applyHash();
+    this._lastRoute = this.state.route;
+    this._lastSlug = this.state.slug;
+    this._lastTourId = this.state.tourId;
+    this._scroll = () => {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = null;
+        const s = window.scrollY > Math.min((window.innerHeight || 800) * 0.7, 560);
+        if (s !== this.state.scrolled) this.setState({ scrolled: s });
+      });
+    };
+    window.addEventListener('scroll', this._scroll, { passive: true });
+    this.hydrateImages();
+    requestAnimationFrame(() => { this.hydrateImages(); this.setupReveal(); this.setupNav(); this.initMaps(); });
+    setTimeout(() => { this.hydrateImages(); this.initMaps(); }, 150);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this._hash);
+    window.removeEventListener('scroll', this._scroll);
+    if (this._io) this._io.disconnect();
+    if (this._navio) this._navio.disconnect();
+    clearTimeout(this._revealT);
+    clearTimeout(this._mapT);
+  }
+  componentDidUpdate() {
+    this.hydrateImages();
+    this.initMaps();
+    var changed = this._lastRoute !== this.state.route
+      || (this.state.route === 'article' && this._lastSlug !== this.state.slug)
+      || (this.state.route === 'tour' && this._lastTourId !== this.state.tourId);
+    if (changed) {
+      this._lastRoute = this.state.route;
+      this._lastSlug = this.state.slug;
+      this._lastTourId = this.state.tourId;
+      try { window.scrollTo(0, 0); } catch (e) {}
+      try { var se = document.scrollingElement; if (se) se.scrollTop = 0; } catch (e) {}
+      this.setupReveal();
+      this.setupNav();
+    }
+  }
+
+  hydrateImages() {
+    try {
+      var imgs = document.querySelectorAll('img[data-src]');
+      for (var i = 0; i < imgs.length; i++) {
+        var ds = imgs[i].getAttribute('data-src');
+        if (ds && ds.indexOf('{{') === -1 && imgs[i].getAttribute('src') !== ds) imgs[i].setAttribute('src', ds);
+      }
+    } catch (e) {}
+  }
+
+  setupNav() {
+    if (this._navio) this._navio.disconnect();
+    if (this.state.route !== 'home') return;
+    const sentinel = document.getElementById('nav-sentinel');
+    if (!sentinel || !('IntersectionObserver' in window)) return;
+    this._navio = new IntersectionObserver((ents) => {
+      ents.forEach((e) => {
+        const s = !e.isIntersecting && e.boundingClientRect.top <= 0;
+        if (s !== this.state.scrolled) this.setState({ scrolled: s });
+      });
+    }, { threshold: 0 });
+    this._navio.observe(sentinel);
+  }
+
+  applyHash() {
+    const raw = (location.hash || '').replace(/^#\/?/, '');
+    const parts = raw.split('/');
+    const seg = parts[0] || '';
+    const param = parts[1] || '';
+    const known = { tours:1, tour:1, zuzana:1, journal:1, article:1, kontakt:1 };
+    const route = known[seg] ? seg : 'home';
+    const patch = { route, scrolled: false };
+    if (route === 'tour' && param) patch.tourId = param;
+    if (route === 'article' && param) patch.slug = param;
+    if (route !== this.state.route) patch.sent = false;
+    this.setState(patch);
+  }
+
+  go = (route, param) => {
+    const seg = route === 'home' ? '' : route + (param ? '/' + param : '');
+    location.hash = '#/' + seg;
+    this.applyHash();
+  };
+
+  submit = () => { this.setState({ sent: true }); try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {} };
+
+  setupReveal() {
+    let els = [];
+    try { els = Array.prototype.slice.call(document.querySelectorAll('#view-' + this.state.route + ' [data-reveal]')); } catch (e) { els = []; }
+    if (this._io) this._io.disconnect();
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    els.forEach((el, i) => {
+      const d = Math.min(i * 45, 260) + 'ms';
+      el.style.transition = 'opacity 0.8s var(--ease-out) ' + d + ', transform 0.8s var(--ease-out) ' + d;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(26px)';
+    });
+    if (!('IntersectionObserver' in window)) { els.forEach(reveal); return; }
+    this._io = new IntersectionObserver((ents) => {
+      ents.forEach((e) => { if (e.isIntersecting) { reveal(e.target); this._io.unobserve(e.target); } });
+    }, { threshold: 0.06, rootMargin: '0px 0px -4% 0px' });
+    const vh = window.innerHeight || 800;
+    els.forEach((el) => { const r = el.getBoundingClientRect(); if (r.top < vh * 0.96) reveal(el); else this._io.observe(el); });
+    clearTimeout(this._revealT);
+    this._revealT = setTimeout(() => els.forEach(reveal), 1600);
+  }
+
+  buildBody(a) {
+    const NS = window.ZuzaPragueToursDesignSystem_748186 || {};
+    const h = React.createElement;
+    const toc = [];
+    const nodes = [];
+    this._mapSpecs = {};
+    const slugify = (s) => (s || '').replace(/<[^>]+>/g, '').toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+    const pStyle = { margin:'0 0 1.35rem', fontFamily:'var(--font-body)', fontSize:'1.15rem', lineHeight:1.78, color:'var(--ink-soft)' };
+    (a.blocks || []).forEach((b, i) => {
+      if (b.t === 'p') {
+        if (b.first) {
+          const ch = b.html.charAt(0);
+          const rest = b.html.slice(1);
+          nodes.push(h('p', { key:i, className:'zuza-prose', style: pStyle },
+            h('span', { style:{ float:'left', fontFamily:'var(--font-display)', fontSize:'4.4em', lineHeight:0.74, margin:'0.06em 0.12em 0 0', color:'var(--burgundy)' } }, ch),
+            h('span', { dangerouslySetInnerHTML:{ __html: rest } })
+          ));
+        } else {
+          nodes.push(h('p', { key:i, className:'zuza-prose', style: pStyle, dangerouslySetInnerHTML:{ __html: b.html } }));
+        }
+      } else if (b.t === 'h2') {
+        const id = slugify(b.html);
+        toc.push({ id, label: b.html.replace(/<[^>]+>/g, '') });
+        nodes.push(h('h2', { key:i, id, className:'zuza-prose', style:{ margin:'2.7rem 0 1.1rem', fontFamily:'var(--font-display)', fontWeight:400, fontSize:'clamp(1.7rem,2.6vw,2.2rem)', lineHeight:1.16, color:'var(--ink)' }, dangerouslySetInnerHTML:{ __html: b.html } }));
+      } else if (b.t === 'quote') {
+        if (NS.PullQuote) nodes.push(h(NS.PullQuote, { key:i, attribution: b.by || undefined }, b.html));
+        else nodes.push(h('blockquote', { key:i, style:{ margin:'2rem 0', paddingLeft:'1.4rem', borderLeft:'2px solid var(--burgundy)', fontFamily:'var(--font-italic)', fontStyle:'italic', fontSize:'1.5rem', lineHeight:1.4, color:'var(--ink)' } }, b.html));
+      } else if (b.t === 'callout') {
+        const parts = [];
+        if (b.html) parts.push(h('span', { key:'h', className:'zuza-prose', dangerouslySetInnerHTML:{ __html: b.html } }));
+        if (b.list && b.list.length) parts.push(h('ul', { key:'l', className:'zuza-prose', style:{ margin:'0.6rem 0 0', paddingLeft:'1.1rem' } }, b.list.map((li, k) => h('li', { key:k, style:{ margin:'0 0 0.35rem', fontFamily:'var(--font-body)', fontSize:'1rem', lineHeight:1.6, color:'var(--ink-soft)' }, dangerouslySetInnerHTML:{ __html: li } }))));
+        if (NS.Callout) nodes.push(h(NS.Callout, { key:i, label: b.label || 'Tipp' }, parts));
+        else nodes.push(h('aside', { key:i, style:{ margin:'2rem 0', padding:'1.2rem 1.4rem', borderLeft:'3px solid var(--brass)', background:'var(--paper-warm)' } }, parts));
+      } else if (b.t === 'list') {
+        nodes.push(h('ul', { key:i, className:'zuza-prose', style:{ margin:'0 0 1.3rem', paddingLeft:'1.2rem' } }, (b.items || []).map((li, k) => h('li', { key:k, style:{ margin:'0 0 0.4rem', fontFamily:'var(--font-body)', fontSize:'1.12rem', lineHeight:1.7, color:'var(--ink-soft)' }, dangerouslySetInnerHTML:{ __html: li } }))));
+      } else if (b.t === 'facts') {
+        nodes.push(h('div', { key:i, style:{ margin:'2rem 0', border:'1px solid var(--rule)', borderRadius:'var(--radius-lg)', overflow:'hidden', background:'var(--surface-card)' } },
+          h('div', { style:{ padding:'0.85rem 1.2rem', borderBottom:'1px solid var(--rule)', fontFamily:'var(--font-sans)', fontSize:'10px', fontWeight:600, letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--brass-deep)' } }, b.title || 'Gut zu wissen'),
+          h('div', { style:{ padding:'0.3rem 1.2rem 0.7rem' } }, (b.items || []).map((it, k) => h('div', { key:k, style:{ display:'flex', justifyContent:'space-between', gap:'1rem', padding:'0.55rem 0', borderBottom:'1px solid var(--rule-soft)' } }, h('span', { style:{ fontFamily:'var(--font-sans)', fontSize:'0.85rem', color:'var(--ink-mute)' } }, it.k), h('span', { style:{ fontFamily:'var(--font-sans)', fontSize:'0.85rem', fontWeight:600, color:'var(--ink)', textAlign:'right' } }, it.v))))));
+      } else if (b.t === 'figure') {
+        nodes.push(h('figure', { key:i, style:{ margin:'2.4rem 0' } }, h('img', { src: this.IMG + b.img, alt: b.alt || '', style:{ width:'100%', borderRadius:'var(--radius-lg)' } }), b.cap ? h('figcaption', { style:{ marginTop:'0.7rem', paddingLeft:'1rem', borderLeft:'1px solid var(--brass)', fontFamily:'var(--font-italic)', fontStyle:'italic', fontSize:'0.9rem', color:'var(--ink-mute)' } }, b.cap) : null));
+      } else if (b.t === 'gallery') {
+        nodes.push(h('figure', { key:i, style:{ margin:'2.4rem 0' } }, h('div', { style:{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))', gap:'0.6rem' } }, (b.images || []).map((g, k) => h('img', { key:k, src: this.IMG + g.img, alt: g.alt || '', style:{ width:'100%', height:'100%', objectFit:'cover', borderRadius:'var(--radius-md)' } }))), b.cap ? h('figcaption', { style:{ marginTop:'0.7rem', paddingLeft:'1rem', borderLeft:'1px solid var(--brass)', fontFamily:'var(--font-italic)', fontStyle:'italic', fontSize:'0.9rem', color:'var(--ink-mute)' } }, b.cap) : null));
+      } else if (b.t === 'ornament') {
+        if (NS.Ornament) nodes.push(h(NS.Ornament, { key:i }));
+        else nodes.push(h('div', { key:i, style:{ textAlign:'center', color:'var(--brass)', margin:'2.4rem 0' } }, '❦'));
+      } else if (b.t === 'map') {
+        nodes.push(this.mapNode(b, i, a.slug));
+      }
+    });
+    return { nodes, toc };
+  }
+
+  mapNode(b, i, slug) {
+    const h = React.createElement;
+    const pts = b.points || [];
+    const id = 'jmap-' + (slug || 'a') + '-' + i;
+    this._mapSpecs[id] = b;
+    const stops = (b.list && pts.length) ? h('ol', { style:{ listStyle:'none', margin:'1.3rem 0 0', padding:0 } }, pts.map((p, j) =>
+      h('li', { key:j, style:{ display:'grid', gridTemplateColumns:'2.1rem 1fr', gap:'0.9rem', padding:'0.85rem 0', borderTop: j === 0 ? '1px solid var(--rule-soft)' : 'none', borderBottom:'1px solid var(--rule-soft)' } },
+        h('span', { style:{ fontFamily:'var(--font-display)', color:'var(--burgundy)', fontSize:'1.1rem', lineHeight:1.3 } }, j + 1),
+        h('div', null,
+          h('div', { style:{ fontFamily:'var(--font-sans)', fontWeight:600, fontSize:'0.95rem', color:'var(--ink)' } }, p.label),
+          p.note ? h('div', { style:{ fontFamily:'var(--font-body)', fontSize:'0.95rem', lineHeight:1.5, color:'var(--ink-mute)', marginTop:'0.15rem' } }, p.note) : null
+        )
+      )
+    )) : null;
+    return h('div', { key: id, style:{ margin:'2.6rem 0' } },
+      h('div', { style:{ fontFamily:'var(--font-sans)', fontSize:'10px', fontWeight:600, letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--brass-deep)', display:'flex', alignItems:'center', gap:'0.6rem', marginBottom:'0.9rem' } },
+        h('span', { style:{ width:14, height:1, background:'var(--brass)' } }), b.title || 'Karte'),
+      h('div', { id: id, className:'jmap', style:{ width:'100%', height:'clamp(320px,52vh,460px)', border:'1px solid var(--rule)', background:'var(--ivory-deep)', position:'relative', zIndex:0 }, dangerouslySetInnerHTML:{ __html:'' } }),
+      b.cap ? h('div', { style:{ marginTop:'0.85rem', paddingLeft:'1rem', borderLeft:'1px solid var(--brass)', fontFamily:'var(--font-italic)', fontStyle:'italic', fontSize:'0.9rem', color:'var(--ink-mute)' } }, b.cap) : null,
+      stops
+    );
+  }
+
+  initMaps() {
+    if (this.state.route !== 'article') return;
+    const specs = this._mapSpecs || {};
+    const ids = Object.keys(specs);
+    if (!ids.length) return;
+    if (typeof L === 'undefined') {
+      if ((this._mapRetry || 0) < 40) { this._mapRetry = (this._mapRetry || 0) + 1; clearTimeout(this._mapT); this._mapT = setTimeout(() => this.initMaps(), 250); }
+      return;
+    }
+    this._mapRetry = 0;
+    const self = this;
+    ids.forEach(function (id) {
+      const node = document.getElementById(id);
+      if (!node || node._zinit) return;
+      node._zinit = true;
+      self.renderLeaflet(node, specs[id]);
+    });
+  }
+
+  renderLeaflet(node, spec) {
+    try {
+      const map = L.map(node, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+      const pts = spec.points || [], latlngs = [];
+      pts.forEach(function (p, i) {
+        if (!p.coord) return;
+        const icon = L.divIcon({ className: 'jmark-wrap', html: '<span class="jmark">' + (i + 1) + '</span>', iconSize: [30, 30], iconAnchor: [15, 15], popupAnchor: [0, -15] });
+        L.marker(p.coord, { icon: icon }).addTo(map).bindPopup('<span class="pop-t">' + (i + 1) + '. ' + p.label + '</span>' + (p.note ? '<span class="pop-n">' + p.note + '</span>' : ''));
+        latlngs.push(p.coord);
+      });
+      if (spec.route && latlngs.length > 1) L.polyline(latlngs, { color: '#6B1F2A', weight: 3, opacity: 0.85, dashArray: '1 9', lineCap: 'round' }).addTo(map);
+      if (latlngs.length > 1) map.fitBounds(latlngs, { padding: [45, 45], maxZoom: 16 });
+      else if (latlngs.length === 1) map.setView(latlngs[0], spec.zoom || 15);
+      setTimeout(function () { try { map.invalidateSize(); } catch (e) {} }, 150);
+    } catch (e) {}
+  }
+
+  renderVals() {
+    const S = this.state;
+    const go = this.go;
+    const isHome = S.route === 'home', isTours = S.route === 'tours', isTour = S.route === 'tour', isZuzana = S.route === 'zuzana', isJournal = S.route === 'journal', isArticle = S.route === 'article', isKontakt = S.route === 'kontakt';
+    const solid = !isHome || S.scrolled;
+
+    const navStyle = { position:'fixed', top:0, left:0, right:0, zIndex:100, display:'flex', alignItems:'center', justifyContent:'space-between', gap:'1.5rem', flexWrap:'wrap', padding: solid ? '0.95rem clamp(1.5rem,5vw,5rem)' : '1.5rem clamp(1.5rem,5vw,5rem)', background: solid ? 'rgba(250,246,236,0.85)' : 'transparent', backdropFilter: solid ? 'blur(16px) saturate(140%)' : 'none', WebkitBackdropFilter: solid ? 'blur(16px) saturate(140%)' : 'none', borderBottom: '1px solid ' + (solid ? 'rgba(217,207,188,0.7)' : 'transparent'), transition: 'background 0.3s var(--ease-out), padding 0.3s var(--ease-out), border-color 0.3s var(--ease-out)' };
+    const navBrandStyle = { fontFamily:'var(--font-display)', fontSize:'1.35rem', letterSpacing:'0.02em', color: solid ? 'var(--ink)' : 'var(--ivory)', cursor:'pointer', textDecoration:'none', transition:'color 0.3s' };
+    const linkBase = { fontFamily:'var(--font-sans)', fontSize:'12px', letterSpacing:'0.14em', textTransform:'uppercase', cursor:'pointer', textDecoration:'none', transition:'color 0.2s', background:'none', border:'none', padding:0 };
+    const mk = (label, route) => ({ label, onClick: () => go(route), active: S.route === route, style: Object.assign({}, linkBase, { color: S.route === route ? (solid ? 'var(--ink)' : 'var(--ivory)') : (solid ? 'var(--ink-mute)' : 'rgba(245,239,228,0.82)') }), hoverStyle: { color: solid ? 'var(--ink)' : 'var(--ivory)' } });
+    const navItems = [ mk('Touren','tours'), mk('Über Zuzana','zuzana'), mk('Journal','journal'), mk('Kontakt','kontakt') ];
+    const navCtaStyle = { fontFamily:'var(--font-sans)', fontSize:'12px', letterSpacing:'0.14em', textTransform:'uppercase', cursor:'pointer', textDecoration:'none', padding:'0.65rem 1.25rem', border:'1px solid ' + (solid ? 'var(--ink)' : 'rgba(245,239,228,0.55)'), color: solid ? 'var(--ink)' : 'var(--ivory)', background:'transparent', transition:'all 0.3s' };
+    const navCtaHover = { background: solid ? 'var(--ink)' : 'var(--ivory)', color: solid ? 'var(--paper)' : 'var(--ink)' };
+
+    const homeTours = this.TOURS.slice(0, 5).map((t) => {
+      const active = S.preview === t.i;
+      return {
+        num: t.num, title: t.title, meta: t.dur + ' · ' + t.metaShort,
+        href: '#/tour/' + t.slug,
+        ariaLabel: t.title + ' — ' + t.dur + ', ' + t.metaShort + '. Details ansehen.',
+        rowStyle: { display:'grid', gridTemplateColumns:'auto 1fr auto auto', alignItems:'center', gap:'1.5rem', padding:'1.55rem 1.2rem', margin:'0.4rem -1.2rem', borderRadius:'var(--radius-lg)', textDecoration:'none', background: active ? 'var(--surface-card)' : 'transparent', boxShadow: active ? 'var(--shadow-lg)' : 'none', cursor:'pointer', transition:'background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)' },
+        numStyle: { fontFamily:'var(--font-display)', fontSize:'1rem', color: active ? 'var(--burgundy)' : 'var(--brass-deep)', width:'2.2rem', transition:'color var(--dur-base) var(--ease-out)' },
+        titleStyle: { fontFamily:'var(--font-display)', fontSize:'clamp(1.35rem,2.2vw,1.9rem)', fontWeight:400, lineHeight:1.12, color: active ? 'var(--burgundy)' : 'var(--ink)', transition:'color var(--dur-base) var(--ease-out)' },
+        metaStyle: { fontFamily:'var(--font-sans)', fontSize:'10.5px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--ink-mute)', whiteSpace:'nowrap' },
+        arrowStyle: { fontSize:'18px', color: active ? 'var(--burgundy)' : 'var(--brass-deep)', opacity: active ? 1 : 0, transform: active ? 'translateX(0)' : 'translateX(-6px)', transition:'opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out)' },
+        onEnter: () => { if (this.state.preview !== t.i) this.setState({ preview: t.i }); }
+      };
+    });
+    const previewFigs = this.TOURS.slice(0, 5).map((t) => ({ img: this.IMG + t.previewImg, cap: t.previewCap, style: { position:'absolute', inset:0, margin:0, opacity: S.preview === t.i ? 1 : 0, transition:'opacity 0.7s var(--ease-out)' } }));
+
+    const toursPage = this.TOURS.map((t, idx) => {
+      const flagChip = t.chips.find((c) => c[1] === 1);
+      const flag = flagChip ? flagChip[0] : '';
+      const facts = t.chips.filter((c) => c[1] !== 1).map((c) => c[0]).join(' · ');
+      return {
+        num: t.num, title: t.title, desc: t.desc, img: this.IMG + t.cardImg,
+        flag: flag, hasFlag: !!flag, facts: facts,
+        href: t.slug === 'individuelle-tour' ? '#/kontakt' : '#/tour/' + t.slug,
+        ariaLabel: t.title + ' — ' + t.chips.map((c) => c[0]).join(', ') + '. ' + (t.slug === 'individuelle-tour' ? 'Anfrage senden.' : 'Details ansehen.'),
+        cta: t.slug === 'individuelle-tour' ? 'Anfrage senden' : 'Details ansehen',
+        onClick: t.slug === 'individuelle-tour' ? () => this.setState({ selectedTour: 'individuelle-tour' }) : undefined,
+        mediaStyle: idx % 2 === 1 ? { order: 2 } : { order: 0 }
+      };
+    });
+
+    const tour = this.TOURS.find((t) => t.slug === S.tourId) || this.TOURS[0];
+    const relatedTours = this.TOURS.filter((t) => t.slug !== tour.slug && t.slug !== 'individuelle-tour').slice(0, 3).map((t) => ({ title: t.title, metaLine: t.dur + ' · ' + t.metaShort, img: this.IMG + t.cardImg, href: '#/tour/' + t.slug, ariaLabel: t.title + ' — ' + t.dur + ', ' + t.metaShort + '. Details ansehen.' }));
+
+    const _seen = {};
+    const _deduped = (window.JOURNAL || window.ZUZA_ARTICLES || []).filter((a) => (a && a.slug && !_seen[a.slug]) ? (_seen[a.slug] = true) : false);
+    const _MONTHS = { januar: 1, februar: 2, 'märz': 3, maerz: 3, april: 4, mai: 5, juni: 6, juli: 7, august: 8, september: 9, oktober: 10, november: 11, dezember: 12 };
+    const _dkey = (a) => { const p = String((a && a.date) || '').toLowerCase().trim().split(/\s+/); return (parseInt(p[1], 10) || 0) * 100 + (_MONTHS[p[0]] || 0); };
+    const arts = _deduped.map((a, i) => [a, i]).sort((x, y) => (_dkey(y[0]) - _dkey(x[0])) || (x[1] - y[1])).map((p) => p[0]);
+    const journalFeature = arts[0] ? { title: arts[0].titlePlain, cat: arts[0].category, blurb: arts[0].cardBlurb || arts[0].standfirst, meta: arts[0].readTime + ' Lesezeit · ' + arts[0].date, img: this.IMG + arts[0].hero, onClick: () => go('article', arts[0].slug) } : null;
+    const journalGrid = arts.slice(1).map((a) => ({ title: a.titlePlain, cat: a.category, blurb: a.cardBlurb, meta: a.readTime + ' · ' + a.date, img: this.IMG + a.hero, onClick: () => go('article', a.slug) }));
+    const article = arts.find((a) => a.slug === S.slug) || arts[0] || null;
+    let articleBody = null, toc = [], relatedArticles = [], articleTitleNode = null, articleMeta = [], railFactsTitle = '', railFactsItems = [], tocLinks = [];
+    if (article) {
+      const built = this.buildBody(article);
+      articleBody = built.nodes; toc = built.toc;
+      articleTitleNode = React.createElement('h1', { className: 'zuza-prose', style: { margin: 0, fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: 'clamp(2.4rem,5vw,3.8rem)', lineHeight: 1.06, letterSpacing: '-0.02em', color: 'var(--ink)' }, dangerouslySetInnerHTML: { __html: article.title } });
+      articleMeta = article.meta || [];
+      railFactsTitle = (article.railFacts && article.railFacts.title) || 'Auf einen Blick';
+      railFactsItems = (article.railFacts && article.railFacts.items) || [];
+      tocLinks = toc.map((hh) => ({ label: hh.label, onClick: () => { try { var el = document.getElementById(hh.id); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + (window.scrollY || 0) - 90, behavior: 'smooth' }); } catch (e) {} } }));
+      let rel = (article.related || []).map((s) => arts.find((a) => a.slug === s)).filter(Boolean).filter((a) => a.slug !== article.slug);
+      if (rel.length < 3) rel = rel.concat(arts.filter((a) => a.slug !== article.slug && rel.indexOf(a) < 0));
+      relatedArticles = rel.slice(0, 3).map((a) => ({ title: a.titlePlain, cat: a.category, blurb: a.cardBlurb, img: this.IMG + a.hero, onClick: () => go('article', a.slug) }));
+    }
+
+    const optBase = { position:'relative', display:'flex', alignItems:'center', gap:'1rem', minHeight:'64px', padding:'0.9rem 1.15rem', borderWidth:'1px', borderStyle:'solid', borderColor:'var(--stone-400)', borderRadius:'var(--radius-md)', background:'#fff', cursor:'pointer', transition:'border-color var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)' };
+    const tourOptions = this.TOURS.map((t) => ({ key: t.slug, label: t.title, meta: t.dur + ' · ' + (t.slug === 'individuelle-tour' ? 'ganz nach Ihren Wünschen' : t.metaShort) }))
+      .concat([{ key: 'unentschlossen', label: 'Ich bin noch unentschlossen', meta: 'Zuzana berät Sie gern — ganz unverbindlich' }])
+      .map((o) => {
+        const sel = S.selectedTour === o.key;
+        const foc = S.focusedTour === o.key;
+        return {
+          label: o.label, meta: o.meta, checked: sel,
+          onSelect: () => this.setState({ selectedTour: o.key }),
+          onFocus: () => this.setState({ focusedTour: o.key }),
+          onBlur: () => this.setState({ focusedTour: '' }),
+          ringStyle: { width:'26px', height:'26px', borderRadius:'999px', borderWidth:'2px', borderStyle:'solid', borderColor: sel ? 'var(--burgundy)' : 'var(--stone-400)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, background:'#fff', transition:'border-color var(--dur-base) var(--ease-out)' },
+          dotStyle: { width:'13px', height:'13px', borderRadius:'999px', background: sel ? 'var(--burgundy)' : 'transparent', transition:'background var(--dur-base) var(--ease-out)' },
+          titleStyle: { fontFamily:'var(--font-sans)', fontSize:'1.08rem', fontWeight:600, lineHeight:1.35, color: sel ? 'var(--burgundy)' : 'var(--ink)', transition:'color var(--dur-base) var(--ease-out)' },
+          metaStyle: { fontFamily:'var(--font-sans)', fontSize:'0.92rem', lineHeight:1.4, color:'var(--ink-soft)', marginTop:'0.15rem' },
+          checkStyle: { fontSize:'24px', color:'var(--burgundy)', marginLeft:'auto', flexShrink:0, fontVariationSettings:"'FILL' 1", opacity: sel ? 1 : 0, transition:'opacity var(--dur-base) var(--ease-out)' },
+          style: Object.assign({}, optBase,
+            sel ? { borderColor: 'var(--burgundy)', boxShadow: '0 0 0 1px var(--burgundy), var(--shadow-md)', background: '#FDFBF7' } : {},
+            foc ? { outline: '3px solid var(--burgundy)', outlineOffset: '2px' } : {})
+        };
+      });
+    const bookTour = () => { this.setState({ selectedTour: tour.slug }); go('kontakt'); };
+
+    return {
+      isHome, isTours, isTour, isZuzana, isJournal, isArticle, isKontakt,
+      tourOptions, bookTour,
+      go, goHome: () => go('home'), goTours: () => go('tours'), goZuzana: () => go('zuzana'), goJournal: () => go('journal'), goKontakt: () => go('kontakt'),
+      navStyle, navBrandStyle, navItems, navCtaStyle, navCtaHover, navCtaClick: () => go('kontakt'),
+      homeTours, previewFigs, toursPage,
+      tour, tourHeroImg: this.IMG + tour.detailHero, relatedTours, openArticle: (slug) => go('article', slug),
+      tourIntro: tour.intro || [], tourItinerary: (tour.itinerary || []).map((x) => ({ n: x[0], t: x[1], d: x[2] })), hasItinerary: !!(tour.itinerary && tour.itinerary.length),
+      journalFeature, journalGrid,
+      article, articleHeroImg: article ? this.IMG + article.hero : '', articleBody, toc, tocLinks, relatedArticles,
+      articleTitleNode, articleMeta, railFactsTitle, railFactsItems, portraitImg: this.IMG + 'zuzana-portrait.jpg', showToc: toc.length > 1,
+      sent: S.sent, notSent: !S.sent, submit: this.submit
+    };
+  }
+}
+</script>
+</body>
+</html>

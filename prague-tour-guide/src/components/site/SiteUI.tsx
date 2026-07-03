@@ -151,6 +151,19 @@ export function Stat({ n, label }: { n: React.ReactNode; label: React.ReactNode 
   );
 }
 
+/* ── Rating stars (filled gold-olive, FILL 1) ─────────────────── */
+export function Stars({ size = 16, className = '' }: { size?: number; className?: string }) {
+  return (
+    <span aria-hidden className={`inline-flex gap-[2px] text-gold-olive ${className}`}>
+      {[0, 1, 2, 3, 4].map((s) => (
+        <span key={s} className="material-symbols-outlined leading-none" style={{ fontSize: `${size}px`, fontVariationSettings: "'FILL' 1" }}>
+          star
+        </span>
+      ))}
+    </span>
+  );
+}
+
 /* ── Scroll reveal (IntersectionObserver + fail-safe) ─────────── */
 type RevealTag = 'div' | 'section' | 'figure' | 'li' | 'article';
 export function Reveal({
@@ -247,3 +260,16 @@ export function PageBanner({
 
 /* Shared editorial shell width helper (max-w 1240px, fluid gutters). */
 export const SHELL = 'mx-auto w-full max-w-[1240px] px-[clamp(1.5rem,5vw,5rem)]';
+
+/* Frosted-glass surface used by the tour-detail booking card and the enquiry
+   form card — lifted verbatim from the handoff prototype (135° highlight sweep
+   + blur/saturate + soft shadow with a 1px inner top light). */
+export const GLASS_CARD_STYLE: React.CSSProperties = {
+  border: '1px solid rgba(58,51,44,0.08)',
+  borderRadius: 'var(--radius-xl)',
+  background:
+    'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.25) 50%), rgba(255,255,255,0.6)',
+  backdropFilter: 'blur(18px) saturate(135%)',
+  WebkitBackdropFilter: 'blur(18px) saturate(135%)',
+  boxShadow: '0 16px 44px rgba(26,23,20,0.10), inset 0 1px 0 rgba(255,255,255,0.85)',
+};

@@ -1,19 +1,21 @@
 'use client';
 
 /**
- * TourPage — single tour detail, premium "quiet-luxury editorial" direction.
+ * TourPage — single tour detail, 0005 "quiet-luxury editorial" facelift.
  *
- * Faithful port of .handoffs/0003.../ui_kits/website/site/tour-detail.html,
- * adapted to the real app: it keeps the real tour data (getTourBySlug), the
- * bilingual translations, the canonical booking link pattern
- * (/book?tour=<title>#contact-title) and the route metadata (owned by the
+ * Rebuilt 1:1 from the handoff prototype (Zuza Prague Tours.dc.html · #/tour):
+ * (1) an image hero (74svh) under a single top scrim, a premium eyebrow
+ * breadcrumb (gold rule · "Touren" · "Privatführung Nr. NN"), the SEO H1 and a
+ * 1.05rem gold-icon meta row; (2) a two-column body — burgundy Cormorant lead
+ * over a 64px brass hairline, intro prose at 1.1rem, a numbered "Was wir sehen"
+ * itinerary whose rows lift onto a white card on hover, plus the retained
+ * (restyled) "Im Preis enthalten" list and FAQ accordion; (3) a sticky frosted-
+ * glass booking card (gold capsule, definition list, ★★★★★ trust row, big
+ * burgundy CTA, lock line, phone/WhatsApp block); (4) a related-tours strip.
+ *
+ * Real data/routes/i18n preserved: SEO H1 (seoTitleKey), the canonical booking
+ * link (/book?tour=<title>#contact-title), and the route metadata (owned by the
  * app/tours/[slug]/page.tsx wrapper — untouched here).
- *
- * Layout: (1) a full-bleed hero band — the tour image under a dual ink scrim,
- * Italiana title + a Material-Symbols meta row; (2) the narrative (italic
- * burgundy lead + prose), a numbered "Was wir sehen" highlights list, the
- * "Im Preis enthalten" list and an FAQ accordion; (3) a sticky glass booking
- * card aside; (4) a related-tours strip drawn from the other tours.
  */
 
 import React from 'react';
@@ -22,9 +24,10 @@ import { useParams } from 'next/navigation';
 import { useLanguage } from '../context/LanguageContext';
 import { getTourBySlug, tours } from '../data/tours';
 import { BRAND } from '../brand';
-import { Kicker, Btn, Reveal, SHELL } from '../components/site/SiteUI';
+import { Kicker, Btn, Reveal, Stars, GLASS_CARD_STYLE, SHELL } from '../components/site/SiteUI';
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+const WA = `https://wa.me/${BRAND.phoneRaw.replace(/[^0-9]/g, '')}`;
 
 const TourPage: React.FC = () => {
   const params = useParams();
@@ -68,28 +71,30 @@ const TourPage: React.FC = () => {
   const meetingPoint = tx(tour.meetingPointKey);
   const languageValue = tx('tourpage.languageValue');
   const groupValue = tx('tourpage.groupSizeValue');
+  const num = String(tours.findIndex((x) => x.id === tour.id) + 1).padStart(2, '0');
 
   // Canonical booking link — preserved exactly (title query + #contact-title).
   const bookDest = `/book?tour=${encodeURIComponent(shortTitle)}#contact-title`;
 
   const heroMeta: { icon: string; label: string }[] = [
     { icon: 'schedule', label: duration },
-    { icon: 'group', label: de ? 'Private Gruppe' : 'Private group' },
+    { icon: 'group', label: groupValue },
     { icon: 'translate', label: languageValue },
   ];
 
   const cardRows: { dt: string; dd: string }[] = [
     { dt: de ? 'Dauer' : 'Duration', dd: duration },
     { dt: de ? 'Gruppe' : 'Group', dd: groupValue },
+    { dt: de ? 'Treffpunkt' : 'Meeting point', dd: meetingPoint },
     { dt: de ? 'Sprache' : 'Language', dd: languageValue },
   ];
 
-  const related = tours.filter((x) => x.id !== tour.id).slice(0, 3);
+  const related = tours.filter((x) => x.id !== tour.id && x.id !== 'custom').slice(0, 3);
 
   return (
     <div className="premium-inner">
       {/* ── Hero band ────────────────────────────────────────── */}
-      <section className="relative flex min-h-[68svh] items-end overflow-hidden md:min-h-[74svh]">
+      <section className="relative flex min-h-[74svh] items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={tour.image}
@@ -101,7 +106,7 @@ const TourPage: React.FC = () => {
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(to top, rgba(20,16,12,0.84) 0%, rgba(20,16,12,0.18) 55%, rgba(20,16,12,0.32) 100%), linear-gradient(to right, rgba(20,16,12,0.55) 0%, transparent 60%)',
+                'linear-gradient(to top, rgba(20,16,12,0.82) 0%, rgba(20,16,12,0.15) 55%, rgba(20,16,12,0.30) 100%)',
             }}
             aria-hidden
           />
@@ -109,27 +114,25 @@ const TourPage: React.FC = () => {
 
         <div className={`relative z-[2] w-full pb-[clamp(2.5rem,6vh,4.5rem)] pt-[clamp(2rem,5vh,3.5rem)] ${SHELL}`}>
           <nav
-            aria-label={de ? 'Brotkrümelnavigation' : 'Breadcrumb'}
-            className="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-[11px] uppercase tracking-[0.18em] text-ivory/70"
+            aria-label={de ? 'Pfad' : 'Breadcrumb'}
+            className="mb-[1.4rem] flex flex-wrap items-center gap-[0.9rem] font-sans text-[11px] font-medium uppercase tracking-[0.28em]"
           >
-            <Link href="/tours" className="transition-colors duration-300 hover:text-ivory">
+            <span aria-hidden className="h-px w-7 bg-gold-lamp/80" />
+            <Link href="/tours" className="text-ivory/[0.78] no-underline transition-colors duration-300 hover:text-ivory">
               {de ? 'Touren' : 'Tours'}
             </Link>
-            <span aria-hidden>/</span>
-            <span className="text-ivory/90">{shortTitle}</span>
+            <span aria-hidden className="text-ivory/45">·</span>
+            <span className="text-gold-lamp">{de ? `Privatführung Nr. ${num}` : `Private tour no. ${num}`}</span>
           </nav>
 
           <h1 className="m-0 max-w-[18ch] font-display text-[clamp(2.6rem,6vw,5rem)] font-normal leading-[1.02] tracking-[-0.02em] text-ivory">
             {heroTitle}
           </h1>
 
-          <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3">
+          <div className="mt-[1.6rem] flex flex-wrap gap-x-8 gap-y-[1.4rem]">
             {heroMeta.map((m) => (
-              <span
-                key={m.icon}
-                className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.12em] text-ivory/90"
-              >
-                <span className="material-symbols-outlined text-[17px] text-gold-lamp" aria-hidden>
+              <span key={m.icon} className="inline-flex items-center gap-[0.55rem] font-sans text-[1.05rem] text-ivory/[0.94]">
+                <span className="material-symbols-outlined text-[19px] text-gold-lamp" aria-hidden>
                   {m.icon}
                 </span>
                 {m.label}
@@ -142,65 +145,56 @@ const TourPage: React.FC = () => {
       {/* ── Body + sticky booking card ───────────────────────── */}
       <section className="pb-[clamp(4rem,9vh,7rem)] pt-[clamp(3rem,7vh,6rem)]">
         <div className={SHELL}>
-          <div className="grid grid-cols-1 items-start gap-[clamp(2.5rem,5vw,4rem)] min-[900px]:grid-cols-[1fr_360px]">
+          <div className="grid grid-cols-1 items-start gap-[clamp(2.5rem,5vw,5rem)] min-[900px]:grid-cols-[1fr_360px]">
             {/* Narrative */}
             <div>
               <Reveal>
-                <p className="m-0 font-italic text-[clamp(1.4rem,2.4vw,1.9rem)] italic leading-[1.45] text-burgundy">
+                <p className="m-0 font-italic text-[clamp(1.5rem,2.6vw,2rem)] italic leading-[1.42] text-burgundy">
                   {description}
                 </p>
-              </Reveal>
+                <div aria-hidden className="mb-[1.8rem] mt-6 h-px w-16 bg-brass" />
 
-              <Reveal delay={80}>
-                <div className="mt-[1.8rem] space-y-[1.3rem] font-body text-[1.075rem] leading-[1.78] text-ink-soft">
+                <div className="space-y-[1.3rem] font-body text-[1.1rem] leading-[1.78] text-ink-soft">
                   <p className="m-0">{tx(tour.body1Key)}</p>
                   <p className="m-0">{tx(tour.body2Key)}</p>
                   <p className="m-0">{tx(tour.body3Key)}</p>
                 </div>
               </Reveal>
 
-              {/* Highlights — numbered hairline list */}
+              {/* "Was wir sehen" — numbered itinerary, rows lift on hover */}
               <Reveal className="mt-[clamp(2.6rem,5vh,3.6rem)]">
-                <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.1rem)] font-normal leading-[1.12] tracking-[-0.01em] text-ink">
-                  {de ? (
-                    <>
-                      Was wir <em className="font-italic italic text-burgundy">sehen</em>
-                    </>
-                  ) : (
-                    <>
-                      What we&rsquo;ll <em className="font-italic italic text-burgundy">see</em>
-                    </>
-                  )}
+                <Kicker>{de ? 'Der Rundgang' : 'The walk'}</Kicker>
+                <h2 className="mt-[0.8rem] font-display text-[clamp(1.7rem,2.8vw,2.2rem)] font-normal leading-[1.16] tracking-[-0.01em] text-ink">
+                  {de ? 'Was wir sehen' : 'What we’ll see'}
                 </h2>
                 <ol className="mt-6 list-none p-0">
                   {tour.highlightKeys.map((key, i) => (
-                    <li
-                      key={key}
-                      className="grid grid-cols-[2.4rem_1fr] gap-[1.1rem] border-t border-rule py-[1.1rem] last:border-b"
-                    >
-                      <span className="font-display text-[1.1rem] leading-[1.5] text-brass" aria-hidden>
-                        {ROMAN[i] ?? String(i + 1)}
-                      </span>
-                      <span className="font-sans text-[0.98rem] font-semibold leading-[1.45] text-ink">
-                        {tx(key)}
-                      </span>
+                    <li key={key} className="border-t border-rule last:border-b">
+                      <div className="mx-[-1.2rem] my-[0.35rem] grid grid-cols-[2.6rem_1fr] gap-[1.1rem] rounded-lg px-[1.2rem] py-[1.15rem] transition-[background-color,box-shadow] duration-300 ease-brand hover:bg-white hover:shadow-[0_8px_24px_rgba(26,23,20,0.08)]">
+                        <span className="font-display text-[1.1rem] text-brass-deep" aria-hidden>
+                          {ROMAN[i] ?? String(i + 1)}
+                        </span>
+                        <span className="font-sans text-[1.05rem] font-semibold leading-[1.45] text-ink">
+                          {tx(key)}
+                        </span>
+                      </div>
                     </li>
                   ))}
                 </ol>
               </Reveal>
 
-              {/* What's included */}
+              {/* Im Preis enthalten — retained content, restyled hairline list */}
               <Reveal className="mt-[clamp(2.6rem,5vh,3.6rem)]">
-                <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.1rem)] font-normal leading-[1.12] tracking-[-0.01em] text-ink">
+                <h2 className="font-display text-[clamp(1.7rem,2.8vw,2.2rem)] font-normal leading-[1.16] tracking-[-0.01em] text-ink">
                   {tx('tourpage.included')}
                 </h2>
                 <ul className="mt-6 list-none p-0">
                   {tour.includedKeys.map((key) => (
                     <li
                       key={key}
-                      className="flex items-start gap-3 border-t border-rule py-[0.95rem] font-body text-[0.98rem] leading-[1.55] text-ink-soft last:border-b"
+                      className="flex items-start gap-3 border-t border-rule py-[0.95rem] font-body text-[1rem] leading-[1.55] text-ink-soft last:border-b"
                     >
-                      <span className="material-symbols-outlined mt-[1px] shrink-0 text-[18px] text-brass" aria-hidden>
+                      <span className="material-symbols-outlined mt-[1px] shrink-0 text-[18px] text-brass-deep" aria-hidden>
                         check
                       </span>
                       <span>{tx(key)}</span>
@@ -209,9 +203,9 @@ const TourPage: React.FC = () => {
                 </ul>
               </Reveal>
 
-              {/* FAQ */}
+              {/* FAQ — retained content, restyled accordion */}
               <Reveal className="mt-[clamp(2.6rem,5vh,3.6rem)]">
-                <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.1rem)] font-normal leading-[1.12] tracking-[-0.01em] text-ink">
+                <h2 className="font-display text-[clamp(1.7rem,2.8vw,2.2rem)] font-normal leading-[1.16] tracking-[-0.01em] text-ink">
                   {tx('tourpage.faq')}
                 </h2>
                 <div className="mt-6 border-t border-rule">
@@ -220,13 +214,13 @@ const TourPage: React.FC = () => {
                       <summary className="flex cursor-pointer list-none items-start justify-between gap-5 py-[1.15rem] font-display text-[1.15rem] font-normal leading-[1.3] text-ink marker:hidden [&::-webkit-details-marker]:hidden">
                         <span>{tx(qKey)}</span>
                         <span
-                          className="material-symbols-outlined mt-[2px] shrink-0 text-[20px] text-brass transition-transform duration-300 ease-brand group-open:rotate-45"
+                          className="material-symbols-outlined mt-[2px] shrink-0 text-[20px] text-brass-deep transition-transform duration-300 ease-brand group-open:rotate-45"
                           aria-hidden
                         >
                           add
                         </span>
                       </summary>
-                      <p className="m-0 pb-[1.3rem] pr-7 font-body text-[0.98rem] leading-[1.7] text-ink-soft">
+                      <p className="m-0 pb-[1.3rem] pr-7 font-body text-[1rem] leading-[1.7] text-ink-soft">
                         {tx(aKey)}
                       </p>
                     </details>
@@ -235,52 +229,69 @@ const TourPage: React.FC = () => {
               </Reveal>
             </div>
 
-            {/* Sticky glass booking card (direct grid child so it travels the
-                full body height; the Reveal transform is a safe descendant) */}
-            <aside className="min-[900px]:sticky min-[900px]:top-[110px]">
+            {/* Sticky frosted-glass booking card */}
+            <aside className="min-[900px]:sticky min-[900px]:top-[100px]">
               <Reveal>
-                <div className="rounded-xl border border-rule bg-paper/70 p-[1.8rem] shadow-[0_16px_44px_rgba(26,23,20,0.10)] backdrop-blur-[18px]">
-                    <h2 className="m-0 font-display text-[1.4rem] font-normal leading-[1.15] text-ink">
-                      {shortTitle}
-                    </h2>
-                    <p className="mb-6 mt-[0.4rem] font-sans text-[11px] uppercase tracking-[0.16em] text-ink-mute">
-                      {de ? 'Privatführung · auf Anfrage' : 'Private tour · on request'}
-                    </p>
+                <div style={GLASS_CARD_STYLE} className="p-[1.8rem]">
+                  <span className="mb-[1.1rem] inline-flex items-center gap-[0.45rem] rounded-full border border-[rgba(123,88,0,0.35)] px-[0.85rem] py-[0.4rem] font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-olive">
+                    <span className="material-symbols-outlined text-[14px]" aria-hidden>verified</span>
+                    {de ? 'Zertifizierte Expertin · Seit 1986' : 'Certified expert · Since 1986'}
+                  </span>
 
-                    <dl className="m-0 mb-5">
-                      {cardRows.map((row) => (
-                        <div
-                          key={row.dt}
-                          className="flex items-baseline justify-between gap-4 border-b border-rule-soft py-[0.7rem] last:border-b-0"
-                        >
-                          <dt className="font-sans text-[11px] uppercase tracking-[0.14em] text-ink-mute">
-                            {row.dt}
-                          </dt>
-                          <dd className="m-0 text-right font-sans text-[0.92rem] text-ink">{row.dd}</dd>
-                        </div>
-                      ))}
-                    </dl>
+                  <h2 className="m-0 mb-[0.35rem] font-display text-[1.55rem] font-normal leading-[1.15] text-ink">
+                    {de ? 'Diese Tour buchen' : 'Book this tour'}
+                  </h2>
+                  <p className="m-0 mb-[1.4rem] font-sans text-[1rem] text-ink-soft">
+                    {de ? 'Privatführung · unverbindlich anfragen' : 'Private tour · enquire without obligation'}
+                  </p>
 
-                    <div className="mb-6 border-t border-rule-soft pt-[0.9rem]">
-                      <div className="mb-[0.35rem] font-sans text-[11px] uppercase tracking-[0.14em] text-ink-mute">
-                        {tx('tourpage.meetingPoint')}
-                      </div>
-                      <p className="m-0 font-body text-[0.92rem] leading-[1.5] text-ink-soft">{meetingPoint}</p>
-                    </div>
-
-                    <Btn href={bookDest} variant="solid" arrow className="w-full justify-center">
-                      {tx('tourpage.enquiryCta')}
-                    </Btn>
-
-                    <p className="mt-3 text-center font-sans text-xs tracking-[0.02em] text-ink-mute">
-                      {de ? 'oder rufen Sie an: ' : 'or call: '}
-                      <a
-                        href={`tel:${BRAND.phoneRaw}`}
-                        className="text-burgundy underline-offset-2 transition-colors duration-300 hover:underline"
+                  <dl className="m-0 mb-6 grid gap-[0.9rem]">
+                    {cardRows.map((row, i) => (
+                      <div
+                        key={row.dt}
+                        className={`flex items-baseline justify-between gap-4 ${
+                          i < cardRows.length - 1 ? 'border-b border-rule-soft pb-[0.9rem]' : ''
+                        }`}
                       >
-                        {BRAND.phone}
+                        <dt className="font-sans text-[11.5px] uppercase tracking-[0.14em] text-ink-mute">{row.dt}</dt>
+                        <dd className="m-0 text-right font-sans text-[1.05rem] text-ink">{row.dd}</dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  <div className="mb-[0.9rem] flex flex-wrap items-center justify-center gap-[0.5rem]">
+                    <Stars size={15} />
+                    <span className="font-sans text-[0.92rem] text-ink-soft">
+                      {de ? '5,0 von 5 · über 4.900 Gäste' : '5.0 of 5 · over 4,900 guests'}
+                    </span>
+                  </div>
+
+                  <Btn href={bookDest} variant="solid" arrow className="mb-[0.9rem] w-full justify-center">
+                    {de ? 'Unverbindliche Anfrage senden' : 'Send a no-obligation enquiry'}
+                  </Btn>
+
+                  <p className="m-0 mb-[1.1rem] flex items-center justify-center gap-[0.4rem] font-sans text-[0.9rem] text-ink-soft">
+                    <span className="material-symbols-outlined text-[15px] text-brass-deep" aria-hidden>lock</span>
+                    {de ? 'Kostenlos & ohne Verpflichtung' : 'Free & without obligation'}
+                  </p>
+
+                  <div className="border-t border-rule-soft pt-[1.05rem] text-center">
+                    <div className="font-sans text-[0.98rem] text-ink-soft">
+                      {de ? 'Lieber persönlich?' : 'Prefer to speak in person?'}
+                    </div>
+                    <a
+                      href={`tel:${BRAND.phoneRaw}`}
+                      className="mt-[0.3rem] inline-block font-sans text-[1.25rem] font-semibold text-burgundy no-underline"
+                    >
+                      {BRAND.phone}
+                    </a>
+                    <div className="mt-[0.25rem] font-sans text-[0.92rem] text-ink-mute">
+                      {de ? 'auch per ' : 'also via '}
+                      <a href={WA} target="_blank" rel="noopener noreferrer" className="text-burgundy">
+                        WhatsApp
                       </a>
-                    </p>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </aside>
@@ -290,24 +301,24 @@ const TourPage: React.FC = () => {
 
       {/* ── Related tours ────────────────────────────────────── */}
       {related.length > 0 && (
-        <section className="border-t border-rule bg-ivory-deep py-[clamp(3.5rem,8vh,6rem)]">
+        <section className="bg-ivory-deep py-[clamp(3.5rem,8vh,6rem)]">
           <div className={SHELL}>
             <Reveal>
               <Kicker>{de ? 'Vielleicht auch interessant' : 'You might also like'}</Kicker>
-              <h2 className="mt-4 font-display text-[clamp(1.8rem,3.4vw,2.6rem)] font-normal leading-[1.08] tracking-[-0.015em] text-ink">
+              <h2 className="mt-[0.8rem] font-display text-[clamp(1.8rem,3.2vw,2.5rem)] font-normal leading-[1.08] tracking-[-0.015em] text-ink">
                 {de ? (
                   <>
-                    Weitere private <em className="font-italic italic text-burgundy">Touren</em>
+                    Weitere Wege durch <em className="font-italic italic text-burgundy">Prag</em>
                   </>
                 ) : (
                   <>
-                    More private <em className="font-italic italic text-burgundy">tours</em>
+                    More ways through <em className="font-italic italic text-burgundy">Prague</em>
                   </>
                 )}
               </h2>
             </Reveal>
 
-            <div className="mt-[clamp(1.8rem,4vh,2.6rem)] grid grid-cols-1 gap-[1.6rem] sm:grid-cols-2 min-[860px]:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-[1.6rem] sm:grid-cols-2 min-[860px]:grid-cols-3">
               {related.map((r, i) => {
                 const rSlug = de ? r.slugDe : r.slug;
                 const rTitle = tx(r.titleKey);
@@ -315,21 +326,24 @@ const TourPage: React.FC = () => {
                   <Reveal as="article" key={r.id} delay={i * 80}>
                     <Link
                       href={`/tours/${rSlug}`}
-                      className="group block h-full overflow-hidden rounded-lg border border-rule bg-paper transition-colors duration-300 ease-brand hover:border-brass"
+                      className="group block h-full overflow-hidden rounded-lg border border-rule bg-white no-underline transition-[transform,box-shadow] duration-300 ease-brand hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(26,23,20,0.12)]"
                     >
-                      <div className="aspect-[16/10] overflow-hidden">
+                      <div className="overflow-hidden">
                         <img
                           src={r.image}
-                          alt={rTitle}
+                          alt=""
                           loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-[800ms] ease-brand group-hover:scale-[1.05]"
+                          className="h-[190px] w-full object-cover transition-transform duration-[800ms] ease-brand group-hover:scale-[1.05]"
                         />
                       </div>
-                      <div className="px-[1.3rem] pb-[1.4rem] pt-[1.2rem]">
-                        <h3 className="m-0 font-display text-[1.25rem] font-normal leading-[1.2] text-ink">
+                      <div className="px-[1.35rem] pb-[1.45rem] pt-[1.25rem]">
+                        <h3 className="m-0 mb-[0.45rem] font-display text-[1.35rem] font-normal leading-[1.2] text-ink">
                           {rTitle}
                         </h3>
-                        <div className="mt-[0.45rem] font-sans text-[10px] uppercase tracking-[0.16em] text-brass-deep">
+                        <div className="flex items-center gap-[0.45rem] font-sans text-[0.95rem] text-ink-soft">
+                          <span className="material-symbols-outlined text-[16px] text-brass-deep" aria-hidden>
+                            schedule
+                          </span>
                           {tx(r.durationKey)} · {de ? 'Privat' : 'Private'}
                         </div>
                       </div>

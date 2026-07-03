@@ -3,8 +3,9 @@
 import React from 'react';
 
 /**
- * Fixed 2px reading-progress bar at the top of the viewport.
- * Burgundy fill, transparent rail. Tracks document scroll percentage.
+ * Fixed 3px reading-progress bar pinned to the very top of the viewport
+ * (above the header). Burgundy fill, transparent rail. Tracks document
+ * scroll percentage via a passive scroll listener.
  */
 const ProgressBar: React.FC = () => {
   const [pct, setPct] = React.useState(0);
@@ -24,7 +25,7 @@ const ProgressBar: React.FC = () => {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 top-0 z-[100] h-0.5 bg-transparent"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[3px] bg-transparent"
     >
       <div
         className="h-full bg-burgundy transition-[width] duration-100 ease-linear"

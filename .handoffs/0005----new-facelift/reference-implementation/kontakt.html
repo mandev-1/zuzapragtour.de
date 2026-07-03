@@ -1,0 +1,137 @@
+<!-- @dsCard group="Website" viewport="1280x820" name="Full Site — Kontakt" subtitle="Premium multi-page site · contact / book" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt &amp; Buchung · Zuzana Manová</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .k-wrap { padding: clamp(2.5rem, 5vh, 4rem) 0 clamp(4rem, 9vh, 7rem); }
+  .k-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
+  @media (max-width: 880px) { .k-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  /* Left: personal intro + details */
+  .k-aside .lead { font-family: var(--font-italic); font-style: italic; font-size: clamp(1.4rem, 2.4vw, 1.85rem); line-height: 1.42; color: var(--burgundy); margin: 1rem 0 1.2rem; }
+  .k-aside p { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft); margin: 0 0 1.6rem; }
+  .k-details { display: grid; gap: 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+  .k-detail { display: flex; gap: 0.9rem; align-items: flex-start; }
+  .k-detail .material-symbols-outlined { font-size: 20px; color: var(--burgundy); margin-top: 2px; }
+  .k-detail .l { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); }
+  .k-detail .v { font-family: var(--font-sans); font-size: 0.98rem; color: var(--ink); }
+  .k-detail .v a { color: var(--ink); }
+  .k-detail .v a:hover { color: var(--burgundy); }
+
+  /* Right: form (glass) */
+  .k-form { border: 1px solid rgba(58,51,44,0.08); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.25) 50%), rgba(255,255,255,0.55); -webkit-backdrop-filter: blur(18px) saturate(135%); backdrop-filter: blur(18px) saturate(135%); box-shadow: 0 16px 44px rgba(26,23,20,0.10), inset 0 1px 0 rgba(255,255,255,0.85); overflow: hidden; }
+  .k-form__head { padding: 1.3rem 1.8rem; border-bottom: 1px solid var(--rule); }
+  .k-form__body { padding: 1.8rem; display: grid; gap: 1.2rem; }
+  .k-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  @media (max-width: 520px) { .k-row { grid-template-columns: 1fr; } }
+  .field label { display: block; font-family: var(--font-sans); font-size: 12px; color: var(--stone-700); margin-bottom: 0.4rem; }
+  .field input, .field textarea, .field select { width: 100%; box-sizing: border-box; border: 1px solid var(--stone-200); border-radius: var(--radius-md); background: rgba(255,255,255,0.6); padding: 0.8rem 1rem; font-family: var(--font-body); font-size: 0.98rem; color: var(--ink); outline: none; transition: border-color var(--dur-fast) var(--ease-out); }
+  .field textarea { resize: vertical; min-height: 120px; }
+  .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--ink); }
+  .k-form .btn { width: 100%; justify-content: center; }
+  .k-note { text-align: center; font-family: var(--font-sans); font-size: 12px; color: var(--stone-400); }
+  .k-success { display: none; padding: 3.5rem 1.5rem; text-align: center; }
+  .k-success.show { display: block; }
+  .k-success .material-symbols-outlined { font-size: 40px; color: var(--success); }
+  .k-success h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; color: var(--success); margin: 0.6rem 0 0.5rem; }
+  .k-success p { font-family: var(--font-body); font-size: 1rem; color: var(--ink-soft); max-width: 26rem; margin: 0 auto; }
+  .k-form__inner.hide { display: none; }
+  /* Decorative background star accents, placed in the gutter beside headings */
+  .page-banner { position: relative; }
+  .page-banner > .shell { position: relative; z-index: 1; }
+  .k-wrap { position: relative; }
+  .k-wrap > .shell { position: relative; z-index: 1; }
+  .deco-star { position: absolute; z-index: 0; color: var(--brass); opacity: 0.16; line-height: 1; pointer-events: none; -webkit-user-select: none; user-select: none; }
+  .deco-star--1 { top: clamp(5.25rem, 12vh, 8.25rem); left: max(0.75rem, calc(50vw - 605px)); font-size: clamp(3.5rem, 7vw, 6.5rem); transform: rotate(-9deg); }
+  .deco-star--2 { top: clamp(3.25rem, 7vh, 4.75rem); left: max(0.75rem, calc(50vw - 612px)); font-size: clamp(2.6rem, 5vw, 4.6rem); transform: rotate(7deg); }
+  @media (max-width: 920px) { .deco-star { display: none; } }
+</style>
+</head>
+<body class="inner" data-page="kontakt">
+
+  <header class="nav solid" id="nav"></header>
+
+  <div class="page-banner">
+    <span class="deco-star deco-star--1" aria-hidden="true">★</span>
+    <div class="shell">
+      <span class="kicker">Kontakt &amp; Buchung</span>
+      <h1 class="display">Erzählen Sie mir, was Sie <em>interessiert</em>.</h1>
+      <p class="sub">Keine Agentur, kein Callcenter. Sie schreiben mir, und ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
+    </div>
+  </div>
+
+  <main>
+  <section class="k-wrap">
+    <span class="deco-star deco-star--2" aria-hidden="true">★</span>
+    <div class="shell k-grid">
+
+      <div class="k-aside">
+        <span class="kicker">Direkt mit Zuzana</span>
+        <p class="lead">Jede gute Tour beginnt mit einem Gespräch.</p>
+        <p>Sagen Sie mir, wer mitkommt und was Sie sehen möchten — oder lassen Sie sich einfach von mir leiten. Ich melde mich persönlich bei Ihnen zurück.</p>
+        <div class="k-details">
+          <div class="k-detail"><span class="material-symbols-outlined">call</span><div><div class="l">Telefon</div><div class="v"><a href="tel:+420721231933">+420 721 231 933</a></div></div></div>
+          <div class="k-detail"><span class="material-symbols-outlined">chat</span><div><div class="l">WhatsApp</div><div class="v"><a href="https://wa.me/420721231933" target="_blank" rel="noopener">Direkt schreiben</a></div></div></div>
+          <div class="k-detail"><span class="material-symbols-outlined">mail</span><div><div class="l">E-Mail</div><div class="v"><a href="mailto:zuzanamanova@email.cz">zuzanamanova@email.cz</a></div></div></div>
+          <div class="k-detail"><span class="material-symbols-outlined">schedule</span><div><div class="l">Antwortzeit</div><div class="v">In der Regel unter 24 Stunden</div></div></div>
+        </div>
+      </div>
+
+      <div class="k-form">
+        <div class="k-form__inner" id="formInner">
+          <div class="k-form__head"><span class="kicker">Anfrageformular</span></div>
+          <div class="k-form__body">
+            <div class="k-row">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" placeholder="Ihr Name" required></div>
+              <div class="field"><label for="email">E-Mail</label><input id="email" name="email" type="email" placeholder="ihre@email.de" required></div>
+            </div>
+            <div class="k-row">
+              <div class="field"><label for="tour">Tour</label>
+                <select id="tour" name="tour">
+                  <option>Die Prager Burg &amp; St.-Veits-Dom</option>
+                  <option>Altstadt &amp; Jüdisches Viertel</option>
+                  <option>Das alchemistische Prag</option>
+                  <option>Verstecktes Prag</option>
+                  <option>Prag &amp; deutsches Erbe</option>
+                  <option>Individuelle Privattour</option>
+                  <option>Noch unentschlossen</option>
+                </select>
+              </div>
+              <div class="field"><label for="date">Wunschtermin</label><input id="date" name="date" placeholder="z. B. Mai 2026"></div>
+            </div>
+            <div class="field"><label for="msg">Nachricht</label><textarea id="msg" name="msg" placeholder="Erzählen Sie mir von Ihrer Gruppe und was Sie in Prag sehen möchten…"></textarea></div>
+            <button type="button" class="btn solid" id="sendBtn">Anfrage senden <span class="material-symbols-outlined">arrow_forward</span></button>
+            <p class="k-note">Ihre Daten sind sicher und werden nicht weitergegeben.</p>
+          </div>
+        </div>
+        <div class="k-success" id="success">
+          <span class="material-symbols-outlined">check_circle</span>
+          <h2 class="display">Anfrage gesendet</h2>
+          <p>Vielen Dank! Ich melde mich in der Regel innerhalb von 24 Stunden persönlich bei Ihnen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+  <script src="site.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById('sendBtn');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        document.getElementById('formInner').classList.add('hide');
+        document.getElementById('success').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>

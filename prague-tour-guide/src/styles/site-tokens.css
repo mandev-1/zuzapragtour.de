@@ -1,0 +1,103 @@
+/* ============================================================
+   Zuza Prague Tours — Global design tokens (0005 facelift)
+   Lifted verbatim from the handoff's tokens/{colors,spacing}.css so
+   the premium marketing surfaces can mirror the prototype's inline
+   styles 1:1 via var(--…). FONTS ARE INTENTIONALLY OMITTED — the
+   --font-* variables are owned by next/font (see app/layout.tsx) and
+   must not be redefined here.
+   ============================================================ */
+
+:root {
+  /* ── Paper / ground ────────────────────────────── */
+  --ivory: #F5EFE4;
+  --ivory-deep: #EDE4D3;
+  --paper: #FAF6EC;
+  --paper-warm: #F5F1EA;
+  --canvas: #FBF9F5;
+  --canvas-alt: #F5F3EF;
+  --canvas-mute: #EFEEEA;
+
+  /* ── Ink / type ────────────────────────────────── */
+  --ink: #1A1714;
+  --ink-2: #1B1C1A;
+  --ink-soft: #3A332C;
+  --ink-mute: #6B6055;
+  --ink-warm: #58413F;
+
+  /* ── Burgundy (primary brand) ──────────────────── */
+  --burgundy: #6B1F2A;
+  --burgundy-deep: #4F1620;
+  --crimson: #6C0008;
+  --crimson-bright: #8E1B1B;
+  --accent: #8A1F1F;
+  --accent-hover: #6E1818;
+  --accent-soft: #F5E6E6;
+
+  /* ── Brass / gold (secondary accent) ───────────── */
+  --brass: #A88654;
+  --brass-deep: #8C6A3C;
+  --gold-olive: #7B5800;
+  --gold-lamp: #FDC34D;
+
+  /* ── Sage / rose (rare decorative) ─────────────── */
+  --sage: #8A9282;
+  --rose: #E0BFBC;
+
+  /* ── Rules / hairlines ─────────────────────────── */
+  --rule: #D9CFBC;
+  --rule-soft: #E8DFCC;
+
+  /* ── Stone neutral scale ───────────────────────── */
+  --stone-50:  #FAF8F4;
+  --stone-100: #F0EBE2;
+  --stone-200: #E0D8C9;
+  --stone-300: #C7BBA6;
+  --stone-400: #A89880;
+  --stone-500: #857563;
+  --stone-600: #645849;
+  --stone-700: #453D33;
+  --stone-800: #2B2620;
+  --stone-900: #1A1613;
+
+  /* ── Semantic surfaces ─────────────────────────── */
+  --surface: var(--paper);
+  --surface-card: #FFFFFF;
+  --surface-raised: var(--paper-warm);
+  --surface-sunken: var(--canvas-mute);
+  --surface-dark: var(--ink);
+  --on-surface: var(--ink);
+  --on-surface-mute: var(--ink-mute);
+  --on-dark: var(--ivory);
+  --on-dark-mute: var(--stone-400);
+
+  /* ── States ────────────────────────────────────── */
+  --error: #BA1A1A;
+  --success: #3F6B4A;
+
+  /* ── Signature gradient (marketing CTA / buttons) ─ */
+  --grad-burgundy: linear-gradient(135deg, #6C0008 0%, #8E1B1B 100%);
+
+  /* ── Radii ─────────────────────────────────────── */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1.5rem;
+  --radius-pill: 999px;
+
+  /* ── Shadows (soft, warm-neutral, low) ─────────── */
+  --shadow-xs: 0 1px 2px rgba(26, 23, 20, 0.05);
+  --shadow-sm: 0 2px 8px rgba(26, 23, 20, 0.05);
+  --shadow-md: 0 8px 24px rgba(26, 23, 20, 0.08);
+  --shadow-lg: 0 18px 40px rgba(26, 23, 20, 0.12);
+  --shadow-xl: 0 24px 60px rgba(26, 23, 20, 0.18);
+  --shadow-cta: 0 18px 40px rgba(108, 0, 8, 0.20);
+
+  /* ── Motion ────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.3s;
+  --dur-slow: 0.6s;
+  --dur-image: 0.7s;
+}

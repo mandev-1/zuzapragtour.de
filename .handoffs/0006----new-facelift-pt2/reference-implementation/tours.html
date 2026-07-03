@@ -1,0 +1,134 @@
+<!-- @dsCard group="Website" viewport="1280x820" name="Full Site — Tours" subtitle="Premium multi-page site · tours list" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Touren · Zuzana Manová</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .tlist { padding: clamp(3rem, 6vh, 5rem) 0 clamp(4rem, 9vh, 7rem); }
+  .tlist__intro { max-width: 40rem; margin-bottom: clamp(2.5rem, 5vh, 4rem); font-family: var(--font-body); font-size: 1.1rem; line-height: 1.7; color: var(--ink-soft); }
+  .trow { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding: clamp(2.5rem, 5vh, 4rem) 0; border-top: 1px solid var(--rule); }
+  .trow:last-of-type { border-bottom: 1px solid var(--rule); }
+  .trow__media { overflow: hidden; aspect-ratio: 5/4; background: var(--ivory-deep); }
+  .trow__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s var(--ease-out); }
+  .trow:hover .trow__media img { transform: scale(1.05); }
+  .trow:nth-child(even) .trow__media { order: 2; }
+  .trow__num { font-family: var(--font-display); font-size: 1rem; color: var(--brass); letter-spacing: 0.1em; }
+  .trow h2 { margin: 0.7rem 0 0; font-size: clamp(1.8rem, 3.4vw, 2.7rem); }
+  .trow__meta { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.1rem 0 1.2rem; }
+  .chip { font-family: var(--font-sans); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); border: 1px solid var(--rule); border-radius: var(--radius-pill); padding: 0.4rem 0.85rem; }
+  .chip.gold { color: var(--gold-olive); border-color: rgba(123,88,0,0.3); }
+  .trow p.desc { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft); margin: 0 0 1.6rem; max-width: 32rem; }
+  @media (max-width: 820px) {
+    .trow { grid-template-columns: 1fr; gap: 1.5rem; }
+    .trow:nth-child(even) .trow__media { order: 0; }
+  }
+
+  .tcta { background: var(--ink); color: var(--ivory); text-align: center; padding: clamp(4rem, 9vh, 6.5rem) 0; }
+  .tcta .kicker { color: var(--stone-400); justify-content: center; }
+  .tcta .kicker::before, .tcta .kicker.center::after { background: var(--brass); }
+  .tcta h2 { color: var(--ivory); font-size: clamp(2rem, 4vw, 3.2rem); margin: 1.2rem auto 1.8rem; max-width: 24ch; }
+  .tcta h2 em { color: var(--gold-lamp); }
+</style>
+</head>
+<body class="inner" data-page="tours">
+
+  <header class="nav solid" id="nav"></header>
+
+  <div class="page-banner">
+    <div class="shell">
+      <span class="kicker">Touren · Privatführungen</span>
+      <h1 class="display">Jede Tour beginnt mit Ihrer <em>Neugier</em>.</h1>
+      <p class="sub">Keine festen Skripte, keine Massen. Nur Sie, Prag und vierzig Jahre Geschichten. Wählen Sie einen Ausgangspunkt — den Rest gestalten wir gemeinsam.</p>
+    </div>
+  </div>
+
+  <main>
+  <section class="tlist">
+    <div class="shell">
+
+      <a class="trow reveal" href="tour-detail.html">
+        <div class="trow__media"><img src="assets/images/st-vitus-night.png" alt="St.-Veits-Dom bei Nacht, angestrahlt"></div>
+        <div>
+          <span class="trow__num">01</span>
+          <h2 class="display">Die Prager Burg &amp; St.-Veits-Dom</h2>
+          <div class="trow__meta"><span class="chip">3,5 Stunden</span><span class="chip">Privatführung</span><span class="chip gold">Beliebt</span></div>
+          <p class="desc">Tausend Jahre Macht, Glaube und Architektur auf dem größten zusammenhängenden Burgareal der Welt — vom romanischen Fundament bis zur gotischen Pracht des Doms.</p>
+          <span class="ulink">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></span>
+        </div>
+      </a>
+
+      <a class="trow reveal" href="tour-detail.html">
+        <div class="trow__media"><img src="assets/images/jewish-quarter.jpg" alt="Jüdisches Viertel"></div>
+        <div>
+          <span class="trow__num">02</span>
+          <h2 class="display">Altstadt &amp; Jüdisches Viertel</h2>
+          <div class="trow__meta"><span class="chip">4 Stunden</span><span class="chip gold">Museums-Akkreditiert</span></div>
+          <p class="desc">Das mittelalterliche Herz Prags und das bewegende Erbe des Josefov, geführt mit offizieller Akkreditierung des Jüdischen Museums in Prag.</p>
+          <span class="ulink">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></span>
+        </div>
+      </a>
+
+      <a class="trow reveal" href="tour-detail.html">
+        <div class="trow__media"><img src="assets/images/night-prague.jpg" alt="Prag bei Nacht"></div>
+        <div>
+          <span class="trow__num">03</span>
+          <h2 class="display">Das alchemistische Prag</h2>
+          <div class="trow__meta"><span class="chip">3 Stunden</span><span class="chip">Nach Einbruch der Dunkelheit</span></div>
+          <p class="desc">Die mystische und geheimnisvolle Seite der Prager Geschichte — von der Astrologie am Hofe Rudolfs II. bis zu den Legenden des Goldenen Gässchens.</p>
+          <span class="ulink">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></span>
+        </div>
+      </a>
+
+      <a class="trow reveal" href="tour-detail.html">
+        <div class="trow__media"><img src="assets/images/hidden-gems.jpg" alt="Verstecktes Prag"></div>
+        <div>
+          <span class="trow__num">04</span>
+          <h2 class="display">Verstecktes Prag</h2>
+          <div class="trow__meta"><span class="chip">2,5 Stunden</span><span class="chip">Abseits der Pfade</span></div>
+          <p class="desc">Höfe, Gassen und Geschichten abseits der Touristenpfade — das Prag, das die Einheimischen lieben und das in keinem Reiseführer steht.</p>
+          <span class="ulink">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></span>
+        </div>
+      </a>
+
+      <a class="trow reveal" href="tour-detail.html">
+        <div class="trow__media"><img src="assets/images/kafka.jpg" alt="Kafkas Prag"></div>
+        <div>
+          <span class="trow__num">05</span>
+          <h2 class="display">Prag &amp; deutsches Erbe</h2>
+          <div class="trow__meta"><span class="chip">2,75 Stunden</span><span class="chip">Deutschsprachig</span></div>
+          <p class="desc">Auf den Spuren der deutschsprachigen Geschichte Prags, von Kafka bis zur Prager deutschen Literatur — ein Kapitel, das die Stadt bis heute prägt.</p>
+          <span class="ulink">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></span>
+        </div>
+      </a>
+
+      <a class="trow reveal" href="kontakt.html">
+        <div class="trow__media"><img src="assets/images/boat-vltava.jpg" alt="Individuelle Tour"></div>
+        <div>
+          <span class="trow__num">06</span>
+          <h2 class="display">Individuelle Privattour</h2>
+          <div class="trow__meta"><span class="chip gold">Maßgeschneidert</span><span class="chip">Flexibel</span></div>
+          <p class="desc">Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser — wir entdecken es gemeinsam.</p>
+          <span class="ulink">Anfrage senden <span class="material-symbols-outlined">arrow_forward</span></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="tcta">
+    <div class="shell">
+      <span class="kicker center">Bereit zu beginnen?</span>
+      <h2 class="display">Erzählen Sie mir, was Sie <em>interessiert</em>.</h2>
+      <a href="kontakt.html" class="btn cream">Tour buchen <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+  <script src="site.js"></script>
+</body>
+</html>

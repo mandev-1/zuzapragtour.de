@@ -21,7 +21,7 @@ interface TableOfContentsProps {
  */
 const TableOfContents: React.FC<TableOfContentsProps> = ({
   items,
-  title = 'In diesem Artikel',
+  title = 'Inhalt',
 }) => {
   const [activeId, setActiveId] = React.useState<string>(items[0]?.id ?? '');
 
@@ -45,36 +45,42 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
 
   if (!items.length) return null;
 
+  const jump = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (!el) return;
+    const smooth = !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const top = el.getBoundingClientRect().top + window.scrollY - 90; // clear the sticky masthead
+    window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+    setActiveId(id);
+  };
+
   return (
-    <nav aria-label="Inhaltsverzeichnis" className="sticky top-[100px] font-sans text-[12px]">
-      <div className="mb-4 border-b border-rule pb-3 font-sans text-[10px] uppercase tracking-[0.2em] text-ink-mute">
+    <nav aria-label="Inhalt" className="sticky top-[100px] border-t-2 border-ink pt-[1.05rem]">
+      <div className="mb-[0.85rem] font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-ink">
         {title}
       </div>
-      <ul className="m-0 flex list-none flex-col gap-[10px] p-0">
-        {items.map((it) => {
+      <ol className="m-0 grid list-none gap-[0.2rem] p-0">
+        {items.map((it, i) => {
           const isActive = it.id === activeId;
           return (
             <li key={it.id}>
               <a
                 href={`#${it.id}`}
-                className={[
-                  'block border-l py-0.5 leading-[1.4] no-underline transition-all duration-200',
-                  isActive
-                    ? 'border-l-2 border-burgundy pl-[11px] text-burgundy'
-                    : 'border-rule pl-3 text-ink-soft hover:border-burgundy hover:text-burgundy',
-                ].join(' ')}
+                onClick={(e) => jump(e, it.id)}
+                className={`flex items-baseline gap-[0.7rem] border-l-2 py-[0.45rem] pl-[0.85rem] font-sans text-[0.98rem] leading-[1.4] no-underline transition-[color,border-color] duration-300 ease-brand hover:text-burgundy ${
+                  isActive ? 'border-burgundy font-semibold text-burgundy' : 'border-rule-soft font-normal text-ink-soft'
+                }`}
               >
-                {it.index && (
-                  <span className="mr-2 font-italic text-[13px] italic text-brass">
-                    {it.index}
-                  </span>
-                )}
-                {it.label}
+                <span aria-hidden className={`shrink-0 font-display text-[0.92rem] transition-colors duration-300 ${isActive ? 'text-burgundy' : 'text-brass-deep'}`}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span>{it.label}</span>
               </a>
             </li>
           );
         })}
-      </ul>
+      </ol>
     </nav>
   );
 };

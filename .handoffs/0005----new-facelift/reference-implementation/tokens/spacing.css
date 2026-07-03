@@ -1,0 +1,61 @@
+/* ============================================================
+   Zuza Prague Tours — Spacing, radii, shadow & layout tokens
+   The system is restrained: hairline rules over heavy borders,
+   soft low shadows, mostly small radii. Generous vertical rhythm
+   (sections breathe at py-12+ / ~3rem).
+   ============================================================ */
+
+:root {
+  /* ── Spacing scale (4px base) ──────────────────── */
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.25rem;   /* 20 */
+  --space-6: 1.5rem;    /* 24 */
+  --space-8: 2rem;      /* 32 */
+  --space-10: 2.5rem;   /* 40 */
+  --space-12: 3rem;     /* 48 — default section padding */
+  --space-16: 4rem;     /* 64 */
+  --space-20: 5rem;     /* 80 */
+  --space-24: 6rem;     /* 96 */
+  --space-28: 7rem;     /* 112 — editorial section padding */
+
+  /* ── Radii ─────────────────────────────────────── */
+  --radius-xs: 0.125rem;   /* 2 — square-ish inputs/thumbnails */
+  --radius-sm: 0.25rem;    /* 4 */
+  --radius-md: 0.375rem;   /* 6 — default button/input */
+  --radius-lg: 0.5rem;     /* 8 — image corners */
+  --radius-xl: 0.75rem;    /* 12 — cards */
+  --radius-2xl: 1.5rem;    /* 24 — feature CTA panel */
+  --radius-pill: 999px;    /* pills, blog buttons */
+
+  /* ── Shadows (soft, warm-neutral, low) ─────────── */
+  --shadow-xs: 0 1px 2px rgba(26, 23, 20, 0.05);
+  --shadow-sm: 0 2px 8px rgba(26, 23, 20, 0.05);
+  --shadow-md: 0 8px 24px rgba(26, 23, 20, 0.08);
+  --shadow-lg: 0 18px 40px rgba(26, 23, 20, 0.12);
+  --shadow-xl: 0 24px 60px rgba(26, 23, 20, 0.18);
+  --shadow-cta: 0 18px 40px rgba(108, 0, 8, 0.20);  /* burgundy glow */
+  --text-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.30);  /* on hero imagery */
+
+  /* ── Borders ───────────────────────────────────── */
+  --border-hairline: 1px solid var(--rule);
+  --border-rule-soft: 1px solid var(--rule-soft);
+  --border-ink: 1px solid var(--ink);
+  --accent-rule: 2px;   /* burgundy left-rule on pull quotes */
+  --brass-rule: 3px;    /* brass left-rule on callouts */
+
+  /* ── Layout shells ─────────────────────────────── */
+  --shell: 1320px;       /* editorial masthead width */
+  --shell-editorial: 72rem;  /* marketing max width (max-w-7xl-ish) */
+  --shell-prose: 44rem;
+  --header-h: 73px;
+
+  /* ── Motion ────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --dur-fast: 0.2s; /* @kind other */
+  --dur-base: 0.3s; /* @kind other */
+  --dur-slow: 0.6s; /* @kind other */
+  --dur-image: 0.7s; /* @kind other */
+}

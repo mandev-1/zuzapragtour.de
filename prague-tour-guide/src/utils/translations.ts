@@ -336,8 +336,8 @@ export const translations = {
     de: 'Blick auf die Karlsbrücke in Prag bei Abenddämmerung',
   },
   'home.tours.teaser.title': {
-    en: 'Popular tours',
-    de: 'Beliebte Touren',
+    en: 'Selected experiences',
+    de: 'Ausgewählte Erlebnisse',
   },
   'home.tours.teaser.viewAll': {
     en: 'View all tours',
