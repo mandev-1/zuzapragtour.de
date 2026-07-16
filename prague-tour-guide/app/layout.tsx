@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-
+ß
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -78,9 +78,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
         <link
+          as="style"
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        <meta property="og:title" content="..." />
+        <meta property="og:description" content="..." />
+        <meta property="og:image" content="https://your-site.com/new-thumbnail.jpg" />
+        <meta property="og:url" content="https://your-site.com/page" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         {ADSENSE_ENABLED && (
           <>
             {/* AdSense site verification — required to activate the account */}

@@ -85,7 +85,7 @@ const Home: React.FC = () => {
             {de ? 'Zertifizierte Prag-Expertin' : 'Certified Prague Expert'}
           </span>
           <h1 className="m-0 font-display text-[clamp(3.2rem,8.5vw,7rem)] font-normal leading-[0.98] tracking-[-0.02em] text-ivory [text-wrap:balance]">
-            {de ? <>Entdecken Sie<br /><em className="font-italic italic">Prag</em>, vertraulich.</> : <>Discover<br /><em className="font-italic italic">Prague</em>, privately.</>}
+            {de ? <>Entdecken Sie<br /><em className="font-italic italic">Prag</em>, äusserst interessant.</> : <>Discover<br /><em className="font-italic italic">Prague</em>, privately.</>}
           </h1>
           <p className="mb-[2.6rem] mt-[1.8rem] max-w-[32rem] font-body text-[clamp(1.05rem,1.4vw,1.25rem)] leading-[1.6] text-ivory/90">
             {de
