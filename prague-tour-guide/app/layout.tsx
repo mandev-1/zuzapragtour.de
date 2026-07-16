@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 };
-ß
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
