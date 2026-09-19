@@ -51,9 +51,13 @@ function injectHeadingIds(html: string): string {
   });
 }
 
-const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
-const GRUND_LABELS_DE = ['Erster Grund', 'Zweiter Grund', 'Dritter Grund', 'Vierter Grund', 'Fünfter Grund', 'Sechster Grund'];
-const ABSCHNITT_LABELS = ['Erster Abschnitt', 'Zweiter Abschnitt', 'Dritter Abschnitt', 'Vierter Abschnitt', 'Fünfter Abschnitt'];
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+const ORDINALS_DE = [
+  'Erster', 'Zweiter', 'Dritter', 'Vierter', 'Fünfter', 'Sechster',
+  'Siebter', 'Achter', 'Neunter', 'Zehnter', 'Elfter', 'Zwölfter',
+];
+const GRUND_LABELS_DE = ORDINALS_DE.map((o) => `${o} Grund`);
+const ABSCHNITT_LABELS = ORDINALS_DE.map((o) => `${o} Abschnitt`);
 
 function processGrundSections(html: string): string {
   const isGrunde = /<h2[^>]*>\s*\d+\./i.test(html);

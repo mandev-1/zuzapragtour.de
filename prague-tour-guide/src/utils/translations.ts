@@ -2072,8 +2072,8 @@ export const translations = {
     de: 'Über Zuzana Manová',
   },
   'zm.bio.p1': {
-    en: 'My name is Zuzana Manová and I have been a professional tour guide in Prague since 1986. I studied at the Czech Technical University (Ing.) and spent years working as an engineer before the Velvet Revolution in 1989 opened new possibilities. I pivoted to what I had always been passionate about: sharing my city with visitors from around the world.',
-    de: 'Mein Name ist Zuzana Manová und ich bin seit 1986 professionelle Stadtführerin in Prag. Ich habe an der Tschechischen Technischen Universität studiert (Ing.) und als Ingenieurin gearbeitet, bevor die Samtene Revolution 1989 neue Möglichkeiten eröffnete. Seitdem widme ich mich dem, was mich schon immer begeistert hat: meine Stadt mit Besuchern aus aller Welt zu teilen.',
+    en: 'My name is Zuzana Manová and I have been a professional tour guide in Prague since 1986. I studied at the Prague University of Economics and Business (VŠE, Ing.) and spent years working as an economist before the Velvet Revolution in 1989 opened new possibilities. I pivoted to what I had always been passionate about: sharing my city with visitors from around the world.',
+    de: 'Mein Name ist Zuzana Manová und ich bin seit 1986 professionelle Stadtführerin in Prag. Ich habe an der Wirtschaftsuniversität Prag (VŠE, Ing.) studiert und als Ökonomin gearbeitet, bevor die Samtene Revolution 1989 neue Möglichkeiten eröffnete. Seitdem widme ich mich dem, was mich schon immer begeistert hat: meine Stadt mit Besuchern aus aller Welt zu teilen.',
   },
   'zm.bio.p2': {
     en: 'Prague is not just where I work – it is where I grew up, where I lived through Communism, where I joined the revolution, and where I raised my family. When I guide you through the Old Town, across the Charles Bridge, or up to Prague Castle, I am sharing four decades of personal memories alongside centuries of history.',

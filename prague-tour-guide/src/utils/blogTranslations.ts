@@ -4813,4 +4813,407 @@ export const blogTranslations = {
   weit.
 </p>`,
   },
+
+  // ─── Post 37: Guide für die Firmengruppe in Prag buchen ────────────────────
+  'blog.post37.title': {
+    en: 'Booking a Guide for Your Company Group in Prague',
+    de: 'Einen Guide für die Firmengruppe in Prag buchen',
+  },
+  'blog.post37.excerpt': {
+    en: 'A practical guide for whoever in the office got handed the job of organising the Prague programme.',
+    de: 'Sie sollen „mal etwas organisieren" für zweiundzwanzig Kolleginnen und Kollegen, Donnerstagnachmittag, Prag. Ein praktischer Leitfaden aus Sicht der Person, die den Guide bucht — Gruppengrößen, die richtige Anfrage, Rechnung und Storno, und die fünf Fehler, die ich am häufigsten sehe.',
+  },
+  'blog.post37.date': {
+    en: 'September 19, 2026',
+    de: '19. September 2026',
+  },
+  'blog.post37.content': {
+    de: `<h2>Was zu tun ist, wenn Sie für die Firma einen Guide in Prag brauchen</h2>
+
+<p id="einleitung">
+  Die E-Mail kommt fast immer dienstagnachmittags. Der Wortlaut
+  wechselt, die Substanz nie: <em>„Wir sind zweiundzwanzig Leute,
+  Donnerstag ab fünfzehn Uhr haben wir frei — könntest du da mal
+  etwas organisieren?"</em> Geschrieben hat sie die Geschäftsführung.
+  Gelesen hat sie jemand im Sekretariat, im Office Management, in
+  der Assistenz. Jemand, der noch nie in Prag war, keinen Guide
+  kennt und bis Donnerstag zweiundzwanzig Menschen unterhalten muss.
+</p>
+
+<p>
+  Dieser Text ist für diese Person geschrieben. Nicht für den
+  Reisenden, der sich auf einen schönen Nachmittag freut, sondern
+  für die, die ihn verantwortet. Ich führe seit 1986 durch Prag
+  und habe in diesen Jahren mit sehr vielen solcher Personen
+  telefoniert — meist zu spät, meist unter Zeitdruck, fast immer
+  freundlich und leicht verzweifelt. Was ich hier aufgeschrieben
+  habe, ist das, was ich ihnen am Telefon erkläre.
+</p>
+
+<div class="callout-box">
+  <div class="callout-box__label">Vorab in einer Zeile</div>
+  <p class="callout-box__text">
+    Klären Sie drei Zahlen — Personenzahl, Zeitfenster, Sprachen —,
+    schreiben Sie damit zwei oder drei Guides direkt an, und lassen
+    Sie sich ein Angebot geben, in dem Honorar, Eintritte, Technik
+    und Stornofrist getrennt ausgewiesen sind. Alles andere ergibt
+    sich daraus.
+  </p>
+</div>
+
+<h2 id="drei-zahlen">Drei Zahlen, bevor Sie irgendjemanden anschreiben</h2>
+
+<p>
+  Der häufigste Grund, warum eine Anfrage tagelang hin- und
+  hergeht, ist nicht Unfreundlichkeit auf einer der beiden Seiten.
+  Es ist, dass die Anfrage drei Angaben nicht enthält, ohne die
+  kein Guide antworten kann. Besorgen Sie sich diese drei Zahlen,
+  bevor Sie die erste Mail schreiben — es kostet Sie zehn Minuten
+  und spart Ihnen zwei Tage.
+</p>
+
+<ul>
+  <li><strong>Wie viele Personen — verbindlich.</strong> Nicht „so um die zwanzig". Der Unterschied zwischen achtzehn und sechsundzwanzig Personen ist organisatorisch erheblich, wie Sie gleich sehen werden.</li>
+  <li><strong>Welches Zeitfenster — mit Anfang und Ende.</strong> „Donnerstagnachmittag" ist kein Zeitfenster. „Donnerstag, 15:00 bis 18:30, danach Abendessen um 19:30" ist eines. Der Guide plant die Route rückwärts vom Abendessen.</li>
+  <li><strong>Welche Sprachen — und wie viele davon gleichzeitig.</strong> Eine deutschsprachige Gruppe mit drei englischsprachigen Gästen aus der Tochtergesellschaft ist kein Detail, sondern eine Entscheidung über das gesamte Format.</li>
+</ul>
+
+<p>
+  Wenn Sie diese drei Angaben haben und sonst nichts, können Sie
+  bereits anfragen. Alles Weitere — Route, Treffpunkt, Eintritte —
+  ist Gegenstand des Gesprächs und muss nicht vorher feststehen.
+  Es ist ausdrücklich nicht Ihre Aufgabe, ein Programm zu entwerfen.
+  Das ist meine.
+</p>
+
+<h2 id="gruppengroesse">Die Gruppengröße entscheidet fast alles</h2>
+
+<p>
+  Dies ist der Punkt, den ich am häufigsten erklären muss, und der
+  Punkt, an dem die meisten Firmenprogramme scheitern. Eine
+  Stadtführung skaliert nicht linear. Eine Gruppe von zwölf Personen
+  und eine Gruppe von vierzig Personen sind nicht dieselbe
+  Veranstaltung in zwei Größen — es sind zwei grundverschiedene
+  Veranstaltungen.
+</p>
+
+<p>
+  Der Grund ist banal und liegt auf der Straße: Prags Altstadt
+  besteht aus mittelalterlichen Gassen, die drei Meter breit sind,
+  und durch diese Gassen strömen an einem Sommernachmittag
+  Zehntausende Menschen. Eine Gruppe, die zu groß ist, hört nichts,
+  steht im Weg und verliert unterwegs Leute. Das ist keine Frage
+  des guten Willens, sondern der Akustik und der Physik.
+</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Was Sie bei welcher Gruppengröße brauchen</p>
+  <div class="cost-table-row"><span class="cost-table-label">bis 12 Personen</span><span class="cost-table-amount">ein Guide, keine Technik</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">13 bis 25 Personen</span><span class="cost-table-amount">ein Guide + Funkführungsanlage</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">26 bis 45 Personen</span><span class="cost-table-amount">zwei Guides, geteilte Gruppe</span></div>
+  <div class="cost-table-row total"><span class="cost-table-label">über 45 Personen</span><span class="cost-table-amount">mehrere Guides + Zeitversatz</span></div>
+  <p class="cost-table-footnote">Die Funkführungsanlage — im Fachjargon „Flüsteranlage" — ist das Einzige, was ich bedingungslos empfehle. Ohne sie hört die hintere Hälfte der Gruppe nichts.</p>
+</div>
+
+<h3>Zur Funkführungsanlage</h3>
+
+<p>
+  Jeder Gast bekommt einen kleinen Empfänger mit Ohrhörer, der
+  Guide trägt ein Mikrofon. Der Effekt ist sofort spürbar: Ich
+  spreche in normaler Lautstärke, die Gruppe darf sich verteilen,
+  jeder hört jedes Wort — auch der, der gerade zehn Meter weiter
+  ein Foto macht. Gleichzeitig ist es die rücksichtsvollere Variante
+  gegenüber der Stadt. Zwanzig Menschen, denen jemand über den
+  Altstädter Ring hinweg etwas zuruft, sind für alle anderen eine
+  Zumutung.
+</p>
+
+<p>
+  Guides vermieten diese Anlagen in der Regel selbst oder haben
+  einen Verleiher. Fragen Sie in Ihrer Anfrage ausdrücklich danach;
+  es ist ein separater Posten und gehört ins Angebot.
+</p>
+
+<h3>Wenn die Gruppe geteilt werden muss</h3>
+
+<p>
+  Ab etwa sechsundzwanzig Personen ist eine Teilung sinnvoll, ab
+  vierzig praktisch unvermeidlich. Das bedeutet: zwei Guides, zwei
+  Gruppen, zwei Routen — und zwar möglichst gegenläufige. Zwei
+  Gruppen, die dieselbe Route im selben Takt gehen, stehen sich den
+  ganzen Nachmittag im Weg und treffen sich vor jedem Eingang wieder.
+  Ein erfahrener Guide plant das gespiegelt: Die eine Gruppe beginnt
+  an der Burg und endet in der Altstadt, die andere umgekehrt. Am
+  Ende treffen sich beide am Restaurant.
+</p>
+
+<p>
+  Praktisch heißt das für Sie: Sie brauchen jemanden, der für beide
+  Gruppen spricht. Fragen Sie den Guide, ob er Kolleginnen und
+  Kollegen in der nötigen Sprache hinzuzieht und die Koordination
+  übernimmt. Zwei separat gebuchte Guides ohne Absprache
+  untereinander sind die schlechteste aller Varianten.
+</p>
+
+<figure class="blog-inline-image">
+  <img src="/images/blog-prague-walk-normal.jpg" alt="Platz der Republik vor dem Gemeindehaus in Prag — ein Ort, an dem sich eine größere Gruppe sammeln kann" loading="lazy" />
+  <figcaption class="image-credit">Ein Treffpunkt muss Platz für dreißig Menschen haben und aus zweihundert Metern erkennbar sein. Enge Gassen erfüllen beides nicht.</figcaption>
+</figure>
+
+<h2 id="die-anfrage">Was in Ihre erste E-Mail gehört</h2>
+
+<p>
+  Sie können diesen Abschnitt als Vorlage verwenden. Eine Anfrage,
+  die diese sechs Punkte enthält, bekommt in der Regel binnen eines
+  Tages ein belastbares Angebot zurück — statt einer Rückfrage.
+</p>
+
+<div class="did-you-know">
+  <h4>Die Anfrage in sechs Zeilen</h4>
+  <ul>
+    <li><strong>Datum und Uhrzeit</strong> — mit Ende, und mit dem, was danach kommt (Abendessen, Transfer, Rückflug).</li>
+    <li><strong>Personenzahl</strong> — und ob sie noch schwankt, und bis wann.</li>
+    <li><strong>Sprachen</strong> — und ob gleichzeitig mehrere gebraucht werden.</li>
+    <li><strong>Anlass</strong> — Tagung, Betriebsausflug, Kundenbesuch, Jubiläum. Der Anlass bestimmt den Ton der Führung mehr als das Thema.</li>
+    <li><strong>Zustand der Gruppe</strong> — kommen die Leute aus einem achtstündigen Konferenztag? Sind Personen dabei, die nicht lange stehen oder keine Kopfsteinpflasterstrecken gehen können?</li>
+    <li><strong>Ihre Rahmenbedingungen</strong> — Budgetrahmen, wenn es einen gibt, und an wen die Rechnung geht.</li>
+  </ul>
+</div>
+
+<p>
+  Der fünfte Punkt ist der, den fast niemand nennt und der fast
+  immer entscheidend ist. Eine Gruppe, die seit acht Uhr morgens
+  in einem fensterlosen Konferenzraum sitzt, braucht etwas anderes
+  als eine Gruppe, die eben aus dem Flugzeug gestiegen ist.
+  Erschöpfte Menschen wollen frische Luft, kurze Wege und eine
+  Bank. Ich plane für solche Gruppen zwei Sitzpausen ein und lasse
+  die Burg weg. Das weiß ich aber nur, wenn Sie es mir sagen.
+</p>
+
+<h2 id="das-angebot">Was im Angebot getrennt ausgewiesen sein muss</h2>
+
+<p>
+  Ein Angebot, das aus einer einzigen Zahl besteht, ist kein
+  Angebot. Es ist eine Hausnummer. Bestehen Sie auf einer
+  Aufschlüsselung — nicht aus Misstrauen, sondern weil Sie diese
+  Aufschlüsselung intern ohnehin brauchen werden, spätestens wenn
+  jemand aus dem Controlling fragt.
+</p>
+
+<ul>
+  <li><strong>Honorar des Guides</strong> — meist pro angefangener Stunde oder als Halb-/Ganztagessatz. Fragen Sie, ab wann eine Überziehung berechnet wird.</li>
+  <li><strong>Eintritte</strong> — praktisch nie im Honorar enthalten. Für Prager Burg, Jüdisches Museum, Klementinum und ähnliche Häuser gibt es Gruppentarife, die aber eine Voranmeldung voraussetzen. Klären Sie, wer bucht und wer auslegt.</li>
+  <li><strong>Funkführungsanlage</strong> — Tagesmiete, meist pro Gerät.</li>
+  <li><strong>Transfer</strong> — falls Sie einen brauchen. Dazu gleich mehr.</li>
+  <li><strong>Stornofrist und Staffelung</strong> — bis wann kostenfrei, danach welcher Anteil. Diese Zeile ist für Sie die wichtigste im ganzen Dokument.</li>
+</ul>
+
+<h3>Der Bus ist keine Kleinigkeit</h3>
+
+<p>
+  Wenn jemand vorschlägt, „den Bus einfach an der Karlsbrücke
+  halten zu lassen", widersprechen Sie. Die Prager Altstadt ist
+  weitgehend verkehrsberuhigt, für Reisebusse gelten eigene
+  Regelungen, und die zugelassenen Halte- und Ausstiegspunkte sind
+  begrenzt und nicht immer dort, wo man sie gern hätte. Ein
+  ortskundiger Busunternehmer weiß das; ein Guide weiß es auch.
+  Planen Sie den Fußweg vom Ausstieg zum ersten Programmpunkt
+  ausdrücklich mit ein — bei dreißig Personen dauert allein das
+  Aussteigen und Sammeln zehn Minuten.
+</p>
+
+<h2 id="fehler">Die fünf Fehler, die ich am häufigsten sehe</h2>
+
+<p>
+  Keiner davon ist dramatisch. Alle fünf sind vermeidbar, und alle
+  fünf kosten die Gruppe einen Teil des Nachmittags.
+</p>
+
+<h3>1. Das Programm wird an einen vollen Tag angehängt</h3>
+
+<p>
+  Konferenz bis siebzehn Uhr, Stadtführung ab siebzehn Uhr dreißig,
+  Abendessen um zwanzig Uhr. Auf dem Papier geht das auf. In der
+  Realität sind die Teilnehmer nach acht Stunden Sitzung nicht mehr
+  aufnahmefähig, und die schönste Führung prallt an ihnen ab. Wenn
+  Sie die Wahl haben: Legen Sie das Programm auf den Vormittag oder
+  auf einen freien Halbtag. Wenn Sie die Wahl nicht haben, sagen
+  Sie es dem Guide — dann wird es eine kürzere, langsamere,
+  leichtere Führung, und das ist völlig in Ordnung.
+</p>
+
+<h3>2. Der Treffpunkt ist zu klein oder zu unklar</h3>
+
+<p>
+  „Wir treffen uns an der Astronomischen Uhr" klingt eindeutig und
+  ist es nicht. Zur vollen Stunde stehen dort mehrere hundert
+  Menschen. Ein tauglicher Treffpunkt für eine Firmengruppe ist
+  großflächig, eindeutig benannt und idealerweise die Hotellobby —
+  denn dort sind alle ohnehin schon. Bei jedem anderen Treffpunkt
+  verlieren Sie regelmäßig zwei oder drei Personen und fünfzehn
+  Minuten.
+</p>
+
+<h3>3. Nach Mobilität wird nicht gefragt</h3>
+
+<p>
+  In jeder Gruppe ab zwanzig Personen ist statistisch jemand dabei,
+  der die Treppen zur Burg nicht gehen kann, nicht vierzig Minuten
+  am Stück stehen mag oder schlicht nicht darüber sprechen möchte.
+  Fragen Sie es vorab anonym ab — eine Zeile in der internen
+  Anmeldung genügt. Ein Guide, der es rechtzeitig weiß, legt die
+  Route anders und niemand muss es vor versammelter Mannschaft
+  ansprechen. Ein Guide, der es um Viertel nach drei auf halber
+  Treppe erfährt, kann nichts mehr tun.
+</p>
+
+<h3>4. Es gibt keinen Regenplan</h3>
+
+<p>
+  Prag im Oktober ist wunderbar und häufig nass. Fragen Sie bei der
+  Buchung, was bei Dauerregen passiert. Es gibt gute Antworten
+  darauf — Klementinum, Jüdisches Viertel, Gemeindehaus,
+  Innenräume der Burg, Passagen —, aber die meisten davon setzen
+  eine Voranmeldung voraus und lassen sich nicht spontan
+  einschieben. Ein Guide, der Ihnen vorab eine Schlechtwettervariante
+  benennt, hat schon einmal daran gedacht.
+</p>
+
+<h3>5. Gebucht wird über drei Ecken</h3>
+
+<p>
+  Der Concierge kennt eine Agentur, die Agentur kennt einen
+  Vermittler, der Vermittler beauftragt am Vorabend irgendeinen
+  verfügbaren Guide. Das funktioniert manchmal. Aber Sie wissen
+  bis zum Vortag nicht, wer kommt, Sie können Ihre Gruppe vorher
+  nicht besprechen, und die Person, die am Treffpunkt steht, hat
+  Ihre sorgfältig formulierte Mail nie gelesen. Schreiben Sie den
+  Guide direkt an. Ich habe dazu einen eigenen Text geschrieben:
+  <a href="/blog/how-to-choose-prague-tour-guide">wie man den richtigen Stadtführer für Prag findet</a>.
+</p>
+
+<blockquote>
+  Die beste Vorbereitung, die eine Organisatorin treffen kann, ist
+  nicht die perfekte Route. Es ist der eine Satz über die Gruppe,
+  den sonst niemand sagt.
+  <cite>— Aus vierzig Jahren Stadtführungen</cite>
+</blockquote>
+
+<h2 id="rechnung">Rechnung, IČO und die Frage nach der Umsatzsteuer</h2>
+
+<p>
+  Der unglamouröse Teil, an dem Sie hängen bleiben werden, wenn Sie
+  ihn nicht vorher klären. Die meisten Prager Guides arbeiten als
+  selbstständige Gewerbetreibende — auf Tschechisch <em>OSVČ</em>,
+  eingetragen im <em>živnostenský rejstřík</em>, dem tschechischen
+  Gewerberegister. Sie stellen eine reguläre Rechnung
+  (<em>faktura</em>) mit Firmenanschrift und Identifikationsnummer
+  (<em>IČO</em>) aus. Für Ihre Buchhaltung ist das unproblematisch.
+</p>
+
+<p>
+  Drei Dinge, die Sie vor der Buchung fragen sollten, damit es
+  später keine Rückfragen gibt:
+</p>
+
+<ul>
+  <li><strong>Umsatzsteuer.</strong> Fragen Sie, ob der Guide umsatzsteuerpflichtig ist (<em>plátce DPH</em>) und ob eine Steuernummer (<em>DIČ</em>) auf der Rechnung steht. Nicht jeder Guide ist es — das ist völlig legal, ändert aber, wie Ihre Buchhaltung den Beleg verarbeitet. Klären Sie es lieber vorher mit der eigenen Buchhaltung als nachher.</li>
+  <li><strong>Währung und Zahlungsweg.</strong> Rechnungen lauten üblicherweise auf tschechische Kronen. Fragen Sie, ob auch in Euro fakturiert werden kann und ob eine Überweisung auf ein Konto mit IBAN möglich ist.</li>
+  <li><strong>Anzahlung und Zahlungsziel.</strong> Bei größeren Gruppen ist eine Anzahlung üblich, besonders wenn der Guide Gruppeneintritte vorstreckt. Ein Zahlungsziel von vierzehn oder dreißig Tagen nach der Führung lässt sich meist vereinbaren — fragen Sie danach, wenn Ihre interne Freigabe länger dauert.</li>
+</ul>
+
+<p>
+  Und lassen Sie sich die Stornobedingungen schriftlich geben. Nicht
+  weil ich damit rechne, dass Sie stornieren, sondern weil
+  Firmenprogramme sich verschieben, und Sie dann diejenige sind,
+  die erklären muss, warum.
+</p>
+
+<h2 id="programm">Welches Programm zu welchem Anlass passt</h2>
+
+<p>
+  Der Anlass bestimmt den Ton stärker als das Thema. Dieselbe Route
+  durch die Altstadt ist für einen Betriebsausflug etwas anderes
+  als für einen Kundenbesuch. Vier Konstellationen, die ich
+  regelmäßig begleite:
+</p>
+
+<ul>
+  <li><strong>Rahmenprogramm zur Tagung.</strong> Kurz, nah am Hotel, nicht zu anspruchsvoll. Zweieinhalb Stunden Altstadt und Karlsbrücke, mit Sitzpause. Das Ziel ist Luft und Tapetenwechsel, nicht Bildung.</li>
+  <li><strong>Betriebsausflug oder Teamtag.</strong> Hier darf es länger und eigenwilliger sein. Höfe, Passagen, Orte abseits der Hauptroute — Dinge, über die man abends noch spricht. Meine <a href="/tours/hidden-prague">Tour durch das versteckte Prag</a> funktioniert für solche Gruppen besonders gut.</li>
+  <li><strong>Kundenbesuch oder Delegation.</strong> Repräsentativ, ruhig, mit Substanz. Prager Burg und Veitsdom am Vormittag, wenn es noch leer ist. Kleine Gruppen, keine Hektik, gutes Mittagessen danach.</li>
+  <li><strong>Jubiläum oder Führungskreis.</strong> Ein thematischer roter Faden trägt hier weiter als eine Aufzählung von Sehenswürdigkeiten. Die <a href="/tours/vaclav-havel-tour">Václav-Havel-Tour</a> — Dissens, Samtene Revolution, der Weg vom Gefängnis auf die Burg — kommt bei Führungskräften erfahrungsgemäß sehr gut an, weil sie von Verantwortung handelt und nicht von Architektur.</li>
+</ul>
+
+<p>
+  Wenn nichts davon passt, ist das kein Problem. Eine
+  <a href="/tours/custom-private-tour">individuell zusammengestellte Tour</a>
+  ist für Firmengruppen ohnehin der Normalfall — wir besprechen
+  vorab, worauf es ankommt, und ich schicke Ihnen einen
+  Routenvorschlag, den Sie intern herumzeigen können.
+</p>
+
+<h2 id="vorlauf">Wann Sie spätestens buchen müssen</h2>
+
+<p>
+  Die ehrliche Antwort lautet: früher, als Sie denken, und meistens
+  früher, als Ihre Geschäftsführung Ihnen Bescheid gibt. Prag ist
+  eine der meistbesuchten Städte Europas, und gute Guides in
+  deutscher Sprache sind an den einschlägigen Terminen Monate im
+  Voraus vergeben.
+</p>
+
+<div class="cost-table">
+  <p class="cost-table-header">Richtwerte für den Vorlauf</p>
+  <div class="cost-table-row"><span class="cost-table-label">Kleine Gruppe, Nebensaison</span><span class="cost-table-amount">2 bis 3 Wochen</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Gruppe ab 25 Personen</span><span class="cost-table-amount">6 bis 8 Wochen</span></div>
+  <div class="cost-table-row"><span class="cost-table-label">Mai, Juni, September, Oktober</span><span class="cost-table-amount">3 Monate</span></div>
+  <div class="cost-table-row total"><span class="cost-table-label">Advent und Silvester</span><span class="cost-table-amount">4 bis 6 Monate</span></div>
+  <p class="cost-table-footnote">Kurzfristiges geht oft trotzdem — fragen Sie einfach. Aber planen Sie nicht damit.</p>
+</div>
+
+<p>
+  Ein Hinweis, den man leicht übersieht: Wenn Ihre Firma zu einer
+  Messe oder einem Kongress nach Prag reist, sind Sie nicht die
+  Einzigen. An solchen Terminen ist die gesamte Stadt ausgebucht —
+  Hotels, Restaurants, Busse und Guides gleichermaßen. Buchen Sie
+  den Guide am besten zusammen mit dem Hotel, nicht danach.
+</p>
+
+<h2 id="schluss">Zum Schluss</h2>
+
+<p>
+  Ich habe in vierzig Jahren sehr viele Firmengruppen durch diese
+  Stadt geführt — Vorstände, Handwerksbetriebe, Ingenieurbüros,
+  ganze Abteilungen auf dem Weg zum Abendessen. Was die gelungenen
+  von den mittelmäßigen unterscheidet, ist selten das Budget und
+  fast nie die Route. Es ist, ob die Person, die das Programm
+  organisiert hat, dem Guide vorher gesagt hat, wer da eigentlich
+  kommt.
+</p>
+
+<p>
+  Also: Schreiben Sie den einen Satz dazu. <em>„Die Gruppe sitzt
+  seit Montag in Workshops und ist müde."</em> <em>„Zwei Personen
+  gehen schlecht."</em> <em>„Der Chef hat Prag schon dreimal
+  gesehen, die anderen noch nie."</em> Dieser Satz ist mehr wert
+  als jede Detailplanung, die Sie am Dienstagabend noch
+  zusammenstellen.
+</p>
+
+<p>
+  Und wenn Sie gerade genau diese Mail vor sich haben und nicht
+  wissen, wo Sie anfangen sollen — schreiben Sie mir einfach die
+  drei Zahlen. Den Rest machen wir gemeinsam.
+</p>
+
+<div class="blog-cta-box">
+  <h3>Programm für Ihre Firmengruppe in Prag</h3>
+  <p>Schicken Sie mir Datum, Personenzahl und Sprache — Sie bekommen innerhalb von 24 Stunden einen Routenvorschlag und ein aufgeschlüsseltes Angebot zurück.</p>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="/book?tour=Individuelle%20Privattour%20Prag%20auf%20Deutsch#contact-title">Anfrage senden</a>
+    <a class="btn btn-outline" href="/contact#contact-title">Frage stellen</a>
+  </div>
+</div>`,
+  },
 };

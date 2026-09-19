@@ -27,6 +27,26 @@ import { journalPosts } from './journalGenerated';
 // Legacy hand-authored posts (bilingual HTML in blogTranslations.ts).
 const rawBlogPosts: BlogPost[] = [
   {
+    id: '37',
+    slug: 'guide-fuer-firmengruppe-prag-buchen',
+    titleKey: 'blog.post37.title',
+    excerptKey: 'blog.post37.excerpt',
+    dateKey: 'blog.post37.date',
+    date: '2026-09-19',
+    image: '/images/guest-photo-tourguide.jpg',
+    ogImage: '/images/guest-photo-tourguide.jpg',
+    contentKey: 'blog.post37.content',
+    titleHtmlDe: 'Einen Guide für die <em>Firmengruppe</em> in Prag buchen',
+    author: 'Ing. Zuzana Manová',
+    tags: [],
+    tagsDe: [
+      'Firmengruppe Prag', 'Betriebsausflug Prag', 'Stadtführung Firmen Prag',
+      'Rahmenprogramm Tagung Prag', 'Gruppenführung Prag', 'Incentive Prag',
+      'Prag Guide buchen', 'Firmenreise Prag', 'Prag Tagung Begleitprogramm',
+    ],
+    language: 'de',
+  },
+  {
     id: '36',
     slug: 'was-man-in-prag-nicht-tun-sollte',
     titleKey: 'blog.post36.title',
