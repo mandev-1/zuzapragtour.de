@@ -87,7 +87,6 @@ const Footer: React.FC = () => {
                 { href: '/blog',                   label: t('nav.blog') },
                 { href: '/contact#contact-title',  label: t('nav.contact') },
                 { href: '/book#contact-title',     label: t('contact.booking.header.title') },
-                { href: '/bewerten',               label: t('footer.review') },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="font-label text-sm text-stone-600 underline-offset-4 transition-colors hover:text-ink hover:underline">
                   {label}
@@ -131,6 +130,8 @@ const Footer: React.FC = () => {
               <Link href="/privacy" className="font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline">{t('footer.privacy')}</Link>
               <span className="text-stone-300" aria-hidden>·</span>
               <Link href="/terms" className="font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline">{t('footer.terms')}</Link>
+              <span className="text-stone-300" aria-hidden>·</span>
+              <Link href="/bewerten" className="font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline">{t('footer.review')}</Link>
             </div>
           </div>
         </div>

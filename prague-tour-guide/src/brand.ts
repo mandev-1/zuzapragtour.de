@@ -33,14 +33,17 @@ export const BRAND = {
   tripadvisorWriteReview:
     'https://www.tripadvisor.de/UserReview-g274707-d10450040-Zuza_Prague_Tours-Prague_Bohemia.html',
   /**
-   * Google Business review link. Opens Zuzana's Google profile
-   * ("Zuza Prag Tours", knowledge-graph id /g/11w4f9s10x) where
-   * "Write a review" is one tap away.
-   * TODO: for a one-tap deep link into the review dialog, replace with
-   * https://search.google.com/local/writereview?placeid=<PLACE_ID>
-   * (grab <PLACE_ID> from the Google Business Profile "Ask for reviews" link).
+   * Google "write a review" deep link — opens the star/review dialog for
+   * Zuzana's Google Business Profile directly (signed-out guests sign in
+   * first, then land in the dialog).
+   * Profile: "Zuza Prag Tours - Prag Exklusiv Touren & Private Stadtführungen",
+   * kg id /g/11w4f9s10x, feature id 0x470b95d12da0ddcd:0xbb028007db6bfdb6.
+   * The Place ID is that feature id protobuf+base64-encoded; check it with
+   * https://www.google.com/maps/place/?q=place_id:ChIJzd2gLdGVC0cRtv1r2weAArs
    */
-  googleReview: 'https://share.google/o68FfevojsSVDpK47',
+  googleReview: 'https://search.google.com/local/writereview?placeid=ChIJzd2gLdGVC0cRtv1r2weAArs',
+  /** Public profile share link (shows the listing, not the review dialog). */
+  googleProfile: 'https://share.google/o68FfevojsSVDpK47',
   tourhq:    'https://www.tourhq.com/guide/CZ56896/zuzana-manova',
   instagram: 'https://www.instagram.com/erlebnis_tour_prag/',
 
