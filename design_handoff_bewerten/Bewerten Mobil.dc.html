@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;-webkit-text-size-adjust:100%}a{color:#A3231B}a:hover{color:#7E1A14}</style>
+</helmet>
+<div style="background:#F7F0E4;color:#2A211B;font-family:'Hanken Grotesk','Helvetica Neue',sans-serif;min-height:100vh;width:100%;max-width:480px;margin:0 auto;display:flex;flex-direction:column;position:relative;overflow:hidden;">
+  <sc-if value="{{ isFoto }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;">
+      <img src="img/mala-strana.png" alt="Blick über die Dächer der Kleinseite auf St. Nikolaus" style="display:block;width:100%;height:340px;object-fit:cover;object-position:center 35%;">
+      <div style="position:absolute;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:center;padding:16px 18px;background:linear-gradient(rgba(30,20,12,.45),rgba(30,20,12,0));">
+        <a href="https://zuzapragtour.de/" style="font-size:15px;font-weight:600;color:#FFFFFF;text-decoration:none;">Zuza &amp; Pragtour</a>
+        <span style="font-size:13px;font-weight:500;color:#FFFFFF;background:rgba(30,20,12,.35);padding:5px 10px;border-radius:999px;">4,9 ★ · 514 Bewertungen</span>
+      </div>
+      <img src="img/zuzana.jpg" alt="Zuzana Manová" style="position:absolute;left:20px;bottom:-40px;width:84px;height:84px;border-radius:50%;object-fit:cover;border:4px solid #F7F0E4;box-shadow:0 6px 16px -6px rgba(60,35,20,.35);">
+    </div>
+    <main style="padding:56px 20px 0;display:flex;flex-direction:column;">
+      <p style="margin:0;font-size:13px;color:#6B5A4C;">Zuzana Manová · <span style="color:#2C4F8F;">Zertifizierte Stadtführerin</span></p>
+      <h1 style="margin:14px 0 0;font-weight:500;font-size:38px;line-height:1.04;letter-spacing:-0.03em;text-wrap:balance;">Wie war Ihre Tour <em style="font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:44px;letter-spacing:-0.01em;color:#A3231B;">mit mir?</em></h1>
+      <p style="margin:12px 0 0;font-size:18px;line-height:1.5;color:#4A3D33;text-wrap:pretty;">Danke, dass Sie Prag mit mir entdeckt haben. Ihre Zufriedenheit ist mir wichtig.</p>
+    </main>
+  </sc-if>
+  <sc-if value="{{ isPortrait }}" hint-placeholder-val="{{ false }}">
+    <header style="display:flex;justify-content:space-between;align-items:center;padding:18px 20px;">
+      <a href="https://zuzapragtour.de/" style="font-size:15px;font-weight:600;color:#2A211B;text-decoration:none;">Zuza &amp; Pragtour</a>
+      <span style="font-size:13px;font-weight:500;color:#2C4F8F;">4,9 ★ · 514 Bewertungen</span>
+    </header>
+    <main style="padding:16px 20px 0;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <div style="position:relative;width:184px;height:184px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid #D9B9A6;">
+        <img src="img/zuzana.jpg" alt="Zuzana Manová" style="width:160px;height:160px;border-radius:50%;object-fit:cover;">
+        <svg style="position:absolute;top:-6px;right:-4px;" width="44" height="44" viewBox="0 0 48 48" fill="#F7F0E4" stroke="#A3231B" stroke-width="1.6" aria-hidden="true"><ellipse cx="24" cy="13" rx="6" ry="10"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(72 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(144 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(216 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(288 24 24)"></ellipse><circle cx="24" cy="24" r="3.5" fill="#2C4F8F" stroke="#2C4F8F"></circle></svg>
+        <svg style="position:absolute;bottom:2px;left:-8px;" width="30" height="30" viewBox="0 0 48 48" fill="#F7F0E4" stroke="#2C4F8F" stroke-width="1.8" aria-hidden="true"><ellipse cx="24" cy="13" rx="6" ry="10"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(72 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(144 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(216 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(288 24 24)"></ellipse><circle cx="24" cy="24" r="3.5" fill="#A3231B" stroke="#A3231B"></circle></svg>
+      </div>
+      <p style="margin:18px 0 0;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#A3231B;">Hallo, ich bin Zuzana</p>
+      <h1 style="margin:6px 0 0;font-weight:500;font-size:36px;line-height:1.06;letter-spacing:-0.03em;text-wrap:balance;">Wie war Ihre Tour mit mir?</h1>
+      <p style="margin:12px 0 0;font-size:18px;line-height:1.5;color:#4A3D33;max-width:20em;text-wrap:pretty;">Danke, dass Sie Prag mit mir entdeckt haben. Ihre Zufriedenheit ist mir wichtig.</p>
+    </main>
+  </sc-if>
+  <sc-if value="{{ isBrief }}" hint-placeholder-val="{{ false }}">
+    <header style="display:flex;justify-content:space-between;align-items:center;padding:18px 20px;">
+      <a href="https://zuzapragtour.de/" style="font-size:15px;font-weight:600;color:#2A211B;text-decoration:none;">Zuza &amp; Pragtour</a>
+      <span style="font-size:13px;font-weight:500;color:#2C4F8F;">4,9 ★ · 514 Bewertungen</span>
+    </header>
+    <main style="padding:12px 20px 0;display:flex;flex-direction:column;">
+      <h1 style="margin:0;font-weight:500;font-size:36px;line-height:1.06;letter-spacing:-0.03em;text-wrap:balance;">Wie war Ihre Tour <em style="font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:42px;color:#A3231B;">mit mir?</em></h1>
+      <div style="position:relative;margin-top:22px;background:#FFFBF4;border-radius:18px;padding:26px 22px 22px;box-shadow:0 14px 30px -18px rgba(90,55,30,.35);border:1px solid #EADCC6;">
+        <svg style="position:absolute;top:-16px;right:18px;" width="40" height="40" viewBox="0 0 48 48" fill="#FFFBF4" stroke="#A3231B" stroke-width="1.5" aria-hidden="true"><ellipse cx="24" cy="13" rx="6" ry="10"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(72 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(144 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(216 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(288 24 24)"></ellipse><circle cx="24" cy="24" r="3.5" fill="#2C4F8F" stroke="#2C4F8F"></circle></svg>
+        <p style="margin:0;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:24px;color:#2A211B;">Liebe Gäste,</p>
+        <p style="margin:10px 0 0;font-family:'EB Garamond',Georgia,serif;font-size:20px;line-height:1.5;color:#4A3D33;text-wrap:pretty;">danke, dass Sie Prag mit mir entdeckt haben. Es war mir eine Freude, Ihnen meine Stadt zu zeigen. Ihre Zufriedenheit ist mir wichtig.</p>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:18px;">
+          <img src="img/zuzana.jpg" alt="Zuzana Manová" style="width:52px;height:52px;border-radius:50%;object-fit:cover;">
+          <div style="display:flex;flex-direction:column;">
+            <span style="font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:24px;color:#A3231B;line-height:1.1;">Ihre Zuzana</span>
+            <span style="font-size:12px;color:#2C4F8F;">Zertifizierte Stadtführerin, Prag</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </sc-if>
+  <section style="padding:30px 20px 32px;display:flex;flex-direction:column;">
+    <p style="margin:0 0 16px;font-size:20px;font-weight:500;line-height:1.3;letter-spacing:-0.01em;text-wrap:pretty;">Fünf Sterne von Ihnen helfen mir sehr – bewerten Sie mich auf <span style="color:#A3231B;">Google</span>!</p>
+    <a ref="{{ ctaRef }}" href="https://share.google/o68FfevojsSVDpK47" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:92px;padding:16px 20px;box-sizing:border-box;border-radius:16px;background:#A3231B;color:#FFFFFF;text-decoration:none;box-shadow:0 14px 26px -14px rgba(163,35,27,.8);" style-active="background:#8A1C15;color:#FFFFFF;transform:scale(.99);">
+      <span style="display:flex;flex-direction:column;gap:5px;">
+        <span style="font-size:17px;letter-spacing:0.12em;color:#FFE7A8;">★★★★★</span>
+        <span style="font-size:21px;font-weight:600;letter-spacing:-0.015em;">Jetzt bei Google bewerten</span>
+        <span style="font-size:13px;color:#FBE3E1;">Mit Ihrem Google-Konto · dauert 1 Minute</span>
+      </span>
+      <span style="width:40px;height:40px;flex:none;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:20px;">→</span>
+    </a>
+    <a href="https://www.tripadvisor.de/UserReview-g274707-d10450040-Zuza_Prague_Tours-Prague_Bohemia.html" target="_blank" rel="noopener" style="margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:12px 20px;box-sizing:border-box;border-radius:16px;background:#2C4F8F;color:#FFFFFF;text-decoration:none;" style-active="background:#223F74;color:#FFFFFF;">
+      <span style="display:flex;flex-direction:column;gap:2px;">
+        <span style="font-size:17px;font-weight:600;">Oder bei TripAdvisor bewerten</span>
+        <span style="font-size:13px;color:#DCE5F4;">Mit Ihrem TripAdvisor-Konto</span>
+      </span>
+      <span style="font-size:20px;line-height:1;">→</span>
+    </a>
+    <div style="margin-top:24px;background:#FFFBF4;border:1px solid #EADCC6;border-radius:16px;padding:0 18px;">
+      <button onClick="{{ toggleHelper }}" style="all:unset;cursor:pointer;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:12px;min-height:60px;color:#2A211B;">
+        <span style="flex:1;display:flex;flex-direction:column;gap:1px;"><span style="font-size:16px;font-weight:600;">Brauchen Sie Inspiration?</span><span style="font-size:13px;color:#6B5A4C;">Ein Textvorschlag zum Kopieren</span></span>
+        <span style="width:32px;height:32px;border-radius:50%;background:#F3E4DC;color:#A3231B;font-size:20px;display:flex;align-items:center;justify-content:center;">{{ helperIcon }}</span>
+      </button>
+      <sc-if value="{{ helper }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:2px 0 18px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+              <button onClick="{{ c.onClick }}" style="all:unset;cursor:pointer;min-height:40px;display:flex;align-items:center;padding:0 14px;border-radius:999px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font-size:14px;font-weight:500;">{{ c.label }}</button>
+            </sc-for>
+          </div>
+          <p style="margin:0;padding:14px 16px;border-radius:12px;background:#F7F0E4;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:18px;line-height:1.5;color:#2A211B;text-wrap:pretty;">„{{ suggestion }}“</p>
+          <button onClick="{{ copy }}" style="all:unset;cursor:pointer;box-sizing:border-box;width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid #A3231B;font-size:15px;font-weight:600;color:#A3231B;">{{ copyLabel }}</button>
+        </div>
+      </sc-if>
+    </div>
+    <p style="margin:20px 0 0;font-size:15px;line-height:1.6;color:#4A3D33;text-wrap:pretty;">War etwas nicht so, wie Sie es sich gewünscht haben? Schreiben Sie mir persönlich per <a href="https://wa.me/420721231933" style="color:#2C4F8F;">WhatsApp</a> oder <a href="mailto:zuzanamanova@email.cz" style="color:#2C4F8F;">E-Mail</a>.</p>
+  </section>
+  <div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:4px 20px 26px;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <span style="width:48px;height:1px;background:#D9C7AE;"></span><svg width="18" height="18" viewBox="0 0 48 48" fill="none" stroke="#A3231B" stroke-width="1.6"><ellipse cx="24" cy="13" rx="6" ry="10"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(72 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(144 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(216 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(288 24 24)"></ellipse><circle cx="24" cy="24" r="3.5" fill="#2C4F8F" stroke="#2C4F8F"></circle></svg><svg width="26" height="26" viewBox="0 0 48 48" fill="none" stroke="#2C4F8F" stroke-width="1.3"><ellipse cx="24" cy="13" rx="6" ry="10"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(72 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(144 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(216 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(288 24 24)"></ellipse><circle cx="24" cy="24" r="3.5" fill="#A3231B" stroke="#A3231B"></circle></svg><svg width="18" height="18" viewBox="0 0 48 48" fill="none" stroke="#A3231B" stroke-width="1.6"><ellipse cx="24" cy="13" rx="6" ry="10"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(72 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(144 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(216 24 24)"></ellipse><ellipse cx="24" cy="13" rx="6" ry="10" transform="rotate(288 24 24)"></ellipse><circle cx="24" cy="24" r="3.5" fill="#2C4F8F" stroke="#2C4F8F"></circle></svg><span style="width:48px;height:1px;background:#D9C7AE;"></span>
+    </div>
+    <span style="font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:19px;color:#6B5A4C;">Vielen Dank und bis bald in Prag</span>
+  </div>
+  <footer style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 20px 28px;border-top:1px solid #E3D6C2;font-size:13px;color:#6B5A4C;text-align:center;">
+    <span>Zuza Prague Tours · Ing. Zuzana Manová</span>
+    <span style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;"><a href="tel:+420721231933" style="color:#6B5A4C;">+420 721 231 933</a><a href="mailto:zuzanamanova@email.cz" style="color:#6B5A4C;">E-Mail</a><a href="https://zuzapragtour.de/privacy" style="color:#6B5A4C;">Datenschutz</a><a href="https://zuzapragtour.de/terms" style="color:#6B5A4C;">AGB</a></span>
+  </footer>
+  <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
+    <div style="position:sticky;bottom:0;z-index:5;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,240,228,.94);backdrop-filter:blur(8px);border-top:1px solid #E3D6C2;">
+      <a href="https://share.google/o68FfevojsSVDpK47" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:14px;background:#A3231B;color:#FFFFFF;text-decoration:none;font-size:16px;font-weight:600;">
+        <span style="letter-spacing:0.08em;color:#FFE7A8;">★★★★★</span><span>Bei Google bewerten</span>
+      </a>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;variant&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;foto&quot;, &quot;portrait&quot;, &quot;brief&quot;], &quot;default&quot;: &quot;foto&quot;, &quot;tsType&quot;: &quot;'foto'|'portrait'|'brief'&quot;}}">
+const CHIPS = [
+  { k: 'stories', label: 'Zuzanas Geschichten', s: 'Ihre Geschichten haben die Stadt für uns lebendig gemacht.' },
+  { k: 'jewish', label: 'Jüdisches Viertel', s: 'Besonders bewegend war der Rundgang durch das Jüdische Viertel.' },
+  { k: 'courts', label: 'Versteckte Höfe', s: 'Sie hat uns Höfe und Gassen gezeigt, die wir allein nie gefunden hätten.' },
+  { k: 'know', label: 'Ihr Wissen', s: 'Ihr Wissen über Geschichte und Architektur ist beeindruckend.' },
+  { k: 'de', label: 'Auf Deutsch', s: 'Die Führung auf Deutsch war angenehm und sehr gut verständlich.' },
+  { k: 'family', label: 'Für Familien', s: 'Auch unsere Kinder waren begeistert und haben gerne zugehört.' },
+];
+class Component extends DCLogic {
+  state = { sel: [], copied: false, helper: false, showSticky: false };
+  PAL = { on: ['#2C4F8F', '#FFFFFF', '#2C4F8F'], off: ['#FFFBF4', '#4A3D33', '#E0CFB8'] };
+  ctaRef = React.createRef();
+  componentDidMount() {
+    if (!this.ctaRef.current || !window.IntersectionObserver) return;
+    this._io = new IntersectionObserver(([e]) => {
+      const below = !e.isIntersecting && e.boundingClientRect.top < 0;
+      if (below !== this.state.showSticky) this.setState({ showSticky: below });
+    });
+    this._io.observe(this.ctaRef.current);
+  }
+  componentWillUnmount() { this._io && this._io.disconnect(); clearTimeout(this._t); }
+  text() {
+    const parts = CHIPS.filter(c => this.state.sel.includes(c.k)).map(c => c.s);
+    return ['Eine wundervolle Privatführung durch Prag mit Zuzana.', ...parts, 'Von Herzen zu empfehlen!'].join(' ');
+  }
+  renderVals() {
+    const v = this.props.variant ?? 'foto';
+    const { sel, copied, helper, showSticky } = this.state;
+    return {
+      isFoto: v === 'foto', isPortrait: v === 'portrait', isBrief: v === 'brief',
+      ctaRef: this.ctaRef,
+      showSticky,
+      helper,
+      helperIcon: helper ? '−' : '+',
+      toggleHelper: () => this.setState(s => ({ helper: !s.helper })),
+      chips: CHIPS.map(c => {
+        const [bg, fg, bd] = sel.includes(c.k) ? this.PAL.on : this.PAL.off;
+        return { label: c.label, bg, fg, bd, onClick: () => this.setState(s => ({ sel: s.sel.includes(c.k) ? s.sel.filter(x => x !== c.k) : [...s.sel, c.k] })) };
+      }),
+      suggestion: this.text(),
+      copyLabel: copied ? 'Kopiert ✓' : 'Vorschlag kopieren',
+      copy: () => {
+        try { navigator.clipboard.writeText(this.text()).catch(() => {}); } catch (e) {}
+        this.setState({ copied: true });
+        clearTimeout(this._t); this._t = setTimeout(() => this.setState({ copied: false }), 1800);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

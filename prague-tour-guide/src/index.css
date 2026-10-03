@@ -69,13 +69,13 @@
     display: none !important;
   }
 
-  /* Review funnel (/bewerten): standalone & chrome-light — its own slim top
-     bar + footer replace the global Header/Footer, hero sits flush to the top. */
-  body:has(.review-funnel-root) > header,
-  body:has(.review-funnel-root) > footer {
+  /* /bewerten review page: standalone — its own header + footer replace the
+     global Header/Footer, hero sits flush to the top. */
+  body:has(.bewerten-root) > header,
+  body:has(.bewerten-root) > footer {
     display: none !important;
   }
-  body:has(.review-funnel-root) main {
+  body:has(.bewerten-root) main {
     padding-top: 0 !important;
   }
 

@@ -41,6 +41,35 @@ module.exports = {
         sage: {
           DEFAULT: '#8A9282',
         },
+        // /bewerten review page — own palette (design_handoff_bewerten).
+        // Desktop = cooler ivory, mobile = warm cream; red/blue shared.
+        bewerten: {
+          red: '#A3231B',
+          'red-hover': '#8A1C15',
+          blue: '#2C4F8F',
+          'blue-hover': '#223F74',
+          gold: '#FFE7A8',
+          'on-red': '#FBE3E1',
+          'on-blue': '#DCE5F4',
+          // desktop
+          bg: '#FAF8F4',
+          ink: '#1A1613',
+          text: '#453d33',
+          mute: '#645849',
+          rule: '#c7bba6',
+          'rule-soft': '#e0d8c9',
+          // mobile
+          'm-bg': '#F7F0E4',
+          'm-card': '#FFFBF4',
+          'm-ink': '#2A211B',
+          'm-text': '#4A3D33',
+          'm-mute': '#6B5A4C',
+          'm-card-border': '#EADCC6',
+          'm-chip-border': '#E0CFB8',
+          'm-rule': '#E3D6C2',
+          'm-ornament': '#D9C7AE',
+          'm-icon-bg': '#F3E4DC',
+        },
         // Existing tokens preserved for non-blog pages
         stone: {
           50: '#faf8f4',
@@ -95,6 +124,9 @@ module.exports = {
         body: ['var(--font-body)', '"Libre Caslon Text"', '"EB Garamond"', 'Georgia', 'serif'],
         italic: ['var(--font-italic)', '"Cormorant Garamond"', '"EB Garamond"', 'Georgia', 'serif'],
         sans: ['var(--font-sans)', '"Inter Tight"', '"Helvetica Neue"', 'system-ui', 'sans-serif'],
+        // /bewerten review page
+        hanken: ['var(--font-hanken)', '"Hanken Grotesk"', '"Helvetica Neue"', 'sans-serif'],
+        garamond: ['var(--font-garamond)', '"EB Garamond"', 'Georgia', 'serif'],
         // Legacy aliases used by non-blog pages — kept intact
         headline: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
         serif: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
@@ -142,6 +174,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.6s ease-out',
         'fade-in-up': 'fadeInUp 0.7s ease-out',
         kenburns: 'kenburns 18s ease-out forwards',
+        'bewerten-sticky': 'fadeInUp 0.2s ease-out',
       },
       borderRadius: {
         DEFAULT: '0.375rem',

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import ReviewFunnel from '../../src/components/ReviewFunnel';
+import BewertenPage from '../../src/screens/BewertenPage';
 import { BRAND } from '../../src/brand';
 
 export const metadata: Metadata = {
@@ -12,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ReviewFunnel />;
+  return <BewertenPage />;
 }

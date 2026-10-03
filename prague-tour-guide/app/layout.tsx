@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight } from 'next/font/google';
+import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight, Hanken_Grotesk, EB_Garamond } from 'next/font/google';
 import { LanguageProvider } from '../src/context/LanguageContext';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
@@ -13,7 +13,6 @@ import '../src/styles/site-tokens.css';
 import '../src/styles/blog-content.css';
 import '../src/styles/blog-map.css';
 import '../src/styles/site-premium.css';
-import '../src/styles/review-funnel.css';
 
 const italiana = Italiana({
   weight: '400',
@@ -45,6 +44,22 @@ const interTight = Inter_Tight({
   display: 'swap',
 });
 
+// /bewerten review page
+const hanken = Hanken_Grotesk({
+  weight: ['400', '500', '600'],
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-hanken',
+  display: 'swap',
+});
+
+const ebGaramond = EB_Garamond({
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-garamond',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: {
     default: 'Prag-Stadtführerin Zuzana Manová | ZuzaPragTour',
@@ -68,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="de"
-      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable}`}
+      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable} ${hanken.variable} ${ebGaramond.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
