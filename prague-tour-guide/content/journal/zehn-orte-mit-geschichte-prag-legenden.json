@@ -1,0 +1,1005 @@
+{
+  "slug": "zehn-orte-mit-geschichte-prag-legenden",
+  "languages": [
+    "de"
+  ],
+  "status": "published",
+  "date": "2026-10-04",
+  "dateDisplay": {
+    "de": "4. Oktober 2026"
+  },
+  "category": "Geschichte",
+  "kicker": {
+    "de": "Prager Geschichte"
+  },
+  "readTime": {
+    "de": ""
+  },
+  "hero": "/images/old-town-square.jpg",
+  "heroCap": {
+    "de": "Blick von der Galerie des Rathausturms auf die Teynkirche. Hier oben stehen Sie auf Ort 6 und sehen Ort 7."
+  },
+  "heroCredit": "Unsplash+",
+  "title": {
+    "de": "Zehn Orte mit Geschichte – und fünf Prager Legenden im Faktencheck"
+  },
+  "excerpt": {
+    "de": "Wo der Dreißigjährige Krieg begann, wo Mozart den Don Giovanni zum ersten Mal dirigierte und was am Golem auf dem Dachboden dran ist: zehn Orte, an denen Prager Geschichte passiert ist, fünf Legenden, nach denen ich auf fast jeder Tour gefragt werde, und Wege dorthin, die Ihnen die steilen Gassen ersparen."
+  },
+  "tags": {
+    "de": [
+      "Prager Geschichte",
+      "Prager Legenden",
+      "Prager Fenstersturz",
+      "Golem",
+      "Tycho Brahe",
+      "Mozart in Prag",
+      "Prag ab 65",
+      "Karlsbrücke"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "sources": [
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/objevujte/loreto-loreta/\">Loreto</a>; Loreta Praha: <a href=\"https://www.loreta.cz/en/collections/loreto-treasure/a/the-diamond-monstrance-%E2%80%93-gem-of-the-treasure\">The Diamond Monstrance</a>"
+    },
+    {
+      "de": "Radio Prague International: <a href=\"https://english.radio.cz/blood-bohemia-second-defenestration-prague-and-window-changed-europe-8889193\">Blood in Bohemia: the Second Defenestration of Prague</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/objevujte/wallenstein-palace-valdstejnsky-palac/\">Waldstein Palace</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Wallenstein_Palace\">Wallenstein Palace</a>"
+    },
+    {
+      "de": "Prague Now: <a href=\"https://prague-now.com/history/charles-bridge-built-with-a-curve-and-with-egg/\">Charles Bridge: built with a curve and with egg</a>; Medieval News (nach ČTK), 19. 1. 2010: <a href=\"http://medievalnews.blogspot.com/2010/01/eggs-not-used-to-build-medieval-bridge.html\">Eggs not used to build medieval bridge in Prague</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/golem-of-prague/\">The legend of the Golem</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Old_New_Synagogue\">Old New Synagogue</a>; Milken Archive: <a href=\"https://www.milkenarchive.org/music/volumes/view/symphonic-visions/work/the-golem/\">The Golem</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/\">Old Town Hall with Astronomical Clock</a> (Geschichte, Preise und Öffnungszeiten)"
+    },
+    {
+      "de": "Aarhus University, 15. 11. 2012: <a href=\"https://projekter.au.dk/en/tycho-brahe\">Mercury poisoning ruled out as cause of Tycho Brahe’s death</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/objevujte/estates-theatre-stavovske-divadlo/\">Estates Theatre</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Mozart_and_Prague\">Mozart and Prague</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/home/discover/prague-phenomenon/prague-stories/fausts-prague/\">Faust’s Prague</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/public-transport/\">Public transport</a> (Fahrpreise und Ermäßigungen)"
+    },
+    {
+      "de": "Franz Kafka: Brief an Oskar Pollak, 20. Dezember 1902"
+    }
+  ],
+  "blocks": [
+    {
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
+      "html": {
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Die Reihenfolge führt von der Burg hinunter in die Alt- und Neustadt. Hinauf fahren Sie mit der Straßenbahn, zu Fuß geht es fast nur bergab."
+        },
+        {
+          "de": "Ab 65 Jahren fahren Sie in Prag kostenlos mit Metro, Straßenbahn und Bus. Sie brauchen nur einen Ausweis mit Foto und Geburtsdatum."
+        },
+        {
+          "de": "Von den fünf Legenden ist eine widerlegt, eine bis heute ungeklärt, und drei sind gute Geschichten ohne Beleg."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag ist von großen Zerstörungen weitgehend verschont geblieben. Die Häuser, in denen Geschichte geschrieben wurde, stehen noch, oft mit denselben Fenstern, Treppen und Sälen. Sie können an das Fenster treten, aus dem 1618 drei Männer geworfen wurden, und im selben Zuschauerraum sitzen, in dem Mozart 1787 seinen Don Giovanni dirigierte."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Für diesen Artikel habe ich zehn Orte ausgewählt, an denen etwas Bestimmtes geschehen ist, mit Datum und Namen. An fünf davon hängt eine Legende, die Sie dort garantiert hören werden. Zu jeder steht dabei, was die Forschung sagt, und zu jedem Ort, wie Sie ohne große Steigung hinkommen. Die Quellen finden Sie am Ende."
+      }
+    },
+    {
+      "t": "quote",
+      "html": {
+        "de": "„Prag läßt nicht los. Uns beide nicht. Dieses Mütterchen hat Krallen.“"
+      },
+      "by": "Franz Kafka an seinen Schulfreund Oskar Pollak, 20. Dezember 1902"
+    },
+    {
+      "t": "overview",
+      "variant": "index",
+      "id": "ueberblick",
+      "title": {
+        "de": "Die zehn Orte im Überblick"
+      },
+      "intro": {
+        "de": "Von oben nach unten sortiert, so besuchen Sie sie am bequemsten."
+      },
+      "items": [
+        {
+          "href": "#ort-1",
+          "n": "1",
+          "title": {
+            "de": "Loreto"
+          },
+          "desc": {
+            "de": "1695: Das Glockenspiel erklingt zum ersten Mal · Hradschin"
+          }
+        },
+        {
+          "href": "#ort-2",
+          "n": "2",
+          "title": {
+            "de": "Alter Königspalast"
+          },
+          "desc": {
+            "de": "1618: Der Prager Fenstersturz · Prager Burg"
+          }
+        },
+        {
+          "href": "#ort-3",
+          "n": "3",
+          "title": {
+            "de": "Waldsteinpalast und -garten"
+          },
+          "desc": {
+            "de": "1623–1630: Ein Feldherr baut unter der Burg · Kleinseite"
+          }
+        },
+        {
+          "href": "#ort-4",
+          "n": "4",
+          "title": {
+            "de": "Karlsbrücke"
+          },
+          "desc": {
+            "de": "1357: Karl IV. legt den Grundstein · Kleinseite und Altstadt"
+          }
+        },
+        {
+          "href": "#ort-5",
+          "n": "5",
+          "title": {
+            "de": "Altneusynagoge"
+          },
+          "desc": {
+            "de": "13. Jahrhundert: die älteste aktive Synagoge Europas · Josefov"
+          }
+        },
+        {
+          "href": "#ort-6",
+          "n": "6",
+          "title": {
+            "de": "Altstädter Rathaus mit Orloj"
+          },
+          "desc": {
+            "de": "1410: Die astronomische Uhr geht in Betrieb · Altstadt"
+          }
+        },
+        {
+          "href": "#ort-7",
+          "n": "7",
+          "title": {
+            "de": "Teynkirche"
+          },
+          "desc": {
+            "de": "1601: Tycho Brahe wird beigesetzt · Altstadt"
+          }
+        },
+        {
+          "href": "#ort-8",
+          "n": "8",
+          "title": {
+            "de": "Ständetheater"
+          },
+          "desc": {
+            "de": "1787: Uraufführung des Don Giovanni · Altstadt"
+          }
+        },
+        {
+          "href": "#ort-9",
+          "n": "9",
+          "title": {
+            "de": "Wenzelsplatz"
+          },
+          "desc": {
+            "de": "1969 und 1989: Jan Palach, Samtene Revolution · Neustadt"
+          }
+        },
+        {
+          "href": "#ort-10",
+          "n": "10",
+          "title": {
+            "de": "Faust-Haus"
+          },
+          "desc": {
+            "de": "Ein Haus der Alchemisten am Karlsplatz · Neustadt"
+          }
+        }
+      ]
+    },
+    {
+      "t": "overview",
+      "variant": "claims",
+      "id": "legenden",
+      "title": {
+        "de": "Fünf Legenden im Faktencheck"
+      },
+      "intro": {
+        "de": "Die Behauptung, das Ergebnis und der Ort, an dem Sie die Legende zu hören bekommen."
+      },
+      "items": [
+        {
+          "href": "#ort-2",
+          "title": {
+            "de": "„Die Statthalter überlebten den Fenstersturz, weil sie auf einem Misthaufen landeten.“"
+          },
+          "verdict": "unproven",
+          "verdictLabel": {
+            "de": "Unbelegt"
+          },
+          "desc": {
+            "de": "Ort 2"
+          }
+        },
+        {
+          "href": "#ort-4",
+          "title": {
+            "de": "„Im Mörtel der Karlsbrücke stecken Eier.“"
+          },
+          "verdict": "open",
+          "verdictLabel": {
+            "de": "Ungeklärt"
+          },
+          "desc": {
+            "de": "Ort 4"
+          }
+        },
+        {
+          "href": "#ort-5",
+          "title": {
+            "de": "„Auf dem Dachboden der Altneusynagoge liegt der Golem.“"
+          },
+          "verdict": "unproven",
+          "verdictLabel": {
+            "de": "Ohne Grundlage"
+          },
+          "desc": {
+            "de": "Ort 5"
+          }
+        },
+        {
+          "href": "#ort-6",
+          "title": {
+            "de": "„Die Ratsherren ließen den Erbauer der Rathausuhr blenden.“"
+          },
+          "verdict": "unproven",
+          "verdictLabel": {
+            "de": "Sage"
+          },
+          "desc": {
+            "de": "Ort 6"
+          }
+        },
+        {
+          "href": "#ort-7",
+          "title": {
+            "de": "„Tycho Brahe wurde vergiftet.“"
+          },
+          "verdict": "refuted",
+          "verdictLabel": {
+            "de": "Widerlegt"
+          },
+          "desc": {
+            "de": "Ort 7"
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-1",
+      "label": {
+        "de": "Ort 1"
+      },
+      "meta": {
+        "de": "Hradschin · ab 1626"
+      },
+      "html": {
+        "de": "Loreto: 27 Glocken und 6.222 Diamanten"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "1626 ließ Kateřina Benigna von Lobkowitz auf dem Hradschin eine Nachbildung des Heiligen Hauses von Loreto errichten. Das Original in Italien gilt als das Haus Marias, das Engel der Überlieferung nach aus Nazareth dorthin getragen haben. Um die Prager Santa Casa wuchs in den folgenden hundert Jahren ein ganzer Wallfahrtsort mit Kreuzgang, Kirche und Glockenturm."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Glocken im Turm goss Claude Fremy in Amsterdam. Am 15. August 1695 erklang das Glockenspiel zum ersten Mal, und bis heute spielt es tagsüber zu jeder vollen Stunde ein Marienlied. In der Schatzkammer liegt die „Prager Sonne“: eine Monstranz mit 6.222 Diamanten, 1696 bis 1699 in Wien nach einem Entwurf von Johann Bernhard Fischer von Erlach gefertigt. Die Steine hatte Gräfin Ludmila Eva Franziska von Kolowrat zur Hochzeit bekommen und dem Loreto vermacht."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Tram 22 oder 23 bis Pohořelec, von dort etwa fünf Minuten leicht bergab."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Das Glockenspiel hören Sie auch kostenlos auf dem Platz vor dem Eingang. Die Schatzkammer liegt im Obergeschoss."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-2",
+      "label": {
+        "de": "Ort 2"
+      },
+      "meta": {
+        "de": "Prager Burg · 23. Mai 1618"
+      },
+      "html": {
+        "de": "Alter Königspalast: das Fenster von 1618"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am Morgen des 23. Mai 1618 zog eine Gruppe protestantischer Adliger in die Böhmische Kanzlei im Alten Königspalast. Sie warfen den kaiserlichen Statthaltern Jaroslav Bořita von Martinitz und Wilhelm Slavata vor, die zugesicherte Religionsfreiheit zu brechen, hielten ein improvisiertes Gericht und warfen beide aus dem Fenster. Ihr Sekretär Philipp Fabricius folgte. Der Sturz ging rund 16 Meter tief in den Burggraben, und alle drei überlebten."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Aus dem Fenstersturz wurde der Böhmische Ständeaufstand und daraus der Dreißigjährige Krieg. Wie er für Böhmen ausging, sehen Sie bei <a href=\"#ort-6\">Ort 6</a>: Nach der Niederlage der Stände ließ der Kaiser am 21. Juni 1621 auf dem Altstädter Ring 27 ihrer Anführer hinrichten."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/thumbs/blog-prague-tram-with-prague-castle.jpg",
+      "alt": {
+        "de": "Eine rot-weiße Straßenbahn der Linie 23, dahinter die Prager Burg"
+      },
+      "cap": {
+        "de": "Die Linie 23 fährt bis an die Burg. Wer oben anfängt, läuft den Rest des Tages bergab."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "factcheck",
+      "verdict": "unproven",
+      "verdictLabel": {
+        "de": "Unbelegt"
+      },
+      "claim": {
+        "de": "„Sie überlebten, weil sie auf einem Misthaufen landeten.“"
+      },
+      "html": {
+        "de": "Dass alle drei überlebten, ist sicher. Warum, war schon damals eine Glaubensfrage. Die katholische Seite sprach von Engeln und der Jungfrau Maria, die die Männer aufgefangen hätten. Protestantische Flugschriften erzählten vom Misthaufen im Graben, und diese Version hören Sie heute auf fast jeder Führung. Belegen lässt sich keine von beiden. Fabricius erhob der Kaiser später in den Adelsstand, mit dem Beinamen „von Hohenfall“."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Tram 22 oder 23 bis Pražský hrad, dann über die Pulverbrücke ohne Steigung in den zweiten Burghof."
+          }
+        },
+        {
+          "k": {
+            "de": "Eintritt"
+          },
+          "v": {
+            "de": "Der Alte Königspalast gehört zum Rundgang der Prager Burg und ist im Burgticket enthalten."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Hinunter zur Kleinseite führt die Alte Schlossstiege, eine lange Treppe. Wer Stufen abwärts schlecht verträgt, nimmt wieder die Tram."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-3",
+      "label": {
+        "de": "Ort 3"
+      },
+      "meta": {
+        "de": "Kleinseite · 1623–1630"
+      },
+      "html": {
+        "de": "Waldsteingarten: der Palast eines Feldherrn"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Albrecht von Waldstein, im Dreißigjährigen Krieg Oberbefehlshaber der kaiserlichen Truppen und einer der reichsten Männer im Reich der Habsburger, ließ sich zwischen 1623 und 1630 unterhalb der Burg einen Palast bauen, der es mit ihr aufnehmen sollte. Dafür wurden 26 Häuser abgerissen. Italienische Baumeister legten den Garten an, mit der Sala terrena, einer offenen Halle mit Fresken zum Trojanischen Krieg, und mit einer Wand aus künstlichen Tropfsteinen, in der Besucher bis heute nach versteckten Gesichtern suchen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Viel hatte Waldstein nicht davon. Er wohnte nur etwa ein Jahr im Palast, 1634 ließ ihn der Kaiser, der ihm nicht mehr traute, in Eger ermorden, dem heutigen Cheb. 1648 nahmen schwedische Truppen die Bronzefiguren von Adriaen de Vries aus dem Garten mit. Die Originale stehen im Schlosspark von Drottningholm bei Stockholm, in Prag sehen Sie Kopien aus dem 20. Jahrhundert. Im Palast tagt heute der tschechische Senat."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/thumbs/blog-tropfsteinwand.jpg",
+      "alt": {
+        "de": "Die Tropfsteinwand im Waldsteingarten mit Besuchern davor"
+      },
+      "cap": {
+        "de": "Die Tropfsteinwand im Waldsteingarten. Suchen Sie nach den Gesichtern im Stein."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro A bis Malostranská. Ein Eingang zum Garten liegt direkt neben der Station, ohne Steigung."
+          }
+        },
+        {
+          "k": {
+            "de": "Geöffnet"
+          },
+          "v": {
+            "de": "Der Garten von April bis Oktober, Eintritt frei. Die Prunkräume des Senats sind an Wochenenden kostenlos zu besichtigen."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Ebene Wege, Bänke, ein Teich und weiße Pfauen. Der beste Ort auf dieser Route für eine lange Pause."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-4",
+      "label": {
+        "de": "Ort 4"
+      },
+      "meta": {
+        "de": "Kleinseite und Altstadt · ab 1357"
+      },
+      "html": {
+        "de": "Karlsbrücke: ein Grundstein zur rechten Minute"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Karl IV. ließ die Brücke als Ersatz für die Judithbrücke bauen, die 1342 dem Eisgang zum Opfer gefallen war. Den Grundstein legte er der Überlieferung nach am 9. Juli 1357 um 5:31 Uhr. Als Zahlenreihe geschrieben ergibt das 1-3-5-7-9-7-5-3-1, vorwärts wie rückwärts gleich. Den Termin sollen die Hofastrologen ausgesucht haben."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Fertig war die Brücke erst Anfang des 15. Jahrhunderts, die Statuen kamen ab dem späten 17. Jahrhundert dazu. Die älteste ist der heilige Johannes Nepomuk von 1683. Er war 1393 auf Befehl König Wenzels IV. von dieser Brücke in die Moldau gestürzt worden."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/thumbs/blog-charles-bridge-statues-sunny-crowded-bridge.jpg",
+      "alt": {
+        "de": "Die Karlsbrücke mit Statuen und vielen Besuchern an einem sonnigen Tag"
+      },
+      "cap": {
+        "de": "Die Karlsbrücke am Nachmittag. Wer es ruhiger mag, kommt vor acht Uhr morgens."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "medium"
+    },
+    {
+      "t": "factcheck",
+      "verdict": "open",
+      "verdictLabel": {
+        "de": "Ungeklärt"
+      },
+      "claim": {
+        "de": "„Im Mörtel der Karlsbrücke stecken Eier.“"
+      },
+      "html": {
+        "de": "Karl IV. soll aus dem ganzen Land Eier angefordert haben, damit der Mörtel besser hält. Die Bürger von Velvary schickten ihre hart gekocht, damit sie unterwegs nicht zerbrechen, und wurden dafür jahrhundertelang verspottet. Die Wissenschaft hat zweimal nachgesehen. 2008 meldeten Chemiker der Prager Hochschule für chemische Technologie (VŠCHT) Spuren von Eiweiß im Originalmörtel. Kurz darauf untersuchten Geologen der Karls-Universität den Mörtel und fanden keine organischen Zusätze, nur hydraulischen Kalk. Die Frage ist bis heute offen."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Zugang"
+          },
+          "v": {
+            "de": "Fußgängerzone, rund um die Uhr offen, kein Eintritt."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Vor acht Uhr morgens ist die Brücke fast leer. Das Pflaster ist uneben, in die Brückentürme führen nur Treppen."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-5",
+      "label": {
+        "de": "Ort 5"
+      },
+      "meta": {
+        "de": "Josefov · 13. Jahrhundert"
+      },
+      "html": {
+        "de": "Altneusynagoge: der Dachboden ohne Treppe"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Altneusynagoge stammt aus dem 13. Jahrhundert. Sie ist die älteste erhaltene Synagoge nördlich der Alpen und die älteste in Europa, in der bis heute Gottesdienste stattfinden. Sie hat Pogrome und Brände überstanden und auch die Assanierung um 1900, bei der fast das gesamte jüdische Viertel abgerissen wurde."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Hier wirkte im 16. Jahrhundert Rabbi Juda Löw ben Bezalel, genannt Maharal, Oberrabbiner von Prag und einer der großen Gelehrten seiner Zeit. Sein Grab mit dem Löwen auf dem Stein liegt wenige Minuten entfernt auf dem Alten Jüdischen Friedhof."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/thumbs/blog-jewish-quarter-min.jpg",
+      "alt": {
+        "de": "Im ehemaligen jüdischen Viertel Josefov"
+      },
+      "cap": {
+        "de": "Josefov, das ehemalige jüdische Viertel."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "medium"
+    },
+    {
+      "t": "factcheck",
+      "verdict": "unproven",
+      "verdictLabel": {
+        "de": "Ohne Grundlage"
+      },
+      "claim": {
+        "de": "„Auf dem Dachboden der Altneusynagoge liegt der Golem.“"
+      },
+      "html": {
+        "de": "Rabbi Löw soll aus Moldaulehm eine Gestalt geformt und sie mit dem Schem, einem Zettel mit dem Namen Gottes im Mund, zum Leben erweckt haben. Als er einmal vergaß, den Schem vor dem Sabbat herauszunehmen, wütete der Golem durch das Viertel. Die Reste soll der Rabbi auf dem Dachboden der Synagoge verwahrt haben. Historisch ist daran nichts: Die Geschichte wurde erst lange nach Löws Tod mit ihm verbunden und im 19. Jahrhundert aufgeschrieben. Bei der Renovierung 1883 und bei einer Begehung 2014 fand man auf dem Dachboden nichts. Von der Pařížská-Straße aus sehen Sie trotzdem die kleine Tür unter dem Dach und die Eisenstufen hinauf, deren unterste drei Meter fehlen."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro A bis Staroměstská, dann etwa fünf Minuten auf ebenem Weg."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Samstags und an jüdischen Feiertagen geschlossen. Männer bedecken in der Synagoge den Kopf, eine Kippa bekommen Sie am Eingang. Der Innenraum liegt einige Stufen unter dem Straßenniveau."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-6",
+      "label": {
+        "de": "Ort 6"
+      },
+      "meta": {
+        "de": "Altstadt · 1338 und 1410"
+      },
+      "html": {
+        "de": "Altstädter Rathaus: eine Uhr seit 1410"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Altstädter Rathaus wurde 1338 gegründet, sein Turm war 1364 fertig. 1410 baute Mikuláš von Kadaň die astronomische Uhr an die Südseite, Ende des 15. Jahrhunderts verbesserte sie Meister Hanuš. Sie zeigt neben der Uhrzeit den Lauf von Sonne und Mond, die Tierkreiszeichen und die altböhmische Zeit, in der der Tag mit dem Sonnenuntergang begann. Zu jeder vollen Stunde ziehen oben die zwölf Apostel an den Fenstern vorbei."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "27 Kreuze im Pflaster vor dem Rathaus erinnern an die Anführer des Ständeaufstands, die hier am 21. Juni 1621 hingerichtet wurden. Und falls Sie sich fragen, warum dem Rathaus ein Flügel fehlt: Der Ostflügel brannte im Prager Aufstand im Mai 1945 aus und wurde nie wieder aufgebaut. Damals verbrannten auch die Apostelfiguren. Die heutigen schnitzte Vojtěch Sucharda 1948."
+      }
+    },
+    {
+      "t": "factcheck",
+      "verdict": "unproven",
+      "verdictLabel": {
+        "de": "Sage"
+      },
+      "claim": {
+        "de": "„Die Ratsherren ließen den Erbauer der Uhr blenden.“"
+      },
+      "html": {
+        "de": "Damit Meister Hanuš für keine andere Stadt eine schönere Uhr bauen konnte, sollen ihn die Prager Ratsherren geblendet haben. Hanuš rächte sich, griff in das Werk und brachte es zum Stehen. Alois Jirásek machte die Sage 1894 in seinen „Alten böhmischen Sagen“ berühmt. Einen Beleg gibt es nicht, und gebaut hat die Uhr ohnehin Mikuláš von Kadaň. Einen wahren Kern hat die Geschichte trotzdem: 1865 blieb die Uhr tatsächlich stehen, und man erwog, sie abzubauen. Der Prager Uhrmacher Ludvík Hainz setzte sie wieder in Gang."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Aufzug"
+          },
+          "v": {
+            "de": "Ein Aufzug fährt bis zur Aussichtsgalerie in 42 Metern Höhe. Der Eingang von der Mikulášská-Straße ist stufenlos, die historischen Innenräume sind es nicht."
+          }
+        },
+        {
+          "k": {
+            "de": "Eintritt"
+          },
+          "v": {
+            "de": "Ab 65 Jahren 230 Kč statt 350 Kč, der Aufzug kostet für Senioren 50 Kč. In der ersten Stunde nach Öffnung gibt es 50 Prozent Rabatt."
+          }
+        },
+        {
+          "k": {
+            "de": "Geöffnet"
+          },
+          "v": {
+            "de": "April bis Dezember 9–20 Uhr, Januar bis März 10–19 Uhr."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-7",
+      "label": {
+        "de": "Ort 7"
+      },
+      "meta": {
+        "de": "Altstadt · 1601"
+      },
+      "html": {
+        "de": "Teynkirche: das Grab von Tycho Brahe"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der dänische Astronom Tycho Brahe kam 1599 als Hofastronom Rudolfs II. nach Prag. Seine Beobachtungen der Planeten waren die genauesten seiner Zeit. Mit ihnen fand sein Assistent Johannes Kepler nach Brahes Tod die Gesetze der Planetenbewegung. Brahe starb am 24. Oktober 1601, elf Tage nach Beginn einer plötzlichen Krankheit, und wurde in der Teynkirche beigesetzt. Sein Grabstein aus rotem Marmor zeigt ihn in Rüstung."
+      }
+    },
+    {
+      "t": "factcheck",
+      "verdict": "refuted",
+      "verdictLabel": {
+        "de": "Widerlegt"
+      },
+      "claim": {
+        "de": "„Tycho Brahe wurde vergiftet.“"
+      },
+      "html": {
+        "de": "Um Brahes Tod ranken sich zwei Geschichten. Die ältere stammt von Kepler: Brahe habe bei einem Bankett aus Höflichkeit den Tisch nicht verlassen und sich dabei die Blase ruiniert. Die zweite kam 1996 auf, als Haar- und Bartproben aus einer Graböffnung von 1901 erhöhte Quecksilberwerte zeigten. Seitdem stand der Verdacht im Raum, jemand habe nachgeholfen, manche verdächtigten sogar Kepler. 2010 öffneten dänische und tschechische Forscher das Grab erneut, 2012 lag das Ergebnis vor: Die Quecksilberwerte in Knochen und Bart waren nicht hoch genug für eine Vergiftung. Nebenbei stellte sich heraus, dass Brahes Nasenprothese, die er nach einem Duell trug, nicht aus Silber war, sondern aus Messing."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Eingang"
+          },
+          "v": {
+            "de": "Nicht direkt vom Platz, sondern durch die Arkaden des Hauses vor der Kirche."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Die Öffnungszeiten sind kurz und ändern sich. Fragen Sie am Vortag in der Touristeninformation im Erdgeschoss des Rathauses nach."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-8",
+      "label": {
+        "de": "Ort 8"
+      },
+      "meta": {
+        "de": "Altstadt · 29. Oktober 1787"
+      },
+      "html": {
+        "de": "Ständetheater: Mozarts Prager Premiere"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Graf Franz Anton Nostitz-Rieneck ließ das Theater auf eigenem Grund bauen. Am 21. April 1783 wurde es eröffnet, über dem Eingang steht bis heute „Patriae et Musis“, dem Vaterland und den Musen. In Prag war Mozart beliebter als in Wien. Nach dem Erfolg des Figaro bekam er hier den Auftrag für eine neue Oper, und am 29. Oktober 1787 dirigierte er vom Cembalo aus die Uraufführung des Don Giovanni. Die Prager Oberpostamtszeitung meldete, Kenner und Musiker hätten dergleichen in Prag noch nicht gehört."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "1791 kam Mozart ein letztes Mal und dirigierte hier die Uraufführung von La clemenza di Tito zur Krönung Leopolds II. zum böhmischen König. Das Ständetheater ist das einzige erhaltene Theater, in dem Mozart selbst eine Uraufführung dirigiert hat. Vor dem Eingang steht die Skulptur „Il Commendatore“ von Anna Chromý, ein leerer Mantel, der an den steinernen Gast aus der Oper erinnert."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Hinein"
+          },
+          "v": {
+            "de": "Nur mit einer Karte für eine Vorstellung. Don Giovanni steht weiterhin auf dem Spielplan."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro A oder B bis Můstek, dann drei Minuten zu Fuß."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-9",
+      "label": {
+        "de": "Ort 9"
+      },
+      "meta": {
+        "de": "Neustadt · 1969 und 1989"
+      },
+      "html": {
+        "de": "Wenzelsplatz: Jan Palach und der Balkon von 1989"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Wenzelsplatz ist eigentlich ein Boulevard von gut 700 Metern Länge, angelegt unter Karl IV. als Pferdemarkt der Neustadt. Am oberen Ende vor dem Nationalmuseum zündete sich am 16. Januar 1969 der Student Jan Palach an, aus Protest gegen die Resignation nach dem Einmarsch der Truppen des Warschauer Pakts im August 1968. Er starb drei Tage später. Ein Kreuz im Pflaster vor dem Museum erinnert an ihn und an Jan Zajíc, der sich gut einen Monat später ebenfalls am Wenzelsplatz verbrannte."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im November 1989 füllten Hunderttausende den Platz. Vom Balkon des Melantrich-Hauses, Nummer 36, sprachen Václav Havel und Alexander Dubček zu ihnen. Am 29. Dezember 1989 wurde Havel zum Präsidenten gewählt."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Der Platz steigt zum Museum hin an. Fahren Sie mit der Metro bis Muzeum (Linien A und C) und gehen Sie bergab Richtung Můstek."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "ort-10",
+      "label": {
+        "de": "Ort 10"
+      },
+      "meta": {
+        "de": "Neustadt · 16. Jahrhundert"
+      },
+      "html": {
+        "de": "Faust-Haus: ein Loch in der Decke"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am Südende des Karlsplatzes steht ein barockes Palais, das in Prag jeder als Faust-Haus kennt. Mit dem historischen Johann Georg Faust lässt es sich nicht in Verbindung bringen, mit Alchemisten schon: Zu den Besitzern gehörte der Engländer Edward Kelley, der Kaiser Rudolf II. Gold aus unedlen Metallen versprach. Der Sage nach holte der Teufel Faust in diesem Haus durch die Decke, und das Loch ließ sich nie wieder schließen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Goethe, der den Faust zur Weltliteratur gemacht hat, war siebzehnmal in Böhmen. Nach Prag kam er nie."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Besichtigung"
+          },
+          "v": {
+            "de": "Das Haus gehört heute zum Allgemeinen Universitätskrankenhaus und ist innen nicht zugänglich."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro B oder Tram bis Karlovo náměstí."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Der Karlsplatz ist ein großer Park mit Bänken, ein guter Ort für eine Pause am Ende."
+          }
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "id": "praktisch",
+      "html": {
+        "de": "Ohne Bergauf: praktische Hinweise für alle zehn Orte"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Viele meiner Gäste sind über 65, und fast alle merken am ersten Tag, dass Prag hügeliger ist, als der Stadtplan vermuten lässt. Diese Hinweise gebe ich allen, die mit mir unterwegs sind."
+      }
+    },
+    {
+      "t": "list",
+      "ordered": true,
+      "items": [
+        {
+          "de": "<strong>Ab 65 fahren Sie kostenlos.</strong> Metro, Straßenbahn und Bus kosten in Prag ab 65 Jahren nichts. Sie brauchen keinen Fahrschein, aber einen amtlichen Ausweis mit Foto und Geburtsdatum, den Sie bei einer Kontrolle vorzeigen. Zwischen 60 und 65 zahlen Sie den halben Preis."
+        },
+        {
+          "de": "<strong>Oben anfangen.</strong> Fahren Sie mit der Tram 22 oder 23 bis Pohořelec oder Pražský hrad und gehen Sie von dort bergab. Der Aufstieg zur Burg durch die Nerudova-Gasse ist die anstrengendste Strecke der Innenstadt."
+        },
+        {
+          "de": "<strong>Straßenbahnen haben Vorrang.</strong> Auch am Zebrastreifen hat die Tram in Prag Vorrang vor Fußgängern. Schauen Sie vor jedem Gleis nach beiden Seiten."
+        },
+        {
+          "de": "<strong>Fahrscheine für Begleiter unter 65.</strong> Papierfahrscheine entwerten Sie beim ersten Einsteigen und beim Umsteigen nicht noch einmal, sonst werden sie ungültig. Einfacher ist das Terminal in der Mitte jeder Straßenbahn: Dort zahlen Sie mit Karte, und der Fahrschein muss nicht entwertet werden."
+        },
+        {
+          "de": "<strong>Früh kommen.</strong> Im Altstädter Rathaus kostet der Eintritt in der ersten Stunde nach Öffnung die Hälfte, und auf der Karlsbrücke sind Sie vor acht Uhr fast allein."
+        },
+        {
+          "de": "<strong>Eingelaufene Schuhe.</strong> Altstadt, Karlsbrücke und Burg sind mit Kopfsteinpflaster belegt. Feste Schuhe mit weicher Sohle, die Sie schon getragen haben, sind wichtiger als jede Route."
+        },
+        {
+          "de": "<strong>Samstags ist das jüdische Viertel zu.</strong> Die Altneusynagoge und die Häuser des Jüdischen Museums sind samstags und an jüdischen Feiertagen geschlossen."
+        }
+      ]
+    },
+    {
+      "t": "costTable",
+      "title": {
+        "de": "Fahrpreise in Prag, Stand Oktober 2026"
+      },
+      "rows": [
+        {
+          "k": {
+            "de": "30 Minuten"
+          },
+          "v": {
+            "de": "39 Kč"
+          }
+        },
+        {
+          "k": {
+            "de": "90 Minuten"
+          },
+          "v": {
+            "de": "50 Kč"
+          }
+        },
+        {
+          "k": {
+            "de": "24 Stunden"
+          },
+          "v": {
+            "de": "150 Kč"
+          }
+        },
+        {
+          "k": {
+            "de": "72 Stunden"
+          },
+          "v": {
+            "de": "350 Kč"
+          }
+        },
+        {
+          "k": {
+            "de": "60 bis 65 Jahre"
+          },
+          "v": {
+            "de": "halber Preis"
+          }
+        },
+        {
+          "k": {
+            "de": "Ab 65 Jahren"
+          },
+          "v": {
+            "de": "kostenlos"
+          }
+        }
+      ],
+      "note": {
+        "de": "In der App PID Lítačka sind die Fahrscheine etwas günstiger."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie diese Orte lieber mit jemandem besuchen, der die Geschichten dazu erzählt und das Tempo nach Ihnen richtet: Ich führe privat und auf Deutsch, und ich lege die Route so, dass Sie keine Treppe steigen müssen, die Sie nicht steigen wollen."
+      }
+    }
+  ]
+}

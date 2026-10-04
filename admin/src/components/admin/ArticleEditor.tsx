@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Block, JournalArticle, Lang } from '../../types/journal';
-import { BLOCK_TYPES, CATEGORIES, freshBlock, getL, setL, isBilingual, computeReadMinutes } from '../../lib/journal';
+import type { Block, JournalArticle, Lang, OverviewItem, Verdict } from '../../types/journal';
+import { BLOCK_TYPES, CATEGORIES, VERDICTS, freshBlock, getL, setL, isBilingual, computeReadMinutes } from '../../lib/journal';
 import { MapBuilder } from './MapBuilder';
 import { ImagePicker } from './ImagePicker';
 import { ImageBlockEditor } from './ImageBlockEditor';
@@ -120,8 +120,58 @@ const CSS = `
 .zpe-modal-h{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;border-bottom:1px solid var(--rule);position:sticky;top:0;background:#fff;z-index:2}
 .zpe-modal-h b{font-family:var(--font-display);font-size:1.35rem;font-weight:400}
 .zpe-modal-h .done{border:0;background:var(--burgundy);color:var(--ivory);border-radius:var(--radius-md);padding:.55rem 1.1rem;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.04em;cursor:pointer}
+.zpe-kicker{font-family:var(--font-sans);font-size:13px;font-weight:700;color:#11457E;margin:1.3rem 0 0;outline:0}
+.zpe-kicker + .zpe-title{margin-top:.35rem}
+.zpe-sm{border:1px solid var(--rule-soft);border-radius:var(--radius-sm);background:#fff;padding:.2rem .45rem;font-family:var(--font-sans);font-size:11px;color:var(--ink);outline:0;width:7rem}
+.zpe-sm:focus{border-color:var(--ink)}
+.zpe-anchor{display:inline-flex;align-items:center;gap:.3rem;margin-top:.4rem;font-size:11px;color:var(--ink-mute)}
+.zpe-x{flex-shrink:0;width:22px;height:22px;border:0;background:transparent;color:var(--stone-400);border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.zpe-x:hover{background:var(--stone-100);color:var(--burgundy)}
+.zpe-x .material-symbols-outlined{font-size:16px}
+.zpe-rowx{display:flex;align-items:flex-start;gap:.4rem}
+.zpe-rowx > .grow{flex:1;min-width:0;outline:0}
+.zpe-check{display:inline-flex;align-items:center;gap:.4rem;font-size:11px;color:var(--ink-mute);margin-bottom:.4rem;cursor:pointer}
+.zpe-check input{accent-color:var(--burgundy)}
+.zpe-list{margin:0;padding-left:1.3rem;font-family:var(--font-body);font-size:1rem;line-height:1.6;color:var(--ink-soft)}
+.zpe-list li{margin:.2rem 0}
+.zpe-cost .note{font-size:12px;color:var(--ink-mute);padding:.5rem .9rem;border-top:1px solid var(--rule-soft);outline:0}
+.zpe-costrow .zpe-x{margin-left:-.4rem}
+.zpe-chap .lab{display:flex;align-items:baseline;gap:.8rem;border-bottom:2px solid var(--ink);padding-bottom:.35rem;font-size:13px}
+.zpe-chap .lab .n{font-weight:700;color:var(--burgundy);outline:0}
+.zpe-chap .lab .m{flex:1;color:var(--ink-mute);outline:0}
+.zpe-fc{background:#F6F4EF;border-top:3px solid #5C5650;padding:.8rem 1rem}
+.zpe-fc[data-v="refuted"]{border-top-color:var(--burgundy)}
+.zpe-fc[data-v="open"]{border-top-color:#11457E}
+.zpe-fc .hd{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;font-size:12px}
+.zpe-fc .hd .l{font-weight:700;outline:0}
+.zpe-fc .cl{font-family:var(--font-italic);font-style:italic;font-size:1.25rem;line-height:1.35;color:var(--ink);margin:.5rem 0 0;outline:0}
+.zpe-fc .tx{font-size:13px;line-height:1.55;color:var(--ink-soft);margin:.4rem 0 0;outline:0}
+.zpe-sel{border:1px solid var(--rule);border-radius:var(--radius-sm);background:#fff;padding:.15rem .3rem;font-family:var(--font-sans);font-size:11px;color:var(--ink)}
+.zpe-badge{border:1.5px solid currentColor;border-radius:3px;padding:0 .4rem;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;outline:0;color:#5C5650}
+.zpe-badge[data-v="refuted"]{color:var(--burgundy)}
+.zpe-badge[data-v="open"]{color:#11457E}
+.zpe-ov .ttl{font-family:var(--font-sans);font-size:1.05rem;font-weight:700;color:var(--ink);outline:0}
+.zpe-ov .intro{font-size:12px;color:var(--ink-mute);margin:.2rem 0 .5rem;outline:0}
+.zpe-ovrows{border-top:2px solid var(--ink)}
+.zpe-ovrow{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .6rem;padding:.45rem 0;border-bottom:1px solid var(--rule-soft);font-size:13px}
+.zpe-ovrow .zpe-sm.n{width:2.6rem}
+.zpe-ovrow .ti{flex:1 1 12rem;min-width:0;font-weight:600;outline:0}
+.zpe-ovrow.is-claim .ti{font-family:var(--font-italic);font-style:italic;font-weight:400;font-size:1rem}
+.zpe-ovrow .de{flex:1 1 10rem;min-width:0;color:var(--ink-mute);outline:0}
+.zpe-sources{margin-top:2.2rem;padding-top:.8rem;border-top:3px solid var(--ink)}
+.zpe-sources ol{margin:.4rem 0 0;padding-left:1.3rem;font-size:13px;line-height:1.55;color:var(--ink-soft)}
+.zpe-sources li{margin:.25rem 0}
 @media(max-width:980px){.zpt-article-editor{grid-template-columns:1fr}.zpe-meta{border-left:0;border-top:1px solid var(--rule)}}
 `;
+
+/** Small "remove" button used in repeatable rows. */
+function RemoveBtn({ onClick, title = 'Entfernen' }: { onClick: () => void; title?: string }) {
+  return (
+    <button type="button" className="zpe-x" title={title} onClick={onClick}>
+      <span className="material-symbols-outlined">close</span>
+    </button>
+  );
+}
 
 type Tag = 'h1' | 'h2' | 'p' | 'div' | 'span' | 'b';
 
@@ -195,10 +245,135 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
   const dateDisplayVal = (doc.dateDisplay && doc.dateDisplay[lang]) || '';
   const setDateDisplay = (v: string) => set({ dateDisplay: { ...(doc.dateDisplay || {}), [lang]: v } });
 
+  /** In-page anchor input (ids are shared across languages). */
+  const anchorInput = (i: number, id: string | undefined) => (
+    <label className="zpe-anchor">
+      Anker&nbsp;#
+      <input className="zpe-sm" value={id || ''} placeholder="optional" onChange={(e) => setBlock(i, { id: e.target.value.replace(/[^a-z0-9-]/gi, '') || undefined })} />
+    </label>
+  );
+
+  const verdictSelect = (value: Verdict | undefined, onPick: (v: Verdict) => void) => (
+    <select className="zpe-sel" value={value || 'unproven'} onChange={(e) => onPick(e.target.value as Verdict)} title="Farbe des Urteils">
+      {VERDICTS.map((x) => <option key={x.v} value={x.v}>{x.label} ({x.hint})</option>)}
+    </select>
+  );
+
+  /** New verdict tone; also swaps the badge text while it is still a default label. */
+  const verdictPatch = (cur: Parameters<typeof getL>[0], v: Verdict) => {
+    const label = getL(cur, lang);
+    const isDefault = !label || VERDICTS.some((x) => x.label === label);
+    const def = VERDICTS.find((x) => x.v === v)!.label;
+    return { verdict: v, ...(isDefault && lang === 'de' ? { verdictLabel: setL(cur, 'de', def) } : {}) };
+  };
+
   const renderBlock = (b: Block, i: number) => {
     switch (b.t) {
       case 'h2':
-        return <Editable tag="h2" cls="zpe-h2" html={getL(b.html, lang)} placeholder="Überschrift…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />;
+        return (
+          <>
+            <Editable tag="h2" cls="zpe-h2" html={getL(b.html, lang)} placeholder="Überschrift…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
+            {anchorInput(i, b.id)}
+          </>
+        );
+      case 'list':
+        return (
+          <div>
+            <label className="zpe-check"><input type="checkbox" checked={!!b.ordered} onChange={(e) => setBlock(i, { ordered: e.target.checked || undefined })} /> Nummeriert</label>
+            {React.createElement(
+              b.ordered ? 'ol' : 'ul',
+              { className: 'zpe-list' },
+              (b.items || []).map((it, k) => (
+                <li key={k}>
+                  <div className="zpe-rowx">
+                    <Editable tag="div" cls="grow" html={getL(it, lang)} placeholder="Listenpunkt…" onCommit={(v) => setBlock(i, { items: b.items.map((x, j) => (j === k ? setL(x, lang, v) : x)) })} />
+                    <RemoveBtn onClick={() => setBlock(i, { items: b.items.filter((_, j) => j !== k) })} />
+                  </div>
+                </li>
+              )),
+            )}
+            <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { items: [...(b.items || []), { de: '' }] })}>+ Punkt</button>
+          </div>
+        );
+      case 'facts':
+        return (
+          <div className="zpe-cost">
+            <Editable tag="div" cls="ct" html={getL(b.title, lang)} placeholder="Überschrift (optional)…" onCommit={(v) => setBlock(i, { title: v ? setL(b.title, lang, v) : undefined })} />
+            {(b.items || []).map((r, ri) => (
+              <div className="zpe-costrow" key={ri}>
+                <Editable tag="span" html={getL(r.k, lang)} placeholder="Anfahrt" onCommit={(v) => setBlock(i, { items: b.items.map((x, xi) => (xi === ri ? { ...x, k: setL(x.k, lang, v) } : x)) })} />
+                <Editable tag="span" html={getL(r.v, lang)} placeholder="…" onCommit={(v) => setBlock(i, { items: b.items.map((x, xi) => (xi === ri ? { ...x, v: setL(x.v, lang, v) } : x)) })} />
+                <RemoveBtn onClick={() => setBlock(i, { items: b.items.filter((_, xi) => xi !== ri) })} />
+              </div>
+            ))}
+            <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { items: [...(b.items || []), { k: { de: '' }, v: { de: '' } }] })}>+ Zeile</button>
+          </div>
+        );
+      case 'chapter':
+        return (
+          <div className="zpe-chap">
+            <div className="lab">
+              <Editable tag="span" cls="n" html={getL(b.label, lang)} placeholder="Ort 1" onCommit={(v) => setBlock(i, { label: setL(b.label, lang, v) })} />
+              <Editable tag="span" cls="m" html={getL(b.meta, lang)} placeholder="Stadtteil · Jahr" onCommit={(v) => setBlock(i, { meta: setL(b.meta, lang, v) })} />
+            </div>
+            <Editable tag="h2" cls="zpe-h2" html={getL(b.html, lang)} placeholder="Titel des Kapitels…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
+            {anchorInput(i, b.id)}
+          </div>
+        );
+      case 'factcheck':
+        return (
+          <div className="zpe-fc" data-v={b.verdict}>
+            <div className="hd">
+              <Editable tag="span" cls="l" html={getL(b.label, lang)} placeholder="Legende im Faktencheck" onCommit={(v) => setBlock(i, { label: v ? setL(b.label, lang, v) : undefined })} />
+              <Editable tag="span" cls="zpe-badge" html={getL(b.verdictLabel, lang)} placeholder="Urteil" onCommit={(v) => setBlock(i, { verdictLabel: setL(b.verdictLabel, lang, v) })} />
+              {verdictSelect(b.verdict, (v) => setBlock(i, verdictPatch(b.verdictLabel, v)))}
+            </div>
+            <Editable tag="p" cls="cl" html={getL(b.claim, lang)} placeholder="„Die Behauptung…“" onCommit={(v) => setBlock(i, { claim: setL(b.claim, lang, v) })} />
+            <Editable tag="div" cls="tx" html={getL(b.html, lang)} placeholder="Was die Forschung sagt…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
+          </div>
+        );
+      case 'overview': {
+        const claims = b.variant === 'claims';
+        const items = b.items || [];
+        const setItem = (k: number, patch: Partial<OverviewItem>) => setBlock(i, { items: items.map((x, j) => (j === k ? { ...x, ...patch } : x)) });
+        return (
+          <div className="zpe-ov">
+            <label className="zpe-check">
+              <select className="zpe-sel" value={b.variant} onChange={(e) => setBlock(i, { variant: e.target.value as 'index' | 'claims' })}>
+                <option value="index">Orte (nummeriert)</option>
+                <option value="claims">Behauptungen + Urteil</option>
+              </select>
+            </label>
+            <Editable tag="div" cls="ttl" html={getL(b.title, lang)} placeholder="Überschrift…" onCommit={(v) => setBlock(i, { title: setL(b.title, lang, v) })} />
+            <Editable tag="div" cls="intro" html={getL(b.intro, lang)} placeholder="Einleitungssatz (optional)…" onCommit={(v) => setBlock(i, { intro: v ? setL(b.intro, lang, v) : undefined })} />
+            <div className="zpe-ovrows">
+              {items.map((it, k) => (
+                <div className={`zpe-ovrow ${claims ? 'is-claim' : ''}`} key={k}>
+                  <input className="zpe-sm" value={it.href} placeholder="#ort-1" title="Link / Anker" onChange={(e) => setItem(k, { href: e.target.value })} />
+                  {!claims && <input className="zpe-sm n" value={it.n || ''} placeholder="Nr." onChange={(e) => setItem(k, { n: e.target.value || undefined })} />}
+                  <Editable tag="span" cls="ti" html={getL(it.title, lang)} placeholder={claims ? '„Behauptung…“' : 'Name'} onCommit={(v) => setItem(k, { title: setL(it.title, lang, v) })} />
+                  {claims && (
+                    <>
+                      <Editable tag="span" cls="zpe-badge" html={getL(it.verdictLabel, lang)} placeholder="Urteil" onCommit={(v) => setItem(k, { verdictLabel: setL(it.verdictLabel, lang, v) })} />
+                      {verdictSelect(it.verdict, (v) => setItem(k, verdictPatch(it.verdictLabel, v)))}
+                    </>
+                  )}
+                  <Editable tag="span" cls="de" html={getL(it.desc, lang)} placeholder={claims ? 'Ort 2' : 'Jahr: Ereignis · Stadtteil'} onCommit={(v) => setItem(k, { desc: setL(it.desc, lang, v) })} />
+                  <RemoveBtn onClick={() => setBlock(i, { items: items.filter((_, j) => j !== k) })} />
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              className="zpe-costadd"
+              onClick={() => setBlock(i, { items: [...items, claims ? { href: '#', title: { de: '' }, verdict: 'unproven', verdictLabel: { de: 'Unbelegt' } } : { href: '#', n: String(items.length + 1), title: { de: '' } }] })}
+            >
+              + Zeile
+            </button>
+            {anchorInput(i, b.id)}
+          </div>
+        );
+      }
       case 'quote':
         return (
           <div className="zpe-quote">
@@ -230,8 +405,10 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
               <div className="zpe-costrow" key={ri}>
                 <Editable tag="span" html={getL(r.k, lang)} onCommit={(v) => setBlock(i, { rows: b.rows.map((x, xi) => (xi === ri ? { ...x, k: setL(x.k, lang, v) } : x)) })} />
                 <Editable tag="span" html={getL(r.v, lang)} onCommit={(v) => setBlock(i, { rows: b.rows.map((x, xi) => (xi === ri ? { ...x, v: setL(x.v, lang, v) } : x)) })} />
+                <RemoveBtn onClick={() => setBlock(i, { rows: b.rows.filter((_, xi) => xi !== ri) })} />
               </div>
             ))}
+            <Editable tag="div" cls="note" html={getL(b.note, lang)} placeholder="Anmerkung unter der Tabelle (optional)…" onCommit={(v) => setBlock(i, { note: v ? setL(b.note, lang, v) : undefined })} />
             <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { rows: [...(b.rows || []), { k: { de: 'Position' }, v: { de: '—' } }] })}>+ Zeile</button>
           </div>
         );
@@ -291,6 +468,7 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
             <input className="zpe-herocap" value={getL(doc.heroCap, lang)} onChange={(e) => set({ heroCap: setL(doc.heroCap, lang, e.target.value) })} placeholder="Bildunterschrift des Titelbilds…" />
           </div>
 
+          <Editable tag="div" cls="zpe-kicker" html={getL(doc.kicker, lang)} placeholder="Dachzeile (optional, z. B. Prager Geschichte)…" onCommit={(v) => set({ kicker: v ? setL(doc.kicker, lang, v) : undefined })} />
           <Editable tag="h1" cls="zpe-title" html={getL(doc.title, lang)} placeholder="Titel…" onCommit={(v) => set({ title: setL(doc.title, lang, v) })} />
           <Editable tag="div" cls="zpe-stand" html={getL(doc.excerpt, lang)} placeholder="Vorspann / Teaser…" onCommit={(v) => set({ excerpt: setL(doc.excerpt, lang, v) })} />
 
@@ -314,6 +492,23 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
             <button type="button" className="zpe-addblock" onClick={() => setPalAt(blocks.length)}>
               <span className="material-symbols-outlined">add</span>Block hinzufügen
             </button>
+          </div>
+
+          <div className="zpe-sources">
+            <p className="zpe-sl">Quellen (nach dem Abschluss-CTA)</p>
+            {(doc.sources || []).length > 0 && (
+              <ol>
+                {(doc.sources || []).map((s, k) => (
+                  <li key={k}>
+                    <div className="zpe-rowx">
+                      <Editable tag="div" cls="grow" html={getL(s, lang)} placeholder="Quelle, gern mit Link…" onCommit={(v) => set({ sources: (doc.sources || []).map((x, j) => (j === k ? setL(x, lang, v) : x)) })} />
+                      <RemoveBtn onClick={() => set({ sources: (doc.sources || []).filter((_, j) => j !== k) })} />
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
+            <button type="button" className="zpe-costadd" onClick={() => set({ sources: [...(doc.sources || []), { de: '' }] })}>+ Quelle</button>
           </div>
         </div>
       </div>
@@ -347,6 +542,10 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
           <div className="zpe-thumb">
             <div className="t" style={doc.hero ? { backgroundImage: `url(${img(doc.hero)})` } : undefined}></div>
             <button type="button" className="zpe-imgbtn" onClick={() => pickImage(doc.hero || '', (src) => set({ hero: src }))}>Ersetzen</button>
+          </div>
+          <div className="zpe-field" style={{ marginTop: '.7rem' }}>
+            <label>Bildnachweis</label>
+            <div className="zpe-inp"><span className="pre">Bild:</span><input value={doc.heroCredit || ''} onChange={(e) => set({ heroCredit: e.target.value || undefined })} placeholder="z. B. Zuza Prague Tours" /></div>
           </div>
         </div>
       </aside>

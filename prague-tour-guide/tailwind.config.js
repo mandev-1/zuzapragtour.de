@@ -41,6 +41,21 @@ module.exports = {
         sage: {
           DEFAULT: '#8A9282',
         },
+        // Journal articles — own palette (design_handoff_blog_orte).
+        journal: {
+          ink: '#1A1714',
+          body: '#2F2A26',
+          mute: '#5C5650',
+          faint: '#8A847D',
+          blue: '#11457E',
+          'blue-hover': '#0B3360',
+          'blue-tint': '#EEF3F9',
+          select: '#DCE6F2',
+          burgundy: '#6B1F2A',
+          'burgundy-hover': '#4F1620',
+          rule: '#E4DFD6',
+          panel: '#F6F4EF',
+        },
         // /bewerten review page — own palette (design_handoff_bewerten).
         // Desktop = cooler ivory, mobile = warm cream; red/blue shared.
         bewerten: {
@@ -127,6 +142,8 @@ module.exports = {
         // /bewerten review page
         hanken: ['var(--font-hanken)', '"Hanken Grotesk"', '"Helvetica Neue"', 'sans-serif'],
         garamond: ['var(--font-garamond)', '"EB Garamond"', 'Georgia', 'serif'],
+        // Journal articles
+        news: ['var(--font-newsreader)', '"Newsreader"', 'Georgia', 'serif'],
         // Legacy aliases used by non-blog pages — kept intact
         headline: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
         serif: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],

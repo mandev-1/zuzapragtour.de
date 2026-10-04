@@ -53,7 +53,7 @@
         "de": "Vorab in einer Zeile"
       },
       "html": {
-        "de": "<div class=\"callout-box__label\">Vorab in einer Zeile</div>\n  <p class=\"callout-box__text\">\n    Diese Liste ersetzt keinen Reiseführer. Sie ist eine ehrliche\n    Bestandsaufnahme dessen, was an einem typischen Wochenende in Prag\n    regelmäßig schiefläuft — und wie Sie es sich, Ihrer Zeit und Ihrem\n    Geldbeutel ersparen.\n  </p>"
+        "de": "<p class=\"callout-box__text\">\n    Diese Liste ersetzt keinen Reiseführer. Sie ist eine ehrliche\n    Bestandsaufnahme dessen, was an einem typischen Wochenende in Prag\n    regelmäßig schiefläuft — und wie Sie es sich, Ihrer Zeit und Ihrem\n    Geldbeutel ersparen.\n  </p>"
       }
     },
     {
@@ -405,7 +405,7 @@
         "de": "Drei Merkmale echten böhmischen Kristalls"
       },
       "html": {
-        "de": "<div class=\"callout-box__label\">Drei Merkmale echten böhmischen Kristalls</div>\n  <p class=\"callout-box__text\">\n    Bleigehalt mindestens 24 % (steht eingeschliffen am Boden) ·\n    Manuelle Schliffmarken statt maschineller Symmetrie · Klang\n    beim Anschlagen tief und nachhallend, nicht hell und kurz.\n  </p>"
+        "de": "<p class=\"callout-box__text\">\n    Bleigehalt mindestens 24 % (steht eingeschliffen am Boden) ·\n    Manuelle Schliffmarken statt maschineller Symmetrie · Klang\n    beim Anschlagen tief und nachhallend, nicht hell und kurz.\n  </p>"
       }
     },
     {

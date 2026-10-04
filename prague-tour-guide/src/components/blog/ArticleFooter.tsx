@@ -16,18 +16,18 @@ interface ArticleFooterProps {
 }
 
 /**
- * Footer of the article body. Outlined uppercase tags row above an
- * AuthorBio card. Top border separates from the body.
+ * Footer of the article body: tags row above an AuthorBio card, in the
+ * journal palette. Top rule separates it from the sources / CTA above.
  */
 const ArticleFooter: React.FC<ArticleFooterProps> = ({ tags, author }) => {
   return (
-    <footer className="mt-[5em] border-t border-rule pt-8">
+    <footer className="mt-14 border-t border-journal-rule pt-8">
       {tags && tags.length > 0 && (
         <ul className="m-0 mb-8 flex list-none flex-wrap gap-2 p-0">
           {tags.map((t) => (
             <li
               key={t}
-              className="cursor-default border border-rule px-3.5 py-1.5 font-sans text-[11px] uppercase tracking-[0.12em] text-ink-soft transition-colors duration-200 hover:border-burgundy hover:text-burgundy"
+              className="cursor-default rounded-[3px] border border-journal-rule px-3 py-1 font-hanken text-[13px] text-journal-mute"
             >
               {t}
             </li>

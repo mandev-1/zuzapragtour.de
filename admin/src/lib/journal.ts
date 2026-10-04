@@ -1,5 +1,5 @@
 // Editor-side helpers for the bilingual block model.
-import type { Lang, Localized, Block, JournalArticle, BlockType } from '../types/journal';
+import type { Lang, Localized, Block, JournalArticle, BlockType, Verdict } from '../types/journal';
 
 export const CATEGORIES = [
   'Reiseführer',
@@ -24,9 +24,21 @@ export const BLOCK_TYPES: BlockMeta[] = [
   { t: 'quote', label: 'Zitat', icon: 'format_quote', desc: 'Pull-Quote' },
   { t: 'callout', label: 'Hinweis', icon: 'lightbulb', desc: 'Tipp-Box' },
   { t: 'image', label: 'Bild', icon: 'image', desc: 'Foto + Unterschrift' },
+  { t: 'list', label: 'Liste', icon: 'format_list_bulleted', desc: 'Aufzählung' },
   { t: 'costTable', label: 'Kostentabelle', icon: 'table_rows', desc: 'Preise' },
+  { t: 'facts', label: 'Praktisches', icon: 'info', desc: 'Anfahrt, Eintritt …' },
+  { t: 'chapter', label: 'Kapitel', icon: 'bookmark', desc: '„Ort 1“ + Titel' },
+  { t: 'factcheck', label: 'Faktencheck', icon: 'fact_check', desc: 'Legende + Urteil' },
+  { t: 'overview', label: 'Übersicht', icon: 'toc', desc: 'Verlinkte Liste' },
   { t: 'map', label: 'Karte', icon: 'map', desc: 'Tour-Stationen' },
   { t: 'ornament', label: 'Zierde', icon: 'auto_awesome', desc: 'Trenner' },
+];
+
+/** Fact-check verdicts: tone (badge colour) + the default German badge text. */
+export const VERDICTS: { v: Verdict; label: string; hint: string }[] = [
+  { v: 'refuted', label: 'Widerlegt', hint: 'weinrot' },
+  { v: 'open', label: 'Ungeklärt', hint: 'blau' },
+  { v: 'unproven', label: 'Unbelegt', hint: 'grau — auch „Sage“, „Ohne Grundlage“' },
 ];
 
 /**
@@ -82,6 +94,13 @@ function blockText(b: any, lang: Lang): string {
         (b.rows || b.items || []).map((r: any) => stripText(locLoose(r.k, lang)) + ' ' + stripText(locLoose(r.v, lang))).join(' ');
     case 'map':
       return (b.points || []).map((p: any) => stripText(locLoose(p.label, lang)) + ' ' + stripText(locLoose(p.note, lang))).join(' ');
+    case 'chapter':
+      return stripText(locLoose(b.label, lang)) + ' ' + stripText(locLoose(b.meta, lang)) + ' ' + stripText(locLoose(b.html, lang));
+    case 'factcheck':
+      return stripText(locLoose(b.claim, lang)) + ' ' + stripText(locLoose(b.html, lang));
+    case 'overview':
+      return stripText(locLoose(b.title, lang)) + ' ' + stripText(locLoose(b.intro, lang)) + ' ' +
+        (b.items || []).map((it: any) => stripText(locLoose(it.title, lang)) + ' ' + stripText(locLoose(it.desc, lang))).join(' ');
     default:
       return '';
   }
@@ -138,6 +157,29 @@ export function freshBlock(t: BlockType): Block {
           { coord: [50.0875, 14.4213], label: { de: 'Altstädter Ring' }, note: { de: 'Astronomische Uhr und Teynkirche.' } },
           { coord: [50.0865, 14.4114], label: { de: 'Karlsbrücke' }, note: { de: 'Am frühen Morgen am schönsten.' } },
         ],
+      };
+    case 'list':
+      return { t: 'list', items: [{ de: 'Erster Punkt' }, { de: 'Zweiter Punkt' }] };
+    case 'facts':
+      return { t: 'facts', items: [{ k: { de: 'Anfahrt' }, v: { de: 'Metro A bis …' } }, { k: { de: 'Gut zu wissen' }, v: { de: '…' } }] };
+    case 'chapter':
+      return { t: 'chapter', id: 'ort-1', label: { de: 'Ort 1' }, meta: { de: 'Stadtteil · Jahr' }, html: { de: 'Titel des Kapitels' } };
+    case 'factcheck':
+      return {
+        t: 'factcheck',
+        verdict: 'unproven',
+        verdictLabel: { de: 'Unbelegt' },
+        claim: { de: '„Die Behauptung, wie man sie hört.“' },
+        html: { de: 'Was die Forschung dazu sagt …' },
+      };
+    case 'overview':
+      return {
+        t: 'overview',
+        variant: 'index',
+        id: 'ueberblick',
+        title: { de: 'Im Überblick' },
+        intro: { de: '' },
+        items: [{ href: '#ort-1', n: '1', title: { de: 'Erster Ort' }, desc: { de: 'Jahr: Ereignis · Stadtteil' } }],
       };
     case 'ornament':
       return { t: 'ornament' };

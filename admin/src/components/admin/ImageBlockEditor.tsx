@@ -13,6 +13,12 @@ const ASPECTS: [string, string][] = [
   ['1/1', '1:1'],
 ];
 
+const LAYOUTS: [ImageBlock['layout'], string][] = [
+  [undefined, 'Volle Breite'],
+  ['medium', 'Mittel · 480'],
+  ['side', 'Hochformat · Text daneben'],
+];
+
 const CSS = `
 .zib{display:flex;flex-direction:column;gap:.6rem}
 .zib-empty{aspect-ratio:3/2;border-radius:var(--radius-lg);background:var(--stone-100);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;border:1px dashed var(--stone-300);color:var(--ink-mute)}
@@ -115,6 +121,20 @@ export function ImageBlockEditor({ block: b, lang, onChange, onPick }: ImageBloc
       <div className="zib-field zib-cap">
         <label>Bildunterschrift · {lang.toUpperCase()}</label>
         <input value={getL(b.cap, lang)} onChange={(e) => onChange({ cap: setL(b.cap, lang, e.target.value) })} placeholder="Optionale Bildunterschrift…" />
+      </div>
+      <div className="zib-field">
+        <label>Bildnachweis (erscheint als „Bild: …“)</label>
+        <input value={b.credit || ''} onChange={(e) => onChange({ credit: e.target.value || undefined })} placeholder="z. B. Zuza Prague Tours" />
+      </div>
+      <div className="zib-field">
+        <label>Breite im Artikel</label>
+        <div className="zib-ars" style={{ alignSelf: 'flex-start' }}>
+          {LAYOUTS.map(([v, l]) => (
+            <button key={v || 'full'} type="button" className={b.layout === v || (!v && b.layout === 'full') ? 'is-on' : ''} onClick={() => onChange({ layout: v })}>
+              {l}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

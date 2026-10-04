@@ -105,6 +105,12 @@ function build() {
       de: editionNote(a, 'de') + renderBlocks(a.blocks, 'de'),
       en: hasEn ? editionNote(a, 'en') + renderBlocks(a.blocks, 'en') : undefined,
     };
+    // Optional header/footer fields, keyed like the rest so t() resolves them.
+    const perLang = (fn) => ({ de: fn('de'), en: hasEn ? fn('en') : undefined });
+    const sourcesHtml = (lang) => (a.sources || []).map((s) => '<li>' + loc(s, lang) + '</li>').join('');
+    if (a.kicker) journalContent[key('kicker')] = perLang((l) => loc(a.kicker, l));
+    if (a.heroCap) journalContent[key('heroCap')] = perLang((l) => loc(a.heroCap, l));
+    if (a.sources && a.sources.length) journalContent[key('sources')] = perLang(sourcesHtml);
 
     journalPosts.push({
       id: `j-${a.slug}`,
@@ -124,6 +130,11 @@ function build() {
       tagsDe: (a.tags && a.tags.de) || undefined,
       language: langFlag(languages),
       isJournal: true,
+      category: a.category || undefined,
+      kickerKey: a.kicker ? key('kicker') : undefined,
+      heroCapKey: a.heroCap ? key('heroCap') : undefined,
+      heroCredit: a.heroCredit || undefined,
+      sourcesKey: a.sources && a.sources.length ? key('sources') : undefined,
     });
   }
 

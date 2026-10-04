@@ -45,6 +45,52 @@ function stripTags(s) {
   return String(s == null ? '' : s).replace(/<[^>]+>/g, '');
 }
 
+/** ' id="…"' when an anchor id is set, else ''. */
+function idAttr(id) {
+  return id ? ' id="' + escAttr(id) + '"' : '';
+}
+
+/** Photo credit appended to a caption: "Bild: …" / "Photo: …". */
+function creditHtml(credit, lang) {
+  if (!credit) return '';
+  return ' <span class="credit">' + (lang === 'en' ? 'Photo: ' : 'Bild: ') + escText(credit) + '</span>';
+}
+
+var VERDICTS = { refuted: 1, open: 1, unproven: 1 };
+
+function badge(verdict, label, lang) {
+  var tone = VERDICTS[verdict] ? verdict : 'unproven';
+  return '<span class="j-badge j-badge--' + tone + '">' + escText(loc(label, lang)) + '</span>';
+}
+
+function renderOverview(b, lang) {
+  var claims = b.variant === 'claims';
+  var hasTitle = !!loc(b.title, lang);
+  var head =
+    (hasTitle ? '<h2 class="j-overview__title"' + idAttr(b.id) + '>' + loc(b.title, lang) + '</h2>' : '') +
+    (b.intro ? '<p class="j-overview__intro">' + loc(b.intro, lang) + '</p>' : '');
+  var rows = (b.items || [])
+    .map(function (it) {
+      var inner = claims
+        ? '<span class="j-overview__claim">' + loc(it.title, lang) + '</span>' +
+          '<span class="j-overview__meta">' +
+          (it.verdictLabel ? badge(it.verdict, it.verdictLabel, lang) : '') +
+          (it.desc ? '<span class="j-overview__ref">' + loc(it.desc, lang) + '</span>' : '') +
+          '</span>'
+        : '<span class="j-overview__n">' + escText(it.n || '') + '</span>' +
+          '<span class="j-overview__name">' + loc(it.title, lang) + '</span>' +
+          (it.desc ? '<span class="j-overview__desc">' + loc(it.desc, lang) + '</span>' : '');
+      return '<a class="j-overview__row" href="' + escAttr(it.href || '#') + '">' + inner + '</a>';
+    })
+    .join('');
+  return (
+    '<div class="j-overview j-overview--' + (claims ? 'claims' : 'index') + '"' + (hasTitle ? '' : idAttr(b.id)) + '>' +
+    head +
+    '<div class="j-overview__list">' + rows + '</div>' +
+    '</div>'
+  );
+}
+
 function stopsList(points, lang) {
   return (
     '<ol class="jmap-stops">' +
@@ -93,8 +139,8 @@ function renderBlock(b, lang) {
       return '<p' + (b.lead ? ' class="lead"' : '') + '>' + loc(b.html, lang) + '</p>';
 
     case 'h2':
-      // No id here — BlogPostPage.injectHeadingIds adds heading-N ids + TOC.
-      return '<h2>' + loc(b.html, lang) + '</h2>';
+      // Without an explicit anchor id, BlogPostPage.injectHeadingIds adds heading-N.
+      return '<h2' + idAttr(b.id) + '>' + loc(b.html, lang) + '</h2>';
 
     case 'quote':
       return (
@@ -131,8 +177,37 @@ function renderBlock(b, lang) {
       } else {
         imgTag = '<img src="' + escAttr(b.src) + '" alt="' + escAttr(alt) + '" loading="lazy">';
       }
-      return '<figure class="blog-inline-image">' + imgTag + (cap ? '<figcaption>' + cap + '</figcaption>' : '') + '</figure>';
+      var layout = b.layout === 'medium' || b.layout === 'side' ? ' blog-inline-image--' + b.layout : '';
+      var capHtml = cap || b.credit ? '<figcaption>' + cap + creditHtml(b.credit, lang) + '</figcaption>' : '';
+      return '<figure class="blog-inline-image' + layout + '">' + imgTag + capHtml + '</figure>';
     }
+
+    case 'chapter':
+      return (
+        '<div class="j-chapter"' + idAttr(b.id) + '>' +
+        '<div class="j-chapter__label">' +
+        '<span class="j-chapter__n">' + loc(b.label, lang) + '</span>' +
+        (b.meta ? '<span class="j-chapter__meta">' + loc(b.meta, lang) + '</span>' : '') +
+        '</div>' +
+        '<h2 class="j-chapter__title">' + loc(b.html, lang) + '</h2>' +
+        '</div>'
+      );
+
+    case 'factcheck': {
+      var tone = VERDICTS[b.verdict] ? b.verdict : 'unproven';
+      var fcLabel = loc(b.label, lang) || (lang === 'en' ? 'Legend, fact-checked' : 'Legende im Faktencheck');
+      return (
+        '<aside class="j-factcheck j-factcheck--' + tone + '">' +
+        '<div class="j-factcheck__head"><span class="j-factcheck__label">' + escText(fcLabel) + '</span>' +
+        badge(tone, b.verdictLabel, lang) + '</div>' +
+        '<p class="j-factcheck__claim">' + loc(b.claim, lang) + '</p>' +
+        '<div class="j-factcheck__text">' + loc(b.html, lang) + '</div>' +
+        '</aside>'
+      );
+    }
+
+    case 'overview':
+      return renderOverview(b, lang);
 
     case 'costTable': {
       var header = b.title ? '<p class="cost-table-header">' + escText(loc(b.title, lang)) + '</p>' : '';
@@ -146,7 +221,8 @@ function renderBlock(b, lang) {
           );
         })
         .join('');
-      return '<div class="cost-table">' + header + rows + '</div>';
+      var note = b.note ? '<p class="cost-table-footnote">' + loc(b.note, lang) + '</p>' : '';
+      return '<div class="cost-table">' + header + rows + note + '</div>';
     }
 
     case 'list': {
@@ -159,19 +235,19 @@ function renderBlock(b, lang) {
     }
 
     case 'facts': {
-      // No dedicated public CSS for facts — reuse the cost-table key/value layout.
-      var fh = '<p class="cost-table-header">' + escText(loc(b.title, lang) || 'Gut zu wissen') + '</p>';
+      // Label column + value rows (practical info). Header only when titled.
+      var fh = b.title ? '<p class="facts-table__header">' + escText(loc(b.title, lang)) + '</p>' : '';
       var fr = (b.items || [])
         .map(function (it) {
           return (
-            '<div class="cost-table-row">' +
-            '<span class="cost-table-label">' + escText(loc(it.k, lang)) + '</span>' +
-            '<span class="cost-table-amount">' + escText(loc(it.v, lang)) + '</span>' +
+            '<div class="facts-table__row">' +
+            '<div class="facts-table__k">' + escText(loc(it.k, lang)) + '</div>' +
+            '<div class="facts-table__v">' + escText(loc(it.v, lang)) + '</div>' +
             '</div>'
           );
         })
         .join('');
-      return '<div class="cost-table">' + fh + fr + '</div>';
+      return '<div class="facts-table">' + fh + fr + '</div>';
     }
 
     case 'map':

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight, Hanken_Grotesk, EB_Garamond } from 'next/font/google';
+import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight, Hanken_Grotesk, EB_Garamond, Newsreader } from 'next/font/google';
 import { LanguageProvider } from '../src/context/LanguageContext';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
@@ -44,9 +44,9 @@ const interTight = Inter_Tight({
   display: 'swap',
 });
 
-// /bewerten review page
+// /bewerten review page + journal articles (UI text)
 const hanken = Hanken_Grotesk({
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin', 'latin-ext'],
   variable: '--font-hanken',
   display: 'swap',
@@ -57,6 +57,15 @@ const ebGaramond = EB_Garamond({
   style: ['normal', 'italic'],
   subsets: ['latin', 'latin-ext'],
   variable: '--font-garamond',
+  display: 'swap',
+});
+
+// Journal articles (design_handoff_blog_orte) — variable font incl. optical size
+const newsreader = Newsreader({
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-newsreader',
   display: 'swap',
 });
 
@@ -83,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="de"
-      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable} ${hanken.variable} ${ebGaramond.variable}`}
+      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable} ${hanken.variable} ${ebGaramond.variable} ${newsreader.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

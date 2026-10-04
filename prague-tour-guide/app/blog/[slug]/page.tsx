@@ -21,12 +21,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === slug || p.slugDe === slug);
   if (!post) return {};
 
-  const lang = post.slugDe === slug ? 'de' : 'en';
-  // Some entries are single-language (e.g. a draft post with only `de`); the
-  // reads below already guard with optional chaining + a fallback.
+  // German-only articles have no slugDe, so their single slug is German too.
+  const lang = post.slugDe === slug || post.language === 'de' ? 'de' : 'en';
   const tr = { ...blogTranslations, ...journalContent } as Record<string, { en?: string; de?: string }>;
-  const title = (lang === 'de' ? tr[post.titleKey]?.de : tr[post.titleKey]?.en) ?? post.slug;
-  const excerpt = (lang === 'de' ? tr[post.excerptKey]?.de : tr[post.excerptKey]?.en) ?? '';
+  // Prefer the page's language, fall back to the other one; titles may carry <em>.
+  const pick = (key: string) => {
+    const e = tr[key];
+    return ((lang === 'de' ? e?.de : e?.en) || e?.de || e?.en || '').replace(/<[^>]+>/g, '');
+  };
+  const title = pick(post.titleKey) || post.slug;
+  const excerpt = pick(post.excerptKey);
   const canonical = `${BRAND.domain}/blog/${slug}`;
 
   return {
@@ -34,10 +38,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: excerpt,
     alternates: {
       canonical,
-      languages: {
-        de: `${BRAND.domain}/blog/${post.slugDe ?? post.slug}`,
-        en: `${BRAND.domain}/blog/${post.slug}`,
-      },
+      languages:
+        post.language === 'de'
+          ? { de: `${BRAND.domain}/blog/${post.slug}` }
+          : {
+              de: `${BRAND.domain}/blog/${post.slugDe ?? post.slug}`,
+              en: `${BRAND.domain}/blog/${post.slug}`,
+            },
     },
     openGraph: {
       title,

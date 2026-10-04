@@ -12,10 +12,9 @@ interface AuthorBioProps {
 }
 
 /**
- * Card-style author bio. 120×120 round portrait (real photo via
- * next/image, or a brass-gradient initial fallback) on the left,
- * kicker / italic name / serif bio / brass-dotted credential list
- * on the right. Stacks to single column under 720px.
+ * Card-style author bio in the journal palette. 96×96 round portrait (real
+ * photo via next/image, or an initial fallback) on the left, kicker / serif
+ * name / bio / credential list on the right. Stacks to one column on mobile.
  */
 const AuthorBio: React.FC<AuthorBioProps> = ({
   portrait,
@@ -26,41 +25,41 @@ const AuthorBio: React.FC<AuthorBioProps> = ({
   credentials,
 }) => {
   return (
-    <div className="my-[3em] grid grid-cols-1 items-start gap-8 border border-rule-soft bg-paper p-9 sm:grid-cols-[120px_1fr]">
-      <div className="relative h-[120px] w-[120px] overflow-hidden rounded-full">
+    <div className="mt-8 grid grid-cols-1 items-start gap-6 bg-journal-panel p-[22px] sm:grid-cols-[96px_1fr]">
+      <div className="relative h-24 w-24 overflow-hidden rounded-full">
         {portrait ? (
           <Image
             src={portrait.src}
             alt={portrait.alt}
             fill
-            sizes="120px"
-            className="object-cover"
+            sizes="96px"
+            className="object-cover [object-position:center_18%]"
           />
         ) : (
           <div
             aria-hidden="true"
-            className="grid h-full w-full place-items-center font-display text-[56px] font-light italic text-ivory"
-            style={{ background: 'linear-gradient(135deg, #C9A87A 0%, #6B4329 100%)' }}
+            className="grid h-full w-full place-items-center font-news text-[44px] italic text-white"
+            style={{ background: '#6B1F2A' }}
           >
             {portraitInitial}
           </div>
         )}
       </div>
       <div className="min-w-0">
-        <div className="mb-2 font-sans text-[10px] uppercase tracking-[0.24em] text-ink-mute">
+        <div className="mb-1 font-hanken text-[14px] font-bold text-journal-blue">
           {kicker}
         </div>
-        <h4 className="m-0 mb-3 font-italic text-[30px] font-normal italic leading-[1.15] text-ink">
+        <h4 className="m-0 mb-2 font-news text-[24px] font-semibold leading-[1.2] text-journal-ink">
           {name}
         </h4>
-        <p className="m-0 mb-4 font-body text-[16px] leading-[1.6] text-ink-soft">
+        <p className="m-0 mb-4 font-hanken text-[16px] leading-[1.55] text-journal-ink">
           {bio}
         </p>
         {credentials && credentials.length > 0 && (
-          <ul className="m-0 flex list-none flex-wrap gap-x-6 gap-y-4 p-0 font-sans text-[11px] uppercase tracking-[0.1em] text-ink-mute">
+          <ul className="m-0 flex list-none flex-wrap gap-x-5 gap-y-2 p-0 font-hanken text-[14px] text-journal-mute">
             {credentials.map((c, i) => (
               <li key={i} className="flex items-center gap-2">
-                <span aria-hidden="true" className="block h-[5px] w-[5px] rounded-full bg-brass" />
+                <span aria-hidden="true" className="block h-[5px] w-[5px] rounded-full bg-journal-burgundy" />
                 {c}
               </li>
             ))}

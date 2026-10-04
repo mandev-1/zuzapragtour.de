@@ -17,9 +17,15 @@ export interface BlogPost {
   tags: string[];
   tagsDe?: string[];
   language: 'de' | 'en' | 'both';
-  /** True for block-based CMS articles (content/journal/*.json). Skips the
-   *  legacy "Grund" listicle decoration in BlogPostPage. */
+  /** True for block-based CMS articles (content/journal/*.json); maps are
+   *  hydrated client-side only for these. */
   isJournal?: boolean;
+  // Journal-only header/footer fields (translation keys resolve via t()).
+  category?: string;
+  kickerKey?: string;
+  heroCapKey?: string;
+  heroCredit?: string;
+  sourcesKey?: string;
 }
 
 import { journalPosts } from './journalGenerated';

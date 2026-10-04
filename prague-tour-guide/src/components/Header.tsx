@@ -36,6 +36,25 @@ const Header: React.FC = () => {
   }, [isHome]);
   const light = isHome && !solid && !isMenuOpen;
 
+  // Journal articles (design_handoff_blog_orte): the header slides away while the
+  // guest reads downwards and comes back on any upward scroll.
+  const isArticle = (pathname ?? '').startsWith('/blog/');
+  const [hidden, setHidden] = React.useState(false);
+  React.useEffect(() => {
+    setHidden(false);
+    if (!isArticle) return;
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - lastY) < 6) return; // ignore jitter / momentum bounce
+      setHidden(y > lastY && y > 80);
+      lastY = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isArticle]);
+  const hide = hidden && !isMenuOpen;
+
   const isActive = (href: string) => pathname === href || (href !== '/' && (pathname ?? '').startsWith(href));
   const navLabel = (n: (typeof NAV)[number]) => (n.label ? n.label : t(n.key as any));
 
@@ -97,11 +116,12 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-[background-color,border-color,padding] duration-300 ${
+      onFocusCapture={() => setHidden(false)}
+      className={`fixed top-0 z-50 w-full transition-[background-color,border-color,padding,transform] duration-300 ${
         light
           ? 'border-b border-transparent bg-transparent'
           : 'border-b border-rule/70 bg-[rgba(250,246,236,0.82)] backdrop-blur-[16px] backdrop-saturate-150'
-      }`}
+      } ${hide ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div
         className={`flex items-center justify-between px-[clamp(1.5rem,5vw,5rem)] transition-[padding] duration-300 ${
