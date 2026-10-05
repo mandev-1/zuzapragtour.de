@@ -17,6 +17,7 @@
     "en": ""
   },
   "hero": "/images/atriumflora-b.jpg",
+  "heroCredit": "Atrium Flora",
   "title": {
     "de": "Vinohrady: IMAX, Kafkas Grab & Bauernmarkt",
     "en": "Vinohrady Half-Day: IMAX, Kafka & Market"
@@ -73,7 +74,8 @@
     },
     {
       "t": "image",
-      "src": "/images/atriumflora-b.jpg"
+      "src": "/images/atriumflora-b.jpg",
+      "credit": "Atrium Flora"
     },
     {
       "t": "h2",

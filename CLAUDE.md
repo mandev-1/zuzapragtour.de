@@ -71,3 +71,4 @@ Tailwind CSS with a custom theme defined in `tailwind.config.js`: Prague-themed 
 | Tour descriptions / pricing | `src/components/Tours.tsx` + `translations.ts` |
 | Contact info | `src/components/Contact.tsx` + `translations.ts` |
 | Color palette / fonts | `tailwind.config.js` |
+| Image sources, licences, credits | `public/images/ZDROJE.md` (one row per image; add a row for every new image) |

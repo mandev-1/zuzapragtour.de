@@ -1847,7 +1847,6 @@ export const translations = {
   'blog.post8.content': {
     en: `<h2>From Baroque Science to Skyline Vistas</h2>
 <p>The <strong>Astronomical Tower</strong> at the Klementinum blends baroque science with breathtaking views. After the climb, the reward is a <em>360° panorama</em>—Prague Castle, Charles Bridge, Old Town roofs.</p>
-<div class="blog-inline-image"><img src="/images/klementinum-tower-2.jpg" alt="Klementinum Astronomical Tower—panoramic view" loading="lazy" /></div>
 <h3>The Meridian Room</h3>
 <p>Before atomic clocks, time was set here using a <strong>meridian line</strong> and a ray of the sun. It’s a rare window into how cities coordinated daily life.</p>
 <div class="did-you-know"><h4>Did you know?</h4><p>Observations at the Klementinum helped standardize noon in Prague—long before radio signals and GPS.</p></div>
@@ -1861,7 +1860,6 @@ export const translations = {
 <p class="lead">Interested in a private Klementinum-focused tour? <a href="/book?tour=Custom%20Private%20Tour#contact-title">Get in touch</a> and I’ll plan the perfect timing.</p>`,
     de: `<h2>Von barocker Wissenschaft zum Skyline-Blick</h2>
 <p>Der <strong>Astronomische Turm</strong> des Klementinums verbindet barocke Wissenschaft mit großartigen Ausblicken. Nach dem Aufstieg wartet ein <em>360°-Panorama</em>—Prager Burg, Karlsbrücke, Dächer der Altstadt.</p>
-<div class="blog-inline-image"><img src="/images/klementinum-tower-2.jpg" alt="Astronomischer Turm im Klementinum—Panoramablick" loading="lazy" /></div>
 <h3>Das Meridianzimmer</h3>
 <p>Vor der Zeit der Atomuhren wurde hier mit <strong>Meridianlinie</strong> und Sonnenstrahl die Zeit bestimmt. Ein seltener Einblick, wie Städte das tägliche Leben koordinierten.</p>
 <div class="did-you-know"><h4>Wussten Sie schon?</h4><p>Beobachtungen im Klementinum halfen, den Mittagszeitpunkt in Prag zu standardisieren—lange vor Funksignalen und GPS.</p></div>

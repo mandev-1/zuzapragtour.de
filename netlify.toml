@@ -62,6 +62,19 @@
   to = "/0ba5d917a5ee483c9c875df26cd223d0.txt"
   status = 200
 
+# Internal docs in the images folder (sources/licences) are not public.
+[[redirects]]
+  from = "/images/ZDROJE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/images/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "https://www.zuzapragtour.de/*"
   to = "https://zuzapragtour.de/:splat"

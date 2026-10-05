@@ -17,6 +17,7 @@
     "en": ""
   },
   "hero": "/images/blog-gardens-2.jpg",
+  "heroCredit": "Roman Boed",
   "title": {
     "de": "Waldsteingarten Prag: Tropfsteinwand & Barock",
     "en": "Wallenstein Garden: Prague's Baroque Secret"
@@ -78,7 +79,8 @@
     },
     {
       "t": "image",
-      "src": "/images/blog-gardens-2.jpg"
+      "src": "/images/blog-gardens-2.jpg",
+      "credit": "Roman Boed"
     },
     {
       "t": "h2",

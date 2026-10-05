@@ -16,6 +16,7 @@
     "en": ""
   },
   "hero": "/images/klementinum-tower.jpg",
+  "heroCredit": "Roman Boed",
   "title": {
     "de": "Klementinum: Astronomischer Turm & Aussicht",
     "en": "Klementinum Astronomical Tower: Views & Stories"
@@ -54,10 +55,6 @@
         "de": "Der <strong>Astronomische Turm</strong> des Klementinums verbindet barocke Wissenschaft mit einer Aussicht, die man nicht schnell vergisst. Nach dem Aufstieg liegt ein <em>360°-Panorama</em> vor einem: Burg, Karlsbrücke, Altstadtdächer.",
         "en": "The <strong>Astronomical Tower</strong> at the Klementinum pairs baroque science with something genuinely hard to forget. After the climb, you get a <em>360° panorama</em>: Prague Castle, Charles Bridge, Old Town roofs spread out below you."
       }
-    },
-    {
-      "t": "image",
-      "src": "/images/klementinum-tower-2.jpg"
     },
     {
       "t": "h2",

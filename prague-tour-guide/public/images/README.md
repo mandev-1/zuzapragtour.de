@@ -1,5 +1,7 @@
 # Image Setup Instructions
 
+> Where each image came from, when we got it, its licence and any required credit: see [ZDROJE.md](ZDROJE.md). Add a row there for every new image.
+
 ## Portrait Photo
 
 **File to add:** `zuzana-portrait.jpg`
