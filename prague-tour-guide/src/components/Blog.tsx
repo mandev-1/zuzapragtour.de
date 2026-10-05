@@ -1,18 +1,15 @@
 'use client';
 
 /**
- * Blog — journal index, 0006 "premium editorial" facelift.
+ * Blog — journal index, v4 (design_handoff_blog_winter_mobile · Blog Journal v4).
  *
- * Rebuilt from the handoff prototype (Zuza Prague Tours.dc.html · #/journal) to
- * match the rest of the facelifted site: global chrome (premium-inner ground),
- * a left-aligned banner with a byline trust row, a featured newest article in
- * the brand's brass offset frame (gold "Neuester Beitrag" capsule + Cormorant
- * italic standfirst), real-link post cards with clock-icon meta, and a dark
- * "Kontakt aufnehmen" CTA band.
- *
- * Kept from the previous journal (owner's call): the category filter + search,
- * and the SEO "Über dieses Journal" editorial block — both restyled into the
- * new language. Real data/routes/i18n preserved.
+ * A full-bleed hero for the featured post (pinned, else newest), the
+ * "Briefe aus Praha." intro with category pills, author line and search, then
+ * the article grid: cards with a wide card at every 7th position and one ad
+ * slot. Desktop pages through 14 posts at a time (real ?page=N links that JS
+ * intercepts); below 720px the cards become compact rows and the pager gives
+ * way to "Weitere Artikel laden". Closes with "Über dieses Journal" and a CTA.
+ * Layout lives in src/styles/journal-index.css.
  */
 
 import React, { useState } from 'react';
@@ -21,12 +18,29 @@ import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
 import { BRAND } from '../brand';
-import { Kicker, Btn, Reveal, SHELL } from './site/SiteUI';
 import AdSlot from './AdSlot';
 import { ADSENSE_SLOTS } from '../config/adsense';
 
-const CATEGORIES_DE = ['Alle', 'Praktischer Rat', 'Geschichte', 'Restaurants'];
-const CATEGORIES_EN = ['All', 'Practical Tips', 'History', 'Restaurants'];
+const CATEGORIES_DE = ['Alle', 'Praktischer Rat', 'Geschichte', 'Restaurants', 'Prag erleben'];
+const CATEGORIES_EN = ['All', 'Practical Tips', 'History', 'Restaurants', 'Experience Prague'];
+const FALLBACK_CATEGORY = 4; // "Prag erleben"
+
+/** Category match order: a hit in the title wins, then tags/excerpt (reverse order). */
+const CATEGORY_RE: [number, RegExp][] = [
+  [3, /restaurant|food|essen|küche|cuisine|kaffee|coffee|wein|wine|kulinar|bier|beer|svíčková|náplavka|spirituosen|spirits|trdelník/i],
+  [2, /geschichte|history|kultur|culture|jüdisch|jewish|bibliothek|library|revolution|architektur|klementinum|königin|museum|velvet|havel|kafka/i],
+  [1, /reisetipp|praktisch|practical|tip|pass|budget|transport|hotel|planung|planning|ticket|karte|visa|geld|money/i],
+];
+
+const MONTHS_DE = ['Jan.', 'Feb.', 'März', 'Apr.', 'Mai', 'Juni', 'Juli', 'Aug.', 'Sept.', 'Okt.', 'Nov.', 'Dez.'];
+const MONTHS_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const PER_PAGE = 14;
+const MOBILE_QUERY = '(max-width: 719px)';
+
+/* Journal ad inventory: one slot in the grid (970×250 desktop, 300×250 mobile),
+   carrying the required "ANZEIGE" label. Flip to false to hide it. */
+const SHOW_ADS = true;
 
 function readTimeMin(html: string): number {
   const text = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -34,373 +48,389 @@ function readTimeMin(html: string): number {
   return Math.max(1, Math.round(words / 200));
 }
 
-const CATEGORY_RE: Record<number, RegExp> = {
-  1: /reisetipp|praktisch|practical|tip|pass|budget|transport|hotel|planung|planning|ticket|karte|visa/i,
-  2: /geschichte|history|kultur|culture|jüdisch|jewish|bibliothek|library|revolution|architektur|klementinum|königin|museum|velvet/i,
-  3: /restaurant|food|essen|küche|cuisine|kaffee|coffee|wein|wine|kulinar|bier|beer|svíčková|náplavka|spirituosen|spirits|trdelník/i,
-};
+const stripTags = (s: string) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&');
 
-/* Journal ad inventory (German-market compliant — every slot carries the
-   required "ANZEIGE" microlabel). Flip to false to hide all slots; the grid
-   closes up with no gaps. In production, replace the reserved boxes with your
-   ad-server tags at the same ids/geometry (ratio-reserved → no layout shift). */
-const SHOW_ADS = true;
+function thumbOf(src: string): string {
+  const dir = src.substring(0, src.lastIndexOf('/'));
+  const file = src.substring(src.lastIndexOf('/') + 1).replace(/\.png$/i, '.jpg');
+  return `${dir}/thumbs/${file}`;
+}
+
+/** Hero title split: an <em> in the title decides; otherwise after the first ": " or " – ". */
+function heroSegments(titleHtml: string | undefined, title: string): { text: string; em: boolean }[] {
+  if (titleHtml && /<em>/i.test(titleHtml)) {
+    return titleHtml
+      .split(/(<em>[\s\S]*?<\/em>)/i)
+      .filter(Boolean)
+      .map((part) => {
+        const m = part.match(/^<em>([\s\S]*?)<\/em>$/i);
+        return { text: stripTags(m ? m[1] : part), em: !!m };
+      });
+  }
+  let cut = title.indexOf(': ');
+  cut = cut >= 0 ? cut + 2 : title.indexOf(' – ') >= 0 ? title.indexOf(' – ') + 3 : -1;
+  if (cut < 0) return [{ text: title, em: false }];
+  return [
+    { text: title.slice(0, cut), em: false },
+    { text: title.slice(cut), em: true },
+  ];
+}
+
+/** Matches `(max-width: 719px)`; false during SSR and the first render. */
+function useIsMobile(): boolean {
+  const [mobile, setMobile] = useState(false);
+  React.useEffect(() => {
+    const mq = window.matchMedia(MOBILE_QUERY);
+    const update = () => setMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+  return mobile;
+}
+
+const pageFromUrl = () => {
+  const n = parseInt(new URLSearchParams(window.location.search).get('page') ?? '1', 10);
+  return Number.isFinite(n) && n > 0 ? n : 1;
+};
 
 const Blog: React.FC = () => {
   const { t, language } = useLanguage();
   const de = language === 'de';
+  const categories = de ? CATEGORIES_DE : CATEGORIES_EN;
   const [activeFilter, setActiveFilter] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+  const [pageState, setPageState] = useState(1);
+  const [batches, setBatches] = useState(1);
+  const isMobile = useIsMobile();
+  const listRef = React.useRef<HTMLElement>(null);
 
-  const sortedPosts = React.useMemo(
-    () => [...blogPosts].sort((a, b) => b.date.localeCompare(a.date)),
-    []
-  );
+  // ?page=N is the crawlable pager URL; read it after mount, follow back/forward.
+  React.useEffect(() => {
+    const sync = () => setPageState(pageFromUrl());
+    sync();
+    window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
+  }, []);
 
-  const categories = de ? CATEGORIES_DE : CATEGORIES_EN;
-
-  const filteredPosts = React.useMemo(() => {
-    let posts = sortedPosts;
-    if (activeFilter !== 0) {
-      const re = CATEGORY_RE[activeFilter];
-      posts = posts.filter((p) => {
-        const haystack = [...p.tags, ...((p as any).tagsDe ?? []), t(p.titleKey as any), t(p.excerptKey as any)].join(' ');
-        return re.test(haystack);
+  const items = React.useMemo(() => {
+    const months = de ? MONTHS_DE : MONTHS_EN;
+    return [...blogPosts]
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map((post) => {
+        const title = stripTags(t(post.titleKey as any));
+        const excerpt = t(post.excerptKey as any);
+        const hay = [...post.tags, ...(post.tagsDe ?? []), excerpt].join(' ');
+        const explicit = post.category ? CATEGORIES_DE.indexOf(post.category) : -1;
+        const hit =
+          CATEGORY_RE.find(([, re]) => re.test(title)) ?? [...CATEGORY_RE].reverse().find(([, re]) => re.test(hay));
+        const ci = explicit > 0 ? explicit : hit ? hit[0] : FALLBACK_CATEGORY;
+        const content = post.contentKey ? t(post.contentKey as any) : '';
+        const mins = content ? readTimeMin(content) : 0;
+        const dateLabel = t(post.dateKey as any);
+        const dm = /^(\d{4})-(\d{2})-(\d{2})/.exec(post.date);
+        const dateShort = dm ? (de ? `${+dm[3]}. ${months[+dm[2] - 1]} ${dm[1]}` : `${months[+dm[2] - 1]} ${+dm[3]}, ${dm[1]}`) : dateLabel;
+        const read = mins >= 3 ? (de ? `Lesezeit ${mins} Min.` : `${mins} min read`) : '';
+        return {
+          post,
+          title,
+          titleHtml: (de ? post.titleHtmlDe : post.titleHtml) || undefined,
+          excerpt,
+          hay: `${hay} ${title}`.toLowerCase(),
+          ci,
+          mins,
+          dateLabel,
+          meta: [dateLabel, read].filter(Boolean).join(' · '),
+          metaShort: [dateShort, read].filter(Boolean).join(' · '),
+          href: `/blog/${de && post.slugDe ? post.slugDe : post.slug}`,
+          thumb: thumbOf(post.image),
+          full: post.image,
+        };
       });
+  }, [t, de]);
+  type Item = (typeof items)[number];
+
+  const q = searchQuery.trim().toLowerCase();
+  const isFiltering = activeFilter !== 0 || q !== '';
+  const filtered = items.filter((it) => (activeFilter === 0 || it.ci === activeFilter) && (!q || it.hay.includes(q)));
+  const lead: Item | null = isFiltering ? null : items.find((it) => it.post.pinned) ?? items[0] ?? null;
+  const list = isFiltering ? filtered : filtered.filter((it) => it !== lead);
+
+  const pageCount = Math.max(1, Math.ceil(list.length / PER_PAGE));
+  const page = isMobile ? 1 : Math.min(pageState, pageCount);
+  const featured = page === 1 ? lead : null;
+  const shown = Math.min(list.length, batches * PER_PAGE);
+  const slice = isMobile ? list.slice(0, shown) : list.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  type Cell = { kind: 'post'; it: Item; wide: boolean; first: boolean } | { kind: 'ad' };
+  const cells: Cell[] = slice.map((it, i) => ({ kind: 'post', it, wide: i % 7 === 3, first: i === 0 }));
+  if (SHOW_ADS && !isFiltering && cells.length > 7) cells.splice(7, 0, { kind: 'ad' });
+
+  const resetPaging = () => {
+    setBatches(1);
+    setPageState(1);
+    if (window.location.search) window.history.replaceState(null, '', window.location.pathname);
+  };
+  const pickCategory = (i: number, e: React.MouseEvent<HTMLButtonElement>) => {
+    setActiveFilter(i);
+    resetPaging();
+    // Mobile: bring the tapped pill to the middle of the scrolling row.
+    const pill = e.currentTarget;
+    const row = pill.parentElement;
+    if (row && row.scrollWidth > row.clientWidth) {
+      row.scrollTo({ left: pill.offsetLeft - (row.clientWidth - pill.offsetWidth) / 2, behavior: 'smooth' });
     }
-    if (searchQuery.trim()) {
-      const q = searchQuery.trim().toLowerCase();
-      posts = posts.filter((p) => {
-        const haystack = [t(p.titleKey as any), t(p.excerptKey as any), ...p.tags, ...((p as any).tagsDe ?? [])].join(' ').toLowerCase();
-        return haystack.includes(q);
-      });
-    }
-    return posts;
-  }, [sortedPosts, activeFilter, searchQuery, t]);
+  };
+  const goPage = (n: number) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.history.pushState(null, '', n > 1 ? `?page=${n}` : window.location.pathname);
+    setPageState(n);
+    const el = listRef.current;
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 88, behavior: 'smooth' });
+  };
+  const loadMore = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setBatches((b) => b + 1);
+  };
 
-  const isFiltering = activeFilter !== 0 || searchQuery.trim() !== '';
-  const featured = isFiltering ? null : sortedPosts[0];
-  const gridPosts = isFiltering ? filteredPosts : filteredPosts.filter((p) => p !== featured);
+  // Pager numbers: first, last and the neighbours of the current page.
+  const pageNums: number[] = [];
+  for (let n = 1; n <= pageCount; n++) if (n === 1 || n === pageCount || Math.abs(n - page) <= 1) pageNums.push(n);
+  const pageHref = (n: number) => (n > 1 ? `/blog?page=${n}` : '/blog');
 
-  // Interleave a single native ad at grid cell 5 (only unfiltered, enough posts).
-  type GridItem = { ad: false; post: (typeof gridPosts)[number] } | { ad: true };
-  const gridItems: GridItem[] = gridPosts.map((post) => ({ ad: false as const, post }));
-  if (SHOW_ADS && !isFiltering && gridItems.length > 4) gridItems.splice(4, 0, { ad: true as const });
+  const listHeading = isFiltering
+    ? `${filtered.length} ${de ? 'Artikel' : filtered.length === 1 ? 'article' : 'articles'}${activeFilter ? ` ${de ? 'in' : 'in'} ${categories[activeFilter]}` : ''}`
+    : page > 1
+      ? de ? 'Ältere Artikel' : 'Older articles'
+      : de ? 'Neueste Artikel' : 'Latest articles';
 
-  function thumbOf(src: string): string {
-    const dir = src.substring(0, src.lastIndexOf('/'));
-    const file = src.substring(src.lastIndexOf('/') + 1).replace(/\.png$/i, '.jpg');
-    return `${dir}/thumbs/${file}`;
-  }
-  function postHref(post: (typeof blogPosts)[number]) {
-    return `/blog/${de && (post as any).slugDe ? (post as any).slugDe : post.slug}`;
-  }
-  function catOf(post: (typeof blogPosts)[number]): string {
-    return (de ? (post as any).tagsDe?.[0] ?? post.tags?.[0] : post.tags?.[0]) ?? (de ? 'Journal' : 'Journal');
-  }
-  function minsOf(post: (typeof blogPosts)[number]): number | null {
-    const content = post.contentKey ? t(post.contentKey as any) : '';
-    return content ? readTimeMin(content) : null;
-  }
-  function metaOf(post: (typeof blogPosts)[number], withLese = false): string {
-    const mins = minsOf(post);
-    const date = t(post.dateKey as any);
-    const read = mins ? `${mins} Min.${withLese ? (de ? ' Lesezeit' : ' read') : ''}` : '';
-    return [read, date].filter(Boolean).join(' · ');
-  }
+  const heroMeta = featured
+    ? [featured.mins >= 3 ? (de ? `${featured.mins} Min. Lesezeit` : `${featured.mins} min read`) : '', featured.dateLabel].filter(Boolean).join(' · ')
+    : '';
 
   return (
-    <div className="blog-index-facelift premium-inner text-ink antialiased">
-
-      {/* ── Banner: eyebrow + H1 + intro + byline trust row ────── */}
-      <header className="border-b border-rule pb-[clamp(2.5rem,5vh,4rem)] pt-[clamp(2.5rem,6vw,4.5rem)]">
-        <div className={SHELL}>
-          <Kicker>{de ? 'Reise-Journal · Seit 2014' : 'Travel Journal · Since 2014'}</Kicker>
-          <h1 className="mt-4 font-display text-[clamp(2.6rem,6vw,4.4rem)] font-normal leading-[1.04] tracking-[-0.015em] text-ink [text-wrap:balance] [&_em]:font-italic [&_em]:italic [&_em]:text-burgundy">
-            {de ? <>Briefe aus <em>Praha</em>.</> : <>Letters from <em>Praha</em>.</>}
-          </h1>
-          <p className="mt-[1.4rem] max-w-[42rem] font-body text-[clamp(1.05rem,1.4vw,1.2rem)] leading-[1.65] text-ink-soft">
-            {de
-              ? 'Reise-Notizen, Restaurant-Empfehlungen abseits der Pfade und kleine Geschichten aus zwölf Jahren Stadtführungen — von einer Pragerin, auf Deutsch.'
-              : 'Travel notes, off-the-beaten-path restaurant picks, and small stories from twelve years of guiding — from a native Praguer.'}
-          </p>
-          <div className="mt-[1.7rem] flex flex-wrap items-center gap-[0.9rem] border-t border-rule-soft pt-[1.4rem]">
-            <img src="/images/zuzana-portrait.jpg" alt="" className="h-[42px] w-[42px] rounded-full object-cover [object-position:center_18%]" loading="lazy" />
-            <span className="font-sans text-[0.98rem] text-ink-soft">
-              {de ? 'Persönlich geschrieben von ' : 'Personally written by '}
-              <b className="font-semibold text-ink">Ing. Zuzana Manová</b>
-            </span>
-            <span aria-hidden className="h-[15px] w-px bg-rule" />
-            <span className="whitespace-nowrap font-sans text-[0.98rem] text-ink-soft">
-              {sortedPosts.length} {de ? 'Beiträge · Zuletzt erschienen' : 'articles · Last published'} {t(sortedPosts[0].dateKey as any)}
-            </span>
-          </div>
-        </div>
-      </header>
-
-      <section className={`${SHELL} py-[clamp(2.5rem,5vh,4rem)] pb-[clamp(4rem,9vh,7rem)]`}>
-
-        {/* ── Featured (newest) ──────────────────────────────── */}
-        {featured && (
-          <Reveal>
-            <Link
-              href={postHref(featured)}
-              aria-label={`${t(featured.titleKey as any)} — ${catOf(featured)}. ${de ? 'Artikel lesen' : 'Read article'}.`}
-              className="grid grid-cols-1 items-center gap-[clamp(2rem,5vw,4rem)] border-b border-rule pb-[clamp(2.5rem,5vh,4rem)] no-underline min-[860px]:grid-cols-[1.15fr_0.85fr]"
-            >
-              <div className="group relative">
-                <div className="relative z-[1] aspect-[16/11] overflow-hidden rounded-lg bg-ivory-deep shadow-[0_8px_24px_rgba(26,23,20,0.08)]">
-                  <Image src={featured.image} alt="" fill sizes="(max-width: 860px) 100vw, 55vw" className="object-cover transition-transform duration-[900ms] ease-brand group-hover:scale-[1.04]" />
-                </div>
-                <div aria-hidden className="absolute z-0 rounded-lg border border-brass" style={{ inset: '14px -14px -14px 14px' }} />
-              </div>
-              <div>
-                <div className="flex flex-wrap items-center gap-[0.9rem]">
-                  <span className="whitespace-nowrap rounded-full border border-[rgba(123,88,0,0.35)] px-[0.8rem] py-[0.35rem] font-sans text-[11.5px] font-semibold uppercase tracking-[0.14em] text-gold-olive">
-                    {de ? 'Neuester Beitrag' : 'Latest post'}
-                  </span>
-                  <span className="inline-flex items-center gap-[0.6rem] whitespace-nowrap font-sans text-[11.5px] uppercase tracking-[0.2em] text-brass-deep">
-                    <span aria-hidden className="h-px w-[22px] bg-brass" />
-                    {catOf(featured)}
-                  </span>
-                </div>
-                <h2
-                  className="mb-4 mt-[1.1rem] font-display text-[clamp(2.2rem,4.4vw,3.4rem)] font-normal leading-[1.06] tracking-[-0.015em] text-ink [&_em]:font-italic [&_em]:italic [&_em]:text-burgundy"
-                  dangerouslySetInnerHTML={{ __html: (de ? (featured as any).titleHtmlDe : (featured as any).titleHtml) || t(featured.titleKey as any) }}
-                />
-                <p className="mb-[1.3rem] max-w-[32rem] font-italic text-[clamp(1.15rem,1.8vw,1.35rem)] italic leading-[1.55] text-ink-soft">
-                  {t(featured.excerptKey as any)}
-                </p>
-                <div className="mb-[1.6rem] flex items-center gap-[0.5rem] whitespace-nowrap font-sans text-[1rem] text-ink-soft">
-                  <span className="material-symbols-outlined text-[18px] text-brass-deep" aria-hidden>schedule</span>
-                  {metaOf(featured, true)}
-                </div>
-                <span className="inline-flex items-center gap-[0.6rem] whitespace-nowrap border-b border-ink pb-[4px] font-sans text-[13px] font-semibold uppercase tracking-[0.15em] text-ink transition-colors duration-300 ease-brand group-hover:border-burgundy group-hover:text-burgundy">
-                  {de ? 'Artikel lesen' : 'Read article'}
-                  <span className="material-symbols-outlined text-[17px]" aria-hidden>arrow_forward</span>
+    <div className="journal-page journal-index text-journal-ink antialiased">
+      {/* ── Hero: featured post, full bleed ─────────────────────── */}
+      {featured && (
+        <Link
+          href={featured.href}
+          className="jx-hero"
+          aria-label={`${featured.title} – ${categories[featured.ci]}. ${de ? 'Artikel lesen' : 'Read article'}.`}
+        >
+          <Image src={featured.full} alt="" fill priority sizes="100vw" className="jx-hero__img" />
+          <div className="jx-hero__scrim" aria-hidden="true" />
+          <div className="jx-hero__inner">
+            <div className="jx-hero__col">
+              <div className="jx-hero__labels">
+                <span className="jx-hero__pill">
+                  {featured === items[0] ? (de ? 'Neuester Beitrag' : 'Latest post') : de ? 'Empfohlener Beitrag' : 'Featured post'}
                 </span>
+                <span className="jx-hero__cat">{categories[featured.ci]}</span>
               </div>
-            </Link>
-          </Reveal>
-        )}
-
-        {/* ── Ad: billboard (970×250, ratio-reserved) ────────── */}
-        {SHOW_ADS && featured && (
-          <div className="mt-[clamp(2rem,4vh,3rem)] border-y border-rule bg-[#F5F3EF] px-4 pb-6 pt-4 text-center">
-            <div className="mb-[0.85rem] font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-ink-mute">
-              {de ? 'Anzeige' : 'Advertisement'}
-            </div>
-            <div
-              id="ad-journal-billboard"
-              className="mx-auto grid aspect-[970/250] w-full max-w-[970px] place-items-center overflow-hidden rounded-md border border-rule bg-paper"
-            >
-              {ADSENSE_SLOTS.journalBillboard ? (
-                <AdSlot slot={ADSENSE_SLOTS.journalBillboard} />
-              ) : (
-                <span className="px-4 font-sans text-[0.95rem] text-ink-mute">
-                  {de ? (
-                    <>Ihre Werbung hier — <a href="mailto:zuzanamanova@email.cz" className="text-burgundy underline-offset-2 hover:underline">Mediadaten anfragen</a></>
-                  ) : (
-                    <>Your ad here — <a href="mailto:zuzanamanova@email.cz" className="text-burgundy underline-offset-2 hover:underline">request media kit</a></>
-                  )}
-                </span>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* ── Filter + search (kept, restyled) ───────────────── */}
-        <div className={`flex flex-wrap items-center justify-between gap-6 border-b border-rule py-[1.4rem] ${featured ? 'mt-[clamp(2rem,4vh,3rem)]' : ''}`}>
-          <div className="flex flex-wrap gap-1.5">
-            {categories.map((cat, i) => (
-              <button
-                key={cat}
-                onClick={() => setActiveFilter(i)}
-                className={`rounded-full border px-4 py-2 font-sans text-[11px] uppercase tracking-[0.16em] transition-colors duration-200 ${
-                  activeFilter === i ? 'border-burgundy text-burgundy' : 'border-transparent text-ink-soft hover:text-burgundy'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-          <label className="flex items-center gap-2.5 border-b border-rule pb-1.5" style={{ width: 300 }}>
-            <span className="material-symbols-outlined text-[18px] text-ink-mute" aria-hidden>search</span>
-            <input
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={de ? 'Im Journal suchen…' : 'Search the journal…'}
-              className="flex-1 bg-transparent font-body text-[15px] text-ink outline-none placeholder:text-ink-mute"
-            />
-          </label>
-        </div>
-
-        {/* ── Grid ───────────────────────────────────────────── */}
-        {gridPosts.length === 0 && (
-          <p className="py-16 text-center font-italic text-[18px] italic text-ink-mute">
-            {de ? 'Keine Artikel gefunden.' : 'No articles found.'}
-          </p>
-        )}
-        <div className="mt-[clamp(2.5rem,5vh,4rem)] grid grid-cols-1 gap-x-[clamp(1.6rem,3vw,2.6rem)] gap-y-[clamp(2.5rem,5vh,3.5rem)] sm:grid-cols-2 lg:grid-cols-3">
-          {gridItems.map((it, idx) =>
-            it.ad ? (
-              /* Native in-grid ad slot (3:2, ratio-reserved) */
-              <div key={`ad-${idx}`} className="flex flex-col rounded-lg border border-rule bg-[#F5F3EF] p-4 pb-[1.15rem]">
-                <div className="mb-[0.8rem] text-center font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-ink-mute">
-                  {de ? 'Anzeige' : 'Advertisement'}
-                </div>
-                <div id="ad-journal-native" className="grid aspect-[3/2] place-items-center overflow-hidden rounded-md border border-rule bg-paper">
-                  {ADSENSE_SLOTS.journalNative ? (
-                    <AdSlot slot={ADSENSE_SLOTS.journalNative} />
-                  ) : (
-                    <span className="px-3 text-center font-sans text-[0.9rem] text-ink-mute">{de ? 'Werbeplatz' : 'Ad space'}</span>
-                  )}
-                </div>
-                {!ADSENSE_SLOTS.journalNative && (
-                  <div className="mt-[0.85rem] text-center font-sans text-[0.92rem] leading-[1.5] text-ink-mute">
-                    {de ? (
-                      <>Ihre Werbung im Journal — <a href="mailto:zuzanamanova@email.cz" className="text-burgundy underline-offset-2 hover:underline">Mediadaten anfragen</a></>
-                    ) : (
-                      <>Your ad in the journal — <a href="mailto:zuzanamanova@email.cz" className="text-burgundy underline-offset-2 hover:underline">request media kit</a></>
-                    )}
-                  </div>
+              <h2 className="jx-hero__title">
+                {heroSegments(featured.titleHtml, featured.title).map((s, i) =>
+                  s.em ? <em key={i}>{s.text}</em> : <span key={i}>{s.text}</span>
                 )}
+              </h2>
+              <p className="jx-hero__excerpt">{featured.excerpt}</p>
+              <div className="jx-hero__actions">
+                <span className="jx-hero__read">
+                  {de ? 'Artikel lesen' : 'Read article'}
+                  <svg className="jx-hero__arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+                {heroMeta && <span className="jx-hero__meta">{heroMeta}</span>}
               </div>
-            ) : (
-              <Reveal as="article" key={it.post.id}>
-                <Link
-                  href={postHref(it.post)}
-                  aria-label={`${t(it.post.titleKey as any)} — ${catOf(it.post)}. ${de ? 'Artikel lesen' : 'Read article'}.`}
-                  className="group flex h-full flex-col no-underline"
-                >
-                  <div className="mb-[1.1rem] aspect-[3/2] overflow-hidden rounded-lg bg-ivory-deep">
-                    <div className="relative h-full w-full transition-transform duration-[800ms] ease-brand group-hover:scale-[1.05]">
-                      <Image src={thumbOf(it.post.image)} alt="" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" loading="lazy" />
+            </div>
+          </div>
+        </Link>
+      )}
+
+      <div className="jx-shell">
+        {/* ── Intro: H1, filters, author, search ─────────────────── */}
+        <div className="jx-intro">
+          <div className="jx-intro__main">
+            <h1 className="jx-intro__h1">
+              {de ? 'Briefe aus' : 'Letters from'} <em>Praha</em>.
+            </h1>
+            <div className="jx-chips">
+              {categories.map((cat, i) => (
+                <button key={cat} type="button" className="jx-chip" aria-pressed={activeFilter === i} onClick={(e) => pickCategory(i, e)}>
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="jx-intro__side">
+            <div className="jx-author">
+              <img src="/images/zuzana-portrait.jpg" alt="" />
+              <div>
+                {de ? 'Persönlich geschrieben von' : 'Personally written by'}
+                <br />
+                <b>Ing. Zuzana Manová</b> · {items.length} {de ? 'Beiträge' : 'articles'}
+              </div>
+            </div>
+            <label className="jx-search">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5C5650" strokeWidth="2" aria-hidden="true" style={{ flexShrink: 0 }}>
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21l-5-5" />
+              </svg>
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  resetPaging();
+                }}
+                aria-label={de ? 'Im Journal suchen' : 'Search the journal'}
+                placeholder={de ? 'Im Journal suchen…' : 'Search the journal…'}
+              />
+            </label>
+          </div>
+        </div>
+
+        {/* ── Article list ───────────────────────────────────────── */}
+        <section ref={listRef} className="jx-list">
+          <div className="jx-list__head">
+            <h2>{listHeading}</h2>
+            {pageCount > 1 && !isFiltering && (
+              <span className="jx-list__info">{de ? `Seite ${page} von ${pageCount}` : `Page ${page} of ${pageCount}`}</span>
+            )}
+          </div>
+
+          {list.length === 0 && <p className="jx-empty">{de ? 'Keine Artikel gefunden.' : 'No articles found.'}</p>}
+
+          <div className="jx-grid">
+            {cells.map((cell, idx) => {
+              if (cell.kind === 'ad') {
+                return (
+                  <div key={`ad-${idx}`} className="jx-ad">
+                    <div className="jx-ad__label">{de ? 'Anzeige' : 'Advertisement'}</div>
+                    <div id="ad-journal-billboard" className="jx-ad__box">
+                      {ADSENSE_SLOTS.journalBillboard ? (
+                        <AdSlot slot={ADSENSE_SLOTS.journalBillboard} />
+                      ) : (
+                        <span>
+                          {de ? 'Ihre Werbung hier — ' : 'Your ad here — '}
+                          <a href={`mailto:${BRAND.email}`}>{de ? 'Mediadaten anfragen' : 'request media kit'}</a>
+                        </span>
+                      )}
                     </div>
                   </div>
-                  <span className="font-sans text-[11.5px] font-semibold uppercase tracking-[0.18em] text-brass-deep">{catOf(it.post)}</span>
-                  <h3
-                    className="mb-2 mt-[0.55rem] font-display text-[1.55rem] font-normal leading-[1.16] text-ink [&_em]:font-italic [&_em]:italic [&_em]:text-burgundy"
-                    dangerouslySetInnerHTML={{ __html: (de ? (it.post as any).titleHtmlDe : (it.post as any).titleHtml) || t(it.post.titleKey as any) }}
-                  />
-                  <p className="mb-4 font-body text-[1.02rem] leading-[1.62] text-ink-soft">{t(it.post.excerptKey as any)}</p>
-                  <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
-                    <span className="inline-flex items-center gap-[0.45rem] font-sans text-[0.95rem] text-ink-soft">
-                      <span className="material-symbols-outlined text-[16px] text-brass-deep" aria-hidden>schedule</span>
-                      {metaOf(it.post)}
-                    </span>
-                    <span className="inline-flex items-center gap-[0.45rem] whitespace-nowrap border-b border-ink pb-[3px] font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-ink transition-colors duration-300 ease-brand group-hover:border-burgundy group-hover:text-burgundy">
-                      {de ? 'Weiterlesen' : 'Read on'}
-                      <span className="material-symbols-outlined text-[15px]" aria-hidden>arrow_forward</span>
-                    </span>
+                );
+              }
+              const { it, wide, first } = cell;
+              const img = wide && /\.jpe?g$/i.test(it.full) ? it.full : it.thumb;
+              return (
+                <Link key={it.post.id} href={it.href} className={`${wide ? 'jx-wide' : 'jx-card'}${first ? ' is-first' : ''}`}>
+                  <div className="jx-card__media">
+                    <Image src={img} alt="" fill sizes={wide ? '(max-width: 1160px) 100vw, 600px' : '(max-width: 719px) 112px, 360px'} className="object-cover" loading="lazy" />
+                  </div>
+                  <div className="jx-card__body">
+                    <div className="jx-card__cat">{categories[it.ci]}</div>
+                    <h3 className="jx-card__title">{it.title}</h3>
+                    <p className="jx-card__excerpt">{it.excerpt}</p>
+                    <div className="jx-card__meta">
+                      <span className="jx-long">{it.meta}</span>
+                      <span className="jx-short">{it.metaShort}</span>
+                    </div>
                   </div>
                 </Link>
-              </Reveal>
-            )
+              );
+            })}
+          </div>
+
+          {pageCount > 1 && (
+            <nav className="jx-pager" aria-label={de ? 'Seitennavigation' : 'Pagination'}>
+              <a href={pageHref(page - 1)} onClick={goPage(page - 1)} className="jx-pager__step" aria-disabled={page === 1}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+                {de ? 'Zurück' : 'Previous'}
+              </a>
+              <div className="jx-pager__nums">
+                {pageNums.map((n, k) => (
+                  <React.Fragment key={n}>
+                    {k > 0 && n - pageNums[k - 1] > 1 && <span className="jx-pager__gap" aria-hidden="true">…</span>}
+                    <a
+                      href={pageHref(n)}
+                      onClick={goPage(n)}
+                      className="jx-pager__num"
+                      aria-current={n === page ? 'page' : undefined}
+                      aria-label={de ? `Seite ${n}` : `Page ${n}`}
+                    >
+                      {n}
+                    </a>
+                  </React.Fragment>
+                ))}
+              </div>
+              <a href={pageHref(page + 1)} onClick={goPage(page + 1)} className="jx-pager__step" aria-disabled={page === pageCount}>
+                {de ? 'Weiter' : 'Next'}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
+              </a>
+            </nav>
           )}
-        </div>
-      </section>
 
-      {/* ── SEO editorial block (kept, restyled) ───────────────── */}
-      <section className="border-t border-rule">
-        <div className={`${SHELL} py-[clamp(3rem,7vh,5rem)]`}>
-          <div className="grid gap-[clamp(2rem,5vw,3.5rem)] md:grid-cols-[1fr_1.6fr]">
-            <div>
-              <Kicker>{de ? 'Über dieses Journal' : 'About this Journal'}</Kicker>
-              <h2 className="mt-4 font-display text-[clamp(1.8rem,3.4vw,2.4rem)] font-normal leading-[1.1] tracking-[-0.01em] text-ink [&_em]:font-italic [&_em]:italic [&_em]:text-burgundy">
-                {de ? <>Prag — ehrlich, <em>auf Deutsch</em></> : <>Prague — honest, <em>in German</em></>}
-              </h2>
+          {shown < list.length && (
+            <div className="jx-more">
+              <a href={pageHref(batches + 1)} onClick={loadMore} className="jx-more__btn">
+                {de ? 'Weitere Artikel laden' : 'Load more articles'}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+              </a>
+              <div className="jx-more__info">
+                {shown + (featured ? 1 : 0)} {de ? 'von' : 'of'} {list.length + (featured ? 1 : 0)} {de ? 'Artikeln' : 'articles'}
+              </div>
             </div>
-            <div className="space-y-5 font-body text-[1.075rem] leading-[1.78] text-ink-soft">
-              {de ? (
-                <>
-                  <p>
-                    Dieses Journal ist kein Reiseführer im klassischen Sinn. Es ist die Sammlung dessen, was ich meinen
-                    Gästen sage — bevor die Tour beginnt, wenn niemand zuhört, und wenn sie am Ende fragen: „Wohin wirklich?"
-                    Ich bin in Prag geboren, an der Karls-Universität ausgebildet, seit über einem Jahrzehnt staatlich
-                    zertifizierte Stadtführerin. Prag ist nicht mein Job. Es ist meine Stadt.
-                  </p>
-                  <p>
-                    Die Artikel hier behandeln, was die großen Reiseportale weglassen: welche Wechselstuben Sie meiden
-                    sollten, warum der Trdelník keine böhmische Tradition ist, welche Restaurants in Vinohrady und Karlín
-                    wirklich kochen — und warum die Karlsbrücke um 6 Uhr morgens eine andere Stadt ist als um 14 Uhr.
-                    Prag Insider-Tipps, Touristenfallen, böhmische Küche, versteckte Sehenswürdigkeiten und die Geschichten
-                    hinter den Fassaden der Prager Altstadt.
-                  </p>
-                  <p>Alles auf Deutsch. Alles aus erster Hand.</p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    This journal is not a travel guide in the conventional sense. It is the collection of what I tell my
-                    guests — before the tour starts, when nobody is listening, and when they ask at the end: "Where should
-                    we really go?" I was born in Prague, trained at Charles University, and have been a state-certified
-                    guide for over a decade. Prague is not my job. It is my city.
-                  </p>
-                  <p>
-                    The articles here cover what the big travel portals leave out: which exchange booths to avoid, why
-                    Trdelník is not a Bohemian tradition, which restaurants in Vinohrady and Karlín actually cook —
-                    and why Charles Bridge at 6am is a different city than at 2pm.
-                  </p>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
+          )}
+        </section>
 
-      {/* ── Dark CTA band ──────────────────────────────────────── */}
-      <section className="bg-ink text-ivory">
-        <div className={`${SHELL} py-[clamp(3.5rem,8vh,5.5rem)] text-center`}>
-          <span className="inline-flex items-center justify-center gap-[0.9rem] font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-stone-400">
-            <span aria-hidden className="h-px w-7 bg-brass" />
-            {de ? 'Bleiben Sie in Verbindung' : 'Stay in touch'}
-            <span aria-hidden className="h-px w-7 bg-brass" />
-          </span>
-          <h2 className="mx-auto mt-[1.1rem] max-w-[24ch] font-display text-[clamp(1.8rem,3.4vw,2.6rem)] font-normal leading-[1.08] tracking-[-0.015em] text-ivory">
+        {/* ── About this journal ─────────────────────────────────── */}
+        <section className="jx-about">
+          <h2>{de ? 'Über dieses Journal' : 'About this journal'}</h2>
+          <div className="jx-about__text">
             {de ? (
-              <>Planen Sie einen Besuch? Lassen Sie uns <em className="font-italic italic text-gold-lamp">sprechen</em>.</>
+              <>
+                <p>
+                  Dieses Journal ist kein Reiseführer im klassischen Sinn. Es ist die Sammlung dessen, was ich meinen Gästen sage – bevor die
+                  Tour beginnt, wenn niemand zuhört, und wenn sie am Ende fragen: „Wohin wirklich?“ Ich bin in Prag geboren, an der
+                  Karls-Universität ausgebildet und staatlich zertifizierte Stadtführerin. Prag ist nicht mein Job. Es ist meine Stadt.
+                </p>
+                <p>
+                  Die Artikel behandeln, was die großen Reiseportale weglassen: welche Wechselstuben Sie meiden sollten, welche Restaurants in
+                  Vinohrady und Karlín wirklich kochen und warum die Karlsbrücke um 6 Uhr morgens eine andere Stadt ist als um 14 Uhr. Alles
+                  auf Deutsch, alles aus erster Hand.
+                </p>
+              </>
             ) : (
-              <>Planning a visit? Let’s <em className="font-italic italic text-gold-lamp">talk</em>.</>
+              <>
+                <p>
+                  This journal is not a travel guide in the conventional sense. It is the collection of what I tell my guests – before the
+                  tour starts, when nobody is listening, and when they ask at the end: “Where should we really go?” I was born in Prague,
+                  trained at Charles University and am a state-certified guide. Prague is not my job. It is my city.
+                </p>
+                <p>
+                  The articles cover what the big travel portals leave out: which exchange booths to avoid, which restaurants in Vinohrady
+                  and Karlín actually cook, and why Charles Bridge at 6am is a different city than at 2pm. All first-hand.
+                </p>
+              </>
             )}
-          </h2>
-          <div className="mt-[1.6rem] flex flex-wrap items-center justify-center gap-x-7 gap-y-4">
-            <Btn href="/contact#contact-title" variant="cream" arrow>
-              {de ? 'Kontakt aufnehmen' : 'Get in touch'}
-            </Btn>
-            <a href={`tel:${BRAND.phoneRaw}`} className="border-b border-ivory/55 pb-[3px] font-sans text-[1.15rem] font-semibold text-ivory transition-colors duration-300 hover:border-ivory">
-              {BRAND.phone}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Ad: footer leaderboard — light band that breaks up the two dark CTA bands ── */}
-      {SHOW_ADS && (
-        <section className="bg-[#F5F3EF]">
-          <div className={`${SHELL} py-[clamp(2rem,4vh,3rem)] text-center`}>
-            <div className="mb-[0.85rem] font-sans text-[10px] font-semibold uppercase tracking-[0.3em] text-ink-mute">
-              {de ? 'Anzeige' : 'Advertisement'}
-            </div>
-            <div
-              id="ad-journal-footer"
-              className="mx-auto grid aspect-[728/90] w-full max-w-[728px] place-items-center overflow-hidden rounded-md border border-rule bg-paper"
-            >
-              {ADSENSE_SLOTS.journalFooter ? (
-                <AdSlot slot={ADSENSE_SLOTS.journalFooter} />
-              ) : (
-                <span className="px-4 text-center font-sans text-[0.95rem] text-ink-mute">
-                  {de ? (
-                    <>Ihre Werbung hier — <a href="mailto:zuzanamanova@email.cz" className="text-burgundy underline-offset-2 hover:underline">Mediadaten anfragen</a></>
-                  ) : (
-                    <>Your ad here — <a href="mailto:zuzanamanova@email.cz" className="text-burgundy underline-offset-2 hover:underline">request media kit</a></>
-                  )}
-                </span>
-              )}
-            </div>
           </div>
         </section>
-      )}
+
+        <aside className="jx-cta">
+          <div className="jx-cta__text">
+            <div className="jx-cta__title">{de ? 'Prag mit Zuzana erleben' : 'Experience Prague with Zuzana'}</div>
+            <p>
+              {de
+                ? 'Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen oder direkt anrufen: '
+                : 'Private walking tours at your own pace. Send a no-obligation enquiry or call directly: '}
+              <a href={`tel:${BRAND.phoneRaw}`}>{BRAND.phone}</a>
+            </p>
+          </div>
+          <Link href="/book#contact-title" className="jx-cta__btn">
+            {de ? 'Tour anfragen' : 'Request a tour'}
+          </Link>
+        </aside>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:#FFFFFF;color:#1A1714;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:#DCE6F2;color:#1A1714}
+a{color:#11457E;text-decoration:none}
+a:hover{color:#0B3360}
+input::placeholder{color:#8A847D}
+</style>
+</helmet>
+
+<header lang="de" style="position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #E4DFD6">
+  <div style="margin:0 auto;max-width:1160px;padding:0 20px;display:flex;flex-wrap:{{ ui.hdrWrap }};align-items:center;justify-content:space-between;gap:10px clamp(8px,3vw,24px);min-height:{{ ui.hdrH }}">
+    <a href="/" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Newsreader',Georgia,serif;font-size:clamp(19px,5.4vw,24px);font-weight:600;letter-spacing:-0.01em;color:#1A1714">Zuza &amp; Pragtour</a>
+    <sc-if value="{{ d }}" hint-placeholder-val="{{ true }}">
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:500">
+      <a href="Blog Journal v4.dc.html" style="color:#1A1714;border-bottom:2px solid #6B1F2A;padding:4px 0">Journal</a>
+      <a href="/tours" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Touren</a>
+      <a href="/zuzana-manova" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Über Zuzana</a>
+      <a href="/contact" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Kontakt</a>
+      <a href="/book#contact-title" style="background:#6B1F2A;color:#FFFFFF;padding:9px 16px;border-radius:4px;font-weight:600" style-hover="background:#4F1620;color:#FFFFFF">Tour buchen</a>
+    </nav>
+    </sc-if>
+    <sc-if value="{{ m }}" hint-placeholder-val="{{ false }}">
+      <div style="flex-shrink:0;display:flex;align-items:center;gap:4px">
+        <a href="/book#contact-title" style="display:flex;align-items:center;min-height:40px;padding:0 clamp(10px,3.6vw,14px);border-radius:4px;background:#6B1F2A;color:#FFFFFF;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:clamp(13px,3.8vw,14px);font-weight:600;white-space:nowrap">Tour buchen</a>
+        <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-controls="mobile-menu" aria-label="{{ menuLabel }}" style="display:grid;place-items:center;width:44px;height:44px;margin-right:-10px;padding:0;border:0;background:transparent;color:#1A1714;cursor:pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="{{ menuPath }}"></path></svg></button>
+      </div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ m }}" hint-placeholder-val="{{ false }}">
+    <nav id="mobile-menu" aria-label="Menü" style="position:fixed;top:57px;left:0;right:0;bottom:0;overflow-y:auto;overscroll-behavior:contain;background:#FFFFFF;padding:8px 20px 32px;visibility:{{ menuVis }};opacity:{{ menuOp }};transform:{{ menuY }};transition:opacity .2s ease,transform .2s ease,visibility .2s">
+      <div style="display:flex;flex-direction:column">
+        <a href="Blog Journal v4.dc.html" onClick="{{ closeMenu }}" aria-current="page" style="display:flex;align-items:center;justify-content:space-between;min-height:60px;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#6B1F2A">Journal<span aria-hidden="true" style="width:8px;height:8px;border-radius:9999px;background:#6B1F2A"></span></a>
+        <a href="/tours" style="display:flex;align-items:center;min-height:60px;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Touren</a>
+        <a href="/zuzana-manova" style="display:flex;align-items:center;min-height:60px;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Über Zuzana</a>
+        <a href="/contact" style="display:flex;align-items:center;min-height:60px;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Kontakt</a>
+      </div>
+      <a href="/book#contact-title" style="margin-top:28px;display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:4px;background:#6B1F2A;color:#FFFFFF;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;font-weight:600">Tour buchen</a>
+      <div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <a href="tel:+420721231933" style="display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid #D9D3C9;border-radius:4px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:#1A1714">Anrufen</a>
+        <a href="https://wa.me/420721231933" style="display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid #D9D3C9;border-radius:4px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:#1A1714">WhatsApp</a>
+      </div>
+    </nav>
+  </sc-if>
+</header>
+
+<sc-if value="{{ hero }}" hint-placeholder-val="{{ false }}">
+  <a lang="de" href="{{ hero.href }}" aria-label="{{ hero.aria }}" onMouseEnter="{{ featIn }}" onMouseLeave="{{ featOut }}" style="position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:{{ ui.heroMin }};overflow:hidden;background:#3A332C">
+    <img src="{{ hero.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(0.16,1,0.3,1);transform:{{ featScale }}">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(20,16,12,0.88),rgba(20,16,12,0.55) 60%,rgba(20,16,12,0.25)),linear-gradient(90deg,rgba(20,16,12,0.55),transparent 70%)"></div>
+    <div style="position:relative;margin:0 auto;width:100%;max-width:1160px;padding:{{ ui.heroPad }}">
+      <div style="max-width:760px">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px">
+          <span style="white-space:nowrap;border-radius:9999px;border:1px solid rgba(253,195,77,0.6);padding:0.35rem 0.8rem;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#FDC34D">{{ hero.label }}</span>
+          <span style="white-space:nowrap;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:rgba(245,239,228,0.85)">{{ hero.cat }}</span>
+        </div>
+        <h2 style="margin:18px 0 0;font-family:'Newsreader',Georgia,serif;font-size:{{ ui.heroH }};font-weight:500;line-height:1.06;letter-spacing:-0.02em;color:#F5EFE4;text-wrap:balance"><sc-for list="{{ hero.segs }}" as="s" hint-placeholder-count="1"><sc-if value="{{ s.em }}" hint-placeholder-val="{{ false }}"><em style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:400;color:#FDC34D">{{ s.t }}</em></sc-if><sc-if value="{{ s.plain }}" hint-placeholder-val="{{ true }}"><span>{{ s.t }}</span></sc-if></sc-for></h2>
+        <p style="margin:16px 0 0;max-width:36rem;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.1rem,1.6vw,1.3rem);font-style:italic;line-height:1.5;color:rgba(245,239,228,0.88)">{{ hero.excerpt }}</p>
+        <div style="margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:20px">
+          <span style="display:inline-flex;align-items:center;gap:0.6rem;border-bottom:1px solid #F5EFE4;padding-bottom:4px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#F5EFE4">Artikel lesen<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="transition:transform .3s;transform:{{ featArrow }}"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          <span style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;color:rgba(245,239,228,0.8)">{{ hero.metaLong }}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</sc-if>
+
+<main lang="de" style="padding:0 20px">
+  <div style="margin:0 auto;max-width:1160px">
+
+    <sc-if value="{{ fullHero }}" hint-placeholder-val="{{ true }}">
+      <div style="padding:clamp(2rem,5vh,2.75rem) 0 1.75rem;border-bottom:1px solid #E4DFD6;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 40px">
+        <div style="flex:1 1 520px;min-width:0">
+          <h1 style="margin:0;font-family:'Newsreader',Georgia,serif;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:500;line-height:1.06;letter-spacing:-0.02em;color:#1A1714">Briefe aus <em style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:400;color:#6B1F2A">Praha</em>.</h1>
+          <div data-chips="1" style="position:relative;margin-top:18px;margin-left:{{ ui.bleed }};margin-right:{{ ui.bleed }};padding:{{ ui.bleedPad }};display:flex;flex-wrap:{{ ui.wrap }};overflow-x:{{ ui.ox }};scrollbar-width:none;gap:6px">
+            <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+              <button type="button" onClick="{{ c.onClick }}" aria-pressed="{{ c.pressed }}" style="flex-shrink:0;white-space:nowrap;min-height:{{ ui.chipH }};cursor:pointer;background:{{ c.pillBg }};border-radius:9999px;border:1px solid {{ c.pillBorder }};padding:8px 16px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:{{ c.pillColor }};transition:color .2s,background-color .2s" style-hover="color:#6B1F2A">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="flex:{{ ui.sideFlex }};display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+          <div style="display:flex;align-items:center;gap:14px">
+            <img src="img/blog/zuzana-portrait.jpg" alt="" style="height:52px;width:52px;flex-shrink:0;border-radius:9999px;object-fit:cover;object-position:center 18%">
+            <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.45;color:#5C5650">Persönlich geschrieben von<br><b style="font-weight:700;color:#1A1714">Ing. Zuzana Manová</b> · {{ countShort }}</div>
+          </div>
+          <label style="display:flex;align-items:center;gap:10px;border-bottom:{{ ui.searchBb }};border-radius:{{ ui.searchRad }};background:{{ ui.searchBg }};min-height:{{ ui.searchMinH }};padding:{{ ui.searchPad }};width:{{ ui.searchW }};max-width:100%">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5C5650" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-5-5"></path></svg>
+            <input type="search" aria-label="Im Journal suchen" value="{{ q }}" onChange="{{ onQ }}" placeholder="Im Journal suchen…" style="flex:1;min-width:0;border:0;border-radius:0;background:transparent;padding:0;appearance:none;-webkit-appearance:none;font-family:'Newsreader',Georgia,serif;font-size:17px;color:#1A1714;outline:none">
+          </label>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ classic }}" hint-placeholder-val="{{ false }}">
+
+    <header style="padding:clamp(28px,5vw,48px) 0 20px;border-bottom:3px solid #1A1714;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px">
+      <div style="flex:1 1 520px;min-width:0">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;font-weight:700;color:#11457E">Journal</div>
+        <h1 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:600;line-height:1.08;letter-spacing:-0.015em;color:#1A1714">Briefe aus Praha</h1>
+        <p style="margin:12px 0 0;max-width:40rem;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:clamp(1.05rem,1.5vw,1.18rem);font-weight:500;line-height:1.5;color:#1A1714">Reise-Notizen, Restaurant-Empfehlungen abseits der Pfade und kleine Geschichten aus zwölf Jahren Stadtführungen – von einer Pragerin, auf Deutsch.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="img/blog/zuzana-portrait.jpg" alt="" style="height:44px;width:44px;border-radius:9999px;object-fit:cover;object-position:center 18%">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.4"><div style="font-weight:700;color:#1A1714">Ing. Zuzana Manová</div><div style="color:#5C5650">{{ countLine }}</div></div>
+      </div>
+    </header>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:12px 0;border-bottom:1px solid #E4DFD6">
+      <div data-chips="1" style="position:relative;flex:{{ ui.sideFlex }};min-width:0;margin-left:{{ ui.bleed }};margin-right:{{ ui.bleed }};padding:{{ ui.bleedPad }};display:flex;flex-wrap:{{ ui.wrap }};overflow-x:{{ ui.ox }};scrollbar-width:none;gap:4px 22px">
+        <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+          <button type="button" onClick="{{ c.onClick }}" aria-pressed="{{ c.pressed }}" style="flex-shrink:0;white-space:nowrap;min-height:{{ ui.chipH }};cursor:pointer;background:transparent;border:0;border-bottom:2px solid {{ c.line }};padding:6px 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ c.color }}" style-hover="color:#1A1714">{{ c.label }}</button>
+        </sc-for>
+      </div>
+      <label style="display:flex;align-items:center;gap:8px;border:1px solid #E4DFD6;border-radius:4px;padding:{{ ui.searchPad2 }};width:{{ ui.searchW2 }};max-width:100%">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C5650" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-5-5"></path></svg>
+        <input type="search" aria-label="Im Journal suchen" value="{{ q }}" onChange="{{ onQ }}" placeholder="Im Journal suchen" style="flex:1;min-width:0;border:0;border-radius:0;background:transparent;padding:0;appearance:none;-webkit-appearance:none;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:{{ ui.searchFs2 }};color:#1A1714;outline:none">
+      </label>
+    </div>
+
+    <sc-if value="{{ featured }}" hint-placeholder-val="{{ false }}">
+      <a href="{{ featured.href }}" style="display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center;padding:32px 0;border-bottom:1px solid #E4DFD6">
+        <div style="flex:1 1 520px;min-width:0"><img src="{{ featured.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px"></div>
+        <div style="flex:1 1 340px;min-width:0">
+          <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:700;color:#11457E">{{ featured.cat }}</div>
+          <h2 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:600;line-height:1.14;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance" style-hover="text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px">{{ featured.title }}</h2>
+          <p style="margin:14px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.5;color:#2F2A26">{{ featured.excerpt }}</p>
+          <div style="margin-top:14px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ featured.meta }}</div>
+        </div>
+      </a>
+    </sc-if>
+
+    </sc-if>
+
+    <section ref="{{ listRef }}" style="padding-top:28px">
+      <sc-if value="{{ showHeading }}" hint-placeholder-val="{{ true }}">
+        <div style="margin:0 0 {{ ui.headMb }};display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 20px">
+          <h2 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:20px;font-weight:700;color:#1A1714">{{ listHeading }}</h2>
+          <sc-if value="{{ showPagerD }}" hint-placeholder-val="{{ false }}"><span style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ pageInfo }}</span></sc-if>
+        </div>
+      </sc-if>
+      <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0;padding:48px 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;color:#5C5650">Keine Artikel gefunden.</p>
+      </sc-if>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));grid-auto-flow:dense;column-gap:32px;row-gap:{{ ui.rowGap }}">
+        <sc-for list="{{ grid }}" as="p" hint-placeholder-count="6">
+          <sc-if value="{{ p.ad }}" hint-placeholder-val="{{ false }}">
+            <div style="grid-column:1/-1;padding:14px 0 20px;border-top:1px solid #E4DFD6;border-bottom:{{ ui.wideBb }};text-align:center">
+              <div style="margin-bottom:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#8A847D">Anzeige</div>
+              <div id="ad-journal-billboard" style="margin:0 auto;display:grid;aspect-ratio:{{ ui.adRatio }};width:100%;max-width:{{ ui.adMax }};place-items:center;background:#F6F4EF"><span style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;color:#8A847D">{{ ui.adLabel }}</span></div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ p.wide }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ p.href }}" style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;padding:{{ ui.widePad }};border-top:1px solid #E4DFD6;border-bottom:{{ ui.wideBb }}">
+              <div style="flex:1 1 440px;min-width:0"><img src="{{ p.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px"></div>
+              <div style="flex:1 1 320px;min-width:0">
+                <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;font-weight:700;color:#11457E">{{ p.cat }}</div>
+                <h3 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.6rem,2.6vw,2rem);font-weight:600;line-height:1.18;color:#1A1714;text-wrap:balance" style-hover="text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px">{{ p.title }}</h3>
+                <p style="margin:12px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.5;color:#2F2A26">{{ p.excerpt }}</p>
+                <div style="margin-top:12px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ p.meta }}</div>
+              </div>
+            </a>
+          </sc-if>
+          <sc-if value="{{ p.card }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ p.href }}" style="display:flex;flex-direction:column">
+              <img src="{{ p.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#F6F4EF;border-radius:8px">
+              <div style="margin-top:12px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13.5px;font-weight:700;color:#11457E">{{ p.cat }}</div>
+              <h3 style="margin:4px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:600;line-height:1.25;color:#1A1714;text-wrap:balance" style-hover="text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">{{ p.title }}</h3>
+              <p style="margin:8px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#2F2A26;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">{{ p.excerpt }}</p>
+              <div style="margin-top:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ p.meta }}</div>
+            </a>
+          </sc-if>
+          <sc-if value="{{ p.row }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ p.href }}" style="display:grid;grid-template-columns:minmax(0,1fr) clamp(88px,27vw,112px);gap:16px;align-items:start;padding:16px 0 18px;border-top:{{ p.bt }}">
+              <div style="min-width:0">
+                <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13px;font-weight:700;color:#11457E">{{ p.cat }}</div>
+                <h3 style="margin:3px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(18px,4.9vw,20px);font-weight:600;line-height:1.25;color:#1A1714;text-wrap:pretty;overflow-wrap:break-word">{{ p.title }}</h3>
+                <div style="margin-top:8px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13.5px;line-height:1.4;color:#5C5650">{{ p.metaShort }}</div>
+              </div>
+              <img src="{{ p.img }}" alt="" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;background:#F6F4EF">
+            </a>
+          </sc-if>
+        </sc-for>
+      </div>
+      <sc-if value="{{ showPagerD }}" hint-placeholder-val="{{ false }}">
+        <nav aria-label="Seitennavigation" style="margin-top:48px;padding-top:20px;border-top:1px solid #E4DFD6;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 28px">
+          <button type="button" onClick="{{ prev }}" disabled="{{ prevDisabled }}" style="display:flex;align-items:center;gap:6px;height:44px;padding:0 6px;border:0;background:transparent;cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ prevColor }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>Zurück</button>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px">
+            <sc-for list="{{ pages }}" as="pg" hint-placeholder-count="3">
+              <sc-if value="{{ pg.gap }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="min-width:24px;text-align:center;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;color:#5C5650">…</span></sc-if>
+              <sc-if value="{{ pg.btn }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ pg.onClick }}" aria-current="{{ pg.current }}" aria-label="{{ pg.aria }}" style="min-width:44px;height:44px;padding:0 10px;border-radius:4px;border:1px solid {{ pg.border }};background:{{ pg.bg }};color:{{ pg.color }};cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums" style-hover="border-color:#1A1714">{{ pg.n }}</button></sc-if>
+            </sc-for>
+          </div>
+          <button type="button" onClick="{{ next }}" disabled="{{ nextDisabled }}" style="display:flex;align-items:center;gap:6px;height:44px;padding:0 6px;border:0;background:transparent;cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ nextColor }}">Weiter<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+        </nav>
+      </sc-if>
+      <sc-if value="{{ moreM }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:10px">
+          <button type="button" onClick="{{ loadMore }}" style="display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border:1px solid #1A1714;border-radius:4px;background:#FFFFFF;color:#1A1714;cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;font-weight:600">Weitere Artikel laden<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+          <div style="text-align:center;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ moreInfo }}</div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section style="margin-top:64px;padding-top:16px;border-top:3px solid #1A1714;display:flex;flex-wrap:wrap;gap:16px 56px">
+      <h2 style="flex:1 1 240px;margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:1.3;color:#1A1714">Über dieses Journal</h2>
+      <div style="flex:3 1 520px;min-width:0;max-width:760px;font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.62;color:#1A1714;hyphens:{{ ui.hyph }}">
+        <p style="margin:0 0 1em">Dieses Journal ist kein Reiseführer im klassischen Sinn. Es ist die Sammlung dessen, was ich meinen Gästen sage – bevor die Tour beginnt, wenn niemand zuhört, und wenn sie am Ende fragen: „Wohin wirklich?“ Ich bin in Prag geboren, an der Karls-Universität ausgebildet und staatlich zertifizierte Stadtführerin. Prag ist nicht mein Job. Es ist meine Stadt.</p>
+        <p style="margin:0">Die Artikel behandeln, was die großen Reiseportale weglassen: welche Wechselstuben Sie meiden sollten, welche Restaurants in Vinohrady und Karlín wirklich kochen und warum die Karlsbrücke um 6 Uhr morgens eine andere Stadt ist als um 14 Uhr. Alles auf Deutsch, alles aus erster Hand.</p>
+      </div>
+    </section>
+
+    <aside style="margin-top:48px;padding:22px;background:#F6F4EF;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:700;color:#1A1714">Prag mit Zuzana erleben</div>
+        <p style="margin:6px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen oder direkt anrufen: <a href="tel:+420721231933" style="color:#1A1714;font-weight:600;text-decoration:underline;text-underline-offset:3px">+420 721 231 933</a></p>
+      </div>
+      <a href="/book#contact-title" style="flex:{{ ui.ctaFlex }};text-align:center;background:#6B1F2A;color:#FFFFFF;padding:{{ ui.ctaPad }};border-radius:4px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600" style-hover="background:#4F1620;color:#FFFFFF">Tour anfragen</a>
+    </aside>
+  </div>
+</main>
+
+<footer lang="de" style="margin-top:72px;background:#F6F4EF;border-top:1px solid #E4DFD6">
+  <div style="margin:0 auto;max-width:1160px;padding:36px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.6;color:#1A1714">
+    <div style="flex:1 1 260px">
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:600">Zuza &amp; Pragtour</div>
+      <div style="margin-top:6px;color:#5C5650">Private Stadtführungen auf Deutsch, in Prag.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:{{ ui.fGap }}">
+      <a href="tel:+420721231933" style="padding:{{ ui.fPad }};color:#1A1714;font-weight:600">+420 721 231 933</a>
+      <a href="mailto:zuzanamanova@email.cz" style="padding:{{ ui.fPad }};color:#1A1714">zuzanamanova@email.cz</a>
+      <a href="https://wa.me/420721231933" style="padding:{{ ui.fPad }};color:#1A1714">WhatsApp</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:{{ ui.fGap }}">
+      <a href="/tours" style="padding:{{ ui.fPad }};color:#1A1714">Touren</a>
+      <a href="Blog Journal v4.dc.html" style="padding:{{ ui.fPad }};color:#1A1714">Journal</a>
+      <a href="/book#contact-title" style="padding:{{ ui.fPad }};color:#1A1714">Tour buchen</a>
+      <a href="/bewerten" style="padding:{{ ui.fPad }};color:#1A1714">Tour bewerten</a>
+    </div>
+  </div>
+  <div style="margin:0 auto;max-width:1160px;padding:14px 20px 24px;border-top:1px solid #E4DFD6;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13px;color:#5C5650">
+    <span>© 2026 Zuza Prague Tours – Zuzana Manová</span>
+    <span style="display:flex;gap:16px"><a href="/privacy" style="padding:{{ ui.fPad }};color:#5C5650">Datenschutz</a><a href="/terms" style="padding:{{ ui.fPad }};color:#5C5650">AGB</a></span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Vollbild&quot;,&quot;Klassisch&quot;],&quot;default&quot;:&quot;Vollbild&quot;,&quot;tsType&quot;:&quot;'Vollbild' | 'Klassisch'&quot;,&quot;section&quot;:&quot;Seite&quot;},&quot;showAds&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seite&quot;},&quot;showNewArticle&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seite&quot;},&quot;perPage&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:7,&quot;max&quot;:28,&quot;step&quot;:7,&quot;default&quot;:14,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Seite&quot;},&quot;mobileList&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Kompakt&quot;,&quot;Karten&quot;],&quot;default&quot;:&quot;Kompakt&quot;,&quot;tsType&quot;:&quot;'Kompakt' | 'Karten'&quot;,&quot;section&quot;:&quot;Mobil&quot;}}">
+class Component extends DCLogic {
+  state = { posts: [], filter: 0, q: '', page: 1, more: 1, featHov: false, menu: false, m: typeof window !== 'undefined' && window.innerWidth < 720 };
+  segs(p) {
+    if (p.titleHtml) return p.titleHtml.split(/(<em>[\s\S]*?<\/em>)/).filter(Boolean).map(part => { const m = part.match(/^<em>([\s\S]*?)<\/em>$/); const t = (m ? m[1] : part).replace(/<[^>]+>/g, '').replace(/&amp;/g, '&'); return { t, em: !!m, plain: !m }; });
+    const t = p.title || '';
+    let i = t.indexOf(': '), cut = i >= 0 ? i + 2 : -1;
+    if (cut < 0) { i = t.indexOf(' – '); cut = i >= 0 ? i + 3 : -1; }
+    if (cut < 0) return [{ t, em: false, plain: true }];
+    return [{ t: t.slice(0, cut), em: false, plain: true }, { t: t.slice(cut), em: true, plain: false }];
+  }
+  listRef = React.createRef();
+  goPage(n) {
+    this.setState({ page: n }, () => { const el = this.listRef.current; if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - (this.state.m ? 72 : 88), behavior: 'smooth' }); });
+  }
+  setMenu(menu) {
+    this.setState({ menu }, () => { document.documentElement.style.overflow = this.state.menu && this.state.m ? 'hidden' : ''; });
+  }
+  pickCat(i, e) {
+    this.setState({ filter: i, page: 1, more: 1 });
+    const b = e && e.currentTarget, sc = b && b.closest('[data-chips]');
+    if (sc && sc.scrollWidth > sc.clientWidth) sc.scrollTo({ left: b.offsetLeft - (sc.clientWidth - b.offsetWidth) / 2, behavior: 'smooth' });
+  }
+  componentDidMount() {
+    fetch('data/journal-posts.json').then(r => r.json()).then(posts => this.setState({ posts })).catch(() => {});
+    this.onResize = () => { const m = window.innerWidth < 720; if (m !== this.state.m) { this.setState({ m }); if (!m && this.state.menu) this.setMenu(false); } };
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('keydown', this.onKey);
+    this.onResize();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('keydown', this.onKey);
+    document.documentElement.style.overflow = '';
+  }
+  renderVals() {
+    const { filter, q } = this.state;
+    const showAds = this.props.showAds ?? false;
+    const CATS = ['Alle', 'Praktischer Rat', 'Geschichte', 'Restaurants', 'Prag erleben'];
+    const MON = ['Jan.', 'Feb.', 'März', 'Apr.', 'Mai', 'Juni', 'Juli', 'Aug.', 'Sept.', 'Okt.', 'Nov.', 'Dez.'];
+    const RE = [
+      [3, /restaurant|food|essen|küche|cuisine|kaffee|coffee|wein|wine|kulinar|bier|beer|svíčková|náplavka|spirituosen|spirits|trdelník/i],
+      [2, /geschichte|history|kultur|culture|jüdisch|jewish|bibliothek|library|revolution|architektur|klementinum|königin|museum|velvet|havel|kafka/i],
+      [1, /reisetipp|praktisch|practical|tip|pass|budget|transport|hotel|planung|planning|ticket|karte|visa|geld|money/i]
+    ];
+    const plain = s => (s || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&');
+    let posts = this.state.posts.map(p => ({ ...p, titleHtml: /<em>/i.test(p.title || '') ? p.title : null, title: plain(p.title), href: '/blog/' + p.slug, thumb: 'img/blog/thumbs/' + p.thumbFile, full: 'img/blog/' + p.image.split('/').pop() }));
+    if (this.props.showNewArticle ?? true) {
+      posts.push({ id: 'rank', date: '2026-10-03', href: 'Blog Visitor Pass Ranking v4.dc.html', thumb: 'img/blog/thumbs/blog-visitor-card-best-review-bad-product.jpg', full: 'img/blog/visitor-pass.png',
+        title: 'Alle Leistungen des Visitor Pass im Ranking – vom Highlight bis zur Zeitverschwendung',
+        excerpt: 'Sie haben den Pass trotz meiner fünf Gründe dagegen gekauft? Dann holen wir das Beste heraus: die 19 wichtigsten Leistungen, sortiert danach, wofür sich Ihre Zeit lohnt.',
+        dateLabel: '3. Oktober 2026', mins: 15, hay: 'Prague Visitor Pass Prag Reisetipps Sehenswürdigkeiten pass ticket' });
+      posts.push({ id: 'orte', pinned: true, date: '2026-10-04', href: 'Blog Prag Orte mit Geschichte.dc.html', thumb: 'img/blog/old-town-square.jpg', full: 'img/blog/old-town-square.jpg',
+        title: 'Zehn Orte mit Geschichte – und fünf Prager Legenden im Faktencheck',
+        excerpt: 'Wo der Dreißigjährige Krieg begann, wo Mozart den Don Giovanni dirigierte und was am Golem auf dem Dachboden dran ist. Mit Wegen, die Ihnen die steilen Gassen ersparen.',
+        dateLabel: '4. Oktober 2026', mins: 14, hay: 'Geschichte Legenden Golem Orloj Karlsbrücke Fenstersturz Tycho Brahe Mozart Loreto Waldstein Wenzelsplatz Senioren barrierefrei' });
+      posts.push({ id: 'winter-foto', date: '2026-10-05', href: 'Blog Prag Winter Fotomomente.dc.html', thumb: 'img/blog/blog-winter-cathedral.jpg', full: 'img/blog/blog-winter-cathedral.jpg',
+        title: 'Prag im Winter: zehn Erlebnisse mit Fotomoment – und fünf Mythen im Faktencheck',
+        excerpt: 'Strahov nur mit Fotoerlaubnis, ein Spa über einer gotischen Kirche, ein Mittagskonzert auf der Burg und ein Sternemenü nach einem Kochbuch von 1894. Mit der Uhrzeit, zu der das Licht am besten ist.',
+        dateLabel: '5. Oktober 2026', mins: 16, hay: 'Winter Advent Weihnachten Weihnachtsmarkt Oper Konzert Fotospots Instagram Michelin Spa Wellness Karlsbad Strahov Lobkowicz Rudolfinum Mythen' });
+      posts.push({ id: 'winter-genuss', date: '2026-10-05', href: 'Blog Prag Winter Genuss.dc.html', thumb: 'img/blog/blog-prazsky-hrad-chandelier-top-square-regular-good-illustrative.jpg', full: 'img/blog/blog-prazsky-hrad-chandelier-top-square-regular-good-illustrative.jpg',
+        title: 'Prag im Winter: zehn Erlebnisse für Genießer – und fünf Mythen im Faktencheck',
+        excerpt: 'Oper im Haus von Fellner & Helmer, ein Konzert um 13 Uhr, der Balkon der Botschaft von 1989 und ein Tag in Karlsbad. Zehn Erlebnisse für den Prager Winter, ohne steile Wege.',
+        dateLabel: '5. Oktober 2026', mins: 17, hay: 'Winter Advent Weihnachten Oper Konzert Senioren Michelin Spa Wellness Karlsbad Kur Lobkowicz Rudolfinum Mozart Mythen barrierefrei' });
+    }
+    posts.forEach(p => { const hit = RE.find(([, re]) => re.test(p.title || '')) || [...RE].reverse().find(([, re]) => re.test(p.hay || '')); p.ci = hit ? hit[0] : 4; p.cat = CATS[p.ci];
+      p.meta = [p.dateLabel, p.mins >= 3 ? 'Lesezeit ' + p.mins + ' Min.' : ''].filter(Boolean).join(' · ');
+      const dm = /^(\d{4})-(\d{2})-(\d{2})/.exec(p.date || '');
+      p.metaShort = [dm ? (+dm[3]) + '. ' + MON[+dm[2] - 1] + ' ' + dm[1] : p.dateLabel, p.mins >= 3 ? 'Lesezeit ' + p.mins + ' Min.' : ''].filter(Boolean).join(' · '); });
+    const sorted = posts.sort((a, b) => b.date.localeCompare(a.date));
+    let filtered = sorted;
+    if (filter !== 0) filtered = filtered.filter(p => p.ci === filter);
+    if (q.trim()) { const s = q.trim().toLowerCase(); filtered = filtered.filter(p => (p.hay + ' ' + p.title).toLowerCase().includes(s)); }
+    const isFiltering = filter !== 0 || q.trim() !== '';
+    const lead = isFiltering ? null : (sorted.find(p => p.pinned) || sorted[0] || null);
+    const list = isFiltering ? filtered : filtered.filter(p => p !== lead);
+    const m = this.state.m;
+    const compact = m && (this.props.mobileList ?? 'Kompakt') !== 'Karten';
+    const PER = this.props.perPage ?? 14;
+    const pageCount = Math.max(1, Math.ceil(list.length / PER));
+    const page = m ? 1 : Math.min(this.state.page, pageCount);
+    const feat = page === 1 ? lead : null;
+    const shownN = Math.min(list.length, this.state.more * PER);
+    const slice = m ? list.slice(0, shownN) : list.slice((page - 1) * PER, page * PER);
+    const grid = slice.map((p, i) => {
+      const wide = i % 7 === 3;
+      return { ad: false, wide, card: !wide && !compact, row: !wide && compact, href: p.href, cat: p.cat, title: p.title, excerpt: p.excerpt, meta: p.meta, metaShort: p.metaShort, bt: i === 0 ? '0' : '1px solid #E4DFD6', img: wide && p.full.endsWith('.jpg') ? p.full : p.thumb };
+    });
+    if (showAds && !isFiltering && grid.length > 7) grid.splice(7, 0, { ad: true, wide: false, card: false, row: false });
+    const cats = CATS.map((label, i) => { const on = filter === i; return { label, pressed: on ? 'true' : 'false', line: on ? '#11457E' : 'transparent', color: on ? '#1A1714' : '#5C5650',
+      pillBorder: on ? '#6B1F2A' : (m ? '#D9D3C9' : 'transparent'), pillColor: on ? '#6B1F2A' : '#3A332C', pillBg: on && m ? '#F6EDEE' : 'transparent', onClick: e => this.pickCat(i, e) }; });
+    const open = m && this.state.menu;
+    const ui = m ? {
+      hdrH: '56px', hdrWrap: 'nowrap', heroMin: 'clamp(440px,64svh,560px)', heroPad: '80px 20px 28px', heroH: 'clamp(1.9rem,8.4vw,2.3rem)',
+      wrap: 'nowrap', ox: 'auto', bleed: '-20px', bleedPad: '2px 20px', chipH: '44px', sideFlex: '1 1 100%',
+      searchW: '100%', searchPad: '0 14px', searchBb: '0', searchRad: '6px', searchBg: '#F6F4EF', searchMinH: '48px', searchW2: '100%', searchPad2: '12px 14px', searchFs2: '16px',
+      headMb: compact ? '4px' : '20px', rowGap: compact ? '0' : '36px', widePad: compact ? '24px 0 26px' : '28px 0', wideBb: compact ? '0' : '1px solid #E4DFD6',
+      adRatio: '300/250', adMax: '300px', adLabel: 'Werbeplatz 300 × 250', hyph: 'auto', ctaFlex: '1 1 100%', ctaPad: '14px 20px', fGap: '0', fPad: '10px 0'
+    } : {
+      hdrH: '64px', hdrWrap: 'wrap', heroMin: 'clamp(520px,68vh,680px)', heroPad: '96px 20px clamp(2rem,6vh,3.5rem)', heroH: 'clamp(2.3rem,4.8vw,4rem)',
+      wrap: 'wrap', ox: 'visible', bleed: '0', bleedPad: '0', chipH: '0', sideFlex: '0 1 auto',
+      searchW: '280px', searchPad: '0 0 6px', searchBb: '1px solid #E4DFD6', searchRad: '0', searchBg: 'transparent', searchMinH: '0', searchW2: '260px', searchPad2: '8px 12px', searchFs2: '15px',
+      headMb: '22px', rowGap: '40px', widePad: '28px 0', wideBb: '1px solid #E4DFD6',
+      adRatio: '970/250', adMax: '970px', adLabel: 'Werbeplatz 970 × 250', hyph: 'manual', ctaFlex: '0 0 auto', ctaPad: '12px 20px', fGap: '2px', fPad: '0'
+    };
+    const fullHero = (this.props.heroStyle ?? 'Vollbild') !== 'Klassisch';
+    const nums = [];
+    for (let n = 1; n <= pageCount; n++) if (n === 1 || n === pageCount || Math.abs(n - page) <= 1) nums.push(n);
+    const pages = [];
+    nums.forEach((n, k) => {
+      if (k && n - nums[k - 1] > 1) pages.push({ gap: true, btn: false });
+      const on = n === page;
+      pages.push({ gap: false, btn: true, n, current: on ? 'page' : 'false', aria: 'Seite ' + n, bg: on ? '#11457E' : 'transparent', color: on ? '#FFFFFF' : '#1A1714', border: on ? '#11457E' : '#E4DFD6', onClick: () => this.goPage(n) });
+    });
+    return {
+      countLine: sorted.length ? sorted.length + ' Beiträge · zuletzt ' + sorted[0].dateLabel : '',
+      cats, q, m, d: !m, ui,
+      menuVis: open ? 'visible' : 'hidden', menuOp: open ? '1' : '0', menuY: open ? 'none' : 'translateY(-6px)',
+      menuExpanded: open ? 'true' : 'false', menuLabel: open ? 'Menü schließen' : 'Menü öffnen', menuPath: open ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16',
+      toggleMenu: () => this.setMenu(!this.state.menu), closeMenu: () => this.setMenu(false),
+      onQ: e => this.setState({ q: e.target.value, page: 1, more: 1 }),
+      featured: feat ? { href: feat.href, img: feat.full, cat: feat.cat, title: feat.title, excerpt: feat.excerpt, meta: feat.meta } : null,
+      fullHero, classic: !fullHero,
+      hero: feat && fullHero ? { href: feat.href, aria: feat.title + ' – ' + feat.cat + '. Artikel lesen.', img: feat.full, cat: feat.cat, segs: this.segs(feat), excerpt: feat.excerpt,
+        label: feat === sorted[0] ? 'Neuester Beitrag' : 'Empfohlener Beitrag',
+        metaLong: [feat.mins >= 3 ? feat.mins + ' Min. Lesezeit' : '', feat.dateLabel].filter(Boolean).join(' · ') } : null,
+      featScale: this.state.featHov ? 'scale(1.03)' : 'scale(1)',
+      featArrow: this.state.featHov ? 'translateX(4px)' : 'none',
+      featIn: () => { if (!this.state.m) this.setState({ featHov: true }); },
+      featOut: () => this.setState({ featHov: false }),
+      countShort: sorted.length ? sorted.length + ' Beiträge' : '',
+      showHeading: this.state.posts.length > 0,
+      listHeading: isFiltering ? filtered.length + (filtered.length === 1 ? ' Artikel' : ' Artikel') + (filter ? ' in ' + CATS[filter] : '') : (page > 1 ? 'Ältere Artikel' : 'Neueste Artikel'),
+      empty: this.state.posts.length > 0 && list.length === 0,
+      grid,
+      listRef: this.listRef,
+      showPagerD: !m && pageCount > 1,
+      moreM: m && shownN < list.length,
+      loadMore: () => this.setState(s => ({ more: s.more + 1 })),
+      moreInfo: (shownN + (feat ? 1 : 0)) + ' von ' + (list.length + (feat ? 1 : 0)) + ' Artikeln',
+      pages,
+      pageInfo: 'Seite ' + page + ' von ' + pageCount,
+      prev: () => { if (page > 1) this.goPage(page - 1); },
+      next: () => { if (page < pageCount) this.goPage(page + 1); },
+      prevDisabled: page === 1,
+      nextDisabled: page === pageCount,
+      prevColor: page === 1 ? '#B5AFA8' : '#1A1714',
+      nextColor: page === pageCount ? '#B5AFA8' : '#1A1714'
+    };
+  }
+}
+</script>
+</body>
+</html>

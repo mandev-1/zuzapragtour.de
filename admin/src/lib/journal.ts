@@ -9,6 +9,7 @@ export const CATEGORIES = [
   'Verstecktes Prag',
   'Kultur',
   'Kulinarik',
+  'Prag erleben',
 ];
 
 export interface BlockMeta {
@@ -30,6 +31,7 @@ export const BLOCK_TYPES: BlockMeta[] = [
   { t: 'chapter', label: 'Kapitel', icon: 'bookmark', desc: '„Ort 1“ + Titel' },
   { t: 'factcheck', label: 'Faktencheck', icon: 'fact_check', desc: 'Legende + Urteil' },
   { t: 'overview', label: 'Übersicht', icon: 'toc', desc: 'Verlinkte Liste' },
+  { t: 'faq', label: 'Häufige Fragen', icon: 'quiz', desc: 'FAQ, auch für Google/Bing' },
   { t: 'map', label: 'Karte', icon: 'map', desc: 'Tour-Stationen' },
   { t: 'ornament', label: 'Zierde', icon: 'auto_awesome', desc: 'Trenner' },
 ];
@@ -37,8 +39,8 @@ export const BLOCK_TYPES: BlockMeta[] = [
 /** Fact-check verdicts: tone (badge colour) + the default German badge text. */
 export const VERDICTS: { v: Verdict; label: string; hint: string }[] = [
   { v: 'refuted', label: 'Widerlegt', hint: 'weinrot' },
-  { v: 'open', label: 'Ungeklärt', hint: 'blau' },
-  { v: 'unproven', label: 'Unbelegt', hint: 'grau — auch „Sage“, „Ohne Grundlage“' },
+  { v: 'open', label: 'Ungeklärt', hint: 'blau — auch „Stimmt“, „Plausibel“' },
+  { v: 'unproven', label: 'Unbelegt', hint: 'grau — auch „Sage“, „Roman“, „Ohne Grundlage“' },
 ];
 
 /**
@@ -78,9 +80,12 @@ const locLoose = (v: Localized | undefined, lang: Lang) => getL(v, lang) || getL
 function blockText(b: any, lang: Lang): string {
   switch (b.t) {
     case 'p':
-    case 'h2':
     case 'quote':
       return stripText(locLoose(b.html, lang));
+    case 'h2':
+      return stripText(locLoose(b.html, lang)) + ' ' + stripText(locLoose(b.sub, lang));
+    case 'faq':
+      return (b.items || []).map((it: any) => stripText(locLoose(it.q, lang)) + ' ' + stripText(locLoose(it.a, lang))).join(' ');
     case 'callout':
       return stripText(locLoose(b.label, lang)) + ' ' + stripText(locLoose(b.html, lang)) +
         (b.list ? ' ' + b.list.map((x: any) => stripText(locLoose(x, lang))).join(' ') : '');
@@ -181,6 +186,8 @@ export function freshBlock(t: BlockType): Block {
         intro: { de: '' },
         items: [{ href: '#ort-1', n: '1', title: { de: 'Erster Ort' }, desc: { de: 'Jahr: Ereignis · Stadtteil' } }],
       };
+    case 'faq':
+      return { t: 'faq', items: [{ q: { de: 'Eine häufige Frage?' }, a: { de: 'Die Antwort in zwei, drei Sätzen.' } }] };
     case 'ornament':
       return { t: 'ornament' };
     default:

@@ -72,9 +72,10 @@ const BlogPostPage: React.FC = () => {
   const date = t(post.dateKey as any);
   const titlePlain = t(post.titleKey as any);
   const titleHtml = de ? post.titleHtmlDe : post.titleHtml;
-  const standfirst = t(post.excerptKey as any);
+  const standfirst = t((post.dekKey ?? post.excerptKey) as any);
   const heroCap = post.heroCapKey ? t(post.heroCapKey as any) : '';
   const sourcesHtml = post.sourcesKey ? t(post.sourcesKey as any) : '';
+  const cta = post.cta?.[language] ?? post.cta?.de;
 
   const relatedItems = blogPosts
     .filter((p) => p.id !== post.id)
@@ -139,7 +140,7 @@ const BlogPostPage: React.FC = () => {
         </header>
 
         {/* ── Hero figure (1160) ──────────────────────────────────── */}
-        {post.image && (
+        {post.image && !post.noHero && (
           <figure className="mx-auto mb-0 mt-7 max-w-[1160px]">
             <img
               src={post.image}
@@ -174,12 +175,16 @@ const BlogPostPage: React.FC = () => {
           <aside className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 bg-journal-panel p-[22px]">
             <div className="min-w-0 flex-[1_1_300px]">
               <div className="font-hanken text-[15px] font-bold text-journal-ink">
-                {de ? 'Prag mit Zuzana erleben' : 'Experience Prague with Zuzana'}
+                {cta?.title ?? (de ? 'Prag mit Zuzana erleben' : 'Experience Prague with Zuzana')}
               </div>
               <p className="m-0 mt-[6px] font-hanken text-[16px] leading-[1.5] text-journal-ink">
-                {de
-                  ? 'Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen oder direkt anrufen: '
-                  : 'Private walking tours at your own pace. Send a no-obligation enquiry or call directly: '}
+                {cta?.text ? (
+                  <span dangerouslySetInnerHTML={{ __html: `${cta.text} ` }} />
+                ) : de ? (
+                  'Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen oder direkt anrufen: '
+                ) : (
+                  'Private walking tours at your own pace. Send a no-obligation enquiry or call directly: '
+                )}
                 <a href={`tel:${BRAND.phoneRaw}`} className="font-semibold text-journal-ink underline underline-offset-[3px] hover:text-journal-ink">
                   {BRAND.phone}
                 </a>
@@ -189,7 +194,7 @@ const BlogPostPage: React.FC = () => {
               href="/book#contact-title"
               className="shrink-0 rounded-[4px] bg-journal-burgundy px-5 py-3 font-hanken text-[15px] font-semibold text-white no-underline transition-colors hover:bg-journal-burgundy-hover hover:text-white"
             >
-              {de ? 'Tour anfragen' : 'Request a tour'}
+              {cta?.button ?? (de ? 'Tour anfragen' : 'Request a tour')}
             </Link>
           </aside>
 

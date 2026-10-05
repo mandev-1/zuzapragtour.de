@@ -16,7 +16,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { renderBlocks, loc } = require('./render-blocks.cjs');
+const { renderBlocks, loc, stripTags } = require('./render-blocks.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content', 'journal');
@@ -47,6 +47,18 @@ function isPublic(a) {
     return new Date(a.date).getTime() <= Date.now();
   }
   return false;
+}
+
+/** Decode the HTML entities authored HTML commonly contains (for plain-text output). */
+function decodeEntities(s) {
+  return String(s)
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_m, n) => String.fromCharCode(Number(n)))
+    .replace(/&amp;/g, '&');
 }
 
 function langFlag(languages) {
@@ -109,8 +121,18 @@ function build() {
     const perLang = (fn) => ({ de: fn('de'), en: hasEn ? fn('en') : undefined });
     const sourcesHtml = (lang) => (a.sources || []).map((s) => '<li>' + loc(s, lang) + '</li>').join('');
     if (a.kicker) journalContent[key('kicker')] = perLang((l) => loc(a.kicker, l));
+    if (a.dek) journalContent[key('dek')] = perLang((l) => loc(a.dek, l));
     if (a.heroCap) journalContent[key('heroCap')] = perLang((l) => loc(a.heroCap, l));
     if (a.sources && a.sources.length) journalContent[key('sources')] = perLang(sourcesHtml);
+
+    // Structured data inputs (Article + FAQPage JSON-LD), plain text per language.
+    const plain = (v, l) => decodeEntities(stripTags(loc(v, l))).replace(/\s+/g, ' ').trim();
+    const faqItems = (a.blocks || []).filter((b) => b.t === 'faq').flatMap((b) => b.items || []);
+    const places = (a.blocks || [])
+      .filter((b) => b.t === 'overview' && b.variant !== 'claims')
+      .flatMap((b) => (b.items || []).map((it) => plain(it.title, 'de')));
+    const seo = (l) => ({ title: plain(a.seoTitle, l) || undefined, description: plain(a.seoDescription, l) || undefined });
+    const cta = (l) => ({ title: loc(a.cta.title, l) || undefined, text: loc(a.cta.text, l) || undefined, button: loc(a.cta.button, l) || undefined });
 
     journalPosts.push({
       id: `j-${a.slug}`,
@@ -120,8 +142,10 @@ function build() {
       excerptKey: key('excerpt'),
       dateKey: key('date'),
       date: a.date,
-      image: a.hero || '',
-      ogImage: a.ogImage || a.hero || undefined,
+      image: a.hero || a.thumb || '',
+      ogImage: a.ogImage || a.hero || a.thumb || undefined,
+      noHero: !a.hero || undefined,
+      pinned: a.pinned || undefined,
       contentKey: key('content'),
       titleHtml: hasEn ? loc(a.title, 'en') : undefined,
       titleHtmlDe: loc(a.title, 'de'),
@@ -135,6 +159,11 @@ function build() {
       heroCapKey: a.heroCap ? key('heroCap') : undefined,
       heroCredit: a.heroCredit || undefined,
       sourcesKey: a.sources && a.sources.length ? key('sources') : undefined,
+      dekKey: a.dek ? key('dek') : undefined,
+      seo: a.seoTitle || a.seoDescription ? perLang(seo) : undefined,
+      cta: a.cta ? perLang(cta) : undefined,
+      faq: faqItems.length ? perLang((l) => faqItems.map((it) => ({ q: plain(it.q, l), a: plain(it.a, l) }))) : undefined,
+      about: places.length ? places : undefined,
     });
   }
 

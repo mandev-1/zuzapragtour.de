@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:#1A1714;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:#DCE6F2;color:#1A1714}
+a{color:#11457E;text-decoration:none}
+a:hover{color:#0B3360}
+input::placeholder{color:#8A847D}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #E4DFD6">
+  <div style="margin:0 auto;max-width:1160px;padding:0 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;min-height:64px">
+    <a href="/" style="font-family:'Newsreader',Georgia,serif;font-size:24px;font-weight:600;letter-spacing:-0.01em;color:#1A1714">Zuza &amp; Pragtour</a>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:500">
+      <a href="Blog Journal v4.dc.html" style="color:#1A1714;border-bottom:2px solid #6B1F2A;padding:4px 0">Journal</a>
+      <a href="/tours" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Touren</a>
+      <a href="/zuzana-manova" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Über Zuzana</a>
+      <a href="/contact" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Kontakt</a>
+      <a href="/book#contact-title" style="background:#6B1F2A;color:#FFFFFF;padding:9px 16px;border-radius:4px;font-weight:600" style-hover="background:#4F1620;color:#FFFFFF">Tour buchen</a>
+    </nav>
+  </div>
+</header>
+
+<main style="padding:0 20px">
+  <div style="margin:0 auto;max-width:1160px">
+
+    <header style="padding:clamp(28px,5vw,48px) 0 20px;border-bottom:3px solid #1A1714;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px">
+      <div style="flex:1 1 520px;min-width:0">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;font-weight:700;color:#11457E">Journal</div>
+        <h1 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(2.4rem,5vw,3.6rem);font-weight:600;line-height:1.08;letter-spacing:-0.015em;color:#1A1714">Briefe aus Praha</h1>
+        <p style="margin:12px 0 0;max-width:40rem;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:clamp(1.05rem,1.5vw,1.18rem);font-weight:500;line-height:1.5;color:#1A1714">Reise-Notizen, Restaurant-Empfehlungen abseits der Pfade und kleine Geschichten aus zwölf Jahren Stadtführungen – von einer Pragerin, auf Deutsch.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="img/blog/zuzana-portrait.jpg" alt="" style="height:44px;width:44px;border-radius:9999px;object-fit:cover;object-position:center 18%">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.4"><div style="font-weight:700;color:#1A1714">Ing. Zuzana Manová</div><div style="color:#5C5650">{{ countLine }}</div></div>
+      </div>
+    </header>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:12px 0;border-bottom:1px solid #E4DFD6">
+      <div style="display:flex;flex-wrap:wrap;gap:4px 22px">
+        <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+          <button type="button" onClick="{{ c.onClick }}" style="cursor:pointer;background:transparent;border:0;border-bottom:2px solid {{ c.line }};padding:6px 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ c.color }}" style-hover="color:#1A1714">{{ c.label }}</button>
+        </sc-for>
+      </div>
+      <label style="display:flex;align-items:center;gap:8px;border:1px solid #E4DFD6;border-radius:4px;padding:8px 12px;width:260px;max-width:100%">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5C5650" stroke-width="2" aria-hidden="true" style="flex-shrink:0"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-5-5"></path></svg>
+        <input value="{{ q }}" onChange="{{ onQ }}" placeholder="Im Journal suchen" style="flex:1;min-width:0;border:0;background:transparent;padding:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;color:#1A1714;outline:none">
+      </label>
+    </div>
+
+    <sc-if value="{{ featured }}" hint-placeholder-val="{{ false }}">
+      <a href="{{ featured.href }}" style="display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center;padding:32px 0;border-bottom:1px solid #E4DFD6">
+        <div style="flex:1 1 520px;min-width:0"><img src="{{ featured.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px"></div>
+        <div style="flex:1 1 340px;min-width:0">
+          <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:700;color:#11457E">{{ featured.cat }}</div>
+          <h2 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:600;line-height:1.14;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance" style-hover="text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px">{{ featured.title }}</h2>
+          <p style="margin:14px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.5;color:#2F2A26">{{ featured.excerpt }}</p>
+          <div style="margin-top:14px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ featured.meta }}</div>
+        </div>
+      </a>
+    </sc-if>
+
+    <section ref="{{ listRef }}" style="padding-top:28px">
+      <sc-if value="{{ showHeading }}" hint-placeholder-val="{{ true }}">
+        <div style="margin:0 0 22px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 20px">
+          <h2 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:20px;font-weight:700;color:#1A1714">{{ listHeading }}</h2>
+          <sc-if value="{{ showPager }}" hint-placeholder-val="{{ false }}"><span style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ pageInfo }}</span></sc-if>
+        </div>
+      </sc-if>
+      <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0;padding:48px 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;color:#5C5650">Keine Artikel gefunden.</p>
+      </sc-if>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));grid-auto-flow:dense;column-gap:32px;row-gap:40px">
+        <sc-for list="{{ grid }}" as="p" hint-placeholder-count="6">
+          <sc-if value="{{ p.ad }}" hint-placeholder-val="{{ false }}">
+            <div style="grid-column:1/-1;padding:14px 0 20px;border-top:1px solid #E4DFD6;border-bottom:1px solid #E4DFD6;text-align:center">
+              <div style="margin-bottom:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:#8A847D">Anzeige</div>
+              <div id="ad-journal-billboard" style="margin:0 auto;display:grid;aspect-ratio:970/250;width:100%;max-width:970px;place-items:center;background:#F6F4EF"><span style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;color:#8A847D">Werbeplatz 970 × 250</span></div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ p.wide }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ p.href }}" style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:18px 32px;align-items:center;padding:28px 0;border-top:1px solid #E4DFD6;border-bottom:1px solid #E4DFD6">
+              <div style="flex:1 1 440px;min-width:0"><img src="{{ p.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px"></div>
+              <div style="flex:1 1 320px;min-width:0">
+                <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;font-weight:700;color:#11457E">{{ p.cat }}</div>
+                <h3 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.6rem,2.6vw,2rem);font-weight:600;line-height:1.18;color:#1A1714;text-wrap:balance" style-hover="text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px">{{ p.title }}</h3>
+                <p style="margin:12px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.5;color:#2F2A26">{{ p.excerpt }}</p>
+                <div style="margin-top:12px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ p.meta }}</div>
+              </div>
+            </a>
+          </sc-if>
+          <sc-if value="{{ p.card }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ p.href }}" style="display:flex;flex-direction:column">
+              <img src="{{ p.img }}" alt="" loading="lazy" style="display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#F6F4EF;border-radius:8px">
+              <div style="margin-top:12px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13.5px;font-weight:700;color:#11457E">{{ p.cat }}</div>
+              <h3 style="margin:4px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:600;line-height:1.25;color:#1A1714;text-wrap:balance" style-hover="text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">{{ p.title }}</h3>
+              <p style="margin:8px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#2F2A26;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">{{ p.excerpt }}</p>
+              <div style="margin-top:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650">{{ p.meta }}</div>
+            </a>
+          </sc-if>
+        </sc-for>
+      </div>
+      <sc-if value="{{ showPager }}" hint-placeholder-val="{{ false }}">
+        <nav aria-label="Seitennavigation" style="margin-top:48px;padding-top:20px;border-top:1px solid #E4DFD6;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 28px">
+          <button type="button" onClick="{{ prev }}" disabled="{{ prevDisabled }}" style="display:flex;align-items:center;gap:6px;height:44px;padding:0 6px;border:0;background:transparent;cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ prevColor }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>Zurück</button>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px">
+            <sc-for list="{{ pages }}" as="pg" hint-placeholder-count="3">
+              <sc-if value="{{ pg.gap }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="min-width:24px;text-align:center;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;color:#5C5650">…</span></sc-if>
+              <sc-if value="{{ pg.btn }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ pg.onClick }}" aria-current="{{ pg.current }}" aria-label="{{ pg.aria }}" style="min-width:44px;height:44px;padding:0 10px;border-radius:4px;border:1px solid {{ pg.border }};background:{{ pg.bg }};color:{{ pg.color }};cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums" style-hover="border-color:#1A1714">{{ pg.n }}</button></sc-if>
+            </sc-for>
+          </div>
+          <button type="button" onClick="{{ next }}" disabled="{{ nextDisabled }}" style="display:flex;align-items:center;gap:6px;height:44px;padding:0 6px;border:0;background:transparent;cursor:pointer;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ nextColor }}">Weiter<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+        </nav>
+      </sc-if>
+    </section>
+
+    <section style="margin-top:64px;padding-top:16px;border-top:3px solid #1A1714;display:flex;flex-wrap:wrap;gap:16px 56px">
+      <h2 style="flex:1 1 240px;margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:20px;font-weight:700;line-height:1.3;color:#1A1714">Über dieses Journal</h2>
+      <div style="flex:3 1 520px;min-width:0;max-width:760px;font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.62;color:#1A1714">
+        <p style="margin:0 0 1em">Dieses Journal ist kein Reiseführer im klassischen Sinn. Es ist die Sammlung dessen, was ich meinen Gästen sage – bevor die Tour beginnt, wenn niemand zuhört, und wenn sie am Ende fragen: „Wohin wirklich?“ Ich bin in Prag geboren, an der Karls-Universität ausgebildet und staatlich zertifizierte Stadtführerin. Prag ist nicht mein Job. Es ist meine Stadt.</p>
+        <p style="margin:0">Die Artikel behandeln, was die großen Reiseportale weglassen: welche Wechselstuben Sie meiden sollten, welche Restaurants in Vinohrady und Karlín wirklich kochen und warum die Karlsbrücke um 6 Uhr morgens eine andere Stadt ist als um 14 Uhr. Alles auf Deutsch, alles aus erster Hand.</p>
+      </div>
+    </section>
+
+    <aside style="margin-top:48px;padding:22px;background:#F6F4EF;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:700;color:#1A1714">Prag mit Zuzana erleben</div>
+        <p style="margin:6px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen oder direkt anrufen: <a href="tel:+420721231933" style="color:#1A1714;font-weight:600;text-decoration:underline;text-underline-offset:3px">+420 721 231 933</a></p>
+      </div>
+      <a href="/book#contact-title" style="flex-shrink:0;background:#6B1F2A;color:#FFFFFF;padding:12px 20px;border-radius:4px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600" style-hover="background:#4F1620;color:#FFFFFF">Tour anfragen</a>
+    </aside>
+  </div>
+</main>
+
+<footer style="margin-top:72px;background:#F6F4EF;border-top:1px solid #E4DFD6">
+  <div style="margin:0 auto;max-width:1160px;padding:36px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.6;color:#1A1714">
+    <div style="flex:1 1 260px">
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:600">Zuza &amp; Pragtour</div>
+      <div style="margin-top:6px;color:#5C5650">Private Stadtführungen auf Deutsch, in Prag.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="tel:+420721231933" style="color:#1A1714;font-weight:600">+420 721 231 933</a>
+      <a href="mailto:zuzanamanova@email.cz" style="color:#1A1714">zuzanamanova@email.cz</a>
+      <a href="https://wa.me/420721231933" style="color:#1A1714">WhatsApp</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="/tours" style="color:#1A1714">Touren</a>
+      <a href="Blog Journal v4.dc.html" style="color:#1A1714">Journal</a>
+      <a href="/book#contact-title" style="color:#1A1714">Tour buchen</a>
+      <a href="/bewerten" style="color:#1A1714">Tour bewerten</a>
+    </div>
+  </div>
+  <div style="margin:0 auto;max-width:1160px;padding:14px 20px 24px;border-top:1px solid #E4DFD6;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13px;color:#5C5650">
+    <span>© 2026 Zuza Prague Tours – Zuzana Manová</span>
+    <span style="display:flex;gap:16px"><a href="/privacy" style="color:#5C5650">Datenschutz</a><a href="/terms" style="color:#5C5650">AGB</a></span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAds&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seite&quot;},&quot;showNewArticle&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seite&quot;},&quot;perPage&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:7,&quot;max&quot;:28,&quot;step&quot;:7,&quot;default&quot;:14,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Seite&quot;}}">
+class Component extends DCLogic {
+  state = { posts: [], filter: 0, q: '', page: 1 };
+  listRef = React.createRef();
+  goPage(n) {
+    this.setState({ page: n }, () => { const el = this.listRef.current; if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 88, behavior: 'smooth' }); });
+  }
+  componentDidMount() {
+    fetch('data/journal-posts.json').then(r => r.json()).then(posts => this.setState({ posts })).catch(() => {});
+  }
+  renderVals() {
+    const { filter, q } = this.state;
+    const showAds = this.props.showAds ?? false;
+    const CATS = ['Alle', 'Praktischer Rat', 'Geschichte', 'Restaurants', 'Prag erleben'];
+    const RE = [
+      [3, /restaurant|food|essen|küche|cuisine|kaffee|coffee|wein|wine|kulinar|bier|beer|svíčková|náplavka|spirituosen|spirits|trdelník/i],
+      [2, /geschichte|history|kultur|culture|jüdisch|jewish|bibliothek|library|revolution|architektur|klementinum|königin|museum|velvet|havel|kafka/i],
+      [1, /reisetipp|praktisch|practical|tip|pass|budget|transport|hotel|planung|planning|ticket|karte|visa|geld|money/i]
+    ];
+    const plain = s => (s || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&');
+    let posts = this.state.posts.map(p => ({ ...p, title: plain(p.title), href: '/blog/' + p.slug, thumb: 'img/blog/thumbs/' + p.thumbFile, full: 'img/blog/' + p.image.split('/').pop() }));
+    if (this.props.showNewArticle ?? true) {
+      posts.push({ id: 'rank', date: '2026-10-03', href: 'Blog Visitor Pass Ranking v4.dc.html', thumb: 'img/blog/thumbs/blog-visitor-card-best-review-bad-product.jpg', full: 'img/blog/visitor-pass.png',
+        title: 'Alle Leistungen des Visitor Pass im Ranking – vom Highlight bis zur Zeitverschwendung',
+        excerpt: 'Sie haben den Pass trotz meiner fünf Gründe dagegen gekauft? Dann holen wir das Beste heraus: die 19 wichtigsten Leistungen, sortiert danach, wofür sich Ihre Zeit lohnt.',
+        dateLabel: '3. Oktober 2026', mins: 15, hay: 'Prague Visitor Pass Prag Reisetipps Sehenswürdigkeiten pass ticket' });
+      posts.push({ id: 'orte', pinned: true, date: '2026-10-04', href: 'Blog Prag Orte mit Geschichte.dc.html', thumb: 'img/blog/old-town-square.jpg', full: 'img/blog/old-town-square.jpg',
+        title: 'Zehn Orte mit Geschichte – und fünf Prager Legenden im Faktencheck',
+        excerpt: 'Wo der Dreißigjährige Krieg begann, wo Mozart den Don Giovanni dirigierte und was am Golem auf dem Dachboden dran ist. Mit Wegen, die Ihnen die steilen Gassen ersparen.',
+        dateLabel: '4. Oktober 2026', mins: 14, hay: 'Geschichte Legenden Golem Orloj Karlsbrücke Fenstersturz Tycho Brahe Mozart Loreto Waldstein Wenzelsplatz Senioren barrierefrei' });
+      posts.push({ id: 'winter-foto', date: '2026-10-05', href: 'Blog Prag Winter Fotomomente.dc.html', thumb: 'img/blog/blog-winter-cathedral.jpg', full: 'img/blog/blog-winter-cathedral.jpg',
+        title: 'Prag im Winter: zehn Erlebnisse mit Fotomoment – und fünf Mythen im Faktencheck',
+        excerpt: 'Strahov nur mit Fotoerlaubnis, ein Spa über einer gotischen Kirche, ein Mittagskonzert auf der Burg und ein Sternemenü nach einem Kochbuch von 1894. Mit der Uhrzeit, zu der das Licht am besten ist.',
+        dateLabel: '5. Oktober 2026', mins: 16, hay: 'Winter Advent Weihnachten Weihnachtsmarkt Oper Konzert Fotospots Instagram Michelin Spa Wellness Karlsbad Strahov Lobkowicz Rudolfinum Mythen' });
+      posts.push({ id: 'winter-genuss', date: '2026-10-05', href: 'Blog Prag Winter Genuss.dc.html', thumb: 'img/blog/blog-prazsky-hrad-chandelier-top-square-regular-good-illustrative.jpg', full: 'img/blog/blog-prazsky-hrad-chandelier-top-square-regular-good-illustrative.jpg',
+        title: 'Prag im Winter: zehn Erlebnisse für Genießer – und fünf Mythen im Faktencheck',
+        excerpt: 'Oper im Haus von Fellner & Helmer, ein Konzert um 13 Uhr, der Balkon der Botschaft von 1989 und ein Tag in Karlsbad. Zehn Erlebnisse für den Prager Winter, ohne steile Wege.',
+        dateLabel: '5. Oktober 2026', mins: 17, hay: 'Winter Advent Weihnachten Oper Konzert Senioren Michelin Spa Wellness Karlsbad Kur Lobkowicz Rudolfinum Mozart Mythen barrierefrei' });
+    }
+    posts.forEach(p => { const hit = RE.find(([, re]) => re.test(p.title || '')) || [...RE].reverse().find(([, re]) => re.test(p.hay || '')); p.ci = hit ? hit[0] : 4; p.cat = CATS[p.ci];
+      p.meta = [p.dateLabel, p.mins >= 3 ? 'Lesezeit ' + p.mins + ' Min.' : ''].filter(Boolean).join(' · '); });
+    const sorted = posts.sort((a, b) => b.date.localeCompare(a.date));
+    let filtered = sorted;
+    if (filter !== 0) filtered = filtered.filter(p => p.ci === filter);
+    if (q.trim()) { const s = q.trim().toLowerCase(); filtered = filtered.filter(p => (p.hay + ' ' + p.title).toLowerCase().includes(s)); }
+    const isFiltering = filter !== 0 || q.trim() !== '';
+    const lead = isFiltering ? null : (sorted.find(p => p.pinned) || sorted[0] || null);
+    const list = isFiltering ? filtered : filtered.filter(p => p !== lead);
+    const PER = this.props.perPage ?? 14;
+    const pageCount = Math.max(1, Math.ceil(list.length / PER));
+    const page = Math.min(this.state.page, pageCount);
+    const feat = page === 1 ? lead : null;
+    const grid = list.slice((page - 1) * PER, page * PER).map((p, i) => {
+      const wide = i % 7 === 3;
+      return { ad: false, wide, card: !wide, href: p.href, cat: p.cat, title: p.title, excerpt: p.excerpt, meta: p.meta, img: wide && p.full.endsWith('.jpg') ? p.full : p.thumb };
+    });
+    if (showAds && !isFiltering && grid.length > 7) grid.splice(7, 0, { ad: true, wide: false, card: false });
+    const cats = CATS.map((label, i) => ({ label, line: filter === i ? '#11457E' : 'transparent', color: filter === i ? '#1A1714' : '#5C5650', onClick: () => this.setState({ filter: i, page: 1 }) }));
+    const nums = [];
+    for (let n = 1; n <= pageCount; n++) if (n === 1 || n === pageCount || Math.abs(n - page) <= 1) nums.push(n);
+    const pages = [];
+    nums.forEach((n, k) => {
+      if (k && n - nums[k - 1] > 1) pages.push({ gap: true, btn: false });
+      const on = n === page;
+      pages.push({ gap: false, btn: true, n, current: on ? 'page' : 'false', aria: 'Seite ' + n, bg: on ? '#11457E' : 'transparent', color: on ? '#FFFFFF' : '#1A1714', border: on ? '#11457E' : '#E4DFD6', onClick: () => this.goPage(n) });
+    });
+    return {
+      countLine: sorted.length ? sorted.length + ' Beiträge · zuletzt ' + sorted[0].dateLabel : '',
+      cats, q,
+      onQ: e => this.setState({ q: e.target.value, page: 1 }),
+      featured: feat ? { href: feat.href, img: feat.full, cat: feat.cat, title: feat.title, excerpt: feat.excerpt, meta: feat.meta } : null,
+      showHeading: this.state.posts.length > 0,
+      listHeading: isFiltering ? filtered.length + (filtered.length === 1 ? ' Artikel' : ' Artikel') + (filter ? ' in ' + CATS[filter] : '') : (page > 1 ? 'Ältere Artikel' : 'Neueste Artikel'),
+      empty: this.state.posts.length > 0 && list.length === 0,
+      grid,
+      listRef: this.listRef,
+      showPager: pageCount > 1,
+      pages,
+      pageInfo: 'Seite ' + page + ' von ' + pageCount,
+      prev: () => { if (page > 1) this.goPage(page - 1); },
+      next: () => { if (page < pageCount) this.goPage(page + 1); },
+      prevDisabled: page === 1,
+      nextDisabled: page === pageCount,
+      prevColor: page === 1 ? '#B5AFA8' : '#1A1714',
+      nextColor: page === pageCount ? '#B5AFA8' : '#1A1714'
+    };
+  }
+}
+</script>
+</body>
+</html>

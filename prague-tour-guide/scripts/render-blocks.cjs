@@ -140,7 +140,10 @@ function renderBlock(b, lang) {
 
     case 'h2':
       // Without an explicit anchor id, BlogPostPage.injectHeadingIds adds heading-N.
-      return '<h2' + idAttr(b.id) + '>' + loc(b.html, lang) + '</h2>';
+      return (
+        '<h2' + idAttr(b.id) + '>' + loc(b.html, lang) + '</h2>' +
+        (b.sub ? '<p class="j-subline">' + loc(b.sub, lang) + '</p>' : '')
+      );
 
     case 'quote':
       return (
@@ -235,20 +238,38 @@ function renderBlock(b, lang) {
     }
 
     case 'facts': {
-      // Label column + value rows (practical info). Header only when titled.
+      // Label column + value rows (practical info, or a time plan). Header only
+      // when titled; values are authored HTML (may link to in-page anchors).
       var fh = b.title ? '<p class="facts-table__header">' + escText(loc(b.title, lang)) + '</p>' : '';
       var fr = (b.items || [])
         .map(function (it) {
           return (
             '<div class="facts-table__row">' +
             '<div class="facts-table__k">' + escText(loc(it.k, lang)) + '</div>' +
-            '<div class="facts-table__v">' + escText(loc(it.v, lang)) + '</div>' +
+            '<div class="facts-table__v">' + loc(it.v, lang) + '</div>' +
             '</div>'
           );
         })
         .join('');
-      return '<div class="facts-table">' + fh + fr + '</div>';
+      var fv = b.variant === 'schedule' ? ' facts-table--schedule' : '';
+      return '<div class="facts-table' + fv + '">' + fh + fr + '</div>';
     }
+
+    case 'faq':
+      return (
+        '<div class="j-faq">' +
+        (b.items || [])
+          .map(function (it) {
+            return (
+              '<div class="j-faq__item">' +
+              '<h3 class="j-faq__q">' + loc(it.q, lang) + '</h3>' +
+              '<p class="j-faq__a">' + loc(it.a, lang) + '</p>' +
+              '</div>'
+            );
+          })
+          .join('') +
+        '</div>'
+      );
 
     case 'map':
       return renderMap(b, lang);
@@ -272,4 +293,4 @@ function renderBlocks(blocks, lang) {
   return (blocks || []).map(function (b) { return renderBlock(b, lang); }).join('\n');
 }
 
-module.exports = { renderBlocks, loc };
+module.exports = { renderBlocks, loc, stripTags };

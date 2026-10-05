@@ -158,6 +158,13 @@ const CSS = `
 .zpe-ovrow .ti{flex:1 1 12rem;min-width:0;font-weight:600;outline:0}
 .zpe-ovrow.is-claim .ti{font-family:var(--font-italic);font-style:italic;font-weight:400;font-size:1rem}
 .zpe-ovrow .de{flex:1 1 10rem;min-width:0;color:var(--ink-mute);outline:0}
+.zpe-sub{font-size:12px;color:var(--ink-mute);margin:.25rem 0 0;outline:0}
+.zpe-dek{font-family:var(--font-sans);font-size:.95rem;line-height:1.5;color:var(--ink-soft);margin:.6rem 0 0;outline:0}
+.zpe-hint{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-400);margin:.9rem 0 0}
+.zpe-faq{border-top:2px solid var(--ink)}
+.zpe-faqit{padding:.55rem 0;border-bottom:1px solid var(--rule-soft)}
+.zpe-faqit .q{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--ink)}
+.zpe-faqit .a{font-family:var(--font-body);font-size:.95rem;line-height:1.6;color:var(--ink-soft);margin-top:.25rem;outline:0}
 .zpe-sources{margin-top:2.2rem;padding-top:.8rem;border-top:3px solid var(--ink)}
 .zpe-sources ol{margin:.4rem 0 0;padding-left:1.3rem;font-size:13px;line-height:1.55;color:var(--ink-soft)}
 .zpe-sources li{margin:.25rem 0}
@@ -273,8 +280,24 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
         return (
           <>
             <Editable tag="h2" cls="zpe-h2" html={getL(b.html, lang)} placeholder="Überschrift…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
+            <Editable tag="div" cls="zpe-sub" html={getL(b.sub, lang)} placeholder="Unterzeile (optional)…" onCommit={(v) => setBlock(i, { sub: v ? setL(b.sub, lang, v) : undefined })} />
             {anchorInput(i, b.id)}
           </>
+        );
+      case 'faq':
+        return (
+          <div className="zpe-faq">
+            {(b.items || []).map((it, k) => (
+              <div className="zpe-faqit" key={k}>
+                <div className="zpe-rowx">
+                  <Editable tag="div" cls="grow q" html={getL(it.q, lang)} placeholder="Frage…" onCommit={(v) => setBlock(i, { items: b.items.map((x, j) => (j === k ? { ...x, q: setL(x.q, lang, v) } : x)) })} />
+                  <RemoveBtn onClick={() => setBlock(i, { items: b.items.filter((_, j) => j !== k) })} />
+                </div>
+                <Editable tag="div" cls="a" html={getL(it.a, lang)} placeholder="Antwort…" onCommit={(v) => setBlock(i, { items: b.items.map((x, j) => (j === k ? { ...x, a: setL(x.a, lang, v) } : x)) })} />
+              </div>
+            ))}
+            <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { items: [...(b.items || []), { q: { de: '' }, a: { de: '' } }] })}>+ Frage</button>
+          </div>
         );
       case 'list':
         return (
@@ -297,6 +320,8 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
         );
       case 'facts':
         return (
+          <div>
+          <label className="zpe-check"><input type="checkbox" checked={b.variant === 'schedule'} onChange={(e) => setBlock(i, { variant: e.target.checked ? 'schedule' : undefined })} /> Zeitplan (schmale Spalte für Uhrzeiten)</label>
           <div className="zpe-cost">
             <Editable tag="div" cls="ct" html={getL(b.title, lang)} placeholder="Überschrift (optional)…" onCommit={(v) => setBlock(i, { title: v ? setL(b.title, lang, v) : undefined })} />
             {(b.items || []).map((r, ri) => (
@@ -307,6 +332,7 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
               </div>
             ))}
             <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { items: [...(b.items || []), { k: { de: '' }, v: { de: '' } }] })}>+ Zeile</button>
+          </div>
           </div>
         );
       case 'chapter':
@@ -470,7 +496,10 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
 
           <Editable tag="div" cls="zpe-kicker" html={getL(doc.kicker, lang)} placeholder="Dachzeile (optional, z. B. Prager Geschichte)…" onCommit={(v) => set({ kicker: v ? setL(doc.kicker, lang, v) : undefined })} />
           <Editable tag="h1" cls="zpe-title" html={getL(doc.title, lang)} placeholder="Titel…" onCommit={(v) => set({ title: setL(doc.title, lang, v) })} />
+          <p className="zpe-hint">Teaser · Journal-Karte, Suche, Meta-Beschreibung</p>
           <Editable tag="div" cls="zpe-stand" html={getL(doc.excerpt, lang)} placeholder="Vorspann / Teaser…" onCommit={(v) => set({ excerpt: setL(doc.excerpt, lang, v) })} />
+          <p className="zpe-hint">Vorspann im Artikel · optional, sonst der Teaser</p>
+          <Editable tag="div" cls="zpe-dek" html={getL(doc.dek, lang)} placeholder="Längerer Vorspann unter dem Titel (optional)…" onCommit={(v) => set({ dek: v ? setL(doc.dek, lang, v) : undefined })} />
 
           <div className="zpe-blocks">
             <div className="zpe-ins"><button type="button" title="Block einfügen" onClick={() => setPalAt(0)}><span className="material-symbols-outlined">add</span></button></div>
@@ -536,16 +565,53 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
           <div className="zpe-field"><label>Datum (ISO, für Sortierung)</label><div className="zpe-inp"><input type="date" value={doc.date || ''} onChange={(e) => set({ date: e.target.value })} /></div></div>
           <div className="zpe-field"><label>Anzeigedatum · {lang.toUpperCase()}</label><div className="zpe-inp"><input value={dateDisplayVal} onChange={(e) => setDateDisplay(e.target.value)} placeholder={lang === 'de' ? 'Mai 2026' : 'May 2026'} /></div></div>
           <div className="zpe-field"><label>Lesezeit · {lang.toUpperCase()}</label><div className="zpe-inp"><input value={readTimeVal} onChange={(e) => setReadTime(e.target.value)} placeholder={`${computeReadMinutes(doc, lang)} ${lang === 'de' ? 'Min.' : 'min'} · automatisch`} /></div></div>
+          <label className="zpe-bil"><input type="checkbox" checked={!!doc.pinned} onChange={(e) => set({ pinned: e.target.checked || undefined })} /> Im Journal oben anheften</label>
         </div>
         <div className="zpe-sec">
           <p className="zpe-sl">Beitragsbild</p>
           <div className="zpe-thumb">
             <div className="t" style={doc.hero ? { backgroundImage: `url(${img(doc.hero)})` } : undefined}></div>
             <button type="button" className="zpe-imgbtn" onClick={() => pickImage(doc.hero || '', (src) => set({ hero: src }))}>Ersetzen</button>
+            {doc.hero && <button type="button" className="zpe-imgbtn" onClick={() => set({ hero: '' })}>Ohne Titelbild</button>}
           </div>
           <div className="zpe-field" style={{ marginTop: '.7rem' }}>
             <label>Bildnachweis</label>
             <div className="zpe-inp"><span className="pre">Bild:</span><input value={doc.heroCredit || ''} onChange={(e) => set({ heroCredit: e.target.value || undefined })} placeholder="z. B. Zuza Prague Tours" /></div>
+          </div>
+          {!doc.hero && (
+            <div className="zpe-field">
+              <label>Vorschaubild (Journal-Karte und Social Media, wenn es kein Titelbild gibt)</label>
+              <div className="zpe-thumb">
+                <div className="t" style={doc.thumb ? { backgroundImage: `url(${img(doc.thumb)})` } : undefined}></div>
+                <button type="button" className="zpe-imgbtn" onClick={() => pickImage(doc.thumb || '', (src) => set({ thumb: src }))}>Wählen</button>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="zpe-sec">
+          <p className="zpe-sl">Suchmaschinen · {lang.toUpperCase()}</p>
+          <div className="zpe-field">
+            <label>Seitentitel (ohne „| ZuzaPragTour“, sonst der Titel)</label>
+            <div className="zpe-inp"><input value={getL(doc.seoTitle, lang)} onChange={(e) => set({ seoTitle: e.target.value ? setL(doc.seoTitle, lang, e.target.value) : undefined })} placeholder="optional" /></div>
+          </div>
+          <div className="zpe-field">
+            <label>Meta-Beschreibung · {getL(doc.seoDescription, lang).length} / 160 Zeichen (sonst der Teaser)</label>
+            <div className="zpe-inp"><textarea rows={3} value={getL(doc.seoDescription, lang)} onChange={(e) => set({ seoDescription: e.target.value ? setL(doc.seoDescription, lang, e.target.value) : undefined })} placeholder="optional" /></div>
+          </div>
+        </div>
+        <div className="zpe-sec">
+          <p className="zpe-sl">Abschluss-Box · {lang.toUpperCase()}</p>
+          <div className="zpe-field">
+            <label>Titel</label>
+            <div className="zpe-inp"><input value={getL(doc.cta?.title, lang)} onChange={(e) => set({ cta: { ...doc.cta, title: e.target.value ? setL(doc.cta?.title, lang, e.target.value) : undefined } })} placeholder="Prag mit Zuzana erleben" /></div>
+          </div>
+          <div className="zpe-field">
+            <label>Text (die Telefonnummer wird angehängt)</label>
+            <div className="zpe-inp"><textarea rows={3} value={getL(doc.cta?.text, lang)} onChange={(e) => set({ cta: { ...doc.cta, text: e.target.value ? setL(doc.cta?.text, lang, e.target.value) : undefined } })} placeholder="Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen oder direkt anrufen:" /></div>
+          </div>
+          <div className="zpe-field">
+            <label>Button</label>
+            <div className="zpe-inp"><input value={getL(doc.cta?.button, lang)} onChange={(e) => set({ cta: { ...doc.cta, button: e.target.value ? setL(doc.cta?.button, lang, e.target.value) : undefined } })} placeholder="Tour anfragen" /></div>
           </div>
         </div>
       </aside>

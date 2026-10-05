@@ -1,0 +1,119 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Prag im Winter: zehn Erlebnisse für Genießer – und fünf Mythen im Faktencheck",
+      "description": "Oper in einem Haus der Wiener Architekten Fellner & Helmer, ein Mittagskonzert für alle, die abends lieber früh im Hotel sind, der Balkon, von dem aus 1989 die Ausreise der DDR-Flüchtlinge verkündet wurde, und ein Tag in Karlsbad: zehn Erlebnisse für den Prager Winter, mit kurzen Wegen und ohne steile Gassen.",
+      "inLanguage": "de",
+      "datePublished": "2026-10-05",
+      "url": "https://zuzapragtour.de/blog/prag-winter-geniesser",
+      "author": {
+        "@type": "Person",
+        "name": "Ing. Zuzana Manová",
+        "jobTitle": "Staatlich geprüfte Stadtführerin, Prag",
+        "telephone": "+420721231933"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zuza Prague Tours",
+        "url": "https://zuzapragtour.de"
+      },
+      "about": [
+        {
+          "@type": "Place",
+          "name": "Staatsoper und Ständetheater"
+        },
+        {
+          "@type": "Place",
+          "name": "Rudolfinum"
+        },
+        {
+          "@type": "Place",
+          "name": "Gemeindehaus"
+        },
+        {
+          "@type": "Place",
+          "name": "Lobkowicz-Palast"
+        },
+        {
+          "@type": "Place",
+          "name": "Deutsche Botschaft im Palais Lobkowicz"
+        },
+        {
+          "@type": "Place",
+          "name": "Strahov-Bibliothek"
+        },
+        {
+          "@type": "Place",
+          "name": "Advent und Weihnachten"
+        },
+        {
+          "@type": "Place",
+          "name": "La Degustation Bohême Bourgeoise"
+        },
+        {
+          "@type": "Place",
+          "name": "Spa im Mandarin Oriental"
+        },
+        {
+          "@type": "Place",
+          "name": "Karlsbad"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ist Prag im Winter für ältere Reisende geeignet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wenn Sie die Wege gut planen. Oper, Konzerthäuser, Paläste und Museen sind geheizt und geöffnet. Ab 65 fahren Sie kostenlos mit Metro, Straßenbahn und Bus, und mit der Tram kommen Sie ohne Aufstieg bis an die Burg."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie komme ich ohne steile Wege zur Prager Burg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mit der Tram 22 oder 23 bis zur Haltestelle Pražský hrad. Von dort gehen Sie über die Pulverbrücke fast eben in die Burghöfe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es in Prag Konzerte am Nachmittag?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Im Lobkowicz-Palast auf der Prager Burg beginnt jeden Tag um 13 Uhr ein einstündiges Konzert mit klassischer Musik."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann man von Prag aus einen Tag nach Karlsbad fahren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Mit dem Auto oder Fernbus dauert die Fahrt rund zwei Stunden. Die Kolonnaden liegen nah beieinander und sind eben verbunden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wann sind die Prager Weihnachtsmärkte geöffnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Von Ende November bis Anfang Januar. Der größte steht auf dem Altstädter Ring, ein kleinerer und ruhigerer auf dem Náměstí Míru in Vinohrady."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es Stadtführungen auf Deutsch für Senioren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Ich führe privat und auf Deutsch, in Ihrem Tempo, und lege die Route so, dass Sie keine Treppe steigen müssen, die Sie nicht steigen wollen."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,8 @@
 // dependency. `mode: 'embed'` renders a supplied iframe instead.
 // ============================================================================
 
+import { CARTO_ATTRIBUTION, CARTO_TILES } from '../config/maps';
+
 interface JMapPoint {
   coord: [number, number];
   label?: string;
@@ -61,9 +63,8 @@ function initMap(node: HTMLElement, spec: JMapSpec) {
   const L = (window as any).L;
   if (!L) return;
   const map = L.map(node, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
+  L.tileLayer(CARTO_TILES, {
+    attribution: CARTO_ATTRIBUTION,
     maxZoom: 19,
   }).addTo(map);
 

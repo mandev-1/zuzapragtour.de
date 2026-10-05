@@ -247,6 +247,53 @@ export function getTourPageSchema(tour: TourPageSchemaInput) {
   };
 }
 
+export interface ArticleSchemaInput {
+  headline:    string;
+  description: string;
+  url:         string;
+  lang:        'de' | 'en';
+  date:        string;
+  image?:      string;
+  /** Places the article covers (schema.org `about`). */
+  about?:      string[];
+  faqs?:       FAQItem[];
+}
+
+/** Article (+ FAQPage when the article has a FAQ) for a journal post. */
+export function getArticleSchema(a: ArticleSchemaInput) {
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type':       'Article',
+      headline:      a.headline,
+      description:   a.description,
+      inLanguage:    a.lang,
+      datePublished: a.date,
+      url:           a.url,
+      mainEntityOfPage: a.url,
+      ...(a.image ? { image: a.image } : {}),
+      author: {
+        '@type':   'Person',
+        '@id':     BRAND.guideId,
+        name:      BRAND.personName,
+        jobTitle:  a.lang === 'de' ? 'Staatlich geprüfte Stadtführerin, Prag' : 'State-certified tour guide, Prague',
+        telephone: BRAND.phoneRaw,
+      },
+      publisher: {
+        '@type': 'Organization',
+        '@id':   BRAND.businessId,
+        name:    BRAND.siteName,
+        url:     BRAND.domain,
+      },
+      ...(a.about && a.about.length ? { about: a.about.map((name) => ({ '@type': 'Place', name })) } : {}),
+    },
+  ];
+  if (a.faqs && a.faqs.length) {
+    const { '@context': _ctx, ...faqPage } = getFAQSchema(a.faqs);
+    graph.push(faqPage);
+  }
+  return { '@context': 'https://schema.org', '@graph': graph };
+}
+
 export const defaultMeta = {
   title:       `${BRAND.siteName} - Expert Prague Tour Guide | ${BRAND.personName}`,
   description:

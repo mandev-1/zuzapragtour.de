@@ -23,9 +23,21 @@ export interface BlogPost {
   // Journal-only header/footer fields (translation keys resolve via t()).
   category?: string;
   kickerKey?: string;
+  dekKey?: string;
   heroCapKey?: string;
   heroCredit?: string;
   sourcesKey?: string;
+  /** `image` is only a card/social thumbnail — the article page shows no hero. */
+  noHero?: boolean;
+  /** Stays in the featured slot of the journal index. */
+  pinned?: boolean;
+  // Structured per-language fields (plain text unless noted).
+  seo?: Partial<Record<'de' | 'en', { title?: string; description?: string }>>;
+  /** Closing CTA overrides; `text` may contain HTML. */
+  cta?: Partial<Record<'de' | 'en', { title?: string; text?: string; button?: string }>>;
+  faq?: Partial<Record<'de' | 'en', { q: string; a: string }[]>>;
+  /** Places the article is about (Article JSON-LD `about`). */
+  about?: string[];
 }
 
 import { journalPosts } from './journalGenerated';

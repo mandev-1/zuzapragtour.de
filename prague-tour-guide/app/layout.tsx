@@ -12,6 +12,7 @@ import '../src/index.css';
 import '../src/styles/site-tokens.css';
 import '../src/styles/blog-content.css';
 import '../src/styles/blog-map.css';
+import '../src/styles/journal-index.css';
 import '../src/styles/site-premium.css';
 
 const italiana = Italiana({

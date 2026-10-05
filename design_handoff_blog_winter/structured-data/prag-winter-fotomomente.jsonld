@@ -1,0 +1,111 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Prag im Winter: zehn Erlebnisse mit Fotomoment – und fünf Mythen im Faktencheck",
+      "description": "Eine Bibliothek, die Sie nur von der Schwelle aus fotografieren dürfen, ein Spa über den Fundamenten einer gotischen Kirche, ein Mittagskonzert im einzigen Privatpalast der Prager Burg und ein Sternemenü nach einem Kochbuch von 1894: zehn Erlebnisse für die Wochen zwischen Advent und Februar, mit der Uhrzeit, zu der das Licht am besten ist.",
+      "inLanguage": "de",
+      "datePublished": "2026-10-05",
+      "url": "https://zuzapragtour.de/blog/prag-winter-fotomomente",
+      "author": {
+        "@type": "Person",
+        "name": "Ing. Zuzana Manová",
+        "jobTitle": "Staatlich geprüfte Stadtführerin, Prag",
+        "telephone": "+420721231933"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zuza Prague Tours",
+        "url": "https://zuzapragtour.de"
+      },
+      "about": [
+        {
+          "@type": "Place",
+          "name": "Strahov-Bibliothek"
+        },
+        {
+          "@type": "Place",
+          "name": "Lobkowicz-Palast"
+        },
+        {
+          "@type": "Place",
+          "name": "Staatsoper"
+        },
+        {
+          "@type": "Place",
+          "name": "Ständetheater"
+        },
+        {
+          "@type": "Place",
+          "name": "Rudolfinum"
+        },
+        {
+          "@type": "Place",
+          "name": "Weihnachtsmärkte und Hirtenmesse"
+        },
+        {
+          "@type": "Place",
+          "name": "La Degustation Bohême Bourgeoise"
+        },
+        {
+          "@type": "Place",
+          "name": "Gemeindehaus"
+        },
+        {
+          "@type": "Place",
+          "name": "Spa im Mandarin Oriental"
+        },
+        {
+          "@type": "Place",
+          "name": "Karlsbad"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wann ist in Prag im Winter das beste Licht zum Fotografieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Im Dezember geht die Sonne gegen 8 Uhr auf und kurz vor 16 Uhr unter. Die blaue Stunde liegt etwa zwischen 16 und 16:45 Uhr. Für Aufnahmen ohne Menschen kommen Sie zwischen 8 und 9 Uhr auf die Karlsbrücke."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Darf man in der Strahov-Bibliothek fotografieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, mit einer Fotoerlaubnis, die Sie an der Kasse kaufen. Die Säle sehen Sie mit dem normalen Ticket nur von der Tür aus. Hinein kommen Sie nur mit einer privaten Führung, die Sie Monate im Voraus anfragen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Muss man in Prager Sternerestaurants lange im Voraus reservieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für Abende im Advent ja, mehrere Wochen. Unter der Woche im Januar und Februar bekommen Sie leichter einen Tisch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lohnt sich Karlsbad als Tagesausflug im Winter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Die Fahrt dauert mit Auto oder Fernbus rund zwei Stunden, die Kolonnaden liegen nah beieinander, und an kalten Tagen dampfen die Quellen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es in Prag private Führungen auf Deutsch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Ich führe privat und auf Deutsch und plane die Route nach Ihren Wünschen, auf Wunsch auch nach dem Licht für Ihre Fotos."
+          }
+        }
+      ]
+    }
+  ]
+}

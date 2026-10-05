@@ -5,6 +5,9 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    /* Stop iOS from enlarging text in landscape. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   body {
     @apply bg-surface text-on-surface font-body antialiased selection:bg-secondary-container selection:text-on-secondary-container;

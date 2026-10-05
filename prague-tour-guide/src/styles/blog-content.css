@@ -53,13 +53,21 @@ html:has(.journal-page) {
 
 /* ── Headings ── */
 .blog-content h2 {
-  margin: 2.2em 0 0.4em;
+  margin: 2.4em 0 0.4em;
   font-family: var(--j-sans);
   font-size: 24px;
   font-weight: 700;
   line-height: 1.25;
   color: var(--j-ink);
   scroll-margin-top: 96px;
+}
+/* Grey subline under a section heading. */
+.blog-content .j-subline {
+  margin: 0 0 0.6em;
+  font-family: var(--j-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--j-mute);
 }
 .blog-content h3 {
   margin: 1.8em 0 0.4em;
@@ -249,9 +257,10 @@ html:has(.journal-page) {
 }
 .cost-table-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
-  gap: 16px;
+  gap: 4px 16px;
   padding: 9px 0;
   border-bottom: 1px solid var(--j-rule);
 }
@@ -300,6 +309,36 @@ html:has(.journal-page) {
 .facts-table__v {
   flex: 1 1 280px;
   min-width: 0;
+}
+
+/* Time plan ("Ein Wintertag mit der Kamera"): narrow time column, ink top rule. */
+.facts-table--schedule {
+  margin: 0.6em 0 2em;
+  border-top: 2px solid var(--j-ink);
+}
+.facts-table--schedule .facts-table__k {
+  flex: 0 0 4.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── FAQ ── */
+.j-faq {
+  margin: 0.6em 0 1.1em;
+  border-top: 2px solid var(--j-ink);
+}
+.j-faq__item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--j-rule);
+}
+.blog-content .j-faq__q {
+  margin: 0;
+  font-family: var(--j-sans);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.blog-content .j-faq__a {
+  margin: 8px 0 0;
 }
 
 /* ── Chapter head ("Ort 1" · meta / serif H2) ── */

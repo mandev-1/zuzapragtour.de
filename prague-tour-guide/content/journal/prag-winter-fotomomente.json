@@ -1,0 +1,1210 @@
+{
+  "slug": "prag-winter-fotomomente",
+  "languages": [
+    "de"
+  ],
+  "status": "published",
+  "date": "2026-10-05",
+  "dateDisplay": {
+    "de": "5. Oktober 2026"
+  },
+  "category": "Prag erleben",
+  "kicker": {
+    "de": "Prag im Winter"
+  },
+  "readTime": {
+    "de": ""
+  },
+  "thumb": "/images/blog-winter-cathedral.png",
+  "title": {
+    "de": "Prag im Winter: zehn Erlebnisse mit Fotomoment – und fünf Mythen im Faktencheck"
+  },
+  "excerpt": {
+    "de": "Strahov nur mit Fotoerlaubnis, ein Spa über einer gotischen Kirche, ein Mittagskonzert auf der Burg und ein Sternemenü nach einem Kochbuch von 1894. Mit der Uhrzeit, zu der das Licht am besten ist."
+  },
+  "dek": {
+    "de": "Eine Bibliothek, die Sie nur von der Schwelle aus fotografieren dürfen, ein Spa über den Fundamenten einer gotischen Kirche, ein Mittagskonzert im einzigen Privatpalast der Prager Burg und ein Sternemenü nach einem Kochbuch von 1894: zehn Erlebnisse für die Wochen zwischen Advent und Februar, mit der Uhrzeit, zu der das Licht am besten ist."
+  },
+  "seoTitle": {
+    "de": "Prag im Winter: 10 Erlebnisse mit Fotomoment"
+  },
+  "seoDescription": {
+    "de": "Strahov-Bibliothek, Mittagskonzert auf der Burg, Sternemenü und Spa: zehn Winter-Erlebnisse in Prag mit Fotospots, Uhrzeiten und fünf Mythen im Faktencheck."
+  },
+  "tags": {
+    "de": [
+      "Prag im Winter",
+      "Advent in Prag",
+      "Weihnachtsmarkt Prag",
+      "Strahov-Bibliothek",
+      "Oper Prag",
+      "Fotospots Prag",
+      "Karlsbad",
+      "Prag fotografieren"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "cta": {
+    "title": {
+      "de": "Prag im Winter mit Zuzana"
+    },
+    "text": {
+      "de": "Private Führungen auf Deutsch, geplant nach Ihren Terminen und nach dem besten Licht. Unverbindlich anfragen oder direkt anrufen:"
+    },
+    "button": {
+      "de": "Private Tour anfragen"
+    }
+  },
+  "sources": [
+    {
+      "de": "Strahovský klášter: <a href=\"https://www.strahovskyklaster.cz/\">Website des Klosters Strahov</a>; Eurolandmarks: <a href=\"https://eurolandmarks.com/attractions/czech-republic/prague/strahov-monastery-library\">Strahov Monastery Library: Tickets &amp; Opening Hours 2026</a>"
+    },
+    {
+      "de": "Lobkowicz Collections: <a href=\"https://www.lobkowicz.cz/\">Lobkowicz-Palast</a>; Prague Classical Concerts: <a href=\"https://pragueclassicalconcerts.com/en/detail/pearls-lobkowicz\">Pearls of Classical Music – Lobkowicz Palace</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/The_Hay_Harvest\">The Hay Harvest</a>"
+    },
+    {
+      "de": "Národní divadlo: <a href=\"https://www.narodni-divadlo.cz/\">Nationaltheater, Staatsoper und Ständetheater</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Prague_State_Opera\">Prague State Opera</a>, <a href=\"https://de.wikipedia.org/wiki/Fellner_%26_Helmer\">Fellner &amp; Helmer</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/en/objevujte/estates-theatre-stavovske-divadlo/\">Estates Theatre</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Mozart_and_Prague\">Mozart and Prague</a>"
+    },
+    {
+      "de": "Česká filharmonie: <a href=\"https://www.ceskafilharmonie.cz/\">Tschechische Philharmonie</a>; Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Rudolfinum\">Rudolfinum</a>, <a href=\"https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD_Weil\">Jiří Weil</a>"
+    },
+    {
+      "de": "Wikipedia: <a href=\"https://en.wikipedia.org/wiki/Czech_Christmas_Mass\">Czech Christmas Mass (Jakub Jan Ryba)</a>; <a href=\"https://en.wikipedia.org/wiki/Trdeln%C3%ADk\">Trdelník</a>"
+    },
+    {
+      "de": "<a href=\"https://www.ladegustation.cz\">La Degustation Bohême Bourgeoise</a>; Czech Bites: <a href=\"https://www.czechbites.com/articles/the-book-documenting-michelin-restaurant-la-degustation-boheme-bourgeoise\">The book documenting Michelin restaurant La Degustation</a>; Expats.cz: <a href=\"https://www.expats.cz/czech-news/article/restaurant-named-for-cookbook-pioneer-opens-in-prague\">Restaurant named for cookbook pioneer opens in Prague</a>"
+    },
+    {
+      "de": "Obecní dům: <a href=\"https://www.obecnidum.cz/\">Gemeindehaus Prag</a>"
+    },
+    {
+      "de": "VisitCzechia: <a href=\"https://www.visitczechia.com/en-us/things-to-do/places/accommodation/hotels/g-prague-mandarin-oriental-hotel\">Mandarin Oriental Hotel in Prague</a>"
+    },
+    {
+      "de": "UNESCO: <a href=\"https://whc.unesco.org/en/list/1613\">The Great Spa Towns of Europe</a>; Stadt Karlsbad: <a href=\"https://www.karlovyvary.cz/\">karlovyvary.cz</a>"
+    },
+    {
+      "de": "timeanddate.com: <a href=\"https://www.timeanddate.com/sun/czech-republic/prague\">Sonnenauf- und -untergang in Prag</a>"
+    }
+  ],
+  "blocks": [
+    {
+      "t": "image",
+      "src": "/images/thumbs/blog-winter-cathedral.jpg",
+      "alt": {
+        "de": "Der Chor des Veitsdoms bei Nacht, davor ein beleuchteter Weihnachtsbaum"
+      },
+      "cap": {
+        "de": "Der Veitsdom an einem Adventsabend. Nach Einbruch der Dunkelheit wird es im Burgareal ruhig, und Motive wie dieses haben Sie fast für sich."
+      },
+      "layout": "side"
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
+      "html": {
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Im Dezember geht die Sonne gegen 8 Uhr auf und kurz vor 16 Uhr unter. Für den Sonnenaufgang auf der Karlsbrücke müssen Sie also nicht um fünf aufstehen."
+        },
+        {
+          "de": "Oper, Konzerte und Sternerestaurants sind im Advent früh ausgebucht. Reservieren Sie, sobald Ihre Reisedaten feststehen."
+        },
+        {
+          "de": "In den meisten Sälen dürfen Sie nur ohne Blitz fotografieren, in der Strahov-Bibliothek nur mit Fotoerlaubnis und während Vorstellungen gar nicht."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im August teilen Sie die Karlsbrücke mit Tausenden, an einem Januarmorgen manchmal mit einer Handvoll Fotografen. Prag ist im Winter dunkler, kälter und deutlich leerer. Dafür gehen um vier Uhr nachmittags die Laternen an, die Konzertsäle sind voll, und auf den Speisekarten stehen Wild, Gans und Karpfen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Für diesen Artikel habe ich zehn Erlebnisse ausgewählt, die im Winter am schönsten sind: zwei Opernhäuser, zwei Konzertsäle, eine Bibliothek, ein Jugendstilhaus, ein Restaurant, ein Spa, die Weihnachtsmärkte und ein Tagesausflug nach Karlsbad. Zu jedem steht, wo Sie für das beste Bild stehen, wann das Licht passt und was Sie vorher reservieren müssen. Dazwischen prüfe ich fünf Mythen, die mir Gäste jeden Winter erzählen. Die Quellen finden Sie am Ende."
+      }
+    },
+    {
+      "t": "overview",
+      "variant": "index",
+      "id": "ueberblick",
+      "title": {
+        "de": "Die zehn Erlebnisse im Überblick"
+      },
+      "intro": {
+        "de": "Sortiert nach meiner Empfehlung: oben, was Sie so nur in Prag sehen."
+      },
+      "items": [
+        {
+          "href": "#e-1",
+          "n": "1",
+          "title": {
+            "de": "Strahov-Bibliothek"
+          },
+          "desc": {
+            "de": "Zwei Barocksäle, ein Blick von der Schwelle · Hradschin"
+          }
+        },
+        {
+          "href": "#e-2",
+          "n": "2",
+          "title": {
+            "de": "Lobkowicz-Palast"
+          },
+          "desc": {
+            "de": "Mittagskonzert, Bruegel und Beethoven · Prager Burg"
+          }
+        },
+        {
+          "href": "#e-3",
+          "n": "3",
+          "title": {
+            "de": "Staatsoper"
+          },
+          "desc": {
+            "de": "Ein Opernhaus aus Wien, frisch saniert · Neustadt"
+          }
+        },
+        {
+          "href": "#e-4",
+          "n": "4",
+          "title": {
+            "de": "Ständetheater"
+          },
+          "desc": {
+            "de": "Don Giovanni im Saal der Uraufführung · Altstadt"
+          }
+        },
+        {
+          "href": "#e-5",
+          "n": "5",
+          "title": {
+            "de": "Rudolfinum"
+          },
+          "desc": {
+            "de": "Die Tschechische Philharmonie im Dvořák-Saal · Altstadt"
+          }
+        },
+        {
+          "href": "#e-6",
+          "n": "6",
+          "title": {
+            "de": "Weihnachtsmärkte und Hirtenmesse"
+          },
+          "desc": {
+            "de": "Ende November bis Anfang Januar · Altstadt und Vinohrady"
+          }
+        },
+        {
+          "href": "#e-7",
+          "n": "7",
+          "title": {
+            "de": "La Degustation Bohême Bourgeoise"
+          },
+          "desc": {
+            "de": "Ein Michelin-Stern für die Küche von 1894 · Altstadt"
+          }
+        },
+        {
+          "href": "#e-8",
+          "n": "8",
+          "title": {
+            "de": "Gemeindehaus"
+          },
+          "desc": {
+            "de": "Jugendstil, Mucha und das Kaffeehaus · Altstadt"
+          }
+        },
+        {
+          "href": "#e-9",
+          "n": "9",
+          "title": {
+            "de": "Spa im Mandarin Oriental"
+          },
+          "desc": {
+            "de": "Behandlung über einer gotischen Kirche · Kleinseite"
+          }
+        },
+        {
+          "href": "#e-10",
+          "n": "10",
+          "title": {
+            "de": "Karlsbad"
+          },
+          "desc": {
+            "de": "Kolonnaden, Kurbecher und ein Bond-Hotel · Tagesausflug"
+          }
+        }
+      ]
+    },
+    {
+      "t": "overview",
+      "variant": "claims",
+      "id": "mythen",
+      "title": {
+        "de": "Fünf Mythen im Faktencheck"
+      },
+      "intro": {
+        "de": "Die Behauptung, das Ergebnis und das Erlebnis, bei dem Sie die Geschichte zu hören bekommen."
+      },
+      "items": [
+        {
+          "href": "#e-4",
+          "title": {
+            "de": "„Mozart schrieb die Ouvertüre erst in der Nacht vor der Premiere.“"
+          },
+          "verdict": "open",
+          "verdictLabel": {
+            "de": "Plausibel"
+          },
+          "desc": {
+            "de": "Nr. 4"
+          }
+        },
+        {
+          "href": "#e-5",
+          "title": {
+            "de": "„Die Besatzer ließen Mendelssohn vom Dach holen und erwischten fast Wagner.“"
+          },
+          "verdict": "unproven",
+          "verdictLabel": {
+            "de": "Roman"
+          },
+          "desc": {
+            "de": "Nr. 5"
+          }
+        },
+        {
+          "href": "#e-6",
+          "title": {
+            "de": "„Trdelník ist eine alte Prager Spezialität.“"
+          },
+          "verdict": "refuted",
+          "verdictLabel": {
+            "de": "Falsch"
+          },
+          "desc": {
+            "de": "Nr. 6"
+          }
+        },
+        {
+          "href": "#e-7",
+          "title": {
+            "de": "„Böhmische Küche, das sind Knödel und Schweinebraten.“"
+          },
+          "verdict": "refuted",
+          "verdictLabel": {
+            "de": "Falsch"
+          },
+          "desc": {
+            "de": "Nr. 7"
+          }
+        },
+        {
+          "href": "#e-9",
+          "title": {
+            "de": "„Bierbäder sind eine alte böhmische Kurtradition.“"
+          },
+          "verdict": "refuted",
+          "verdictLabel": {
+            "de": "Falsch"
+          },
+          "desc": {
+            "de": "Nr. 9"
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-1",
+      "label": {
+        "de": "Nr. 1"
+      },
+      "meta": {
+        "de": "Hradschin · seit 1143"
+      },
+      "html": {
+        "de": "Strahov-Bibliothek: zwei Säle, ein Blick von der Schwelle"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Prämonstratenserkloster Strahov wurde 1143 gegründet und liegt oberhalb der Burg auf dem Hradschin. Seine Bibliothek hat zwei Säle. Den Theologischen Saal baute Giovanni Domenico Orsi 1671 bis 1674, die Deckenfresken malte später Siard Nosecký, selbst Mitglied des Ordens. Der Philosophische Saal entstand Ende des 18. Jahrhunderts, 32 Meter lang und 14 Meter hoch. Seine Regale aus Nussholz stammen aus Klosterbruck bei Znaim, einem Kloster, das Kaiser Joseph II. aufgelöst hatte. Das Deckenfresko darüber malte 1794 Franz Anton Maulbertsch."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Betreten dürfen Sie die Säle mit dem normalen Ticket nicht. Sie schauen von der Tür aus hinein, hinter einer Absperrung. Wer zwischen den Regalen stehen will, braucht eine private Führung, die Sie Monate im Voraus per E-Mail anfragen müssen. Zum Fotografieren kaufen Sie an der Kasse eine Fotoerlaubnis und bekommen einen Aufkleber, nach dem das Personal tatsächlich fragt. Übersehen Sie nicht die Wunderkammer im Gang zwischen den Sälen, mit einem Narwalzahn und den Überresten eines Dodos."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Ein Weitwinkel lohnt sich: Von der Absperrung aus bekommen Sie das Deckenfresko im Philosophischen Saal nur mit kurzer Brennweite ganz aufs Bild. Kein Blitz."
+          }
+        },
+        {
+          "k": {
+            "de": "Beste Zeit"
+          },
+          "v": {
+            "de": "Gleich zur Öffnung um 9 Uhr, bevor die Gruppen kommen. Geöffnet ist täglich bis 17 Uhr."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Tram 22 oder 23 bis Pohořelec, dann wenige Minuten leicht bergab."
+          }
+        },
+        {
+          "k": {
+            "de": "Danach"
+          },
+          "v": {
+            "de": "Im Klosterhof braut die Klosterbrauerei Strahov ihr eigenes Bier. Vom Garten unterhalb des Klosters sehen Sie über die ganze Stadt."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-2",
+      "label": {
+        "de": "Nr. 2"
+      },
+      "meta": {
+        "de": "Prager Burg · täglich 13 Uhr"
+      },
+      "html": {
+        "de": "Lobkowicz-Palast: ein Mittagskonzert im einzigen Privatpalast der Burg"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im Areal der Prager Burg gehört genau ein Gebäude einer Privatfamilie: der Lobkowicz-Palast am östlichen Ende. 1939 beschlagnahmten ihn die Nationalsozialisten, 1948 enteigneten die Kommunisten die Familie, nach 1989 bekam sie ihn zurück. Heute zeigt sie dort in 22 Räumen ihre Sammlung. Darunter ist die „Heuernte“ von Pieter Bruegel dem Älteren aus dem Jahr 1565, eines von fünf erhaltenen Bildern seines Monatszyklus."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Fürst Joseph Franz Maximilian Lobkowicz war einer der wichtigsten Förderer Beethovens. Ihm sind die Eroica, die Fünfte und die Sechste Sinfonie gewidmet, außerdem Haydns Lobkowitz-Quartette. In den Vitrinen liegen Noten mit Anmerkungen von Beethovens Hand und Mozarts Bearbeitung von Händels „Messias“. Jeden Tag um 13 Uhr spielen Musiker, darunter Mitglieder der Tschechischen Philharmonie, eine Stunde lang im barocken Konzertsaal des Palastes, mit Werken von Vivaldi, Mozart, Beethoven und Dvořák."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Vom Balkon des Palastcafés sehen Sie über die Dächer der Kleinseite. Im Konzert bleibt die Kamera aus."
+          }
+        },
+        {
+          "k": {
+            "de": "Ablauf"
+          },
+          "v": {
+            "de": "Kommen Sie gegen 11 Uhr, sehen Sie die Sammlung mit dem Audioguide und gehen Sie um 13 Uhr ins Konzert. Es gibt Kombikarten für beides."
+          }
+        },
+        {
+          "k": {
+            "de": "Reservieren"
+          },
+          "v": {
+            "de": "Der Saal ist klein. Buchen Sie die Konzertkarten vorab."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Tram 22 oder 23 bis Pražský hrad, dann quer durch das Burgareal, etwa 15 Minuten."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-3",
+      "label": {
+        "de": "Nr. 3"
+      },
+      "meta": {
+        "de": "Neustadt · eröffnet 1888"
+      },
+      "html": {
+        "de": "Staatsoper: Rot, Gold und Wiener Theaterarchitekten"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Staatsoper wurde 1886 bis 1888 als Neues Deutsches Theater gebaut. Die deutschsprachigen Prager wollten ein Haus, das sich neben dem tschechischen Nationaltheater sehen lassen konnte, und beauftragten das Wiener Büro Fellner &amp; Helmer, das in ganz Mitteleuropa Theater baute, auch das Opernhaus Zürich. Eröffnet wurde am 5. Januar 1888 mit Wagners „Meistersingern von Nürnberg“."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Nach 1945 hieß das Haus Smetana-Theater, heute gehört es zum Nationaltheater. Nach einer mehrjährigen Sanierung öffnete es am 5. Januar 2020 wieder, auf den Tag 132 Jahre nach der ersten Vorstellung. Seitdem leuchten Zuschauerraum und Foyers wieder in Rot und Gold."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Fotografieren Sie den Saal vor Beginn und in der Pause. Während der Vorstellung ist es verboten."
+          }
+        },
+        {
+          "k": {
+            "de": "Garderobe"
+          },
+          "v": {
+            "de": "Ein dunkler Anzug oder ein Kleid sind üblich, aber keine Pflicht. Mäntel geben Sie an der Garderobe ab."
+          }
+        },
+        {
+          "k": {
+            "de": "Reservieren"
+          },
+          "v": {
+            "de": "Karten über das Nationaltheater. Vorstellungen im Advent und zum Jahreswechsel sind früh ausverkauft."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro A oder C bis Muzeum, von dort zwei Minuten zu Fuß."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-4",
+      "label": {
+        "de": "Nr. 4"
+      },
+      "meta": {
+        "de": "Altstadt · 29. Oktober 1787"
+      },
+      "html": {
+        "de": "Ständetheater: Don Giovanni dort, wo Mozart ihn dirigierte"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am 29. Oktober 1787 dirigierte Mozart im Ständetheater die Uraufführung des Don Giovanni. Das Haus war damals vier Jahre alt, gebaut von Graf Franz Anton Nostitz-Rieneck, und es ist das einzige erhaltene Theater, in dem Mozart selbst eine Uraufführung geleitet hat. Don Giovanni steht dort bis heute auf dem Spielplan. Wer ihn in diesem Saal sieht, sitzt im selben Raum wie das Premierenpublikum vor fast 240 Jahren."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vielleicht kennen Sie den Saal aus dem Kino: Miloš Forman drehte hier die Opernszenen für „Amadeus“, der 1984 herauskam."
+      }
+    },
+    {
+      "t": "factcheck",
+      "label": {
+        "de": "Mythos im Faktencheck"
+      },
+      "verdict": "open",
+      "verdictLabel": {
+        "de": "Plausibel"
+      },
+      "claim": {
+        "de": "„Mozart schrieb die Ouvertüre erst in der Nacht vor der Premiere.“"
+      },
+      "html": {
+        "de": "Die Geschichte geht auf Erzählungen seiner Witwe Constanze zurück: Mozart habe die Ouvertüre in der Nacht vor der Uraufführung geschrieben, sie habe ihn mit Punsch und Geschichten wach gehalten, und das Orchester habe sie am Abend vom Blatt gespielt. Beweisen lässt sich das nicht. Mozart trug die Oper aber am 28. Oktober 1787 in sein eigenhändiges Werkverzeichnis ein, einen Tag vor der Premiere. Dass die Ouvertüre als Letztes fertig wurde, gilt deshalb als gut möglich."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Vor dem Eingang steht „Il Commendatore“ von Anna Chromý, ein leerer Mantel aus Bronze. Abends beleuchtet ist er das bessere Motiv, denn im Saal ist Fotografieren während der Vorstellung verboten."
+          }
+        },
+        {
+          "k": {
+            "de": "Reservieren"
+          },
+          "v": {
+            "de": "Don Giovanni wird nicht jeden Abend gespielt. Schauen Sie früh in den Spielplan des Nationaltheaters."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro A oder B bis Můstek, dann drei Minuten zu Fuß."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-5",
+      "label": {
+        "de": "Nr. 5"
+      },
+      "meta": {
+        "de": "Altstadt · eröffnet 1885"
+      },
+      "html": {
+        "de": "Rudolfinum: der Saal, in dem Dvořák dirigierte"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Rudolfinum am Moldauufer wurde 1885 eröffnet und nach Kronprinz Rudolf benannt. Gebaut haben es Josef Zítek und Josef Schulz, als Haus für Musik und Kunst. Am 4. Januar 1896 dirigierte Antonín Dvořák hier das erste Konzert der Tschechischen Philharmonie. Der große Saal trägt heute seinen Namen, und das Orchester spielt bis heute in diesem Haus."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Zwischen 1919 und 1939 tagte im Rudolfinum das Abgeordnetenhaus der Tschechoslowakei. Auf der Brüstung des Dachs stehen Statuen von Komponisten, und um eine davon dreht sich eine Geschichte, die man Ihnen in Prag bestimmt erzählt."
+      }
+    },
+    {
+      "t": "factcheck",
+      "label": {
+        "de": "Mythos im Faktencheck"
+      },
+      "verdict": "unproven",
+      "verdictLabel": {
+        "de": "Roman"
+      },
+      "claim": {
+        "de": "„Die Besatzer ließen Mendelssohn vom Dach holen und erwischten fast Wagner.“"
+      },
+      "html": {
+        "de": "Die Geschichte geht so: Im besetzten Prag sollte die Statue des jüdischen Komponisten Felix Mendelssohn Bartholdy vom Dach des Rudolfinums verschwinden. Die Arbeiter wussten nicht, welche Figur er war, und hielten sich an die größte Nase. Sie gehörte Richard Wagner. Die Szene stammt aus dem Roman „Mendelssohn ist auf dem Dach“ von Jiří Weil, der die Besatzung als Jude im Versteck überlebte. Das Buch erschien 1960, ein Jahr nach seinem Tod. Dass es sich genau so zugetragen hat, ist nicht belegt."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Gehen Sie nach dem Konzert auf die Mánes-Brücke. Von dort sehen Sie die beleuchtete Burg über der Kleinseite."
+          }
+        },
+        {
+          "k": {
+            "de": "Reservieren"
+          },
+          "v": {
+            "de": "Karten bei der Tschechischen Philharmonie. Für Konzerte im Advent früh buchen."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro A bis Staroměstská, der Ausgang liegt direkt am Rudolfinum."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-6",
+      "label": {
+        "de": "Nr. 6"
+      },
+      "meta": {
+        "de": "Altstadt und Vinohrady · im Advent"
+      },
+      "html": {
+        "de": "Weihnachtsmärkte: der Altstädter Ring von oben, der Friedensplatz von unten"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der bekannteste Weihnachtsmarkt steht auf dem Altstädter Ring, mit einem großen Baum vor der Teynkirche. Er öffnet Ende November und bleibt bis Anfang Januar. Tagsüber ist er voll, und an den Ständen kaufen vor allem Touristen. Prager gehen lieber auf den Markt am Náměstí Míru, dem Friedensplatz in Vinohrady, vor der neugotischen Ludmilakirche. Er ist kleiner, und Sie hören dort mehr Tschechisch als Englisch."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am Abend lohnt sich der Weg in eine Kirche. Im Advent und zwischen den Feiertagen wird in vielen Prager Kirchen die Böhmische Hirtenmesse gesungen, die der Lehrer Jakub Jan Ryba 1796 komponierte. Sie beginnt mit „Hej, mistře“, und den Anfang kennen die meisten Tschechen auswendig. Am 5. Dezember ziehen abends Nikolaus, Engel und Teufel durch die Altstadt und fragen die Kinder, ob sie brav waren."
+      }
+    },
+    {
+      "t": "factcheck",
+      "label": {
+        "de": "Mythos im Faktencheck"
+      },
+      "verdict": "refuted",
+      "verdictLabel": {
+        "de": "Falsch"
+      },
+      "claim": {
+        "de": "„Trdelník ist eine alte Prager Spezialität.“"
+      },
+      "html": {
+        "de": "Den Teig um eine Metallstange gewickelt, über Glut gebacken und in Zucker und Nüssen gewälzt: Trdelník gibt es an jedem Prager Markt, oft als traditionelles böhmisches Gebäck angeschrieben. In Prag verkauft man ihn in dieser Menge aber erst seit etwa zwanzig Jahren. Bekannt ist er aus Skalica in der Westslowakei, wo der Skalický trdelník als regionale Spezialität unter dem Schutz der EU steht. Ähnliches Gebäck vom Spieß kennt man in Ungarn und Siebenbürgen als Kürtőskalács."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Die Galerie des Altstädter Rathausturms, eine halbe Stunde nach Sonnenuntergang. Ein Aufzug fährt bis oben."
+          }
+        },
+        {
+          "k": {
+            "de": "Beste Zeit"
+          },
+          "v": {
+            "de": "Die blaue Stunde liegt im Dezember etwa zwischen 16 und 16:45 Uhr."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Altstädter Ring: Metro A bis Staroměstská. Náměstí Míru: Metro A bis zur gleichnamigen Station."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Die Rolltreppe der Station Náměstí Míru ist mit 87 Metern die längste in der EU."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-7",
+      "label": {
+        "de": "Nr. 7"
+      },
+      "meta": {
+        "de": "Altstadt · Michelin-Stern seit 2012"
+      },
+      "html": {
+        "de": "La Degustation: ein Sternemenü nach einem Kochbuch von 1894"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "1894 erschien die „Kuchařská škola“ von Marie B. Svobodová, eine Kochschule der bürgerlichen Küche Böhmens zur Zeit der Monarchie, am Ende über 900 Seiten stark. Als Oldřich Sahajdák und sein Team das La Degustation Bohême Bourgeoise in der Haštalská-Straße eröffneten, legte er dieses Buch auf den Tisch: Danach werde hier gekocht. Dabei ist es geblieben, mit heutigen Techniken und Zutaten aus der Region. 2012 bekam das Restaurant einen Michelin-Stern."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gekocht wird in einer offenen Küche, und es gibt Menüs unterschiedlicher Länge. Wer es lockerer mag, geht zur Schwester Marie B in der Dlouhá-Straße. Dort gibt es keine Karte, die Küche entscheidet über vier Gänge, die Weinkarte setzt auf Mähren, und das Kochbuch von 1894 liegt in einer Vitrine neben der Theke."
+      }
+    },
+    {
+      "t": "factcheck",
+      "label": {
+        "de": "Mythos im Faktencheck"
+      },
+      "verdict": "refuted",
+      "verdictLabel": {
+        "de": "Falsch"
+      },
+      "claim": {
+        "de": "„Böhmische Küche, das sind Knödel und Schweinebraten.“"
+      },
+      "html": {
+        "de": "Knödel und Schweinebraten gibt es, aber die Küche, die Svobodová 1894 beschrieb, war eine bürgerliche Küche nach Wiener und französischem Vorbild. In ihrem Buch stehen Rezepte für Schildkrötensuppe und gebackene Wassermelone, und ein ganzer Abschnitt erklärt, wie man in der Küche nichts wegwirft. Manches, was heute als Wiener Küche gilt, etwa Buchteln oder Powidltascherl, kam aus Böhmen nach Wien."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Fotografieren Sie die Teller ohne Blitz. An der offenen Küche sehen Sie, wie angerichtet wird."
+          }
+        },
+        {
+          "k": {
+            "de": "Reservieren"
+          },
+          "v": {
+            "de": "Mehrere Wochen im Voraus, für Abende im Advent noch früher. Sagen Sie bei der Reservierung, was Sie nicht essen."
+          }
+        },
+        {
+          "k": {
+            "de": "Lage"
+          },
+          "v": {
+            "de": "Haštalská 18, fünf Minuten zu Fuß vom Altstädter Ring."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-8",
+      "label": {
+        "de": "Nr. 8"
+      },
+      "meta": {
+        "de": "Altstadt · eröffnet 1912"
+      },
+      "html": {
+        "de": "Gemeindehaus: Jugendstil von der Kaffeetasse bis zur Decke"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Gemeindehaus, tschechisch Obecní dům, wurde 1912 neben dem Pulverturm eröffnet, dort, wo im Mittelalter der Königshof der böhmischen Herrscher stand. Die Stadt baute es als Haus für Konzerte, Bälle und Vereine, und fast alle bekannten tschechischen Künstler der Zeit arbeiteten daran mit. Den Bürgermeistersaal malte Alfons Mucha aus. Am 28. Oktober 1918 wurde hier die Unabhängigkeit der Tschechoslowakei ausgerufen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Im großen Smetana-Saal spielen die Prager Symphoniker. Die übrigen Säle sehen Sie bei einer Führung durch das Haus. Im Erdgeschoss liegt das Kaffeehaus, ein hoher Jugendstilsaal mit großen Kronleuchtern, der beste Ort für einen grauen Nachmittag."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Das Kaffeehaus am Vormittag unter der Woche, wenn noch wenige Gäste da sind. Draußen das Mosaik „Huldigung an Prag“ über dem Eingang, am schönsten zur blauen Stunde."
+          }
+        },
+        {
+          "k": {
+            "de": "Führungen"
+          },
+          "v": {
+            "de": "Die Säle sehen Sie nur mit Führung. Termine und Karten gibt es im Haus."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Metro B bis Náměstí Republiky, der Ausgang liegt direkt am Haus."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-9",
+      "label": {
+        "de": "Nr. 9"
+      },
+      "meta": {
+        "de": "Kleinseite · Kloster aus dem 14. Jahrhundert"
+      },
+      "html": {
+        "de": "Spa im Mandarin Oriental: Massage über einer gotischen Kirche"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Mandarin Oriental auf der Kleinseite liegt in einem ehemaligen Dominikanerkloster aus dem 14. Jahrhundert. Sein Spa ist in der früheren Renaissancekapelle untergebracht. Beim Umbau kamen darunter die Fundamente einer noch älteren gotischen Kirche zum Vorschein. Sie liegen heute unter einem Glasboden, über den Sie zur Behandlung gehen, und ein unterirdischer Gang mit Vitrinen voller Funde aus der Grabung verbindet das Spa mit dem Hotel."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Behandlungen können Sie auch buchen, wenn Sie nicht im Hotel wohnen. Ich empfehle einen Termin am späten Nachmittag: Danach ist es dunkel, und Sie gehen durch die beleuchtete Kleinseite zum Abendessen."
+      }
+    },
+    {
+      "t": "factcheck",
+      "label": {
+        "de": "Mythos im Faktencheck"
+      },
+      "verdict": "refuted",
+      "verdictLabel": {
+        "de": "Falsch"
+      },
+      "claim": {
+        "de": "„Bierbäder sind eine alte böhmische Kurtradition.“"
+      },
+      "html": {
+        "de": "Ein Bad in Bier, Hopfen und Malz wird in Prag an vielen Ecken angeboten, gern als jahrhundertealte Tradition. Bierbäder gibt es in Tschechien aber erst seit den 2000er-Jahren. Mit der Kurtradition des Landes haben sie nichts zu tun: In Karlsbad und Marienbad trinkt man das Wasser der Quellen und badet in Mineralwasser, Kohlensäure und Moor."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Im Spa nur nach Absprache. Wenige Minuten entfernt liegt die Insel Kampa, abends mit Blick auf die beleuchtete Karlsbrücke."
+          }
+        },
+        {
+          "k": {
+            "de": "Reservieren"
+          },
+          "v": {
+            "de": "Behandlungen vorab buchen, auch ohne Übernachtung."
+          }
+        },
+        {
+          "k": {
+            "de": "Lage"
+          },
+          "v": {
+            "de": "Nebovidská 1, Kleinseite. Tram bis Hellichova, dann drei Minuten zu Fuß."
+          }
+        }
+      ]
+    },
+    {
+      "t": "chapter",
+      "id": "e-10",
+      "label": {
+        "de": "Nr. 10"
+      },
+      "meta": {
+        "de": "Westböhmen · rund zwei Stunden von Prag"
+      },
+      "html": {
+        "de": "Karlsbad: Kolonnaden im Winterlicht"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Seit 2021 gehört Karlsbad zum UNESCO-Welterbe der „Bedeutenden Kurstädte Europas“, zusammen mit Marienbad und Franzensbad, Baden-Baden, Baden bei Wien und sechs weiteren Kurorten. Die Mühlbrunnkolonnade an der Teplá entwarf Josef Zítek, der Architekt des <a href=\"#e-5\">Rudolfinums</a>. Unter ihren Säulen sprudeln mehrere Quellen, jede mit eigener Temperatur. Die heißeste der Stadt, der Sprudel, kommt mit über 70 Grad aus der Erde."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Getrunken wird aus dem Kurbecher, einem Porzellanbecher, dessen Henkel zugleich Trinkhalm ist. Dazu gehören die Karlsbader Oblaten und die Becherovka, ein Kräuterlikör, der seit 1807 in Karlsbad hergestellt wird. Am Ende der Kurzone liegt das Grandhotel Pupp. 2006 spielte es in „Casino Royale“ das Hotel Splendide in Montenegro."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Fotomoment"
+          },
+          "v": {
+            "de": "Die Mühlbrunnkolonnade am Vormittag. An kalten Tagen dampft das Quellwasser in der Luft."
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Mit Auto oder Fernbus rund zwei Stunden, mit dem Zug länger. Für einen Tag reicht das gut."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Den Kurbecher kaufen Sie an den Ständen bei den Kolonnaden. Trinken Sie langsam, das Wasser ist warm und stark mineralisch."
+          }
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "id": "fotoplan",
+      "html": {
+        "de": "Ein Wintertag mit der Kamera"
+      },
+      "sub": {
+        "de": "Ein Vorschlag für einen Tag im Dezember, geplant nach dem Licht."
+      }
+    },
+    {
+      "t": "facts",
+      "variant": "schedule",
+      "items": [
+        {
+          "k": {
+            "de": "8:00"
+          },
+          "v": {
+            "de": "Sonnenaufgang auf der Karlsbrücke. Im Dezember geht die Sonne erst gegen acht auf, und die Brücke ist fast leer."
+          }
+        },
+        {
+          "k": {
+            "de": "9:00"
+          },
+          "v": {
+            "de": "Mit der Tram 22 hinauf zur <a href=\"#e-1\">Strahov-Bibliothek</a>, pünktlich zur Öffnung."
+          }
+        },
+        {
+          "k": {
+            "de": "11:00"
+          },
+          "v": {
+            "de": "Sammlung im <a href=\"#e-2\">Lobkowicz-Palast</a>, um 13 Uhr das Konzert."
+          }
+        },
+        {
+          "k": {
+            "de": "14:30"
+          },
+          "v": {
+            "de": "Kaffee im <a href=\"#e-8\">Gemeindehaus</a> oder eine Behandlung im <a href=\"#e-9\">Spa</a>."
+          }
+        },
+        {
+          "k": {
+            "de": "16:00"
+          },
+          "v": {
+            "de": "Blaue Stunde auf der Galerie des Altstädter Rathausturms, unter Ihnen der <a href=\"#e-6\">Weihnachtsmarkt</a>."
+          }
+        },
+        {
+          "k": {
+            "de": "19:00"
+          },
+          "v": {
+            "de": "Oper oder Konzert. Das <a href=\"#e-7\">Sternemenü</a> heben Sie sich für den nächsten Abend auf."
+          }
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "id": "praktisch",
+      "html": {
+        "de": "Praktische Hinweise für den Winter"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag ist im Winter feucht, und es wird früh dunkel. Diese Hinweise gebe ich allen Gästen, die zwischen November und Februar kommen."
+      }
+    },
+    {
+      "t": "list",
+      "ordered": true,
+      "items": [
+        {
+          "de": "<strong>Früh reservieren.</strong> Oper, Philharmonie, das Konzert im Lobkowicz-Palast und das Sternerestaurant sind im Advent früh ausgebucht. Buchen Sie, sobald Ihre Daten feststehen."
+        },
+        {
+          "de": "<strong>Schuhe mit Profil.</strong> Kopfsteinpflaster ist bei Nässe und Frost glatt. Feste Schuhe mit Profil gehören ins Gepäck, eine Mütze auch."
+        },
+        {
+          "de": "<strong>Akkus warm halten.</strong> Bei Minusgraden halten Handy- und Kameraakkus kürzer. Tragen Sie einen Ersatzakku in der Innentasche."
+        },
+        {
+          "de": "<strong>Fotoregeln.</strong> In Sälen und Kirchen gilt fast überall: kein Blitz, kein Stativ. Während Gottesdiensten fotografieren Sie gar nicht."
+        },
+        {
+          "de": "<strong>Heiligabend.</strong> Am 24. Dezember schließen größere Geschäfte mittags, und viele Restaurants haben abends zu. Reservieren Sie für diesen Abend früh."
+        },
+        {
+          "de": "<strong>Kronen, nicht Euro.</strong> Bezahlt wird in Kronen. Karten werden fast überall akzeptiert, auch kontaktlos per Handy. Euro nehmen manche Geschäfte, aber zu schlechtem Kurs."
+        },
+        {
+          "de": "<strong>Taxi per App.</strong> Bestellen Sie Taxis per App, statt sie an der Straße anzuhalten. Dann steht der Preis vorher fest."
+        }
+      ]
+    },
+    {
+      "t": "costTable",
+      "title": {
+        "de": "Wintertermine 2026/27"
+      },
+      "rows": [
+        {
+          "k": {
+            "de": "1. Advent"
+          },
+          "v": {
+            "de": "Sonntag, 29. November 2026"
+          }
+        },
+        {
+          "k": {
+            "de": "Nikolausabend"
+          },
+          "v": {
+            "de": "Samstag, 5. Dezember"
+          }
+        },
+        {
+          "k": {
+            "de": "4. Advent"
+          },
+          "v": {
+            "de": "Sonntag, 20. Dezember"
+          }
+        },
+        {
+          "k": {
+            "de": "Heiligabend"
+          },
+          "v": {
+            "de": "Donnerstag, 24. Dezember"
+          }
+        },
+        {
+          "k": {
+            "de": "Feiertage"
+          },
+          "v": {
+            "de": "25. und 26. Dezember, 1. Januar"
+          }
+        },
+        {
+          "k": {
+            "de": "Dreikönigstag"
+          },
+          "v": {
+            "de": "Mittwoch, 6. Januar 2027"
+          }
+        },
+        {
+          "k": {
+            "de": "Sonnenuntergang"
+          },
+          "v": {
+            "de": "Mitte Dezember gegen 16 Uhr"
+          }
+        }
+      ],
+      "note": {
+        "de": "Die Weihnachtsmärkte öffnen Ende November und schließen Anfang Januar. Die genauen Termine stehen jeweils im Herbst fest."
+      }
+    },
+    {
+      "t": "h2",
+      "id": "fragen",
+      "html": {
+        "de": "Häufige Fragen"
+      }
+    },
+    {
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Wann ist in Prag im Winter das beste Licht zum Fotografieren?"
+          },
+          "a": {
+            "de": "Im Dezember geht die Sonne gegen 8 Uhr auf und kurz vor 16 Uhr unter. Die blaue Stunde liegt etwa zwischen 16 und 16:45 Uhr. Für Aufnahmen ohne Menschen kommen Sie zwischen 8 und 9 Uhr auf die Karlsbrücke."
+          }
+        },
+        {
+          "q": {
+            "de": "Darf man in der Strahov-Bibliothek fotografieren?"
+          },
+          "a": {
+            "de": "Ja, mit einer Fotoerlaubnis, die Sie an der Kasse kaufen. Die Säle sehen Sie mit dem normalen Ticket nur von der Tür aus. Hinein kommen Sie nur mit einer privaten Führung, die Sie Monate im Voraus anfragen."
+          }
+        },
+        {
+          "q": {
+            "de": "Muss man in Prager Sternerestaurants lange im Voraus reservieren?"
+          },
+          "a": {
+            "de": "Für Abende im Advent ja, mehrere Wochen. Unter der Woche im Januar und Februar bekommen Sie leichter einen Tisch."
+          }
+        },
+        {
+          "q": {
+            "de": "Lohnt sich Karlsbad als Tagesausflug im Winter?"
+          },
+          "a": {
+            "de": "Ja. Die Fahrt dauert mit Auto oder Fernbus rund zwei Stunden, die Kolonnaden liegen nah beieinander, und an kalten Tagen dampfen die Quellen."
+          }
+        },
+        {
+          "q": {
+            "de": "Gibt es in Prag private Führungen auf Deutsch?"
+          },
+          "a": {
+            "de": "Ja. Ich führe privat und auf Deutsch und plane die Route nach Ihren Wünschen, auf Wunsch auch nach dem Licht für Ihre Fotos."
+          }
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie diese Erlebnisse lieber mit jemandem verbinden, der die Wege und die Geschichten kennt: Auf einer privaten Führung lege ich die Route so, dass Sie zur blauen Stunde am richtigen Ort stehen, und erzähle unterwegs, was auf keinem Foto zu sehen ist."
+      }
+    }
+  ]
+}

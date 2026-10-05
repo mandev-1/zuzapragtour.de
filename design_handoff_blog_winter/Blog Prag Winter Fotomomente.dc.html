@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:#1A1714;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:#DCE6F2;color:#1A1714}
+a{color:#11457E;text-decoration:none}
+a:hover{color:#0B3360}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #E4DFD6">
+  <div style="margin:0 auto;max-width:1160px;padding:0 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;min-height:64px">
+    <a href="/" style="font-family:'Newsreader',Georgia,serif;font-size:24px;font-weight:600;letter-spacing:-0.01em;color:#1A1714">Zuza &amp; Pragtour</a>
+    <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:500">
+      <a href="Blog Journal v4.dc.html" style="color:#1A1714;border-bottom:2px solid #6B1F2A;padding:4px 0">Journal</a>
+      <a href="/tours" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Touren</a>
+      <a href="/zuzana-manova" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Über Zuzana</a>
+      <a href="/contact" style="color:#5C5650;padding:4px 0" style-hover="color:#1A1714">Kontakt</a>
+      <a href="/book#contact-title" style="background:#6B1F2A;color:#FFFFFF;padding:9px 16px;border-radius:4px;font-weight:600" style-hover="background:#4F1620;color:#FFFFFF">Tour buchen</a>
+    </nav>
+  </div>
+</header>
+
+<main style="padding:0 20px">
+<article>
+  <header style="margin:0 auto;max-width:860px;padding-top:clamp(28px,5vw,48px)">
+    <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;color:#5C5650"><a href="Blog Journal v4.dc.html" style="color:#5C5650" style-hover="color:#1A1714">Journal</a> <span aria-hidden="true">›</span> Prag erleben</div>
+    <div style="margin-top:22px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;font-weight:700;color:#11457E">Prag im Winter</div>
+    <h1 style="margin:6px 0 0;font-family:'Newsreader',Georgia,serif;font-size:clamp(2.1rem,4.6vw,3.2rem);font-weight:600;line-height:1.12;letter-spacing:-0.012em;color:#1A1714;text-wrap:balance">Prag im Winter: zehn Erlebnisse mit Fotomoment – und fünf Mythen im Faktencheck</h1>
+    <p style="margin:18px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:clamp(1.12rem,1.6vw,1.25rem);font-weight:500;line-height:1.5;color:#1A1714;text-wrap:pretty">Eine Bibliothek, die Sie nur von der Schwelle aus fotografieren dürfen, ein Spa über den Fundamenten einer gotischen Kirche, ein Mittagskonzert im einzigen Privatpalast der Prager Burg und ein Sternemenü nach einem Kochbuch von 1894: zehn Erlebnisse für die Wochen zwischen Advent und Februar, mit der Uhrzeit, zu der das Licht am besten ist.</p>
+    <div style="margin-top:24px;padding:16px 0;border-top:1px solid #E4DFD6;border-bottom:1px solid #E4DFD6;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="img/blog/zuzana-portrait.jpg" alt="" style="height:44px;width:44px;border-radius:9999px;object-fit:cover;object-position:center 18%">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.4"><div style="font-weight:700;color:#1A1714">Ing. Zuzana Manová</div><div style="color:#5C5650">Staatlich geprüfte Stadtführerin, Prag</div></div>
+      </div>
+      <div style="margin-left:auto;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;line-height:1.4;color:#5C5650;text-align:right">5. Oktober 2026<br>Lesezeit 16 Minuten</div>
+    </div>
+  </header>
+
+  <div style="margin:0 auto;max-width:860px;margin-top:32px;font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.65;color:#1A1714;font-variant-numeric:oldstyle-nums">
+      <figure style="margin:28px 0;display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 24px">
+        <img src="img/blog/blog-winter-cathedral.jpg" alt="Der Chor des Veitsdoms bei Nacht, davor ein beleuchteter Weihnachtsbaum" loading="lazy" style="display:block;flex:0 1 360px;width:100%;max-width:360px;height:auto;border-radius:8px">
+        <figcaption style="flex:1 1 220px;min-width:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;line-height:1.45;color:#5C5650">Der Veitsdom an einem Adventsabend. Nach Einbruch der Dunkelheit wird es im Burgareal ruhig, und Motive wie dieses haben Sie fast für sich.</figcaption>
+      </figure>
+    <aside style="margin:0 0 2em;padding:20px 22px;background:#EEF3F9;border-top:3px solid #11457E">
+      <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:700;color:#11457E">Das Wichtigste in Kürze</div>
+      <ul style="margin:12px 0 0;padding:0 0 0 20px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#1A1714">
+        <li style="margin-bottom:6px">Im Dezember geht die Sonne gegen 8 Uhr auf und kurz vor 16 Uhr unter. Für den Sonnenaufgang auf der Karlsbrücke müssen Sie also nicht um fünf aufstehen.</li>
+        <li style="margin-bottom:6px">Oper, Konzerte und Sternerestaurants sind im Advent früh ausgebucht. Reservieren Sie, sobald Ihre Reisedaten feststehen.</li>
+        <li>In den meisten Sälen dürfen Sie nur ohne Blitz fotografieren, in der Strahov-Bibliothek nur mit Fotoerlaubnis und während Vorstellungen gar nicht.</li>
+      </ul>
+    </aside>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Im August teilen Sie die Karlsbrücke mit Tausenden, an einem Januarmorgen manchmal mit einer Handvoll Fotografen. Prag ist im Winter dunkler, kälter und deutlich leerer. Dafür gehen um vier Uhr nachmittags die Laternen an, die Konzertsäle sind voll, und auf den Speisekarten stehen Wild, Gans und Karpfen.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Für diesen Artikel habe ich zehn Erlebnisse ausgewählt, die im Winter am schönsten sind: zwei Opernhäuser, zwei Konzertsäle, eine Bibliothek, ein Jugendstilhaus, ein Restaurant, ein Spa, die Weihnachtsmärkte und ein Tagesausflug nach Karlsbad. Zu jedem steht, wo Sie für das beste Bild stehen, wann das Licht passt und was Sie vorher reservieren müssen. Dazwischen prüfe ich fünf Mythen, die mir Gäste jeden Winter erzählen. Die Quellen finden Sie am Ende.</p>
+
+    <sc-if value="{{ showOverview }}" hint-placeholder-val="{{ true }}">
+    <h2 id="ueberblick" style="margin:2em 0 0.3em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:24px;font-weight:700;line-height:1.25;color:#1A1714;scroll-margin-top:80px">Die zehn Erlebnisse im Überblick</h2>
+    <p style="margin:0 0 0.6em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.5;color:#5C5650">Sortiert nach meiner Empfehlung: oben, was Sie so nur in Prag sehen.</p>
+      <div style="border-top:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif">
+        <a href="#e-1" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">1</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Strahov-Bibliothek</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Zwei Barocksäle, ein Blick von der Schwelle · Hradschin</span></a>
+        <a href="#e-2" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">2</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Lobkowicz-Palast</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Mittagskonzert, Bruegel und Beethoven · Prager Burg</span></a>
+        <a href="#e-3" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">3</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Staatsoper</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Ein Opernhaus aus Wien, frisch saniert · Neustadt</span></a>
+        <a href="#e-4" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">4</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Ständetheater</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Don Giovanni im Saal der Uraufführung · Altstadt</span></a>
+        <a href="#e-5" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">5</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Rudolfinum</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Die Tschechische Philharmonie im Dvořák-Saal · Altstadt</span></a>
+        <a href="#e-6" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">6</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Weihnachtsmärkte und Hirtenmesse</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Ende November bis Anfang Januar · Altstadt und Vinohrady</span></a>
+        <a href="#e-7" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">7</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">La Degustation Bohême Bourgeoise</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Ein Michelin-Stern für die Küche von 1894 · Altstadt</span></a>
+        <a href="#e-8" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">8</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Gemeindehaus</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Jugendstil, Mucha und das Kaffeehaus · Altstadt</span></a>
+        <a href="#e-9" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">9</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Spa im Mandarin Oriental</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Behandlung über einer gotischen Kirche · Kleinseite</span></a>
+        <a href="#e-10" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="width:28px;flex-shrink:0;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;color:#6B1F2A">10</span><span style="flex:1 1 240px;min-width:0;font-size:17px;font-weight:600;line-height:1.4">Karlsbad</span><span style="flex:1 1 300px;min-width:0;font-size:16px;line-height:1.45;color:#5C5650">Kolonnaden, Kurbecher und ein Bond-Hotel · Tagesausflug</span></a>
+      </div>
+
+    <h2 id="mythen" style="margin:2em 0 0.3em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:24px;font-weight:700;line-height:1.25;color:#1A1714;scroll-margin-top:80px">Fünf Mythen im Faktencheck</h2>
+    <p style="margin:0 0 0.6em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.5;color:#5C5650">Die Behauptung, das Ergebnis und das Erlebnis, bei dem Sie die Geschichte zu hören bekommen.</p>
+      <div style="border-top:2px solid #1A1714">
+        <a href="#e-4" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="flex:1 1 380px;min-width:0;font-family:'Newsreader',Georgia,serif;font-size:19px;font-style:italic;line-height:1.4">„Mozart schrieb die Ouvertüre erst in der Nacht vor der Premiere.“</span><span style="display:flex;align-items:baseline;gap:12px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#11457E;border:1.5px solid #11457E;border-radius:3px;padding:2px 8px;white-space:nowrap">Plausibel</span><span style="font-size:14px;color:#5C5650;white-space:nowrap">Nr. 4</span></span></a>
+        <a href="#e-5" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="flex:1 1 380px;min-width:0;font-family:'Newsreader',Georgia,serif;font-size:19px;font-style:italic;line-height:1.4">„Die Besatzer ließen Mendelssohn vom Dach holen und erwischten fast Wagner.“</span><span style="display:flex;align-items:baseline;gap:12px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#5C5650;border:1.5px solid #5C5650;border-radius:3px;padding:2px 8px;white-space:nowrap">Roman</span><span style="font-size:14px;color:#5C5650;white-space:nowrap">Nr. 5</span></span></a>
+        <a href="#e-6" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="flex:1 1 380px;min-width:0;font-family:'Newsreader',Georgia,serif;font-size:19px;font-style:italic;line-height:1.4">„Trdelník ist eine alte Prager Spezialität.“</span><span style="display:flex;align-items:baseline;gap:12px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B1F2A;border:1.5px solid #6B1F2A;border-radius:3px;padding:2px 8px;white-space:nowrap">Falsch</span><span style="font-size:14px;color:#5C5650;white-space:nowrap">Nr. 6</span></span></a>
+        <a href="#e-7" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="flex:1 1 380px;min-width:0;font-family:'Newsreader',Georgia,serif;font-size:19px;font-style:italic;line-height:1.4">„Böhmische Küche, das sind Knödel und Schweinebraten.“</span><span style="display:flex;align-items:baseline;gap:12px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B1F2A;border:1.5px solid #6B1F2A;border-radius:3px;padding:2px 8px;white-space:nowrap">Falsch</span><span style="font-size:14px;color:#5C5650;white-space:nowrap">Nr. 7</span></span></a>
+        <a href="#e-9" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:12px 0;border-bottom:1px solid #E4DFD6;color:#1A1714"><span style="flex:1 1 380px;min-width:0;font-family:'Newsreader',Georgia,serif;font-size:19px;font-style:italic;line-height:1.4">„Bierbäder sind eine alte böhmische Kurtradition.“</span><span style="display:flex;align-items:baseline;gap:12px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B1F2A;border:1.5px solid #6B1F2A;border-radius:3px;padding:2px 8px;white-space:nowrap">Falsch</span><span style="font-size:14px;color:#5C5650;white-space:nowrap">Nr. 9</span></span></a>
+      </div>
+    </sc-if>
+
+    <section id="e-1" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 1</span><span style="font-size:15px;font-weight:500;color:#5C5650">Hradschin · seit 1143</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Strahov-Bibliothek: zwei Säle, ein Blick von der Schwelle</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Das Prämonstratenserkloster Strahov wurde 1143 gegründet und liegt oberhalb der Burg auf dem Hradschin. Seine Bibliothek hat zwei Säle. Den Theologischen Saal baute Giovanni Domenico Orsi 1671 bis 1674, die Deckenfresken malte später Siard Nosecký, selbst Mitglied des Ordens. Der Philosophische Saal entstand Ende des 18. Jahrhunderts, 32 Meter lang und 14 Meter hoch. Seine Regale aus Nussholz stammen aus Klosterbruck bei Znaim, einem Kloster, das Kaiser Joseph II. aufgelöst hatte. Das Deckenfresko darüber malte 1794 Franz Anton Maulbertsch.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Betreten dürfen Sie die Säle mit dem normalen Ticket nicht. Sie schauen von der Tür aus hinein, hinter einer Absperrung. Wer zwischen den Regalen stehen will, braucht eine private Führung, die Sie Monate im Voraus per E-Mail anfragen müssen. Zum Fotografieren kaufen Sie an der Kasse eine Fotoerlaubnis und bekommen einen Aufkleber, nach dem das Personal tatsächlich fragt. Übersehen Sie nicht die Wunderkammer im Gang zwischen den Sälen, mit einem Narwalzahn und den Überresten eines Dodos.</p>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Ein Weitwinkel lohnt sich: Von der Absperrung aus bekommen Sie das Deckenfresko im Philosophischen Saal nur mit kurzer Brennweite ganz aufs Bild. Kein Blitz.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Beste Zeit</div><div style="flex:1 1 280px;min-width:0">Gleich zur Öffnung um 9 Uhr, bevor die Gruppen kommen. Geöffnet ist täglich bis 17 Uhr.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Tram 22 oder 23 bis Pohořelec, dann wenige Minuten leicht bergab.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Danach</div><div style="flex:1 1 280px;min-width:0">Im Klosterhof braut die Klosterbrauerei Strahov ihr eigenes Bier. Vom Garten unterhalb des Klosters sehen Sie über die ganze Stadt.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-2" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 2</span><span style="font-size:15px;font-weight:500;color:#5C5650">Prager Burg · täglich 13 Uhr</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Lobkowicz-Palast: ein Mittagskonzert im einzigen Privatpalast der Burg</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Im Areal der Prager Burg gehört genau ein Gebäude einer Privatfamilie: der Lobkowicz-Palast am östlichen Ende. 1939 beschlagnahmten ihn die Nationalsozialisten, 1948 enteigneten die Kommunisten die Familie, nach 1989 bekam sie ihn zurück. Heute zeigt sie dort in 22 Räumen ihre Sammlung. Darunter ist die „Heuernte“ von Pieter Bruegel dem Älteren aus dem Jahr 1565, eines von fünf erhaltenen Bildern seines Monatszyklus.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Fürst Joseph Franz Maximilian Lobkowicz war einer der wichtigsten Förderer Beethovens. Ihm sind die Eroica, die Fünfte und die Sechste Sinfonie gewidmet, außerdem Haydns Lobkowitz-Quartette. In den Vitrinen liegen Noten mit Anmerkungen von Beethovens Hand und Mozarts Bearbeitung von Händels „Messias“. Jeden Tag um 13 Uhr spielen Musiker, darunter Mitglieder der Tschechischen Philharmonie, eine Stunde lang im barocken Konzertsaal des Palastes, mit Werken von Vivaldi, Mozart, Beethoven und Dvořák.</p>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Vom Balkon des Palastcafés sehen Sie über die Dächer der Kleinseite. Im Konzert bleibt die Kamera aus.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Ablauf</div><div style="flex:1 1 280px;min-width:0">Kommen Sie gegen 11 Uhr, sehen Sie die Sammlung mit dem Audioguide und gehen Sie um 13 Uhr ins Konzert. Es gibt Kombikarten für beides.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Reservieren</div><div style="flex:1 1 280px;min-width:0">Der Saal ist klein. Buchen Sie die Konzertkarten vorab.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Tram 22 oder 23 bis Pražský hrad, dann quer durch das Burgareal, etwa 15 Minuten.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-3" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 3</span><span style="font-size:15px;font-weight:500;color:#5C5650">Neustadt · eröffnet 1888</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Staatsoper: Rot, Gold und Wiener Theaterarchitekten</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Die Staatsoper wurde 1886 bis 1888 als Neues Deutsches Theater gebaut. Die deutschsprachigen Prager wollten ein Haus, das sich neben dem tschechischen Nationaltheater sehen lassen konnte, und beauftragten das Wiener Büro Fellner &amp; Helmer, das in ganz Mitteleuropa Theater baute, auch das Opernhaus Zürich. Eröffnet wurde am 5. Januar 1888 mit Wagners „Meistersingern von Nürnberg“.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Nach 1945 hieß das Haus Smetana-Theater, heute gehört es zum Nationaltheater. Nach einer mehrjährigen Sanierung öffnete es am 5. Januar 2020 wieder, auf den Tag 132 Jahre nach der ersten Vorstellung. Seitdem leuchten Zuschauerraum und Foyers wieder in Rot und Gold.</p>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Fotografieren Sie den Saal vor Beginn und in der Pause. Während der Vorstellung ist es verboten.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Garderobe</div><div style="flex:1 1 280px;min-width:0">Ein dunkler Anzug oder ein Kleid sind üblich, aber keine Pflicht. Mäntel geben Sie an der Garderobe ab.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Reservieren</div><div style="flex:1 1 280px;min-width:0">Karten über das Nationaltheater. Vorstellungen im Advent und zum Jahreswechsel sind früh ausverkauft.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Metro A oder C bis Muzeum, von dort zwei Minuten zu Fuß.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-4" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 4</span><span style="font-size:15px;font-weight:500;color:#5C5650">Altstadt · 29. Oktober 1787</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Ständetheater: Don Giovanni dort, wo Mozart ihn dirigierte</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Am 29. Oktober 1787 dirigierte Mozart im Ständetheater die Uraufführung des Don Giovanni. Das Haus war damals vier Jahre alt, gebaut von Graf Franz Anton Nostitz-Rieneck, und es ist das einzige erhaltene Theater, in dem Mozart selbst eine Uraufführung geleitet hat. Don Giovanni steht dort bis heute auf dem Spielplan. Wer ihn in diesem Saal sieht, sitzt im selben Raum wie das Premierenpublikum vor fast 240 Jahren.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Vielleicht kennen Sie den Saal aus dem Kino: Miloš Forman drehte hier die Opernszenen für „Amadeus“, der 1984 herauskam.</p>
+      <div style="margin:8px 0 0;padding:18px 22px 20px;background:#F6F4EF;border-top:3px solid #11457E">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:14px;font-weight:700;color:#1A1714">Mythos im Faktencheck</span><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#11457E;border:1.5px solid #11457E;border-radius:3px;padding:2px 8px">Plausibel</span></div>
+        <p style="margin:10px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-style:italic;line-height:1.35;color:#1A1714">„Mozart schrieb die Ouvertüre erst in der Nacht vor der Premiere.“</p>
+        <p style="margin:10px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#1A1714;text-wrap:pretty">Die Geschichte geht auf Erzählungen seiner Witwe Constanze zurück: Mozart habe die Ouvertüre in der Nacht vor der Uraufführung geschrieben, sie habe ihn mit Punsch und Geschichten wach gehalten, und das Orchester habe sie am Abend vom Blatt gespielt. Beweisen lässt sich das nicht. Mozart trug die Oper aber am 28. Oktober 1787 in sein eigenhändiges Werkverzeichnis ein, einen Tag vor der Premiere. Dass die Ouvertüre als Letztes fertig wurde, gilt deshalb als gut möglich.</p>
+      </div>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Vor dem Eingang steht „Il Commendatore“ von Anna Chromý, ein leerer Mantel aus Bronze. Abends beleuchtet ist er das bessere Motiv, denn im Saal ist Fotografieren während der Vorstellung verboten.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Reservieren</div><div style="flex:1 1 280px;min-width:0">Don Giovanni wird nicht jeden Abend gespielt. Schauen Sie früh in den Spielplan des Nationaltheaters.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Metro A oder B bis Můstek, dann drei Minuten zu Fuß.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-5" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 5</span><span style="font-size:15px;font-weight:500;color:#5C5650">Altstadt · eröffnet 1885</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Rudolfinum: der Saal, in dem Dvořák dirigierte</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Das Rudolfinum am Moldauufer wurde 1885 eröffnet und nach Kronprinz Rudolf benannt. Gebaut haben es Josef Zítek und Josef Schulz, als Haus für Musik und Kunst. Am 4. Januar 1896 dirigierte Antonín Dvořák hier das erste Konzert der Tschechischen Philharmonie. Der große Saal trägt heute seinen Namen, und das Orchester spielt bis heute in diesem Haus.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Zwischen 1919 und 1939 tagte im Rudolfinum das Abgeordnetenhaus der Tschechoslowakei. Auf der Brüstung des Dachs stehen Statuen von Komponisten, und um eine davon dreht sich eine Geschichte, die man Ihnen in Prag bestimmt erzählt.</p>
+      <div style="margin:8px 0 0;padding:18px 22px 20px;background:#F6F4EF;border-top:3px solid #5C5650">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:14px;font-weight:700;color:#1A1714">Mythos im Faktencheck</span><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#5C5650;border:1.5px solid #5C5650;border-radius:3px;padding:2px 8px">Roman</span></div>
+        <p style="margin:10px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-style:italic;line-height:1.35;color:#1A1714">„Die Besatzer ließen Mendelssohn vom Dach holen und erwischten fast Wagner.“</p>
+        <p style="margin:10px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#1A1714;text-wrap:pretty">Die Geschichte geht so: Im besetzten Prag sollte die Statue des jüdischen Komponisten Felix Mendelssohn Bartholdy vom Dach des Rudolfinums verschwinden. Die Arbeiter wussten nicht, welche Figur er war, und hielten sich an die größte Nase. Sie gehörte Richard Wagner. Die Szene stammt aus dem Roman „Mendelssohn ist auf dem Dach“ von Jiří Weil, der die Besatzung als Jude im Versteck überlebte. Das Buch erschien 1960, ein Jahr nach seinem Tod. Dass es sich genau so zugetragen hat, ist nicht belegt.</p>
+      </div>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Gehen Sie nach dem Konzert auf die Mánes-Brücke. Von dort sehen Sie die beleuchtete Burg über der Kleinseite.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Reservieren</div><div style="flex:1 1 280px;min-width:0">Karten bei der Tschechischen Philharmonie. Für Konzerte im Advent früh buchen.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Metro A bis Staroměstská, der Ausgang liegt direkt am Rudolfinum.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-6" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 6</span><span style="font-size:15px;font-weight:500;color:#5C5650">Altstadt und Vinohrady · im Advent</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Weihnachtsmärkte: der Altstädter Ring von oben, der Friedensplatz von unten</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Der bekannteste Weihnachtsmarkt steht auf dem Altstädter Ring, mit einem großen Baum vor der Teynkirche. Er öffnet Ende November und bleibt bis Anfang Januar. Tagsüber ist er voll, und an den Ständen kaufen vor allem Touristen. Prager gehen lieber auf den Markt am Náměstí Míru, dem Friedensplatz in Vinohrady, vor der neugotischen Ludmilakirche. Er ist kleiner, und Sie hören dort mehr Tschechisch als Englisch.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Am Abend lohnt sich der Weg in eine Kirche. Im Advent und zwischen den Feiertagen wird in vielen Prager Kirchen die Böhmische Hirtenmesse gesungen, die der Lehrer Jakub Jan Ryba 1796 komponierte. Sie beginnt mit „Hej, mistře“, und den Anfang kennen die meisten Tschechen auswendig. Am 5. Dezember ziehen abends Nikolaus, Engel und Teufel durch die Altstadt und fragen die Kinder, ob sie brav waren.</p>
+      <div style="margin:8px 0 0;padding:18px 22px 20px;background:#F6F4EF;border-top:3px solid #6B1F2A">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:14px;font-weight:700;color:#1A1714">Mythos im Faktencheck</span><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B1F2A;border:1.5px solid #6B1F2A;border-radius:3px;padding:2px 8px">Falsch</span></div>
+        <p style="margin:10px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-style:italic;line-height:1.35;color:#1A1714">„Trdelník ist eine alte Prager Spezialität.“</p>
+        <p style="margin:10px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#1A1714;text-wrap:pretty">Den Teig um eine Metallstange gewickelt, über Glut gebacken und in Zucker und Nüssen gewälzt: Trdelník gibt es an jedem Prager Markt, oft als traditionelles böhmisches Gebäck angeschrieben. In Prag verkauft man ihn in dieser Menge aber erst seit etwa zwanzig Jahren. Bekannt ist er aus Skalica in der Westslowakei, wo der Skalický trdelník als regionale Spezialität unter dem Schutz der EU steht. Ähnliches Gebäck vom Spieß kennt man in Ungarn und Siebenbürgen als Kürtőskalács.</p>
+      </div>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Die Galerie des Altstädter Rathausturms, eine halbe Stunde nach Sonnenuntergang. Ein Aufzug fährt bis oben.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Beste Zeit</div><div style="flex:1 1 280px;min-width:0">Die blaue Stunde liegt im Dezember etwa zwischen 16 und 16:45 Uhr.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Altstädter Ring: Metro A bis Staroměstská. Náměstí Míru: Metro A bis zur gleichnamigen Station.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Gut zu wissen</div><div style="flex:1 1 280px;min-width:0">Die Rolltreppe der Station Náměstí Míru ist mit 87 Metern die längste in der EU.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-7" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 7</span><span style="font-size:15px;font-weight:500;color:#5C5650">Altstadt · Michelin-Stern seit 2012</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">La Degustation: ein Sternemenü nach einem Kochbuch von 1894</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">1894 erschien die „Kuchařská škola“ von Marie B. Svobodová, eine Kochschule der bürgerlichen Küche Böhmens zur Zeit der Monarchie, am Ende über 900 Seiten stark. Als Oldřich Sahajdák und sein Team das La Degustation Bohême Bourgeoise in der Haštalská-Straße eröffneten, legte er dieses Buch auf den Tisch: Danach werde hier gekocht. Dabei ist es geblieben, mit heutigen Techniken und Zutaten aus der Region. 2012 bekam das Restaurant einen Michelin-Stern.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Gekocht wird in einer offenen Küche, und es gibt Menüs unterschiedlicher Länge. Wer es lockerer mag, geht zur Schwester Marie B in der Dlouhá-Straße. Dort gibt es keine Karte, die Küche entscheidet über vier Gänge, die Weinkarte setzt auf Mähren, und das Kochbuch von 1894 liegt in einer Vitrine neben der Theke.</p>
+      <div style="margin:8px 0 0;padding:18px 22px 20px;background:#F6F4EF;border-top:3px solid #6B1F2A">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:14px;font-weight:700;color:#1A1714">Mythos im Faktencheck</span><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B1F2A;border:1.5px solid #6B1F2A;border-radius:3px;padding:2px 8px">Falsch</span></div>
+        <p style="margin:10px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-style:italic;line-height:1.35;color:#1A1714">„Böhmische Küche, das sind Knödel und Schweinebraten.“</p>
+        <p style="margin:10px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#1A1714;text-wrap:pretty">Knödel und Schweinebraten gibt es, aber die Küche, die Svobodová 1894 beschrieb, war eine bürgerliche Küche nach Wiener und französischem Vorbild. In ihrem Buch stehen Rezepte für Schildkrötensuppe und gebackene Wassermelone, und ein ganzer Abschnitt erklärt, wie man in der Küche nichts wegwirft. Manches, was heute als Wiener Küche gilt, etwa Buchteln oder Powidltascherl, kam aus Böhmen nach Wien.</p>
+      </div>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Fotografieren Sie die Teller ohne Blitz. An der offenen Küche sehen Sie, wie angerichtet wird.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Reservieren</div><div style="flex:1 1 280px;min-width:0">Mehrere Wochen im Voraus, für Abende im Advent noch früher. Sagen Sie bei der Reservierung, was Sie nicht essen.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Lage</div><div style="flex:1 1 280px;min-width:0">Haštalská 18, fünf Minuten zu Fuß vom Altstädter Ring.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-8" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 8</span><span style="font-size:15px;font-weight:500;color:#5C5650">Altstadt · eröffnet 1912</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Gemeindehaus: Jugendstil von der Kaffeetasse bis zur Decke</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Das Gemeindehaus, tschechisch Obecní dům, wurde 1912 neben dem Pulverturm eröffnet, dort, wo im Mittelalter der Königshof der böhmischen Herrscher stand. Die Stadt baute es als Haus für Konzerte, Bälle und Vereine, und fast alle bekannten tschechischen Künstler der Zeit arbeiteten daran mit. Den Bürgermeistersaal malte Alfons Mucha aus. Am 28. Oktober 1918 wurde hier die Unabhängigkeit der Tschechoslowakei ausgerufen.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Im großen Smetana-Saal spielen die Prager Symphoniker. Die übrigen Säle sehen Sie bei einer Führung durch das Haus. Im Erdgeschoss liegt das Kaffeehaus, ein hoher Jugendstilsaal mit großen Kronleuchtern, der beste Ort für einen grauen Nachmittag.</p>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Das Kaffeehaus am Vormittag unter der Woche, wenn noch wenige Gäste da sind. Draußen das Mosaik „Huldigung an Prag“ über dem Eingang, am schönsten zur blauen Stunde.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Führungen</div><div style="flex:1 1 280px;min-width:0">Die Säle sehen Sie nur mit Führung. Termine und Karten gibt es im Haus.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Metro B bis Náměstí Republiky, der Ausgang liegt direkt am Haus.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-9" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 9</span><span style="font-size:15px;font-weight:500;color:#5C5650">Kleinseite · Kloster aus dem 14. Jahrhundert</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Spa im Mandarin Oriental: Massage über einer gotischen Kirche</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Das Mandarin Oriental auf der Kleinseite liegt in einem ehemaligen Dominikanerkloster aus dem 14. Jahrhundert. Sein Spa ist in der früheren Renaissancekapelle untergebracht. Beim Umbau kamen darunter die Fundamente einer noch älteren gotischen Kirche zum Vorschein. Sie liegen heute unter einem Glasboden, über den Sie zur Behandlung gehen, und ein unterirdischer Gang mit Vitrinen voller Funde aus der Grabung verbindet das Spa mit dem Hotel.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Behandlungen können Sie auch buchen, wenn Sie nicht im Hotel wohnen. Ich empfehle einen Termin am späten Nachmittag: Danach ist es dunkel, und Sie gehen durch die beleuchtete Kleinseite zum Abendessen.</p>
+      <div style="margin:8px 0 0;padding:18px 22px 20px;background:#F6F4EF;border-top:3px solid #6B1F2A">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:14px;font-weight:700;color:#1A1714">Mythos im Faktencheck</span><span style="font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#6B1F2A;border:1.5px solid #6B1F2A;border-radius:3px;padding:2px 8px">Falsch</span></div>
+        <p style="margin:10px 0 0;font-family:'Newsreader',Georgia,serif;font-size:22px;font-style:italic;line-height:1.35;color:#1A1714">„Bierbäder sind eine alte böhmische Kurtradition.“</p>
+        <p style="margin:10px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:17px;line-height:1.55;color:#1A1714;text-wrap:pretty">Ein Bad in Bier, Hopfen und Malz wird in Prag an vielen Ecken angeboten, gern als jahrhundertealte Tradition. Bierbäder gibt es in Tschechien aber erst seit den 2000er-Jahren. Mit der Kurtradition des Landes haben sie nichts zu tun: In Karlsbad und Marienbad trinkt man das Wasser der Quellen und badet in Mineralwasser, Kohlensäure und Moor.</p>
+      </div>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Im Spa nur nach Absprache. Wenige Minuten entfernt liegt die Insel Kampa, abends mit Blick auf die beleuchtete Karlsbrücke.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Reservieren</div><div style="flex:1 1 280px;min-width:0">Behandlungen vorab buchen, auch ohne Übernachtung.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Lage</div><div style="flex:1 1 280px;min-width:0">Nebovidská 1, Kleinseite. Tram bis Hellichova, dann drei Minuten zu Fuß.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <section id="e-10" style="padding-top:48px;scroll-margin-top:72px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding-bottom:10px;border-bottom:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif"><span style="font-size:16px;font-weight:700;color:#6B1F2A">Nr. 10</span><span style="font-size:15px;font-weight:500;color:#5C5650">Westböhmen · rund zwei Stunden von Prag</span></div>
+      <h2 style="margin:16px 0 14px;font-family:'Newsreader',Georgia,serif;font-size:clamp(1.75rem,3.2vw,2.25rem);font-weight:600;line-height:1.16;letter-spacing:-0.01em;color:#1A1714;text-wrap:balance">Karlsbad: Kolonnaden im Winterlicht</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Seit 2021 gehört Karlsbad zum UNESCO-Welterbe der „Bedeutenden Kurstädte Europas“, zusammen mit Marienbad und Franzensbad, Baden-Baden, Baden bei Wien und sechs weiteren Kurorten. Die Mühlbrunnkolonnade an der Teplá entwarf Josef Zítek, der Architekt des <a href="#e-5" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Rudolfinums</a>. Unter ihren Säulen sprudeln mehrere Quellen, jede mit eigener Temperatur. Die heißeste der Stadt, der Sprudel, kommt mit über 70 Grad aus der Erde.</p>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Getrunken wird aus dem Kurbecher, einem Porzellanbecher, dessen Henkel zugleich Trinkhalm ist. Dazu gehören die Karlsbader Oblaten und die Becherovka, ein Kräuterlikör, der seit 1807 in Karlsbad hergestellt wird. Am Ende der Kurzone liegt das Grandhotel Pupp. 2006 spielte es in „Casino Royale“ das Hotel Splendide in Montenegro.</p>
+      <sc-if value="{{ showPractical }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:22px;border-top:1px solid #E4DFD6;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Fotomoment</div><div style="flex:1 1 280px;min-width:0">Die Mühlbrunnkolonnade am Vormittag. An kalten Tagen dampft das Quellwasser in der Luft.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Anfahrt</div><div style="flex:1 1 280px;min-width:0">Mit Auto oder Fernbus rund zwei Stunden, mit dem Zug länger. Für einen Tag reicht das gut.</div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 8.5rem;font-weight:700">Gut zu wissen</div><div style="flex:1 1 280px;min-width:0">Den Kurbecher kaufen Sie an den Ständen bei den Kolonnaden. Trinken Sie langsam, das Wasser ist warm und stark mineralisch.</div></div>
+        </div>
+      </sc-if>
+    </section>
+
+    <h2 id="fotoplan" style="margin:2.4em 0 0.4em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:24px;font-weight:700;line-height:1.25;color:#1A1714;scroll-margin-top:80px">Ein Wintertag mit der Kamera</h2>
+    <p style="margin:0 0 0.6em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.5;color:#5C5650">Ein Vorschlag für einen Tag im Dezember, geplant nach dem Licht.</p>
+    <div style="margin:0.6em 0 2em;border-top:2px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">
+      <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 4.5rem;font-weight:700;font-variant-numeric:tabular-nums">8:00</div><div style="flex:1 1 280px;min-width:0">Sonnenaufgang auf der Karlsbrücke. Im Dezember geht die Sonne erst gegen acht auf, und die Brücke ist fast leer.</div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 4.5rem;font-weight:700;font-variant-numeric:tabular-nums">9:00</div><div style="flex:1 1 280px;min-width:0">Mit der Tram 22 hinauf zur <a href="#e-1" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Strahov-Bibliothek</a>, pünktlich zur Öffnung.</div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 4.5rem;font-weight:700;font-variant-numeric:tabular-nums">11:00</div><div style="flex:1 1 280px;min-width:0">Sammlung im <a href="#e-2" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Lobkowicz-Palast</a>, um 13 Uhr das Konzert.</div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 4.5rem;font-weight:700;font-variant-numeric:tabular-nums">14:30</div><div style="flex:1 1 280px;min-width:0">Kaffee im <a href="#e-8" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Gemeindehaus</a> oder eine Behandlung im <a href="#e-9" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Spa</a>.</div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 4.5rem;font-weight:700;font-variant-numeric:tabular-nums">16:00</div><div style="flex:1 1 280px;min-width:0">Blaue Stunde auf der Galerie des Altstädter Rathausturms, unter Ihnen der <a href="#e-6" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Weihnachtsmarkt</a>.</div></div>
+      <div style="display:flex;flex-wrap:wrap;gap:2px 16px;padding:10px 0;border-bottom:1px solid #E4DFD6"><div style="flex:0 0 4.5rem;font-weight:700;font-variant-numeric:tabular-nums">19:00</div><div style="flex:1 1 280px;min-width:0">Oper oder Konzert. Das <a href="#e-7" style="color:#11457E;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px">Sternemenü</a> heben Sie sich für den nächsten Abend auf.</div></div>
+    </div>
+
+    <h2 id="praktisch" style="margin:2.4em 0 0.4em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:24px;font-weight:700;line-height:1.25;color:#1A1714;scroll-margin-top:80px">Praktische Hinweise für den Winter</h2>
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Prag ist im Winter feucht, und es wird früh dunkel. Diese Hinweise gebe ich allen Gästen, die zwischen November und Februar kommen.</p>
+    <ol style="margin:0 0 1.1em;padding:0 0 0 1.4em">
+      <li style="margin-bottom:0.8em;padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Früh reservieren.</strong> Oper, Philharmonie, das Konzert im Lobkowicz-Palast und das Sternerestaurant sind im Advent früh ausgebucht. Buchen Sie, sobald Ihre Daten feststehen.</li>
+      <li style="margin-bottom:0.8em;padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Schuhe mit Profil.</strong> Kopfsteinpflaster ist bei Nässe und Frost glatt. Feste Schuhe mit Profil gehören ins Gepäck, eine Mütze auch.</li>
+      <li style="margin-bottom:0.8em;padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Akkus warm halten.</strong> Bei Minusgraden halten Handy- und Kameraakkus kürzer. Tragen Sie einen Ersatzakku in der Innentasche.</li>
+      <li style="margin-bottom:0.8em;padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Fotoregeln.</strong> In Sälen und Kirchen gilt fast überall: kein Blitz, kein Stativ. Während Gottesdiensten fotografieren Sie gar nicht.</li>
+      <li style="margin-bottom:0.8em;padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Heiligabend.</strong> Am 24. Dezember schließen größere Geschäfte mittags, und viele Restaurants haben abends zu. Reservieren Sie für diesen Abend früh.</li>
+      <li style="margin-bottom:0.8em;padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Kronen, nicht Euro.</strong> Bezahlt wird in Kronen. Karten werden fast überall akzeptiert, auch kontaktlos per Handy. Euro nehmen manche Geschäfte, aber zu schlechtem Kurs.</li>
+      <li style="padding-left:4px;text-wrap:pretty"><strong style="font-weight:600">Taxi per App.</strong> Bestellen Sie Taxis per App, statt sie an der Straße anzuhalten. Dann steht der Preis vorher fest.</li>
+    </ol>
+    <div style="margin:1.6em 0 2em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.45;color:#1A1714">
+      <div style="padding-bottom:8px;border-bottom:2px solid #1A1714;font-size:15px;font-weight:700">Wintertermine 2026/27</div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>1. Advent</span><span style="font-weight:600">Sonntag, 29. November 2026</span></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>Nikolausabend</span><span style="font-weight:600">Samstag, 5. Dezember</span></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>4. Advent</span><span style="font-weight:600">Sonntag, 20. Dezember</span></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>Heiligabend</span><span style="font-weight:600">Donnerstag, 24. Dezember</span></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>Feiertage</span><span style="font-weight:600">25. und 26. Dezember, 1. Januar</span></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>Dreikönigstag</span><span style="font-weight:600">Mittwoch, 6. Januar 2027</span></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:9px 0;border-bottom:1px solid #E4DFD6"><span>Sonnenuntergang</span><span style="font-weight:600">Mitte Dezember gegen 16 Uhr</span></div>
+      <div style="margin-top:8px;font-size:14px;color:#5C5650">Die Weihnachtsmärkte öffnen Ende November und schließen Anfang Januar. Die genauen Termine stehen jeweils im Herbst fest.</div>
+    </div>
+
+    <h2 id="fragen" style="margin:2.4em 0 0.4em;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:24px;font-weight:700;line-height:1.25;color:#1A1714;scroll-margin-top:80px">Häufige Fragen</h2>
+    <div style="margin-top:0.6em;border-top:2px solid #1A1714">
+      <div style="padding:16px 0;border-bottom:1px solid #E4DFD6"><h3 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;font-weight:700;line-height:1.35;color:#1A1714">Wann ist in Prag im Winter das beste Licht zum Fotografieren?</h3><p style="margin:8px 0 0;text-wrap:pretty">Im Dezember geht die Sonne gegen 8 Uhr auf und kurz vor 16 Uhr unter. Die blaue Stunde liegt etwa zwischen 16 und 16:45 Uhr. Für Aufnahmen ohne Menschen kommen Sie zwischen 8 und 9 Uhr auf die Karlsbrücke.</p></div>
+      <div style="padding:16px 0;border-bottom:1px solid #E4DFD6"><h3 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;font-weight:700;line-height:1.35;color:#1A1714">Darf man in der Strahov-Bibliothek fotografieren?</h3><p style="margin:8px 0 0;text-wrap:pretty">Ja, mit einer Fotoerlaubnis, die Sie an der Kasse kaufen. Die Säle sehen Sie mit dem normalen Ticket nur von der Tür aus. Hinein kommen Sie nur mit einer privaten Führung, die Sie Monate im Voraus anfragen.</p></div>
+      <div style="padding:16px 0;border-bottom:1px solid #E4DFD6"><h3 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;font-weight:700;line-height:1.35;color:#1A1714">Muss man in Prager Sternerestaurants lange im Voraus reservieren?</h3><p style="margin:8px 0 0;text-wrap:pretty">Für Abende im Advent ja, mehrere Wochen. Unter der Woche im Januar und Februar bekommen Sie leichter einen Tisch.</p></div>
+      <div style="padding:16px 0;border-bottom:1px solid #E4DFD6"><h3 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;font-weight:700;line-height:1.35;color:#1A1714">Lohnt sich Karlsbad als Tagesausflug im Winter?</h3><p style="margin:8px 0 0;text-wrap:pretty">Ja. Die Fahrt dauert mit Auto oder Fernbus rund zwei Stunden, die Kolonnaden liegen nah beieinander, und an kalten Tagen dampfen die Quellen.</p></div>
+      <div style="padding:16px 0;border-bottom:1px solid #E4DFD6"><h3 style="margin:0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;font-weight:700;line-height:1.35;color:#1A1714">Gibt es in Prag private Führungen auf Deutsch?</h3><p style="margin:8px 0 0;text-wrap:pretty">Ja. Ich führe privat und auf Deutsch und plane die Route nach Ihren Wünschen, auf Wunsch auch nach dem Licht für Ihre Fotos.</p></div>
+    </div>
+
+      <p style="margin:0 0 1.1em;text-wrap:pretty">Wenn Sie diese Erlebnisse lieber mit jemandem verbinden, der die Wege und die Geschichten kennt: Auf einer privaten Führung lege ich die Route so, dass Sie zur blauen Stunde am richtigen Ort stehen, und erzähle unterwegs, was auf keinem Foto zu sehen ist.</p>
+
+    <aside style="margin:2em 0 0;padding:22px;background:#F6F4EF;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+      <div style="flex:1 1 300px;min-width:0">
+        <div style="font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:700;color:#1A1714">Prag im Winter mit Zuzana</div>
+        <p style="margin:6px 0 0;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.5;color:#1A1714">Private Führungen auf Deutsch, geplant nach Ihren Terminen und nach dem besten Licht. Unverbindlich anfragen oder direkt anrufen: <a href="tel:+420721231933" style="color:#1A1714;font-weight:600;text-decoration:underline;text-underline-offset:3px">+420 721 231 933</a></p>
+      </div>
+      <a href="/book#contact-title" style="flex-shrink:0;background:#6B1F2A;color:#FFFFFF;padding:12px 20px;border-radius:4px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;font-weight:600" style-hover="background:#4F1620;color:#FFFFFF">Private Tour anfragen</a>
+    </aside>
+
+    <section style="margin-top:56px;padding-top:14px;border-top:3px solid #1A1714;font-family:'Hanken Grotesk',system-ui,sans-serif">
+      <h2 style="margin:0;font-size:20px;font-weight:700;color:#1A1714">Quellen</h2>
+      <ol style="margin:14px 0 0;padding:0 0 0 1.4em;font-size:15px;line-height:1.55;color:#2F2A26">
+        <li style="margin-bottom:6px">Strahovský klášter: <a href="https://www.strahovskyklaster.cz/" style="text-decoration:underline;text-underline-offset:3px">Website des Klosters Strahov</a>; Eurolandmarks: <a href="https://eurolandmarks.com/attractions/czech-republic/prague/strahov-monastery-library" style="text-decoration:underline;text-underline-offset:3px">Strahov Monastery Library: Tickets &amp; Opening Hours 2026</a></li>
+        <li style="margin-bottom:6px">Lobkowicz Collections: <a href="https://www.lobkowicz.cz/" style="text-decoration:underline;text-underline-offset:3px">Lobkowicz-Palast</a>; Prague Classical Concerts: <a href="https://pragueclassicalconcerts.com/en/detail/pearls-lobkowicz" style="text-decoration:underline;text-underline-offset:3px">Pearls of Classical Music – Lobkowicz Palace</a>; Wikipedia: <a href="https://en.wikipedia.org/wiki/The_Hay_Harvest" style="text-decoration:underline;text-underline-offset:3px">The Hay Harvest</a></li>
+        <li style="margin-bottom:6px">Národní divadlo: <a href="https://www.narodni-divadlo.cz/" style="text-decoration:underline;text-underline-offset:3px">Nationaltheater, Staatsoper und Ständetheater</a>; Wikipedia: <a href="https://en.wikipedia.org/wiki/Prague_State_Opera" style="text-decoration:underline;text-underline-offset:3px">Prague State Opera</a>, <a href="https://de.wikipedia.org/wiki/Fellner_%26_Helmer" style="text-decoration:underline;text-underline-offset:3px">Fellner &amp; Helmer</a></li>
+        <li style="margin-bottom:6px">Prague City Tourism: <a href="https://prague.eu/en/objevujte/estates-theatre-stavovske-divadlo/" style="text-decoration:underline;text-underline-offset:3px">Estates Theatre</a>; Wikipedia: <a href="https://en.wikipedia.org/wiki/Mozart_and_Prague" style="text-decoration:underline;text-underline-offset:3px">Mozart and Prague</a></li>
+        <li style="margin-bottom:6px">Česká filharmonie: <a href="https://www.ceskafilharmonie.cz/" style="text-decoration:underline;text-underline-offset:3px">Tschechische Philharmonie</a>; Wikipedia: <a href="https://en.wikipedia.org/wiki/Rudolfinum" style="text-decoration:underline;text-underline-offset:3px">Rudolfinum</a>, <a href="https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD_Weil" style="text-decoration:underline;text-underline-offset:3px">Jiří Weil</a></li>
+        <li style="margin-bottom:6px">Wikipedia: <a href="https://en.wikipedia.org/wiki/Czech_Christmas_Mass" style="text-decoration:underline;text-underline-offset:3px">Czech Christmas Mass (Jakub Jan Ryba)</a>; <a href="https://en.wikipedia.org/wiki/Trdeln%C3%ADk" style="text-decoration:underline;text-underline-offset:3px">Trdelník</a></li>
+        <li style="margin-bottom:6px"><a href="https://www.ladegustation.cz" style="text-decoration:underline;text-underline-offset:3px">La Degustation Bohême Bourgeoise</a>; Czech Bites: <a href="https://www.czechbites.com/articles/the-book-documenting-michelin-restaurant-la-degustation-boheme-bourgeoise" style="text-decoration:underline;text-underline-offset:3px">The book documenting Michelin restaurant La Degustation</a>; Expats.cz: <a href="https://www.expats.cz/czech-news/article/restaurant-named-for-cookbook-pioneer-opens-in-prague" style="text-decoration:underline;text-underline-offset:3px">Restaurant named for cookbook pioneer opens in Prague</a></li>
+        <li style="margin-bottom:6px">Obecní dům: <a href="https://www.obecnidum.cz/" style="text-decoration:underline;text-underline-offset:3px">Gemeindehaus Prag</a></li>
+        <li style="margin-bottom:6px">VisitCzechia: <a href="https://www.visitczechia.com/en-us/things-to-do/places/accommodation/hotels/g-prague-mandarin-oriental-hotel" style="text-decoration:underline;text-underline-offset:3px">Mandarin Oriental Hotel in Prague</a></li>
+        <li style="margin-bottom:6px">UNESCO: <a href="https://whc.unesco.org/en/list/1613" style="text-decoration:underline;text-underline-offset:3px">The Great Spa Towns of Europe</a>; Stadt Karlsbad: <a href="https://www.karlovyvary.cz/" style="text-decoration:underline;text-underline-offset:3px">karlovyvary.cz</a></li>
+        <li>timeanddate.com: <a href="https://www.timeanddate.com/sun/czech-republic/prague" style="text-decoration:underline;text-underline-offset:3px">Sonnenauf- und -untergang in Prag</a></li>
+      </ol>
+    </section>
+  </div>
+</article>
+</main>
+
+<footer style="margin-top:72px;background:#F6F4EF;border-top:1px solid #E4DFD6">
+  <div style="margin:0 auto;max-width:1160px;padding:36px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.6;color:#1A1714">
+    <div style="flex:1 1 260px">
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:600">Zuza &amp; Pragtour</div>
+      <div style="margin-top:6px;color:#5C5650">Private Stadtführungen auf Deutsch, in Prag.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="tel:+420721231933" style="color:#1A1714;font-weight:600">+420 721 231 933</a>
+      <a href="mailto:zuzanamanova@email.cz" style="color:#1A1714">zuzanamanova@email.cz</a>
+      <a href="https://wa.me/420721231933" style="color:#1A1714">WhatsApp</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="/tours" style="color:#1A1714">Touren</a>
+      <a href="Blog Journal v4.dc.html" style="color:#1A1714">Journal</a>
+      <a href="/book#contact-title" style="color:#1A1714">Tour buchen</a>
+      <a href="/bewerten" style="color:#1A1714">Tour bewerten</a>
+    </div>
+  </div>
+  <div style="margin:0 auto;max-width:1160px;padding:14px 20px 24px;border-top:1px solid #E4DFD6;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:13px;color:#5C5650">
+    <span>© 2026 Zuza Prague Tours – Zuzana Manová</span>
+    <span style="display:flex;gap:16px"><a href="/privacy" style="color:#5C5650">Datenschutz</a><a href="/terms" style="color:#5C5650">AGB</a></span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showOverview&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Artikel&quot;},&quot;showPractical&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Artikel&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showOverview: this.props.showOverview ?? true,
+      showPractical: this.props.showPractical ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

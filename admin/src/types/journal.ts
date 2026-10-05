@@ -48,8 +48,9 @@ export interface OverviewItem {
 
 export type Block =
   | { t: 'p'; html: Localized; lead?: boolean }
-  /** `id` = optional in-page anchor (e.g. 'praktisch'); otherwise heading-N is assigned. */
-  | { t: 'h2'; html: Localized; id?: string }
+  /** `id` = optional in-page anchor (e.g. 'praktisch'); otherwise heading-N is assigned.
+   *  `sub` = optional grey subline under the heading. */
+  | { t: 'h2'; html: Localized; id?: string; sub?: Localized }
   | { t: 'quote'; html: Localized; by?: string }
   | { t: 'callout'; label?: Localized; html: Localized; list?: Localized[] }
   | {
@@ -69,8 +70,11 @@ export type Block =
     }
   | { t: 'costTable'; title?: Localized; rows: { k: Localized; v: Localized }[]; note?: Localized }
   | { t: 'list'; ordered?: boolean; items: Localized[] }
-  /** Key/value rows (e.g. Anfahrt, Eintritt). Header row only when `title` is set. */
-  | { t: 'facts'; title?: Localized; items: { k: Localized; v: Localized }[] }
+  /** Key/value rows (e.g. Anfahrt, Eintritt); values may contain links. Header row
+   *  only when `title` is set. 'schedule' = time plan (narrow time column, ink rule). */
+  | { t: 'facts'; title?: Localized; items: { k: Localized; v: Localized }[]; variant?: 'schedule' }
+  /** Questions and answers; also emitted as FAQPage structured data. */
+  | { t: 'faq'; items: { q: Localized; a: Localized }[] }
   /** Numbered chapter head: label row ('Ort 1' · meta) over a serif H2. */
   | { t: 'chapter'; id?: string; label: Localized; meta?: Localized; html: Localized }
   /** Legend / claim box with a verdict badge. */
@@ -112,13 +116,24 @@ export interface JournalArticle {
   readTime?: { de?: string; en?: string } | string;
   /** Hero image path, absolute under /images (e.g. '/images/autumn-prague.jpg'). */
   hero?: string;
+  /** Card / social image for articles without a hero (the page then shows none). */
+  thumb?: string;
+  /** Keep this article in the featured slot of the journal index. */
+  pinned?: boolean;
   heroCap?: Localized;
   /** Hero photo credit, e.g. 'Unsplash+' → "Bild: Unsplash+". */
   heroCredit?: string;
   /** Title — HTML allowed (an <em> renders the burgundy-italic accent word). */
   title: Localized;
-  /** Standfirst / teaser — also used as card blurb + SEO meta description. */
+  /** Teaser — card blurb, and the dek + meta description unless set below. */
   excerpt?: Localized;
+  /** Longer standfirst under the title on the article page. Defaults to excerpt. */
+  dek?: Localized;
+  /** SEO overrides: <title> (site suffix is appended) and meta description. */
+  seoTitle?: Localized;
+  seoDescription?: Localized;
+  /** Closing CTA panel texts; the phone number is appended to `text`. */
+  cta?: { title?: Localized; text?: Localized; button?: Localized };
   tags?: { de?: string[]; en?: string[] };
   /** Defaults to 'Ing. Zuzana Manová' when omitted. */
   author?: string;

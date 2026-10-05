@@ -70,16 +70,16 @@ const Footer: React.FC = () => {
 
           <div className="space-y-4">
             <h4 className="font-label text-xs font-bold uppercase tracking-widest text-stone-400">{t('footer.contact')}</h4>
-            <div className="flex flex-col gap-2 font-label text-sm">
-              <a href="tel:+420721231933" className="text-stone-600 transition-colors hover:text-ink">+420 721 231 933</a>
-              <a href="mailto:zuzanamanova@email.cz" className="text-stone-600 transition-colors hover:text-ink">zuzanamanova@email.cz</a>
-              <a href="https://wa.me/420721231933" target="_blank" rel="noopener noreferrer" className="text-stone-600 transition-colors hover:text-ink">WhatsApp</a>
+            <div className="flex flex-col gap-0 font-label text-sm md:gap-2">
+              <a href="tel:+420721231933" className="py-[10px] text-stone-600 transition-colors hover:text-ink md:py-0">+420 721 231 933</a>
+              <a href="mailto:zuzanamanova@email.cz" className="py-[10px] text-stone-600 transition-colors hover:text-ink md:py-0">zuzanamanova@email.cz</a>
+              <a href="https://wa.me/420721231933" target="_blank" rel="noopener noreferrer" className="py-[10px] text-stone-600 transition-colors hover:text-ink md:py-0">WhatsApp</a>
             </div>
           </div>
 
           <div className="space-y-4">
             <h4 className="font-label text-xs font-bold uppercase tracking-widest text-stone-400">{t('footer.quicklinks')}</h4>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-0 md:gap-2">
               {[
                 { href: '/',                       label: t('nav.home') },
                 { href: '/tours',                  label: t('nav.tours') },
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
                 { href: '/contact#contact-title',  label: t('nav.contact') },
                 { href: '/book#contact-title',     label: t('contact.booking.header.title') },
               ].map(({ href, label }) => (
-                <Link key={href} href={href} className="font-label text-sm text-stone-600 underline-offset-4 transition-colors hover:text-ink hover:underline">
+                <Link key={href} href={href} className="py-[10px] font-label text-sm text-stone-600 underline-offset-4 transition-colors hover:text-ink hover:underline md:py-0">
                   {label}
                 </Link>
               ))}
@@ -126,12 +126,12 @@ const Footer: React.FC = () => {
         <div className="border-t border-stone-200">
           <div className="mx-auto flex max-w-editorial flex-col items-center justify-between gap-3 px-5 py-5 md:flex-row md:px-10">
             <p className="font-label text-xs text-stone-400">© {currentYear} Zuza Prague Tours – Zuzana Manová. {t('footer.rights')}</p>
-            <div className="flex gap-4">
-              <Link href="/privacy" className="font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline">{t('footer.privacy')}</Link>
+            <div className="flex items-center gap-4">
+              <Link href="/privacy" className="py-[10px] font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline md:py-0">{t('footer.privacy')}</Link>
               <span className="text-stone-300" aria-hidden>·</span>
-              <Link href="/terms" className="font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline">{t('footer.terms')}</Link>
+              <Link href="/terms" className="py-[10px] font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline md:py-0">{t('footer.terms')}</Link>
               <span className="text-stone-300" aria-hidden>·</span>
-              <Link href="/bewerten" className="font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline">{t('footer.review')}</Link>
+              <Link href="/bewerten" className="py-[10px] font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline md:py-0">{t('footer.review')}</Link>
             </div>
           </div>
         </div>

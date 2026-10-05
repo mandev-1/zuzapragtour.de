@@ -16,6 +16,7 @@
     "de": ""
   },
   "hero": "/images/old-town-square.jpg",
+  "pinned": true,
   "heroCap": {
     "de": "Blick von der Galerie des Rathausturms auf die Teynkirche. Hier oben stehen Sie auf Ort 6 und sehen Ort 7."
   },
@@ -24,6 +25,9 @@
     "de": "Zehn Orte mit Geschichte – und fünf Prager Legenden im Faktencheck"
   },
   "excerpt": {
+    "de": "Wo der Dreißigjährige Krieg begann, wo Mozart den Don Giovanni dirigierte und was am Golem auf dem Dachboden dran ist. Mit Wegen, die Ihnen die steilen Gassen ersparen."
+  },
+  "dek": {
     "de": "Wo der Dreißigjährige Krieg begann, wo Mozart den Don Giovanni zum ersten Mal dirigierte und was am Golem auf dem Dachboden dran ist: zehn Orte, an denen Prager Geschichte passiert ist, fünf Legenden, nach denen ich auf fast jeder Tour gefragt werde, und Wege dorthin, die Ihnen die steilen Gassen ersparen."
   },
   "tags": {

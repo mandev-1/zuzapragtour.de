@@ -77,3 +77,11 @@ The main direct competitors for German-language private Prague tours are pragkom
 Proper hreflang="de" and hreflang="en" tags on each page tell Google exactly what's happening, which improves ranking for German-speaking searchers in Germany/Austria/Switzerland.
 
 Create a post-tour email flow encouraging TripAdvisor reviews. Target 50+ reviews.
+
+I also want to target these keywords:
+
+Besichtigungsfahrten
+Stadtführer
+Historische Orte und Gebäude
+Reisebücher und -führer
+Reisebuchungsdienste

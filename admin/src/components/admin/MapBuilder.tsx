@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Block, Lang } from '../../types/journal';
 import { getL, setL } from '../../lib/journal';
+import { CARTO_ATTRIBUTION, CARTO_TILES } from '../../lib/maps';
 
 type MapBlock = Extract<Block, { t: 'map' }>;
 
@@ -140,7 +141,7 @@ function MapStage({ data, height }: { data: StageData; height: number }) {
     if (!ready || !elRef.current || mapRef.current) return undefined;
     const L = (window as any).L;
     const map = L.map(elRef.current, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '&copy; OpenStreetMap &copy; CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+    L.tileLayer(CARTO_TILES, { attribution: CARTO_ATTRIBUTION, maxZoom: 19 }).addTo(map);
     mapRef.current = map;
     layerRef.current = L.layerGroup().addTo(map);
     drawNow();
