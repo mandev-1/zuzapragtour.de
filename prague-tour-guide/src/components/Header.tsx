@@ -29,7 +29,6 @@ const Header: React.FC = () => {
   const [panelTop, setPanelTop] = React.useState(0);
   React.useEffect(() => {
     if (!isMenuOpen) return;
-    setPanelTop(headerRef.current?.getBoundingClientRect().bottom ?? 0);
     const root = document.documentElement;
     root.style.overflow = 'hidden';
     const onKey = (e: KeyboardEvent) => {
@@ -138,14 +137,18 @@ const Header: React.FC = () => {
       <Link
         href="/book#contact-title"
         onClick={close}
-        className="flex min-h-[40px] items-center whitespace-nowrap rounded-[4px] bg-journal-burgundy px-[clamp(10px,3.6vw,14px)] font-hanken text-[clamp(13px,3.8vw,14px)] font-semibold text-white no-underline transition-colors hover:bg-journal-burgundy-hover hover:text-white"
+        className="flex min-h-[40px] items-center whitespace-nowrap rounded-[4px] bg-journal-burgundy px-[clamp(10px,3.6vw,14px)] font-sans text-[clamp(13px,3.8vw,14px)] font-semibold text-white no-underline transition-colors hover:bg-journal-burgundy-hover hover:text-white"
       >
         {t('contact.booking.header.title')}
       </Link>
       <button
         type="button"
         className={`-mr-[10px] grid h-11 w-11 place-items-center border-0 bg-transparent p-0 ${light ? 'text-ivory' : 'text-ink'}`}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => {
+          // Panel sits right under the header; measure before it mounts.
+          if (!isMenuOpen) setPanelTop(headerRef.current?.getBoundingClientRect().bottom ?? 0);
+          setIsMenuOpen(!isMenuOpen);
+        }}
         aria-expanded={isMenuOpen}
         aria-controls="mobile-menu"
         aria-label={isMenuOpen ? (de ? 'Menü schließen' : 'Close menu') : de ? 'Menü öffnen' : 'Open menu'}
@@ -157,17 +160,14 @@ const Header: React.FC = () => {
     </div>
   );
 
-  // Rendered outside <header>: its backdrop-filter / transform would otherwise
-  // trap this fixed panel inside the header box.
+  // Rendered outside <header> (its backdrop-filter / transform would trap a
+  // fixed panel) and only while open, so its fonts aren't fetched on every page.
   const mobileMenu = (
     <nav
       id="mobile-menu"
       aria-label={de ? 'Menü' : 'Menu'}
-      aria-hidden={!isMenuOpen}
       style={{ top: panelTop }}
-      className={`fixed inset-x-0 bottom-0 z-[49] overflow-y-auto overscroll-contain bg-white px-5 pb-8 pt-2 transition-[opacity,transform,visibility] duration-200 ease-out lg:hidden ${
-        isMenuOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1.5 opacity-0'
-      }`}
+      className="fixed inset-x-0 bottom-0 z-[49] animate-menu-in overflow-y-auto overscroll-contain bg-white px-5 pb-8 pt-2 lg:hidden"
     >
       <div className="flex flex-col">
         {NAV.map((n) => {
@@ -235,7 +235,7 @@ const Header: React.FC = () => {
           {mobileActions}
         </div>
       </header>
-      {mobileMenu}
+      {isMenuOpen && mobileMenu}
     </>
   );
 };

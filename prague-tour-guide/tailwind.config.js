@@ -145,10 +145,10 @@ module.exports = {
         // Journal articles
         news: ['var(--font-newsreader)', '"Newsreader"', 'Georgia', 'serif'],
         // Legacy aliases used by non-blog pages — kept intact
-        headline: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
-        serif: ['"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
-        label: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        eyebrow: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        headline: ['var(--font-noto-serif)', '"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
+        serif: ['var(--font-noto-serif)', '"Noto Serif"', 'Georgia', 'Cambria', 'serif'],
+        label: ['var(--font-jakarta)', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        eyebrow: ['var(--font-jakarta)', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['clamp(2.75rem, 5vw + 1rem, 4.5rem)', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
@@ -186,11 +186,17 @@ module.exports = {
           '0%': { transform: 'scale(1.06)' },
           '100%': { transform: 'scale(1)' },
         },
+        // Mobile menu panel (Header) — fades/slides in when mounted.
+        menuIn: {
+          '0%': { opacity: '0', transform: 'translateY(-6px)' },
+          '100%': { opacity: '1', transform: 'none' },
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'fade-in-up': 'fadeInUp 0.7s ease-out',
         kenburns: 'kenburns 18s ease-out forwards',
+        'menu-in': 'menuIn 0.2s ease-out',
         'bewerten-sticky': 'fadeInUp 0.2s ease-out',
       },
       borderRadius: {

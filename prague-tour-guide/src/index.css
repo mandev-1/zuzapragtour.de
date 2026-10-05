@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Material Symbols — self-hosted subset (~4 KB) with only the icons the site
+   uses; fixed opsz 24 / wght 400 / GRAD 0, variable FILL (star, check_circle).
+   To add an icon: re-download from
+   https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&icon_names=<alphabetical,list>&display=block
+   (the woff2 URL inside that CSS) into public/fonts/material-symbols-subset.woff2.
+   Current list: add, arrow_forward, arrow_upward, call, chat, check,
+   check_circle, expand_more, group, history_edu, lock, mail, open_in_new,
+   schedule, star, translate, verified. */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('/fonts/material-symbols-subset.woff2') format('woff2');
+}
+
 @layer base {
   html {
     @apply scroll-smooth;

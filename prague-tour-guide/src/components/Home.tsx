@@ -54,12 +54,35 @@ const Home: React.FC = () => {
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Responsive AVIF/WebP variants in /images/hero (the 1–1.1 MB originals
+              stay as sources). The browser picks the width it needs for 100vw. */}
           <picture>
             {/* Desktop hero */}
-            <source media="(min-width: 768px)" srcSet="/images/prague-old-town-square-tourist.jpg" />
+            <source
+              media="(min-width: 768px)"
+              type="image/avif"
+              sizes="100vw"
+              srcSet="/images/hero/prague-old-town-square-tourist-1280.avif 1280w, /images/hero/prague-old-town-square-tourist-1920.avif 1920w, /images/hero/prague-old-town-square-tourist-2560.avif 2560w"
+            />
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              sizes="100vw"
+              srcSet="/images/hero/prague-old-town-square-tourist-1280.webp 1280w, /images/hero/prague-old-town-square-tourist-1920.webp 1920w, /images/hero/prague-old-town-square-tourist-2560.webp 2560w"
+            />
             {/* Mobile keeps the Vltava-bridges hero */}
+            <source
+              type="image/avif"
+              sizes="100vw"
+              srcSet="/images/hero/vltava-bridges-hero-480.avif 480w, /images/hero/vltava-bridges-hero-720.avif 720w, /images/hero/vltava-bridges-hero-1080.avif 1080w"
+            />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              srcSet="/images/hero/vltava-bridges-hero-480.webp 480w, /images/hero/vltava-bridges-hero-720.webp 720w, /images/hero/vltava-bridges-hero-1080.webp 1080w"
+            />
             <img
-              src="/images/vltava-bridges-hero.jpg"
+              src="/images/hero/vltava-bridges-hero-1080.jpg"
               alt={de ? 'Prag im goldenen Abendlicht' : 'Prague in golden evening light'}
               className="absolute inset-0 h-full w-full animate-kenburns object-cover [object-position:center_42%] motion-reduce:animate-none"
               fetchPriority="high"

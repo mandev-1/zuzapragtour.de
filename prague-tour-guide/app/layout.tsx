@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight, Hanken_Grotesk, EB_Garamond, Newsreader } from 'next/font/google';
+import { Italiana, Libre_Caslon_Text, Cormorant_Garamond, Inter_Tight, Hanken_Grotesk, EB_Garamond, Newsreader, Noto_Serif, Plus_Jakarta_Sans } from 'next/font/google';
 import { LanguageProvider } from '../src/context/LanguageContext';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
@@ -15,6 +15,9 @@ import '../src/styles/blog-map.css';
 import '../src/styles/journal-index.css';
 import '../src/styles/site-premium.css';
 
+// Font loading: only Italiana (the home hero H1, i.e. the LCP text) is
+// preloaded. Every other face loads when a page first uses it, so on a slow
+// mobile connection the preloads don't compete with the hero image.
 const italiana = Italiana({
   weight: '400',
   subsets: ['latin'],
@@ -28,6 +31,7 @@ const libreCaslon = Libre_Caslon_Text({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
+  preload: false,
 });
 
 const cormorant = Cormorant_Garamond({
@@ -36,6 +40,7 @@ const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   variable: '--font-italic',
   display: 'swap',
+  preload: false,
 });
 
 const interTight = Inter_Tight({
@@ -43,6 +48,7 @@ const interTight = Inter_Tight({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
+  preload: false,
 });
 
 // /bewerten review page + journal articles (UI text)
@@ -51,6 +57,7 @@ const hanken = Hanken_Grotesk({
   subsets: ['latin', 'latin-ext'],
   variable: '--font-hanken',
   display: 'swap',
+  preload: false,
 });
 
 const ebGaramond = EB_Garamond({
@@ -59,6 +66,7 @@ const ebGaramond = EB_Garamond({
   subsets: ['latin', 'latin-ext'],
   variable: '--font-garamond',
   display: 'swap',
+  preload: false,
 });
 
 // Journal articles (design_handoff_blog_orte) — variable font incl. optical size
@@ -68,6 +76,23 @@ const newsreader = Newsreader({
   subsets: ['latin', 'latin-ext'],
   variable: '--font-newsreader',
   display: 'swap',
+  preload: false,
+});
+
+// Legacy faces (footer, widgets) — self-hosted instead of a render-blocking
+// Google Fonts stylesheet.
+const notoSerif = Noto_Serif({
+  subsets: ['latin'],
+  variable: '--font-noto-serif',
+  display: 'swap',
+  preload: false,
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-jakarta',
+  display: 'swap',
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -93,20 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="de"
-      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable} ${hanken.variable} ${ebGaramond.variable} ${newsreader.variable}`}
+      className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable} ${hanken.variable} ${ebGaramond.variable} ${newsreader.variable} ${notoSerif.variable} ${plusJakarta.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          as="style"
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
         <meta property="og:title" content="..." />
         <meta property="og:description" content="..." />
         <meta property="og:image" content="https://your-site.com/new-thumbnail.jpg" />
@@ -117,10 +131,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <>
             {/* AdSense site verification — required to activate the account */}
             <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+            {/* lazyOnload: fetched once the page is idle, so it never competes
+                with the hero image for bandwidth. */}
             <Script
               id="adsbygoogle-loader"
               async
-              strategy="afterInteractive"
+              strategy="lazyOnload"
               crossOrigin="anonymous"
               src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
             />
