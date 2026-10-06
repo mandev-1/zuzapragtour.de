@@ -5,6 +5,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Build-time switches set in Netlify → Environment variables.
+  env: {
+    ADSENSE_ENABLED: process.env.ADSENSE_ENABLED ?? '',
+  },
 };
 
 export default nextConfig;

@@ -136,20 +136,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:url" content="https://your-site.com/page" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        {/* AdSense site verification — a plain meta tag (no script, no cookies),
+            kept even while ads are switched off so the account stays verified. */}
+        <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
         {ADSENSE_ENABLED && (
-          <>
-            {/* AdSense site verification — required to activate the account */}
-            <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
-            {/* lazyOnload: fetched once the page is idle, so it never competes
-                with the hero image for bandwidth. */}
-            <Script
-              id="adsbygoogle-loader"
-              async
-              strategy="lazyOnload"
-              crossOrigin="anonymous"
-              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-            />
-          </>
+          /* lazyOnload: fetched once the page is idle, so it never competes
+             with the hero image for bandwidth. */
+          <Script
+            id="adsbygoogle-loader"
+            async
+            strategy="lazyOnload"
+            crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          />
         )}
       </head>
       <body>

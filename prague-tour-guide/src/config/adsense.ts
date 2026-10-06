@@ -10,8 +10,12 @@
 /** AdSense publisher ID (data-ad-client / loader ?client=). */
 export const ADSENSE_CLIENT = 'ca-pub-4497386236985187';
 
-/** Master switch — set to false to stop loading AdSense entirely. */
-export const ADSENSE_ENABLED = true;
+/**
+ * Master switch: the Netlify environment variable ADSENSE_ENABLED (exposed to
+ * client code in next.config.mjs). Only "true" loads AdSense; unset or anything
+ * else keeps it off. Read at build time — change it, then redeploy.
+ */
+export const ADSENSE_ENABLED = process.env.ADSENSE_ENABLED === 'true';
 
 /**
  * Placement → ad-unit slot ID (the numeric string AdSense gives each unit).

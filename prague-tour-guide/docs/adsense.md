@@ -13,7 +13,7 @@ Nothing looks broken before then.
 | Verification meta | `app/layout.tsx` (`<head>`) | `<meta name="google-adsense-account" content="ca-pub-4497386236985187">` on every page — activates the account. |
 | Loader script | `app/layout.tsx` | Loads `adsbygoogle.js` on every page (via `next/script`, `afterInteractive`). Required for verification + serving. |
 | `ads.txt` | `public/ads.txt` | Authorized-sellers file at `/ads.txt` (required by AdSense). Contains `google.com, pub-4497386236985187, DIRECT, f08c47fec0942fa0`. |
-| Config | `src/config/adsense.ts` | Publisher ID, `ADSENSE_ENABLED` master switch, and the `ADSENSE_SLOTS` map. |
+| Config | `src/config/adsense.ts` | Publisher ID, `ADSENSE_ENABLED` master switch (from the Netlify env var), and the `ADSENSE_SLOTS` map. |
 | Ad unit component | `src/components/AdSlot.tsx` | Renders one `<ins class="adsbygoogle">` unit and calls `adsbygoogle.push({})` once. |
 | Placements | `src/components/Blog.tsx` | Three journal slots (see below), each falling back to a house placeholder when its slot ID is empty. |
 
@@ -40,8 +40,10 @@ carry no ads). They are ratio-reserved, so filling them causes no layout shift.
 
 ## Switches
 
-- **Turn AdSense off entirely:** `ADSENSE_ENABLED = false` in `src/config/adsense.ts`
-  (stops loading the script).
+- **Turn AdSense on/off:** Netlify → Site configuration → Environment variables →
+  `ADSENSE_ENABLED` = `true` (on) or unset / anything else (off), then redeploy — the
+  value is baked in at build time. Off stops loading the script and shows the house
+  placeholders; the `google-adsense-account` verification meta stays either way.
 - **Turn the journal placements off:** `SHOW_ADS = false` at the top of
   `src/components/Blog.tsx` (removes the three slots; the grid closes up).
 

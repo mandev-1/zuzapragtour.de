@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 import { PageBanner, Reveal } from '../components/site/SiteUI';
 
-const LAST_UPDATED = '2026-04-12';
+const LAST_UPDATED = '2026-10-06';
 
 /* ── Shared prose typography (premium editorial, narrow measure) ── */
 const SECTION = 'mt-[clamp(2rem,4vh,3rem)] border-t border-rule pt-[clamp(2rem,4vh,3rem)]';
@@ -96,6 +96,11 @@ const PrivacyPage: React.FC = () => {
                   ? 'Spracheinstellung der Website: Wir speichern Ihre gewählte Sprache (Deutsch/Englisch) lokal in Ihrem Browser (localStorage, Schlüssel „zpt.lang“), damit die Seite beim nächsten Besuch in derselben Sprache erscheint. Es werden keine Profile erstellt und keine Werbe-Cookies gesetzt.'
                   : 'Website language: we store your selected language (German/English) locally in your browser (localStorage key “zpt.lang”) so the site opens in the same language on your next visit. We do not use this to build profiles or serve advertising cookies.'}
               </li>
+              <li>
+                {isDe
+                  ? 'Anonyme Nutzungsdaten (aufgerufene Seiten, angeklickte Links und Schaltflächen, Gerätetyp) sowie ein Cookie für den Test von Seitenvarianten. Einzelheiten unten unter „Nutzungsstatistik und Seitenvarianten“.'
+                  : 'Anonymous usage data (pages viewed, links and buttons clicked, device type) and a cookie for testing page variants. Details below under “Usage statistics and page variants”.'}
+              </li>
             </ul>
           </div>
         </Reveal>
@@ -116,8 +121,8 @@ const PrivacyPage: React.FC = () => {
               <li>
                 <strong className={STRONG}>{isDe ? 'Berechtigte Interessen:' : 'Legitimate interests:'}</strong>{' '}
                 {isDe
-                  ? 'Betrieb und Sicherheit der Website, Missbrauchsbekämpfung, technische Administration (Art. 6 Abs. 1 lit. f DSGVO).'
-                  : 'operating and securing the website, preventing abuse, technical administration (GDPR Art. 6(1)(f)).'}
+                  ? 'Betrieb und Sicherheit der Website, Missbrauchsbekämpfung, technische Administration sowie die anonyme Auswertung der Nutzung, um unser Angebot und Ihr Nutzungserlebnis zu verbessern (Art. 6 Abs. 1 lit. f DSGVO).'
+                  : 'operating and securing the website, preventing abuse, technical administration, and anonymous analysis of website use to improve our services and your experience (GDPR Art. 6(1)(f)).'}
               </li>
               <li>
                 <strong className={STRONG}>{isDe ? 'Einwilligung:' : 'Consent:'}</strong>{' '}
@@ -145,6 +150,39 @@ const PrivacyPage: React.FC = () => {
               {isDe
                 ? 'Auf unserer Website können Inhalte von Drittanbietern eingebunden sein (z. B. Bewertungs-Widgets, Karten). Diese Anbieter können eigene Cookies oder ähnliche Technologien verwenden und sind für ihre Datenverarbeitung selbst verantwortlich; bitte beachten Sie deren Datenschutzhinweise.'
                 : 'Our site may embed third-party content (e.g. review widgets, maps). Those providers may use their own cookies or similar technologies and are responsible for their own processing; please read their privacy notices.'}
+            </p>
+          </div>
+        </Reveal>
+
+        {/* ── Usage statistics and page variants ──────────────────── */}
+        <Reveal as="section" className={SECTION}>
+          <h2 className={H2}>{isDe ? 'Nutzungsstatistik und Seitenvarianten' : 'Usage statistics and page variants'}</h2>
+          <div className={BODY}>
+            <p className={P}>
+              {isDe
+                ? 'Um zu verstehen, welche Inhalte und Angebote unseren Gästen weiterhelfen, und um die Website zu verbessern, betreiben wir eine eigene Nutzungsstatistik ohne Drittanbieter. Erfasst werden: aufgerufene Seiten, angeklickte Links und Schaltflächen (z. B. WhatsApp, Telefonnummer, Tourseiten) und die Stelle der Seite, an der sie stehen, der Gerätetyp (Bildschirm schmaler oder breiter als 900 Pixel), der Domainname der Website, von der Sie gekommen sind, sowie die Tatsache, dass ein Anfrageformular abgeschickt wurde, mit der gewählten Tour, aber ohne Ihre Angaben. Damit wir die Reihenfolge der Seiten innerhalb eines Besuchs auswerten können, erhält jeder geöffnete Browser-Tab eine zufällige Kennung, die nur im Arbeitsspeicher liegt und beim Schließen oder Neuladen der Seite verloren geht.'
+                : 'To understand which content and offers help our guests, and to improve the website, we run our own usage statistics without third-party providers. We record: pages viewed, links and buttons clicked (e.g. WhatsApp, phone number, tour pages) and where on the page they are, the device type (screen narrower or wider than 900 pixels), the domain name of the website you came from, and the fact that an enquiry form was sent, with the chosen tour but without your details. So that we can analyse the order of pages within a visit, each open browser tab gets a random identifier that is held in memory only and is lost when the page is closed or reloaded.'}
+            </p>
+            <p className={P}>
+              {isDe
+                ? 'Für diese Statistik werden keine Cookies gesetzt und keine Informationen auf Ihrem Gerät gespeichert. Wir speichern keine IP-Adressen, Browserkennungen oder andere Merkmale, mit denen Sie identifiziert werden könnten, und bilden keine Profile über mehrere Besuche hinweg. Die Daten liegen bei unserem Hosting-Anbieter Netlify und werden nur zusammengefasst ausgewertet. Rechtsgrundlage ist unser berechtigtes Interesse an der Verbesserung unseres Angebots und Ihres Nutzungserlebnisses (Art. 6 Abs. 1 lit. f DSGVO).'
+                : 'These statistics set no cookies and store no information on your device. We do not store IP addresses, browser identifiers or any other attributes that could identify you, and we do not build profiles across visits. The data is kept with our hosting provider Netlify and analysed only in aggregate. The legal basis is our legitimate interest in improving our services and your experience (GDPR Art. 6(1)(f)).'}
+            </p>
+            <p className={P}>
+              <strong className={STRONG}>{isDe ? 'Test von Seitenvarianten:' : 'Testing page variants:'}</strong>{' '}
+              {isDe
+                ? 'Zeitweise zeigen wir zwei Varianten unserer Startseite, um herauszufinden, welche für Besucher übersichtlicher ist. Damit Sie bei wiederholten Besuchen dieselbe Variante sehen, setzen wir das Cookie „zpt_ab“ mit dem Wert „a“ oder „b“ (Speicherdauer 60 Tage) und vermerken im lokalen Speicher Ihres Browsers („zpt_ab_seen“), dass Sie bereits gezählt wurden. Beides enthält keine Kennung Ihrer Person. Ausgewertet wird je Variante nur, wie oft anonyme Ereignisse vorkamen (Tag, Variante, Gerätetyp, z. B. „WhatsApp angeklickt“). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Sie können Cookie und lokalen Speicher jederzeit in Ihren Browsereinstellungen löschen; beim nächsten Besuch wird Ihnen dann zufällig erneut eine Variante zugewiesen.'
+                : 'From time to time we show two variants of our home page to find out which one visitors find clearer. So that you see the same variant on repeat visits, we set the cookie “zpt_ab” with the value “a” or “b” (kept for 60 days) and note in your browser’s local storage (“zpt_ab_seen”) that you have already been counted. Neither contains an identifier of you. For each variant we only count how often anonymous events occurred (day, variant, device type, e.g. “WhatsApp clicked”). The legal basis is GDPR Art. 6(1)(f). You can delete the cookie and local storage in your browser settings at any time; on your next visit you will again be assigned a variant at random.'}
+            </p>
+            <p className={P}>
+              <strong className={STRONG}>{isDe ? 'Nicht gezählt werden:' : 'Opting out:'}</strong>{' '}
+              {isDe ? 'Wenn Sie nicht in der Statistik erscheinen möchten, öffnen Sie einmal ' : 'If you do not want to be included in the statistics, open '}
+              <a className={LINK} href="/?track=off">
+                zuzapragtour.de/?track=off
+              </a>
+              {isDe
+                ? '. Ihr Browser merkt sich diese Entscheidung im lokalen Speicher („zpt_notrack“); danach werden von diesem Browser weder Seitenaufrufe noch Klicks gezählt. Mit „?track=on“ heben Sie das wieder auf.'
+                : ' once. Your browser remembers this choice in local storage (“zpt_notrack”); after that, no page views or clicks from this browser are counted. “?track=on” reverses it.'}
             </p>
           </div>
         </Reveal>

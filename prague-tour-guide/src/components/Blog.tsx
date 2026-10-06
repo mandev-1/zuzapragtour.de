@@ -20,7 +20,7 @@ import { blogPosts } from '../utils/blogData';
 import { postText } from '../utils/postText';
 import { BRAND } from '../brand';
 import AdSlot from './AdSlot';
-import { ADSENSE_SLOTS } from '../config/adsense';
+import { ADSENSE_ENABLED, ADSENSE_SLOTS } from '../config/adsense';
 import { AVATAR_SRC } from './site/Portrait';
 
 const CATEGORIES_DE = ['Alle', 'Praktischer Rat', 'Geschichte', 'Restaurants', 'Prag erleben'];
@@ -310,7 +310,7 @@ const Blog: React.FC = () => {
                   <div key={`ad-${idx}`} className="jx-ad">
                     <div className="jx-ad__label">{de ? 'Anzeige' : 'Advertisement'}</div>
                     <div id="ad-journal-billboard" className="jx-ad__box">
-                      {ADSENSE_SLOTS.journalBillboard ? (
+                      {ADSENSE_ENABLED && ADSENSE_SLOTS.journalBillboard ? (
                         <AdSlot slot={ADSENSE_SLOTS.journalBillboard} />
                       ) : (
                         <span>
