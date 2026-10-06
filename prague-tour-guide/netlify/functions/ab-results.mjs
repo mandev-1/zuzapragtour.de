@@ -1,11 +1,12 @@
 // GET /api/ab-results — aggregated counts of the homepage A/B test for the
 // admin (admin/netlify/functions/ab-results.mjs proxies here). Requires the
-// header `x-ab-key` to match the AB_RESULTS_KEY environment variable, which
-// must be set to the same value on this site and on the admin site.
+// header `x-ab-key` to match the STATS_KEY (or older AB_RESULTS_KEY)
+// environment variable, which must be set to the same value on this site and
+// on the admin site.
 import { getStore } from '@netlify/blobs';
 
 export default async (req) => {
-  const secret = process.env.AB_RESULTS_KEY;
+  const secret = process.env.STATS_KEY || process.env.AB_RESULTS_KEY;
   if (!secret || req.headers.get('x-ab-key') !== secret) {
     return Response.json({ error: 'unauthorized' }, { status: 401 });
   }

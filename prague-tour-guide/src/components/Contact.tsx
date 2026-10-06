@@ -27,6 +27,7 @@ import { BRAND } from '../brand';
 import { tours } from '../data/tours';
 import { Kicker, Reveal, Stars, btnClass, GLASS_CARD_STYLE, SHELL } from './site/SiteUI';
 import { trackAb } from '../config/abTest';
+import { track } from '../utils/analytics';
 import { AVATAR_SRC } from './site/Portrait';
 
 type ContactProps = {
@@ -102,6 +103,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
       });
       if (res.ok) {
         trackAb('enquiry');
+        track('enquiry', { label: formData.tour || '(ohne Tour)', area: formName });
         setSubmitted(true);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else setSubmitError(true);
@@ -174,7 +176,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
           <div className="grid grid-cols-1 gap-x-[clamp(2.5rem,6vw,5rem)] gap-y-[clamp(2.5rem,6vw,3.5rem)] lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
 
             {/* Aside — personal intro, portrait trust card, contact rows (sticky on desktop) */}
-            <div className="lg:sticky lg:top-[100px] lg:self-start">
+            <div data-track-section="contact-direct" className="lg:sticky lg:top-[100px] lg:self-start">
               <Reveal>
               <Kicker>{de ? 'Direkt mit Zuzana' : 'Directly with Zuzana'}</Kicker>
               <p className="mb-[1.2rem] mt-4 font-italic text-[clamp(1.4rem,2.4vw,1.85rem)] italic leading-[1.42] text-burgundy">
@@ -269,6 +271,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
                     </div>
 
                     <form
+                      data-track-section="form"
                       name={isBooking ? 'booking' : 'contact'}
                       data-netlify="true"
                       netlify-honeypot="bot-field"

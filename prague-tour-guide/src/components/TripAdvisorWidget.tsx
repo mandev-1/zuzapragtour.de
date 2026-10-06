@@ -88,7 +88,7 @@ const TripAdvisorWidget: React.FC = () => {
   }, [language]);
 
   return (
-    <div className="rounded-xl border border-outline-variant/20 bg-surface-container-lowest p-4 shadow-sm md:p-6">
+    <div data-track-section="tripadvisor" className="rounded-xl border border-outline-variant/20 bg-surface-container-lowest p-4 shadow-sm md:p-6">
       <div
         ref={shellRef}
         className="w-full overflow-x-auto [&_a]:text-primary [&_iframe]:max-w-full [&_.widSSP]:mx-auto"

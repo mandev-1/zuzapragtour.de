@@ -94,7 +94,7 @@ const TourPage: React.FC = () => {
   return (
     <div className="premium-inner">
       {/* ── Hero band ────────────────────────────────────────── */}
-      <section className="relative flex min-h-[74svh] items-end overflow-hidden">
+      <section data-track-section="hero" className="relative flex min-h-[74svh] items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={tour.image}
@@ -230,7 +230,7 @@ const TourPage: React.FC = () => {
             </div>
 
             {/* Sticky frosted-glass booking card */}
-            <aside className="min-[900px]:sticky min-[900px]:top-[100px]">
+            <aside data-track-section="booking-card" className="min-[900px]:sticky min-[900px]:top-[100px]">
               <Reveal>
                 <div style={GLASS_CARD_STYLE} className="p-[1.8rem]">
                   <span className="mb-[1.1rem] inline-flex items-center gap-[0.45rem] rounded-full border border-[rgba(123,88,0,0.35)] px-[0.85rem] py-[0.4rem] font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-olive">
@@ -301,7 +301,7 @@ const TourPage: React.FC = () => {
 
       {/* ── Related tours ────────────────────────────────────── */}
       {related.length > 0 && (
-        <section className="bg-ivory-deep py-[clamp(3.5rem,8vh,6rem)]">
+        <section data-track-section="related-tours" className="bg-ivory-deep py-[clamp(3.5rem,8vh,6rem)]">
           <div className={SHELL}>
             <Reveal>
               <Kicker>{de ? 'Vielleicht auch interessant' : 'You might also like'}</Kicker>

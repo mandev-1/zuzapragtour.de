@@ -15,6 +15,8 @@
  * or ship the winner and delete the loser.
  */
 
+import { trackingOff } from '../utils/analytics';
+
 export const AB_COOKIE = 'zpt_ab';
 export const AB_QA_COOKIE = 'zpt_ab_qa';
 /** Below this width variant B shows the new mobile homepage. */
@@ -53,7 +55,7 @@ export function getAbVariant(): AbVariant | null {
 /** Count one event for the visitor's variant (no-op outside the test). */
 export function trackAb(event: AbEvent): void {
   const v = getAbVariant();
-  if (!v) return;
+  if (!v || trackingOff()) return;
   const body = JSON.stringify({
     v,
     e: event,

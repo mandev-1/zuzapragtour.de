@@ -7,6 +7,8 @@ import Footer from '../src/components/Footer';
 import BlogPromo from '../src/components/BlogPromo';
 import ScrollToTop from '../src/components/ScrollToTop';
 import AbTracker from '../src/components/AbTracker';
+import AnalyticsTracker from '../src/components/AnalyticsTracker';
+import InternalLinks from '../src/components/InternalLinks';
 import Script from 'next/script';
 import { ADSENSE_CLIENT, ADSENSE_ENABLED } from '../src/config/adsense';
 import '../src/index.css';
@@ -167,6 +169,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <BlogPromo />
           <ScrollToTop />
           <AbTracker />
+          <AnalyticsTracker />
+          <InternalLinks />
         </LanguageProvider>
       </body>
     </html>

@@ -54,7 +54,7 @@ const Home: React.FC = () => {
     <div className="home-premium-root bg-paper text-ink antialiased">
 
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden">
+      <section id="top" data-track-section="hero" className="relative flex min-h-[100svh] items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <HomeHeroPicture alt={de ? 'Prag im goldenen Abendlicht' : 'Prague in golden evening light'} />
           <div
@@ -199,7 +199,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* ── Gallery ──────────────────────────────────────────── */}
-      <section className="bg-ink py-[clamp(4rem,9vh,7rem)] text-ivory">
+      <section data-track-section="gallery" className="bg-ink py-[clamp(4rem,9vh,7rem)] text-ivory">
         <div className={SHELL}>
           <Reveal><Kicker tone="lamp">{de ? 'Von meinen Gästen' : 'From my guests'}</Kicker></Reveal>
           <Reveal delay={80}>
@@ -218,7 +218,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* ── Reviews (hairline columns + verified widgets) ────── */}
-      <section className="border-t border-rule py-[clamp(4rem,9vh,7rem)]">
+      <section data-track-section="reviews" className="border-t border-rule py-[clamp(4rem,9vh,7rem)]">
         <div className={SHELL}>
           <div className="mb-[clamp(2.5rem,5vh,4rem)] text-center">
             <div className="mb-5 flex justify-center gap-[5px] text-gold-olive">
@@ -254,7 +254,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* ── CTA (full-bleed) ─────────────────────────────────── */}
-      <section className="relative overflow-hidden py-[clamp(5rem,13vh,9rem)] text-center text-ivory">
+      <section data-track-section="closing-cta" className="relative overflow-hidden py-[clamp(5rem,13vh,9rem)] text-center text-ivory">
         <div className="absolute inset-0 z-0">
           <img src="/images/charles-bridge-statue.jpg" alt="" aria-hidden className="h-full w-full object-cover" loading="lazy" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(79,22,32,0.82), rgba(20,16,12,0.86))' }} />

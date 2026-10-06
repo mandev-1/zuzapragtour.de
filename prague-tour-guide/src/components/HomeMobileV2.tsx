@@ -92,7 +92,7 @@ const HomeMobileV2: React.FC = () => {
   return (
     <div className="bg-paper text-ink antialiased">
       {/* ── 1 · Hero ─────────────────────────────────────────────── */}
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden">
+      <section data-track-section="hero" className="relative flex min-h-[100svh] items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <HomeHeroPicture alt={de ? 'Prag im goldenen Abendlicht' : 'Prague in golden evening light'} />
           <div
@@ -435,7 +435,7 @@ const HomeMobileV2: React.FC = () => {
 
       {/* ── Sticky WhatsApp bar ──────────────────────────────────── */}
       {showBar && (
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[rgba(217,207,188,0.9)] bg-[rgba(250,246,236,0.94)] px-[clamp(1rem,4vw,1.5rem)] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[10px] backdrop-blur-[12px]">
+        <div data-track-section="sticky-bar" className="fixed inset-x-0 bottom-0 z-40 border-t border-[rgba(217,207,188,0.9)] bg-[rgba(250,246,236,0.94)] px-[clamp(1rem,4vw,1.5rem)] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[10px] backdrop-blur-[12px]">
           <a
             href={waGeneral}
             target="_blank"

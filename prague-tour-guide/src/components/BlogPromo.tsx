@@ -69,7 +69,7 @@ const BlogPromo: React.FC = () => {
   const eyebrow  = language === 'de' ? 'Leseempfehlung'                 : 'Featured';
 
   return (
-    <div className={`fixed bottom-5 right-5 z-40 w-72 overflow-hidden bg-paper shadow-md ring-1 ring-stone-200 transition-all duration-300 sm:w-80 ${exiting ? 'translate-y-4 scale-95 opacity-0' : 'animate-[slideUp_0.4s_ease-out]'}`}>
+    <div data-track-section="blog-promo" className={`fixed bottom-5 right-5 z-40 w-72 overflow-hidden bg-paper shadow-md ring-1 ring-stone-200 transition-all duration-300 sm:w-80 ${exiting ? 'translate-y-4 scale-95 opacity-0' : 'animate-[slideUp_0.4s_ease-out]'}`}>
       <Link href={`/blog/${PROMO_SLUG}`} className="group block" onClick={() => markClicked()}>
         <div className="relative h-28 overflow-hidden">
           <img src="/images/blog-havel.jpg" alt={title} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />

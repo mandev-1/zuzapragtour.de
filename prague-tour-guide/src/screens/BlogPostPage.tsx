@@ -165,7 +165,7 @@ const BlogPostPage: React.FC = () => {
 
         {/* ── Body (860) ──────────────────────────────────────────── */}
         <div className="mx-auto mt-8 max-w-[860px] pb-[clamp(3rem,7vh,4.5rem)]">
-          <div className="blog-content">
+          <div className="blog-content" data-track-section="article">
             {post.contentKey ? (
               <div ref={contentRef} dangerouslySetInnerHTML={{ __html: processedContent }} />
             ) : (
@@ -174,7 +174,7 @@ const BlogPostPage: React.FC = () => {
           </div>
 
           {/* Closing CTA */}
-          <aside className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 bg-journal-panel p-[22px]">
+          <aside data-track-section="article-cta" className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 bg-journal-panel p-[22px]">
             <div className="min-w-0 flex-[1_1_300px]">
               <div className="font-hanken text-[15px] font-bold text-journal-ink">
                 {cta?.title ?? (de ? 'Prag mit Zuzana erleben' : 'Experience Prague with Zuzana')}
@@ -201,7 +201,7 @@ const BlogPostPage: React.FC = () => {
           </aside>
 
           {sourcesHtml && (
-            <section className="mt-14 border-t-[3px] border-journal-ink pt-[14px] font-hanken">
+            <section data-track-section="sources" className="mt-14 border-t-[3px] border-journal-ink pt-[14px] font-hanken">
               <h2 className="m-0 text-[20px] font-bold text-journal-ink">{de ? 'Quellen' : 'Sources'}</h2>
               <ol className="journal-sources" dangerouslySetInnerHTML={{ __html: sourcesHtml }} />
             </section>
@@ -226,7 +226,7 @@ const BlogPostPage: React.FC = () => {
 
       {/* ── Related ───────────────────────────────────────────────── */}
       {relatedItems.length > 0 && (
-        <section className="mx-auto max-w-[1160px] border-t border-journal-rule pb-[clamp(3.5rem,8vh,5rem)] pt-10">
+        <section data-track-section="related" className="mx-auto max-w-[1160px] border-t border-journal-rule pb-[clamp(3.5rem,8vh,5rem)] pt-10">
           <h2 className="m-0 font-hanken text-[20px] font-bold text-journal-ink">
             {de ? 'Weiterlesen im Journal' : 'More from the journal'}
           </h2>

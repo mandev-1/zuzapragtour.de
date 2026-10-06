@@ -6,6 +6,7 @@ import { MediaLibrary } from './MediaLibrary';
 import { ToursList } from './ToursList';
 import { ReviewsPanel } from './ReviewsPanel';
 import { AbTestPanel } from './AbTestPanel';
+import { StatsPanel } from './StatsPanel';
 import { ArticleGenerator } from './ArticleGenerator';
 import { DuplicateDialog } from './DuplicateDialog';
 import type { JournalArticle, Lang } from '../../types/journal';
@@ -53,7 +54,7 @@ export interface AdminSuiteProps {
  */
 export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
   const [articles, setArticles] = React.useState<JournalArticle[]>(() => clone(SEED));
-  const [view, setView] = React.useState<'list' | 'editor' | 'media' | 'tours' | 'reviews' | 'abtest'>('list');
+  const [view, setView] = React.useState<'list' | 'editor' | 'media' | 'tours' | 'reviews' | 'abtest' | 'stats'>('list');
   const [editing, setEditing] = React.useState<JournalArticle | null>(null);
   const [editingOrig, setEditingOrig] = React.useState<string | undefined>(undefined);
   const [activeLang, setActiveLang] = React.useState<Lang>('de');
@@ -182,6 +183,7 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
   const isTours = view === 'tours';
   const isReviews = view === 'reviews';
   const isAbTest = view === 'abtest';
+  const isStats = view === 'stats';
   const actions = isEditor && editing ? (
     <>
       <span className={`zsuite-pill ${editing.status}`}>{STATUS_LABEL[editing.status]}{editing.edition ? ` · ${editing.edition}` : ''}</span>
@@ -193,8 +195,8 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
   ) : (
     <>
       <button type="button" className="zsuite-btn ghost" onClick={onLogout}><span className="material-symbols-outlined">logout</span>Abmelden</button>
-      {!isMedia && !isTours && !isReviews && !isAbTest && <button type="button" className="zsuite-btn ghost" onClick={() => setGen(true)}><span className="material-symbols-outlined">auto_awesome</span>Aus Stichwörtern</button>}
-      {!isMedia && !isTours && !isReviews && !isAbTest && <button type="button" className="zsuite-btn primary" onClick={newArticle}><span className="material-symbols-outlined">add</span>Neuer Artikel</button>}
+      {!isMedia && !isTours && !isReviews && !isAbTest && !isStats && <button type="button" className="zsuite-btn ghost" onClick={() => setGen(true)}><span className="material-symbols-outlined">auto_awesome</span>Aus Stichwörtern</button>}
+      {!isMedia && !isTours && !isReviews && !isAbTest && !isStats && <button type="button" className="zsuite-btn primary" onClick={newArticle}><span className="material-symbols-outlined">add</span>Neuer Artikel</button>}
     </>
   );
 
@@ -202,7 +204,7 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
     <div className="zpt-admin-suite">
       <style>{CSS}</style>
       <AdminShell
-        active={isAbTest ? 'abtest' : isReviews ? 'reviews' : isTours ? 'tours' : isMedia ? 'media' : 'articles'}
+        active={isStats ? 'stats' : isAbTest ? 'abtest' : isReviews ? 'reviews' : isTours ? 'tours' : isMedia ? 'media' : 'articles'}
         breadcrumb={isEditor ? 'Zurück zum Journal' : undefined}
         onBreadcrumb={() => { if (editing) persist(editing, true, 'Gespeichert'); }}
         onNavigate={(k) => {
@@ -211,9 +213,10 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
           else if (k === 'tours') setView('tours');
           else if (k === 'reviews') setView('reviews');
           else if (k === 'abtest') setView('abtest');
+          else if (k === 'stats') setView('stats');
           else flash('„' + k + '“ — Artikel, Medien, Touren und Bewertungen sind eingerichtet');
         }}
-        title={isEditor && editing ? (titlePlain(editing) || 'Unbenannt') : isAbTest ? 'A/B-Test' : isMedia ? 'Medien' : isTours ? 'Touren' : isReviews ? 'Bewertungen' : 'Journal'}
+        title={isEditor && editing ? (titlePlain(editing) || 'Unbenannt') : isStats ? 'Klicks & Wege' : isAbTest ? 'A/B-Test' : isMedia ? 'Medien' : isTours ? 'Touren' : isReviews ? 'Bewertungen' : 'Journal'}
         subtitle={
           isEditor
             ? 'Artikel bearbeiten'
@@ -225,6 +228,8 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
                   ? 'Bewertungs-Aufrufe & Plattformen'
                   : isAbTest
                     ? 'Startseite: bisher gegen neu'
+                  : isStats
+                    ? 'Was angeklickt wird und was zur Anfrage führt'
                   : `${articles.length} Artikel · ${articles.filter((a) => a.status === 'published').length} veröffentlicht`
         }
         actions={actions}
@@ -245,6 +250,8 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
           <ReviewsPanel />
         ) : isAbTest ? (
           <AbTestPanel />
+        ) : isStats ? (
+          <StatsPanel />
         ) : (
           <ArticleTable
             articles={articles}

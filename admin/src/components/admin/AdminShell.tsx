@@ -32,6 +32,7 @@ const DEFAULT_NAV: AdminNavItem[] = [
   { key: 'media', label: 'Medien', icon: 'photo_library' },
   { key: 'tours', label: 'Touren', icon: 'map' },
   { key: 'reviews', label: 'Bewertungen', icon: 'star' },
+  { key: 'stats', label: 'Klicks & Wege', icon: 'insights' },
   { key: 'abtest', label: 'A/B-Test', icon: 'science' },
   { key: 'settings', label: 'Einstellungen', icon: 'settings' },
 ];
