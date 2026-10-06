@@ -6,6 +6,7 @@ import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import BlogPromo from '../src/components/BlogPromo';
 import ScrollToTop from '../src/components/ScrollToTop';
+import AbTracker from '../src/components/AbTracker';
 import Script from 'next/script';
 import { ADSENSE_CLIENT, ADSENSE_ENABLED } from '../src/config/adsense';
 import '../src/index.css';
@@ -13,6 +14,7 @@ import '../src/styles/site-tokens.css';
 import '../src/styles/blog-content.css';
 import '../src/styles/blog-map.css';
 import '../src/styles/journal-index.css';
+import '../src/styles/home-ab.css';
 import '../src/styles/site-premium.css';
 
 // Font loading: only Italiana (the home hero H1, i.e. the LCP text) is
@@ -118,9 +120,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="de"
+      // data-ab / data-ab-qa are added by the ab-home edge function (A/B test).
+      suppressHydrationWarning
       className={`${italiana.variable} ${libreCaslon.variable} ${cormorant.variable} ${interTight.variable} ${hanken.variable} ${ebGaramond.variable} ${newsreader.variable} ${notoSerif.variable} ${plusJakarta.variable}`}
     >
       <head>
+        {/* Icon font subset (~4 KB, font-display: block): fetch it with the page,
+            not after the CSS, so icons appear without delay. */}
+        <link rel="preload" href="/fonts/material-symbols-subset.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <meta property="og:title" content="..." />
         <meta property="og:description" content="..." />
         <meta property="og:image" content="https://your-site.com/new-thumbnail.jpg" />
@@ -159,6 +166,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <BlogPromo />
           <ScrollToTop />
+          <AbTracker />
         </LanguageProvider>
       </body>
     </html>

@@ -17,10 +17,12 @@ import { useLanguage } from '../context/LanguageContext';
 import { tours } from '../data/tours';
 import TripAdvisorWidget from './TripAdvisorWidget';
 import TourHqWidget from './TourHqWidget';
+import HomeHeroPicture from './HomeHeroPicture';
 import { Kicker, Reveal, Btn, ULink, Stat, SHELL } from './site/SiteUI';
+import { Portrait } from './site/Portrait';
 
 /* ─── Static testimonial data ────────────────────────────────── */
-const REVIEWS = [
+export const REVIEWS = [
   { de: { quote: 'Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.', who: 'Thomas K.', src: 'TripAdvisor' },
     en: { quote: "Zuzana's personal connection to the city makes this tour something truly unique. Absolutely unforgettable.", who: 'David M.', src: 'TripAdvisor' } },
   { de: { quote: 'Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen.', who: 'Monika H.', src: 'TourHQ Verifiziert' },
@@ -29,7 +31,7 @@ const REVIEWS = [
     en: { quote: 'Perfect for our family. She fascinated the kids with local legends.', who: 'The Thompsons', src: 'Private Booking' } },
 ];
 
-const GALLERY = [
+export const GALLERY = [
   { src: '/images/guest-tourguide.jpg', de: 'Zuzana mit Gästen', en: 'Zuzana with guests', cls: 'col-span-2 row-span-2', delay: 0 },
   { src: '/images/guest-night.jpeg', de: 'Prag bei Nacht', en: 'Prague at night', cls: '', delay: 80 },
   { src: '/images/guest-food.jpeg', de: 'Böhmische Küche', en: 'Bohemian cuisine', cls: '', delay: 160 },
@@ -54,40 +56,7 @@ const Home: React.FC = () => {
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* Responsive AVIF/WebP variants in /images/hero (the 1–1.1 MB originals
-              stay as sources). The browser picks the width it needs for 100vw. */}
-          <picture>
-            {/* Desktop hero */}
-            <source
-              media="(min-width: 768px)"
-              type="image/avif"
-              sizes="100vw"
-              srcSet="/images/hero/prague-old-town-square-tourist-1280.avif 1280w, /images/hero/prague-old-town-square-tourist-1920.avif 1920w, /images/hero/prague-old-town-square-tourist-2560.avif 2560w"
-            />
-            <source
-              media="(min-width: 768px)"
-              type="image/webp"
-              sizes="100vw"
-              srcSet="/images/hero/prague-old-town-square-tourist-1280.webp 1280w, /images/hero/prague-old-town-square-tourist-1920.webp 1920w, /images/hero/prague-old-town-square-tourist-2560.webp 2560w"
-            />
-            {/* Mobile keeps the Vltava-bridges hero */}
-            <source
-              type="image/avif"
-              sizes="100vw"
-              srcSet="/images/hero/vltava-bridges-hero-480.avif 480w, /images/hero/vltava-bridges-hero-720.avif 720w, /images/hero/vltava-bridges-hero-1080.avif 1080w"
-            />
-            <source
-              type="image/webp"
-              sizes="100vw"
-              srcSet="/images/hero/vltava-bridges-hero-480.webp 480w, /images/hero/vltava-bridges-hero-720.webp 720w, /images/hero/vltava-bridges-hero-1080.webp 1080w"
-            />
-            <img
-              src="/images/hero/vltava-bridges-hero-1080.jpg"
-              alt={de ? 'Prag im goldenen Abendlicht' : 'Prague in golden evening light'}
-              className="absolute inset-0 h-full w-full animate-kenburns object-cover [object-position:center_42%] motion-reduce:animate-none"
-              fetchPriority="high"
-            />
-          </picture>
+          <HomeHeroPicture alt={de ? 'Prag im goldenen Abendlicht' : 'Prague in golden evening light'} />
           <div
             className="absolute inset-0"
             style={{ background: 'linear-gradient(to top, rgba(20,16,12,0.78) 0%, rgba(20,16,12,0.12) 42%, rgba(20,16,12,0.18) 100%), linear-gradient(to right, rgba(20,16,12,0.55) 0%, transparent 55%)' }}
@@ -198,7 +167,7 @@ const Home: React.FC = () => {
         <div className={`${SHELL} grid grid-cols-1 items-center gap-[clamp(2.5rem,6vw,5.5rem)] min-[820px]:grid-cols-[0.92fr_1.08fr]`}>
           <Reveal className="relative">
             <div className="absolute border border-brass" style={{ top: '14px', right: '-14px', bottom: '-14px', left: '14px' }} aria-hidden />
-            <img src="/images/zuzana-portrait.jpg" alt="Zuzana Manová" loading="lazy" className="relative aspect-[4/5] w-full object-cover [object-position:center_18%]" />
+            <Portrait alt="Zuzana Manová" sizes="(max-width: 819px) calc(100vw - 48px), 520px" className="relative aspect-[4/5] w-full object-cover [object-position:center_18%]" />
           </Reveal>
 
           <div>

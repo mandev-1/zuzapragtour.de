@@ -273,6 +273,7 @@ export default async function handler(
 export const config: Config = {
   path: "/*",
   excludedPath: [
+    "/api/*",
     "/static/*",
     "/images/*",
     "/stitch-exports/*",

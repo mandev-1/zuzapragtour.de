@@ -24,6 +24,7 @@ import {
   Reveal,
   SHELL,
 } from '@/src/components/site/SiteUI';
+import { Portrait } from '../components/site/Portrait';
 
 /* ── Stat band (mockup z-stats) ───────────────────────────────── */
 const STATS: { n: string; de: string; en: string }[] = [
@@ -79,11 +80,12 @@ const ZuzanaManovaPage: React.FC = () => {
               style={{ top: '16px', right: '-16px', bottom: '-16px', left: '16px' }}
               aria-hidden
             />
-            <img
-              src="/images/zuzana-portrait.jpg"
+            <Portrait
               alt={de ? 'Ing. Zuzana Manová, zertifizierte Prager Stadtführerin' : 'Ing. Zuzana Manová, certified Prague tour guide'}
+              sizes="(max-width: 859px) calc(100vw - 48px), 500px"
               className="relative aspect-[4/5] w-full object-cover"
               style={{ objectPosition: 'center 16%' }}
+              loading="eager"
               fetchPriority="high"
             />
           </Reveal>

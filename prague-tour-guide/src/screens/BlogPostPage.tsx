@@ -20,11 +20,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
+import { postText } from '../utils/postText';
 import ProgressBar from '../components/blog/ProgressBar';
 import BackToTop from '../components/blog/BackToTop';
 import ArticleFooter from '../components/blog/ArticleFooter';
 import { BRAND } from '../brand';
 import { mountJournalMaps } from '../utils/journalMaps';
+import { AVATAR_SRC } from '../components/site/Portrait';
 
 function readTimeMin(html: string): number {
   const text = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -51,7 +53,7 @@ const BlogPostPage: React.FC = () => {
   const post = blogPosts.find((p: any) => p.slug === slug || p.slugDe === slug);
 
   const isJournal = !!post?.isJournal;
-  const rawContent = post?.contentKey ? t(post.contentKey as any) : '';
+  const rawContent = post?.contentKey ? postText(post.contentKey, language) : '';
   const processedContent = React.useMemo(() => injectHeadingIds(rawContent), [rawContent]);
 
   const contentRef = React.useRef<HTMLDivElement>(null);
@@ -67,14 +69,14 @@ const BlogPostPage: React.FC = () => {
     (de ? p.category ?? p.tagsDe?.[0] ?? p.tags?.[0] : p.tags?.[0] ?? p.category) ?? 'Journal';
 
   const category = catOf(post);
-  const kicker = post.kickerKey ? t(post.kickerKey as any) : '';
+  const kicker = post.kickerKey ? postText(post.kickerKey, language) : '';
   const readMins = rawContent ? readTimeMin(rawContent) : null;
-  const date = t(post.dateKey as any);
-  const titlePlain = t(post.titleKey as any);
+  const date = postText(post.dateKey, language);
+  const titlePlain = postText(post.titleKey, language);
   const titleHtml = de ? post.titleHtmlDe : post.titleHtml;
-  const standfirst = t((post.dekKey ?? post.excerptKey) as any);
-  const heroCap = post.heroCapKey ? t(post.heroCapKey as any) : '';
-  const sourcesHtml = post.sourcesKey ? t(post.sourcesKey as any) : '';
+  const standfirst = postText(post.dekKey ?? post.excerptKey, language);
+  const heroCap = post.heroCapKey ? postText(post.heroCapKey, language) : '';
+  const sourcesHtml = post.sourcesKey ? postText(post.sourcesKey, language) : '';
   const cta = post.cta?.[language] ?? post.cta?.de;
 
   const relatedItems = blogPosts
@@ -84,9 +86,9 @@ const BlogPostPage: React.FC = () => {
       id: p.id,
       href: `/blog/${de && p.slugDe ? p.slugDe : p.slug}`,
       img: p.image,
-      title: t(p.titleKey as any).replace(/<[^>]+>/g, ''),
+      title: postText(p.titleKey, language).replace(/<[^>]+>/g, ''),
       cat: catOf(p),
-      blurb: t(p.excerptKey as any),
+      blurb: postText(p.excerptKey, language),
     }));
 
   const h1Class =
@@ -119,7 +121,7 @@ const BlogPostPage: React.FC = () => {
           )}
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 border-y border-journal-rule py-4">
             <div className="flex items-center gap-3">
-              <img src="/images/zuzana-portrait.jpg" alt="" className="h-11 w-11 rounded-full object-cover [object-position:center_18%]" />
+              <img src={AVATAR_SRC} alt="" className="h-11 w-11 rounded-full object-cover" />
               <div className="font-hanken text-[15px] leading-[1.4]">
                 <div className="font-bold text-journal-ink">Ing. Zuzana Manová</div>
                 <div className="text-journal-mute">
@@ -208,7 +210,7 @@ const BlogPostPage: React.FC = () => {
           <ArticleFooter
             tags={de ? (post.tagsDe ?? post.tags) : post.tags}
             author={{
-              portrait: { src: '/images/zuzana-portrait.jpg', alt: 'Ing. Zuzana Manová' },
+              portrait: { src: AVATAR_SRC, alt: 'Ing. Zuzana Manová' },
               kicker: de ? 'Über die Autorin' : 'About the Author',
               name: 'Ing. Zuzana Manová',
               bio: de

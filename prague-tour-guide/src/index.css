@@ -103,3 +103,14 @@
     padding-top: 0 !important;
   }
 }
+
+/* TripAdvisor widget: TripAdvisorWidget moves the title link inside its <dt>
+   (accessibility fix); keep the title's own look instead of the widget's
+   default link style. */
+#CDSWIDSSP .widSSPData .widSSPH18 > a,
+#CDSWIDSSP .widSSPData .widSSPH18 > a:link,
+#CDSWIDSSP .widSSPData .widSSPH18 > a:visited {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}

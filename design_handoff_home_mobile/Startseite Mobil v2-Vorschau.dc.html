@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#ECE8E1}a{color:#6B1F2A}a:hover{color:#4F1620}</style>
+</helmet>
+<div data-screen-label="Startseite Mobil v2-Vorschau" style="min-height:100vh;padding:32px 24px 56px;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#1A1714">
+  <div style="margin:0 auto 28px;max-width:1290px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 32px">
+    <div>
+      <div style="font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#6B6055">zuzapragtour.de · návrh v2</div>
+      <h1 style="margin:6px 0 0;font-size:28px;font-weight:600;line-height:1.2">Domovská stránka na mobilu, která prodává tour</h1>
+    </div>
+    <div style="font-size:14px;line-height:1.5;color:#3A332C">Délka na 390 × 844: nově <b>{{ lenNew }}</b> · dnes <b>{{ lenOld }}</b></div>
+  </div>
+
+  <div style="margin:0 auto;max-width:1290px;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:40px">
+    <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+      <figcaption style="font-size:14px;font-weight:600;color:#3A332C">Nově · 390 × 844</figcaption>
+      <iframe ref="{{ fNew }}" src="Startseite Mobil v2.dc.html" title="Startseite v2 390 px" style="display:block;width:390px;height:844px;border:0;border-radius:28px;background:#FFFFFF;box-shadow:0 0 0 10px #1A1714"></iframe>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+      <figcaption style="font-size:14px;font-weight:600;color:#6B6055">Dnes · 390 × 844</figcaption>
+      <iframe ref="{{ fOld }}" src="Startseite Mobil.dc.html" title="Startseite heute 390 px" style="display:block;width:390px;height:844px;border:0;border-radius:28px;background:#FFFFFF;box-shadow:0 0 0 10px #8A847D"></iframe>
+    </figure>
+
+    <aside style="width:400px;max-width:100%;border-radius:12px;background:#FFFFFF;padding:22px 24px 8px;box-shadow:0 1px 2px rgba(26,23,20,0.06)">
+      <h2 style="margin:0;font-size:18px;font-weight:700">Co je nové</h2>
+      <p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:#5C5650">Všechna fakta jsou z dnešního webu (translations.ts). „Zobrazit“ posune levý telefon.</p>
+      <ol style="margin:14px 0 0;padding:0;list-style:none">
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">1</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Hero s jasnou nabídkou a WhatsAppem</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">„Prag privat entdecken. Auf Deutsch.“ Pod tím 4,9 na TripAdvisoru, „Privat – nur Ihre Gruppe“ a jedno tlačítko na WhatsApp s předvyplněnou zprávou. Pod ním je věta „Ich antworte in der Regel innerhalb von 24 Stunden.“</p>
+            <button type="button" onClick="{{ go.top }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">2</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">„Welche Tour passt zu Ihnen?“</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">Čtyři dlaždice pro tvoje publikum: poprvé v Praze, senioři („In Ihrem Tempo“), historie do roku 1989 a firmy. Ťuknutí sjede na doporučenou tour.</p>
+            <button type="button" onClick="{{ go.audience }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">3</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Tour s fotkou, délkou a hlavní výhodou</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">Krátké názvy (SEO zůstane v meta titulcích), délka, místa a jedna výhoda z popisu tour, např. „Weitgehend flach“ nebo „Augenzeugenbericht vom November 1989“. „Diese Tour anfragen“ otevře WhatsApp s názvem tour. Nové pořadí: Altstadt, Burg, Deutsches Erbe, Havel, Verstecktes, Individuell.</p>
+            <button type="button" onClick="{{ go.tours }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">4</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Recenze a fotky hostů na jednom místě</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">Všude jednotně „4,9 von 5 auf TripAdvisor“. Tři dnešní citace jsou v posuvném pásu, galerie je zmenšená na pás fotek. Boxy ve starém stylu nahradily dva odkazy (TripAdvisor, TourHQ).</p>
+            <button type="button" onClick="{{ go.reviews }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">5</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Zuzana ve zkratce</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">Dvě věty z úvodu a čtyři fakta: licence, Židovské muzeum, školy, rodiny a firmy, listopad 1989 na Václaváku. Citát z manifestu je teď tady. Čísla 5,0 a „4,9k Touren“ jsem vypustil.</p>
+            <button type="button" onClick="{{ go.about }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">6</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Závěr: tři kroky a poptávka</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">„Schreiben Sie mir → Persönliche Antwort → Wir treffen uns“, pak WhatsApp, telefon a odkaz na formulář. Nahrazuje dnešní závěrečný CTA blok.</p>
+            <button type="button" onClick="{{ go.end }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">7</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Lišta WhatsApp dole</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">Objeví se po prvním scrollu za hero a zmizí u závěrečné sekce, aby se tlačítka nezdvojovala.</p>
+            <button type="button" onClick="{{ go.tours }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+        <li style="display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #E4DFD6">
+          <span style="display:grid;width:24px;height:24px;place-items:center;border-radius:50%;background:#6B1F2A;font-size:12px;font-weight:700;color:#FFFFFF">8</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;line-height:1.35">Patička v prémiovém stylu</div>
+            <p style="margin:4px 0 0;font-size:14px;line-height:1.5;color:#3A332C">Stejný obsah, ale písma Italiana, Libre Caslon a Inter Tight. Nahoře je logo „Zuza &amp; Pragtour“. Pozor: patička je společná pro celý web.</p>
+            <button type="button" onClick="{{ go.footer }}" style="margin-top:6px;padding:0;border:0;background:none;font:inherit;font-size:13px;font-weight:600;color:#6B1F2A;cursor:pointer">Zobrazit</button>
+          </div>
+        </li>
+      </ol>
+      <p style="margin:0;padding:14px 0 16px;border-top:1px solid #E4DFD6;font-size:13px;line-height:1.5;color:#5C5650">Tweaks v souboru Startseite Mobil v2: hlavní kanál WhatsApp / formulář, lišta zap/vyp, sekce „Für wen“ zap/vyp.</p>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lenNew: 0, lenOld: 0 };
+  fNew = React.createRef();
+  fOld = React.createRef();
+  componentDidMount() {
+    this.iv = setInterval(() => this.measure(), 800);
+    this.stop = setTimeout(() => clearInterval(this.iv), 20000);
+  }
+  componentWillUnmount() { clearInterval(this.iv); clearTimeout(this.stop); }
+  win(ref) {
+    try { const f = ref.current; return f && f.contentWindow && f.contentWindow.document ? f.contentWindow : null; } catch (e) { return null; }
+  }
+  measure() {
+    const a = this.win(this.fNew), b = this.win(this.fOld);
+    const n = a ? a.document.documentElement.scrollHeight : 0;
+    const o = b ? b.document.documentElement.scrollHeight : 0;
+    if ((n > 900 && n !== this.state.lenNew) || (o > 900 && o !== this.state.lenOld)) this.setState({ lenNew: n > 900 ? n : this.state.lenNew, lenOld: o > 900 ? o : this.state.lenOld });
+  }
+  go(id) {
+    const w = this.win(this.fNew); if (!w) return;
+    const scroll = () => {
+      const el = w.document.getElementById(id); if (!el) return;
+      w.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + w.scrollY), behavior: 'smooth' });
+    };
+    const b = w.document.querySelector('[aria-controls="mobile-menu"]');
+    if (b && b.getAttribute('aria-expanded') === 'true') { b.click(); setTimeout(scroll, 70); } else scroll();
+  }
+  renderVals() {
+    const fmt = n => n.toLocaleString('cs-CZ', { maximumFractionDigits: 1 });
+    const txt = n => (n ? `${fmt(n)} px ≈ ${fmt(n / 844)} obrazovky` : '…');
+    return {
+      fNew: this.fNew, fOld: this.fOld,
+      lenNew: txt(this.state.lenNew), lenOld: txt(this.state.lenOld),
+      go: {
+        top: () => this.go('top'), audience: () => this.go('fuer-wen'), tours: () => this.go('tours'),
+        reviews: () => this.go('reviews'), about: () => this.go('about'), end: () => this.go('anfrage'), footer: () => this.go('footer'),
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

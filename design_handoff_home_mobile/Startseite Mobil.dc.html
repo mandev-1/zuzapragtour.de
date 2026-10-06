@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&family=Italiana&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Noto+Serif:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&icon_names=arrow_forward,open_in_new,star&display=block" rel="stylesheet">
+<style>
+html{line-height:1.5;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:#faf8f4;color:#1a1613;font-family:'Libre Caslon Text','EB Garamond',Georgia,serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*,::before,::after{box-sizing:border-box}
+h1,h2,h3,h4,p,figure,ul{margin:0}
+ul{padding:0;list-style:none}
+img,svg{display:block;vertical-align:middle;max-width:100%}
+button{font:inherit;color:inherit;background:transparent;border:0;padding:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit}
+b{font-weight:bolder}
+</style>
+</helmet>
+
+<header ref="{{ headerRef }}" data-screen-label="Header" style="position:fixed;top:0;left:0;right:0;z-index:50;width:100%;border-bottom:1px solid transparent">
+  <sc-if value="{{ solidBg }}" hint-placeholder-val="{{ false }}">
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;bottom:-1px;border-bottom:1px solid rgba(217,207,188,0.7);background:rgba(250,246,236,0.82);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5)"></div>
+  </sc-if>
+  <div style="position:relative;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;column-gap:clamp(8px,3vw,24px);padding:0.6rem clamp(1.5rem,5vw,5rem)">
+    <a href="https://zuzapragtour.de/" target="_blank" rel="noopener" style="display:flex;min-width:0;align-items:center;gap:12px">
+      <sc-if value="{{ light }}" hint-placeholder-val="{{ true }}">
+        <span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Italiana',serif;font-size:clamp(19px,5.4vw,24px);letter-spacing:0.02em;color:#F5EFE4">Zuza <b style="font-weight:400">&amp;</b> Pragtour</span>
+      </sc-if>
+      <sc-if value="{{ dark }}" hint-placeholder-val="{{ false }}">
+        <span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Italiana',serif;font-size:clamp(19px,5.4vw,24px);letter-spacing:0.02em;color:#1A1714">Zuza <b style="font-weight:400">&amp;</b> Pragtour</span>
+      </sc-if>
+    </a>
+    <div style="display:flex;flex-shrink:0;align-items:center;gap:4px">
+      <a href="https://zuzapragtour.de/book#contact-title" target="_blank" rel="noopener" style="display:flex;min-height:40px;align-items:center;white-space:nowrap;border-radius:4px;background:#6B1F2A;padding:0 clamp(10px,3.6vw,14px);font-family:'Inter Tight',sans-serif;font-size:clamp(13px,3.8vw,14px);font-weight:600;color:#FFFFFF" style-hover="background:#4F1620;color:#FFFFFF">Tour buchen</a>
+      <button type="button" aria-controls="mobile-menu" aria-expanded="{{ menu }}" aria-label="{{ menuLabel }}" onClick="{{ toggleMenu }}" style="margin-right:-10px;display:grid;width:44px;height:44px;place-items:center;border:0;background:transparent;padding:0">
+        <sc-if value="{{ burgerLight }}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5EFE4" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+        <sc-if value="{{ burgerDark }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+        <sc-if value="{{ closeIcon }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
+      </button>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+  <nav id="mobile-menu" aria-label="Menü" data-screen-label="Menü" style="position:fixed;left:0;right:0;bottom:0;top:{{ panelTop }}px;z-index:49;overflow-y:auto;overscroll-behavior:contain;background:#FFFFFF;padding:8px 20px 32px">
+    <div style="display:flex;flex-direction:column">
+      <a href="https://zuzapragtour.de/tours" target="_blank" rel="noopener" style="display:flex;min-height:60px;align-items:center;justify-content:space-between;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Touren</a>
+      <a href="https://zuzapragtour.de/zuzana-manova" target="_blank" rel="noopener" style="display:flex;min-height:60px;align-items:center;justify-content:space-between;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Über Zuzana</a>
+      <a href="https://zuzapragtour.de/blog" target="_blank" rel="noopener" style="display:flex;min-height:60px;align-items:center;justify-content:space-between;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Journal</a>
+      <a href="https://zuzapragtour.de/contact" target="_blank" rel="noopener" style="display:flex;min-height:60px;align-items:center;justify-content:space-between;border-bottom:1px solid #E4DFD6;font-family:'Newsreader',Georgia,serif;font-size:26px;font-weight:500;color:#1A1714">Kontakt</a>
+    </div>
+    <a href="https://zuzapragtour.de/book#contact-title" target="_blank" rel="noopener" style="margin-top:28px;display:flex;min-height:52px;align-items:center;justify-content:center;border-radius:4px;background:#6B1F2A;font-family:'Hanken Grotesk',sans-serif;font-size:16px;font-weight:600;color:#FFFFFF" style-hover="background:#4F1620;color:#FFFFFF">Tour buchen</a>
+    <div style="margin-top:10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+      <a href="tel:+420721231933" style="display:flex;min-height:48px;align-items:center;justify-content:center;border-radius:4px;border:1px solid #D9D3C9;font-family:'Hanken Grotesk',sans-serif;font-size:15px;font-weight:600;color:#1A1714">Anrufen</a>
+      <a href="https://wa.me/420721231933" target="_blank" rel="noopener noreferrer" style="display:flex;min-height:48px;align-items:center;justify-content:center;border-radius:4px;border:1px solid #D9D3C9;font-family:'Hanken Grotesk',sans-serif;font-size:15px;font-weight:600;color:#1A1714">WhatsApp</a>
+    </div>
+  </nav>
+</sc-if>
+
+<div data-screen-label="Startseite" style="background:#FAF6EC;color:#1A1714;-webkit-font-smoothing:antialiased">
+
+  <section id="top" data-screen-label="Hero" style="position:relative;display:flex;min-height:100svh;align-items:flex-end;overflow:hidden">
+    <div style="position:absolute;inset:0;z-index:0">
+      <img src="img/home/vltava-bridges-hero-1080.webp" alt="Prag im goldenen Abendlicht" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(20,16,12,0.78) 0%, rgba(20,16,12,0.12) 42%, rgba(20,16,12,0.18) 100%), linear-gradient(to right, rgba(20,16,12,0.55) 0%, transparent 55%)"></div>
+    </div>
+    <div style="position:relative;z-index:2;margin:0 auto;width:100%;max-width:1240px;padding:128px clamp(1.5rem,5vw,5rem) clamp(3rem,7vh,6rem)">
+      <span style="margin-bottom:28px;display:inline-flex;align-items:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#F5EFE4"><span aria-hidden="true" style="height:1px;width:28px;background:#FDC34D"></span>Zertifizierte Prag-Expertin</span>
+      <h1 style="margin:0;font-family:'Italiana',serif;font-size:clamp(3.2rem,8.5vw,7rem);font-weight:400;line-height:0.98;letter-spacing:-0.02em;color:#F5EFE4;text-wrap:balance">Entdecken Sie<br><em style="font-family:'Cormorant Garamond',serif;font-style:italic">Prag</em>, äusserst interessant.</h1>
+      <p style="margin:1.8rem 0 2.6rem;max-width:32rem;font-family:'Libre Caslon Text',serif;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.6;color:rgba(245,239,228,0.9)">Private Stadtführungen mit Zuzana Manová — vierzig Jahre Geschichten, für ein Publikum von einem.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+        <a href="https://zuzapragtour.de/book#contact-title" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.7rem;border:1px solid #F5EFE4;padding:1.05rem 1.9rem;font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:#F5EFE4" style-hover="background:#F5EFE4;color:#1A1714">Anfrage senden<span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:17px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;vertical-align:middle;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24">arrow_forward</span></a>
+        <a href="https://zuzapragtour.de/tours" target="_blank" rel="noopener" style="position:relative;display:inline-flex;align-items:center;gap:0.55rem;white-space:nowrap;padding-bottom:4px;font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:#F5EFE4">Touren erkunden<span aria-hidden="true" style="position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Manifest" style="position:relative;overflow:hidden;margin:0 auto;width:100%;max-width:1240px;padding:clamp(3.25rem,6vh,4.75rem) clamp(1.5rem,5vw,5rem);text-align:center">
+    <div aria-hidden="true" style="pointer-events:none;position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;gap:clamp(0.75rem,3vw,2.25rem);color:#A88654;opacity:0.08">
+      <span style="font-size:clamp(3.25rem,11vw,8rem);line-height:1">★</span>
+      <span style="font-size:clamp(3.25rem,11vw,8rem);line-height:1">★</span>
+      <span style="font-size:clamp(3.25rem,11vw,8rem);line-height:1">★</span>
+      <span style="font-size:clamp(3.25rem,11vw,8rem);line-height:1">★</span>
+      <span style="font-size:clamp(3.25rem,11vw,8rem);line-height:1">★</span>
+    </div>
+    <div style="position:relative;z-index:1">
+      <span style="display:inline-flex;align-items:center;justify-content:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#8C6A3C"><span aria-hidden="true" style="height:1px;width:28px;background:rgba(168,134,84,0.7)"></span>Eine persönliche Einladung<span aria-hidden="true" style="height:1px;width:28px;background:rgba(168,134,84,0.7)"></span></span>
+      <p style="margin:16px auto 0;max-width:44rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.45rem,2.6vw,2.1rem);line-height:1.32;color:#1A1714">„Prag ist eine vielschichtige Geschichte — <em style="color:#6B1F2A">lassen Sie uns diese gemeinsam lesen.</em>“</p>
+      <div style="margin-top:1.1rem;font-family:'Inter Tight',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.24em;color:#6B6055">— Ing. Zuzana Manová</div>
+    </div>
+  </section>
+
+  <section id="tours" data-screen-label="Touren" style="border-top:1px solid #D9CFBC;padding:clamp(3rem,7vh,6rem) 0 clamp(4rem,9vh,7rem)">
+    <div style="margin:0 auto;width:100%;max-width:1240px;padding:0 clamp(1.5rem,5vw,5rem)">
+      <div style="margin-bottom:clamp(2.5rem,5vh,4rem);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#8C6A3C"><span aria-hidden="true" style="height:1px;width:28px;background:rgba(168,134,84,0.7)"></span>Ausgewählte Erlebnisse</span>
+          <h2 style="margin:16px 0 0;font-family:'Italiana',serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:400;line-height:1.04;letter-spacing:-0.015em">Jede Tour beginnt<br>mit Ihrer <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#6B1F2A">Neugier</em>.</h2>
+        </div>
+        <p style="max-width:24rem;font-family:'Libre Caslon Text',serif;font-size:16px;line-height:1.65;color:#6B6055">Maßgeschneiderte Routen für anspruchsvolle Reisende — Authentizität, Geschichte und der lokale Puls der Stadt.</p>
+      </div>
+      <ul style="margin:0;padding:0;list-style:none;border-top:1px solid #D9CFBC">
+        <li style="border-bottom:1px solid #D9CFBC">
+          <a href="https://zuzapragtour.de/tours/prager-burg" target="_blank" rel="noopener" style="margin:0.4rem -1.2rem;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.5rem;border-radius:8px;padding:1.55rem 1.2rem;background:#FDFAF3;box-shadow:0 18px 40px rgba(26,23,20,0.12)">
+            <span style="width:2.2rem;font-family:'Italiana',serif;font-size:16px;line-height:24px;color:#6B1F2A">01</span>
+            <span style="min-width:0;font-family:'Italiana',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;line-height:1.12;color:#6B1F2A">Prager Burg – Stadtführung Prag auf Deutsch</span>
+            <span aria-hidden="true" style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;color:#6B1F2A">arrow_forward</span>
+          </a>
+        </li>
+        <li style="border-bottom:1px solid #D9CFBC">
+          <a href="https://zuzapragtour.de/tours/altstadt-juedisches-viertel" target="_blank" rel="noopener" style="margin:0.4rem -1.2rem;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.5rem;border-radius:8px;padding:1.55rem 1.2rem">
+            <span style="width:2.2rem;font-family:'Italiana',serif;font-size:16px;line-height:24px;color:#8C6A3C">02</span>
+            <span style="min-width:0;font-family:'Italiana',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;line-height:1.12;color:#1A1714">Altstadt &amp; Jüdisches Viertel – Prag Stadtführerin</span>
+            <span aria-hidden="true" style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;color:#8C6A3C;opacity:0;transform:translateX(-6px)">arrow_forward</span>
+          </a>
+        </li>
+        <li style="border-bottom:1px solid #D9CFBC">
+          <a href="https://zuzapragtour.de/tours/individuelle-privattour" target="_blank" rel="noopener" style="margin:0.4rem -1.2rem;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.5rem;border-radius:8px;padding:1.55rem 1.2rem">
+            <span style="width:2.2rem;font-family:'Italiana',serif;font-size:16px;line-height:24px;color:#8C6A3C">03</span>
+            <span style="min-width:0;font-family:'Italiana',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;line-height:1.12;color:#1A1714">Individuelle Privattour Prag auf Deutsch</span>
+            <span aria-hidden="true" style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;color:#8C6A3C;opacity:0;transform:translateX(-6px)">arrow_forward</span>
+          </a>
+        </li>
+        <li style="border-bottom:1px solid #D9CFBC">
+          <a href="https://zuzapragtour.de/tours/verstecktes-prag" target="_blank" rel="noopener" style="margin:0.4rem -1.2rem;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.5rem;border-radius:8px;padding:1.55rem 1.2rem">
+            <span style="width:2.2rem;font-family:'Italiana',serif;font-size:16px;line-height:24px;color:#8C6A3C">04</span>
+            <span style="min-width:0;font-family:'Italiana',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;line-height:1.12;color:#1A1714">Verstecktes Prag – Deutschsprachige Stadtführerin</span>
+            <span aria-hidden="true" style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;color:#8C6A3C;opacity:0;transform:translateX(-6px)">arrow_forward</span>
+          </a>
+        </li>
+        <li style="border-bottom:1px solid #D9CFBC">
+          <a href="https://zuzapragtour.de/tours/prag-deutsches-erbe" target="_blank" rel="noopener" style="margin:0.4rem -1.2rem;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.5rem;border-radius:8px;padding:1.55rem 1.2rem">
+            <span style="width:2.2rem;font-family:'Italiana',serif;font-size:16px;line-height:24px;color:#8C6A3C">05</span>
+            <span style="min-width:0;font-family:'Italiana',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;line-height:1.12;color:#1A1714">Prags Deutsches Erbe</span>
+            <span aria-hidden="true" style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;color:#8C6A3C;opacity:0;transform:translateX(-6px)">arrow_forward</span>
+          </a>
+        </li>
+        <li style="border-bottom:1px solid #D9CFBC">
+          <a href="https://zuzapragtour.de/tours/vaclav-havel-tour-prag" target="_blank" rel="noopener" style="margin:0.4rem -1.2rem;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.5rem;border-radius:8px;padding:1.55rem 1.2rem">
+            <span style="width:2.2rem;font-family:'Italiana',serif;font-size:16px;line-height:24px;color:#8C6A3C">06</span>
+            <span style="min-width:0;font-family:'Italiana',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;line-height:1.12;color:#1A1714">Václav-Havel-Tour: Orte der Freiheit</span>
+            <span aria-hidden="true" style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;color:#8C6A3C;opacity:0;transform:translateX(-6px)">arrow_forward</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" data-screen-label="Über Zuzana" style="background:#EDE4D3;padding:clamp(4rem,9vh,7rem) 0">
+    <div style="margin:0 auto;width:100%;max-width:1240px;padding:0 clamp(1.5rem,5vw,5rem);display:grid;grid-template-columns:minmax(0,1fr);align-items:center;gap:clamp(2.5rem,6vw,5.5rem)">
+      <div style="position:relative">
+        <div aria-hidden="true" style="position:absolute;top:14px;right:-14px;bottom:-14px;left:14px;border:1px solid #A88654"></div>
+        <img src="img/blog/zuzana-portrait.jpg" alt="Zuzana Manová" style="position:relative;aspect-ratio:4/5;width:100%;height:auto;object-fit:cover;object-position:center 18%">
+      </div>
+      <div>
+        <div><span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#8C6A3C"><span aria-hidden="true" style="height:1px;width:28px;background:rgba(168,134,84,0.7)"></span>Lernen Sie Zuzana kennen</span></div>
+        <h2 style="margin:16px 0 1.6rem;font-family:'Italiana',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;line-height:1.04;letter-spacing:-0.015em">Prag, erzählt mit <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#6B1F2A">Leidenschaft</em>.</h2>
+        <p style="margin:0 0 1.6rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.55rem;line-height:1.45;color:#6B1F2A">Ich bin Ing. Zuzana Manová – deutschsprachige Prag-Expertin und zertifizierte Stadtführerin. Seit 1986 führe ich Besucher durch Prag. Vierzig Jahre, in denen ich zugesehen habe, wie sich diese Stadt verändert, ihre Geheimnisse bewahrt und mich überrascht. Die meisten Wochen lerne ich noch etwas Neues.</p>
+        <p style="margin:0 0 1.2rem;font-family:'Libre Caslon Text',serif;font-size:1.075rem;line-height:1.78;color:#3A332C">Als Spezialistin für Prager Geschichte und Kultur besitze ich die offizielle tschechische Stadtführer-Zertifizierung und eine zusätzliche Akkreditierung des Jüdischen Museums in Prag als Expertin für das Jüdische Viertel. Im Laufe der Jahre bin ich mit Schulklassen, Familien, Vorständen, Filmteams und dem einen oder anderen Diplomaten durch diese Straßen gegangen. Die deutschsprachige Führung, die ich einem Rentnerpaar aus München gebe, ist nicht dieselbe wie die für eine Gruppe Architekturstudenten aus London. Genau darum geht es.</p>
+        <p style="margin:0 0 1.2rem;font-family:'Libre Caslon Text',serif;font-size:1.075rem;line-height:1.78;color:#3A332C">Sagen Sie mir, was Sie interessiert, und ich baue den Rundgang darum. Wenn Sie es noch nicht wissen, umso besser. Ich habe vierzig Jahre Meinungen darüber, wohin ich Sie mitnehmen sollte.</p>
+        <div id="about-stats" style="margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:clamp(1.5rem,4vw,3.5rem);border-top:1px solid #D9CFBC;padding-top:2rem">
+          <div>
+            <div style="font-family:'Italiana',serif;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1;color:#6B1F2A">40+</div>
+            <div style="margin-top:0.6rem;font-family:'Inter Tight',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#6B6055">Jahre Erfahrung</div>
+          </div>
+          <div>
+            <div style="font-family:'Italiana',serif;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1;color:#6B1F2A">4,9k</div>
+            <div style="margin-top:0.6rem;font-family:'Inter Tight',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#6B6055">Touren kuratiert</div>
+          </div>
+          <div>
+            <div style="font-family:'Italiana',serif;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1;color:#6B1F2A">5,0</div>
+            <div style="margin-top:0.6rem;font-family:'Inter Tight',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#6B6055">Sterne Bewertung</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem">
+          <a href="https://zuzapragtour.de/zuzana-manova" target="_blank" rel="noopener" style="position:relative;display:inline-flex;align-items:center;gap:0.55rem;white-space:nowrap;padding-bottom:4px;font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:#1A1714">Mehr über Zuzana<span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:16px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;vertical-align:middle;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24">arrow_forward</span><span aria-hidden="true" style="position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" data-screen-label="Galerie" style="background:#1A1714;padding:clamp(4rem,9vh,7rem) 0;color:#F5EFE4">
+    <div style="margin:0 auto;width:100%;max-width:1240px;padding:0 clamp(1.5rem,5vw,5rem)">
+      <div><span style="display:inline-flex;align-items:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#FDC34D"><span aria-hidden="true" style="height:1px;width:28px;background:#FDC34D"></span>Von meinen Gästen</span></div>
+      <h2 style="margin:0.8rem 0 0;font-family:'Italiana',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:#F5EFE4">Augenblicke <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#FDC34D">unterwegs</em></h2>
+      <div style="margin-top:clamp(2rem,4vh,3rem);display:grid;grid-auto-rows:170px;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
+        <figure style="position:relative;margin:0;overflow:hidden;grid-column:span 2;grid-row:span 2"><img src="img/blog/guest-photo-tourguide.jpg" alt="Zuzana mit Gästen" style="width:100%;height:100%;object-fit:cover"></figure>
+        <figure style="position:relative;margin:0;overflow:hidden"><img src="img/home/guest-night.jpeg" alt="Prag bei Nacht" style="width:100%;height:100%;object-fit:cover"></figure>
+        <figure style="position:relative;margin:0;overflow:hidden"><img src="img/home/guest-food.jpeg" alt="Böhmische Küche" style="width:100%;height:100%;object-fit:cover"></figure>
+        <figure style="position:relative;margin:0;overflow:hidden;grid-column:span 2"><img src="img/blog/blog-boat-prague.jpg" alt="Boot auf der Moldau" style="width:100%;height:100%;object-fit:cover"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" data-screen-label="Bewertungen" style="border-top:1px solid #D9CFBC;padding:clamp(4rem,9vh,7rem) 0">
+    <div style="margin:0 auto;width:100%;max-width:1240px;padding:0 clamp(1.5rem,5vw,5rem)">
+      <div style="margin-bottom:clamp(2.5rem,5vh,4rem);text-align:center">
+        <div style="margin-bottom:20px;display:flex;justify-content:center;gap:5px;color:#7B5800">
+          <span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24">star</span>
+          <span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24">star</span>
+          <span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24">star</span>
+          <span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24">star</span>
+          <span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:18px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-feature-settings:'liga';font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24">star</span>
+        </div>
+        <span style="display:inline-flex;align-items:center;justify-content:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#8C6A3C"><span aria-hidden="true" style="height:1px;width:28px;background:rgba(168,134,84,0.7)"></span>Unvergessliche Erinnerungen<span aria-hidden="true" style="height:1px;width:28px;background:rgba(168,134,84,0.7)"></span></span>
+        <h2 style="margin:0.8rem 0 0;font-family:'Italiana',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.04;letter-spacing:-0.015em">Worte meiner Gäste</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid #D9CFBC">
+        <div style="display:flex;flex-direction:column;padding:2.6rem clamp(1.4rem,2.5vw,2.4rem);border-bottom:1px solid #D9CFBC">
+          <p style="margin:0 0 1.8rem;flex:1;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;line-height:1.5;color:#1A1714">„Zuzanas persönliche Geschichte mit der Stadt macht diese Führung zu etwas völlig Einzigartigem. Absolut unvergesslich.“</p>
+          <div style="font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:0.04em;color:#1A1714">Thomas K.</div>
+          <div style="margin-top:0.35rem;font-family:'Inter Tight',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#8C6A3C">TripAdvisor</div>
+        </div>
+        <div style="display:flex;flex-direction:column;padding:2.6rem clamp(1.4rem,2.5vw,2.4rem);border-bottom:1px solid #D9CFBC">
+          <p style="margin:0 0 1.8rem;flex:1;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;line-height:1.5;color:#1A1714">„Ein absolutes Highlight unserer Europareise. Ihr Wissen über Architektur und Geschichte ist unübertroffen.“</p>
+          <div style="font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:0.04em;color:#1A1714">Monika H.</div>
+          <div style="margin-top:0.35rem;font-family:'Inter Tight',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#8C6A3C">TourHQ Verifiziert</div>
+        </div>
+        <div style="display:flex;flex-direction:column;padding:2.6rem clamp(1.4rem,2.5vw,2.4rem)">
+          <p style="margin:0 0 1.8rem;flex:1;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;line-height:1.5;color:#1A1714">„Perfekt für unsere Familie. Sie hat die Kinder mit lokalen Legenden fasziniert.“</p>
+          <div style="font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;letter-spacing:0.04em;color:#1A1714">Familie Schneider</div>
+          <div style="margin-top:0.35rem;font-family:'Inter Tight',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:#8C6A3C">Private Buchung</div>
+        </div>
+      </div>
+      <div id="widgets" style="margin-top:clamp(2.5rem,5vh,4rem);display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;border-top:1px solid #D9CFBC;padding-top:clamp(2.5rem,5vh,4rem)">
+        <div style="border-radius:12px;border:1px solid rgba(199,187,166,0.2);background:#FFFFFF;padding:16px;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)">
+          <div style="display:flex;min-height:120px;align-items:center;justify-content:center;border-radius:6px;background:repeating-linear-gradient(135deg,#F4F1EB 0 8px,#ECE8E1 8px 16px);padding:12px;text-align:center;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;line-height:1.5;color:#6B6055">TripAdvisor-Widget<br>(Skript eines Drittanbieters)</div>
+          <div style="margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:4px;border-top:1px solid rgba(199,187,166,0.2);padding-top:20px">
+            <a href="https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;align-items:center;gap:4px">
+              <span aria-hidden="true" style="font-size:24px;line-height:1;color:#8A1F1F">★★★★★</span>
+              <span style="font-weight:600;color:#1A1613">4,9 von 5</span>
+              <span style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px;color:#645849">14 Bewertungen</span>
+              <span style="margin-top:4px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;font-weight:600;color:#8A1F1F">Alle Bewertungen auf TripAdvisor</span>
+            </a>
+          </div>
+        </div>
+        <div style="border-radius:12px;border:1px solid rgba(199,187,166,0.2);background:#FFFFFF;padding:16px;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:20px;padding:24px 0;text-align:center">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="border-radius:6px;background:#8A1F1F;padding:2px 8px;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:28px;font-weight:700;letter-spacing:0.025em;color:#FAF8F4">Tour</span>
+              <span style="font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:28px;font-weight:700;color:#1A1613">HQ</span>
+            </div>
+            <p style="max-width:20rem;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px;color:#645849">Lesen Sie verifizierte Bewertungen und sehen Sie Zuzanas vollständiges Guide-Profil auf TourHQ.</p>
+            <a href="https://www.tourhq.com/guide/CZ56896/zuzana-manova" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:8px;background:#8A1F1F;padding:10px 20px;font-weight:600;color:#FAF8F4;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)" style-hover="opacity:0.9;color:#FAF8F4">Profil auf TourHQ öffnen<span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:16px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;vertical-align:middle;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24">open_in_new</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" data-screen-label="CTA" style="position:relative;overflow:hidden;padding:clamp(5rem,13vh,9rem) 0;text-align:center;color:#F5EFE4">
+    <div style="position:absolute;inset:0;z-index:0">
+      <img src="img/home/charles-bridge-statue.jpg" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(rgba(79,22,32,0.82), rgba(20,16,12,0.86))"></div>
+    </div>
+    <div style="position:relative;z-index:2;margin:0 auto;width:100%;max-width:1240px;padding:0 clamp(1.5rem,5vw,5rem)">
+      <span style="display:inline-flex;align-items:center;justify-content:center;gap:0.9rem;font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.28em;color:#FDC34D"><span aria-hidden="true" style="height:1px;width:28px;background:#FDC34D"></span>Zertifizierte Expertin · 40 Jahre<span aria-hidden="true" style="height:1px;width:28px;background:#FDC34D"></span></span>
+      <h2 style="margin:1.4rem auto 1.6rem;max-width:18ch;font-family:'Italiana',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1.04;letter-spacing:-0.015em;color:#F5EFE4">Bereit, Prag zu <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#F5EFE4">entdecken</em>?</h2>
+      <p style="margin:0 auto 2.6rem;max-width:38rem;font-family:'Libre Caslon Text',serif;font-size:1.1rem;line-height:1.65;color:rgba(245,239,228,0.8)">Begrenzte Verfügbarkeit für private Buchungen. Kontaktieren Sie Zuzana noch heute, um Ihre individuelle Reiseroute zu planen.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px">
+        <a href="https://zuzapragtour.de/book#contact-title" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.7rem;border:1px solid #F5EFE4;padding:1.05rem 1.9rem;font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:#F5EFE4" style-hover="background:#F5EFE4;color:#1A1714">Anfrage senden<span style="font-family:'Material Symbols Outlined';font-weight:normal;font-style:normal;font-size:17px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;vertical-align:middle;font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24">arrow_forward</span></a>
+        <a href="tel:+420721231933" style="position:relative;display:inline-flex;align-items:center;gap:0.55rem;white-space:nowrap;padding-bottom:4px;font-family:'Inter Tight',sans-serif;font-size:12px;line-height:16px;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:#F5EFE4">+420 721 231 933<span aria-hidden="true" style="position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor"></span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer id="footer" data-screen-label="Footer" style="width:100%">
+  <div style="background:#FAF6EC">
+    <div style="margin:0 auto;max-width:72rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;padding:3rem 1.25rem">
+      <div style="grid-column:span 2">
+        <span style="margin-bottom:12px;display:block;font-family:'Noto Serif',Georgia,serif;font-size:18px;line-height:28px;color:#1A1714">Zuza Prague Tours</span>
+        <p style="margin:0 0 20px;font-family:'Libre Caslon Text',serif;font-size:14px;line-height:1.625;color:#645849">Erleben Sie Prag mit Ihrer deutschsprachigen Expertin und Spezialistin für Prag-Führungen</p>
+        <a href="https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#857563"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="flex-shrink:0"><circle cx="24" cy="24" r="24" fill="#34E0A1"></circle><circle cx="14" cy="24" r="6" fill="white"></circle><circle cx="34" cy="24" r="6" fill="white"></circle><circle cx="14" cy="24" r="3" fill="#000"></circle><circle cx="34" cy="24" r="3" fill="#000"></circle><path d="M9 18C9 18 12 10 24 10C36 10 39 18 39 18" stroke="black" stroke-width="2" stroke-linecap="round"></path></svg>4,9 ★ TripAdvisor</a>
+        <a href="https://www.instagram.com/erlebnis_tour_prag/" target="_blank" rel="noopener noreferrer" style="margin-top:8px;display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#857563"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#E1306C" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="#E1306C" stroke-width="1.5"></circle><circle cx="17.5" cy="6.5" r="1" fill="#E1306C"></circle></svg>@erlebnis_tour_prag</a>
+      </div>
+      <div>
+        <h4 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#A89880">Kontakt</h4>
+        <div style="margin-top:16px;display:flex;flex-direction:column;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px">
+          <a href="tel:+420721231933" style="padding:10px 0;color:#645849">+420 721 231 933</a>
+          <a href="mailto:zuzanamanova@email.cz" style="padding:10px 0;color:#645849">zuzanamanova@email.cz</a>
+          <a href="https://wa.me/420721231933" target="_blank" rel="noopener noreferrer" style="padding:10px 0;color:#645849">WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#A89880">Schnelllinks</h4>
+        <div style="margin-top:16px;display:flex;flex-direction:column;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px">
+          <a href="https://zuzapragtour.de/" target="_blank" rel="noopener" style="padding:10px 0;color:#645849">Startseite</a>
+          <a href="https://zuzapragtour.de/tours" target="_blank" rel="noopener" style="padding:10px 0;color:#645849">Touren</a>
+          <a href="https://zuzapragtour.de/zuzana-manova" target="_blank" rel="noopener" style="padding:10px 0;color:#645849">Über Zuzana</a>
+          <a href="https://zuzapragtour.de/blog" target="_blank" rel="noopener" style="padding:10px 0;color:#645849">Blog</a>
+          <a href="https://zuzapragtour.de/contact#contact-title" target="_blank" rel="noopener" style="padding:10px 0;color:#645849">Kontakt</a>
+          <a href="https://zuzapragtour.de/book#contact-title" target="_blank" rel="noopener" style="padding:10px 0;color:#645849">Tour buchen</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#A89880">Folgen Sie uns</h4>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:16px">
+          <a href="https://www.tripadvisor.de/Attraction_Review-g274707-d10450040-Reviews-Zuza_Prague_Tours-Prague_Bohemia.html" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;color:#645849"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="flex-shrink:0"><circle cx="24" cy="24" r="24" fill="#34E0A1"></circle><circle cx="14" cy="24" r="6" fill="white"></circle><circle cx="34" cy="24" r="6" fill="white"></circle><circle cx="14" cy="24" r="3" fill="#000"></circle><circle cx="34" cy="24" r="3" fill="#000"></circle><path d="M9 18C9 18 12 10 24 10C36 10 39 18 39 18" stroke="black" stroke-width="2" stroke-linecap="round"></path></svg><div><p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px;color:#453D33">TripAdvisor</p><p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">Bewertet mit 4,9/5 bei TripAdvisor</p></div></a>
+          <a href="https://www.tourhq.com/guide/CZ56896/zuzana-manova" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;color:#645849"><span style="display:flex;width:20px;height:20px;flex-shrink:0;align-items:center;justify-content:center;border-radius:50%;background:#E0D8C9;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:10px;font-weight:700;color:#645849">T</span><div><p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px;color:#453D33">TourHQ</p><p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">Profil &amp; Bewertungen</p></div></a>
+          <a href="https://www.instagram.com/erlebnis_tour_prag/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:10px;color:#645849"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" stroke="#E1306C" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="#E1306C" stroke-width="1.5"></circle><circle cx="17.5" cy="6.5" r="1" fill="#E1306C"></circle></svg><div><p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:14px;line-height:20px;color:#453D33">Instagram</p><p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">@erlebnis_tour_prag</p></div></a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #E0D8C9">
+      <div style="margin:0 auto;max-width:72rem;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;padding:20px 1.25rem">
+        <p style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">© 2026 Zuza Prague Tours – Zuzana Manová. Alle Rechte vorbehalten</p>
+        <div style="display:flex;align-items:center;gap:16px">
+          <a href="https://zuzapragtour.de/privacy" target="_blank" rel="noopener" style="padding:10px 0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">Datenschutz</a>
+          <span aria-hidden="true" style="color:#C7BBA6">·</span>
+          <a href="https://zuzapragtour.de/terms" target="_blank" rel="noopener" style="padding:10px 0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">AGB</a>
+          <span aria-hidden="true" style="color:#C7BBA6">·</span>
+          <a href="https://zuzapragtour.de/bewerten" target="_blank" rel="noopener" style="padding:10px 0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:12px;line-height:16px;color:#A89880">Tour bewerten</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { solid: false, menu: false, panelTop: 64 };
+  headerRef = React.createRef();
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > window.innerHeight * 0.7;
+      if (s !== this.state.solid) this.setState({ solid: s });
+    };
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('keydown', this.onKey);
+    this.onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('keydown', this.onKey);
+    document.documentElement.style.overflow = '';
+  }
+  setMenu(open) {
+    const h = this.headerRef.current;
+    const top = open && h ? Math.round(h.getBoundingClientRect().bottom) : this.state.panelTop;
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    this.setState({ menu: open, panelTop: top });
+  }
+  renderVals() {
+    const { solid, menu, panelTop } = this.state;
+    const light = !solid && !menu;
+    return {
+      headerRef: this.headerRef,
+      light, dark: !light, solidBg: !light,
+      burgerLight: light, burgerDark: !light && !menu, closeIcon: menu,
+      menu, panelTop,
+      menuLabel: menu ? 'Menü schließen' : 'Menü öffnen',
+      toggleMenu: () => this.setMenu(!this.state.menu),
+    };
+  }
+}
+</script>
+</body>
+</html>

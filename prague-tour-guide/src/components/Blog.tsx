@@ -17,9 +17,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 import { blogPosts } from '../utils/blogData';
+import { postText } from '../utils/postText';
 import { BRAND } from '../brand';
 import AdSlot from './AdSlot';
 import { ADSENSE_SLOTS } from '../config/adsense';
+import { AVATAR_SRC } from './site/Portrait';
 
 const CATEGORIES_DE = ['Alle', 'Praktischer Rat', 'Geschichte', 'Restaurants', 'Prag erleben'];
 const CATEGORIES_EN = ['All', 'Practical Tips', 'History', 'Restaurants', 'Experience Prague'];
@@ -118,16 +120,16 @@ const Blog: React.FC = () => {
     return [...blogPosts]
       .sort((a, b) => b.date.localeCompare(a.date))
       .map((post) => {
-        const title = stripTags(t(post.titleKey as any));
-        const excerpt = t(post.excerptKey as any);
+        const title = stripTags(postText(post.titleKey, language));
+        const excerpt = postText(post.excerptKey, language);
         const hay = [...post.tags, ...(post.tagsDe ?? []), excerpt].join(' ');
         const explicit = post.category ? CATEGORIES_DE.indexOf(post.category) : -1;
         const hit =
           CATEGORY_RE.find(([, re]) => re.test(title)) ?? [...CATEGORY_RE].reverse().find(([, re]) => re.test(hay));
         const ci = explicit > 0 ? explicit : hit ? hit[0] : FALLBACK_CATEGORY;
-        const content = post.contentKey ? t(post.contentKey as any) : '';
+        const content = post.contentKey ? postText(post.contentKey, language) : '';
         const mins = content ? readTimeMin(content) : 0;
-        const dateLabel = t(post.dateKey as any);
+        const dateLabel = postText(post.dateKey, language);
         const dm = /^(\d{4})-(\d{2})-(\d{2})/.exec(post.date);
         const dateShort = dm ? (de ? `${+dm[3]}. ${months[+dm[2] - 1]} ${dm[1]}` : `${months[+dm[2] - 1]} ${+dm[3]}, ${dm[1]}`) : dateLabel;
         const read = mins >= 3 ? (de ? `Lesezeit ${mins} Min.` : `${mins} min read`) : '';
@@ -264,7 +266,7 @@ const Blog: React.FC = () => {
           </div>
           <div className="jx-intro__side">
             <div className="jx-author">
-              <img src="/images/zuzana-portrait.jpg" alt="" />
+              <img src={AVATAR_SRC} alt="" />
               <div>
                 {de ? 'Persönlich geschrieben von' : 'Personally written by'}
                 <br />

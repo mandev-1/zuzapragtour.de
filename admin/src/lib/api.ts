@@ -133,6 +133,29 @@ export async function getReviewInfo(): Promise<ReviewInfo> {
   return (await r.json()) as ReviewInfo;
 }
 
+/** event → count */
+export type AbCounts = Partial<Record<'visitor' | 'view' | 'whatsapp' | 'call' | 'email' | 'form' | 'tour' | 'enquiry', number>>;
+/** variant (a|b) → device (m = mobile < 900px, d = desktop) → counts */
+export type AbVariantCounts = Partial<Record<'a' | 'b', Partial<Record<'m' | 'd', AbCounts>>>>;
+
+export interface AbResults {
+  generatedAt: string;
+  firstDay: string | null;
+  lastDay: string | null;
+  events: number;
+  totals: AbVariantCounts;
+  days: Record<string, AbVariantCounts>;
+}
+
+export async function getAbResults(): Promise<AbResults> {
+  const r = await fetch(fn('ab-results'), { credentials: 'same-origin' });
+  if (!r.ok) {
+    const d = await r.json().catch(() => ({}));
+    throw new Error(d.error || 'A/B-Testdaten konnten nicht geladen werden.');
+  }
+  return (await r.json()) as AbResults;
+}
+
 export async function listTours(): Promise<TourItem[]> {
   const r = await fetch(fn('list-tours'), { credentials: 'same-origin' });
   if (!r.ok) {

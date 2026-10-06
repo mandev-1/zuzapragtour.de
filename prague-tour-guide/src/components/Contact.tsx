@@ -26,6 +26,8 @@ import { useLanguage } from '../context/LanguageContext';
 import { BRAND } from '../brand';
 import { tours } from '../data/tours';
 import { Kicker, Reveal, Stars, btnClass, GLASS_CARD_STYLE, SHELL } from './site/SiteUI';
+import { trackAb } from '../config/abTest';
+import { AVATAR_SRC } from './site/Portrait';
 
 type ContactProps = {
   variant?: 'default' | 'booking';
@@ -99,6 +101,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
         body: encode(payload),
       });
       if (res.ok) {
+        trackAb('enquiry');
         setSubmitted(true);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else setSubmitError(true);
@@ -186,9 +189,9 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
               {/* Portrait trust card */}
               <div className="mb-[1.6rem] flex items-center gap-[1.1rem] rounded-lg border border-rule bg-white px-[1.2rem] py-[1.1rem]">
                 <img
-                  src="/images/zuzana-portrait.jpg"
+                  src={AVATAR_SRC}
                   alt="Ing. Zuzana Manová"
-                  className="h-[72px] w-[72px] shrink-0 rounded-full object-cover [object-position:center_18%]"
+                  className="h-[72px] w-[72px] shrink-0 rounded-full object-cover"
                   loading="lazy"
                 />
                 <div>

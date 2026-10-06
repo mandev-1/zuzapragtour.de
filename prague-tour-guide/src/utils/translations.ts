@@ -1,7 +1,6 @@
 // Translations for the Prague Tour Guide Website
 // German (DE) and English (EN)
-import { blogTranslations } from './blogTranslations';
-import { journalContent } from './journalGenerated';
+// Blog / journal post texts are not in here: see postText.ts.
 
 export const translations = {
   'nav.home': {
@@ -2189,20 +2188,119 @@ export const translations = {
     en: 'About Zuzana',
     de: 'Über Zuzana',
   },
+
+  // ── Homepage, mobile v2 (design_handoff_home_mobile · A/B variant B) ──
+  'home.m.eyebrow': { en: 'Guiding since 1986', de: 'Stadtführerin seit 1986' },
+  'home.m.h1': { en: 'Discover Prague privately.', de: 'Prag privat entdecken.' },
+  'home.m.h1Em': { en: 'In English.', de: 'Auf Deutsch.' },
+  'home.m.sub': {
+    en: 'Personally guided by Ing. Zuzana Manová – forty years of stories you won’t find in any guidebook.',
+    de: 'Persönlich geführt von Ing. Zuzana Manová – vierzig Jahre Geschichten, die Sie in keinem Reiseführer finden.',
+  },
+  'home.m.proofRating': { en: '4.9 on TripAdvisor', de: '4,9 auf TripAdvisor' },
+  'home.m.proofPrivate': { en: 'Private – just your group', de: 'Privat – nur Ihre Gruppe' },
+  'home.m.ctaWhatsapp': { en: 'Ask on WhatsApp', de: 'Per WhatsApp anfragen' },
+  'home.m.audience.kicker': { en: 'Your Prague trip', de: 'Ihre Prag-Reise' },
+  'home.m.audience.title': { en: 'Which tour suits', de: 'Welche Tour passt' },
+  'home.m.audience.titleEm': { en: 'you', de: 'zu Ihnen' },
+  'home.m.audience.first.title': { en: 'First time in Prague', de: 'Zum ersten Mal in Prag' },
+  'home.m.audience.first.sub': { en: 'Castle and Old Town in one day', de: 'Burg und Altstadt an einem Tag' },
+  'home.m.audience.pace.title': { en: 'At your own pace', de: 'In Ihrem Tempo' },
+  'home.m.audience.pace.sub': { en: 'Mostly flat routes, no rush', de: 'Weitgehend flache Wege, ohne Hetze' },
+  'home.m.audience.history.title': { en: 'History up to 1989', de: 'Geschichte bis 1989' },
+  'home.m.audience.history.sub': { en: 'German heritage and the Havel tour', de: 'Deutsches Erbe und Havel-Tour' },
+  'home.m.audience.groups.title': { en: 'Companies & groups', de: 'Firmen & Gruppen' },
+  'home.m.audience.groups.sub': { en: 'Up to 50 people', de: 'Bis zu 50 Personen' },
+  'home.m.tours.title': { en: 'Every tour begins with your', de: 'Jede Tour beginnt mit Ihrer' },
+  'home.m.tours.titleEm': { en: 'curiosity', de: 'Neugier' },
+  'home.m.tours.sub': {
+    en: 'All tours are private – just your group. Price on request.',
+    de: 'Alle Touren sind privat – nur Ihre Gruppe. Preis auf Anfrage.',
+  },
+  'home.m.tours.ask': { en: 'Ask about this tour', de: 'Diese Tour anfragen' },
+  'tour.oldtown.shortTitle': { en: 'Old Town & Jewish Quarter', de: 'Altstadt & Jüdisches Viertel' },
+  'tour.oldtown.homePlaces': {
+    en: 'Old Town Square, Astronomical Clock, Jewish Quarter, Charles Bridge',
+    de: 'Altstädter Ring, Astronomische Uhr, Jüdisches Viertel, Karlsbrücke',
+  },
+  'tour.oldtown.homeBenefit': { en: 'Largely flat, suitable for most fitness levels', de: 'Weitgehend flach, für die meisten Fitnessniveaus' },
+  'tour.castle.shortTitle': { en: 'Prague Castle', de: 'Prager Burg' },
+  'tour.castle.homePlaces': {
+    en: 'Prague Castle courtyards, St. Vitus Cathedral, Golden Lane',
+    de: 'Höfe der Prager Burg, Veitsdom, Goldenes Gässchen',
+  },
+  'tour.castle.homeBenefit': { en: 'Skip-the-queue entrance strategy', de: 'Eintrittsstrategie ohne lange Wartezeit' },
+  'tour.german.shortTitle': { en: 'Prague’s German Heritage', de: 'Prags Deutsches Erbe' },
+  'tour.german.homePlaces': { en: 'Literary Prague: Kafka, Rilke and Mozart’s Prague', de: 'Literarisches Prag: Kafka, Rilke und Mozarts Prag' },
+  'tour.german.homeBenefit': { en: 'Honest account of German-Czech history', de: 'Ehrliche Darstellung der deutsch-tschechischen Geschichte' },
+  'tour.havel.shortTitle': { en: 'Václav Havel Tour', de: 'Václav-Havel-Tour' },
+  'tour.havel.homePlaces': {
+    en: 'Wenceslas Square, Národní, Laterna Magika, Lucerna passage',
+    de: 'Wenzelsplatz, Národní, Laterna Magika, Lucerna-Passage',
+  },
+  'tour.havel.homeBenefit': { en: 'Eyewitness account of November 1989 from your guide', de: 'Augenzeugenbericht vom November 1989 durch Ihre Führerin' },
+  'tour.hidden.shortTitle': { en: 'Hidden Prague', de: 'Verstecktes Prag' },
+  'tour.hidden.homePlaces': { en: 'Secret gardens, hidden courtyards, local cafés', de: 'Geheime Gärten, versteckte Innenhöfe, lokale Cafés' },
+  'tour.hidden.homeBenefit': { en: 'Local café or pastry stop included', de: 'Café- oder Gebäckstopp bei Einheimischen inbegriffen' },
+  'tour.custom.shortTitle': { en: 'Custom Private Tour', de: 'Individuelle Privattour' },
+  'tour.custom.homePlaces': {
+    en: 'Your pace, your interests. Personalised route planning before the tour',
+    de: 'Ihr Tempo, Ihre Interessen. Persönliche Routenplanung vor der Tour',
+  },
+  'tour.custom.homeBenefit': { en: 'For couples, families and groups of up to 50', de: 'Für Paare, Familien und Gruppen bis 50 Personen' },
+  'home.m.reviews.kicker': { en: 'From my guests', de: 'Von meinen Gästen' },
+  'home.m.reviews.title': { en: 'Words from my', de: 'Worte meiner' },
+  'home.m.reviews.titleEm': { en: 'guests', de: 'Gäste' },
+  'home.m.reviews.rating': { en: '4.9 out of 5 on TripAdvisor', de: '4,9 von 5 auf TripAdvisor' },
+  'home.m.reviews.all': { en: 'All reviews', de: 'Alle Bewertungen' },
+  'home.m.reviews.tourhq': { en: 'TourHQ profile', de: 'Profil auf TourHQ' },
+  'home.m.about.kicker': { en: 'Meet Zuzana', de: 'Lernen Sie Zuzana kennen' },
+  'home.m.about.title': { en: 'Prague, told with', de: 'Prag, erzählt mit' },
+  'home.m.about.titleEm': { en: 'passion', de: 'Leidenschaft' },
+  'home.m.about.text': {
+    en: 'I’m Ing. Zuzana Manová, a certified Prague expert guide. I’ve been guiding people through Prague since 1986.',
+    de: 'Ich bin Ing. Zuzana Manová – deutschsprachige Prag-Expertin und zertifizierte Stadtführerin. Seit 1986 führe ich Besucher durch Prag.',
+  },
+  'home.m.about.point1': { en: 'Official Czech Republic tour guide licence', de: 'Offizielle Stadtführerlizenz der Tschechischen Republik' },
+  'home.m.about.point2': { en: 'Accredited by the Jewish Museum in Prague', de: 'Akkreditiert am Jüdischen Museum in Prag' },
+  'home.m.about.point3': { en: 'Out with school groups, families, corporate boards and film crews', de: 'Unterwegs mit Schulklassen, Familien, Vorständen und Filmteams' },
+  'home.m.about.point4': { en: 'On Wenceslas Square during the demonstrations of November 1989', de: 'Im November 1989 bei den Demonstrationen auf dem Wenzelsplatz' },
+  'home.m.about.quote': {
+    en: 'Prague is a layered story — let’s read it together.',
+    de: 'Prag ist eine vielschichtige Geschichte — lassen Sie uns diese gemeinsam lesen.',
+  },
+  'home.m.about.more': { en: 'More about Zuzana', de: 'Mehr über Zuzana' },
+  'home.m.enquiry.kicker': { en: 'Certified expert · 40 years', de: 'Zertifizierte Expertin · 40 Jahre' },
+  'home.m.enquiry.title': { en: 'Ready to discover', de: 'Bereit, Prag zu' },
+  'home.m.enquiry.titleEm': { en: 'Prague', de: 'entdecken' },
+  'home.m.steps.1.title': { en: 'Write to me', de: 'Schreiben Sie mir' },
+  'home.m.steps.1.text': {
+    en: 'Your preferred date, group size and interests – by WhatsApp, phone or the form.',
+    de: 'Ihr Wunschdatum, die Gruppengröße und Ihre Interessen – per WhatsApp, Telefon oder Formular.',
+  },
+  'home.m.steps.2.title': { en: 'A personal reply', de: 'Persönliche Antwort' },
+  'home.m.steps.2.text': {
+    en: 'I usually reply within 24 hours, confirm availability and tailor the tour for you.',
+    de: 'Ich antworte in der Regel innerhalb von 24 Stunden, bestätige die Verfügbarkeit und passe die Tour für Sie an.',
+  },
+  'home.m.steps.3.title': { en: 'We meet', de: 'Wir treffen uns' },
+  'home.m.steps.3.text': {
+    en: 'At the tour’s meeting point. For custom tours usually at your hotel or a landmark of your choice.',
+    de: 'Am Treffpunkt der Tour. Bei individuellen Touren in der Regel an Ihrem Hotel oder einem Wahrzeichen Ihrer Wahl.',
+  },
+  'home.m.formLink': { en: 'Prefer the form', de: 'Lieber per Formular' },
+  'home.m.waMsg': {
+    en: 'Hello Ms Manová, I’m interested in a private city tour in Prague.',
+    de: 'Guten Tag Frau Manová, ich interessiere mich für eine private Stadtführung in Prag.',
+  },
+  'home.m.waMsgTour': {
+    en: 'Hello Ms Manová, I’m interested in the tour “{name}”.',
+    de: 'Guten Tag Frau Manová, ich interessiere mich für die Tour „{name}“.',
+  },
 };
 
 export type TranslationKey = keyof typeof translations;
 
 export const translate = (key: TranslationKey, language: 'en' | 'de'): string => {
-  // Journal CMS content (generated). German-only articles fall back to `de`
-  // so an English visitor still sees the article rather than the raw key.
-  if ((journalContent as any)[key]) {
-    const entry = (journalContent as any)[key];
-    return entry?.[language] || entry?.de || key;
-  }
-  // Prefer blog translations from the separate module when available
-  if ((blogTranslations as any)[key]) {
-    return (blogTranslations as any)[key]?.[language] || key;
-  }
   return translations[key]?.[language] || key;
 };

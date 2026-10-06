@@ -1,0 +1,23 @@
+/* ================================================================
+   Homepage A/B test (src/config/abTest.ts)
+   The edge function sets data-ab on <html> before the page reaches the
+   browser, so the right homepage is shown from the first paint.
+   Variant B differs only below 900px; desktop is identical.
+   ================================================================ */
+
+.home-variant-b {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  html[data-ab='b'] .home-variant-a {
+    display: none;
+  }
+  html[data-ab='b'] .home-variant-b {
+    display: block;
+  }
+  /* Variant B brings its own footer. */
+  html[data-ab='b'] body:has(.home-variant-b) > footer {
+    display: none;
+  }
+}

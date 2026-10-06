@@ -13,6 +13,28 @@ declare global {
 }
 
 /**
+ * The injected widget markup has an empty link and <dl>s that wrap a <dt> in an
+ * <a> (dl > a > dt), which breaks the accessibility tree (Lighthouse "Agentic
+ * Browsing"). Name the bare links, move such links inside their <dt> (the
+ * widget CSS styles dt by tag, so the elements themselves stay) and mark the
+ * decorative lists role="none".
+ */
+function repairWidgetA11y(root: HTMLElement, linkLabel: string) {
+  root.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((a) => {
+    const named = a.textContent?.trim() || a.getAttribute('aria-label') || a.querySelector('img[alt]:not([alt=""])');
+    if (!named) a.setAttribute('aria-label', linkLabel);
+  });
+  root.querySelectorAll('dl > a').forEach((a) => {
+    const dt = a.querySelector(':scope > dt');
+    if (!dt || !a.parentElement) return;
+    a.parentElement.replaceChild(dt, a);
+    while (dt.firstChild) a.appendChild(dt.firstChild);
+    dt.appendChild(a);
+  });
+  root.querySelectorAll('dl:not([role])').forEach((dl) => dl.setAttribute('role', 'none'));
+}
+
+/**
  * TripAdvisor “Self-Serve” widget.
  * Requires a node `#TA_selfserveprop{uniq}` matching `uniq` in the script URL (see constants).
  * In SPAs, `window.onload` has already fired, so we call `taValidate()` after the embed script loads.
@@ -29,6 +51,15 @@ const TripAdvisorWidget: React.FC = () => {
     if (container) {
       container.innerHTML = '';
     }
+
+    // Patch the third-party markup as soon as TripAdvisor injects it.
+    const linkLabel = t('home.tripadvisor.viewAll');
+    const observer = new MutationObserver(() => {
+      observer.disconnect();
+      repairWidgetA11y(shell, linkLabel);
+      observer.observe(shell, { childList: true, subtree: true });
+    });
+    observer.observe(shell, { childList: true, subtree: true });
 
     shell.querySelectorAll('script[data-zpt-ta]').forEach((el) => el.remove());
 
@@ -47,6 +78,7 @@ const TripAdvisorWidget: React.FC = () => {
     shell.appendChild(script);
 
     return () => {
+      observer.disconnect();
       script.removeEventListener('load', onLoad);
       script.remove();
       if (container) {
