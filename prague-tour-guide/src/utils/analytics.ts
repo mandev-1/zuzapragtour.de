@@ -1,28 +1,50 @@
 /**
  * Click & user-flow analytics (own, anonymous, no third parties).
  *
- * Every page view and every click on a link or button is sent to
- * netlify/functions/track.mjs; the admin "Klicks & Wege" tab shows the counts,
- * what converts and the most common paths.
+ * Every page view, every click on a link or button, every sent form and — when
+ * a page is left — how long it was visible and how far an article was read are
+ * sent to netlify/functions/track.mjs; the admin dashboard "Kliky a poptávky"
+ * builds its numbers, paths and per-visit timelines from them.
  *
- * Privacy: nothing is stored on the visitor's device. A visit ("session") is a
- * random ID held in memory only — it lives as long as the tab and is gone on a
- * reload. No IP addresses, no user agents, no cross-visit identity.
+ * Privacy: no cookies, no IP addresses, no user agents, no cross-visit
+ * identity. A visit is one browser tab: a random ID kept in sessionStorage,
+ * which the browser deletes when the tab is closed.
  *
  * Own visits: open any page with `?track=off` once per device/browser to stop
  * counting yourself (`?track=on` undoes it).
  */
-export type TrackKind = 'page' | 'click' | 'enquiry';
+export type TrackKind = 'page' | 'click' | 'enquiry' | 'leave';
 export type ClickCategory = 'whatsapp' | 'phone' | 'email' | 'form' | 'tour' | 'anchor' | 'nav' | 'external' | 'button';
 
 const OPT_OUT_KEY = 'zpt_notrack';
+const VISIT_KEY = 'zpt_visit';
 const MOBILE_MAX = 899;
 
-const SESSION =
+const randomId = () =>
   typeof crypto !== 'undefined' && 'randomUUID' in crypto
     ? crypto.randomUUID().replace(/-/g, '').slice(0, 12)
     : (Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2)).slice(0, 12);
-let seq = 0;
+
+/** This tab's visit: id + next sequence number, kept across reloads of the tab. */
+let memory: { id: string; n: number } | null = null;
+function nextSeq(): { id: string; n: number } {
+  let v = memory;
+  try {
+    const stored = JSON.parse(sessionStorage.getItem(VISIT_KEY) || 'null');
+    if (stored && typeof stored.id === 'string' && Number.isInteger(stored.n)) v = stored;
+  } catch {
+    /* storage blocked: the visit lives in memory only */
+  }
+  if (!v || v.n > 9999) v = { id: randomId(), n: 0 };
+  const out = { id: v.id, n: v.n };
+  memory = { id: v.id, n: v.n + 1 };
+  try {
+    sessionStorage.setItem(VISIT_KEY, JSON.stringify(memory));
+  } catch {
+    /* ignore */
+  }
+  return out;
+}
 
 /** True on devices where the owner opened `?track=off` (also mutes the A/B test counts). */
 export function trackingOff(): boolean {
@@ -36,20 +58,30 @@ export function trackingOff(): boolean {
   }
 }
 
-/** Send one event. `cat` and `label` describe a click; `area` is where on the page. */
-export function track(kind: TrackKind, data: { cat?: string; label?: string; area?: string; ref?: string } = {}): void {
-  if (typeof window === 'undefined' || navigator.webdriver || trackingOff()) return;
+/**
+ * Send one event and return its sequence number (-1 when not sent). `cat` and
+ * `label` describe a click; `area` is where on the page. A `leave` refers to
+ * its page view by `label` (= that view's sequence number) and carries the
+ * visible seconds and read depth; `path` overrides the current URL.
+ */
+export function track(
+  kind: TrackKind,
+  data: { cat?: string; label?: string; area?: string; ref?: string; path?: string; seconds?: number; depth?: number } = {},
+): number {
+  if (typeof window === 'undefined' || navigator.webdriver || trackingOff()) return -1;
   const root = document.documentElement.dataset; // A/B variant, mirrored from the cookie by AbTracker
+  const { id, n } = nextSeq();
   const body = JSON.stringify({
-    s: SESSION,
-    n: seq++,
+    s: id,
+    n,
     k: kind,
     c: data.cat ?? '',
     l: (data.label ?? '').slice(0, 60),
     a: (data.area ?? data.ref ?? '').slice(0, 40),
-    p: window.location.pathname.slice(0, 80),
+    p: (data.path ?? window.location.pathname).slice(0, 80),
     d: window.innerWidth <= MOBILE_MAX ? 'm' : 'd',
     v: root.abQa ? '' : root.ab || '',
+    ...(kind === 'leave' ? { t: Math.round(data.seconds ?? 0), dp: data.depth ?? 0 } : {}),
   });
   try {
     if (!navigator.sendBeacon?.('/api/track', body)) {
@@ -58,6 +90,7 @@ export function track(kind: TrackKind, data: { cat?: string; label?: string; are
   } catch {
     /* measuring must never break the page */
   }
+  return n;
 }
 
 /** Visible text of a link/button without icon ligatures ("chat", "arrow_forward"). */

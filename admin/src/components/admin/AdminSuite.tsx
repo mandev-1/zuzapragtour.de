@@ -6,7 +6,7 @@ import { MediaLibrary } from './MediaLibrary';
 import { ToursList } from './ToursList';
 import { ReviewsPanel } from './ReviewsPanel';
 import { AbTestPanel } from './AbTestPanel';
-import { StatsPanel } from './StatsPanel';
+import { StatsDashboard } from './stats/StatsDashboard';
 import { ArticleGenerator } from './ArticleGenerator';
 import { DuplicateDialog } from './DuplicateDialog';
 import type { JournalArticle, Lang } from '../../types/journal';
@@ -200,23 +200,29 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
     </>
   );
 
+  const navigate = (k: string) => {
+    if (k === 'articles') setView('list');
+    else if (k === 'media') setView('media');
+    else if (k === 'tours') setView('tours');
+    else if (k === 'reviews') setView('reviews');
+    else if (k === 'abtest') setView('abtest');
+    else if (k === 'stats') setView('stats');
+    else flash('„' + k + '“ — Artikel, Medien, Touren und Bewertungen sind eingerichtet');
+  };
+
+  // "Kliky a poptávky" is a full page of its own (sidebar included), built 1:1
+  // from design_handoff_admin_dashboard.
+  if (isStats) return <StatsDashboard onNavigate={navigate} />;
+
   return (
     <div className="zpt-admin-suite">
       <style>{CSS}</style>
       <AdminShell
-        active={isStats ? 'stats' : isAbTest ? 'abtest' : isReviews ? 'reviews' : isTours ? 'tours' : isMedia ? 'media' : 'articles'}
+        active={isAbTest ? 'abtest' : isReviews ? 'reviews' : isTours ? 'tours' : isMedia ? 'media' : 'articles'}
         breadcrumb={isEditor ? 'Zurück zum Journal' : undefined}
         onBreadcrumb={() => { if (editing) persist(editing, true, 'Gespeichert'); }}
-        onNavigate={(k) => {
-          if (k === 'articles') setView('list');
-          else if (k === 'media') setView('media');
-          else if (k === 'tours') setView('tours');
-          else if (k === 'reviews') setView('reviews');
-          else if (k === 'abtest') setView('abtest');
-          else if (k === 'stats') setView('stats');
-          else flash('„' + k + '“ — Artikel, Medien, Touren und Bewertungen sind eingerichtet');
-        }}
-        title={isEditor && editing ? (titlePlain(editing) || 'Unbenannt') : isStats ? 'Klicks & Wege' : isAbTest ? 'A/B-Test' : isMedia ? 'Medien' : isTours ? 'Touren' : isReviews ? 'Bewertungen' : 'Journal'}
+        onNavigate={navigate}
+        title={isEditor && editing ? (titlePlain(editing) || 'Unbenannt') : isAbTest ? 'A/B-Test' : isMedia ? 'Medien' : isTours ? 'Touren' : isReviews ? 'Bewertungen' : 'Journal'}
         subtitle={
           isEditor
             ? 'Artikel bearbeiten'
@@ -228,8 +234,6 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
                   ? 'Bewertungs-Aufrufe & Plattformen'
                   : isAbTest
                     ? 'Startseite: bisher gegen neu'
-                  : isStats
-                    ? 'Was angeklickt wird und was zur Anfrage führt'
                   : `${articles.length} Artikel · ${articles.filter((a) => a.status === 'published').length} veröffentlicht`
         }
         actions={actions}
@@ -250,8 +254,7 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
           <ReviewsPanel />
         ) : isAbTest ? (
           <AbTestPanel />
-        ) : isStats ? (
-          <StatsPanel />
+
         ) : (
           <ArticleTable
             articles={articles}

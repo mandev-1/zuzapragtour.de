@@ -156,45 +156,6 @@ export async function getAbResults(): Promise<AbResults> {
   return (await r.json()) as AbResults;
 }
 
-/**
- * Site analytics (public site: src/utils/analytics.ts). Counters are
- * [mobile, desktop, mobileConverted, desktopConverted]; "converted" = the visit
- * tapped WhatsApp / phone / e-mail or sent the form afterwards (or at all, for
- * entries, sources and paths).
- */
-export type StatCounter = [number, number, number, number];
-export type StatGoal = 'whatsapp' | 'phone' | 'email' | 'enquiry';
-
-export interface SiteStats {
-  generatedAt: string;
-  from: string;
-  to: string;
-  series: { day: string; visits: number[]; pageviews: number[]; goals: Partial<Record<StatGoal, number[]>> }[];
-  totals: {
-    visits: number[];
-    pageviews: number[];
-    bounces: number[];
-    goals: Partial<Record<StatGoal, number[]>>;
-    /** key: category \t label \t page area \t page path */
-    clicks: Record<string, StatCounter>;
-    entries: Record<string, StatCounter>;
-    /** key: referring host, '' = direct / unknown */
-    refs: Record<string, StatCounter>;
-    pages: Record<string, StatCounter>;
-    /** key: "/ › /tours/x › ✓ WhatsApp" */
-    paths: Record<string, StatCounter>;
-  };
-}
-
-export async function getSiteStats(days: number): Promise<SiteStats> {
-  const r = await fetch(fn('stats') + `?days=${days}`, { credentials: 'same-origin' });
-  if (!r.ok) {
-    const d = await r.json().catch(() => ({}));
-    throw new Error(d.error || 'Statistik konnte nicht geladen werden.');
-  }
-  return (await r.json()) as SiteStats;
-}
-
 export async function listTours(): Promise<TourItem[]> {
   const r = await fetch(fn('list-tours'), { credentials: 'same-origin' });
   if (!r.ok) {
