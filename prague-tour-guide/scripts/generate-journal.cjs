@@ -20,21 +20,25 @@ const { renderBlocks, loc, stripTags } = require('./render-blocks.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content', 'journal');
+// Pages that use the article template outside /blog (e.g. /sehenswuerdigkeiten-prag).
+const PAGES_DIR = path.join(ROOT, 'content', 'pages');
+// Portrait in the mobile contact card of `floatingCta` articles.
+const AVATAR = '/images/hero/zuzana-avatar-192.jpg';
 const OUT_FILE = path.join(ROOT, 'src', 'utils', 'journalGenerated.ts');
 
 const DEFAULT_AUTHOR = 'Ing. Zuzana Manová';
 
-function readArticles() {
-  if (!fs.existsSync(CONTENT_DIR)) return [];
+function readArticles(dir = CONTENT_DIR) {
+  if (!fs.existsSync(dir)) return [];
   return fs
-    .readdirSync(CONTENT_DIR)
+    .readdirSync(dir)
     .filter((f) => f.endsWith('.json'))
     .map((f) => {
-      const full = path.join(CONTENT_DIR, f);
+      const full = path.join(dir, f);
       try {
         return JSON.parse(fs.readFileSync(full, 'utf8'));
       } catch (e) {
-        throw new Error(`Invalid JSON in content/journal/${f}: ${e.message}`);
+        throw new Error(`Invalid JSON in ${path.relative(ROOT, full)}: ${e.message}`);
       }
     });
 }
@@ -76,6 +80,7 @@ function dateLabel(a, lang) {
 
 function build() {
   const articles = readArticles().filter(isPublic);
+  const pages = readArticles(PAGES_DIR).filter(isPublic);
   // Newest first; the merged blogPosts re-sorts too, but keep deterministic order.
   articles.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
@@ -102,9 +107,11 @@ function build() {
   }
 
   const journalPosts = [];
+  const journalPages = [];
   const journalContent = {};
 
-  for (const a of articles) {
+  for (const a of [...articles, ...pages]) {
+    const isPage = pages.includes(a);
     if (!a.slug) throw new Error('Journal article missing slug');
     const languages = a.languages && a.languages.length ? a.languages : ['de'];
     const hasEn = languages.includes('en');
@@ -113,9 +120,10 @@ function build() {
     journalContent[key('title')] = { de: loc(a.title, 'de'), en: hasEn ? loc(a.title, 'en') : undefined };
     journalContent[key('excerpt')] = { de: loc(a.excerpt, 'de'), en: hasEn ? loc(a.excerpt, 'en') : undefined };
     journalContent[key('date')] = { de: dateLabel(a, 'de'), en: dateLabel(a, 'en') };
+    const opts = a.floatingCta ? { inlineCta: AVATAR } : undefined;
     journalContent[key('content')] = {
-      de: editionNote(a, 'de') + renderBlocks(a.blocks, 'de'),
-      en: hasEn ? editionNote(a, 'en') + renderBlocks(a.blocks, 'en') : undefined,
+      de: editionNote(a, 'de') + renderBlocks(a.blocks, 'de', opts),
+      en: hasEn ? editionNote(a, 'en') + renderBlocks(a.blocks, 'en', opts) : undefined,
     };
     // Optional header/footer fields, keyed like the rest so t() resolves them.
     const perLang = (fn) => ({ de: fn('de'), en: hasEn ? fn('en') : undefined });
@@ -129,12 +137,18 @@ function build() {
     const plain = (v, l) => decodeEntities(stripTags(loc(v, l))).replace(/\s+/g, ' ').trim();
     const faqItems = (a.blocks || []).filter((b) => b.t === 'faq').flatMap((b) => b.items || []);
     const places = (a.blocks || [])
-      .filter((b) => b.t === 'overview' && b.variant !== 'claims')
+      .filter((b) => b.t === 'overview' && (b.variant === 'index' || b.variant === 'rank' || !b.variant))
       .flatMap((b) => (b.items || []).map((it) => plain(it.title, 'de')));
     const seo = (l) => ({ title: plain(a.seoTitle, l) || undefined, description: plain(a.seoDescription, l) || undefined });
     const cta = (l) => ({ title: loc(a.cta.title, l) || undefined, text: loc(a.cta.text, l) || undefined, button: loc(a.cta.button, l) || undefined });
 
-    journalPosts.push({
+    const readMin = (l) => {
+      const rt = typeof a.readTime === 'string' ? a.readTime : a.readTime && (a.readTime[l] || a.readTime.de);
+      const m = String(rt || '').match(/\d+/);
+      return m ? Number(m[0]) : undefined;
+    };
+
+    (isPage ? journalPages : journalPosts).push({
       id: `j-${a.slug}`,
       slug: a.slug,
       slugDe: a.slugDe,
@@ -164,6 +178,20 @@ function build() {
       cta: a.cta ? perLang(cta) : undefined,
       faq: faqItems.length ? perLang((l) => faqItems.map((it) => ({ q: plain(it.q, l), a: plain(it.a, l) }))) : undefined,
       about: places.length ? places : undefined,
+      // Facelift template (layout 'v2') and update/redirect metadata.
+      layout: a.layout || undefined,
+      updated: a.updated || undefined,
+      updatedDisplay: a.updatedDisplay ? perLang((l) => a.updatedDisplay[l] || a.updatedDisplay.de) : undefined,
+      datePrefix: a.datePrefix || undefined,
+      readMinutes: readMin('de'),
+      heroAlt: a.heroAlt ? perLang((l) => plain(a.heroAlt, l)) : undefined,
+      heroLook: a.heroLook || undefined,
+      floatingCta: a.floatingCta || undefined,
+      sourcesTitle: a.sourcesTitle ? perLang((l) => plain(a.sourcesTitle, l)) : undefined,
+      hasCtaBlock: (a.blocks || []).some((b) => b.t === 'cta') || undefined,
+      redirectFrom: a.redirectFrom && a.redirectFrom.length ? a.redirectFrom : undefined,
+      path: isPage ? a.path || '/' + a.slug : undefined,
+      canonical: a.canonical || undefined,
     });
   }
 
@@ -177,12 +205,16 @@ function build() {
     'export const journalPosts: BlogPost[] = ' +
     JSON.stringify(journalPosts, null, 2) +
     ';\n\n' +
+    '// Pages that use the article template outside /blog (content/pages/*.json).\n' +
+    'export const journalPages: BlogPost[] = ' +
+    JSON.stringify(journalPages, null, 2) +
+    ';\n\n' +
     'export const journalContent: Record<string, { de?: string; en?: string }> = ' +
     JSON.stringify(journalContent, null, 2) +
     ';\n';
 
   fs.writeFileSync(OUT_FILE, body, 'utf8');
-  console.log(`[generate-journal] ${journalPosts.length} article(s) → src/utils/journalGenerated.ts`);
+  console.log(`[generate-journal] ${journalPosts.length} article(s), ${journalPages.length} page(s) → src/utils/journalGenerated.ts`);
 }
 
 build();

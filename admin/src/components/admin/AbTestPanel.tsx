@@ -34,14 +34,14 @@ const CSS = `
 `;
 
 const ROWS: { key: keyof AbCounts; label: string }[] = [
-  { key: 'visitor', label: 'Besucher (eindeutig)' },
-  { key: 'view', label: 'Aufrufe der Startseite' },
-  { key: 'whatsapp', label: 'WhatsApp geöffnet' },
-  { key: 'call', label: 'Anruf getippt' },
-  { key: 'email', label: 'E-Mail getippt' },
-  { key: 'enquiry', label: 'Anfrageformular gesendet' },
-  { key: 'form', label: 'Anfrageseite geöffnet' },
-  { key: 'tour', label: 'Tourseite geöffnet' },
+  { key: 'visitor', label: 'Návštěvníci (unikátní)' },
+  { key: 'view', label: 'Zobrazení úvodní stránky' },
+  { key: 'whatsapp', label: 'WhatsApp otevřen' },
+  { key: 'call', label: 'Klepnuto na telefon' },
+  { key: 'email', label: 'Klepnuto na e-mail' },
+  { key: 'enquiry', label: 'Formulář odeslán' },
+  { key: 'form', label: 'Otevřena stránka s poptávkou' },
+  { key: 'tour', label: 'Otevřena stránka prohlídky' },
 ];
 
 /** WhatsApp, phone, e-mail and sent forms: the ways a guest actually gets in touch. */
@@ -71,7 +71,7 @@ function verdict(a: AbCounts = {}, b: AbCounts = {}) {
   if (na < MIN_VISITORS || nb < MIN_VISITORS || ca + cb < MIN_CONTACTS) {
     return {
       tone: 'wait' as const,
-      text: `Noch zu wenige Daten für eine Aussage: mindestens ${MIN_VISITORS} mobile Besucher je Variante und ${MIN_CONTACTS} Kontakte insgesamt (aktuell A ${na} / B ${nb} Besucher, ${ca + cb} Kontakte).`,
+      text: `Zatím málo dat na závěr: potřeba je aspoň ${MIN_VISITORS} návštěvníků z mobilu v každé variantě a ${MIN_CONTACTS} kontaktů celkem (teď A ${na} / B ${nb} návštěvníků, ${ca + cb} kontaktů).`,
     };
   }
   const ra = ca / na;
@@ -82,18 +82,18 @@ function verdict(a: AbCounts = {}, b: AbCounts = {}) {
   const liftTxt = `${lift >= 0 ? '+' : ''}${Math.round(lift * 100)} %`;
   if (p < 0.05) {
     return rb > ra
-      ? { tone: 'win' as const, text: `B (neue Seite) bringt mehr Kontakte: ${pct(rb)} statt ${pct(ra)} je Besucher (${liftTxt}). Der Unterschied ist statistisch belastbar (p = ${p.toFixed(3)}).` }
-      : { tone: 'lose' as const, text: `A (bisherige Seite) bringt mehr Kontakte: ${pct(ra)} statt ${pct(rb)} je Besucher (B ${liftTxt}). Der Unterschied ist statistisch belastbar (p = ${p.toFixed(3)}).` };
+      ? { tone: 'win' as const, text: `B (nová stránka) přináší víc kontaktů: ${pct(rb)} místo ${pct(ra)} na návštěvníka (${liftTxt}). Rozdíl je statisticky průkazný (p = ${p.toFixed(3).replace('.', ',')}).` }
+      : { tone: 'lose' as const, text: `A (dosavadní stránka) přináší víc kontaktů: ${pct(ra)} místo ${pct(rb)} na návštěvníka (B ${liftTxt}). Rozdíl je statisticky průkazný (p = ${p.toFixed(3).replace('.', ',')}).` };
   }
   return {
     tone: 'wait' as const,
-    text: `Noch kein eindeutiger Unterschied: A ${pct(ra)}, B ${pct(rb)} Kontakte je Besucher (B ${liftTxt}, p = ${p.toFixed(2)}). Weiterlaufen lassen.`,
+    text: `Zatím žádný jasný rozdíl: A ${pct(ra)}, B ${pct(rb)} kontaktů na návštěvníka (B ${liftTxt}, p = ${p.toFixed(2).replace('.', ',')}). Nechat test běžet dál.`,
   };
 }
 
 function Delta({ a, b }: { a: number; b: number }) {
   if (!a && !b) return <span>–</span>;
-  if (!a) return <span className="up">neu</span>;
+  if (!a) return <span className="up">nové</span>;
   const d = (b - a) / a;
   return <span className={d >= 0 ? 'up' : 'down'}>{`${d >= 0 ? '+' : ''}${Math.round(d * 100)} %`}</span>;
 }
@@ -106,7 +106,7 @@ function CountsTable({ a = {}, b = {} }: { a?: AbCounts; b?: AbCounts }) {
   return (
     <table>
       <thead>
-        <tr><th>Kennzahl</th><th>A · bisher</th><th>B · neu</th><th>B gegenüber A</th></tr>
+        <tr><th>Ukazatel</th><th>A · dosavadní</th><th>B · nová</th><th>B proti A</th></tr>
       </thead>
       <tbody>
         {ROWS.map((r) => (
@@ -118,10 +118,10 @@ function CountsTable({ a = {}, b = {} }: { a?: AbCounts; b?: AbCounts }) {
           </tr>
         ))}
         <tr className="key">
-          <td>Kontakte gesamt</td><td>{ca}</td><td>{cb}</td><td><Delta a={ca} b={cb} /></td>
+          <td>Kontakty celkem</td><td>{ca}</td><td>{cb}</td><td><Delta a={ca} b={cb} /></td>
         </tr>
         <tr className="key">
-          <td>Kontakte je Besucher</td><td>{pct(ra)}</td><td>{pct(rb)}</td><td><Delta a={ra} b={rb} /></td>
+          <td>Kontakty na návštěvníka</td><td>{pct(ra)}</td><td>{pct(rb)}</td><td><Delta a={ra} b={rb} /></td>
         </tr>
       </tbody>
     </table>
@@ -154,14 +154,14 @@ export function AbTestPanel() {
 
       <div className="zab-row">
         <div>
-          <h3>Startseite: bisher (A) gegen neu (B)</h3>
+          <h3>Úvodní stránka: dosavadní (A) proti nové (B)</h3>
           <p className="sub">
-            Jede/r Besucher/in der Startseite sieht zufällig A oder B und bleibt dabei. B unterscheidet sich nur auf dem Handy (unter 900 px).
-            {data?.firstDay ? ` Daten seit ${data.firstDay}, Stand ${new Date(data.generatedAt).toLocaleString('de-DE')}.` : ''}
+            Každý návštěvník úvodní stránky náhodně uvidí A, nebo B, a u té varianty zůstane. B se liší jen na mobilu (pod 900 px).
+            {data?.firstDay ? ` Data od ${data.firstDay.split('-').reverse().map(Number).join('. ')}, stav ${new Date(data.generatedAt).toLocaleString('cs-CZ')}.` : ''}
           </p>
         </div>
         <button type="button" className="zab-btn" onClick={load} disabled={loading}>
-          <span className="material-symbols-outlined">refresh</span>{loading ? 'Lädt…' : 'Aktualisieren'}
+          <span className="material-symbols-outlined">refresh</span>{loading ? 'Načítá se …' : 'Obnovit'}
         </button>
       </div>
 
@@ -175,23 +175,23 @@ export function AbTestPanel() {
           </div>
 
           <div className="zab-card">
-            <h3>Handy</h3>
-            <p className="sub">Hier entscheidet sich der Test. Kontakte = WhatsApp, Anruf, E-Mail und gesendete Formulare, auch auf späteren Seiten.</p>
+            <h3>Mobil</h3>
+            <p className="sub">Tady se test rozhoduje. Kontakty = WhatsApp, telefon, e-mail a odeslané formuláře, i na dalších stránkách.</p>
             <CountsTable a={mobileA} b={mobileB} />
           </div>
 
           <div className="zab-card">
-            <h3>Desktop (Kontrolle)</h3>
-            <p className="sub">Auf dem Desktop sehen A und B dieselbe Seite. Große Unterschiede hier deuten auf Zufall oder einen Messfehler hin.</p>
+            <h3>Počítač (kontrola)</h3>
+            <p className="sub">Na počítači vidí A i B stejnou stránku. Velké rozdíly tady znamenají náhodu nebo chybu měření.</p>
             <CountsTable a={data.totals.a?.d} b={data.totals.b?.d} />
           </div>
 
           {recentDays.length > 0 && (
             <div className="zab-card">
-              <h3>Letzte 14 Tage (Handy)</h3>
+              <h3>Posledních 14 dní (mobil)</h3>
               <table>
                 <thead>
-                  <tr><th>Tag</th><th>Besucher A</th><th>Besucher B</th><th>Kontakte A</th><th>Kontakte B</th></tr>
+                  <tr><th>Den</th><th>Návštěvníci A</th><th>Návštěvníci B</th><th>Kontakty A</th><th>Kontakty B</th></tr>
                 </thead>
                 <tbody>
                   {recentDays.map((day) => {
@@ -199,7 +199,7 @@ export function AbTestPanel() {
                     const b = data.days[day].b?.m;
                     return (
                       <tr key={day}>
-                        <td>{day}</td><td>{a?.visitor || 0}</td><td>{b?.visitor || 0}</td><td>{contactsOf(a)}</td><td>{contactsOf(b)}</td>
+                        <td>{day.split('-').reverse().map(Number).join('. ')}</td><td>{a?.visitor || 0}</td><td>{b?.visitor || 0}</td><td>{contactsOf(a)}</td><td>{contactsOf(b)}</td>
                       </tr>
                     );
                   })}
@@ -211,9 +211,9 @@ export function AbTestPanel() {
       )}
 
       <p className="zab-note">
-        Gezählt wird anonym: nur Tag, Variante, Gerätetyp und Ereignis, keine IP-Adressen oder Kennungen. Eigene Kontrollbesuche mit{' '}
-        <code>zuzapragtour.de/?ab=a</code> oder <code>?ab=b</code> öffnen; sie werden nicht mitgezählt (<code>?ab=off</code> beendet den Vorschau-Modus).
-        Für eine belastbare Aussage braucht es meist einige Wochen.
+        Počítá se anonymně: jen den, varianta, typ zařízení a událost, žádné IP adresy ani identifikátory. Vlastní kontrolní návštěvy otevírejte přes{' '}
+        <code>zuzapragtour.de/?ab=a</code> nebo <code>?ab=b</code>; ty se nepočítají (<code>?ab=off</code> režim náhledu ukončí).
+        Na průkazný výsledek je obvykle potřeba několik týdnů.
       </p>
     </div>
   );

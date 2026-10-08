@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '../src/utils/blogData';
+import { journalPages } from '../src/utils/journalGenerated';
 import { tours } from '../src/data/tours';
 import { BRAND } from '../src/brand';
 
@@ -14,11 +15,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
   ];
 
+  // lastmod = last substantial update, else first publication.
+  const lastmod = (p: { date: string; updated?: string }) => new Date(p.updated ?? p.date);
+
+  const pageRoutes: MetadataRoute.Sitemap = journalPages.map((page) => ({
+    url: `${BASE}${page.path}`,
+    lastModified: lastmod(page),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.flatMap((post) => {
     const entries: MetadataRoute.Sitemap = [
       {
         url: `${BASE}/blog/${post.slug}`,
-        lastModified: new Date(post.date),
+        lastModified: lastmod(post),
         changeFrequency: 'monthly',
         priority: 0.7,
       },
@@ -26,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (post.slugDe) {
       entries.push({
         url: `${BASE}/blog/${post.slugDe}`,
-        lastModified: new Date(post.date),
+        lastModified: lastmod(post),
         changeFrequency: 'monthly',
         priority: 0.7,
       });
@@ -54,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return entries;
   });
 
-  return [...staticRoutes, ...tourRoutes, ...blogRoutes];
+  return [...staticRoutes, ...pageRoutes, ...tourRoutes, ...blogRoutes];
 }

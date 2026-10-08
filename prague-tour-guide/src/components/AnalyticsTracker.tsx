@@ -1,7 +1,8 @@
 'use client';
 
 /**
- * Sends page views, every link/button click and — when a page is left or the
+ * Sends page views, every link/button click, copied e-mail addresses / phone
+ * numbers and — when a page is left or the
  * tab is hidden — how long the page was visible and how far an article was
  * read, to our own anonymous analytics (src/utils/analytics.ts). Form
  * submissions are tracked in Contact.tsx.
@@ -9,7 +10,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { describeClick, track } from '../utils/analytics';
+import { areaOf, describeClick, track } from '../utils/analytics';
 
 interface PageView {
   seq: number;
@@ -94,7 +95,19 @@ export default function AnalyticsTracker() {
       const click = describeClick(e.target);
       if (click) track('click', click);
     };
+    // Copying the e-mail address or phone number instead of tapping it (Ctrl+C,
+    // context menu, select → Copy on phones). "Copy link address" fires no event.
+    // Only the kind is sent, never the copied text.
+    const onCopy = () => {
+      const sel = document.getSelection();
+      const text = sel?.toString() || '';
+      const cat = /@/.test(text) ? 'email' : /\+?\d[\d\s]{7,}/.test(text) ? 'phone' : '';
+      if (!cat) return;
+      const node = sel?.anchorNode instanceof Element ? sel.anchorNode : sel?.anchorNode?.parentElement;
+      track('copy', { cat, label: 'kopie', area: node ? areaOf(node) : '' });
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('copy', onCopy);
     document.addEventListener('visibilitychange', onVisibility);
     window.addEventListener('pagehide', onHide);
     document.addEventListener('click', onClick, { capture: true });
@@ -103,6 +116,7 @@ export default function AnalyticsTracker() {
       document.removeEventListener('visibilitychange', onVisibility);
       window.removeEventListener('pagehide', onHide);
       document.removeEventListener('click', onClick, { capture: true });
+      document.removeEventListener('copy', onCopy);
       if (raf) cancelAnimationFrame(raf);
     };
   }, [report, measureDepth]);

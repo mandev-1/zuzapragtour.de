@@ -1,0 +1,357 @@
+{
+  "slug": "prag-besichtigen-stadtfuehrer",
+  "languages": [
+    "de"
+  ],
+  "status": "published",
+  "date": "2026-10-07",
+  "dateDisplay": {
+    "de": "7. Oktober 2026"
+  },
+  "category": "Reiseplanung",
+  "readTime": {
+    "de": "9 Min."
+  },
+  "hero": "/images/guest-photo-tourguide.jpg",
+  "title": {
+    "de": "Prag besichtigen: Stadtführer, Reiseführer oder Besichtigungsfahrt?"
+  },
+  "seoTitle": {
+    "de": "Prag besichtigen: Stadtführer, Reiseführer oder Besichtigungsfahrt?"
+  },
+  "excerpt": {
+    "de": "Reiseführer, Besichtigungsfahrten, Stadtführer oder Buchungsportal: was sich für historische Orte und Gebäude in Prag wirklich lohnt – von einer Prager Stadtführerin."
+  },
+  "tags": {
+    "de": [
+      "Prag besichtigen",
+      "Stadtführer Prag",
+      "Reiseführer Prag",
+      "Besichtigungsfahrt Prag",
+      "private Führung Prag"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/guest-photo-tourguide.jpg",
+  "blocks": [
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Ein Reisebuch im Koffer, eine Rundfahrt mit dem Bus, eine Führung über ein Buchungsportal oder eine eigene Stadtführerin: Jede Art, Prag zu entdecken, kann etwas anderes. Hier steht, was sich wofür lohnt, wo die Grenzen liegen und wie Sie die Varianten kombinieren."
+      }
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
+      "html": {
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Ein Reiseführer als Buch eignet sich am besten zur Vorbereitung zu Hause. Vor Ort erklärt er Ihnen, was Sie sehen, aber nicht, wie Sie hinkommen und wann es dort leer ist."
+        },
+        {
+          "de": "Die günstigste Besichtigungsfahrt ist die Straßenbahnlinie 22. Mit einem normalen Fahrschein fahren Sie vom Nationaltheater über die Kleinseite bis hinauf zur Burg."
+        },
+        {
+          "de": "Für die Burg und das Jüdische Viertel lohnt sich eine Führung am meisten. Dort stehen die meisten historischen Gebäude dicht beieinander, und ohne Erklärung bleiben sie schöne Fassaden."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Fast jede Anfrage, die mich erreicht, beginnt mit derselben Frage: Brauchen wir für Prag überhaupt eine Führung, oder reicht ein guter Reiseführer? Die ehrliche Antwort hängt davon ab, wie viel Zeit Sie haben, wie gut Sie zu Fuß sind und was Sie in Prag suchen. Wer zwei Tage bleibt und vor allem Atmosphäre will, braucht etwas anderes als jemand, der wissen möchte, warum 1618 drei Männer aus einem Fenster der Burg flogen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich bin Stadtführerin, Sie lesen hier also keine neutrale Stimme. Ich schreibe trotzdem auf, wann ich Gästen von einer Führung abrate, und wofür ein Buch oder eine Rundfahrt völlig genügt."
+      }
+    },
+    {
+      "t": "overview",
+      "id": "ueberblick",
+      "title": {
+        "de": "Fünf Wege, Prag zu entdecken"
+      },
+      "items": [
+        {
+          "n": "1",
+          "title": {
+            "de": "Reiseführer (Buch oder App)"
+          },
+          "desc": {
+            "de": "Gut zur Vorbereitung und für Daten und Fakten. Vor Ort wird das Lesen im Gedränge mühsam."
+          },
+          "href": "#reisefuehrer"
+        },
+        {
+          "n": "2",
+          "title": {
+            "de": "Besichtigungsfahrt"
+          },
+          "desc": {
+            "de": "Bus, Boot oder Oldtimer: bequem und gut für den ersten Überblick. Die Altstadt sehen Sie aber nur von außen."
+          },
+          "href": "#rundfahrt"
+        },
+        {
+          "n": "3",
+          "title": {
+            "de": "Tram 22 auf eigene Faust"
+          },
+          "desc": {
+            "de": "Kostet nur einen Fahrschein und erspart den steilen Weg zur Burg. Erklärt wird dabei nichts."
+          },
+          "href": "#rundfahrt"
+        },
+        {
+          "n": "4",
+          "title": {
+            "de": "Gruppenführung über ein Portal"
+          },
+          "desc": {
+            "de": "Schnell gebucht und günstig pro Person. Route, Tempo und Gruppengröße sind festgelegt."
+          },
+          "href": "#portale"
+        },
+        {
+          "n": "5",
+          "title": {
+            "de": "Private Stadtführerin"
+          },
+          "desc": {
+            "de": "Route, Tempo und Themen nach Ihren Wünschen. Lohnt sich vor allem für Familien, Paare und kleine Gruppen."
+          },
+          "href": "#stadtfuehrer"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Reisebücher und Reiseführer: zum Vorbereiten unschlagbar"
+      },
+      "id": "reisefuehrer"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein gedruckter Reiseführer ist der beste Weg, sich zu Hause in Ruhe auf Prag einzustimmen. Sie lesen die Geschichte der Stadt am Stück, markieren, was Sie interessiert, und kommen mit einer Vorstellung davon an, was Kleinseite, Hradschin und Josefov unterscheidet. Auf Deutsch gibt es Prag-Bände von Marco Polo, DuMont, Baedeker und dem Michael Müller Verlag. Die kompakten Bände passen in die Jackentasche, die ausführlichen erklären die historischen Gebäude bis zur Bauphase."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Achten Sie auf das Erscheinungsjahr. Öffnungszeiten, Eintrittspreise und Rundgänge ändern sich in Prag schneller, als Bücher neu aufgelegt werden. Die Prager Burg hat ihre Ticketvarianten in den letzten Jahren mehrfach umgestellt. Praktische Angaben prüfe ich deshalb immer zusätzlich auf den offiziellen Seiten, die ich am Ende verlinke."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wo das Buch an seine Grenzen kommt: Es sagt Ihnen nicht, dass das Goldene Gässchen um zehn Uhr voller Gruppen ist und um halb neun fast leer, und es sucht Ihnen keinen Weg ohne Treppen. Im Gedränge auf der Karlsbrücke wird das Lesen ohnehin schwierig."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Besichtigungsfahrten: Bus, Boot, Oldtimer und Tram"
+      },
+      "id": "rundfahrt"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Besichtigungsfahrten sind ideal am ersten Tag, um ein Gefühl für die Entfernungen zu bekommen, und für alle, die nicht lange gehen können. In Prag haben Sie vier Möglichkeiten."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Hop-on-hop-off-Busse</strong> fahren die großen Ziele an, mit Ansagen über Kopfhörer. Die engen Gassen der Altstadt sind für Busse allerdings gesperrt. Sie sehen also vor allem die Uferstraßen und die Burg von unten."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eine <strong>Bootsfahrt auf der Moldau</strong> zeigt Ihnen die Stadt so, wie sie am schönsten ist: Burg, Karlsbrücke und Kleinseite vom Wasser aus. Welche Fahrten es gibt und welche sich lohnen, habe ich im Artikel <a href=\"/blog/bootsfahrt-prag-moldau\">Bootsfahrt in Prag</a> zusammengestellt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die roten <strong>Oldtimer</strong> am Altstädter Ring fahren Sie eine Stunde durch die Stadt. Bezahlt wird meist pro Fahrzeug, nicht pro Person. Fragen Sie vor dem Einsteigen nach Preis und Route."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Mein Tipp für alle, die sparen wollen: die <strong>Straßenbahnlinie 22</strong>. Sie fährt vom Nationaltheater über die Moldau, durch die Kleinseite und die Serpentinen hinauf bis zur Prager Burg. Ein normaler Fahrschein genügt, und ab 65 Jahren fahren Sie in Prag kostenlos."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/blog-prague-tram-with-prague-castle.jpg",
+      "alt": {
+        "de": "Eine rot-weiße Straßenbahn, dahinter die Prager Burg"
+      },
+      "credit": "Zuza Prague Tours",
+      "cap": {
+        "de": "Mit der Tram zur Burg: Wer oben anfängt, läuft den Rest des Tages bergab."
+      },
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Historische Orte und Gebäude: wo eine Führung den Unterschied macht"
+      },
+      "id": "orte"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prag ist von großen Zerstörungen weitgehend verschont geblieben. Darin liegt der Reiz, und genau darin liegt die Schwierigkeit: An fast jeder Ecke steht ein Haus mit Geschichte, und von außen sehen viele davon gleich aus. Ob Sie vor einem Palast stehen, in dem 1618 der Dreißigjährige Krieg begann, oder vor einem schönen Bürgerhaus, verrät die Fassade nicht."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am deutlichsten merken Sie das an zwei Orten. Auf der <strong>Prager Burg</strong> liegen Veitsdom, Alter Königspalast, Georgsbasilika und Goldenes Gässchen auf engem Raum, mit unterschiedlichen Eingängen und Tickets. Im <strong>Jüdischen Viertel</strong> erzählen die Synagogen und der Alte Friedhof eine zusammenhängende Geschichte, die man ohne Erklärung kaum erkennt. Für diese beiden Orte empfehle ich auch Gästen, die sonst alles allein machen, zwei oder drei Stunden mit jemandem, der sich auskennt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Zehn Orte, an denen Prager Geschichte passiert ist, mit Datum, Namen und Anfahrt, finden Sie im Artikel <a href=\"/blog/zehn-orte-mit-geschichte-prag-legenden\">Zehn Orte mit Geschichte</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Den richtigen Stadtführer finden: vier Fragen vor der Buchung"
+      },
+      "id": "stadtfuehrer"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie sich für eine Führung entscheiden, lohnt es sich, vorher kurz nachzufragen. Diese vier Fragen stelle ich mir auch selbst, wenn ich für Gäste eine Kollegin in einer anderen Stadt suche."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Sprache"
+          },
+          "v": {
+            "de": "Führt die Person selbst auf Deutsch, oder wird übersetzt? Bei Gruppenführungen ist Deutsch oft nur eine von mehreren Sprachen."
+          }
+        },
+        {
+          "k": {
+            "de": "Ausbildung"
+          },
+          "v": {
+            "de": "Fragen Sie nach Ausbildung und Erfahrung. Wer geprüft ist, sagt es Ihnen gern."
+          }
+        },
+        {
+          "k": {
+            "de": "Route und Tempo"
+          },
+          "v": {
+            "de": "Lässt sich die Route an Ihre Kondition anpassen, zum Beispiel ohne die Treppen zur Burg?"
+          }
+        },
+        {
+          "k": {
+            "de": "Bewertungen"
+          },
+          "v": {
+            "de": "Lesen Sie Bewertungen auf Google oder TripAdvisor, vor allem die ausführlichen. Dort steht, wie die Führung wirklich war."
+          }
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eine private Führung kostet mehr als ein Platz in einer großen Gruppe. Bei zwei, drei oder vier Personen ist der Unterschied pro Kopf aber kleiner, als viele denken, und Sie bestimmen, wo Sie stehen bleiben."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Reisebuchungsdienste oder direkt buchen?"
+      },
+      "id": "portale"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Über große Buchungsportale finden Sie in wenigen Minuten Dutzende Führungen, mit Bewertungen, festen Preisen und sofortiger Bestätigung. Das ist bequem, besonders wenn Sie ohnehin Hotel und Flug online buchen. Lesen Sie vorher die Stornierungsbedingungen und wie groß die Gruppe höchstens wird."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Nachteil: Den Guide lernen Sie meist erst am Treffpunkt kennen, und Sonderwünsche sind schwer abzusprechen. Ein Teil des Preises geht als Provision an das Portal. Wenn Sie direkt bei einer Stadtführerin anfragen, klären Sie vorher Treffpunkt, Route und Themen, etwa Abholung am Hotel, einen Weg ohne Treppen oder einen Schwerpunkt auf jüdischer Geschichte. Rückfragen gehen dann per E-Mail oder WhatsApp direkt an die Person, die Sie führt."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Meine Empfehlung: kombinieren"
+      },
+      "id": "empfehlung"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Für drei Tage in Prag rate ich meist zu dieser Mischung: Vorher lesen Sie einen Reiseführer und entscheiden, was Sie interessiert. Am ersten Nachmittag fahren Sie mit der Tram 22 oder dem Boot, um die Stadt im Überblick zu sehen. Für die Burg oder das Jüdische Viertel nehmen Sie sich eine Führung, idealerweise am Vormittag, bevor die großen Gruppen kommen. Den Rest erkunden Sie in Ihrem eigenen Tempo."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wenn Sie diesen Teil mit mir machen möchten: Ich führe privat und auf Deutsch, passe die Route an Sie an und beantworte vorab gern Ihre Fragen."
+      }
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Private Stadtführungen auf Deutsch, in Ihrem Tempo. <a href=\"/book#contact-title\">Tour anfragen</a>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Offizielle Seiten für aktuelle Angaben"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Prague City Tourism: <a href=\"https://prague.eu/en/public-transport/\">Public transport</a> (Fahrpreise und Ermäßigungen)"
+        },
+        {
+          "de": "Dopravní podnik hl. m. Prahy: <a href=\"https://www.dpp.cz/en\">Fahrpläne und Linien</a>"
+        },
+        {
+          "de": "Prager Burg: <a href=\"https://www.hrad.cz/en\">Öffnungszeiten und Tickets</a>"
+        }
+      ],
+      "ordered": true
+    }
+  ]
+}

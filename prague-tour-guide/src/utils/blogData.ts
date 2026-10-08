@@ -38,6 +38,27 @@ export interface BlogPost {
   faq?: Partial<Record<'de' | 'en', { q: string; a: string }[]>>;
   /** Places the article is about (Article JSON-LD `about`). */
   about?: string[];
+  // Facelift template (design_handoff_blog_facelift), see src/types/journal.ts.
+  layout?: 'v2';
+  /** ISO date of the last substantial update (dateModified, sitemap lastmod). */
+  updated?: string;
+  updatedDisplay?: Partial<Record<'de' | 'en', string>>;
+  /** Show the date as "Veröffentlicht am …". */
+  datePrefix?: boolean;
+  /** Reading time from the content JSON; otherwise counted from the text. */
+  readMinutes?: number;
+  heroAlt?: Partial<Record<'de' | 'en', string>>;
+  heroLook?: { pos?: string; maxH?: number };
+  /** Floating contact card / chip / mobile bar. */
+  floatingCta?: boolean;
+  sourcesTitle?: Partial<Record<'de' | 'en', string>>;
+  /** The body brings its own closing CTA (a `cta` block). */
+  hasCtaBlock?: boolean;
+  /** Old URLs that 301 here (netlify.toml). */
+  redirectFrom?: string[];
+  /** Pages only: site path outside /blog, and canonical URL. */
+  path?: string;
+  canonical?: string;
 }
 
 import { journalPosts } from './journalGenerated';

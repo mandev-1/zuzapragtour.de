@@ -151,7 +151,7 @@ export async function getAbResults(): Promise<AbResults> {
   const r = await fetch(fn('ab-results'), { credentials: 'same-origin' });
   if (!r.ok) {
     const d = await r.json().catch(() => ({}));
-    throw new Error(d.error || 'A/B-Testdaten konnten nicht geladen werden.');
+    throw new Error(d.error || 'Data A/B testu se nepodařilo načíst.');
   }
   return (await r.json()) as AbResults;
 }

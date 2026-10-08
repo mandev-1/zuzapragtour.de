@@ -1,0 +1,438 @@
+{
+  "slug": "strahov-monastery-prague",
+  "languages": [
+    "de"
+  ],
+  "status": "published",
+  "date": "2025-10-18",
+  "dateDisplay": {
+    "de": "18. Oktober 2025"
+  },
+  "updated": "2026-10-07",
+  "updatedDisplay": {
+    "de": "Aktualisiert am 7. Oktober 2026"
+  },
+  "category": "Sehenswürdigkeiten",
+  "readTime": {
+    "de": "8 Min."
+  },
+  "hero": "/images/strahov-monastery.jpg",
+  "title": {
+    "de": "Strahov-Kloster in Prag: Bibliothek, Aussicht und der ruhige Weg zur Burg"
+  },
+  "seoTitle": {
+    "de": "Strahov-Kloster Prag: Bibliothek, Aussicht, Tickets und Anfahrt"
+  },
+  "excerpt": {
+    "de": "Strahov-Kloster in Prag: was Sie in der Bibliothek wirklich sehen, wann es leer ist, wie Sie hinkommen und wie Sie den Besuch mit Burg und Petřín verbinden. Von einer Prager Stadtführerin."
+  },
+  "tags": {
+    "de": [
+      "Strahov-Kloster",
+      "Strahover Bibliothek",
+      "Prager Burg",
+      "Hradschin",
+      "Petřín",
+      "Prag Sehenswürdigkeiten"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/strahov-monastery.jpg",
+  "blocks": [
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Das Kloster oberhalb der Kleinseite ist für mich der beste Anfang für einen Tag auf dem Burgberg. Hier steht, was Sie in der berühmten Bibliothek tatsächlich sehen, wann es dort ruhig ist und wie Sie Strahov mit Burg und Petřín zu einem Weg bergab verbinden."
+      }
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
+      "html": {
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Die beiden Bibliothekssäle sehen Sie als normaler Besucher von der Tür aus. Hinein geht es nur bei angemeldeten Sonderführungen."
+        },
+        {
+          "de": "Kommen Sie mit der Tram 22 oder 23 bis Pohořelec. Von dort sind es drei Minuten zu Fuß, und der Rest des Tages geht bergab."
+        },
+        {
+          "de": "Der Klostergarten und der Blick über die Stadt kosten nichts. Am ruhigsten ist es zur Öffnung am Vormittag."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die meisten Gäste, die ich über den Burgberg führe, kennen Strahov nur vom Foto: ein Saal voller Bücher, Fresken an der Decke, Globen in der Mitte. Dass dazu ein Klosterhof mit Basilika, eine eigene Brauerei und einer der schönsten Blicke über Prag gehören, wissen die wenigsten. Und weil die großen Gruppen meist unten an der Burg anfangen, ist es hier oben am Vormittag oft erstaunlich still."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich beginne Touren gern hier, weil der Weg danach nur noch bergab führt: erst zur Burg, dann durch die Kleinseite zur Karlsbrücke. Wer andersherum geht, steigt die steilste Strecke des Tages am Nachmittag hinauf."
+      }
+    },
+    {
+      "t": "overview",
+      "id": "ueberblick",
+      "title": {
+        "de": "In diesem Artikel"
+      },
+      "items": [
+        {
+          "n": "1",
+          "title": {
+            "de": "Geschichte in Kürze"
+          },
+          "desc": {
+            "de": "Seit 1143 leben hier Prämonstratenser, mit Unterbrechung bis 1990."
+          },
+          "href": "#geschichte"
+        },
+        {
+          "n": "2",
+          "title": {
+            "de": "Die Bibliothek"
+          },
+          "desc": {
+            "de": "Theologischer und Philosophischer Saal, Kuriositätenkabinett, was erlaubt ist."
+          },
+          "href": "#bibliothek"
+        },
+        {
+          "n": "3",
+          "title": {
+            "de": "Basilika und Brauerei"
+          },
+          "desc": {
+            "de": "Die Orgel, an der Mozart spielte, und Bier aus dem Kloster."
+          },
+          "href": "#basilika"
+        },
+        {
+          "n": "4",
+          "title": {
+            "de": "Aussicht und Weg"
+          },
+          "desc": {
+            "de": "Zwei Routen bergab: über die Burg oder über den Petřín."
+          },
+          "href": "#aussicht"
+        },
+        {
+          "n": "5",
+          "title": {
+            "de": "Praktisches"
+          },
+          "desc": {
+            "de": "Anfahrt, Zeitbedarf, Tickets, Fotos, beste Uhrzeit."
+          },
+          "href": "#praktisch"
+        },
+        {
+          "n": "6",
+          "title": {
+            "de": "Häufige Fragen"
+          },
+          "desc": {
+            "de": "Was Gäste mich vor dem Besuch am häufigsten fragen."
+          },
+          "href": "#faq"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Geschichte in Kürze"
+      },
+      "id": "geschichte"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gegründet wurde Strahov 1143 von Herzog Vladislav II. und Bischof Jindřich Zdík für den Prämonstratenserorden. Es ist damit eines der ältesten Klöster in Böhmen. Brände, Plünderungen und Kriege haben die romanischen Bauten weitgehend zerstört, was Sie heute sehen, ist überwiegend Barock des 17. und 18. Jahrhunderts."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "1627 brachten die Mönche die Gebeine ihres Ordensgründers, des heiligen Norbert, aus Magdeburg nach Prag. Nach 1950 löste das kommunistische Regime das Kloster auf, die Bibliothek wurde Teil des Museums für tschechische Literatur. Seit 1990 leben wieder Prämonstratenser hier, und sie verwalten Bibliothek, Gemäldegalerie und Basilika selbst."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die Bibliothek: zwei Säle, ein Flur voller Kuriositäten"
+      },
+      "id": "bibliothek"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der <strong>Theologische Saal</strong> ist der ältere der beiden, ein langer, niedriger Raum mit weißem Stuck und Deckenfresken in kleinen Feldern. In der Mitte stehen Globen aus dem 17. Jahrhundert. Der <strong>Philosophische Saal</strong> entstand Ende des 18. Jahrhunderts und ist fast doppelt so hoch: Nussbaumregale über zwei Etagen und ein einziges großes Deckenfresko von Franz Anton Maulbertsch über die geistige Entwicklung der Menschheit."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wichtig, damit Sie nicht enttäuscht sind: Beide Säle sehen Sie von der Tür aus, hinter einer Absperrung. Das schützt die Bücher vor Feuchtigkeit und Abrieb. Betreten können Sie die Säle nur bei Sonderführungen, die vorher beim Kloster angemeldet werden. Der Blick von der Schwelle ist trotzdem eindrucksvoll, vor allem in den Philosophischen Saal."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Zwischen den Sälen liegt ein Flur, den viele zu schnell durchqueren. Dort steht das <strong>Kuriositätenkabinett</strong>: präparierte Meerestiere, Mineralien, alte Bücher mit Holzeinbänden. Meine Gäste bleiben hier oft länger als vor den Sälen, besonders Kinder."
+      }
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Mein Tipp"
+      },
+      "html": {
+        "de": "<p>Wer eine Barockbibliothek von innen erleben will, kann Strahov mit dem <a href=\"/blog/klementinum-baroque-library-prague\">Klementinum</a> in der Altstadt verbinden. Dort führt der Rundgang durch den Barocksaal und hinauf auf den astronomischen Turm.</p>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Basilika, Galerie und Klosterbrauerei"
+      },
+      "id": "basilika"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die <strong>Basilika Mariä Himmelfahrt</strong> steht mitten im Klosterhof. Hier liegen die Reliquien des heiligen Norbert, und auf der Orgel soll Mozart 1787 bei seinem Prag-Besuch improvisiert haben. Ins Innere kommen Sie meist nur bis zum Gitter am Eingang, außer zu Gottesdiensten und Konzerten."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die <strong>Strahover Gemäldegalerie</strong> im Kreuzgang zeigt gotische Tafelbilder und Barockmalerei aus dem Besitz des Ordens. Sie hat ein eigenes Ticket und ist an den meisten Tagen fast leer, ein guter Ort, wenn es draußen regnet."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gleich am Eingang des Hofs liegt die <strong>Klosterbrauerei Strahov</strong>. Gebraut wird dort seit dem 13. Jahrhundert mit Unterbrechungen, heute wieder direkt im Haus, das Bier heißt nach dem heiligen Norbert. Für eine Pause vor dem Weg bergab ist das mein Standardvorschlag, mittags sollten Sie aber mit Wartezeit rechnen."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Aussicht und zwei Wege bergab"
+      },
+      "id": "aussicht"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Unterhalb des Klosters liegen Obstgarten und Weinberg. Vom Weg an der Gartenmauer sehen Sie über die Dächer der Kleinseite bis zur Altstadt, mit den Türmen der Teynkirche und dem Veitsdom links daneben. Der Garten ist frei zugänglich und an klaren Tagen am späten Nachmittag am schönsten."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Über die Burg"
+          },
+          "v": {
+            "de": "Pohořelec, Loreto, Hradschiner Platz, Burg. Etwa 15 Minuten bis zum ersten Burghof, danach über die Alte Schlossstiege oder die Nerudova hinunter zur Kleinseite."
+          }
+        },
+        {
+          "k": {
+            "de": "Über den Petřín"
+          },
+          "v": {
+            "de": "Durch den Klostergarten auf den Petřín, am Aussichtsturm vorbei und durch die Obstgärten hinunter. Etwa 40 Minuten bis zur Kampa, fast ohne Verkehr."
+          }
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wer die stilleren Ecken der Kleinseite sucht, findet unten die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und den <a href=\"/blog/wallenstein-garden-prague\">Waldstein-Garten</a> mit der Tropfsteinwand."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktisches für Ihren Besuch"
+      },
+      "id": "praktisch"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Adresse"
+          },
+          "v": {
+            "de": "Strahovské nádvoří 1, Prag 1 (Hradschin)"
+          }
+        },
+        {
+          "k": {
+            "de": "Anfahrt"
+          },
+          "v": {
+            "de": "Tram 22 oder 23 bis Pohořelec, dann drei Minuten zu Fuß. Ein normaler Fahrschein genügt."
+          }
+        },
+        {
+          "k": {
+            "de": "Zeitbedarf"
+          },
+          "v": {
+            "de": "Bibliothek 30 bis 45 Minuten, mit Galerie, Garten und Pause gut zwei Stunden."
+          }
+        },
+        {
+          "k": {
+            "de": "Öffnungszeiten"
+          },
+          "v": {
+            "de": "Täglich, mit Mittagspause. Aktuelle Zeiten auf der Seite des Klosters prüfen (Link unten)."
+          }
+        },
+        {
+          "k": {
+            "de": "Tickets"
+          },
+          "v": {
+            "de": "Bibliothek und Galerie getrennt, an der Kasse im Flur. Für Fotos wird eine kleine Gebühr verlangt."
+          }
+        },
+        {
+          "k": {
+            "de": "Beste Zeit"
+          },
+          "v": {
+            "de": "Zur Öffnung am Vormittag, bevor die Gruppen von der Burg herüberkommen."
+          }
+        },
+        {
+          "k": {
+            "de": "Barrierefreiheit"
+          },
+          "v": {
+            "de": "Die Tram hält eben vor dem Kloster. Der Hof ist gepflastert, zur Bibliothek führen Stufen."
+          }
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Häufige Fragen"
+      },
+      "id": "faq"
+    },
+    {
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Kann man in die Bibliothekssäle hineingehen?"
+          },
+          "a": {
+            "de": "Bei einem normalen Besuch nicht. Sie sehen beide Säle von der Tür aus. Betreten werden sie nur bei Sonderführungen, die beim Kloster vorab angemeldet werden müssen."
+          }
+        },
+        {
+          "q": {
+            "de": "Lohnt sich Strahov, wenn ich nur einen Tag in Prag habe?"
+          },
+          "a": {
+            "de": "Ja, wenn Sie ohnehin zur Burg gehen. Mit der Tram hinauf, eine halbe Stunde Bibliothek, dann bergab zur Burg kostet Sie kaum zusätzliche Zeit."
+          }
+        },
+        {
+          "q": {
+            "de": "Darf man in der Bibliothek fotografieren?"
+          },
+          "a": {
+            "de": "Ja, gegen eine Fotogebühr an der Kasse. Blitz und Stative sind nicht erlaubt."
+          }
+        },
+        {
+          "q": {
+            "de": "Wie weit ist es von Strahov zur Prager Burg?"
+          },
+          "a": {
+            "de": "Etwa 15 Minuten zu Fuß, leicht bergab, über Loreto und den Hradschiner Platz."
+          }
+        },
+        {
+          "q": {
+            "de": "Ist Strahov mit Kindern interessant?"
+          },
+          "a": {
+            "de": "Das Kuriositätenkabinett mit Meerestieren und Mineralien gefällt Kindern meist mehr als die Säle. Danach ist der Garten zum Auslaufen gut."
+          }
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Ich beginne die private Burgtour auf Wunsch in Strahov und gehe mit Ihnen bergab bis zur Karlsbrücke, auf Deutsch und in Ihrem Tempo. <a href=\"/book?tour=Prager%20Burg#contact-title\">Tour anfragen</a>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Weiterlesen"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "<a href=\"/blog/prager-burg-vollstaendiger-besucher-guide\">Prager Burg: der vollständige Besucher-Guide</a>"
+        },
+        {
+          "de": "<a href=\"/blog/klementinum-baroque-library-prague\">Klementinum: die Barockbibliothek in der Altstadt</a>"
+        },
+        {
+          "de": "<a href=\"/blog/wallenstein-garden-prague\">Waldstein-Garten und Tropfsteinwand</a>"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Offizielle Seiten für aktuelle Angaben"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Královská kanonie premonstrátů na Strahově: <a href=\"https://www.strahovskyklaster.cz\">Öffnungszeiten, Tickets, Sonderführungen</a>"
+        },
+        {
+          "de": "Dopravní podnik hl. m. Prahy: <a href=\"https://www.dpp.cz/en\">Tram 22 und 23</a>"
+        },
+        {
+          "de": "Prague City Tourism: <a href=\"https://prague.eu\">prague.eu</a>"
+        }
+      ],
+      "ordered": true
+    }
+  ],
+  "slugDe": "strahov-kloster-prag"
+}

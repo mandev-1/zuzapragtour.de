@@ -194,7 +194,7 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
     </>
   ) : (
     <>
-      <button type="button" className="zsuite-btn ghost" onClick={onLogout}><span className="material-symbols-outlined">logout</span>Abmelden</button>
+      <button type="button" className="zsuite-btn ghost" onClick={onLogout}><span className="material-symbols-outlined">logout</span>{isAbTest ? 'Odhlásit' : 'Abmelden'}</button>
       {!isMedia && !isTours && !isReviews && !isAbTest && !isStats && <button type="button" className="zsuite-btn ghost" onClick={() => setGen(true)}><span className="material-symbols-outlined">auto_awesome</span>Aus Stichwörtern</button>}
       {!isMedia && !isTours && !isReviews && !isAbTest && !isStats && <button type="button" className="zsuite-btn primary" onClick={newArticle}><span className="material-symbols-outlined">add</span>Neuer Artikel</button>}
     </>
@@ -222,7 +222,7 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
         breadcrumb={isEditor ? 'Zurück zum Journal' : undefined}
         onBreadcrumb={() => { if (editing) persist(editing, true, 'Gespeichert'); }}
         onNavigate={navigate}
-        title={isEditor && editing ? (titlePlain(editing) || 'Unbenannt') : isAbTest ? 'A/B-Test' : isMedia ? 'Medien' : isTours ? 'Touren' : isReviews ? 'Bewertungen' : 'Journal'}
+        title={isEditor && editing ? (titlePlain(editing) || 'Unbenannt') : isAbTest ? 'A/B test' : isMedia ? 'Medien' : isTours ? 'Touren' : isReviews ? 'Bewertungen' : 'Journal'}
         subtitle={
           isEditor
             ? 'Artikel bearbeiten'
@@ -233,7 +233,7 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
                 : isReviews
                   ? 'Bewertungs-Aufrufe & Plattformen'
                   : isAbTest
-                    ? 'Startseite: bisher gegen neu'
+                    ? 'Úvodní stránka: dosavadní proti nové'
                   : `${articles.length} Artikel · ${articles.filter((a) => a.status === 'published').length} veröffentlicht`
         }
         actions={actions}

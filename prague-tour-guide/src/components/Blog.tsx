@@ -53,6 +53,9 @@ function readTimeMin(html: string): number {
 const stripTags = (s: string) => s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&');
 
 function thumbOf(src: string): string {
+  // Optimized copies (/images/web/*.webp) share the thumbnail of their original in /images/thumbs/.
+  const web = /^\/images\/web\/(.+)\.webp$/i.exec(src);
+  if (web) return `/images/thumbs/${web[1]}.jpg`;
   const dir = src.substring(0, src.lastIndexOf('/'));
   const file = src.substring(src.lastIndexOf('/') + 1).replace(/\.png$/i, '.jpg');
   return `${dir}/thumbs/${file}`;
@@ -128,7 +131,7 @@ const Blog: React.FC = () => {
           CATEGORY_RE.find(([, re]) => re.test(title)) ?? [...CATEGORY_RE].reverse().find(([, re]) => re.test(hay));
         const ci = explicit > 0 ? explicit : hit ? hit[0] : FALLBACK_CATEGORY;
         const content = post.contentKey ? postText(post.contentKey, language) : '';
-        const mins = content ? readTimeMin(content) : 0;
+        const mins = post.readMinutes ?? (content ? readTimeMin(content) : 0);
         const dateLabel = postText(post.dateKey, language);
         const dm = /^(\d{4})-(\d{2})-(\d{2})/.exec(post.date);
         const dateShort = dm ? (de ? `${+dm[3]}. ${months[+dm[2] - 1]} ${dm[1]}` : `${months[+dm[2] - 1]} ${+dm[3]}, ${dm[1]}`) : dateLabel;
@@ -323,7 +326,7 @@ const Blog: React.FC = () => {
                 );
               }
               const { it, wide, first } = cell;
-              const img = wide && /\.jpe?g$/i.test(it.full) ? it.full : it.thumb;
+              const img = wide && /\.(jpe?g|webp)$/i.test(it.full) ? it.full : it.thumb;
               return (
                 <Link key={it.post.id} href={it.href} className={`${wide ? 'jx-wide' : 'jx-card'}${first ? ' is-first' : ''}`}>
                   <div className="jx-card__media">

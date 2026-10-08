@@ -10,10 +10,10 @@ import { verify } from '../lib/auth.mjs';
 const json = (statusCode, obj) => ({ statusCode, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(obj) });
 
 export const handler = async (event) => {
-  if (!verify(event.headers.cookie, process.env.SESSION_SECRET)) return json(401, { error: 'Nicht angemeldet.' });
+  if (!verify(event.headers.cookie, process.env.SESSION_SECRET)) return json(401, { error: 'Nepřihlášeno.' });
 
   const key = process.env.STATS_KEY || process.env.AB_RESULTS_KEY;
-  if (!key) return json(500, { error: 'STATS_KEY ist nicht gesetzt (Netlify → Admin-Site → Environment variables).' });
+  if (!key) return json(500, { error: 'STATS_KEY není nastaven (Netlify → admin site → Environment variables).' });
 
   const site = (process.env.PUBLIC_SITE_URL || 'https://zuzapragtour.de').replace(/\/$/, '');
   try {
@@ -21,11 +21,11 @@ export const handler = async (event) => {
     const body = await r.json().catch(() => ({}));
     if (!r.ok) {
       return json(502, {
-        error: r.status === 401 ? 'Schlüssel passt nicht: STATS_KEY muss auf beiden Sites gleich sein.' : `Website antwortet mit ${r.status}.`,
+        error: r.status === 401 ? 'Klíč nesedí: STATS_KEY musí být na obou sitech stejný.' : `Web odpovídá ${r.status}.`,
       });
     }
     return json(200, body);
   } catch {
-    return json(502, { error: 'Website nicht erreichbar.' });
+    return json(502, { error: 'Web není dostupný.' });
   }
 };

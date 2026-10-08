@@ -1,7 +1,8 @@
 /**
  * Click & user-flow analytics (own, anonymous, no third parties).
  *
- * Every page view, every click on a link or button, every sent form and — when
+ * Every page view, every click on a link or button, every sent form, every
+ * copied e-mail address or phone number and — when
  * a page is left — how long it was visible and how far an article was read are
  * sent to netlify/functions/track.mjs; the admin dashboard "Kliky a poptávky"
  * builds its numbers, paths and per-visit timelines from them.
@@ -13,7 +14,7 @@
  * Own visits: open any page with `?track=off` once per device/browser to stop
  * counting yourself (`?track=on` undoes it).
  */
-export type TrackKind = 'page' | 'click' | 'enquiry' | 'leave';
+export type TrackKind = 'page' | 'click' | 'enquiry' | 'leave' | 'copy';
 export type ClickCategory = 'whatsapp' | 'phone' | 'email' | 'form' | 'tour' | 'anchor' | 'nav' | 'external' | 'button';
 
 const OPT_OUT_KEY = 'zpt_notrack';
@@ -106,7 +107,7 @@ function visibleText(el: Element): string {
 }
 
 /** Where on the page: an explicit data-track-section, else the nearest id, else header/footer/nav/main. */
-function areaOf(el: Element): string {
+export function areaOf(el: Element): string {
   const tagged = el.closest('[data-track-section]') as HTMLElement | null;
   if (tagged) return tagged.dataset.trackSection || '';
   const withId = el.closest('[id]');

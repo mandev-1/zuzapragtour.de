@@ -143,6 +143,7 @@ export class StatsDashboard extends React.Component<any, any> {
     let icon, color, ibg, text;
     if (e.k === 'page') { const art = e.p.startsWith('/blog/'); icon = art ? 'menu_book' : 'visibility'; color = '#3A332C'; ibg = '#F0EBE2'; text = (art ? 'Čte „' : 'Prohlíží „') + clip(S.pageName(e.p, 'cs'), 58) + '“'; }
     else if (goal) { const g = goalOf(e); icon = GM[g].i; color = GM[g].c; ibg = GM[g].bg; text = g === 'enquiry' ? 'Odeslal formulář · ' + e.l : GM[g].l + ' · ' + S.areaName(e.a, 'cs'); }
+    else if (e.k === 'copy') { icon = 'content_copy'; color = GM[e.c].c; ibg = GM[e.c].bg; text = (e.c === 'email' ? 'Zkopíroval e-mail' : 'Zkopíroval telefon') + ' · ' + S.areaName(e.a, 'cs'); }
     else { icon = 'ads_click'; color = '#8C6A3C'; ibg = '#F3ECDD'; text = 'Klikl na „' + clip(S.clickLabel(e.c, e.l), 40) + '“ · ' + S.areaName(e.a, 'cs'); }
     this._lk = (this._lk || 0) + 1;
     return { k: this._lk, at, icon, color, ibg, text, goal, dev: v.dev === 'm' ? 'smartphone' : 'computer', sub: (v.dev === 'm' ? 'Mobil' : 'Počítač') + ' · ' + (v.ref || 'přímo') + ' · návštěva #' + v.id, page: e.k === 'page' ? e.p : null };
@@ -366,7 +367,7 @@ export class StatsDashboard extends React.Component<any, any> {
     if (leak) out.push({ icon: 'water_drop', bg: '#F5E6E6', fg: '#8A1F1F', title: 'Hodně čtenářů, málo kontaktů', text: '„' + clip(leak.art.title, 60) + '“ má ' + fmt(leak.views) + ' zobrazení, ale jen ' + fmt(leak.conv) + ' ' + plural(leak.conv, 'kontakt', 'kontakty', 'kontaktů') + '. Do konce ho dočte ' + pct(leak.depth.b[3], leak.depth.n) + ' čtenářů – výzvu k akci by stálo za to posunout výš.', action: 'Otevřít článek', run: this.openArt(leak.art.slug) });
     const star = arts.filter((r) => r.views >= 15 && r.conv > 0).sort((x, y) => y.conv / y.views - x.conv / x.views)[0];
     if (star) out.push({ icon: 'auto_awesome', bg: '#E3F1E6', fg: '#25633A', title: 'Článek, který prodává', text: '„' + clip(star.art.title, 60) + '“ převádí ' + pct(star.conv, star.views) + ' čtenářů na kontakt' + (avg ? ', to je ' + pc1(star.conv / star.views / avg) + '× víc než průměr webu' : '') + '.', action: 'Detail článku', run: this.openArt(star.art.slug) });
-    if (a.formViews) out.push({ icon: 'edit_note', bg: '#F6E7E2', fg: '#6B1F2A', title: 'Formulář dokončí ' + pct(a.formSent, a.formViews), text: fmt(a.formViews) + ' návštěv otevřelo stránku s poptávkou, ' + fmt(a.formSent) + ' formulář odeslalo a ' + fmt(a.formViews - a.formSent) + ' odešlo bez odeslání.', action: 'Návštěvy s formulářem', run: () => this.setState({ tab: 'visits', vf: 'form' }) });
+    if (a.formViews) out.push({ icon: 'edit_note', bg: '#F6E7E2', fg: '#6B1F2A', title: 'Formulář dokončí ' + pct(a.formSent, a.formViews), text: fmt(a.formViews) + ' návštěv otevřelo stránku s poptávkou, ' + fmt(a.formSent) + ' formulář odeslalo a ' + fmt(a.formViews - a.formSent) + ' odešlo bez odeslání' + (a.formCopied ? ', z toho ' + fmt(a.formCopied) + ' ' + plural(a.formCopied, 'si zkopíroval', 'si zkopírovali', 'si zkopírovalo') + ' e-mail nebo telefon' : '') + '.', action: 'Návštěvy s formulářem', run: () => this.setState({ tab: 'visits', vf: 'form' }) });
     if (a.m && a.d) {
       const worse = a.convM / a.m < a.convD / a.d;
       out.push({ icon: 'smartphone', bg: '#F0EBE2', fg: '#3A332C', title: 'Mobil vs. počítač', text: 'Na mobilu skončí kontaktem ' + pct(a.convM, a.m) + ' návštěv, na počítači ' + pct(a.convD, a.d) + '. ' + (worse ? 'Mobil zaostává – stojí za kontrolu lišta dole a tlačítko WhatsApp.' : 'Mobil převádí lépe než počítač.'), action: 'Mapa kliků', run: () => this.setState({ tab: 'buttons', mapPage: 'home' }) });
@@ -384,8 +385,8 @@ export class StatsDashboard extends React.Component<any, any> {
       ['S kontaktem', a.conv, p ? p.conv : null, ser((x) => x.conv), '#6B1F2A', fmt(a.conv), 'návštěv z ' + fmt(a.visits), 0],
       ['Míra konverze', a.visits ? a.conv / a.visits : 0, p ? (p.visits ? p.conv / p.visits : 0) : null, rateSer, '#3A332C', pct(a.conv, a.visits), 'návštěv skončí kontaktem', 1],
       ['Formuláře', a.goals.enquiry, p ? p.goals.enquiry : null, ser((x) => x.goals.enquiry), '#6B1F2A', fmt(a.goals.enquiry), 'odesláno · ' + pct(a.formSent, a.formViews) + ' otevřených', 0],
-      ['E-maily', a.goals.email, p ? p.goals.email : null, ser((x) => x.goals.email), '#4A3D7A', fmt(a.goals.email), 'kliků na e-mailovou adresu', 0],
-      ['WhatsApp a telefon', wp(a), p ? wp(p) : null, ser(wp), '#25633A', fmt(wp(a)), 'WhatsApp ' + fmt(a.goals.whatsapp) + ' · telefon ' + fmt(a.goals.phone), 0],
+      ['E-maily', a.goals.email, p ? p.goals.email : null, ser((x) => x.goals.email), '#4A3D7A', fmt(a.goals.email), (a.copies.email ? 'kliknutí · ' + fmt(a.copies.email) + ' zkopírováno' : 'kliků na e-mailovou adresu'), 0],
+      ['WhatsApp a telefon', wp(a), p ? wp(p) : null, ser(wp), '#25633A', fmt(wp(a)), 'WhatsApp ' + fmt(a.goals.whatsapp) + (a.copies.phone ? ' · tel. ' + fmt(a.goals.phone) + ' · ' + fmt(a.copies.phone) + ' zkop.' : ' · telefon ' + fmt(a.goals.phone)), 0],
     ];
     const kpis = K.map(([label, cur, prv, s, color, value, sub, isRate]) => {
       const o = { label, value, sub, spark: this.spark(s, color), showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6B6055' };
@@ -575,6 +576,7 @@ export class StatsDashboard extends React.Component<any, any> {
       } else {
         const at = mmss(e.at != null ? e.at : Math.min(sec, pStart + Math.round(pT * 0.75)));
         if (isGoal(e)) { const g = goalOf(e); tl.push(Object.assign({ at, icon: GM[g].i, color: GM[g].c, ibg: GM[g].bg, fw: '700', title: g === 'enquiry' ? 'Odeslal formulář' : GM[g].l, sub: g === 'enquiry' ? 'Prohlídka: ' + e.l + ' · ' + S.areaName(e.a, 'cs') : S.areaName(e.a, 'cs') + ' · „' + clip(e.l, 40) + '“' }, blank)); }
+        else if (e.k === 'copy') tl.push(Object.assign({ at, icon: 'content_copy', color: GM[e.c].c, ibg: GM[e.c].bg, fw: '600', title: e.c === 'email' ? 'Zkopíroval e-mailovou adresu' : 'Zkopíroval telefonní číslo', sub: S.areaName(e.a, 'cs') + ' · označil a zkopíroval, neklikl' }, blank));
         else tl.push(Object.assign({ at, icon: 'ads_click', color: '#8C6A3C', ibg: '#F3ECDD', fw: '500', title: 'Klik: „' + clip(S.clickLabel(e.c, e.l), 50) + '“', sub: S.areaName(e.a, 'cs') + ' · ' + (S.CAT_L.cs[e.c] || '') }, blank));
       }
     });
@@ -649,7 +651,7 @@ export class StatsDashboard extends React.Component<any, any> {
         if (i < 0) return;
         const btn = i > 0 && v.ev[i - 1].k === 'click' ? v.ev[i - 1] : null, before = v.ev.slice(0, i).filter((x) => x.k === 'page'), rest = v.ev.slice(i + 1);
         const sent = rest.find((x) => x.k === 'enquiry') || null, direct = sent ? null : rest.find((x) => x.k === 'click' && CONTACT[x.c]), tours = before.filter((x) => x.p.startsWith('/tours/'));
-        out.push({ v, page: v.ev[i].p, t: v.ev[i].t || 0, btn, from: btn ? btn.p : null, before, entry: v.ev[0].p, tour: tours.length ? tours[tours.length - 1].p.slice(7) : null, sent, outcome: sent ? 'enquiry' : direct ? direct.c : rest.some((x) => x.k === 'page') ? 'away' : 'left' });
+        out.push({ v, page: v.ev[i].p, t: v.ev[i].t || 0, btn, from: btn ? btn.p : null, before, entry: v.ev[0].p, tour: tours.length ? tours[tours.length - 1].p.slice(7) : null, sent, outcome: sent ? 'enquiry' : direct ? direct.c : rest.some((x) => x.k === 'page') ? 'away' : 'left', copied: v.ev.some((x) => x.k === 'copy') });
       });
       return out;
     });
@@ -853,7 +855,8 @@ export class StatsDashboard extends React.Component<any, any> {
     const segR = (keyOf, lab, order) => { const o = {}; F.forEach((f) => { const k = keyOf(f), g = o[k] || (o[k] = { n: 0, sent: 0 }); g.n++; if (f.outcome === 'enquiry') g.sent++; }); return (order || Object.keys(o).sort((x, y) => o[y].n - o[x].n)).filter((k) => o[k]).map((k) => Object.assign({ label: lab(k), share: pct(o[k].n, s0.opened) + ' otevření', n: fmt(o[k].n), sent: fmt(o[k].sent) }, this.rate(o[k].sent, o[k].n, 0.3))); };
     const OK = ['enquiry', 'whatsapp', 'phone', 'email', 'away', 'left'], omx = Math.max(1, ...OK.map(by));
     const tS = F.filter((f) => f.outcome === 'enquiry').map((f) => f.t), tN = F.filter((f) => f.outcome !== 'enquiry').map((f) => f.t);
-    const fOutNote = (tS.length ? 'Kdo formulář odeslal, strávil na stránce medián ' + dur(median(tS)) + '. ' : '') + (tN.length ? 'Kdo ho neodeslal, odešel z ní po ' + dur(median(tN)) + '.' : '');
+    const cpN = F.filter((f) => f.outcome !== 'enquiry' && f.copied).length;
+    const fOutNote = (tS.length ? 'Kdo formulář odeslal, strávil na stránce medián ' + dur(median(tS)) + '. ' : '') + (tN.length ? 'Kdo ho neodeslal, odešel z ní po ' + dur(median(tN)) + '.' : '') + (cpN ? ' ' + fmt(cpN) + ' ' + plural(cpN, 'návštěva formulář neodeslala', 'návštěvy formulář neodeslaly', 'návštěv formulář neodeslalo') + ', ale ' + plural(cpN, 'zkopírovala', 'zkopírovaly', 'zkopírovalo') + ' si e-mail nebo telefon – nejspíš napsali napřímo.' : '');
     const tq = {}; F.forEach((f) => { if (f.sent) tq[f.sent.l] = (tq[f.sent.l] || 0) + 1; });
     const tk = Object.keys(tq).sort((x, y) => tq[y] - tq[x]), tmx = tk.length ? tq[tk[0]] : 1;
     const fTest = { all: () => true, sent: (f) => f.outcome === 'enquiry', direct: (f) => !!CONTACT[f.outcome], none: (f) => f.outcome === 'away' || f.outcome === 'left' };

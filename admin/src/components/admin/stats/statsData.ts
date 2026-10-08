@@ -44,11 +44,12 @@ const AREAS = {
   cs: { hero: 'Hero nahoře', header: 'Hlavička', footer: 'Patička', 'sticky-bar': 'Lišta dole (mobil)', 'closing-cta': 'Závěrečná výzva', reviews: 'Recenze', gallery: 'Galerie', tours: 'Seznam prohlídek', 'blog-promo': 'Popup Journalu', 'contact-direct': 'Přímý kontakt', form: 'Formulář', article: 'Text článku', 'article-cta': 'Box pod článkem', sources: 'Zdroje', related: 'Další články', 'booking-card': 'Rezervační karta', 'related-tours': 'Další prohlídky', tripadvisor: 'Box TripAdvisor', main: 'Obsah stránky', booking: 'Rezervační formulář', contact: 'Kontaktní formulář',
     // sections of the mobile homepage (A/B variant B) and other ids on the site
     'fuer-wen': 'Pro koho (mobil)', touren: 'Seznam prohlídek (mobil)', stimmen: 'Recenze (mobil)', zuzana: 'O Zuzaně (mobil)', anfrage: 'Poptávka (mobil)', about: 'O Zuzaně', allreviews: 'Recenze', 'mobile-menu': 'Mobilní menu', nav: 'Navigace', top: 'Hero nahoře',
+    'float-card': 'Plovoucí karta (velký monitor)', 'float-chip': 'Plovoucí odkaz (notebook)', 'mobile-bar': 'Lišta dole (článek, mobil)', 'mobile-inline': 'Karta v článku (mobil)',
     'tour-altstadt': 'Karta: Staré Město', 'tour-burg': 'Karta: Hrad', 'tour-erbe': 'Karta: Německé dědictví', 'tour-havel': 'Karta: Havel', 'tour-versteckt': 'Karta: Skrytá Praha', 'tour-individuell': 'Karta: Na míru' },
 };
 const PAGE_NAMES = {
   de: { '/': 'Startseite', '/tours': 'Touren', '/blog': 'Journal', '/book': 'Buchungsanfrage', '/contact': 'Kontakt', '/zuzana-manova': 'Über Zuzana', '/bewerten': 'Bewerten', '/privacy': 'Datenschutz', '/terms': 'AGB' },
-  cs: { '/': 'Úvodní stránka', '/tours': 'Prohlídky', '/blog': 'Journal', '/book': 'Rezervace / poptávka', '/contact': 'Kontakt', '/zuzana-manova': 'O Zuzaně', '/bewerten': 'Hodnocení', '/privacy': 'Ochrana údajů', '/terms': 'Obchodní podmínky' },
+  cs: { '/sehenswuerdigkeiten-prag': 'Památky Prahy (přehled)', '/': 'Úvodní stránka', '/tours': 'Prohlídky', '/blog': 'Journal', '/book': 'Rezervace / poptávka', '/contact': 'Kontakt', '/zuzana-manova': 'O Zuzaně', '/bewerten': 'Hodnocení', '/privacy': 'Ochrana údajů', '/terms': 'Obchodní podmínky' },
 };
 const GOAL_L = {
   cs: { enquiry: ['Formulář odeslán', 'Formulář'], email: ['E-mail otevřen', 'E-mail'], whatsapp: ['WhatsApp otevřen', 'WhatsApp'], phone: ['Klepnuto na telefon', 'Telefon'] },
@@ -146,6 +147,7 @@ function decodeVisit(parts, todayNum) {
     for (const r of raw[4]) {
       const [k, p, c, l, a, at, t, dp] = r;
       if (k === 'p') ev.push({ k: 'page', p: normPath(S(p)), t: t || undefined, depth: dp || undefined, at: at + shift, ref: S(a) });
+      else if (k === 'y') ev.push({ k: 'copy', c: S(c), l: 'kopie', a: S(a), p: normPath(S(p)), at: at + shift });
       else if (k === 'e') ev.push({ k: 'enquiry', c: 'enquiry', l: S(l), a: S(a), p: normPath(S(p)), at: at + shift });
       else {
         const cat = S(c) || 'button';
@@ -260,7 +262,7 @@ function aggregate(ds, days, dev, opts) {
   const off = opts.offset || 0, filter = opts.filter, last = ds.dates[ds.dates.length - 1];
   const series = [];
   for (let d = days - 1; d >= 0; d--) series.push({ date: ds.dates[off + d] || last, visits: 0, conv: 0, goals: zg() });
-  const out = { days, from: ds.dates[off + days - 1] || last, to: ds.dates[off] || last, visits: 0, m: 0, d: 0, pageviews: 0, bounces: 0, conv: 0, convM: 0, convD: 0, convFirst: zg(), goals: zg(), goalsM: zg(), goalsD: zg(), clicks: {}, pages: {}, entries: {}, refs: {}, paths: {}, formViews: 0, formSent: 0, enquiryTours: {}, enquiryForms: {}, series, hours: Array.from({ length: 7 }, () => new Array(24).fill(0)), hoursConv: Array.from({ length: 7 }, () => new Array(24).fill(0)), depth: {}, pageDays: {}, src: {}, entryKinds: {}, sawContent: 0, directVisits: 0, flows: {}, timeSum: 0 };
+  const out = { days, from: ds.dates[off + days - 1] || last, to: ds.dates[off] || last, visits: 0, m: 0, d: 0, pageviews: 0, bounces: 0, conv: 0, convM: 0, convD: 0, convFirst: zg(), goals: zg(), goalsM: zg(), goalsD: zg(), clicks: {}, pages: {}, entries: {}, refs: {}, paths: {}, formViews: 0, formSent: 0, formCopied: 0, copies: { email: 0, phone: 0 }, enquiryTours: {}, enquiryForms: {}, series, hours: Array.from({ length: 7 }, () => new Array(24).fill(0)), hoursConv: Array.from({ length: 7 }, () => new Array(24).fill(0)), depth: {}, pageDays: {}, src: {}, entryKinds: {}, sawContent: 0, directVisits: 0, flows: {}, timeSum: 0 };
   for (const v of ds.visits) {
     if (v.day < off || v.day >= off + days || (dev !== 'all' && v.dev !== dev) || (filter && !filter(v))) continue;
     const ev = v.ev, dv = v.dev;
@@ -283,7 +285,7 @@ function aggregate(ds, days, dev, opts) {
     if (ev.some((e) => e.k === 'page' && (e.p.startsWith('/blog/') || e.p.startsWith('/tours/')))) out.sawContent++;
     if (ev.some((e) => e.k === 'click' && (e.c === 'whatsapp' || e.c === 'phone' || e.c === 'email'))) out.directVisits++;
     const seen = new Set(), steps = [];
-    let pv = 0, reached = false, sawForm = false, sent = false;
+    let pv = 0, reached = false, sawForm = false, sent = false, copied = false;
     ev.forEach((e, i) => {
       if (e.k === 'page') {
         pv++;
@@ -296,6 +298,10 @@ function aggregate(ds, days, dev, opts) {
         }
         if (!reached && steps[steps.length - 1] !== e.p) steps.push(e.p);
         if (e.p === '/book' || e.p === '/contact') sawForm = true;
+      } else if (e.k === 'copy') {
+        // Copied e-mail address / phone number: shown next to the clicks, not counted as a contact.
+        out.copies[e.c] = (out.copies[e.c] || 0) + 1;
+        copied = true;
       } else {
         const cat = e.k === 'enquiry' ? 'enquiry' : e.c;
         bump(out.clicks, [cat, e.l, e.a, e.p].join('\t'), dv, next[i], { cat, label: e.l, area: e.a, page: e.p });
@@ -309,7 +315,7 @@ function aggregate(ds, days, dev, opts) {
     });
     out.pageviews += pv;
     if (pv <= 1 && ev.every((e) => e.k === 'page')) out.bounces++;
-    if (sawForm) { out.formViews++; if (sent) out.formSent++; }
+    if (sawForm) { out.formViews++; if (sent) out.formSent++; else if (copied) out.formCopied++; }
     const path = steps.length > 6 ? [...steps.slice(0, 2), '…', ...steps.slice(-3)] : steps;
     if (firstG) path.push('✓ ' + GOAL_PATH[firstG]);
     bump(out.paths, path.join(' › '), dv, firstG);

@@ -33,7 +33,7 @@ const DEFAULT_NAV: AdminNavItem[] = [
   { key: 'tours', label: 'Touren', icon: 'map' },
   { key: 'reviews', label: 'Bewertungen', icon: 'star' },
   { key: 'stats', label: 'Kliky a poptávky', icon: 'insights' },
-  { key: 'abtest', label: 'A/B-Test', icon: 'science' },
+  { key: 'abtest', label: 'A/B test', icon: 'science' },
   { key: 'settings', label: 'Einstellungen', icon: 'settings' },
 ];
 

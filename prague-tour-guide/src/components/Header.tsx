@@ -65,7 +65,8 @@ const Header: React.FC = () => {
 
   // Journal articles (design_handoff_blog_orte): the header slides away while the
   // guest reads downwards and comes back on any upward scroll.
-  const isArticle = (pathname ?? '').startsWith('/blog/');
+  // Same for pages in the article template outside /blog (content/pages).
+  const isArticle = (pathname ?? '').startsWith('/blog/') || pathname === '/sehenswuerdigkeiten-prag';
   const [hidden, setHidden] = React.useState(false);
   React.useEffect(() => {
     setHidden(false);

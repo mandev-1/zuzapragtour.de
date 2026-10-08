@@ -1,16 +1,16 @@
-// POST /api/track — stores one page view / click / enquiry / page leave of the
+// POST /api/track — stores one page view / click / enquiry / copy / page leave of the
 // site's own analytics (src/utils/analytics.ts). Anonymous by design: every
 // event is an empty blob whose key holds day, a random per-tab visit id, the
 // event's sequence number, the time it arrived and what happened — no IP, no
 // user agent. Separate keys mean concurrent writes never overwrite each other;
-// stats.mjs and visits.mjs read them.
+// visits.mjs reads them.
 //
 // Key (v2): e/<UTC day>/<visit>/<seq>|kind|device|variant|category|time|seconds|depth|page|area|label
 // (v1 keys, before 2026-10-07, lack time|seconds|depth.)
 import { getStore } from '@netlify/blobs';
 
-const STORE = 'site-stats'; // also read by stats.mjs and visits.mjs
-const KINDS = new Set(['page', 'click', 'enquiry', 'leave']);
+const STORE = 'site-stats'; // also read by visits.mjs
+const KINDS = new Set(['page', 'click', 'enquiry', 'leave', 'copy']);
 const CATS = new Set(['', 'whatsapp', 'phone', 'email', 'form', 'tour', 'anchor', 'nav', 'external', 'button']);
 const DEPTHS = new Set([0, 25, 50, 75, 100]);
 const BOT = /bot|crawl|spider|slurp|lighthouse|headless|preview/i;
@@ -36,6 +36,8 @@ export default async (req) => {
   ) {
     return new Response(null, { status: 400 });
   }
+  // A copy is a copied e-mail address or phone number.
+  if (b.k === 'copy' && b.c !== 'email' && b.c !== 'phone') return new Response(null, { status: 400 });
   // A page leave reports how long the page was visible and, on articles, how far it was read.
   const secs = b.k === 'leave' ? Math.round(Number(b.t)) : 0;
   const depth = b.k === 'leave' ? Number(b.dp || 0) : 0;

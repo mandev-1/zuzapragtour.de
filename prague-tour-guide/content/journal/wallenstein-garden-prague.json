@@ -2,190 +2,405 @@
   "slug": "wallenstein-garden-prague",
   "slugDe": "waldstein-garten-prag",
   "languages": [
-    "de",
-    "en"
+    "de"
   ],
-  "status": "draft",
+  "status": "published",
+  "layout": "v2",
   "date": "2026-04-16",
   "dateDisplay": {
-    "de": "16. April 2026",
-    "en": "April 16, 2026"
+    "de": "16. April 2026"
   },
-  "category": "Reiseführer",
+  "updated": "2026-10-07",
+  "updatedDisplay": {
+    "de": "Aktualisiert am 7. Oktober 2026"
+  },
+  "category": "Gärten",
+  "kicker": {
+    "de": "Kleinseite"
+  },
   "readTime": {
-    "de": "",
-    "en": ""
+    "de": "7 Min."
   },
-  "hero": "/images/blog-gardens-2.jpg",
+  "hero": "/images/web/blog-gardens-2.webp",
+  "heroAlt": {
+    "de": "Das Parterre des Waldstein-Gartens mit der Sala terrena und gestutzten Hecken"
+  },
+  "heroLook": {
+    "pos": "center 50%",
+    "maxH": 620
+  },
+  "heroCap": {
+    "de": "Das Hauptparterre des Waldstein-Gartens, angelegt zwischen 1623 und 1630."
+  },
   "heroCredit": "Roman Boed",
   "title": {
-    "de": "Waldsteingarten Prag: Tropfsteinwand & Barock",
-    "en": "Wallenstein Garden: Prague's Baroque Secret"
+    "de": "Der Waldstein-Garten in Prag: Tropfsteinwand, Pfauen und ein Garten des Senats"
   },
   "excerpt": {
-    "de": "Hinter einem Tor in der Kleinseite verbirgt sich der Waldsteingarten — ein 400 Jahre alter Barockgarten mit Dämonen-Grotesken, nach Schweden gestohlenen Bronzeskulpturen und einem ungewöhnlichen Eigentümer: dem tschechischen Senat.",
-    "en": "Hidden behind a gate in Malá Strana, Wallenstein Garden is one of Prague's most overlooked spaces — a 400-year-old baroque park with demon-faced grottos, sculptures stolen to Sweden, and a very unusual owner."
+    "de": "Waldstein-Garten in Prag: Tropfsteinwand, Pfauen, Sala terrena und die Bronzen, die in Schweden stehen. Öffnungszeiten, Eingänge und Rundweg von einer Prager Stadtführerin. Eintritt frei."
+  },
+  "dek": {
+    "de": "Hinter einer Mauer in der Kleinseite liegt einer der ältesten Barockgärten Mitteleuropas. Der Eintritt ist frei, und trotzdem gehen die meisten Prag-Besucher daran vorbei. Hier steht, was Sie dort sehen, in welcher Reihenfolge und wann der Garten offen ist."
+  },
+  "seoTitle": {
+    "de": "Waldstein-Garten Prag: Tropfsteinwand, Pfauen und Sala terrena"
+  },
+  "seoDescription": {
+    "de": "Waldstein-Garten in Prag: Tropfsteinwand, Pfauen, Sala terrena und die Bronzen, die in Schweden stehen. Öffnungszeiten, Eingänge und Rundweg von einer Prager Stadtführerin. Eintritt frei."
   },
   "tags": {
     "de": [
-      "Waldsteingarten Prag",
+      "Waldstein-Garten Prag",
       "Valdštejnská zahrada",
-      "Prager Gärten",
-      "Kleinseite Prag",
-      "Prag Geheimtipps",
-      "Barockgarten Prag",
       "Tropfsteinwand Prag",
-      "Adriaen de Vries Prag",
-      "Tschechischer Senat Garten",
-      "kostenlose Sehenswürdigkeiten Prag"
-    ],
-    "en": [
-      "Wallenstein Garden Prague",
-      "Valdštejnská zahrada",
-      "Prague gardens",
-      "Malá Strana Prague",
-      "Prague hidden gems",
-      "Baroque garden Prague",
-      "Prague stalactite wall",
-      "Adriaen de Vries Prague",
-      "Prague Senate garden",
-      "free things to do Prague"
+      "Kleinseite",
+      "Prager Gärten",
+      "kostenlos Prag"
     ]
   },
   "author": "Ing. Zuzana Manová",
-  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "ogImage": "/images/blog-gardens-2.jpg",
+  "floatingCta": true,
+  "sourcesTitle": {
+    "de": "Quellen und offizielle Seiten"
+  },
+  "sources": [
+    {
+      "de": "Senát Parlamentu České republiky: <a href=\"https://www.senat.cz\">Öffnungszeiten von Garten und Palast</a>"
+    },
+    {
+      "de": "Ladislav Hoskovec, botany.cz: <a href=\"https://botany.cz/cs/valdstejnska-zahrada/\">Valdštejnská zahrada</a> (botanische und historische Details)"
+    }
+  ],
   "blocks": [
     {
-      "t": "p",
-      "lead": true,
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
       "html": {
-        "de": "Es gibt einen Garten in der Kleinseite, in dem man vor einer Mauer stehen kann, die mit eingefrorenen Dämonengesichtern, Schlangenkörpern und steinernen Eulen bedeckt ist — und sich dann umdrehen und direkt auf das Gebäude des tschechischen Senats blickt. Das ist kein Traum. Das ist der Waldsteingarten. Der Eintritt ist frei, und trotzdem finden ihn die meisten Prag-Besucher nie.",
-        "en": "There is a garden in Malá Strana where you can stand in front of a wall covered in frozen demon faces, serpent bodies, and stone owls staring back at you, and then turn around and look straight at the Czech Senate building. It is not a dream. It is Wallenstein Garden, it is free to enter, and somehow most visitors to Prague never find it."
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Geöffnet von April bis Oktober, Eintritt frei. Im Winter ist der Garten geschlossen."
+        },
+        {
+          "de": "Der bequemste Eingang liegt in der Letenská, drei Minuten von der Metro Malostranská (Linie A)."
+        },
+        {
+          "de": "Die Tropfsteinwand liegt am Rand des Gartens und wird leicht übersehen. Gehen Sie gezielt hin."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich bringe fast jede Gruppe hierher, die mit mir durch die Kleinseite geht, meist als Pause zwischen Burg und Karlsbrücke. Die Reaktion ist immer ähnlich: Man tritt durch ein unscheinbares Tor und steht plötzlich in einem italienischen Garten, mit weißen Statuen, Hecken wie Wände und Pfauen, die über den Kies laufen. Danach stellt man sich vor eine Mauer voller Fratzen, dreht sich um und blickt auf den Sitz des tschechischen Senats."
+      }
+    },
+    {
+      "t": "overview",
+      "variant": "toc",
+      "items": [
+        {
+          "href": "#geschichte",
+          "title": {
+            "de": "Wallenstein und sein Garten"
+          },
+          "desc": {
+            "de": "23 abgerissene Häuser für einen Palast mit Garten."
+          }
+        },
+        {
+          "href": "#rundgang",
+          "title": {
+            "de": "Rundgang in fünf Stationen"
+          },
+          "desc": {
+            "de": "Parterre, Sala terrena, Teich, Tropfsteinwand, Voliere."
+          }
+        },
+        {
+          "href": "#bronzen",
+          "title": {
+            "de": "Die Bronzen in Schweden"
+          },
+          "desc": {
+            "de": "Warum die Statuen im Garten Kopien sind."
+          }
+        },
+        {
+          "href": "#praktisch",
+          "title": {
+            "de": "Praktisches"
+          },
+          "desc": {
+            "de": "Öffnungszeiten, Eingänge, Zeitbedarf, Kombinationen."
+          }
+        },
+        {
+          "href": "#faq",
+          "title": {
+            "de": "Häufige Fragen"
+          },
+          "desc": {
+            "de": "Eintritt, Winter, Kinderwagen, Palast."
+          }
+        }
+      ],
+      "id": "ueberblick",
+      "title": {
+        "de": "In diesem Artikel"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Wallenstein und sein Garten"
+      },
+      "id": "geschichte"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Albrecht von Wallenstein, auf Tschechisch Albrecht z Valdštejna, stieg im Dreißigjährigen Krieg zu einem der mächtigsten Feldherren Europas auf. Zwischen 1623 und 1630 ließ er sich in der Kleinseite einen Palast bauen, der mit der Burg oben auf dem Hügel konkurrieren sollte. Dafür ließ er 23 Häuser, drei Gärten und eine Ziegelei abreißen. Die Nachbarn wurden nicht gefragt."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Der Garten wurde zwischen 1623 und 1630 von Albrecht von Wallenstein — auf Tschechisch Albrecht z Valdštejna — angelegt, einem böhmischen Adligen, der sich im Dreißigjährigen Krieg zu einem der mächtigsten Feldherren Europas aufgeschwungen hatte. Er war ein Mann, dem Hindernisse wie das Eigentum anderer Menschen keine besondere Pause gaben. Um seinen Palast und seine Gartenanlagen bauen zu können, ließ er 23 Häuser, 3 bestehende Gärten und eine Ziegelei abreißen. Die Nachbarn hatten wenig zu melden.",
-        "en": "The garden was built between 1623 and 1630 by Albrecht von Wallenstein — Albrecht z Valdštejna in Czech — a Bohemian nobleman who had turned himself into one of the most powerful military commanders in Europe during the Thirty Years' War. He was the kind of man who did not let minor obstacles, like other people's property, stand in his way. To build his palace and gardens, he had 23 houses, 3 existing gardens, and a brickworks demolished. The neighbours did not get much say in the matter."
+        "de": "Die italienischen Architekten Andrea Spezza und Niccolò Sebregondi legten einen Garten an, wie man ihn so weit nördlich der Alpen kaum kannte: streng geometrisch, mit Sichtachsen, Statuen und künstlicher Grotte. Wallenstein selbst genoss ihn nicht lange. 1634 wurde er in Eger (Cheb) ermordet."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Was entstand, war außergewöhnlich. Die italienischen Architekten Andrea Spezza und Niccolò Sebregondi schufen eine Anlage, die in dieser nördlichen Breite ungewöhnlich war — ein vollständig manieristisches italienisches Layout zu einer Zeit, als Prag die Renaissance noch verdaute. Das Ergebnis ist einer der ältesten Barockgärten Mitteleuropas und einer der am besten erhaltenen.",
-        "en": "What he built was extraordinary. Italian architects Andrea Spezza and Niccolò Sebregondi designed a garden that was unusual this far north — a fully Mannerist Italian layout at a time when Prague was still digesting the Renaissance. The result is one of the earliest Baroque gardens in central Europe, and one of the best-preserved."
+        "de": "Seit 1993 ist der Waldstein-Palast Sitz des Senats der Tschechischen Republik. Für Besucher ist das ein Glück: Die Hecken sind tadellos geschnitten, das Parterre wird jede Saison neu bepflanzt, und im Sommer finden hier gelegentlich Konzerte statt, die ebenfalls frei zugänglich sind."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Mein Rundgang in fünf Stationen"
+      },
+      "id": "rundgang"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Garten ist nicht groß, aber er ist in Räume geteilt, und wer ohne Plan hineingeht, verpasst oft das Merkwürdigste. So führe ich meine Gäste, vom Eingang Letenská aus."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>1. Das Hauptparterre.</strong> Gehen Sie zuerst die lange Achse mit den Bronzestatuen ab. Erst von hier aus verstehen Sie die Größe der Anlage und wie bewusst sie auf den Palast ausgerichtet ist. Achten Sie auf die Pfauen, darunter meist auch ein weißer. Sie gehören seit langem zum Garten und sind an Menschen gewöhnt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>2. Die Sala terrena.</strong> Die große offene Loggia mit drei Bögen am Ende des Parterres ist mit Fresken aus der griechischen Mythologie ausgemalt: Götter des Olymp und Szenen aus dem Trojanischen Krieg. Kein Museum, keine Absperrung, nur offene Bögen zum Garten hin."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>3. Der Teich.</strong> Rechts davon liegt der große Teich mit der Herkules-Statue auf der Insel in der Mitte. Von hier haben Sie den bekannten Blick über den Garten hinauf zur Burg."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>4. Die Tropfsteinwand.</strong> Am Rand des Gartens steht eine lange künstliche Grottenwand, auf Tschechisch krápníková stěna. Echte Tropfsteine sind es nicht, sondern eine manieristische Fantasie aus Stuck und Kalktuff, in der Sie bei längerem Hinsehen Fratzen, Schlangen, Eulen und Tierköpfe entdecken. Solche Grotten sollten im 17. Jahrhundert die wilde Natur zeigen, als Gegensatz zu den geschnittenen Hecken ringsum. Kinder finden hier meist mehr Gesichter als Erwachsene."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>5. Die Voliere.</strong> Gleich neben der Grotte steht die historische Voliere, in deren Mauerwerk derselbe Stil weitergeht wie in der Tropfsteinwand. Heute leben darin Uhus, die tagsüber meist reglos auf ihren Ästen sitzen."
       }
     },
     {
       "t": "image",
-      "src": "/images/blog-gardens-2.jpg",
-      "credit": "Roman Boed"
+      "src": "/images/web/blog-tropfsteinwand.webp",
+      "alt": {
+        "de": "Die Tropfsteinwand im Waldstein-Garten mit Fratzen und Tiergestalten im Stein"
+      },
+      "cap": {
+        "de": "Die Tropfsteinwand: Je länger Sie hinsehen, desto mehr Gesichter tauchen auf."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "Die Tropfsteinwand — und warum sie so merkwürdig ist",
-        "en": "The stalactite wall — and why it is so strange"
+        "de": "Die echten Bronzen stehen in Schweden"
+      },
+      "id": "bronzen"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Statuen im Garten sind Kopien. Die Originale schuf Adriaen de Vries, ein niederländischer Bildhauer, der auch für Kaiser Rudolf II. arbeitete. 1648, in den letzten Monaten des Dreißigjährigen Krieges, besetzten schwedische Truppen die Kleinseite und nahmen die Bronzen als Kriegsbeute mit. Sie stehen bis heute im Park von Schloss Drottningholm bei Stockholm."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Das seltsamste Stück im ganzen Garten befindet sich im sogenannten Geheimen Garten (Giardino secreto): eine lange künstliche Grottenanlage, die Krápníková stěna — auf Deutsch: Tropfsteinwand. Echte Tropfsteine sind es nicht. Es ist ein aufwendiges Stück manieristischer Fantasie — eine Oberfläche aus gemeißelten Felsformationen, Eulengesichtern, Dämonenköpfen, Schlangenkörpern und Tiergestalten, die halb aus dem Stein herauszutreten scheinen. Manche Abschnitte wirken fast geologisch; andere sehen aus, als hätte jemand einem sehr begabten Steinmetz einen Albtraum beschrieben und ihn gebeten, ihn nachzumeißeln.",
-        "en": "The strangest thing in the garden is tucked into the \"Secret Garden\" (Giardino secreto): a long artificial grotto wall called the Krápníková stěna, which translates, not very romantically, as the stalactite wall. It is not made of real stalactites. It is an elaborate piece of Mannerist fantasy — a surface encrusted with sculpted rock formations, owl faces, demon heads, serpent bodies, and animal shapes that seem to be half-emerging from the stone. Some sections look almost geological; others look like someone gave a very creative stonemason a nightmare and asked them to carve it."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Diese Art von Kunstgrotte war im 16. und 17. Jahrhundert in der italienischen Gartengestaltung verbreitet. Sie sollte die rohe, ungezähmte Seite der Natur darstellen — bewusster Kontrast zu den gepflegten Parterres und gestutzten Hainbuchenhecken in der Nähe. Dass sie überhaupt noch so erhalten ist, mitten in einer Großstadt, grenzt ans Wunderliche. Nehmen Sie sich Zeit davor. Je länger man schaut, desto mehr Gesichter tauchen im Stein auf.",
-        "en": "This kind of artificial grotto was fashionable in 16th and 17th century Italian garden design. It was meant to represent the raw, untamed side of nature — a deliberate contrast to the manicured parterres and clipped hornbeam hedges nearby. That it survives at all, in this condition, in the middle of a city, is something close to remarkable. Go slowly when you are in front of it. The longer you look, the more faces appear in the stone."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Adriaen de Vries — die Originale sind in Schweden",
-        "en": "Adriaen de Vries — the originals are in Sweden"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die Bronzeskulpturen im Garten sind Kopien. Die Originale stammen von Adriaen de Vries, einem niederländischen Bildhauer, der für Kaiser Rudolf II. arbeitete und zu den begabtesten Künstlern seiner Generation zählte. Im Jahr 1648, am Ende des Dreißigjährigen Krieges, besetzten schwedische Truppen Prag und nahmen die Skulpturen als Kriegsbeute mit. Sie befinden sich seitdem im Schloss Drottningholm bei Stockholm.",
-        "en": "The bronze sculptures placed around the garden are copies. The originals were made by Adriaen de Vries, a Dutch sculptor who worked for Emperor Rudolf II and was one of the most gifted artists of his generation. In 1648, at the very end of the Thirty Years' War, Swedish troops occupied Prague and took the sculptures as war booty. They have been at Drottningholm Palace outside Stockholm ever since."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die heute im Garten stehenden Repliken wurden im 20. Jahrhundert gegossen und folgen den Originalen genau — doch das Wissen, dass die echten Bronzen in Schweden stehen, gibt dem Ort eine eigenartige, leicht melancholische Note. Wallenstein hatte ungeheure Summen für etwas ausgegeben, das an einem einzigen Nachmittag seiner wertvollsten Stücke beraubt wurde. Er erlebte es nicht mehr — er wurde 1634 ermordet, vierzehn Jahre bevor die Schweden kamen.",
-        "en": "The replicas now standing in the garden were cast in the 20th century and follow the originals closely, but knowing the real bronzes are in Sweden gives the whole place an odd, slightly melancholy quality. Wallenstein spent an extraordinary amount of money and effort building something that was, in a single afternoon, stripped of its finest pieces. He did not live to see it happen — he was assassinated in 1634, fourteen years before the Swedes arrived."
+        "de": "Die Abgüsse im Garten entstanden im 20. Jahrhundert und folgen den Originalen genau. Ich erzähle die Geschichte trotzdem gern, weil sie zeigt, wie viel Prag in diesem Krieg verloren hat. Weitere Prager Orte, an denen Geschichte passiert ist, finden Sie im Artikel <a href=\"Blog Prag Orte mit Geschichte.dc.html\">Zehn Orte mit Geschichte</a>."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "Die Sala terrena",
-        "en": "The Sala terrena"
+        "de": "Praktisches für Ihren Besuch"
+      },
+      "id": "praktisch"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Saison"
+          },
+          "v": {
+            "de": "April bis Oktober, im Winter geschlossen."
+          }
+        },
+        {
+          "k": {
+            "de": "Öffnungszeiten"
+          },
+          "v": {
+            "de": "In der Regel 10 bis 18 Uhr. Bei Veranstaltungen des Senats kann der Garten kurzfristig schließen, aktuelle Zeiten auf senat.cz."
+          }
+        },
+        {
+          "k": {
+            "de": "Eintritt"
+          },
+          "v": {
+            "de": "Frei."
+          }
+        },
+        {
+          "k": {
+            "de": "Eingänge"
+          },
+          "v": {
+            "de": "Letenská (nahe Metro Malostranská, Linie A, und Tram 2, 12, 15, 20, 22, 23) und Valdštejnské náměstí."
+          }
+        },
+        {
+          "k": {
+            "de": "Zeitbedarf"
+          },
+          "v": {
+            "de": "30 bis 45 Minuten für den Rundgang, länger, wenn Sie auf einer Bank pausieren."
+          }
+        },
+        {
+          "k": {
+            "de": "Barrierefreiheit"
+          },
+          "v": {
+            "de": "Ebene Kieswege, mit Kinderwagen und Rollstuhl gut machbar."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Hunde und Fahrräder sind nicht erlaubt."
+          }
+        }
+      ],
+      "variant": "v2",
+      "look": {
+        "rule": "ink"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Am Ende des Hauptparterres steht die Sala terrena, eine dreigewölbte offene Loggia, deren Decke und Wände mit Fresken bedeckt sind. Die Malereien zeigen Szenen aus der griechischen Mythologie — Götter auf dem Olymp, Episoden aus dem Trojanischen Krieg. Der Stil ist manieristisch: die Figuren sind gestreckt, die Kompositionen leicht theatralisch — und das passt zum Gebäude ausgezeichnet. Es ist keine Galerie und kein Museum. Die Loggia liegt einfach offen da, mit Gottheiten aus Fresko, die still dem mitteleuropäischen Klima trotzen und dabei noch immer großartig wirken.",
-        "en": "At the far end of the main parterre stands the Sala terrena, a three-arched open loggia whose ceiling and walls are covered in frescoes. The paintings show scenes from ancient Greek mythology — the gods of Olympus, episodes from the Trojan War. The style is Mannerist, meaning the figures are elongated and the compositions slightly theatrical, in a way that fits the building perfectly. It is not a gallery and not a museum. It just sits open to the garden air, with painted gods weathering quietly in the Central European climate and still managing to look magnificent."
+        "de": "Der Waldstein-Garten passt gut zwischen die Burg und die Karlsbrücke. Wer von der Burg über die Alte Schlossstiege herunterkommt, ist in fünf Minuten am Eingang Letenská. Danach liegen die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten unter der Prager Burg</a> und die stillen Ecken aus dem Artikel <a href=\"/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps\">Kleinseite bis Karlsbrücke: Geheimtipps</a> gleich um die Ecke. Wer früh am Tag oben anfangen möchte, beginnt im <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster</a>."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "Der Senat — und warum der Garten in guten Händen ist",
-        "en": "The Senate, and why the garden is in good hands"
-      }
+        "de": "Häufige Fragen"
+      },
+      "id": "faq"
     },
     {
-      "t": "p",
-      "html": {
-        "de": "Seit 1993, nach der Auflösung der Tschechoslowakei und der Gründung des neuen tschechischen Senats, sind der Waldsteinpalast und sein Garten der offizielle Amtssitz des Senats der Tschechischen Republik. Das erweist sich als gute Nachricht für Besucher. Der Senat hat ein klares Interesse daran, die Anlage vorzeigbar zu halten, und die Pflege zeigt das — die Hainbuchenhecken, die den Garten in einzelne Räume teilen, sind tadellos gestutzt, das Parterre wird saisonal bepflanzt, und der Gesamtzustand ist bemerkenswert gut. Frühlingstulpen weichen im Sommer einjährigen Blumen, auf eine Art, die überlegt wirkt und nicht wie bloße Routine.",
-        "en": "Since 1993, after the dissolution of Czechoslovakia and the creation of the new Czech Senate, Wallenstein Palace and its garden have served as the official seat of the Senate of the Czech Republic. This turns out to be good news for anyone who visits. The Senate has a clear interest in keeping the place presentable, and the maintenance shows — the hornbeam hedges that divide the garden into rooms are impeccably trimmed, the parterre is replanted with seasonal flowers, and the overall standard of care is high. Spring tulips give way to summer annuals in a way that feels considered rather than perfunctory."
-      }
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Kostet der Waldstein-Garten Eintritt?"
+          },
+          "a": {
+            "de": "Nein, der Garten ist während der Saison kostenlos zugänglich."
+          }
+        },
+        {
+          "q": {
+            "de": "Ist der Garten im Winter geöffnet?"
+          },
+          "a": {
+            "de": "Nein. Von November bis März ist er geschlossen. Im Winter empfehle ich stattdessen die Ideen aus <a href=\"Blog Prag Winter Fotomomente.dc.html\">Prag im Winter</a>."
+          }
+        },
+        {
+          "q": {
+            "de": "Kann man den Waldstein-Palast besichtigen?"
+          },
+          "a": {
+            "de": "Die Räume des Senats sind an ausgewählten Tagen, meist am Wochenende, zugänglich. Die Termine veröffentlicht der Senat auf seiner Website."
+          }
+        },
+        {
+          "q": {
+            "de": "Sind die Pfauen immer da?"
+          },
+          "a": {
+            "de": "Fast immer während der Saison. Bitte nicht füttern."
+          }
+        },
+        {
+          "q": {
+            "de": "Wo genau ist die Tropfsteinwand?"
+          },
+          "a": {
+            "de": "An der Gartenmauer seitlich des Hauptparterres, neben der Voliere."
+          }
+        }
+      ],
+      "variant": "v2"
     },
     {
-      "t": "p",
+      "t": "cta",
+      "title": {
+        "de": "Kleinseite mit Zuzana"
+      },
       "html": {
-        "de": "Der Garten ist von April bis Oktober kostenlos für die Öffentlichkeit zugänglich. Im Sommer veranstaltet der Senat gelegentlich Konzerte und Kulturveranstaltungen auf dem Gelände, die ebenfalls offen für alle sind.",
-        "en": "The garden is open to the public from April through October, free of charge. The Senate occasionally uses the grounds for concerts and cultural events in summer, which are also open to the public."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "So kommt man hin — und was man nicht verpassen sollte",
-        "en": "How to get there and what not to miss"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Der Haupteingang liegt in der Letenská ulice in der Kleinseite, wenige Gehminuten von der Metrostation Malostranská (Linie A) entfernt. Es gibt auch einen Eingang vom Valdštejnské náměstí. Die regulären Öffnungszeiten sind 10:00–18:00 Uhr, an Staatsfeiertagen bis 22:00 Uhr.",
-        "en": "The main entrance is on Letenská street in Malá Strana, a short walk from Malostranská metro station on line A. There is also an entrance from Valdštejnské náměstí square. Standard opening hours run from 10:00 to 18:00, extended to 22:00 on state holidays."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Gehen Sie zuerst die Länge des Hauptparterres ab, um das Ausmaß der Anlage zu erfassen, dann zur Sala terrena am Ende, und suchen Sie danach gezielt die Tropfsteinwand — sie befindet sich im kleineren geschlossenen Abschnitt seitlich und ist leicht zu übersehen, wenn man nicht weiß, dass sie existiert. Die angrenzende historische Voliere ist original erhalten und zeigt im Dekor denselben Stil wie die Grotte.",
-        "en": "Walk the length of the main parterre first to get a sense of the scale, then find the Sala terrena at the far end, then go looking specifically for the stalactite wall — it is in the smaller enclosed section to the side and easy to miss if you do not know it is there. The aviary near it is original, its decorative stonework matching the grotto in style."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "<em>Die botanischen und historischen Details in diesem Artikel stützen sich auf die Arbeit von <a href=\"https://botany.cz/cs/valdstejnska-zahrada/\" target=\"_blank\" rel=\"noopener noreferrer\">Ladislav Hoskovec auf botany.cz</a>, dessen Dokumentation der Prager Gärten außerordentlich sorgfältig ist und sich lohnt, vollständig gelesen zu werden.</em>",
-        "en": "<em>The botanical and historical details in this article draw on the work of <a href=\"https://botany.cz/cs/valdstejnska-zahrada/\" target=\"_blank\" rel=\"noopener noreferrer\">Ladislav Hoskovec at botany.cz</a>, whose documentation of Prague's gardens is meticulous and worth reading in full.</em>"
-      }
+        "de": "Auf meiner Tour durch das versteckte Prag gehen wir durch den Waldstein-Garten und die Gärten der Kleinseite, auf Deutsch und in Ihrem Tempo. Unverbindlich anfragen, auf <a href=\"https://wa.me/420721231933\">WhatsApp schreiben</a>, eine <a href=\"mailto:zuzanamanova@email.cz\">E-Mail senden</a> oder anrufen: <a href=\"tel:+420721231933\">+420 721 231 933</a>"
+      },
+      "button": {
+        "de": "Tour anfragen"
+      },
+      "href": "/book?tour=Verstecktes%20Prag#contact-title"
     }
   ]
 }

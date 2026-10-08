@@ -53,6 +53,7 @@ const CSS = `
 .zpe-p{font-family:var(--font-body);font-size:1.0625rem;line-height:1.72;color:var(--ink-soft);margin:0;outline:0}
 .zpe-p.is-lead{font-size:1.18rem;color:var(--ink)}
 .zpe-h2{font-family:var(--font-display);font-size:1.7rem;font-weight:400;line-height:1.15;color:var(--ink);margin:.4rem 0 0;outline:0}
+.zpe-h3{font-family:var(--font-sans);font-size:1.1rem;font-weight:700;line-height:1.3;color:var(--ink);margin:.3rem 0 0;outline:0}
 .zpe-h2 em{font-family:var(--font-italic);font-style:italic;color:var(--burgundy)}
 .zpe-quote{border-left:2px solid var(--burgundy);padding-left:1.3rem;margin:.2rem 0}
 .zpe-quote .q{font-family:var(--font-italic);font-style:italic;font-size:1.55rem;line-height:1.35;color:var(--ink);outline:0}
@@ -180,7 +181,7 @@ function RemoveBtn({ onClick, title = 'Entfernen' }: { onClick: () => void; titl
   );
 }
 
-type Tag = 'h1' | 'h2' | 'p' | 'div' | 'span' | 'b';
+type Tag = 'h1' | 'h2' | 'h3' | 'p' | 'div' | 'span' | 'b';
 
 /** contentEditable field. innerHTML is set imperatively so switching languages
  *  (or reordering blocks) refreshes the text without disturbing the caret while
@@ -281,8 +282,59 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
           <>
             <Editable tag="h2" cls="zpe-h2" html={getL(b.html, lang)} placeholder="Überschrift…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
             <Editable tag="div" cls="zpe-sub" html={getL(b.sub, lang)} placeholder="Unterzeile (optional)…" onCommit={(v) => setBlock(i, { sub: v ? setL(b.sub, lang, v) : undefined })} />
+            <label className="zpe-check"><input type="checkbox" checked={!!b.section} onChange={(e) => setBlock(i, { section: e.target.checked || undefined })} /> Abschnittsüberschrift (Serif, neues Layout)</label>
+            {b.section && (
+              <label className="zpe-check">
+                Eintritt:&nbsp;
+                <select className="zpe-sel" value={b.free === undefined ? '' : b.free ? 'free' : 'paid'} onChange={(e) => setBlock(i, { free: e.target.value === '' ? undefined : e.target.value === 'free' })}>
+                  <option value="">kein Badge</option>
+                  <option value="free">Kostenlos</option>
+                  <option value="paid">Eintritt</option>
+                </select>
+              </label>
+            )}
             {anchorInput(i, b.id)}
           </>
+        );
+      case 'h3':
+        return <Editable tag="h3" cls="zpe-h3" html={getL(b.html, lang)} placeholder="Zwischentitel…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />;
+      case 'gallery':
+        return (
+          <div className="zpe-cost">
+            {(b.images || []).map((im, k) => (
+              <div className="zpe-costrow" key={k}>
+                <span>{im.src || 'kein Bild'}</span>
+                <input className="zpe-sm" value={getL(im.alt, lang)} placeholder="Alt-Text" onChange={(e) => setBlock(i, { images: b.images.map((x, j) => (j === k ? { ...x, alt: setL(x.alt, lang, e.target.value) } : x)) })} />
+                <button type="button" className="zpe-costadd" onClick={() => pickImage(im.src, (src) => setBlock(i, { images: b.images.map((x, j) => (j === k ? { ...x, src } : x)) }))}>Bild wählen</button>
+              </div>
+            ))}
+            <Editable tag="div" cls="note" html={getL(b.cap, lang)} placeholder="Bildunterschrift…" onCommit={(v) => setBlock(i, { cap: setL(b.cap, lang, v) })} />
+          </div>
+        );
+      case 'cta':
+        return (
+          <div className="zpe-callout">
+            <Editable tag="div" cls="cl" html={getL(b.title, lang)} placeholder="Titel der Anfrage-Box…" onCommit={(v) => setBlock(i, { title: setL(b.title, lang, v) })} />
+            <Editable tag="div" cls="cb" html={getL(b.html, lang)} placeholder="Text mit Links zu WhatsApp, E-Mail, Telefon…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
+            <div className="zpe-rowx">
+              <Editable tag="div" cls="grow" html={getL(b.button, lang)} placeholder="Button-Text" onCommit={(v) => setBlock(i, { button: setL(b.button, lang, v.replace(/<[^>]+>/g, '')) })} />
+              <input className="zpe-sm" value={b.href || ''} placeholder="/book#contact-title" title="Ziel des Buttons" onChange={(e) => setBlock(i, { href: e.target.value || undefined })} />
+            </div>
+          </div>
+        );
+      case 'links':
+        return (
+          <div className="zpe-cost">
+            <Editable tag="div" cls="ct" html={getL(b.title, lang)} placeholder="Weiterlesen" onCommit={(v) => setBlock(i, { title: setL(b.title, lang, v) })} />
+            {(b.items || []).map((it, k) => (
+              <div className="zpe-costrow" key={k}>
+                <Editable tag="span" html={getL(it.text, lang)} placeholder="Linktext" onCommit={(v) => setBlock(i, { items: b.items.map((x, j) => (j === k ? { ...x, text: setL(x.text, lang, v.replace(/<[^>]+>/g, '')) } : x)) })} />
+                <input className="zpe-sm" value={it.href} placeholder="/blog/…" onChange={(e) => setBlock(i, { items: b.items.map((x, j) => (j === k ? { ...x, href: e.target.value } : x)) })} />
+                <RemoveBtn onClick={() => setBlock(i, { items: b.items.filter((_, j) => j !== k) })} />
+              </div>
+            ))}
+            <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { items: [...(b.items || []), { href: '/blog/', text: { de: '' } }] })}>+ Link</button>
+          </div>
         );
       case 'faq':
         return (
@@ -321,7 +373,14 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
       case 'facts':
         return (
           <div>
-          <label className="zpe-check"><input type="checkbox" checked={b.variant === 'schedule'} onChange={(e) => setBlock(i, { variant: e.target.checked ? 'schedule' : undefined })} /> Zeitplan (schmale Spalte für Uhrzeiten)</label>
+          <label className="zpe-check">
+            Darstellung:&nbsp;
+            <select className="zpe-sel" value={b.variant || ''} onChange={(e) => setBlock(i, { variant: (e.target.value || undefined) as 'schedule' | 'v2' | undefined })}>
+              <option value="">Praktisches (klassisch)</option>
+              <option value="schedule">Zeitplan (schmale Spalte für Uhrzeiten)</option>
+              <option value="v2">Neues Layout (breitere Spalte)</option>
+            </select>
+          </label>
           <div className="zpe-cost">
             <Editable tag="div" cls="ct" html={getL(b.title, lang)} placeholder="Überschrift (optional)…" onCommit={(v) => setBlock(i, { title: v ? setL(b.title, lang, v) : undefined })} />
             {(b.items || []).map((r, ri) => (
@@ -331,6 +390,7 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
                 <RemoveBtn onClick={() => setBlock(i, { items: b.items.filter((_, xi) => xi !== ri) })} />
               </div>
             ))}
+            <Editable tag="div" cls="note" html={getL(b.note, lang)} placeholder="Anmerkung unter den Zeilen (optional)…" onCommit={(v) => setBlock(i, { note: v ? setL(b.note, lang, v) : undefined })} />
             <button type="button" className="zpe-costadd" onClick={() => setBlock(i, { items: [...(b.items || []), { k: { de: '' }, v: { de: '' } }] })}>+ Zeile</button>
           </div>
           </div>
@@ -365,9 +425,11 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
         return (
           <div className="zpe-ov">
             <label className="zpe-check">
-              <select className="zpe-sel" value={b.variant} onChange={(e) => setBlock(i, { variant: e.target.value as 'index' | 'claims' })}>
+              <select className="zpe-sel" value={b.variant} onChange={(e) => setBlock(i, { variant: e.target.value as 'index' | 'claims' | 'toc' | 'rank' })}>
                 <option value="index">Orte (nummeriert)</option>
                 <option value="claims">Behauptungen + Urteil</option>
+                <option value="toc">Inhaltsverzeichnis (ohne Nummern)</option>
+                <option value="rank">Rangliste (Nr. · Name · Hinweis rechts)</option>
               </select>
             </label>
             <Editable tag="div" cls="ttl" html={getL(b.title, lang)} placeholder="Überschrift…" onCommit={(v) => setBlock(i, { title: setL(b.title, lang, v) })} />
@@ -410,6 +472,7 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
       case 'callout':
         return (
           <div className="zpe-callout">
+            <label className="zpe-check"><input type="checkbox" checked={b.variant === 'tip'} onChange={(e) => setBlock(i, { variant: e.target.checked ? 'tip' : undefined })} /> Tipp-Box (beige, z. B. „Mein Tipp“)</label>
             <Editable tag="div" cls="cl" html={getL(b.label, lang) || 'Hinweis'} onCommit={(v) => setBlock(i, { label: setL(b.label, lang, v) })} />
             <Editable tag="div" cls="cb" html={getL(b.html, lang)} placeholder="Hinweistext…" onCommit={(v) => setBlock(i, { html: setL(b.html, lang, v) })} />
           </div>
@@ -441,6 +504,15 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
       case 'ornament':
         return <div className="zpe-orn"><span></span>&#10038;<span></span></div>;
       case 'map':
+        if (b.src) {
+          return (
+            <div className="zpe-mapwrap">
+              <div className="zpe-maphead"><b>{getL(b.title, lang) || 'Karte'}</b></div>
+              <input className="zpe-sm" value={b.src} title="Eingebettete Kartenseite" onChange={(e) => setBlock(i, { src: e.target.value })} />
+              <iframe src={b.src.startsWith('/') ? `https://zuzapragtour.de${b.src}` : b.src} title="Karte" style={{ width: '100%', height: 280, border: '1px solid var(--rule)', borderRadius: 6, marginTop: 8 }} />
+            </div>
+          );
+        }
         return (
           <div className="zpe-mapwrap">
             <div className="zpe-maphead">
@@ -566,6 +638,12 @@ export function ArticleEditor({ doc, onChange, activeLang, onLang, articles = []
           <div className="zpe-field"><label>Anzeigedatum · {lang.toUpperCase()}</label><div className="zpe-inp"><input value={dateDisplayVal} onChange={(e) => setDateDisplay(e.target.value)} placeholder={lang === 'de' ? 'Mai 2026' : 'May 2026'} /></div></div>
           <div className="zpe-field"><label>Lesezeit · {lang.toUpperCase()}</label><div className="zpe-inp"><input value={readTimeVal} onChange={(e) => setReadTime(e.target.value)} placeholder={`${computeReadMinutes(doc, lang)} ${lang === 'de' ? 'Min.' : 'min'} · automatisch`} /></div></div>
           <label className="zpe-bil"><input type="checkbox" checked={!!doc.pinned} onChange={(e) => set({ pinned: e.target.checked || undefined })} /> Im Journal oben anheften</label>
+          <div className="zpe-field"><label>Aktualisiert am (ISO; Badge, dateModified, Sitemap)</label><div className="zpe-inp"><input type="date" value={doc.updated || ''} onChange={(e) => set({ updated: e.target.value || undefined })} /></div></div>
+          {doc.updated && (
+            <div className="zpe-field"><label>Badge-Text · {lang.toUpperCase()}</label><div className="zpe-inp"><input value={(doc.updatedDisplay && doc.updatedDisplay[lang]) || ''} onChange={(e) => set({ updatedDisplay: { ...(doc.updatedDisplay || {}), [lang]: e.target.value } })} placeholder={lang === 'de' ? 'Aktualisiert am 7. Oktober 2026' : 'Updated 7 October 2026'} /></div></div>
+          )}
+          <label className="zpe-bil"><input type="checkbox" checked={doc.layout === 'v2'} onChange={(e) => set({ layout: e.target.checked ? 'v2' : undefined })} /> Neues Layout (Anfrage-Box und Weiterlesen als Blöcke, ohne Autorenbox)</label>
+          <label className="zpe-bil"><input type="checkbox" checked={!!doc.floatingCta} onChange={(e) => set({ floatingCta: e.target.checked || undefined })} /> Schwebende Anfrage (Karte, Chip, Leiste auf dem Handy)</label>
         </div>
         <div className="zpe-sec">
           <p className="zpe-sl">Beitragsbild</p>

@@ -19,11 +19,12 @@ import { useParams, notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
-import { blogPosts } from '../utils/blogData';
+import { blogPosts, type BlogPost } from '../utils/blogData';
 import { postText } from '../utils/postText';
 import ProgressBar from '../components/blog/ProgressBar';
 import BackToTop from '../components/blog/BackToTop';
 import ArticleFooter from '../components/blog/ArticleFooter';
+import FloatingContact from '../components/blog/FloatingContact';
 import { BRAND } from '../brand';
 import { mountJournalMaps } from '../utils/journalMaps';
 import { AVATAR_SRC } from '../components/site/Portrait';
@@ -44,13 +45,14 @@ function injectHeadingIds(html: string): string {
   });
 }
 
-const BlogPostPage: React.FC = () => {
+/** `page` = an article-template page outside /blog (content/pages, e.g. /sehenswuerdigkeiten-prag). */
+const BlogPostPage: React.FC<{ page?: BlogPost }> = ({ page }) => {
   const params = useParams();
   const slug = params?.slug as string | undefined;
   const { t, language } = useLanguage();
   const de = language === 'de';
 
-  const post = blogPosts.find((p: any) => p.slug === slug || p.slugDe === slug);
+  const post = page ?? blogPosts.find((p: any) => p.slug === slug || p.slugDe === slug);
 
   const isJournal = !!post?.isJournal;
   const rawContent = post?.contentKey ? postText(post.contentKey, language) : '';
@@ -70,7 +72,11 @@ const BlogPostPage: React.FC = () => {
 
   const category = catOf(post);
   const kicker = post.kickerKey ? postText(post.kickerKey, language) : '';
-  const readMins = rawContent ? readTimeMin(rawContent) : null;
+  const readMins = post.readMinutes ?? (rawContent ? readTimeMin(rawContent) : null);
+  const v2 = post.layout === 'v2';
+  const updatedLabel = post.updatedDisplay?.[language] ?? post.updatedDisplay?.de;
+  const heroAlt = post.heroAlt?.[language] ?? post.heroAlt?.de;
+  const sourcesTitle = post.sourcesTitle?.[language] ?? post.sourcesTitle?.de;
   const date = postText(post.dateKey, language);
   const titlePlain = postText(post.titleKey, language);
   const titleHtml = de ? post.titleHtmlDe : post.titleHtml;
@@ -97,13 +103,17 @@ const BlogPostPage: React.FC = () => {
   return (
     <div className="journal-page bg-white px-5 text-journal-ink antialiased">
       <ProgressBar />
-      <BackToTop />
+      {!post.floatingCta && <BackToTop />}
 
       <article>
         {/* ── Header (860 column) ─────────────────────────────────── */}
         <header className="mx-auto max-w-[860px] pt-[clamp(28px,5vw,48px)]">
           <div className="font-hanken text-[14px] text-journal-mute">
-            <Link href="/blog" className="text-journal-mute no-underline hover:text-journal-ink">Journal</Link>{' '}
+            {page ? (
+              <Link href="/" className="text-journal-mute no-underline hover:text-journal-ink">Start</Link>
+            ) : (
+              <Link href="/blog" className="text-journal-mute no-underline hover:text-journal-ink">Journal</Link>
+            )}{' '}
             <span aria-hidden="true">›</span> {category}
           </div>
           {kicker && (
@@ -129,15 +139,34 @@ const BlogPostPage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="ml-auto text-right font-hanken text-[14px] leading-[1.4] text-journal-mute">
-              {date}
-              {readMins && (
-                <>
-                  <br />
-                  {de ? `Lesezeit ${readMins} Minuten` : `${readMins} min read`}
-                </>
-              )}
-            </div>
+            {updatedLabel ? (
+              // Updated article: badge + first publication date (design_handoff_blog_facelift).
+              <div className="ml-auto flex flex-col items-end gap-1 text-right font-hanken text-[14px] leading-[1.4] text-journal-mute">
+                <span className="inline-flex items-center gap-[6px] rounded-[3px] bg-journal-blue-tint px-[9px] py-[3px] font-bold text-journal-blue">
+                  <span className="h-[6px] w-[6px] rounded-full bg-journal-blue" />
+                  {updatedLabel}
+                </span>
+                <span>
+                  {de ? `Erstmals veröffentlicht am ${date}` : `First published ${date}`}
+                  {readMins ? (de ? ` · Lesezeit ${readMins} Minuten` : ` · ${readMins} min read`) : ''}
+                </span>
+              </div>
+            ) : post.datePrefix ? (
+              <div className="ml-auto flex flex-col items-end gap-1 text-right font-hanken text-[14px] leading-[1.4] text-journal-mute">
+                <span>{de ? `Veröffentlicht am ${date}` : `Published ${date}`}</span>
+                {readMins && <span>{de ? `Lesezeit ${readMins} Minuten` : `${readMins} min read`}</span>}
+              </div>
+            ) : (
+              <div className="ml-auto text-right font-hanken text-[14px] leading-[1.4] text-journal-mute">
+                {date}
+                {readMins && (
+                  <>
+                    <br />
+                    {de ? `Lesezeit ${readMins} Minuten` : `${readMins} min read`}
+                  </>
+                )}
+              </div>
+            )}
           </div>
         </header>
 
@@ -146,8 +175,10 @@ const BlogPostPage: React.FC = () => {
           <figure className="mx-auto mb-0 mt-7 max-w-[1160px]">
             <img
               src={post.image}
-              alt={titlePlain}
+              alt={heroAlt ?? titlePlain}
               className="block h-auto max-h-[620px] w-full object-cover [object-position:center_30%]"
+              style={post.heroLook ? { objectPosition: post.heroLook.pos, maxHeight: post.heroLook.maxH } : undefined}
+              fetchPriority="high"
             />
             {(heroCap || post.heroCredit) && (
               <figcaption className="mx-auto mt-[10px] max-w-[860px] font-hanken text-[14px] leading-[1.45] text-journal-mute">
@@ -165,7 +196,7 @@ const BlogPostPage: React.FC = () => {
 
         {/* ── Body (860) ──────────────────────────────────────────── */}
         <div className="mx-auto mt-8 max-w-[860px] pb-[clamp(3rem,7vh,4.5rem)]">
-          <div className="blog-content" data-track-section="article">
+          <div className={v2 ? 'blog-content blog-content--v2' : 'blog-content'} data-track-section="article">
             {post.contentKey ? (
               <div ref={contentRef} dangerouslySetInnerHTML={{ __html: processedContent }} />
             ) : (
@@ -173,7 +204,8 @@ const BlogPostPage: React.FC = () => {
             )}
           </div>
 
-          {/* Closing CTA */}
+          {/* Closing CTA (facelift articles bring their own as a `cta` block) */}
+          {!post.hasCtaBlock && (
           <aside data-track-section="article-cta" className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4 bg-journal-panel p-[22px]">
             <div className="min-w-0 flex-[1_1_300px]">
               <div className="font-hanken text-[15px] font-bold text-journal-ink">
@@ -199,14 +231,16 @@ const BlogPostPage: React.FC = () => {
               {cta?.button ?? (de ? 'Tour anfragen' : 'Request a tour')}
             </Link>
           </aside>
+          )}
 
           {sourcesHtml && (
             <section data-track-section="sources" className="mt-14 border-t-[3px] border-journal-ink pt-[14px] font-hanken">
-              <h2 className="m-0 text-[20px] font-bold text-journal-ink">{de ? 'Quellen' : 'Sources'}</h2>
+              <h2 className="m-0 text-[20px] font-bold text-journal-ink">{sourcesTitle ?? (de ? 'Quellen' : 'Sources')}</h2>
               <ol className="journal-sources" dangerouslySetInnerHTML={{ __html: sourcesHtml }} />
             </section>
           )}
 
+          {!v2 && (
           <ArticleFooter
             tags={de ? (post.tagsDe ?? post.tags) : post.tags}
             author={{
@@ -221,11 +255,14 @@ const BlogPostPage: React.FC = () => {
                 : ['Born & raised in Prague', 'State-certified guide', 'Jewish Quarter — certified', 'Modern architecture'],
             }}
           />
+          )}
         </div>
       </article>
 
-      {/* ── Related ───────────────────────────────────────────────── */}
-      {relatedItems.length > 0 && (
+      {post.floatingCta && <FloatingContact />}
+
+      {/* ── Related (facelift articles link onward in their own "Weiterlesen") ── */}
+      {!v2 && relatedItems.length > 0 && (
         <section data-track-section="related" className="mx-auto max-w-[1160px] border-t border-journal-rule pb-[clamp(3.5rem,8vh,5rem)] pt-10">
           <h2 className="m-0 font-hanken text-[20px] font-bold text-journal-ink">
             {de ? 'Weiterlesen im Journal' : 'More from the journal'}

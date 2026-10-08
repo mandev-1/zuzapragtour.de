@@ -1,0 +1,1115 @@
+{
+  "slug": "sehenswuerdigkeiten-prag",
+  "path": "/sehenswuerdigkeiten-prag",
+  "canonical": "https://zuzapragtour.de/sehenswuerdigkeiten-prag",
+  "languages": [
+    "de"
+  ],
+  "status": "published",
+  "layout": "v2",
+  "date": "2026-10-08",
+  "dateDisplay": {
+    "de": "8. Oktober 2026"
+  },
+  "datePrefix": true,
+  "category": "Sehenswürdigkeiten",
+  "kicker": {
+    "de": "Prag planen"
+  },
+  "readTime": {
+    "de": "14 Min."
+  },
+  "hero": "/images/hero/vltava-bridges-hero-1080.jpg",
+  "heroAlt": {
+    "de": "Die Brücken über die Moldau mit der Prager Burg im Hintergrund"
+  },
+  "heroLook": {
+    "pos": "center 50%",
+    "maxH": 620
+  },
+  "heroCap": {
+    "de": "Die Moldaubrücken mit dem Burgberg. Zwölf der zwanzig Sehenswürdigkeiten liegen in diesem Bild oder knapp daneben."
+  },
+  "heroCredit": "Zuza Prague Tours",
+  "title": {
+    "de": "Sehenswürdigkeiten in Prag: die 20 wichtigsten, sortiert von einer Stadtführerin"
+  },
+  "excerpt": {
+    "de": "Die 20 wichtigsten Sehenswürdigkeiten in Prag, sortiert von einer staatlich geprüften Stadtführerin: mit Karte, bester Uhrzeit, kostenlosen Orten und dem, was Sie sich sparen können."
+  },
+  "dek": {
+    "de": "Prag hat mehr Sehenswürdigkeiten, als ein Wochenende fassen kann. Diese Liste sortiert die zwanzig wichtigsten nach dem, was ich meinen Gästen zuerst zeigen würde, mit Karte, bester Uhrzeit und dem Hinweis, was kostenlos ist. Am Ende steht, was Sie sich sparen können."
+  },
+  "seoTitle": {
+    "de": "Sehenswürdigkeiten Prag: die 20 wichtigsten, mit Karte"
+  },
+  "seoDescription": {
+    "de": "Die 20 wichtigsten Sehenswürdigkeiten in Prag, sortiert von einer staatlich geprüften Stadtführerin: mit Karte, bester Uhrzeit, kostenlosen Orten und dem, was Sie sich sparen können."
+  },
+  "tags": {
+    "de": [
+      "Sehenswürdigkeiten Prag",
+      "Prag Sehenswürdigkeiten Top 20",
+      "Prag kostenlos",
+      "Prager Burg",
+      "Karlsbrücke",
+      "Stadtführerin Prag"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/hero/vltava-bridges-hero-1080.jpg",
+  "floatingCta": true,
+  "sourcesTitle": {
+    "de": "Offizielle Seiten für aktuelle Angaben"
+  },
+  "sources": [
+    {
+      "de": "Prager Burg: <a href=\"https://www.hrad.cz/en\">Öffnungszeiten und Tickets</a>"
+    },
+    {
+      "de": "Jüdisches Museum Prag: <a href=\"https://www.jewishmuseum.cz/en/\">Synagogen und Friedhof</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu\">prague.eu</a> (Türme, Rathaus, Petřín)"
+    },
+    {
+      "de": "Karte: © OpenStreetMap contributors"
+    }
+  ],
+  "blocks": [
+    {
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
+      "html": {
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Die ersten fünf Plätze liegen alle im Zentrum und lassen sich in zwei Tagen zu Fuß verbinden."
+        },
+        {
+          "de": "Elf der zwanzig Sehenswürdigkeiten kosten keinen Eintritt. Sie sind unten blau markiert."
+        },
+        {
+          "de": "Die Uhrzeit entscheidet mehr als die Reihenfolge: Burg und Karlsbrücke vor 9 Uhr sind zwei völlig andere Orte als mittags."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich führe seit vielen Jahren Gäste aus Deutschland, Österreich und der Schweiz durch Prag, ausschließlich privat. Die Rangfolge unten ist meine eigene. Sie richtet sich nicht danach, was am häufigsten fotografiert wird, sondern danach, was man von Prag verstanden haben sollte, wenn man wieder abreist. Wer nur einen Tag hat, nimmt die Plätze eins bis fünf, wer drei Tage hat, kommt bis etwa Platz fünfzehn."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Alle 20 Sehenswürdigkeiten auf der Karte"
+      },
+      "id": "karte"
+    },
+    {
+      "t": "map",
+      "src": "/maps/sehenswuerdigkeiten-prag.html",
+      "title": {
+        "de": "Karte der 20 Sehenswürdigkeiten in Prag"
+      },
+      "caption": {
+        "de": "Blau: kostenlos zugänglich. Rot: mit Eintritt. Ein Klick auf die Nummer führt zum Abschnitt."
+      },
+      "points": []
+    },
+    {
+      "t": "overview",
+      "variant": "rank",
+      "items": [
+        {
+          "href": "#s1",
+          "n": "1",
+          "title": {
+            "de": "Prager Burg und der Veitsdom"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s2",
+          "n": "2",
+          "title": {
+            "de": "Karlsbrücke"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s3",
+          "n": "3",
+          "title": {
+            "de": "Altstädter Ring und astronomische Uhr"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s4",
+          "n": "4",
+          "title": {
+            "de": "Josefov, das Jüdische Viertel"
+          }
+        },
+        {
+          "href": "#s5",
+          "n": "5",
+          "title": {
+            "de": "Kleinseite und die Insel Kampa"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s6",
+          "n": "6",
+          "title": {
+            "de": "Vyšehrad"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s7",
+          "n": "7",
+          "title": {
+            "de": "Strahov-Kloster"
+          }
+        },
+        {
+          "href": "#s8",
+          "n": "8",
+          "title": {
+            "de": "Petřín-Hügel"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s9",
+          "n": "9",
+          "title": {
+            "de": "Klementinum"
+          }
+        },
+        {
+          "href": "#s10",
+          "n": "10",
+          "title": {
+            "de": "St.-Nikolaus-Kirche auf der Kleinseite"
+          }
+        },
+        {
+          "href": "#s11",
+          "n": "11",
+          "title": {
+            "de": "Waldstein-Garten"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s12",
+          "n": "12",
+          "title": {
+            "de": "Wenzelsplatz und Nationalmuseum"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s13",
+          "n": "13",
+          "title": {
+            "de": "Pulverturm und Gemeindehaus"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s14",
+          "n": "14",
+          "title": {
+            "de": "Loreto"
+          }
+        },
+        {
+          "href": "#s15",
+          "n": "15",
+          "title": {
+            "de": "Tanzende Haus"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s16",
+          "n": "16",
+          "title": {
+            "de": "Nationaltheater"
+          }
+        },
+        {
+          "href": "#s17",
+          "n": "17",
+          "title": {
+            "de": "Letná-Park"
+          },
+          "desc": {
+            "de": "kostenlos"
+          },
+          "tone": "blue"
+        },
+        {
+          "href": "#s18",
+          "n": "18",
+          "title": {
+            "de": "Rudolfinum"
+          }
+        },
+        {
+          "href": "#s19",
+          "n": "19",
+          "title": {
+            "de": "Agneskloster"
+          }
+        },
+        {
+          "href": "#s20",
+          "n": "20",
+          "title": {
+            "de": "Fernsehturm Žižkov"
+          }
+        }
+      ],
+      "id": "ueberblick",
+      "title": {
+        "de": "Die Rangliste"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">1.</span> Die Prager Burg und der Veitsdom"
+      },
+      "id": "s1",
+      "free": true,
+      "sub": {
+        "de": "Hradschin · Beste Zeit: ab 9 Uhr, vor den Gruppen"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die größte zusammenhängende Burganlage der Welt ist eine Stadt in der Stadt: Dom, Königspalast, Basilika St. Georg, das Goldene Gässchen und die Wachablösung um 12 Uhr. Das Areal ist frei, Eintritt kosten nur die Innenräume."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Ich fahre mit meinen Gästen mit der Tram 22 hinauf und gehe dann bergab. So steht man um neun im Dom, wenn das Morgenlicht durch das Mucha-Fenster fällt. <a href=\"/blog/prager-burg-vollstaendiger-besucher-guide\">Besucher-Guide zur Prager Burg</a>"
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/blog-prague-castle.webp",
+      "alt": {
+        "de": "Der Veitsdom im Dritten Burghof"
+      },
+      "cap": {
+        "de": "Der Veitsdom im Dritten Burghof."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">2.</span> Die Karlsbrücke"
+      },
+      "id": "s2",
+      "free": true,
+      "sub": {
+        "de": "Altstadt / Kleinseite · Beste Zeit: vor 8 oder nach 19 Uhr"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Seit 1357 verbindet sie Altstadt und Kleinseite, mit 30 Barockstatuen und je einem Brückenturm an beiden Enden. Tagsüber ist sie überfüllt, früh am Morgen eine der schönsten Brücken Europas."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Fast niemand schaut über das Geländer zum Ritter Bruncvík oder kennt das Zahlen-Palindrom im Grundstein. <a href=\"/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps\">Geheimtipps rund um die Karlsbrücke</a>"
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/blog-charles-bridge-statues-sunny-crowded-bridge.webp",
+      "alt": {
+        "de": "Mittags drängen sich auf der Brücke Tausende Besucher"
+      },
+      "cap": {
+        "de": "Mittags drängen sich auf der Brücke Tausende Besucher."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">3.</span> Altstädter Ring und astronomische Uhr"
+      },
+      "id": "s3",
+      "free": true,
+      "sub": {
+        "de": "Altstadt · Beste Zeit: zur vollen Stunde, 9 bis 23 Uhr"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gotische Teynkirche, barocke St.-Nikolaus-Kirche, Altstädter Rathaus mit der Orloj von 1410: Auf keinem Platz der Stadt liegen so viele Jahrhunderte nebeneinander. Vom Rathausturm sehen Sie den ganzen Platz von oben."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> An der Uhr erkläre ich nicht die Apostel, sondern das Zifferblatt darunter: Es zeigt drei Zeiten gleichzeitig, und kaum jemand kann sie lesen."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/old-town-square.jpg",
+      "alt": {
+        "de": "Der Altstädter Ring mit der Teynkirche"
+      },
+      "cap": {
+        "de": "Der Altstädter Ring mit der Teynkirche."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">4.</span> Josefov, das Jüdische Viertel"
+      },
+      "id": "s4",
+      "free": false,
+      "sub": {
+        "de": "Altstadt · Beste Zeit: Vormittag, samstags geschlossen"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Sechs Synagogen, der Alte Jüdische Friedhof mit übereinander geschichteten Gräbern und das Rathaus mit der rückwärts laufenden Uhr. In der Pinkas-Synagoge stehen die Namen von fast 80.000 Opfern der Schoah an den Wänden."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Ohne Erklärung bleiben viele Gebäude hier schöne Fassaden. <a href=\"/blog/jewish-quarter-history-and-heritage\">Das Jüdische Viertel: Geschichte und Erbe</a>"
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/Pinkasovasynagoga-min.jpg",
+      "alt": {
+        "de": "Namen der Opfer an den Wänden der Pinkas-Synagoge"
+      },
+      "cap": {
+        "de": "Namen der Opfer an den Wänden der Pinkas-Synagoge."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">5.</span> Die Kleinseite und die Insel Kampa"
+      },
+      "id": "s5",
+      "free": true,
+      "sub": {
+        "de": "Kleinseite · Beste Zeit: Nachmittag"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Barockpaläste, Botschaften, Gärten und Gassen zwischen Burgberg und Moldau. Auf der Kampa trennt der Teufelsbach die Insel vom Ufer, das Mühlrad dreht sich bis heute."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Mein persönlicher Lieblingsort in Prag. Wer hier ohne Plan geht, landet in der Nerudova, wer einen Plan hat, in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">6.</span> Vyšehrad"
+      },
+      "id": "s6",
+      "free": true,
+      "sub": {
+        "de": "außerhalb des Zentrums · Beste Zeit: später Nachmittag"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Festung auf dem Felsen über der Moldau, nach der Sage der Ort, an dem Prag gegründet wurde. Auf dem Nationalfriedhof liegen Dvořák, Smetana und Mucha."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Hier halten keine Reisebusse. Der Blick von den Mauern flussabwärts auf die Burg ist für mich der schönste der Stadt."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">7.</span> Das Strahov-Kloster"
+      },
+      "id": "s7",
+      "free": false,
+      "sub": {
+        "de": "Hradschin · Beste Zeit: zur Öffnung am Vormittag"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Prämonstratenserkloster von 1143 mit zwei barocken Bibliothekssälen, einem Kuriositätenkabinett und einer eigenen Brauerei. Die Säle sehen Sie von der Tür aus."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Der ideale Start für einen Tag auf dem Burgberg, danach geht es nur noch bergab. <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster: Bibliothek, Aussicht, Weg</a>"
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/strahov-monastery.webp",
+      "alt": {
+        "de": "Das Strahov-Kloster über den Dächern der Kleinseite"
+      },
+      "cap": {
+        "de": "Das Strahov-Kloster über den Dächern der Kleinseite."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">8.</span> Der Petřín-Hügel"
+      },
+      "id": "s8",
+      "free": true,
+      "sub": {
+        "de": "Kleinseite · Beste Zeit: April und Mai zur Obstblüte"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ein bewaldeter Park über der Kleinseite mit Aussichtsturm von 1891, Spiegellabyrinth und Rosengarten. Hinauf fährt eine Standseilbahn mit normalem Fahrschein."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Im Frühling blühen die Obstgärten am Hang, dann ist der Petřín ein eigener Ausflug. <a href=\"/blog/prag-im-fruehling\">Prag im Frühling</a>"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">9.</span> Das Klementinum"
+      },
+      "id": "s9",
+      "free": false,
+      "sub": {
+        "de": "Altstadt · Beste Zeit: nur mit Führung, stündlich"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ehemaliges Jesuitenkolleg mit einem der schönsten barocken Bibliothekssäle Europas und dem Astronomischen Turm. Seit 1775 wird hier täglich das Wetter gemessen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Wer nach Strahov enttäuscht ist, die Säle nur von der Tür zu sehen, kommt hier ein Stück näher heran. <a href=\"/blog/klementinum-baroque-library-prague\">Klementinum: die Barockbibliothek</a>"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">10.</span> St.-Nikolaus-Kirche auf der Kleinseite"
+      },
+      "id": "s10",
+      "free": false,
+      "sub": {
+        "de": "Kleinseite · Beste Zeit: Vormittag"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die bedeutendste Barockkirche Prags, gebaut von Vater und Sohn Dientzenhofer. Auf der Orgel spielte Mozart 1787, vom Glockenturm überwachte später die Staatssicherheit die Botschaften ringsum."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Ich zeige meinen Gästen die Kuppel von innen und danach den Turm von außen. Erst dann versteht man, warum er für die Geheimpolizei so praktisch war."
+      }
+    },
+    {
+      "t": "cta",
+      "title": {
+        "de": "Die Top 10 mit Zuzana"
+      },
+      "html": {
+        "de": "Auf meiner privaten Tour sehen Sie die ersten Plätze dieser Liste zur richtigen Uhrzeit, in einer Route ohne Umwege und ohne fremde Gruppe neben Ihnen. Unverbindlich anfragen, auf <a href=\"https://wa.me/420721231933\">WhatsApp schreiben</a>, eine <a href=\"mailto:zuzanamanova@email.cz\">E-Mail senden</a> oder anrufen: <a href=\"tel:+420721231933\">+420 721 231 933</a>"
+      },
+      "button": {
+        "de": "Tour anfragen"
+      },
+      "href": "/book?tour=Individuelle%20Privattour#contact-title"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">11.</span> Der Waldstein-Garten"
+      },
+      "id": "s11",
+      "free": true,
+      "sub": {
+        "de": "Kleinseite · Beste Zeit: April bis Oktober"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Barockgarten des Feldherrn Wallenstein, heute Garten des tschechischen Senats: Sala terrena, Pfauen, Teich und die Tropfsteinwand mit Fratzen im Stein."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Fünf Minuten von der Burgtreppe und trotzdem fast immer ruhig. <a href=\"/blog/wallenstein-garden-prague\">Der Waldstein-Garten in Prag</a>"
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/blog-gardens-2.webp",
+      "alt": {
+        "de": "Das Parterre des Waldstein-Gartens"
+      },
+      "cap": {
+        "de": "Das Parterre des Waldstein-Gartens."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">12.</span> Wenzelsplatz und Nationalmuseum"
+      },
+      "id": "s12",
+      "free": true,
+      "sub": {
+        "de": "Neustadt · Beste Zeit: tagsüber"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eigentlich ein Boulevard, 750 Meter lang. Hier wurde 1918 die Republik gefeiert, 1969 verbrannte sich Jan Palach aus Protest, und 1989 versammelten sich Hunderttausende zur Samtenen Revolution."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Ohne diese Geschichte ist der Wenzelsplatz eine Einkaufsstraße. Mit ihr ist er der wichtigste Platz des modernen Tschechiens."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">13.</span> Pulverturm und Gemeindehaus"
+      },
+      "id": "s13",
+      "free": true,
+      "sub": {
+        "de": "Altstadt · Beste Zeit: abends beleuchtet"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der gotische Pulverturm war das Tor zur Altstadt und Beginn des Krönungswegs zur Burg. Direkt daneben steht das Gemeindehaus, das schönste Jugendstilgebäude der Stadt, in dem 1918 die Unabhängigkeit ausgerufen wurde."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Ins Café im Gemeindehaus kann jeder hinein. Für den Smetana-Saal braucht man eine Führung oder ein Konzertticket."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">14.</span> Loreto"
+      },
+      "id": "s14",
+      "free": false,
+      "sub": {
+        "de": "Hradschin · Beste Zeit: zur vollen Stunde, Glockenspiel"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wallfahrtsort mit einer Nachbildung des Hauses der Maria aus Loreto, umgeben von Kreuzgängen. In der Schatzkammer liegt die Diamantmonstranz mit über 6.000 Diamanten."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Liegt auf dem Weg vom Strahov-Kloster zur Burg und wird trotzdem von den meisten übersehen."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">15.</span> Das Tanzende Haus"
+      },
+      "id": "s15",
+      "free": true,
+      "sub": {
+        "de": "Neustadt · Beste Zeit: jederzeit, Dachbar am Abend"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "1996 von Frank Gehry und Vlado Milunić gebaut, damals heftig umstritten, heute eines der bekanntesten modernen Gebäude der Stadt. Die Bar auf dem Dach hat einen weiten Blick über die Moldau."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Ich verbinde es gern mit einem Spaziergang am Ufer bis zum Nationaltheater."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">16.</span> Das Nationaltheater"
+      },
+      "id": "s16",
+      "free": false,
+      "sub": {
+        "de": "Neustadt · Beste Zeit: abends bei einer Vorstellung"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Von Tschechen mit Spenden gebaut, unter dem Motto „Das Volk sich selbst“. Nach einem Brand 1881 wurde es in nur zwei Jahren wieder aufgebaut."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Von innen sehen Sie es am besten bei einer Oper oder einem Ballett. Karten gibt es oft noch kurzfristig."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">17.</span> Der Letná-Park"
+      },
+      "id": "s17",
+      "free": true,
+      "sub": {
+        "de": "Holešovice · Beste Zeit: Sonnenuntergang, April bis Oktober"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Vom Rand des Plateaus sehen Sie alle Brücken der Moldau hintereinander. Daneben liegt ein Biergarten ohne Reservierung, und dort, wo das größte Stalin-Denkmal der Welt stand, steht heute ein riesiges Metronom."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Der beste kostenlose Abend in Prag."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">18.</span> Das Rudolfinum"
+      },
+      "id": "s18",
+      "free": false,
+      "sub": {
+        "de": "Altstadt · Beste Zeit: abends bei einem Konzert"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Neorenaissance-Bau am Moldauufer, Sitz der Tschechischen Philharmonie. Im Dvořák-Saal ist der Klang so gut, dass Musiker aus der ganzen Welt hier auftreten."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Wenn Sie ein klassisches Konzert hören möchten, dann hier, nicht in einer Kirche mit wechselndem Programm."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">19.</span> Das Agneskloster"
+      },
+      "id": "s19",
+      "free": false,
+      "sub": {
+        "de": "Altstadt · Beste Zeit: ruhig, auch am Wochenende"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Eines der ersten gotischen Bauwerke in Böhmen, gegründet von der heiligen Agnes von Böhmen. Heute zeigt die Nationalgalerie hier mittelalterliche Kunst."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Fast immer leer, obwohl es nur zehn Minuten vom Altstädter Ring entfernt liegt."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">20.</span> Der Fernsehturm Žižkov"
+      },
+      "id": "s20",
+      "free": false,
+      "sub": {
+        "de": "Žižkov · Beste Zeit: bei klarem Wetter"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "216 Meter hoch, in den 1980er Jahren gebaut und lange als hässlichstes Gebäude der Stadt verspottet. Seit 2000 klettern Babys von David Černý an ihm hinauf."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>Zuzanas Tipp:</strong> Von der Aussichtsplattform sehen Sie die Altstadt aus einer Richtung, aus der sie kaum jemand kennt."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Was ich mir sparen würde"
+      },
+      "id": "ueberbewertet",
+      "pad": 56
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Jede Stadt hat Orte, die vor allem deshalb voll sind, weil alle anderen auch dort sind. Diese hier stehen in vielen Listen, aber nicht in meiner."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "John-Lennon-Mauer"
+          },
+          "v": {
+            "de": "Eine bemalte Wand, an der sich mittags Dutzende Menschen für dasselbe Foto anstellen. Die Geschichte dahinter ist interessant, der Ort selbst ist in zwei Minuten gesehen. Gehen Sie vorbei, wenn Sie ohnehin auf der Kampa sind, aber nicht extra hin."
+          }
+        },
+        {
+          "k": {
+            "de": "Goldenes Gässchen zur Mittagszeit"
+          },
+          "v": {
+            "de": "Zwischen 11 und 15 Uhr schieben Sie sich durch eine enge Gasse und sehen vor allem Rücken. Vor 9:30 Uhr oder in der letzten Stunde vor Schließung ist es ein anderer Ort."
+          }
+        },
+        {
+          "k": {
+            "de": "Trdelník"
+          },
+          "v": {
+            "de": "Der Baumkuchen vom Stand ist keine tschechische Tradition, sondern erst in den letzten Jahren für Touristen erfunden worden. Probieren Sie lieber einen Koláč aus einer Bäckerei."
+          }
+        },
+        {
+          "k": {
+            "de": "Restaurants am Altstädter Ring"
+          },
+          "v": {
+            "de": "Speisekarten in sechs Sprachen, Preise für die Lage, nicht für das Essen. Zwei Straßen weiter essen Sie besser und günstiger. <a href=\"/blog/prag-kulinarik-guide\">Mein Kulinarik-Guide</a>"
+          }
+        },
+        {
+          "k": {
+            "de": "Wenzelsplatz am Abend"
+          },
+          "v": {
+            "de": "Tagsüber ein Ort der Geschichte, nachts eine Meile mit Wechselstuben, Nachtclubs und Animierern. Für den Abend gibt es bessere Orte, zum Beispiel Letná."
+          }
+        },
+        {
+          "k": {
+            "de": "Pauschale Wechselstuben"
+          },
+          "v": {
+            "de": "Werbung mit „0 % Kommission“ und schlechtem Kurs. Bezahlen Sie mit Karte oder heben Sie am Bankautomaten einer Bank ab. <a href=\"/blog/was-man-in-prag-nicht-tun-sollte\">Was man in Prag nicht tun sollte</a>"
+          }
+        }
+      ],
+      "variant": "v2",
+      "look": {
+        "key": "12rem",
+        "pad": 12,
+        "rule": "ink"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Warum eine private Führung bei diesen Orten den Unterschied macht"
+      },
+      "id": "warum",
+      "pad": 56
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die meisten Sehenswürdigkeiten auf dieser Liste können Sie allein besuchen. Was eine gute Führung ändert, ist nicht der Ort, sondern was Sie darin sehen: die drei Zeiten auf dem Zifferblatt der Orloj, den Glockenturm, aus dem die Staatssicherheit die Botschaften beobachtete, das Kreuz an der Brüstung der Karlsbrücke. Und die Reihenfolge, in der Sie die Orte erleben, bevor die Gruppen kommen."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Nur private Führungen"
+          },
+          "v": {
+            "de": "Ich führe ausschließlich Ihre eigene Gruppe, ob zu zweit oder als Familie. Keine Sammelgruppe, kein Treffpunkt mit dreißig Fremden."
+          }
+        },
+        {
+          "k": {
+            "de": "Persönlich von Zuzana"
+          },
+          "v": {
+            "de": "Sie buchen mich, und ich führe Sie selbst, auf Deutsch."
+          }
+        },
+        {
+          "k": {
+            "de": "Staatlich geprüft"
+          },
+          "v": {
+            "de": "Ing. Zuzana Manová, staatlich geprüfte Stadtführerin in Prag."
+          }
+        },
+        {
+          "k": {
+            "de": "Ihre Route, Ihr Tempo"
+          },
+          "v": {
+            "de": "Die Route stelle ich nach Ihren Interessen zusammen: mit Kindern, ohne Treppen, mit Schwerpunkt Geschichte, Architektur oder Kulinarik."
+          }
+        },
+        {
+          "k": {
+            "de": "Zur richtigen Uhrzeit"
+          },
+          "v": {
+            "de": "Ich plane den Tag so, dass Sie an der Burg und auf der Karlsbrücke sind, wenn es dort noch ruhig ist."
+          }
+        }
+      ],
+      "variant": "v2",
+      "look": {
+        "key": "12rem",
+        "pad": 12,
+        "rule": "ink"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Was meine Gäste nach der Tour schreiben, lesen Sie in den <a href=\"/bewerten\">Bewertungen</a>. Wie Sie allgemein einen guten Stadtführer erkennen, habe ich im Artikel <a href=\"/blog/prag-besichtigen-stadtfuehrer\">Prag besichtigen: Stadtführer, Reiseführer oder Besichtigungsfahrt?</a> aufgeschrieben."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Häufige Fragen"
+      },
+      "id": "faq"
+    },
+    {
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Was sind die wichtigsten Sehenswürdigkeiten in Prag?"
+          },
+          "a": {
+            "de": "Die Prager Burg mit dem Veitsdom, die Karlsbrücke, der Altstädter Ring mit der astronomischen Uhr, das Jüdische Viertel und die Kleinseite. Alle fünf liegen im Zentrum und sind zu Fuß erreichbar."
+          }
+        },
+        {
+          "q": {
+            "de": "Welche Sehenswürdigkeiten in Prag sind kostenlos?"
+          },
+          "a": {
+            "de": "Das Areal der Prager Burg, die Karlsbrücke, der Altstädter Ring, die Kleinseite und Kampa, Vyšehrad, der Petřín, der Waldstein-Garten, der Wenzelsplatz, Pulverturm und Gemeindehaus von außen, das Tanzende Haus und der Letná-Park."
+          }
+        },
+        {
+          "q": {
+            "de": "Wie viele Tage braucht man für die Sehenswürdigkeiten in Prag?"
+          },
+          "a": {
+            "de": "Für die ersten fünf zwei volle Tage, für die ersten fünfzehn drei bis vier Tage. Plätze 16 bis 20 passen gut in einen zusätzlichen Tag oder einen Abend."
+          }
+        },
+        {
+          "q": {
+            "de": "Was kann man in Prag bei Regen besichtigen?"
+          },
+          "a": {
+            "de": "Veitsdom, Klementinum, St.-Nikolaus-Kirche, die Synagogen in Josefov, das Agneskloster und das Nationalmuseum. Mehr Ideen in der <a href=\"/blog/all-museums-in-prague-complete-guide\">Museumsübersicht</a>."
+          }
+        }
+      ],
+      "variant": "v2"
+    },
+    {
+      "t": "cta",
+      "title": {
+        "de": "Prag mit Zuzana sehen"
+      },
+      "html": {
+        "de": "Ich stelle Ihnen aus dieser Liste eine private Route zusammen, abgestimmt auf Ihre Tage in Prag. Unverbindlich anfragen, auf <a href=\"https://wa.me/420721231933\">WhatsApp schreiben</a>, eine <a href=\"mailto:zuzanamanova@email.cz\">E-Mail senden</a> oder anrufen: <a href=\"tel:+420721231933\">+420 721 231 933</a>"
+      },
+      "button": {
+        "de": "Tour anfragen"
+      },
+      "href": "/book?tour=Individuelle%20Privattour#contact-title"
+    },
+    {
+      "t": "links",
+      "title": {
+        "de": "Weiterlesen"
+      },
+      "items": [
+        {
+          "href": "/blog/was-kann-man-in-prag-machen",
+          "text": {
+            "de": "Was kann man in Prag machen? Zwölf Dinge, die sich lohnen"
+          }
+        },
+        {
+          "href": "/blog/one-day-in-prague-top-5-places",
+          "text": {
+            "de": "Ein Tag in Prag"
+          }
+        },
+        {
+          "href": "/blog/beste-fotospots-prag",
+          "text": {
+            "de": "Die besten Fotospots in Prag"
+          }
+        }
+      ]
+    }
+  ]
+}

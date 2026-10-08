@@ -3,294 +3,533 @@
   "languages": [
     "de"
   ],
-  "status": "draft",
+  "status": "published",
+  "layout": "v2",
   "date": "2026-04-30",
   "dateDisplay": {
     "de": "30. April 2026"
   },
-  "category": "Reiseführer",
-  "readTime": {
-    "de": ""
+  "updated": "2026-10-07",
+  "updatedDisplay": {
+    "de": "Aktualisiert am 7. Oktober 2026"
   },
-  "hero": "/images/blog-tropfsteinwand.png",
+  "category": "Spaziergänge",
+  "kicker": {
+    "de": "Kleinseite"
+  },
+  "readTime": {
+    "de": "10 Min."
+  },
+  "hero": "/images/web/blog-tropfsteinwand.webp",
+  "heroAlt": {
+    "de": "Die Tropfsteinwand im Waldstein-Garten in Prag"
+  },
+  "heroLook": {
+    "pos": "center 50%",
+    "maxH": 620
+  },
+  "heroCap": {
+    "de": "Die Tropfsteinwand im Waldstein-Garten, Startpunkt des Spaziergangs."
+  },
+  "heroCredit": "Zuza Prague Tours",
   "title": {
-    "de": "Tropfsteinwand <em>&amp;</em> Karlsbrücke: Geheimtipps"
+    "de": "Von der Tropfsteinwand zur Karlsbrücke: fünf Geheimtipps auf zwei Kilometern"
   },
   "excerpt": {
-    "de": "Ein Kunstdiebstahl aus dem Jahr 1648, ein Ritter auf einem Flusspfeiler, den kaum jemand bemerkt, und eine Brücke, deren Grundstein auf die Minute genau von Astrologen berechnet wurde — hier ist der Spaziergang, den kaum jemand kennt."
+    "de": "Ein Spaziergang von 2 km vom Waldstein-Garten über die Čertovka zur Karlsbrücke: Tropfsteinwand, Bruncvík, das Nepomuk-Kreuz und das Palindrom von 1357. Mit Route und bester Uhrzeit."
+  },
+  "dek": {
+    "de": "Dieser Spaziergang ist für alle, die die Karlsbrücke schon kennen und trotzdem noch nicht alles gesehen haben. Er führt vom Waldstein-Garten über den Teufelsbach auf die Brücke, mit einem Ritter, den fast niemand bemerkt, und einem Datum, das kein Zufall ist."
+  },
+  "seoTitle": {
+    "de": "Geheimtipps zwischen Kleinseite und Karlsbrücke: Tropfsteinwand, Čertovka, Bruncvík"
+  },
+  "seoDescription": {
+    "de": "Ein Spaziergang von 2 km vom Waldstein-Garten über die Čertovka zur Karlsbrücke: Tropfsteinwand, Bruncvík, das Nepomuk-Kreuz und das Palindrom von 1357. Mit Route und bester Uhrzeit."
   },
   "tags": {
     "de": [
       "Tropfsteinwand Prag",
-      "Waldsteingarten Prag",
-      "Malá Strana Geheimtipps",
       "Karlsbrücke Geheimtipps",
-      "Čertovka Prag",
-      "Bruncvík Statue Prag",
-      "Prag versteckte Orte",
-      "Prag unbekannte Sehenswürdigkeiten",
-      "Prag Insider Tipps",
-      "Waldstein Garten Prag",
-      "Kleinseite Prag Tipps"
-    ],
-    "en": []
+      "Karlsbrücke Grundstein 1357",
+      "Čertovka",
+      "Bruncvík",
+      "Kleinseite Spaziergang",
+      "Nepomuk Karlsbrücke"
+    ]
   },
   "author": "Ing. Zuzana Manová",
-  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "ogImage": "/images/blog-tropfsteinwand.png",
+  "floatingCta": true,
+  "sourcesTitle": {
+    "de": "Offizielle Seiten für aktuelle Angaben"
+  },
+  "sources": [
+    {
+      "de": "Senát: <a href=\"https://www.senat.cz/informace/pro_verejnost/valdstejnska_zahrada/\">Waldstein-Garten, Öffnungszeiten</a>"
+    },
+    {
+      "de": "Národní památkový ústav: <a href=\"https://www.npu.cz/cs/hrady-a-zamky/tipy-na-vylet/17887-valdstejnska-zahrada\">Valdštejnská zahrada</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu/cs/objevujte/karluv-most/\">Karlsbrücke und Brückentürme</a>"
+    }
+  ],
   "blocks": [
     {
-      "t": "p",
-      "lead": true,
-      "html": {
-        "de": "Ich führe Menschen durch Malá Strana, seitdem ich Führungen mache. Und trotzdem finde ich noch Dinge, die mich überraschen. Dieser Artikel ist für alle, die die Karlsbrücke schon kennen — und trotzdem noch nicht alles gesehen haben."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Der Waldsteingarten: ein Garten mit Kunstdiebstahlgeschichte"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Der <a href=\"https://prague.eu/cs/objevujte/valdstejnska-zahrada/\" target=\"_blank\" rel=\"noopener noreferrer\">Waldsteingarten (Valdštejnská zahrada)</a> liegt einen Steinwurf vom Malostranské náměstí entfernt und ist kostenlos zugänglich — was schon mal ein gutes Zeichen ist. Gebaut wurde er zwischen 1623 und 1630 für Albrecht von Wallenstein, einen der mächtigsten Feldherren des Dreißigjährigen Krieges und einen Mann, der offenbar keine halben Sachen mochte: Er ließ dafür 23 Häuser, drei Gärten und eine Ziegelei abreißen."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Der Garten hat eine Sala terrena (ein offenes Gartenloggia-Gebäude mit Fresken), einen Teich, Pfauen, Eulen in Steinnischen und — die Hauptattraktion — die Tropfsteinwand."
-      }
-    },
-    {
-      "t": "image",
-      "src": "/images/blog-gardens-2.jpg",
-      "cap": {
-        "de": "Der Waldsteingarten: einer der schönsten Barockgärten Prags — und kostenlos zugänglich."
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
       },
-      "credit": "Roman Boed"
-    },
-    {
-      "t": "h2",
       "html": {
-        "de": "Die Tropfsteinwand: fake, aber trotzdem großartig"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die Tropfsteinwand ist eine lange Kunstfelsenwand aus Kalkstein und Tufstein, die eine natürliche Grotte imitiert. Sie ist komplett künstlich — das war auch so geplant. So etwas nennt man eine Grotte oder Rustika-Wand: ein Barocktrend, bei dem Gärten natürlich wirkende Felsformationen bekamen, obwohl kein einziger Stein dort gewachsen ist."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "In den Nischen der Wand leben echte Eulen. Nicht dekorativ — tatsächlich echte Eulen, die den Garten als Zuhause betrachten. Und am Boden davor: ein Pfau. Der Pfau hat keine Angst vor Touristen. Das lernt man schnell."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Was die meisten Besucher nicht wissen: Die Bronzestatuen im Garten sind Kopien. Die Originale — eine Gruppe von Götter- und Heldenstatuen des niederländischen Bildhauers Adriaen de Vries, einem der bedeutendsten Künstler seiner Zeit — wurden 1648 von schwedischen Soldaten gestohlen. Sie kamen gegen Ende des Dreißigjährigen Krieges nach Prag, plünderten den Waldsteingarten und transportierten die Skulpturen nach Schweden. Heute stehen sie im Schlosspark von Drottningholm bei Stockholm."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die tschechische Seite hat mehrfach höflich um Rückgabe gebeten. Die Antwort war bisher freundlich und ergebnislos."
-      }
-    },
-    {
-      "t": "image",
-      "src": "/images/blog-tropfsteinwand-zwei.png",
-      "cap": {
-        "de": "Die Tropfsteinwand aus der Nähe — inklusive der Eulen, die sich dort dauerhaft eingerichtet haben."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Čertovka: das Prager Venedig, das niemand so nennt"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Verlassen Sie den Waldsteingarten und gehen Sie Richtung Karlsbrücke — aber nicht über die Brücke. Biegen Sie davor links ab auf die Cihelná, dann unter den Brückenbögen hindurch auf die Kampa-Insel."
-      }
-    },
-    {
-      "t": "image",
-      "src": "/images/photo-guests-mala-strana.jpeg",
-      "cap": {
-        "de": "Malá Strana — das Viertel, das zwischen Karlsbrücke und Burgberg eingeklemmt ist und deshalb noch immer wie im 18. Jahrhundert aussieht."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die Čertovka ist der schmale Kanal, der Kampa vom Rest von Malá Strana trennt. „Čert\" heißt Teufel — der Kanal wurde nach einer legendär schlechtgelaunten Müllersfrau benannt, die früher am Ufer wohnte. Das Mühlenrad der Grand-Priory-Mühle dreht sich noch heute, angetrieben vom Wasser des Kanals."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Technisches Detail für alle, die sowas mögen: Das Wasser für die Čertovka wird aus der Vltava über ein System von Wehren und Schleusen abgezweigt, das noch aus dem Mittelalter stammt. Das Wassergefälle ist gering, aber für Mahlzwecke ausreichend. Die Mühle ist seit dem 15. Jahrhundert dokumentiert."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Vom Nordufer der Kampa aus — direkt unter den Bögen der Karlsbrücke — fotografiert man die Brücke von unten. Das ist der Winkel, den Touristen meistens verpassen, weil sie schon oben auf der Brücke stehen."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Bruncvík: der Ritter, den fast niemand sieht"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Auf einem der Brückenpfeiler der Karlsbrücke, auf der Seite zur Kampa-Insel, steht eine kleine Statue auf einem Fels im Wasser: Bruncvík, ein legendärer böhmischer Ritter, der das Wappen von Prag trägt und ein Schwert hält."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Er steht dort seit 1884 — ein Ersatz für eine gotische Statue, die bei einer Überschwemmung weggespült wurde. Das Schwert in seiner Hand ist laut Legende das magische Schwert, mit dem er einmal einen Löwen besiegte. Die andere Version der Legende besagt, das Schwert ist im Pfeiler verborgen und wird im Moment der größten Not Böhmens von allein auftauchen."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Beide Versionen sind unwahrscheinlich. Trotzdem: Wer Bruncvík auf seinem Brückenpfeiler-Felsen übersieht, hat die Karlsbrücke nur halb gesehen."
-      }
-    },
-    {
-      "t": "image",
-      "src": "/images/blog-charles-bridge-statues-sunny-crowded-bridge.jpg",
-      "cap": {
-        "de": "Die Karlsbrücke hat 16 Bögen, 30 Statuen — und einen Ritter auf einem Flussfelsen, den fast niemand bemerkt."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Der Grundstein: ein Datum, das kein Zufall ist"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Der Grundstein der Karlsbrücke wurde am 9. Juli 1357 gelegt. Das klingt unspektakulär — bis man das Datum als Zahl schreibt: 1-3-5-7-9-7-5-3-1. Ein vollständiges Zahlenpalindrom. Und die Uhrzeit? 5:31 Uhr morgens."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Das ist kein Zufall. Kaiser Karl IV. ließ den Termin von Astrologen berechnen, die glaubten, dass Zahlenpalindrome besondere Stabilität verleihen. Die Brücke sollte für die Ewigkeit gebaut sein — und tatsächlich steht sie heute noch, 670 Jahre später, und trägt täglich zehntausende Fußgänger."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die Vorgängerbrücke, die Judithbrücke aus dem 12. Jahrhundert, hatte das nicht so genau genommen und wurde 1342 von einer Flut zerstört. Mag Zufall sein. Oder auch nicht."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Johannes von Nepomuk: das Kreuz im Pflaster"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Auf der Brücke, auf der Nordseite, gibt es eine kleine Bronzeplatte mit einem Kreuz im Pflaster. Das ist die Stelle, von der Johannes von Nepomuk am 20. März 1393 in die Moldau geworfen wurde — auf Befehl von König Wenzel IV."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Johannes war Generalvikar des Erzbistums Prag und weigerte sich angeblich, dem König das Beichtgeheimnis der Königin zu verraten. Die Statue von Johannes auf der Brücke ist die älteste — von 1683, also früher als alle anderen dreißig. An der Plinthe gibt es zwei Bronzereliefs. Beide sind von so vielen Händen berührt worden, dass das Metall hochglänzend poliert ist. Angeblich bringt das Berühren Glück und garantiert die Rückkehr nach Prag."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Ich sage meinen Gästen immer, dass das eine Legende ist. Und dann berühren sie es trotzdem alle."
-      }
-    },
-    {
-      "t": "image",
-      "src": "/images/photo-guests-mala-strana-from-castle.jpeg",
-      "cap": {
-        "de": "Von der Burg aus sieht man, wie sich alles zusammenfügt: Malá Strana, die Brücke, die Moldau — und irgendwo da unten Bruncvík auf seinem Felsen."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Der beste Zeitpunkt"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Früh morgens — vor 8:00 Uhr — ist der Waldsteingarten noch leer, die Brücke gehört fast Ihnen allein, und die Čertovka hat das beste Licht. Der Garten öffnet je nach Saison zwischen 7:30 und 10:00 Uhr."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Abends nach 19:00 Uhr funktioniert auch gut: Die Brücke leert sich, die Lichtstimmung über dem Wasser ist außergewöhnlich, und die Eulen im Waldsteingarten sind aktiver."
-      }
-    },
-    {
-      "t": "image",
-      "src": "/images/guest-photo-night.jpeg",
-      "cap": {
-        "de": "Prag nach Einbruch der Dunkelheit — der Zeitpunkt, auf den es sich zu warten lohnt."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "Die Route"
-      }
-    },
-    {
-      "t": "list",
-      "ordered": true,
-      "items": [
+        "de": ""
+      },
+      "list": [
         {
-          "de": "<strong><a href=\"https://prague.eu/cs/objevujte/valdstejnska-zahrada/\" target=\"_blank\" rel=\"noopener noreferrer\">Waldsteingarten</a></strong> (Valdštejnská 14, Eintritt frei) — Tropfsteinwand, Eulen, Pfau, Kopien der gestohlenen de-Vries-Statuen · <a href=\"https://www.senat.cz/informace/pro_verejnost/valdstejnska_zahrada/\" target=\"_blank\" rel=\"noopener noreferrer\">Senát-Seite</a> · <a href=\"https://www.npu.cz/cs/hrady-a-zamky/tipy-na-vylet/17887-valdstejnska-zahrada\" target=\"_blank\" rel=\"noopener noreferrer\">NPÚ-Eintrag</a>"
+          "de": "Rund 2 km, 1,5 bis 2 Stunden, fast alles eben und kostenlos."
         },
         {
-          "de": "<strong>Čertovka-Kanal &amp; Kampa-Insel</strong> — Mühlenrad, Blick von unten auf die Brückenbögen"
+          "de": "Der Waldstein-Garten ist nur von April bis Oktober offen. Im Winter starten Sie direkt an der Čertovka."
         },
         {
-          "de": "<strong>Bruncvík</strong> — Ritter auf dem Brückenpfeiler-Felsen, Südseite Kampa"
-        },
-        {
-          "de": "<strong><a href=\"https://prague.eu/cs/objevujte/karluv-most/\" target=\"_blank\" rel=\"noopener noreferrer\">Karlsbrücke</a></strong> — Kreuz im Pflaster, Nepomuk-Bronzereliefs berühren, Palindromdatum im Kopf behalten"
+          "de": "Gehen Sie früh am Morgen oder nach 19 Uhr, dann haben Sie die Brücke fast für sich."
         }
       ]
     },
     {
       "t": "p",
       "html": {
-        "de": "Gesamtdistanz: ca. 2 km. Zeit: 1,5 bis 2 Stunden — je nachdem, wie lange man bei den Eulen bleibt. Länger als man plant, meistens."
+        "de": "Ich führe Gäste durch die Kleinseite, seit ich Führungen mache, und finde trotzdem immer noch Dinge, die mich überraschen. Die fünf Stationen unten liegen alle auf einer Linie zwischen Metro Malostranská und der Karlsbrücke. Sie lassen sich gut an einen Vormittag auf der Burg anhängen."
+      }
+    },
+    {
+      "t": "overview",
+      "variant": "rank",
+      "items": [
+        {
+          "href": "#waldstein",
+          "n": "1",
+          "title": {
+            "de": "Tropfsteinwand"
+          },
+          "desc": {
+            "de": "Fratzen im Stein und Uhus in der Voliere."
+          }
+        },
+        {
+          "href": "#certovka",
+          "n": "2",
+          "title": {
+            "de": "Čertovka und Kampa"
+          },
+          "desc": {
+            "de": "Der Teufelsbach, das Mühlrad und die Brücke von unten."
+          }
+        },
+        {
+          "href": "#bruncvik",
+          "n": "3",
+          "title": {
+            "de": "Bruncvík"
+          },
+          "desc": {
+            "de": "Der Ritter auf dem Brückenpfeiler."
+          }
+        },
+        {
+          "href": "#grundstein",
+          "n": "4",
+          "title": {
+            "de": "Das Palindrom"
+          },
+          "desc": {
+            "de": "1-3-5-7-9-7-5-3-1: der Grundstein der Brücke."
+          }
+        },
+        {
+          "href": "#nepomuk",
+          "n": "5",
+          "title": {
+            "de": "Nepomuk"
+          },
+          "desc": {
+            "de": "Das Kreuz an der Brüstung und die glänzenden Reliefs."
+          }
+        }
+      ],
+      "id": "ueberblick",
+      "title": {
+        "de": "Die Route"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">1.</span> Die Tropfsteinwand im Waldstein-Garten"
+      },
+      "id": "waldstein",
+      "sub": {
+        "de": "Eingang Letenská · April bis Oktober · Eintritt frei"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Bewertungen und weitere Tipps zu diesen Orten finden Sie auf <a href=\"https://www.tripadvisor.com/Attractions-g274707-Activities-zfn7246866-Prague_Bohemia.html\" target=\"_blank\" rel=\"noopener noreferrer\">TripAdvisor</a>."
+        "de": "Der Spaziergang beginnt im Waldstein-Garten, den Albrecht von Wallenstein zwischen 1623 und 1630 anlegen ließ. Steuern Sie direkt die lange Grottenwand am Rand an. Sie ist komplett künstlich, aus Stuck und Kalktuff, und genau so gewollt: Barocke Gärten bekamen solche wilden Felswände als Gegensatz zu den geschnittenen Hecken. Wer eine Weile davor stehen bleibt, entdeckt Fratzen, Schlangen und Tierköpfe im Stein."
       }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Nebenan in der Voliere sitzen Uhus, auf dem Kies laufen Pfauen. Und die Bronzestatuen auf dem Parterre sind Kopien: Die Originale von Adriaen de Vries nahmen schwedische Soldaten 1648 als Kriegsbeute mit, sie stehen bis heute bei Schloss Drottningholm. Alles Weitere zum Garten, mit Rundgang und Öffnungszeiten, steht im Artikel <a href=\"/blog/wallenstein-garden-prague\">Der Waldstein-Garten in Prag</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">2.</span> Die Čertovka und die Insel Kampa"
+      },
+      "id": "certovka",
+      "sub": {
+        "de": "10 Minuten zu Fuß vom Garten · frei"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Verlassen Sie den Garten Richtung Fluss und gehen Sie die Cihelná hinunter, aber noch nicht auf die Brücke. Unter den Bögen der Karlsbrücke hindurch kommen Sie auf die Insel Kampa. Der schmale Kanal, der sie von der übrigen Kleinseite trennt, ist die Čertovka, der Teufelsbach. Benannt ist er der Legende nach nach einer zänkischen Müllersfrau, die hier wohnte."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Das Wasser wird seit dem Mittelalter aus der Moldau abgezweigt, und am Großprioratsplatz dreht sich noch heute das Mühlrad der Großpriorats-Mühle. Vom Nordende der Kampa, direkt unter den Brückenbögen, sehen Sie die Karlsbrücke von unten. Diesen Blick verpassen die meisten, weil sie schon oben stehen."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/photo-guests-mala-strana.jpeg",
+      "alt": {
+        "de": "Dächer und Türme der Kleinseite in Prag"
+      },
+      "cap": {
+        "de": "Die Kleinseite zwischen Burgberg und Fluss sieht in vielen Gassen noch aus wie im 18. Jahrhundert."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">3.</span> Bruncvík, der Ritter auf dem Pfeiler"
+      },
+      "id": "bruncvik",
+      "sub": {
+        "de": "Von der Kampa oder vom Brückengeländer aus sichtbar"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Schauen Sie von der Kampa zum Pfeiler der Brücke, der auf der Insel steht. Auf einer Säule darüber steht eine einzelne Figur mit goldenem Schwert und dem Prager Wappen: Bruncvík, ein Ritter aus der böhmischen Sagenwelt. Die heutige Statue stammt von 1884 und ersetzt eine ältere, die bei einem Hochwasser zerstört wurde."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Legende nach besiegte Bruncvík mit einem Zauberschwert einen Drachen und gewann einen Löwen als Begleiter. Das Schwert soll in einem Pfeiler der Brücke eingemauert sein und erst wieder auftauchen, wenn Böhmen in größter Not ist. Ich erzähle das meinen Gästen als Sage, aber wer den Ritter übersieht, hat die Brücke nur halb gesehen."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">4.</span> Der Grundstein: 1-3-5-7-9-7-5-3-1"
+      },
+      "id": "grundstein",
+      "sub": {
+        "de": "Am besten oben auf dem Altstädter Brückenturm erzählt"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gehen Sie jetzt die Treppe von der Kampa hinauf auf die Brücke. Ihren Grundstein legte Karl IV. am 9. Juli 1357. Schreibt man Jahr, Tag und Monat hintereinander und hängt die überlieferte Uhrzeit 5:31 an, ergibt sich 1357 9 7 5:31, eine Zahlenreihe, die vorwärts und rückwärts gleich ist."
+      }
+    },
+    {
+      "t": "h3",
+      "html": {
+        "de": "Warum ausgerechnet dieser Moment?"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Karl IV. glaubte an die Sterne, wie fast alle Herrscher seiner Zeit. Wichtige Bauten begann man nicht an irgendeinem Tag, sondern zu einer Stunde, die Astrologen als günstig berechnet hatten. Der Prager Astronomiehistoriker Zdeněk Horský hat das Datum im 20. Jahrhundert genauer untersucht. Nach seiner Deutung stand die Sonne an diesem Morgen in einer Konstellation mit dem Saturn, die als Zeichen für Dauer und Festigkeit galt. Genau das wünschte man sich für eine Brücke über einen Fluss, der seine Vorgängerin zerstört hatte."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ob die Zahlenreihe selbst Absicht war, wissen wir nicht. Für das Datum gibt es mittelalterliche Quellen, die Uhrzeit 5:31 ist eine spätere Rekonstruktion. Ich erzähle meinen Gästen beides und lasse sie selbst entscheiden, wie viel Zufall sie Karl IV. zutrauen."
+      }
+    },
+    {
+      "t": "h3",
+      "html": {
+        "de": "Die Linie zum Veitsdom"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Deshalb erzähle ich die Geschichte am liebsten oben auf dem Altstädter Brückenturm. Von dort sehen Sie, dass die Brücke nicht genau quer über den Fluss läuft, sondern leicht schräg. Einige Forscher verbinden das mit dem Himmel: Um die Sommersonnenwende geht die Sonne, vom Turm aus gesehen, hinter dem Veitsdom unter, über dem Grab des heiligen Veit. Ob die Baumeister das geplant haben, ist umstritten. Für Karl IV., der den Dom und die Brücke gleichzeitig bauen ließ, wäre es ein passendes Bild gewesen: der Krönungsweg der böhmischen Könige von der Altstadt zur Burg, ausgerichtet auf den Schutzpatron des Landes."
+      }
+    },
+    {
+      "t": "h3",
+      "html": {
+        "de": "Eier im Mörtel?"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die bekannteste Legende zum Bau: Damit der Mörtel besser hält, sollen Dörfer aus ganz Böhmen Eier nach Prag geschickt haben. Die Leute aus Velvary, so erzählt man sich in Prag bis heute, schickten sie vorsichtshalber hart gekocht, damit sie unterwegs nicht zerbrechen. Chemische Untersuchungen des Mörtels haben die Legende bisher weder eindeutig bestätigt noch widerlegt. Sicher ist nur, dass mittelalterliche Baumeister organische Zusätze wie Eier, Milch oder Quark kannten."
+      }
+    },
+    {
+      "t": "h3",
+      "html": {
+        "de": "Gehalten hat es jedenfalls"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Vorgängerin, die Judithbrücke aus dem 12. Jahrhundert, riss ein Hochwasser 1342 fort. Ein paar ihrer Reste stecken bis heute in Kellern der Kleinseite. Den Bau der neuen Brücke übernahm Peter Parler, der junge Baumeister, der gleichzeitig am Veitsdom arbeitete. Fertig war sie erst Anfang des 15. Jahrhunderts, also lange nach Karls Tod."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Seitdem hat sie einiges überstanden. Beim Hochwasser von 1890 stürzten zwei Pfeiler und mehrere Bögen ein, sie wurden innerhalb von zwei Jahren wieder aufgebaut. Beim Jahrhunderthochwasser 2002 stand das Wasser bis knapp unter die Bögen, die Brücke blieb aber stehen. Die hölzernen Eisbrecher vor den Pfeilern, die Sie von der Kampa aus sehen, schützen sie bis heute vor Treibgut und Eis."
+      }
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Grundstein"
+          },
+          "v": {
+            "de": "9. Juli 1357, unter Karl IV."
+          }
+        },
+        {
+          "k": {
+            "de": "Baumeister"
+          },
+          "v": {
+            "de": "Peter Parler"
+          }
+        },
+        {
+          "k": {
+            "de": "Maße"
+          },
+          "v": {
+            "de": "Rund 516 m lang, knapp 10 m breit, 16 Bögen"
+          }
+        },
+        {
+          "k": {
+            "de": "Name"
+          },
+          "v": {
+            "de": "Jahrhundertelang einfach „Steinerne Brücke“ oder „Prager Brücke“, Karlsbrücke erst seit 1870"
+          }
+        },
+        {
+          "k": {
+            "de": "Statuen"
+          },
+          "v": {
+            "de": "Kamen erst ab 1683 dazu, die meisten bis 1714. Davor stand auf der Brücke nur ein Kreuz."
+          }
+        }
+      ],
+      "variant": "v2"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">5.</span> Johannes von Nepomuk: Kreuz und Reliefs"
+      },
+      "id": "nepomuk",
+      "sub": {
+        "de": "Nordseite der Brücke, etwa in der Mitte"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Am 20. März 1393 ließ König Wenzel IV. den Generalvikar Johannes von Nepomuk von der Brücke in die Moldau werfen. Nach der Legende hatte er sich geweigert, das Beichtgeheimnis der Königin preiszugeben. Die Stelle markiert ein kleines Messingkreuz an der Brüstung, zwischen den Statuen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Seine Statue ist die älteste auf der Brücke, aufgestellt 1683. Die beiden Bronzereliefs am Sockel sind von Millionen Händen blank poliert, denn wer sie berührt, soll Glück haben und nach Prag zurückkehren. Ich sage meinen Gästen, dass es eine Legende ist. Berühren tun sie es trotzdem alle."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/blog-charles-bridge-statues-sunny-crowded-bridge.webp",
+      "alt": {
+        "de": "Die Statuen der Karlsbrücke an einem sonnigen Tag mit vielen Besuchern"
+      },
+      "cap": {
+        "de": "Mittags ist die Brücke voll. Für das Nepomuk-Relief kommen Sie besser früh oder spät."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Route und beste Uhrzeit"
+      },
+      "id": "praktisch"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Start"
+          },
+          "v": {
+            "de": "Waldstein-Garten, Eingang Letenská (Metro Malostranská, Linie A)"
+          }
+        },
+        {
+          "k": {
+            "de": "Ziel"
+          },
+          "v": {
+            "de": "Altstädter Brückenturm, Altstadtseite der Karlsbrücke"
+          }
+        },
+        {
+          "k": {
+            "de": "Länge und Zeit"
+          },
+          "v": {
+            "de": "Etwa 2 km, 1,5 bis 2 Stunden mit Pausen"
+          }
+        },
+        {
+          "k": {
+            "de": "Beste Zeit"
+          },
+          "v": {
+            "de": "Ab Gartenöffnung am Vormittag, oder abends ab 19 Uhr ohne den Garten"
+          }
+        },
+        {
+          "k": {
+            "de": "Kosten"
+          },
+          "v": {
+            "de": "Kostenlos, nur der Brückenturm kostet Eintritt"
+          }
+        },
+        {
+          "k": {
+            "de": "Im Winter"
+          },
+          "v": {
+            "de": "Der Garten ist von November bis März zu. Beginnen Sie dann an der Čertovka."
+          }
+        }
+      ],
+      "variant": "v2",
+      "look": {
+        "rule": "ink"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Wer mehr von der Kleinseite sehen möchte, findet weitere Ideen in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">drei geheimen Gärten der Kleinseite</a> und in den <a href=\"/blog/beste-fotospots-prag\">besten Fotospots in Prag</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "Häufige Fragen"
+      },
+      "id": "faq"
+    },
+    {
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Wo genau steht die Bruncvík-Statue?"
+          },
+          "a": {
+            "de": "Auf dem Brückenpfeiler über der Insel Kampa, auf der Südseite der Brücke. Am besten sehen Sie sie von der Kampa aus oder wenn Sie sich auf der Brücke über das Geländer lehnen."
+          }
+        },
+        {
+          "q": {
+            "de": "Welches Nepomuk-Relief bringt Glück?"
+          },
+          "a": {
+            "de": "Die Besucher berühren beide Reliefs am Sockel seiner Statue. Das Kreuz an der Brüstung, das die Stelle seines Sturzes markiert, wird ebenfalls berührt. Ein Wunsch ist dabei erlaubt."
+          }
+        },
+        {
+          "q": {
+            "de": "Ist der Spaziergang mit Kinderwagen machbar?"
+          },
+          "a": {
+            "de": "Größtenteils ja. Nur von der Kampa auf die Brücke führt eine Treppe. Mit Kinderwagen gehen Sie stattdessen über die Mostecká auf die Brücke."
+          }
+        },
+        {
+          "q": {
+            "de": "Ist die Uhrzeit 5:31 belegt?"
+          },
+          "a": {
+            "de": "Das Datum 9. Juli 1357 ja, die genaue Uhrzeit beruht auf späteren Berechnungen und Überlieferungen."
+          }
+        }
+      ],
+      "variant": "v2"
+    },
+    {
+      "t": "cta",
+      "title": {
+        "de": "Diesen Weg mit Zuzana gehen"
+      },
+      "html": {
+        "de": "Auf der Tour durch das versteckte Prag erzähle ich an jeder Station die ganze Geschichte, auf Deutsch und in Ihrem Tempo. Unverbindlich anfragen, auf <a href=\"https://wa.me/420721231933\">WhatsApp schreiben</a>, eine <a href=\"mailto:zuzanamanova@email.cz\">E-Mail senden</a> oder anrufen: <a href=\"tel:+420721231933\">+420 721 231 933</a>"
+      },
+      "button": {
+        "de": "Tour anfragen"
+      },
+      "href": "/book?tour=Verstecktes%20Prag#contact-title"
     }
   ]
 }

@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonical,
       type: 'article',
-      images: post.image ? [{ url: `${BRAND.domain}${post.image}` }] : [],
+      images: post.ogImage || post.image ? [{ url: `${BRAND.domain}${post.ogImage || post.image}` }] : [],
     },
   };
 }
@@ -82,7 +82,8 @@ export default function Page({ params }: Props) {
       url: r.canonical,
       lang: r.lang,
       date: r.post.date,
-      image: r.post.image ? `${BRAND.domain}${r.post.image}` : undefined,
+      dateModified: r.post.updated,
+      image: r.post.ogImage || r.post.image ? `${BRAND.domain}${r.post.ogImage || r.post.image}` : undefined,
       about: r.post.about,
       faqs: (r.post.faq?.[r.lang] ?? r.post.faq?.de)?.map((f) => ({ question: f.q, answer: f.a })),
     });

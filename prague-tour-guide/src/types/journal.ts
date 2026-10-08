@@ -44,15 +44,30 @@ export interface OverviewItem {
   /** 'claims' variant: verdict tone + badge text. */
   verdict?: Verdict;
   verdictLabel?: Localized;
+  /** 'rank' variant: show the note in blue (e.g. "kostenlos"). */
+  tone?: 'blue';
 }
 
 export type Block =
   | { t: 'p'; html: Localized; lead?: boolean }
   /** `id` = optional in-page anchor (e.g. 'praktisch'); otherwise heading-N is assigned.
    *  `sub` = optional grey subline under the heading. */
-  | { t: 'h2'; html: Localized; id?: string; sub?: Localized }
+  | {
+      t: 'h2';
+      html: Localized;
+      id?: string;
+      sub?: Localized;
+      /** Serif section heading opening a chapter (layout 'v2'); numbers as <span class="j-num">1.</span>. */
+      section?: boolean;
+      /** Section only: free-entry badge before the subline — true "Kostenlos", false "Eintritt". */
+      free?: boolean;
+      /** Section only: space above in px (default 48). */
+      pad?: number;
+    }
+  | { t: 'h3'; html: Localized }
   | { t: 'quote'; html: Localized; by?: string }
-  | { t: 'callout'; label?: Localized; html: Localized; list?: Localized[] }
+  /** Default = blue "Das Wichtigste in Kürze" box · 'tip' = paper box with a burgundy label ("Mein Tipp"). */
+  | { t: 'callout'; label?: Localized; html: Localized; list?: Localized[]; variant?: 'tip' }
   | {
       t: 'image';
       src: string;
@@ -72,23 +87,47 @@ export type Block =
   | { t: 'list'; ordered?: boolean; items: Localized[] }
   /** Key/value rows (e.g. Anfahrt, Eintritt); values may contain links. Header row
    *  only when `title` is set. 'schedule' = time plan (narrow time column, ink rule). */
-  | { t: 'facts'; title?: Localized; items: { k: Localized; v: Localized }[]; variant?: 'schedule' }
+  | {
+      t: 'facts';
+      title?: Localized;
+      items: { k: Localized; v: Localized }[];
+      /** 'schedule' = time plan · 'v2' = facelift rows (10rem label column). */
+      variant?: 'schedule' | 'v2';
+      /** v2 only: label width (default '10rem'), row padding px (10), margin (CSS), 'ink' = 2px dark top rule. */
+      look?: { key?: string; pad?: number; margin?: string; rule?: 'ink' };
+      /** Small grey line under the rows. */
+      note?: Localized;
+    }
   /** Questions and answers; also emitted as FAQPage structured data. */
-  | { t: 'faq'; items: { q: Localized; a: Localized }[] }
+  /** 'v2' = facelift look (light top rule, sans answers). */
+  | { t: 'faq'; items: { q: Localized; a: Localized }[]; variant?: 'v2' }
   /** Numbered chapter head: label row ('Ort 1' · meta) over a serif H2. */
   | { t: 'chapter'; id?: string; label: Localized; meta?: Localized; html: Localized }
   /** Legend / claim box with a verdict badge. */
   | { t: 'factcheck'; label?: Localized; verdict: Verdict; verdictLabel: Localized; claim: Localized; html: Localized }
-  /** Linked overview list. 'index' = numbered places · 'claims' = claims + verdict badges. */
-  | { t: 'overview'; variant: 'index' | 'claims'; id?: string; title?: Localized; intro?: Localized; items: OverviewItem[] }
+  /** Legend box of the facelift handoff; verdict text (Falsch / Plausibel / Roman / Stimmt / Sage)
+   *  sets the colour. First <p> of `html` is the claim. Rendered like `factcheck`. */
+  | { t: 'myth'; verdict: string; html: Localized; label?: Localized }
+  /** Linked overview list. 'index' = numbered places · 'claims' = claims + verdict badges ·
+   *  'toc' = name + description, no number · 'rank' = number · name · short note on the right. */
+  | { t: 'overview'; variant: 'index' | 'claims' | 'toc' | 'rank'; id?: string; title?: Localized; intro?: Localized; items: OverviewItem[] }
+  /** Two (or more) portrait photos side by side with one caption. `pos` = object-position. */
+  | { t: 'gallery'; images: { src: string; alt?: Localized; pos?: string }[]; cap?: Localized; credit?: string }
+  /** Booking call to action inside the article (the closing one, or one in between). */
+  | { t: 'cta'; title: Localized; html: Localized; button: Localized; href?: string; /** 2em above instead of 2.4em */ tight?: boolean }
+  /** "Weiterlesen": a titled list of links. */
+  | { t: 'links'; title?: Localized; items: { href: string; text: Localized }[] }
   | {
       t: 'map';
+      /** Embedded map page (iframe), e.g. '/maps/sehenswuerdigkeiten-prag.html'. Without it, `points` draw a map. */
+      src?: string;
       title?: Localized;
       mode?: 'illustrated' | 'embed';
       route?: boolean;
       list?: boolean;
       caption?: Localized;
       embedUrl?: string;
+      /** Empty for an embedded map page (`src`). */
       points: MapPoint[];
     }
   | { t: 'ornament' };
@@ -105,10 +144,24 @@ export interface JournalArticle {
   /** Languages this article publishes. ['de'] = German-only, ['de','en'] = bilingual. */
   languages: Lang[];
   status: ArticleStatus;
-  /** ISO date (YYYY-MM-DD) — used for sorting and <time>. */
+  /** 'v2' = facelift template (design_handoff_blog_facelift): serif section headings,
+   *  closing CTA and "Weiterlesen" as blocks, no author footer or related grid. */
+  layout?: 'v2';
+  /** ISO date (YYYY-MM-DD) of first publication — used for sorting and <time>. */
   date: string;
   /** Human display date per language, e.g. { de: 'Mai 2026', en: 'May 2026' }. */
   dateDisplay?: { de?: string; en?: string };
+  /** Show the date as "Veröffentlicht am …" (pages without an update). */
+  datePrefix?: boolean;
+  /** ISO date of the last substantial update → update badge, dateModified, sitemap lastmod. */
+  updated?: string;
+  /** e.g. { de: 'Aktualisiert am 7. Oktober 2026' }. */
+  updatedDisplay?: { de?: string; en?: string };
+  /** Old URLs that 301 to this article (netlify.toml). */
+  redirectFrom?: string[];
+  /** Pages only (content/pages): site path outside /blog and its canonical URL. */
+  path?: string;
+  canonical?: string;
   category?: string;
   /** Line above the title (e.g. 'Prager Geschichte'). Defaults to the category. */
   kicker?: Localized;
@@ -123,6 +176,11 @@ export interface JournalArticle {
   heroCap?: Localized;
   /** Hero photo credit, e.g. 'Unsplash+' → "Bild: Unsplash+". */
   heroCredit?: string;
+  heroAlt?: Localized;
+  /** Hero crop: object-position and max height in px (default 'center 30%', 620). */
+  heroLook?: { pos?: string; maxH?: number };
+  /** Floating contact card / chip / mobile bar and the mobile inline card. */
+  floatingCta?: boolean;
   /** Title — HTML allowed (an <em> renders the burgundy-italic accent word). */
   title: Localized;
   /** Teaser — card blurb, and the dek + meta description unless set below. */
@@ -144,5 +202,7 @@ export interface JournalArticle {
   supersedes?: string;
   /** Source list (HTML allowed, one entry per item), shown after the closing CTA. */
   sources?: Localized[];
+  /** Heading of the source list (default "Quellen"). */
+  sourcesTitle?: Localized;
   blocks: Block[];
 }

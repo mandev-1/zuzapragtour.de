@@ -11,6 +11,7 @@ import { blogPosts } from '../../src/utils/blogData';
 import { tours } from '../../src/data/tours';
 import { translate } from '../../src/utils/translations';
 import { postText } from '../../src/utils/postText';
+import { journalPages } from '../../src/utils/journalGenerated';
 import { BRAND } from '../../src/brand';
 
 export const dynamic = 'force-static';
@@ -31,6 +32,11 @@ export function GET() {
   const tourLines = tours.map((tour) => {
     const duration = text(tour.durationKey);
     return `- [${label(text(tour.titleKey))}](${url(`/tours/${tour.slugDe}`)})${duration ? `: ${duration}, privat` : ''}`;
+  });
+
+  const pageLines = journalPages.map((page) => {
+    const excerpt = text(page.excerptKey, postText);
+    return `- [${label(text(page.titleKey, postText))}](${url(page.path ?? '/')})${excerpt ? `: ${excerpt}` : ''}`;
   });
 
   const articleLines = blogPosts
@@ -60,6 +66,10 @@ ${tourLines.join('\n')}
 - [Kontakt](${url('/contact')}): Telefon, WhatsApp und E-Mail
 - [WhatsApp](https://wa.me/${BRAND.phoneRaw.replace(/\D/g, '')}): direkt schreiben
 - [Über Zuzana Manová](${url('/zuzana-manova')}): Werdegang, Zertifizierungen, Arbeitsweise
+
+## Prag planen
+
+${pageLines.join('\n')}
 
 ## Journal
 

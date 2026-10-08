@@ -248,6 +248,8 @@ export function getTourPageSchema(tour: TourPageSchemaInput) {
 }
 
 export interface ArticleSchemaInput {
+  /** ISO date of the last substantial update. */
+  dateModified?: string;
   headline:    string;
   description: string;
   url:         string;
@@ -268,6 +270,7 @@ export function getArticleSchema(a: ArticleSchemaInput) {
       description:   a.description,
       inLanguage:    a.lang,
       datePublished: a.date,
+      ...(a.dateModified ? { dateModified: a.dateModified } : {}),
       url:           a.url,
       mainEntityOfPage: a.url,
       ...(a.image ? { image: a.image } : {}),

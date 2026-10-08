@@ -274,6 +274,7 @@ export const config: Config = {
   path: "/*",
   excludedPath: [
     "/api/*",
+    "/maps/*",
     "/static/*",
     "/images/*",
     "/stitch-exports/*",

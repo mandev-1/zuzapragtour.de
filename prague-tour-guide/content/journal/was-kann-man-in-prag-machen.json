@@ -3,273 +3,676 @@
   "languages": [
     "de"
   ],
-  "status": "draft",
+  "status": "published",
+  "layout": "v2",
   "date": "2026-04-26",
   "dateDisplay": {
     "de": "26. April 2026"
   },
-  "category": "Reiseführer",
+  "updated": "2026-10-08",
+  "updatedDisplay": {
+    "de": "Aktualisiert am 7. Oktober 2026"
+  },
+  "category": "Reiseplanung",
+  "kicker": {
+    "de": "Prag planen"
+  },
   "readTime": {
-    "de": ""
+    "de": "11 Min."
   },
   "hero": "/images/old-town-square.jpg",
+  "heroAlt": {
+    "de": "Der Altstädter Ring in Prag mit der Teynkirche"
+  },
+  "heroLook": {
+    "pos": "center 45%",
+    "maxH": 620
+  },
+  "heroCap": {
+    "de": "Der Altstädter Ring mit der Teynkirche."
+  },
+  "heroCredit": "Zuza Prague Tours",
   "title": {
-    "de": "Was kann man in Prag machen? Aktivitäten"
+    "de": "Was kann man in Prag machen? Zwölf Dinge, die sich wirklich lohnen"
   },
   "excerpt": {
-    "de": "Die besten Orte und Aktivitäten in Prag — von der Burg bis zur Moldau, von der tschechischen Bierkultur bis zu den Vierteln, die die meisten Touristen nie finden."
+    "de": "Was kann man in Prag machen? Burg, Karlsbrücke, Josefov, Vyšehrad, Letná, Bier und Jazz: zwölf Dinge mit Uhrzeit, Preis und ehrlichem Urteil einer Prager Stadtführerin."
+  },
+  "dek": {
+    "de": "„Was muss man hier unbedingt gesehen haben?“ höre ich fast von jeder Gruppe, noch bevor wir losgehen. Hier ist meine Antwort: zwölf Dinge, jeweils mit der besten Uhrzeit, dem ungefähren Preis und dem, was ich Gästen dazu sage."
+  },
+  "seoTitle": {
+    "de": "Was kann man in Prag machen? 12 Dinge, die sich lohnen"
+  },
+  "seoDescription": {
+    "de": "Was kann man in Prag machen? Burg, Karlsbrücke, Josefov, Vyšehrad, Letná, Bier und Jazz: zwölf Dinge mit Uhrzeit, Preis und ehrlichem Urteil einer Prager Stadtführerin."
   },
   "tags": {
     "de": [
       "was kann man in Prag machen",
       "Prag Sehenswürdigkeiten",
-      "beste Orte Prag",
       "Prag Aktivitäten",
       "Prag Tipps",
-      "Prag Highlights",
-      "was tun in Prag",
-      "Prag Urlaub",
-      "Prag besuchen",
-      "Prag Ausflug",
-      "Prag Stadtführung",
-      "Prag Geheimtipps",
-      "Sehenswürdigkeiten Prag Altstadt"
-    ],
-    "en": []
+      "Prag kostenlos",
+      "Prag drei Tage",
+      "Golem Prag"
+    ]
   },
   "author": "Ing. Zuzana Manová",
-  "ogImage": "/images/best-tourguide-prag-thumbnail-early-2026.png",
+  "ogImage": "/images/old-town-square.jpg",
+  "floatingCta": true,
+  "sourcesTitle": {
+    "de": "Offizielle Seiten für aktuelle Angaben"
+  },
+  "sources": [
+    {
+      "de": "Prager Burg: <a href=\"https://www.hrad.cz/en\">Öffnungszeiten und Tickets</a>"
+    },
+    {
+      "de": "Jüdisches Museum Prag: <a href=\"https://www.jewishmuseum.cz/en/\">Synagogen und Friedhof</a>"
+    },
+    {
+      "de": "Prague City Tourism: <a href=\"https://prague.eu\">prague.eu</a> (Türme, Rathaus, Petřín)"
+    }
+  ],
   "blocks": [
     {
-      "t": "p",
-      "lead": true,
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
       "html": {
-        "de": "Ich führe seit Jahren Menschen durch Prag — Paare, Familien, Alleinreisende, Gruppen. Die Frage, die ich am häufigsten höre, noch bevor wir losgehen: „Was muss man hier unbedingt gesehen haben?\" Diese Antwort ist lang. Hier ist sie."
-      }
-    },
-    {
-      "t": "h2",
-      "html": {
-        "de": "1. Pražský hrad — die Burg"
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Die Prager Burg ist die größte zusammenhängende Burganlage der Welt. Das merkt man, wenn man sie betritt: Sie ist keine einzelne Sehenswürdigkeit, sondern eine Stadt in der Stadt — mit einem Dom, mehreren Palästen, einer Gasse, einem Weinberg und einer Wachablösung täglich um 12:00 Uhr am Haupttor."
-      }
-    },
-    {
-      "t": "list",
-      "items": [
+        "de": ""
+      },
+      "list": [
         {
-          "de": "Den <strong>Veitsdom</strong> von innen — besonders die Mucha-Fenster im Morgenlicht."
+          "de": "Für Burg, Karlsbrücke, Altstadt und Josefov brauchen Sie realistisch zwei volle Tage. Alles andere auf der Liste ist für Tag drei und danach."
         },
         {
-          "de": "Den <strong>Alten Königspalast</strong> mit dem Wladislawsaal, in dem früher Pferdeturniere stattfanden."
+          "de": "Die Karlsbrücke vor 8 Uhr morgens oder nach 19 Uhr. Dazwischen ist sie ein Gedränge."
         },
         {
-          "de": "Das <strong>Zlatá ulička</strong> — bunte Häuschen, in denen Kafka schrieb und Burgwächter wohnten."
+          "de": "Vyšehrad, Letná und der Petřín kosten fast nichts, und dort sind kaum Reisegruppen."
         }
       ]
     },
     {
       "t": "p",
       "html": {
-        "de": "Kombiticket B reicht für die meisten Besucher (250 CZK). Den Burgbereich selbst zu betreten ist kostenlos."
+        "de": "Ich führe seit Jahren Paare, Familien, Alleinreisende und Gruppen durch Prag. Die Liste unten ist keine Rangliste der bekanntesten Sehenswürdigkeiten, sondern das, was ich meinen Gästen tatsächlich empfehle, in der Reihenfolge, in der es für die meisten Sinn ergibt. Die ersten fünf Punkte liegen alle im Zentrum und lassen sich zu Fuß verbinden."
+      }
+    },
+    {
+      "t": "overview",
+      "variant": "rank",
+      "items": [
+        {
+          "href": "#burg",
+          "n": "1",
+          "title": {
+            "de": "Prager Burg"
+          },
+          "desc": {
+            "de": "halber Tag"
+          }
+        },
+        {
+          "href": "#karlsbruecke",
+          "n": "2",
+          "title": {
+            "de": "Karlsbrücke zur richtigen Zeit"
+          },
+          "desc": {
+            "de": "30 Min."
+          }
+        },
+        {
+          "href": "#altstadt",
+          "n": "3",
+          "title": {
+            "de": "Altstädter Ring und Orloj"
+          },
+          "desc": {
+            "de": "1 Std."
+          }
+        },
+        {
+          "href": "#josefov",
+          "n": "4",
+          "title": {
+            "de": "Josefov, das Jüdische Viertel"
+          },
+          "desc": {
+            "de": "2–3 Std."
+          }
+        },
+        {
+          "href": "#kleinseite",
+          "n": "5",
+          "title": {
+            "de": "Kleinseite und Kampa"
+          },
+          "desc": {
+            "de": "2 Std."
+          }
+        },
+        {
+          "href": "#vysehrad",
+          "n": "6",
+          "title": {
+            "de": "Vyšehrad"
+          },
+          "desc": {
+            "de": "2 Std."
+          }
+        },
+        {
+          "href": "#boot",
+          "n": "7",
+          "title": {
+            "de": "Auf der Moldau"
+          },
+          "desc": {
+            "de": "1 Std."
+          }
+        },
+        {
+          "href": "#letna",
+          "n": "8",
+          "title": {
+            "de": "Letná-Park und Biergarten"
+          },
+          "desc": {
+            "de": "Abend"
+          }
+        },
+        {
+          "href": "#essen",
+          "n": "9",
+          "title": {
+            "de": "Tschechisch essen, Bier vom Fass"
+          },
+          "desc": {
+            "de": "täglich"
+          }
+        },
+        {
+          "href": "#petrin",
+          "n": "10",
+          "title": {
+            "de": "Petřín-Hügel"
+          },
+          "desc": {
+            "de": "1–2 Std."
+          }
+        },
+        {
+          "href": "#jazz",
+          "n": "11",
+          "title": {
+            "de": "Jazz und Konzerte"
+          },
+          "desc": {
+            "de": "Abend"
+          }
+        },
+        {
+          "href": "#einkaufen",
+          "n": "12",
+          "title": {
+            "de": "Was sich beim Einkaufen lohnt"
+          },
+          "desc": {
+            "de": "–"
+          }
+        }
+      ],
+      "id": "ueberblick",
+      "title": {
+        "de": "Die zwölf Punkte im Überblick"
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "2. Karlsbrücke — zur richtigen Zeit"
+        "de": "<span class=\"j-num\">1.</span> Die Prager Burg"
+      },
+      "id": "burg",
+      "sub": {
+        "de": "Beste Zeit: ab 9 Uhr · Areal frei, Rundgang B 250 CZK"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Die Karlsbrücke braucht keine Einleitung. Aber sie braucht das richtige Timing. Vor 8:00 Uhr morgens oder nach 19:00 Uhr abends ist sie eine andere Brücke — ruhig, ohne Gedränge, mit Blick auf eine Stadt, die noch nicht ganz wach ist."
+        "de": "Die Prager Burg gilt als größte zusammenhängende Burganlage der Welt, und das merken Sie, sobald Sie durch das Tor gehen. Sie ist keine einzelne Sehenswürdigkeit, sondern eine Stadt in der Stadt, mit Dom, mehreren Palästen, einer Gasse, einem Weinberg und der Wachablösung täglich um 12 Uhr am Haupttor."
       }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Den <strong>Veitsdom</strong> von innen, besonders das Mucha-Fenster im Morgenlicht."
+        },
+        {
+          "de": "Den <strong>Alten Königspalast</strong> mit dem Wladislawsaal, in dem früher Ritterturniere stattfanden."
+        },
+        {
+          "de": "Das <strong>Goldene Gässchen</strong>: bunte Häuschen, in denen Burgwächter wohnten und Kafka eine Zeit lang schrieb."
+        }
+      ]
     },
     {
       "t": "p",
       "html": {
-        "de": "Wer 130 CZK übrig hat: Der Altstädter Brückenturm gibt den Blick von oben auf alle 30 Barockstatuen und den Burgberg dahinter. Einer der schönsten Aussichtspunkte der Stadt, und kaum jemand geht hinauf."
+        "de": "Das Burgareal selbst betreten Sie kostenlos, für die Innenräume genügt den meisten Besuchern Rundgang B. Wie Sie die Burg ohne Gedränge schaffen, steht im <a href=\"/blog/prager-burg-vollstaendiger-besucher-guide\">Besucher-Guide zur Prager Burg</a>. Mein Tipp: mit der Tram hinauf und über das <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster</a> anfangen, dann geht es den ganzen Tag bergab."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "3. Staroměstské náměstí — der Altstädter Ring"
+        "de": "<span class=\"j-num\">2.</span> Die Karlsbrücke zur richtigen Zeit"
+      },
+      "id": "karlsbruecke",
+      "sub": {
+        "de": "Beste Zeit: vor 8 oder nach 19 Uhr · Brücke frei, Brückenturm 130 CZK"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Stündlich von 9:00 bis 23:00 Uhr schlägt die Orloj. Ein Skelett läutet, zwölf Apostel drehen sich, ein Hahn kräht. 45 Sekunden, dann Applaus. Man kann es kitschig finden — aber ich habe noch keine Gruppe gehabt, die nicht hingeschaut hat."
+        "de": "Die Karlsbrücke braucht keine Einleitung, aber das richtige Timing. Vor 8 Uhr morgens oder nach 19 Uhr abends ist sie eine andere Brücke: ruhig, mit Blick auf eine Stadt, die noch nicht ganz wach ist oder schon zur Ruhe kommt."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Der Platz selbst ist architektonisch ungewöhnlich: gotische Kirche, barocke Kuppeln, Renaissance-Giebel — alles nebeneinander. Der Rathausturm (250 CZK) gibt den besten Überblick. Die Restaurants direkt am Platz mit englischer Karte sind eine Touristenfalle — 50 Meter in die Dlouhá, und das Preis-Leistungs-Verhältnis verdoppelt sich."
+        "de": "Steigen Sie auf den <strong>Altstädter Brückenturm</strong>. Von oben sehen Sie die ganze Reihe der Barockstatuen und dahinter den Burgberg. Es ist einer der schönsten Aussichtspunkte der Stadt, und kaum jemand geht hinauf. Welche Stellen sich für Fotos lohnen, habe ich in den <a href=\"/blog/beste-fotospots-prag\">besten Fotospots in Prag</a> gesammelt."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "4. Josefov — das jüdische Viertel"
+        "de": "<span class=\"j-num\">3.</span> Der Altstädter Ring und die Orloj"
+      },
+      "id": "altstadt",
+      "sub": {
+        "de": "Beste Zeit: zur vollen Stunde, 9 bis 23 Uhr · Platz frei, Rathausturm 250 CZK"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Das ehemalige jüdische Ghetto wurde Ende des 19. Jahrhunderts fast vollständig abgerissen. Was übrig blieb: sechs Synagogen, der Alte Jüdische Friedhof und das Alte Rathaus mit der rückwärts laufenden Uhr."
+        "de": "Zu jeder vollen Stunde von 9 bis 23 Uhr setzt sich die astronomische Uhr in Bewegung: Der Tod läutet, die zwölf Apostel ziehen an den Fenstern vorbei, ein Hahn kräht. Nach 45 Sekunden gibt es Applaus. Man kann das kitschig finden, aber ich habe noch keine Gruppe erlebt, die nicht hingeschaut hat."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Der Alte Jüdische Friedhof ist einer der ältesten erhaltenen jüdischen Friedhöfe Europas — Gräber übereinander, weil der Platz nie reichte. Eintritt über das Jüdische Museum Prag, Kombiticket ab 350 CZK."
+        "de": "Der Platz selbst ist architektonisch ungewöhnlich: gotische Teynkirche, barocke Kuppeln, Renaissance-Giebel, alles nebeneinander. Den besten Überblick haben Sie vom Rathausturm. Die Restaurants direkt am Platz mit Speisekarten in fünf Sprachen meide ich. Gehen Sie 50 Meter weiter in die Dlouhá, dort zahlen Sie für das gleiche Essen deutlich weniger."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "5. Malá Strana &amp; Kampa-Insel"
+        "de": "<span class=\"j-num\">4.</span> Josefov, das Jüdische Viertel"
+      },
+      "id": "josefov",
+      "sub": {
+        "de": "Beste Zeit: Vormittag, samstags geschlossen · Kombiticket ab 350 CZK"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Malá Strana liegt zwischen der Karlsbrücke und dem Burgberg — ein Viertel aus Barockpalais, Weinbergen und Gassen, in denen die Zeit etwas langsamer läuft als im Rest der Stadt."
+        "de": "Das ehemalige Ghetto wurde Ende des 19. Jahrhunderts fast vollständig abgerissen. Erhalten blieben sechs Synagogen, der Alte Jüdische Friedhof und das Jüdische Rathaus mit der Uhr, deren Zeiger rückwärts laufen."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Die Kampa-Insel ist mein persönlicher Lieblingsort in Prag. Ein kleiner Park direkt am Wasser, Blick auf die Brückenbögen, fast keine Touristenläden. Die John-Lennon-Mauer zwei Minuten entfernt — entstanden nach Lennons Tod 1980, immer wieder übermalt, immer wieder neu beschrieben."
+        "de": "Der Alte Jüdische Friedhof gehört zu den ältesten erhaltenen jüdischen Friedhöfen Europas. Die Gräber liegen in mehreren Schichten übereinander, weil der Platz nie reichte. Den Eintritt bekommen Sie über das Jüdische Museum. Am Samstag und an jüdischen Feiertagen ist alles geschlossen, das überrascht viele Gäste."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Gegenüber dem Jüdischen Rathaus steht die <strong>Altneusynagoge</strong> aus dem 13. Jahrhundert, die älteste noch genutzte Synagoge Europas. Mit ihr ist die bekannteste Prager Sage verbunden. Rabbi Judah Löw ben Bezalel, der hier im 16. Jahrhundert lehrte, soll aus Lehm von der Moldau einen <strong>Golem</strong> geformt haben, eine stumme Gestalt, die das Ghetto vor Übergriffen schützen sollte. Zum Leben erweckte er ihn mit einem Zettel, auf dem der Gottesname stand und den er ihm in den Mund legte. Freitags vor dem Sabbat nahm er ihn wieder heraus. Als er es einmal vergaß, wurde der Golem wild, und der Rabbi musste ihn für immer stilllegen. Die Überreste soll er auf den Dachboden der Altneusynagoge gebracht haben. Die Treppe hinauf beginnt außen an der Wand erst in einigen Metern Höhe, und der Dachboden ist für Besucher nicht zugänglich. Das hat der Legende eher geholfen."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Historisch belegt ist Rabbi Löw, nicht der Golem: Die Sage wurde erst im 19. Jahrhundert mit ihm verbunden. Sein Grab auf dem Alten Jüdischen Friedhof besuchen Sie mit dem Ticket des Jüdischen Museums. Auf den Grabstein legen Besucher kleine Steine und Zettel mit Wünschen. Mehr dazu im Artikel über das <a href=\"/blog/jewish-quarter-history-and-heritage\">Jüdische Viertel</a>."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/blog-jewish-quarter-min.jpg",
+      "alt": {
+        "de": "Gassen im Jüdischen Viertel in Prag"
+      },
+      "cap": {
+        "de": "Josefov: Ohne Erklärung bleiben viele Gebäude hier nur schöne Fassaden."
+      },
+      "credit": "Zuza Prague Tours",
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "<span class=\"j-num\">5.</span> Die Kleinseite und die Insel Kampa"
+      },
+      "id": "kleinseite",
+      "sub": {
+        "de": "Beste Zeit: Nachmittag · frei"
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Kleinseite (Malá Strana) liegt zwischen Karlsbrücke und Burgberg, ein Viertel aus Barockpalästen, Gärten und Gassen, in denen die Zeit etwas langsamer läuft als im Rest der Stadt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Insel Kampa ist mein persönlicher Lieblingsort in Prag: ein kleiner Park direkt am Wasser, mit Blick auf die Brückenbögen und fast ohne Souvenirläden. Zwei Minuten entfernt liegt die John-Lennon-Mauer, entstanden nach Lennons Tod 1980, immer wieder übermalt und neu beschrieben. Wer Ruhe sucht, findet sie in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und im <a href=\"/blog/wallenstein-garden-prague\">Waldstein-Garten</a>."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "6. Vyšehrad"
+        "de": "<span class=\"j-num\">6.</span> Vyšehrad"
+      },
+      "id": "vysehrad",
+      "sub": {
+        "de": "Beste Zeit: später Nachmittag · Areal frei · Metro C bis Vyšehrad"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Vyšehrad ist die ältere Burg — älter als die Prager Burg, wenn man der Legende glaubt. Heute ist sie eine Festungsanlage auf einem Felsen über der Vltava, mit einem Nationalfriedhof, in dem Dvořák, Smetana und Mucha begraben sind."
+        "de": "Vyšehrad ist laut Legende die ältere der beiden Burgen, der Ort, an dem Fürstin Libuše die Gründung Prags vorhersagte. Heute ist es eine Festung auf einem Felsen über der Moldau, mit dem Nationalfriedhof, auf dem Dvořák, Smetana und Mucha begraben sind."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Warum ich Vyšehrad empfehle: keine Reisebusse, keine Souvenirläden in Sichtweite, und der Blick von den Klippen auf den Fluss ist einer der besten der Stadt — kostenlos."
+        "de": "Ich empfehle Vyšehrad, weil hier keine Reisebusse halten und keine Souvenirläden in Sichtweite sind. Der Blick von den Festungsmauern auf den Fluss ist einer der besten der Stadt, und er kostet nichts."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "7. Bootsfahrt auf der Moldau"
+        "de": "<span class=\"j-num\">7.</span> Auf der Moldau"
+      },
+      "id": "boot",
+      "sub": {
+        "de": "Beste Zeit: Abend · Rundfahrten ab etwa 500 CZK, Tretboote günstiger"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Prag vom Wasser aus ist ein anderes Prag. Die Karlsbrücke von unten, die Burgsilhouette, die Weinberge am Ufer. Optionen: geführte Abendfahrten ab ca. 500 CZK, Tretboote und Ruderboote zum Selbstfahren am Slovanský ostrov, oder Kajak für sportlichere Gäste."
+        "de": "Vom Wasser aus sehen Sie ein anderes Prag: die Karlsbrücke von unten, die Silhouette der Burg, die Gärten am Ufer. Es gibt geführte Abendfahrten, Tret- und Ruderboote zum Selbstfahren an der Slawischen Insel und Kajaks für Sportlichere."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Das Ruderboot für alle, die lieber selbst bestimmen, wo sie hinfahren: wenig Geld, kein Voranmelden, und man kommt an Stellen, die kein Ausflugsboot anfährt."
+        "de": "Das Ruderboot ist mein Tipp für alle, die selbst bestimmen wollen, wohin es geht: wenig Geld, keine Reservierung, und Sie kommen an Stellen, die kein Ausflugsboot anfährt. Welche Fahrten sich lohnen, steht im Artikel über <a href=\"/blog/boat-tours-prague-vltava\">Bootsfahrten auf der Moldau</a>."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "8. Letná-Park"
+        "de": "<span class=\"j-num\">8.</span> Letná-Park und Biergarten"
+      },
+      "id": "letna",
+      "sub": {
+        "de": "Beste Zeit: Sonnenuntergang, April bis Oktober · frei"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Letná liegt auf einem Hügel nördlich der Altstadt. Am Ende des Parks öffnet sich das beste kostenlose Stadtpanorama: alle Brücken, die Altstadt, die Burg. Der Biergarten darunter — Pilsner Urquell vom Fass, entspannteste Atmosphäre der Stadt, kein Eintritt, kein Reservieren."
+        "de": "Letná liegt auf einem Hügel nördlich der Altstadt. Am Rand des Parks öffnet sich das beste kostenlose Panorama der Stadt: alle Brücken hintereinander, die Altstadt, die Burg. Der Biergarten daneben schenkt Bier vom Fass aus, ohne Eintritt und ohne Reservierung, und hat die entspannteste Stimmung der Stadt."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "9. Tschechisches Essen &amp; Bier"
+        "de": "<span class=\"j-num\">9.</span> Tschechisch essen, Bier vom Fass"
+      },
+      "id": "essen",
+      "sub": {
+        "de": "Beste Zeit: Mittagsmenü unter der Woche · Bier ab etwa 60 CZK"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Tschechien hat pro Kopf den höchsten Bierkonsum der Welt. Das liegt am Bier. Pilsner Urquell, Kozel, Bernard — alle besser vom Fass, in einem echten Prager Lokal (Pivnice), nicht im Touristenrestaurant am Platz."
+        "de": "Tschechien hat seit Jahren den höchsten Bierkonsum pro Kopf weltweit. Pilsner Urquell, Kozel, Bernard: Alle schmecken vom Fass in einer echten Prager Kneipe (hospoda oder pivnice) besser als im Touristenrestaurant am Platz."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Empfehlenswert ohne Touristenaufschlag: Lokál Dlouhá (Dlouhá 33), U Medvídků (Na Perštýně 7), Pivovarský dům (Ječná 15)."
-      }
-    },
-    {
-      "t": "p",
-      "html": {
-        "de": "Beim Essen: <em>Svíčková na smetaně</em> ist das tschechische Nationalgericht — Rinderfilet in Rahmsauce mit Knödeln. Den Trdelník am Touristenstand können Sie stehenlassen: es ist keine tschechische Tradition, sondern ein importiertes Touristenprodukt aus den letzten Jahren."
+        "de": "Ohne Touristenaufschlag essen Sie im Lokál Dlouhá (Dlouhá 33), bei U Medvídků (Na Perštýně 7) und im Pivovarský dům (Ječná 15). Probieren Sie <em>Svíčková na smetaně</em>, Rinderbraten in Rahmsoße mit Knödeln, das bekannteste tschechische Gericht. Den Trdelník vom Stand können Sie auslassen: Er ist keine tschechische Tradition, sondern erst in den letzten Jahren für Touristen aufgekommen. Mehr Adressen im <a href=\"/blog/prag-kulinarik-guide\">Kulinarik-Guide</a>."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "10. Petřín-Hügel"
+        "de": "<span class=\"j-num\">10.</span> Der Petřín-Hügel"
+      },
+      "id": "petrin",
+      "sub": {
+        "de": "Beste Zeit: Frühling zur Obstblüte · Aussichtsturm 150 CZK, Standseilbahn mit Fahrschein"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Petřín ist der bewaldete Hügel zwischen Malá Strana und dem Burgberg. Oben: ein Aussichtsturm, gebaut 1891 als kleinere Version des Eiffelturms (150 CZK, 299 Stufen oder Aufzug). Die Standseilbahn hinauf kostet eine normale Fahrkarte (30 CZK) und fährt alle 15 Minuten."
+        "de": "Der Petřín ist der bewaldete Hügel über der Kleinseite. Oben steht ein Aussichtsturm, 1891 als kleiner Bruder des Eiffelturms gebaut, mit 299 Stufen oder einem Aufzug. Die Standseilbahn hinauf fährt mit einem normalen Fahrschein. Im April und Mai blühen an den Hängen die Obstbäume, dazu mehr im Artikel über <a href=\"/blog/prag-im-fruehling\">Prag im Frühling</a>."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "11. Jazz, Konzerte, Nachtleben"
+        "de": "<span class=\"j-num\">11.</span> Jazz, Konzerte und Abende"
+      },
+      "id": "jazz",
+      "sub": {
+        "de": "Beste Zeit: ab 21 Uhr · Jazzclubs ab etwa 200–300 CZK"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Prag hat eine lebendige Jazzszene. Reduta Jazz Club (Národní 20 — hier spielte Bill Clinton 1994 Saxofon), AghaRTA (Železná 16), Jazz Dock (Janáčkovo nábřeží 2, direkt am Wasser). Abendkonzerte ab ca. 200–300 CZK."
+        "de": "Prag hat eine lebendige Jazzszene. Im Reduta Jazz Club (Národní 20) spielte Bill Clinton 1994 Saxofon, dazu kommen AghaRTA (Železná 16) und der Jazz Dock direkt am Wasser (Janáčkovo nábřeží 2)."
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Klassische Konzerte in historischen Kirchen gibt es fast täglich. Für echte Konzertprogramme: Rudolfinum oder Nationaltheater."
+        "de": "Klassische Konzerte in historischen Kirchen gibt es fast täglich, die Qualität schwankt aber stark. Für ein richtiges Konzertprogramm gehen Sie ins Rudolfinum oder ins Nationaltheater."
       }
     },
     {
       "t": "h2",
+      "section": true,
       "html": {
-        "de": "12. Was sich beim Einkaufen lohnt"
+        "de": "<span class=\"j-num\">12.</span> Was sich beim Einkaufen lohnt"
+      },
+      "id": "einkaufen"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Böhmisches Glas"
+          },
+          "v": {
+            "de": "Lohnt sich direkt beim Hersteller, zum Beispiel in der Moser-Galerie in der Na Příkopě."
+          }
+        },
+        {
+          "k": {
+            "de": "Holzmarionetten"
+          },
+          "v": {
+            "de": "Tschechisches Handwerk mit langer Tradition. Kaufen Sie in Werkstätten, nicht am Stand."
+          }
+        },
+        {
+          "k": {
+            "de": "Böhmischer Granat"
+          },
+          "v": {
+            "de": "Dunkelroter Halbedelstein. Echte Stücke erkennen Sie am Preis und am Zertifikat des Händlers."
+          }
+        },
+        {
+          "k": {
+            "de": "Lieber nicht"
+          },
+          "v": {
+            "de": "Matroschkas, Bier-Souvenirs vom Marktstand, T-Shirts mit Prag-Aufdruck. Das wird woanders hergestellt."
+          }
+        }
+      ],
+      "variant": "v2",
+      "look": {
+        "margin": "14px 0 1.4em"
+      }
+    },
+    {
+      "t": "h2",
+      "section": true,
+      "html": {
+        "de": "So verteile ich das auf drei Tage"
+      },
+      "id": "plan"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Tag 1"
+          },
+          "v": {
+            "de": "Tram 22 zur Burg (1), bergab durch die Kleinseite (5), abends über die Karlsbrücke (2)."
+          }
+        },
+        {
+          "k": {
+            "de": "Tag 2"
+          },
+          "v": {
+            "de": "Vormittags Josefov (4), mittags Altstädter Ring (3), abends Letná (8)."
+          }
+        },
+        {
+          "k": {
+            "de": "Tag 3"
+          },
+          "v": {
+            "de": "Vyšehrad (6) oder Petřín (10), nachmittags aufs Wasser (7), abends Jazz (11)."
+          }
+        }
+      ],
+      "variant": "v2",
+      "look": {
+        "rule": "ink"
       }
     },
     {
       "t": "p",
       "html": {
-        "de": "Böhmisches Glas — gut, wenn vom Hersteller (Moser-Galerie, Na Příkopě). Holzmarionetten — tschechisches Handwerk mit langer Tradition, kaufenswert in Werkstätten. Böhmischer Granat — der dunkelrote Halbedelstein aus Böhmen, echte Stücke erkennt man am Preis und am Händler mit Zertifikat."
+        "de": "Nur einen Tag? Dann lesen Sie <a href=\"/blog/one-day-in-prague-top-5-places\">Ein Tag in Prag</a>. Wann sich die Reise am meisten lohnt, steht unter <a href=\"/blog/best-time-to-visit-prague\">Beste Reisezeit für Prag</a>, und was Sie lieber lassen, unter <a href=\"/blog/was-man-in-prag-nicht-tun-sollte\">Was man in Prag nicht tun sollte</a>."
       }
     },
     {
-      "t": "p",
+      "t": "h2",
+      "section": true,
       "html": {
-        "de": "Was ich abraten würde: Matroschkas, Bier-Souvenirs vom Marktstand, alles mit dem Prager Gesicht drauf. Das wird anderswo hergestellt."
-      }
+        "de": "Häufige Fragen"
+      },
+      "id": "faq"
+    },
+    {
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Wie viele Tage braucht man für Prag?"
+          },
+          "a": {
+            "de": "Für die Klassiker zwei volle Tage. Mit drei Tagen bleibt Zeit für Vyšehrad, Letná oder eine Bootsfahrt, ohne zu hetzen."
+          }
+        },
+        {
+          "q": {
+            "de": "Was kann man in Prag kostenlos machen?"
+          },
+          "a": {
+            "de": "Das Burgareal, die Karlsbrücke, den Altstädter Ring mit der Orloj, Kampa, Vyšehrad und den Letná-Park. Bezahlen müssen Sie nur für Innenräume und Türme."
+          }
+        },
+        {
+          "q": {
+            "de": "Was kann man in Prag bei Regen machen?"
+          },
+          "a": {
+            "de": "Veitsdom und Königspalast, die Synagogen in Josefov, die <a href=\"/blog/strahov-monastery-prague\">Strahover Bibliothek</a>, das Klementinum oder eines der Museen aus der <a href=\"/blog/all-museums-in-prague-complete-guide\">Museumsübersicht</a>."
+          }
+        },
+        {
+          "q": {
+            "de": "Lohnt sich der Prague Visitor Pass?"
+          },
+          "a": {
+            "de": "Nur, wenn Sie viele Eintritte an wenigen Tagen planen. Ich habe ihn <a href=\"/blog/prague-visitor-pass-ehrliche-bewertung\">hier durchgerechnet</a>."
+          }
+        },
+        {
+          "q": {
+            "de": "Was kann man in Prag mit Kindern machen?"
+          },
+          "a": {
+            "de": "Die Orloj zur vollen Stunde, die Standseilbahn auf den Petřín mit dem Spiegellabyrinth, ein Tretboot auf der Moldau und die Wachablösung an der Burg."
+          }
+        }
+      ],
+      "variant": "v2"
+    },
+    {
+      "t": "cta",
+      "title": {
+        "de": "Prag mit Zuzana erleben"
+      },
+      "html": {
+        "de": "Ich stelle Ihnen aus dieser Liste eine private Route zusammen, auf Deutsch und in Ihrem Tempo. Unverbindlich anfragen, auf <a href=\"https://wa.me/420721231933\">WhatsApp schreiben</a>, eine <a href=\"mailto:zuzanamanova@email.cz\">E-Mail senden</a> oder anrufen: <a href=\"tel:+420721231933\">+420 721 231 933</a>"
+      },
+      "button": {
+        "de": "Tour anfragen"
+      },
+      "href": "/book?tour=Individuelle%20Privattour#contact-title"
     }
   ]
 }

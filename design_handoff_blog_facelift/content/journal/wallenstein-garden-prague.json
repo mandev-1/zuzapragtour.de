@@ -1,0 +1,387 @@
+{
+  "slug": "wallenstein-garden-prague",
+  "languages": [
+    "de"
+  ],
+  "status": "published",
+  "date": "2026-04-16",
+  "dateDisplay": {
+    "de": "16. April 2026"
+  },
+  "updated": "2026-10-07",
+  "updatedDisplay": {
+    "de": "Aktualisiert am 7. Oktober 2026"
+  },
+  "category": "Gärten",
+  "readTime": {
+    "de": "7 Min."
+  },
+  "hero": "/images/blog-gardens-2.jpg",
+  "title": {
+    "de": "Der Waldstein-Garten in Prag: Tropfsteinwand, Pfauen und ein Garten des Senats"
+  },
+  "seoTitle": {
+    "de": "Waldstein-Garten Prag: Tropfsteinwand, Pfauen und Sala terrena"
+  },
+  "excerpt": {
+    "de": "Waldstein-Garten in Prag: Tropfsteinwand, Pfauen, Sala terrena und die Bronzen, die in Schweden stehen. Öffnungszeiten, Eingänge und Rundweg von einer Prager Stadtführerin. Eintritt frei."
+  },
+  "tags": {
+    "de": [
+      "Waldstein-Garten Prag",
+      "Valdštejnská zahrada",
+      "Tropfsteinwand Prag",
+      "Kleinseite",
+      "Prager Gärten",
+      "kostenlos Prag"
+    ]
+  },
+  "author": "Ing. Zuzana Manová",
+  "ogImage": "/images/blog-gardens-2.jpg",
+  "blocks": [
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Hinter einer Mauer in der Kleinseite liegt einer der ältesten Barockgärten Mitteleuropas. Der Eintritt ist frei, und trotzdem gehen die meisten Prag-Besucher daran vorbei. Hier steht, was Sie dort sehen, in welcher Reihenfolge und wann der Garten offen ist."
+      }
+    },
+    {
+      "t": "callout",
+      "label": {
+        "de": "Das Wichtigste in Kürze"
+      },
+      "html": {
+        "de": ""
+      },
+      "list": [
+        {
+          "de": "Geöffnet von April bis Oktober, Eintritt frei. Im Winter ist der Garten geschlossen."
+        },
+        {
+          "de": "Der bequemste Eingang liegt in der Letenská, drei Minuten von der Metro Malostranská (Linie A)."
+        },
+        {
+          "de": "Die Tropfsteinwand liegt am Rand des Gartens und wird leicht übersehen. Gehen Sie gezielt hin."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Ich bringe fast jede Gruppe hierher, die mit mir durch die Kleinseite geht, meist als Pause zwischen Burg und Karlsbrücke. Die Reaktion ist immer ähnlich: Man tritt durch ein unscheinbares Tor und steht plötzlich in einem italienischen Garten, mit weißen Statuen, Hecken wie Wände und Pfauen, die über den Kies laufen. Danach stellt man sich vor eine Mauer voller Fratzen, dreht sich um und blickt auf den Sitz des tschechischen Senats."
+      }
+    },
+    {
+      "t": "overview",
+      "id": "ueberblick",
+      "title": {
+        "de": "In diesem Artikel"
+      },
+      "items": [
+        {
+          "n": "1",
+          "title": {
+            "de": "Wallenstein und sein Garten"
+          },
+          "desc": {
+            "de": "23 abgerissene Häuser für einen Palast mit Garten."
+          },
+          "href": "#geschichte"
+        },
+        {
+          "n": "2",
+          "title": {
+            "de": "Rundgang in fünf Stationen"
+          },
+          "desc": {
+            "de": "Parterre, Sala terrena, Teich, Tropfsteinwand, Voliere."
+          },
+          "href": "#rundgang"
+        },
+        {
+          "n": "3",
+          "title": {
+            "de": "Die Bronzen in Schweden"
+          },
+          "desc": {
+            "de": "Warum die Statuen im Garten Kopien sind."
+          },
+          "href": "#bronzen"
+        },
+        {
+          "n": "4",
+          "title": {
+            "de": "Praktisches"
+          },
+          "desc": {
+            "de": "Öffnungszeiten, Eingänge, Zeitbedarf, Kombinationen."
+          },
+          "href": "#praktisch"
+        },
+        {
+          "n": "5",
+          "title": {
+            "de": "Häufige Fragen"
+          },
+          "desc": {
+            "de": "Eintritt, Winter, Kinderwagen, Palast."
+          },
+          "href": "#faq"
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Wallenstein und sein Garten"
+      },
+      "id": "geschichte"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Albrecht von Wallenstein, auf Tschechisch Albrecht z Valdštejna, stieg im Dreißigjährigen Krieg zu einem der mächtigsten Feldherren Europas auf. Zwischen 1623 und 1630 ließ er sich in der Kleinseite einen Palast bauen, der mit der Burg oben auf dem Hügel konkurrieren sollte. Dafür ließ er 23 Häuser, drei Gärten und eine Ziegelei abreißen. Die Nachbarn wurden nicht gefragt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die italienischen Architekten Andrea Spezza und Niccolò Sebregondi legten einen Garten an, wie man ihn so weit nördlich der Alpen kaum kannte: streng geometrisch, mit Sichtachsen, Statuen und künstlicher Grotte. Wallenstein selbst genoss ihn nicht lange. 1634 wurde er in Eger (Cheb) ermordet."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Seit 1993 ist der Waldstein-Palast Sitz des Senats der Tschechischen Republik. Für Besucher ist das ein Glück: Die Hecken sind tadellos geschnitten, das Parterre wird jede Saison neu bepflanzt, und im Sommer finden hier gelegentlich Konzerte statt, die ebenfalls frei zugänglich sind."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Mein Rundgang in fünf Stationen"
+      },
+      "id": "rundgang"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Garten ist nicht groß, aber er ist in Räume geteilt, und wer ohne Plan hineingeht, verpasst oft das Merkwürdigste. So führe ich meine Gäste, vom Eingang Letenská aus."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>1. Das Hauptparterre.</strong> Gehen Sie zuerst die lange Achse mit den Bronzestatuen ab. Erst von hier aus verstehen Sie die Größe der Anlage und wie bewusst sie auf den Palast ausgerichtet ist. Achten Sie auf die Pfauen, darunter meist auch ein weißer. Sie gehören seit langem zum Garten und sind an Menschen gewöhnt."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>2. Die Sala terrena.</strong> Die große offene Loggia mit drei Bögen am Ende des Parterres ist mit Fresken aus der griechischen Mythologie ausgemalt: Götter des Olymp und Szenen aus dem Trojanischen Krieg. Kein Museum, keine Absperrung, nur offene Bögen zum Garten hin."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>3. Der Teich.</strong> Rechts davon liegt der große Teich mit der Herkules-Statue auf der Insel in der Mitte. Von hier haben Sie den bekannten Blick über den Garten hinauf zur Burg."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>4. Die Tropfsteinwand.</strong> Am Rand des Gartens steht eine lange künstliche Grottenwand, auf Tschechisch krápníková stěna. Echte Tropfsteine sind es nicht, sondern eine manieristische Fantasie aus Stuck und Kalktuff, in der Sie bei längerem Hinsehen Fratzen, Schlangen, Eulen und Tierköpfe entdecken. Solche Grotten sollten im 17. Jahrhundert die wilde Natur zeigen, als Gegensatz zu den geschnittenen Hecken ringsum. Kinder finden hier meist mehr Gesichter als Erwachsene."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "<strong>5. Die Voliere.</strong> Gleich neben der Grotte steht die historische Voliere, in deren Mauerwerk derselbe Stil weitergeht wie in der Tropfsteinwand. Heute leben darin Uhus, die tagsüber meist reglos auf ihren Ästen sitzen."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/blog-tropfsteinwand.png",
+      "alt": {
+        "de": "Die Tropfsteinwand im Waldstein-Garten mit Fratzen und Tiergestalten im Stein"
+      },
+      "credit": "Zuza Prague Tours",
+      "cap": {
+        "de": "Die Tropfsteinwand: Je länger Sie hinsehen, desto mehr Gesichter tauchen auf."
+      },
+      "layout": "side"
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Die echten Bronzen stehen in Schweden"
+      },
+      "id": "bronzen"
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Statuen im Garten sind Kopien. Die Originale schuf Adriaen de Vries, ein niederländischer Bildhauer, der auch für Kaiser Rudolf II. arbeitete. 1648, in den letzten Monaten des Dreißigjährigen Krieges, besetzten schwedische Truppen die Kleinseite und nahmen die Bronzen als Kriegsbeute mit. Sie stehen bis heute im Park von Schloss Drottningholm bei Stockholm."
+      }
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Die Abgüsse im Garten entstanden im 20. Jahrhundert und folgen den Originalen genau. Ich erzähle die Geschichte trotzdem gern, weil sie zeigt, wie viel Prag in diesem Krieg verloren hat. Weitere Prager Orte, an denen Geschichte passiert ist, finden Sie im Artikel <a href=\"/blog/zehn-orte-mit-geschichte-prag-legenden\">Zehn Orte mit Geschichte</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Praktisches für Ihren Besuch"
+      },
+      "id": "praktisch"
+    },
+    {
+      "t": "facts",
+      "items": [
+        {
+          "k": {
+            "de": "Saison"
+          },
+          "v": {
+            "de": "April bis Oktober, im Winter geschlossen."
+          }
+        },
+        {
+          "k": {
+            "de": "Öffnungszeiten"
+          },
+          "v": {
+            "de": "In der Regel 10 bis 18 Uhr. Bei Veranstaltungen des Senats kann der Garten kurzfristig schließen, aktuelle Zeiten auf senat.cz."
+          }
+        },
+        {
+          "k": {
+            "de": "Eintritt"
+          },
+          "v": {
+            "de": "Frei."
+          }
+        },
+        {
+          "k": {
+            "de": "Eingänge"
+          },
+          "v": {
+            "de": "Letenská (nahe Metro Malostranská, Linie A, und Tram 2, 12, 15, 20, 22, 23) und Valdštejnské náměstí."
+          }
+        },
+        {
+          "k": {
+            "de": "Zeitbedarf"
+          },
+          "v": {
+            "de": "30 bis 45 Minuten für den Rundgang, länger, wenn Sie auf einer Bank pausieren."
+          }
+        },
+        {
+          "k": {
+            "de": "Barrierefreiheit"
+          },
+          "v": {
+            "de": "Ebene Kieswege, mit Kinderwagen und Rollstuhl gut machbar."
+          }
+        },
+        {
+          "k": {
+            "de": "Gut zu wissen"
+          },
+          "v": {
+            "de": "Hunde und Fahrräder sind nicht erlaubt."
+          }
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "html": {
+        "de": "Der Waldstein-Garten passt gut zwischen die Burg und die Karlsbrücke. Wer von der Burg über die Alte Schlossstiege herunterkommt, ist in fünf Minuten am Eingang Letenská. Danach liegen die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten unter der Prager Burg</a> und die stillen Ecken aus dem Artikel <a href=\"/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps\">Kleinseite bis Karlsbrücke: Geheimtipps</a> gleich um die Ecke. Wer früh am Tag oben anfangen möchte, beginnt im <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster</a>."
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Häufige Fragen"
+      },
+      "id": "faq"
+    },
+    {
+      "t": "faq",
+      "items": [
+        {
+          "q": {
+            "de": "Kostet der Waldstein-Garten Eintritt?"
+          },
+          "a": {
+            "de": "Nein, der Garten ist während der Saison kostenlos zugänglich."
+          }
+        },
+        {
+          "q": {
+            "de": "Ist der Garten im Winter geöffnet?"
+          },
+          "a": {
+            "de": "Nein. Von November bis März ist er geschlossen. Im Winter empfehle ich stattdessen die Ideen aus <a href=\"/blog/prag-winter-fotomomente\">Prag im Winter</a>."
+          }
+        },
+        {
+          "q": {
+            "de": "Kann man den Waldstein-Palast besichtigen?"
+          },
+          "a": {
+            "de": "Die Räume des Senats sind an ausgewählten Tagen, meist am Wochenende, zugänglich. Die Termine veröffentlicht der Senat auf seiner Website."
+          }
+        },
+        {
+          "q": {
+            "de": "Sind die Pfauen immer da?"
+          },
+          "a": {
+            "de": "Fast immer während der Saison. Bitte nicht füttern."
+          }
+        },
+        {
+          "q": {
+            "de": "Wo genau ist die Tropfsteinwand?"
+          },
+          "a": {
+            "de": "An der Gartenmauer seitlich des Hauptparterres, neben der Voliere."
+          }
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "lead": true,
+      "html": {
+        "de": "Auf meiner Tour durch das versteckte Prag gehen wir durch den Waldstein-Garten und die Gärten der Kleinseite, auf Deutsch und in Ihrem Tempo. <a href=\"/book?tour=Verstecktes%20Prag#contact-title\">Tour anfragen</a>"
+      }
+    },
+    {
+      "t": "h2",
+      "html": {
+        "de": "Quellen und offizielle Seiten"
+      }
+    },
+    {
+      "t": "list",
+      "items": [
+        {
+          "de": "Senát Parlamentu České republiky: <a href=\"https://www.senat.cz\">Öffnungszeiten von Garten und Palast</a>"
+        },
+        {
+          "de": "Ladislav Hoskovec, botany.cz: <a href=\"https://botany.cz/cs/valdstejnska-zahrada/\">Valdštejnská zahrada</a> (botanische und historische Details)"
+        }
+      ],
+      "ordered": true
+    }
+  ],
+  "slugDe": "waldstein-garten-prag",
+  "heroCredit": "Roman Boed"
+}

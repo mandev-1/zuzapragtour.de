@@ -6,7 +6,7 @@
 //
 // Response: { generatedAt, days: [{ day, strings, visits }] } where
 //   visit = [id, startTime (unix s), device 'm'|'d', abVariant, events]
-//   event = [kind 'p'|'c'|'e', page, category, label, area, secondsAfterStart, secondsOnPage, readDepth]
+//   event = [kind 'p'|'c'|'e'|'y' (copied e-mail/phone), page, category, label, area, secondsAfterStart, secondsOnPage, readDepth]
 // page / category / label / area are indexes into that day's `strings`.
 // Page leaves are folded into their page view (seconds on page, read depth).
 // Finished days (older than yesterday) are built once and cached (vis/v2/<day>).
@@ -15,7 +15,7 @@ import { getStore } from '@netlify/blobs';
 const STORE = 'site-stats'; // written by track.mjs
 const CACHE = 'vis/v2/';
 const MAX_DAYS = 45;
-const KIND = { page: 'p', click: 'c', enquiry: 'e' };
+const KIND = { page: 'p', click: 'c', enquiry: 'e', copy: 'y' };
 
 function dec(s) {
   try {

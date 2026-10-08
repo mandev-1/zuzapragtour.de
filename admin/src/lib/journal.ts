@@ -10,6 +10,8 @@ export const CATEGORIES = [
   'Kultur',
   'Kulinarik',
   'Prag erleben',
+  'Sehenswürdigkeiten',
+  'Reiseplanung',
 ];
 
 export interface BlockMeta {
@@ -22,6 +24,7 @@ export interface BlockMeta {
 export const BLOCK_TYPES: BlockMeta[] = [
   { t: 'p', label: 'Absatz', icon: 'notes', desc: 'Fließtext' },
   { t: 'h2', label: 'Überschrift', icon: 'title', desc: 'Abschnitt' },
+  { t: 'h3', label: 'Zwischentitel', icon: 'text_fields', desc: 'Kleine Überschrift' },
   { t: 'quote', label: 'Zitat', icon: 'format_quote', desc: 'Pull-Quote' },
   { t: 'callout', label: 'Hinweis', icon: 'lightbulb', desc: 'Tipp-Box' },
   { t: 'image', label: 'Bild', icon: 'image', desc: 'Foto + Unterschrift' },
@@ -33,6 +36,9 @@ export const BLOCK_TYPES: BlockMeta[] = [
   { t: 'overview', label: 'Übersicht', icon: 'toc', desc: 'Verlinkte Liste' },
   { t: 'faq', label: 'Häufige Fragen', icon: 'quiz', desc: 'FAQ, auch für Google/Bing' },
   { t: 'map', label: 'Karte', icon: 'map', desc: 'Tour-Stationen' },
+  { t: 'gallery', label: 'Bildpaar', icon: 'photo_library', desc: 'Zwei Hochformate nebeneinander' },
+  { t: 'cta', label: 'Anfrage-Box', icon: 'ads_click', desc: 'Buchungsaufruf mit Button' },
+  { t: 'links', label: 'Weiterlesen', icon: 'link', desc: 'Liste weiterführender Links' },
   { t: 'ornament', label: 'Zierde', icon: 'auto_awesome', desc: 'Trenner' },
 ];
 
@@ -99,6 +105,11 @@ function blockText(b: any, lang: Lang): string {
         (b.rows || b.items || []).map((r: any) => stripText(locLoose(r.k, lang)) + ' ' + stripText(locLoose(r.v, lang))).join(' ');
     case 'map':
       return (b.points || []).map((p: any) => stripText(locLoose(p.label, lang)) + ' ' + stripText(locLoose(p.note, lang))).join(' ');
+    case 'h3':
+    case 'cta':
+      return stripText(locLoose(b.html, lang));
+    case 'gallery':
+      return stripText(locLoose(b.cap, lang));
     case 'chapter':
       return stripText(locLoose(b.label, lang)) + ' ' + stripText(locLoose(b.meta, lang)) + ' ' + stripText(locLoose(b.html, lang));
     case 'factcheck':
@@ -190,6 +201,20 @@ export function freshBlock(t: BlockType): Block {
       return { t: 'faq', items: [{ q: { de: 'Eine häufige Frage?' }, a: { de: 'Die Antwort in zwei, drei Sätzen.' } }] };
     case 'ornament':
       return { t: 'ornament' };
+    case 'h3':
+      return { t: 'h3', html: { de: 'Zwischentitel' } };
+    case 'gallery':
+      return { t: 'gallery', images: [{ src: '', alt: { de: '' } }, { src: '', alt: { de: '' } }], cap: { de: 'Bildunterschrift' } };
+    case 'cta':
+      return {
+        t: 'cta',
+        title: { de: 'Prag mit Zuzana erleben' },
+        html: { de: 'Private Stadtführungen auf Deutsch, in Ihrem Tempo. Unverbindlich anfragen, auf <a href="https://wa.me/420721231933">WhatsApp schreiben</a>, eine <a href="mailto:zuzanamanova@email.cz">E-Mail senden</a> oder anrufen: <a href="tel:+420721231933">+420 721 231 933</a>' },
+        button: { de: 'Tour anfragen' },
+        href: '/book#contact-title',
+      };
+    case 'links':
+      return { t: 'links', title: { de: 'Weiterlesen' }, items: [{ href: '/blog/', text: { de: 'Artikel' } }] };
     default:
       return { t: 'p', html: { de: 'Neuer Absatz — hier schreiben …' } };
   }

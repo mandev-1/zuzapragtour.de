@@ -20,7 +20,8 @@
   for = "/*"
   [headers.values]
     X-Robots-Tag = "index, follow"
-    X-Frame-Options = "DENY"
+    # SAMEORIGIN, not DENY: /sehenswuerdigkeiten-prag embeds /maps/*.html in an iframe.
+    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
@@ -61,6 +62,20 @@
   from = "/0ba5d917a5ee483c9c875df26cd223d0.txt"
   to = "/0ba5d917a5ee483c9c875df26cd223d0.txt"
   status = 200
+
+# Merged articles (design_handoff_blog_facelift): both winter posts → one.
+# Keep in sync with `redirectFrom` in content/journal/prag-im-winter.json.
+[[redirects]]
+  from = "/blog/prag-winter-fotomomente"
+  to = "/blog/prag-im-winter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/prag-winter-geniesser"
+  to = "/blog/prag-im-winter"
+  status = 301
+  force = true
 
 # Internal docs in the images folder (sources/licences) are not public.
 [[redirects]]
