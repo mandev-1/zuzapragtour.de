@@ -261,6 +261,21 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/charles-bridge-from-top-beautiful-tourist-amazing-pixabay-original-name__rainhard2-prague-7594788_1920.webp",
+      "alt": {
+        "de": "Blick vom Altstädter Brückenturm über die Karlsbrücke zur Kleinseite"
+      },
+      "cap": {
+        "de": "Vom Altstädter Brückenturm über die Karlsbrücke zur Kleinseite und zum Petřín."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    {
       "t": "h3",
       "html": {
         "de": "Warum ausgerechnet dieser Moment?"
@@ -381,6 +396,28 @@
       "t": "p",
       "html": {
         "de": "Am 20. März 1393 ließ König Wenzel IV. den Generalvikar Johannes von Nepomuk von der Brücke in die Moldau werfen. Nach der Legende hatte er sich geweigert, das Beichtgeheimnis der Königin preiszugeben. Die Stelle markiert ein kleines Messingkreuz an der Brüstung, zwischen den Statuen."
+      }
+    },
+    {
+      "t": "gallery",
+      "images": [
+        {
+          "src": "/images/web/charles-bridge-nepomucky-detail.webp",
+          "alt": {
+            "de": "Die Statue des heiligen Johannes von Nepomuk mit Sternenkranz, dahinter der Veitsdom"
+          },
+          "pos": "center 30%"
+        },
+        {
+          "src": "/images/web/blog-charles-bridge-dog-touch-point-gold-tourist-must-visit.webp",
+          "alt": {
+            "de": "Bronzerelief am Sockel der Nepomuk-Statue, blank gerieben von vielen Händen"
+          },
+          "pos": "center 40%"
+        }
+      ],
+      "cap": {
+        "de": "Die Nepomuk-Statue mit dem Sternenkranz und eines der Reliefs an ihrem Sockel, blank gerieben von den Händen der Besucher."
       }
     },
     {

@@ -478,6 +478,17 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/charles-bridge-prague-castle-portrait-solo.webp",
+      "alt": {
+        "de": "Die Kleinseite und die Prager Burg, vom Moldauufer aus gesehen"
+      },
+      "cap": {
+        "de": "Kleinseite und Burg, vom anderen Ufer der Moldau aus."
+      },
+      "layout": "side"
+    },
+    {
       "t": "p",
       "html": {
         "de": "<strong>Zuzanas Tipp:</strong> Mein persönlicher Lieblingsort in Prag. Wer hier ohne Plan geht, landet in der Nerudova, wer einen Plan hat, in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a>."
@@ -559,6 +570,21 @@
       "t": "p",
       "html": {
         "de": "Ein bewaldeter Park über der Kleinseite mit Aussichtsturm von 1891, Spiegellabyrinth und Rosengarten. Hinauf fährt eine Standseilbahn mit normalem Fahrschein."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/prague-view-from-petrin-cherry-blossom-dusk.webp",
+      "alt": {
+        "de": "Kirschblüte am Petřín, dahinter die Dächer und Türme der Stadt in der Dämmerung"
+      },
+      "cap": {
+        "de": "Kirschblüte am Petřín. Im April ist der Hügel der schönste Ort der Stadt."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {
@@ -967,6 +993,21 @@
       "t": "p",
       "html": {
         "de": "Die meisten Sehenswürdigkeiten auf dieser Liste können Sie allein besuchen. Was eine gute Führung ändert, ist nicht der Ort, sondern was Sie darin sehen: die drei Zeiten auf dem Zifferblatt der Orloj, den Glockenturm, aus dem die Staatssicherheit die Botschaften beobachtete, das Kreuz an der Brüstung der Karlsbrücke. Und die Reihenfolge, in der Sie die Orte erleben, bevor die Gruppen kommen."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/couple-watching-vltava-prague-castle-cloudy-pixabay-original-name__tomasha73-bench-7227972_1920.webp",
+      "alt": {
+        "de": "Zwei Menschen auf einer Bank an der Moldau, gegenüber die Prager Burg"
+      },
+      "cap": {
+        "de": "Zeit zum Schauen: eine Bank an der Moldau mit Blick auf die Burg."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {

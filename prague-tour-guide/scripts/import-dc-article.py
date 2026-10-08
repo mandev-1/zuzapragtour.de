@@ -9,7 +9,9 @@ from the design itself, element by element. Anything the walker does not
 recognise stops the import, so no content is silently dropped.
 
 Written for design_handoff_blog_facelift (2026-10); the patterns are the
-inline styles of those prototypes.
+inline styles of those prototypes. It is a one-off import: the content JSON
+has been edited since (e.g. extra photos, 2026-10-08), so re-running it on a
+page overwrites those edits.
 """
 import html as H
 import json

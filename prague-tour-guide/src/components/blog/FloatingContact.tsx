@@ -10,8 +10,8 @@
  *
  * Shown once the hero is mostly scrolled past, while no in-article CTA (an
  * <aside> with a /book link) is on screen and the footer is still away; it
- * fades in with a blur. The data-track-section values let the admin compare
- * the three variants.
+ * simply fades in and out. The data-track-section values let the admin
+ * compare the three variants.
  */
 
 import React from 'react';
@@ -59,17 +59,12 @@ export default function FloatingContact() {
   }, []);
 
   if (!variant) return null;
-  const motion: React.CSSProperties = {
-    opacity: show ? 1 : 0,
-    filter: show ? 'blur(0px)' : 'blur(10px)',
-    transform: show ? 'none' : 'translateY(14px)',
-    pointerEvents: show ? 'auto' : 'none',
-  };
+  const on = show ? ' is-shown' : '';
   const hidden = !show || undefined;
 
   if (variant === 'card') {
     return (
-      <aside className="j-float-card" aria-label="Private Tour mit Zuzana" aria-hidden={hidden} data-track-section="float-card" style={motion}>
+      <aside className={`j-float-card${on}`} aria-label="Private Tour mit Zuzana" aria-hidden={hidden} data-track-section="float-card">
         <div className="j-float-card__who">
           <img src={AVATAR_SRC} alt="Ing. Zuzana Manová" />
           <div>
@@ -90,7 +85,7 @@ export default function FloatingContact() {
 
   if (variant === 'chip') {
     return (
-      <a href={BOOK} className="j-float-chip" aria-label="Private Tour mit Zuzana anfragen" aria-hidden={hidden} tabIndex={show ? 0 : -1} data-track-section="float-chip" style={motion}>
+      <a href={BOOK} className={`j-float-chip${on}`} aria-label="Private Tour mit Zuzana anfragen" aria-hidden={hidden} tabIndex={show ? 0 : -1} data-track-section="float-chip">
         <img src={AVATAR_SRC} alt="" />
         <span className="j-float-chip__text">
           <span className="j-float-chip__t">Prag mit Zuzana</span>
@@ -101,7 +96,7 @@ export default function FloatingContact() {
   }
 
   return (
-    <nav className="j-float-bar" aria-label="Kontakt" aria-hidden={hidden} data-track-section="mobile-bar" style={motion}>
+    <nav className={`j-float-bar${on}`} aria-label="Kontakt" aria-hidden={hidden} data-track-section="mobile-bar">
       <a href={BOOK} className="j-float-bar__main" tabIndex={show ? 0 : -1}>Tour anfragen</a>
       <a href={WA} tabIndex={show ? 0 : -1}>WhatsApp</a>
       <a href={`mailto:${BRAND.email}`} tabIndex={show ? 0 : -1}>E-Mail</a>

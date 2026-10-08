@@ -174,6 +174,21 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/prague-old-town-view-summery.webp",
+      "alt": {
+        "de": "Blick über die Dächer der Altstadt auf die Türme der Teynkirche"
+      },
+      "cap": {
+        "de": "Die Altstadt mit den Türmen der Teynkirche. Wo was steht, zeigt Ihnen jede Karte; was dahintersteckt, nicht."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    {
       "t": "p",
       "html": {
         "de": "Achten Sie auf das Erscheinungsjahr. Öffnungszeiten, Eintrittspreise und Rundgänge ändern sich in Prag schneller, als Bücher neu aufgelegt werden. Die Prager Burg hat ihre Ticketvarianten in den letzten Jahren mehrfach umgestellt. Praktische Angaben prüfe ich deshalb immer zusätzlich auf den offiziellen Seiten, die ich am Ende verlinke."
@@ -197,6 +212,21 @@
       "t": "p",
       "html": {
         "de": "Besichtigungsfahrten sind ideal am ersten Tag, um ein Gefühl für die Entfernungen zu bekommen, und für alle, die nicht lange gehen können. In Prag haben Sie vier Möglichkeiten."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/old-town-square-horse-carriage-dusk.webp",
+      "alt": {
+        "de": "Kutschen auf dem Altstädter Ring vor der Nikolauskirche in der Abendstimmung"
+      },
+      "cap": {
+        "de": "Kutschen auf dem Altstädter Ring, dahinter die Nikolauskirche."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {
@@ -247,6 +277,21 @@
       "t": "p",
       "html": {
         "de": "Prag ist von großen Zerstörungen weitgehend verschont geblieben. Darin liegt der Reiz, und genau darin liegt die Schwierigkeit: An fast jeder Ecke steht ein Haus mit Geschichte, und von außen sehen viele davon gleich aus. Ob Sie vor einem Palast stehen, in dem 1618 der Dreißigjährige Krieg begann, oder vor einem schönen Bürgerhaus, verrät die Fassade nicht."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/old-town-square-statue.webp",
+      "alt": {
+        "de": "Das Jan-Hus-Denkmal auf dem Altstädter Ring, dahinter der Turm des Altstädter Rathauses"
+      },
+      "cap": {
+        "de": "Das Jan-Hus-Denkmal auf dem Altstädter Ring, dahinter der Rathausturm."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {
@@ -351,6 +396,21 @@
       "t": "p",
       "html": {
         "de": "Für drei Tage in Prag rate ich meist zu dieser Mischung: Vorher lesen Sie einen Reiseführer und entscheiden, was Sie interessiert. Am ersten Nachmittag fahren Sie mit der Tram 22 oder dem Boot, um die Stadt im Überblick zu sehen. Für die Burg oder das Jüdische Viertel nehmen Sie sich eine Führung, idealerweise am Vormittag, bevor die großen Gruppen kommen. Den Rest erkunden Sie in Ihrem eigenen Tempo."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/prague-castle-guards-tourist-sunny-day-top-pixabay-original-name__duernsteiner-prague-4925864_1920.webp",
+      "alt": {
+        "de": "Das Haupttor der Prager Burg mit den Statuen der kämpfenden Giganten und Besuchern im Ehrenhof"
+      },
+      "cap": {
+        "de": "Das Haupttor der Burg mit den kämpfenden Giganten."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {

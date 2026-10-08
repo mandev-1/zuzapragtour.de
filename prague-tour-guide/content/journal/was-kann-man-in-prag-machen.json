@@ -250,6 +250,21 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/prague-castle-best.webp",
+      "alt": {
+        "de": "Der Veitsdom mit seinen Türmen im Dritten Burghof"
+      },
+      "cap": {
+        "de": "Der Veitsdom im Dritten Burghof. Für die Fassade lohnt sich ein Schritt zurück bis an den Rand des Platzes."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    {
       "t": "list",
       "items": [
         {
@@ -287,6 +302,21 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/prague-hero.webp",
+      "alt": {
+        "de": "Die Karlsbrücke und die Prager Burg in der Abendsonne, von oben gesehen"
+      },
+      "cap": {
+        "de": "Karlsbrücke und Burg am Abend. Am frühen Morgen ist dieselbe Brücke fast leer."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 55
+      }
+    },
+    {
       "t": "p",
       "html": {
         "de": "Steigen Sie auf den <strong>Altstädter Brückenturm</strong>. Von oben sehen Sie die ganze Reihe der Barockstatuen und dahinter den Burgberg. Es ist einer der schönsten Aussichtspunkte der Stadt, und kaum jemand geht hinauf. Welche Stellen sich für Fotos lohnen, habe ich in den <a href=\"/blog/beste-fotospots-prag\">besten Fotospots in Prag</a> gesammelt."
@@ -307,6 +337,21 @@
       "t": "p",
       "html": {
         "de": "Zu jeder vollen Stunde von 9 bis 23 Uhr setzt sich die astronomische Uhr in Bewegung: Der Tod läutet, die zwölf Apostel ziehen an den Fenstern vorbei, ein Hahn kräht. Nach 45 Sekunden gibt es Applaus. Man kann das kitschig finden, aber ich habe noch keine Gruppe erlebt, die nicht hingeschaut hat."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/astronomical-clock-closeup-pixabay-original-name__ajale-astronomical-clock-2689116_1920.webp",
+      "alt": {
+        "de": "Das Zifferblatt der astronomischen Uhr am Altstädter Rathaus"
+      },
+      "cap": {
+        "de": "Das astronomische Zifferblatt der Orloj. Die Figuren bewegen sich jeweils zur vollen Stunde."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {
@@ -380,6 +425,21 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/blog-charles-bridge-statue-jesus-beautiful-statue-detail.webp",
+      "alt": {
+        "de": "Blick von der Karlsbrücke auf die Kleinseite und die Burg"
+      },
+      "cap": {
+        "de": "Von der Karlsbrücke auf die Kleinseite, darüber die Burg."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    {
       "t": "p",
       "html": {
         "de": "Die Insel Kampa ist mein persönlicher Lieblingsort in Prag: ein kleiner Park direkt am Wasser, mit Blick auf die Brückenbögen und fast ohne Souvenirläden. Zwei Minuten entfernt liegt die John-Lennon-Mauer, entstanden nach Lennons Tod 1980, immer wieder übermalt und neu beschrieben. Wer Ruhe sucht, findet sie in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und im <a href=\"/blog/wallenstein-garden-prague\">Waldstein-Garten</a>."
@@ -423,6 +483,21 @@
       "t": "p",
       "html": {
         "de": "Vom Wasser aus sehen Sie ein anderes Prag: die Karlsbrücke von unten, die Silhouette der Burg, die Gärten am Ufer. Es gibt geführte Abendfahrten, Tret- und Ruderboote zum Selbstfahren an der Slawischen Insel und Kajaks für Sportlichere."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/boat-vltava-boat-trip-pixabay-original-name__edusoft-prague-509921_1920.webp",
+      "alt": {
+        "de": "Ein Ausflugsschiff auf der Moldau"
+      },
+      "cap": {
+        "de": "Ein Ausflugsschiff auf der Moldau."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {
@@ -605,6 +680,21 @@
       "t": "p",
       "html": {
         "de": "Nur einen Tag? Dann lesen Sie <a href=\"/blog/one-day-in-prague-top-5-places\">Ein Tag in Prag</a>. Wann sich die Reise am meisten lohnt, steht unter <a href=\"/blog/best-time-to-visit-prague\">Beste Reisezeit für Prag</a>, und was Sie lieber lassen, unter <a href=\"/blog/was-man-in-prag-nicht-tun-sollte\">Was man in Prag nicht tun sollte</a>."
+      }
+    },
+    {
+      "t": "image",
+      "src": "/images/web/prague-thousands-towers-sunset.webp",
+      "alt": {
+        "de": "Die Türme der Prager Altstadt im Gegenlicht der Abendsonne"
+      },
+      "cap": {
+        "de": "Die Altstadt der hundert Türme kurz vor Sonnenuntergang."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
       }
     },
     {

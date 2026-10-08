@@ -269,6 +269,21 @@
       }
     },
     {
+      "t": "image",
+      "src": "/images/web/stare-zamecke-schody-ceska-vlajka-beautiful-pixabay-original-name__user32212-prague-2211924_1920.webp",
+      "alt": {
+        "de": "Blick von der Alten Schlossstiege hinunter auf die Dächer der Kleinseite"
+      },
+      "cap": {
+        "de": "Oben an der Alten Schlossstiege. Von hier geht es zu Fuß hinunter auf die Kleinseite."
+      },
+      "aspect": "3/2",
+      "focus": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    {
       "t": "facts",
       "items": [
         {

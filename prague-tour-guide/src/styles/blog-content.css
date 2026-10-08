@@ -938,7 +938,17 @@ html:has(.journal-page) {
 .j-float-chip,
 .j-float-bar {
   font-family: var(--j-sans);
-  transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  /* A plain fade; visibility waits for the fade-out so hidden links aren't clickable. */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+}
+.j-float-card.is-shown,
+.j-float-chip.is-shown,
+.j-float-bar.is-shown {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease, visibility 0s;
 }
 .j-float-card {
   position: fixed;
@@ -1032,7 +1042,6 @@ html:has(.journal-page) {
   box-shadow: 0 -6px 20px rgba(26, 23, 20, 0.06);
   display: flex;
   gap: 8px;
-  transition-duration: 0.6s;
 }
 .j-float-bar a {
   flex: 1 1 0;

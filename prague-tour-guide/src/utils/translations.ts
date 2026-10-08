@@ -192,8 +192,8 @@ export const translations = {
     de: 'Anfrage senden',
   },
   'hero.responsePromise': {
-    en: 'I usually reply within 24 hours.',
-    de: 'Ich antworte in der Regel innerhalb von 24 Stunden.',
+    en: 'On WhatsApp I usually reply within an hour or two, otherwise within 24\u00a0hours.',
+    de: 'Auf WhatsApp antworte ich meist innerhalb von ein bis zwei Stunden, sonst in der Regel innerhalb von 24\u00a0Stunden.',
   },
 
   // Features
@@ -2280,8 +2280,8 @@ export const translations = {
   },
   'home.m.steps.2.title': { en: 'A personal reply', de: 'Persönliche Antwort' },
   'home.m.steps.2.text': {
-    en: 'I usually reply within 24 hours, confirm availability and tailor the tour for you.',
-    de: 'Ich antworte in der Regel innerhalb von 24 Stunden, bestätige die Verfügbarkeit und passe die Tour für Sie an.',
+    en: 'On WhatsApp I usually reply within an hour or two, otherwise within 24\u00a0hours. I confirm availability and tailor the tour for you.',
+    de: 'Auf WhatsApp antworte ich meist innerhalb von ein bis zwei Stunden, sonst in der Regel innerhalb von 24\u00a0Stunden. Ich bestätige die Verfügbarkeit und passe die Tour für Sie an.',
   },
   'home.m.steps.3.title': { en: 'We meet', de: 'Wir treffen uns' },
   'home.m.steps.3.text': {
