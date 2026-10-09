@@ -24,7 +24,7 @@ How this repo actually works, verified against the code on **2026-10-09**. If th
 | `netlify.toml` (root) | Netlify config for the **public** site (base `prague-tour-guide`) | live |
 | `.handoffs/0001…0007` | Archived design handoffs (implemented) + the Astro migration plan (0007, deferred) | reference |
 | `design_handoff_*/` (root) | Newer design handoffs: `.dc.html` prototypes + README | reference; `design_handoff_karlsbruecke_prager_burg` is **not implemented yet** |
-| `lang-graph/` | Python LangGraph SEO agent: Search Console → Claude brief → email | separate tool |
+| `lang-graph/` | Python LangGraph SEO agent: Search Console → Claude brief → email (weekly). Model hardcoded in `report.py` (`claude-sonnet-4-6`) | **never set up** as of 2026-10-09: no `.env`, no service-account key, no cron or container |
 | `image-compressor/` | Node script for compressing images before they go into `public/images` | tool |
 | `zuzapragtour.de-Coverage-Drilldown-*` | Search Console coverage export (CSV) | data |
 | `TBD.md` | Owner's backlog: `/book` conversion ideas, platforms (Viator/GYG/Google), SEO keywords | backlog |
@@ -43,7 +43,7 @@ How this repo actually works, verified against the code on **2026-10-09**. If th
 - `app/*/page.tsx` are thin wrappers that set `metadata` / `generateMetadata` and render a `'use client'` screen from `src/screens/`.
 
 ### Routes
-`/`, `/tours`, `/tours/[slug]` (EN + DE slug per tour), `/blog`, `/blog/[slug]` (EN slug + optional DE slug), `/sehenswuerdigkeiten-prag` (pillar page from `content/pages/`), `/zuzana-manova`, `/contact`, `/book`, `/bewerten`, `/privacy`, `/terms`.
+`/`, `/tours`, `/tours/[slug]` (EN + DE slug per tour), `/blog`, `/blog/[slug]` (EN slug + optional DE slug), `/sehenswuerdigkeiten-prag` (pillar page from `content/pages/`), `/prag/karlsbruecke` (landing page, see below), `/zuzana-manova`, `/contact`, `/book`, `/bewerten`, `/privacy`, `/terms`.
 Generated: `/sitemap.xml` (`app/sitemap.ts`), `/robots.txt` (`app/robots.ts`, disallows `/book` `/privacy` `/terms`), `/llms.txt` (`app/llms.txt/route.ts`, built from tours + journal; `public/llms-full.txt` is hand-written), `/stats-catalog.json` (titles for the admin stats dashboard).
 
 ### Commands (run in `prague-tour-guide/`)
@@ -86,6 +86,23 @@ npm run images       # public/images/sized/ AVIF+WebP (macOS sips + cwebp)
 - To migrate one post: `node scripts/html-to-blocks.cjs --post=N [--dry-run]` writes a draft JSON, which you finish in the admin.
 - `npm run new:blog` still scaffolds a **legacy** post. **Prefer creating new articles as journal JSON** (in the admin, or by hand in `content/journal/`).
 - `scripts/import-dc-article.py` is a one-off importer for `.dc.html` design prototypes into journal JSON. Re-running it overwrites later edits.
+
+### `/prag/karlsbruecke` (landing page)
+- **A 1:1 port of `design_handoff_karlsbruecke_prager_burg`**, not the article template.
+  - Markup: `src/screens/KarlsbrueckePage.tsx`. Styles: `src/styles/karlsbruecke-landing.css` (`kb-` classes, the prototype's exact values). Route + metadata + Article/FAQPage JSON-LD: `app/prag/karlsbruecke/page.tsx`.
+  - Copy is hard-coded German, verbatim from the handoff. The FAQ array feeds both the page and the JSON-LD.
+- **Deviations the handoff itself asks for:**
+  - the site's `Header`/`Footer` (the footer's dark band replaces the design's band),
+  - a real castle photo instead of the dashed placeholder.
+- **Owner changes on top of the handoff (2026-10-09):** blue accents (`--kb-blue: #11457E`, the site's journal blue, and `--kb-blue-tint: #EEF3F9`) on the breadcrumb, kickers and labels, the fact-card values, the route box (tint and left rule) and the rule above the quote. Burgundy stays on the headline accent and the buttons.
+- **Mobile sticky bar** (Tour anfragen · WhatsApp · E-Mail): pure CSS, below 768px only. `body:has(.kb-bar)` adds 96px bottom padding so the bar doesn't cover the footer. `BlogPromo` is hidden on `/prag/*` so they don't overlap.
+- **CTAs** go to `/book?tour=Karlsbrücke und Prager Burg#contact-title`, so the form arrives pre-filled.
+- **Images:**
+  - hero: `images/hero/prague-hero-{640,1080,1600}.webp` + `prague-hero-1600.jpg` (fallback and share image), made from `prague-hero.jpg` (William Zhang, Unsplash): bridge and castle at dusk. It replaced the handoff's `vltava-bridges-hero` at the owner's request on 2026-10-09,
+  - bridge block: `web/charles-bridge-night-empty-lesser-town-towers-4x5.webp`, a 4:5 crop of the Pixabay photo by luboshouska (empty bridge at night, both Kleinseite bridge towers),
+  - castle block: `web/charles-bridge-from-top-…rainhard2-prague-7594788_1920.webp` (Pixabay), the view from the bridge tower over the bridge to the castle, cropped with `object-position: 40% 50%`.
+- **Listed in** `app/sitemap.ts` and `app/llms.txt/route.ts` (static entries). It is linked from `/sehenswuerdigkeiten-prag` and "Was kann man in Prag machen".
+- Don't add `export const dynamicParams = false` to dynamic routes. With `output: 'export'` it isn't needed, and in `next dev` it causes a bogus 500 "missing generateStaticParams()".
 
 ### Tours
 `src/data/tours.ts`: six tours (`castle`, `oldtown`, `custom`, `hidden`, `german`, `havel`). Each has an EN `slug` and a DE `slugDe`. All copy goes through translation keys in `translations.ts`.
@@ -173,15 +190,16 @@ npm run images       # public/images/sized/ AVIF+WebP (macOS sips + cwebp)
    - Live example: `/` serves "Zuzana Manová | Deutschsprachige Prag-Expertin…" instead of the title in `app/page.tsx`.
    - Live example: `/blog/strahov-monastery-prague` serves the old English title "Strahov Monastery: Quiet Views, Library, and Lore | Zuza Prague Tours".
    - Likely fix: remove the edge function (Next now emits correct metadata) or regenerate the JSON from current data.
-2. **Placeholder OG tags in `app/layout.tsx`:** `og:title="..."`, `og:image="https://your-site.com/new-thumbnail.jpg"` and `og:url="https://your-site.com/page"`. They appear first in `<head>`. Live on `/blog/prag-im-winter`, a page without a route-meta entry, where `og:image` is the placeholder. Remove these tags.
+2. ~~Placeholder OG tags in `app/layout.tsx`~~: **fixed 2026-10-09** (not deployed until pushed). The `your-site.com` placeholders are removed; every page now has a single set of OG tags from its own metadata.
 3. **All article text ships as JS** (~614 KB chunk), and English is not in the static HTML. This is the motivation for the deferred Astro migration (`.handoffs/0007----astro-migration/`, ~4–6 dev days).
 4. `ping-sitemaps.js`: Google's sitemap ping endpoint was retired in 2023, so that part is a no-op. IndexNow still works.
 5. `scripts/generate-sitemap.js` is unused (`app/sitemap.ts` replaced it). `blogData.ts` still contains a fake "API" stub (`blogApi`, `exportBlogPostToJSON`) that nothing uses.
+6. **macOS `sips` sometimes writes AVIFs that Chrome draws as fully transparent** (found 2026-10-09). The file loads and has the right size, but no pixels show. It happened with `charles-bridge-statue-1280/-1920` (the homepage closing-section backdrop vanished) and `prague-castle-1077` (castle tour card). Those three were re-encoded with ffmpeg (`libsvtav1`, `-crf 32`) and now render. `scripts/generate-responsive-images.cjs` still uses `sips`, so after `npm run images` / `images:force` or adding an image, check each new AVIF in Chrome, or switch the script's AVIF step to ffmpeg.
 
 ## 8. Open work and backlog
 
 - **In progress (uncommitted as of 2026-10-09):** responsive AVIF/WebP images (`ResponsivePicture`, `generate-responsive-images.cjs`, `public/images/sized/`) plus edits to journal JSON, `Home*.tsx` and `ZDROJE.md`.
-- **Not implemented:** `design_handoff_karlsbruecke_prager_burg` (German landing article targeting "Prag Stadtführer / Karlsbrücke / Prager Burg"; route `/karlsbruecke-prager-burg` still to be confirmed).
+- **Done 2026-10-09:** `design_handoff_karlsbruecke_prager_burg`, live as `/prag/karlsbruecke` after push (1:1 port, see §3). The handoff checklist also asks for links from the tours index and a homepage "keyword section". The homepage has no such section yet, and the tours-index link is not done.
 - **Deferred:** Astro migration (0007). Email-to-blog `ingest` pipeline (stub only).
 - **Backlog:** `TBD.md` (`/book` form dropdowns, photo, sticky WhatsApp, listings on Viator/GetYourGuide/Google Business Profile, keyword list) and `urls-links-2026-25-04.md` (SEO items; the noindex/robots part is done).
 - Finish the 31 draft journal migrations, or delete the ones that won't ship.

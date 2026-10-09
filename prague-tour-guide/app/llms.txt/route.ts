@@ -66,6 +66,7 @@ ${tourLines.join('\n')}
 - [Kontakt](${url('/contact')}): Telefon, WhatsApp und E-Mail
 - [WhatsApp](https://wa.me/${BRAND.phoneRaw.replace(/\D/g, '')}): direkt schreiben
 - [Über Zuzana Manová](${url('/zuzana-manova')}): Werdegang, Zertifizierungen, Arbeitsweise
+- [Karlsbrücke und Prager Burg mit Stadtführerin](${url('/prag/karlsbruecke')}): private Tour über die Brücke und hinauf zur Burg
 
 ## Prag planen
 

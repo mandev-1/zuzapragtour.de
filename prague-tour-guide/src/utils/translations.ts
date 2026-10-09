@@ -1260,6 +1260,14 @@ export const translations = {
     en: 'Leave a review',
     de: 'Tour bewerten',
   },
+  'footer.review.title': {
+    en: 'Have you toured Prague with Zuzana?',
+    de: 'Waren Sie mit Zuzana in Prag unterwegs?',
+  },
+  'footer.review.text': {
+    en: 'Your review helps other guests find the right guide. It only takes a minute.',
+    de: 'Ihre Bewertung hilft anderen Gästen, die richtige Führung zu finden. Es dauert nur eine Minute.',
+  },
 
   // Reviews / Social Proof
   'reviews.tripadvisor': {

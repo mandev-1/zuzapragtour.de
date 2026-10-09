@@ -130,12 +130,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Icon font subset (~4 KB, font-display: block): fetch it with the page,
             not after the CSS, so icons appear without delay. */}
         <link rel="preload" href="/fonts/material-symbols-subset.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <meta property="og:title" content="..." />
-        <meta property="og:description" content="..." />
-        <meta property="og:image" content="https://your-site.com/new-thumbnail.jpg" />
-        <meta property="og:url" content="https://your-site.com/page" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
         {/* AdSense site verification — a plain meta tag (no script, no cookies),
             kept even while ads are switched off so the account stays verified. */}
         <meta name="google-adsense-account" content={ADSENSE_CLIENT} />

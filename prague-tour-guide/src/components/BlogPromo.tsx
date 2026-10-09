@@ -42,7 +42,9 @@ const BlogPromo: React.FC = () => {
   const isHidden =
     pathname === '/' ||
     pathname === `/blog/${PROMO_SLUG}` ||
-    (pathname ?? '').startsWith('/bewerten');
+    (pathname ?? '').startsWith('/bewerten') ||
+    // Landing pages: their mobile contact bar sits where the promo would.
+    (pathname ?? '').startsWith('/prag/');
 
   React.useEffect(() => {
     if (isHidden) return;

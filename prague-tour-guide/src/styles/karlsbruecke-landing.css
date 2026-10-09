@@ -1,0 +1,117 @@
+/* ============================================================================
+   /prag/karlsbruecke: landing page "Karlsbrücke und Prager Burg".
+   Values 1:1 from design_handoff_karlsbruecke_prager_burg
+   (Karlsbruecke Prager Burg Artikel v2.dc.html). Fonts come from next/font
+   (app/layout.tsx): Italiana = --font-display, Cormorant Garamond =
+   --font-italic, Libre Caslon Text = --font-body, Inter Tight = --font-sans.
+   Base resets use :where() so the component classes below always win.
+   ============================================================================ */
+
+.kb {
+  /* Accent blue: the site's journal blue (Czech flag), added on request 2026-10-09. */
+  --kb-blue: #11457e;
+  --kb-blue-tint: #eef3f9;
+  background: #faf6ec;
+  color: #1a1714;
+  font-family: var(--font-body), Georgia, serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: clamp(48px, 8vh, 72px);
+}
+:where(.kb) :is(h1, h2, h3, p, figure, ul, blockquote) { margin: 0; }
+:where(.kb) ul { padding: 0; list-style: none; }
+:where(.kb) img { display: block; max-width: 100%; }
+:where(.kb) a { color: inherit; text-decoration: none; }
+
+.kb-sans { font-family: var(--font-sans), sans-serif; }
+
+/* ── Sections ─────────────────────────────────────────────── */
+.kb-section { margin: 0 auto; max-width: 1100px; padding: clamp(56px, 10vh, 88px) 20px 0; }
+.kb-section--hero { padding: 40px 20px 0; }
+
+/* ── Hero (Aufmerksamkeit) ────────────────────────────────── */
+.kb-crumb { font-family: var(--font-sans), sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--kb-blue); }
+.kb-crumb a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.kb-kicker { margin-top: 28px; display: inline-flex; align-items: center; gap: 0.8rem; font-family: var(--font-sans), sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.24em; color: var(--kb-blue); }
+.kb-kicker::before { content: ''; height: 1px; width: 28px; background: var(--kb-blue); }
+.kb-h1 { margin-top: 16px; font-family: var(--font-display), serif; font-size: clamp(2.4rem, 8vw, 4.4rem); font-weight: 400; line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; }
+.kb-h1 em { font-family: var(--font-italic), serif; font-style: italic; color: #6b1f2a; }
+.kb-lead { margin-top: 20px; font-family: var(--font-italic), serif; font-style: italic; font-size: clamp(1.3rem, 3vw, 1.6rem); line-height: 1.45; color: #6b1f2a; }
+.kb-byline { margin-top: 14px; font-family: var(--font-sans), sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: #6b6055; }
+.kb-hero { margin-top: 28px; }
+.kb-hero img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.kb-btns { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+.kb-btn { flex: 1 1 240px; display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 52px; border-radius: 6px; padding: 0 1.5rem; font-family: var(--font-sans), sans-serif; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; transition: background-color 200ms, color 200ms; }
+.kb-btn .material-symbols-outlined { font-size: 17px; line-height: 1; letter-spacing: normal; text-transform: none; }
+.kb-btn--primary { background: #6b1f2a; color: #ffffff; }
+.kb-btn--primary:hover { background: #4f1620; color: #ffffff; }
+.kb-btn--outline { border: 1px solid #1a1714; color: #1a1714; }
+.kb-btn--outline:hover { background: #1a1714; color: #faf6ec; }
+.kb-btn--cream { background: #f5efe4; color: #1a1714; }
+.kb-btn--cream:hover { background: #ffffff; color: #1a1714; }
+.kb-btn--outline-light { border: 1px solid #f5efe4; color: #f5efe4; }
+.kb-btn--outline-light:hover { background: #f5efe4; color: #1a1714; }
+
+/* ── Text ─────────────────────────────────────────────────── */
+.kb-h2 { font-family: var(--font-display), serif; font-size: clamp(2rem, 6vw, 2.9rem); font-weight: 400; line-height: 1.06; letter-spacing: -0.015em; }
+.kb-label { font-family: var(--font-sans), sans-serif; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.24em; color: var(--kb-blue); }
+.kb-label + .kb-h2 { margin-top: 12px; }
+.kb-p { margin-top: 18px; font-size: 1.08rem; line-height: 1.8; color: #3a332c; }
+.kb-p + .kb-p { margin-top: 14px; }
+
+/* ── Interesse: fact cards ────────────────────────────────── */
+.kb-facts { margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+.kb-fact { border: 1px solid #d9cfbc; border-radius: 8px; background: #fdfaf3; padding: 20px; }
+.kb-fact__value { font-family: var(--font-display), serif; font-size: 2rem; line-height: 1; color: var(--kb-blue); }
+.kb-fact__text { margin-top: 10px; font-size: 0.98rem; line-height: 1.6; color: #3a332c; }
+
+/* ── Verlangen: two-column blocks, route box, quote ───────── */
+.kb-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px, 5vw, 56px); align-items: start; }
+.kb-split + .kb-split { margin-top: clamp(40px, 7vh, 56px); }
+.kb-figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; }
+.kb-figure figcaption { margin-top: 10px; font-family: var(--font-sans), sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: #6b6055; }
+.kb-route { margin-top: clamp(40px, 7vh, 56px); border-radius: 8px; background: var(--kb-blue-tint); border-left: 3px solid var(--kb-blue); padding: 24px; }
+.kb-route__label { font-family: var(--font-sans), sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--kb-blue); }
+.kb-route p { margin-top: 12px; font-size: 1.05rem; line-height: 1.75; color: #3a332c; }
+.kb-route p + p { margin-top: 14px; }
+.kb-quote { margin-top: clamp(40px, 7vh, 56px); border-top: 2px solid var(--kb-blue); padding-top: 28px; }
+.kb-quote p { font-family: var(--font-italic), serif; font-style: italic; font-size: clamp(1.4rem, 3.5vw, 1.8rem); line-height: 1.4; color: #1a1714; }
+.kb-quote footer { margin-top: 14px; font-family: var(--font-sans), sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: #6b6055; }
+
+/* ── Einwände: FAQ rows ───────────────────────────────────── */
+.kb-faq { margin-top: 24px; border-top: 1px solid #d9cfbc; }
+.kb-faq > div { border-bottom: 1px solid #d9cfbc; padding: 20px 0; }
+.kb-faq h3 { font-size: 1.1rem; font-weight: 700; line-height: 1.4; }
+.kb-faq p { margin-top: 8px; font-size: 1.02rem; line-height: 1.75; color: #3a332c; }
+
+/* ── Handlung: CTA block ──────────────────────────────────── */
+.kb-cta-wrap { margin: clamp(56px, 10vh, 88px) auto 0; max-width: 1100px; padding: 0 20px; }
+.kb-cta { border-radius: 8px; background: #6b1f2a; padding: clamp(28px, 6vw, 48px) clamp(20px, 5vw, 40px); color: #f5efe4; }
+.kb-cta__kicker { font-family: var(--font-sans), sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.24em; color: #fdc34d; }
+.kb-cta__h2 { margin-top: 14px; font-family: var(--font-display), serif; font-size: clamp(2.2rem, 7vw, 3.2rem); font-weight: 400; line-height: 1.04; color: #f5efe4; }
+.kb-cta__text { margin-top: 16px; font-size: 1.08rem; line-height: 1.75; color: rgba(245, 239, 228, 0.92); }
+.kb-cta__links { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 20px; font-family: var(--font-sans), sans-serif; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; }
+.kb-cta__links a { color: #f5efe4; border-bottom: 1px solid rgba(245, 239, 228, 0.6); padding-bottom: 4px; }
+
+/* ── Author box ───────────────────────────────────────────── */
+.kb-author-wrap { margin: clamp(48px, 8vh, 72px) auto 0; max-width: 1100px; padding: 0 20px; }
+.kb-author { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; border-top: 1px solid #d9cfbc; padding-top: 28px; }
+.kb-author img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; object-position: center 18%; }
+.kb-author__body { flex: 1 1 240px; }
+.kb-author__name { font-family: var(--font-display), serif; font-size: 1.4rem; line-height: 1.2; }
+.kb-author__bio { margin-top: 6px; font-size: 1rem; line-height: 1.7; color: #3a332c; }
+.kb-author__link { margin-top: 10px; display: inline-block; font-family: var(--font-sans), sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: #6b1f2a; }
+
+/* ── Mobile sticky contact bar (below 768px only) ─────────── */
+.kb-bar { display: none; }
+@media (max-width: 767px) {
+  .kb-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; gap: 8px; border-top: 1px solid #d9cfbc; background: rgba(250, 246, 236, 0.97); padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
+  .kb-bar a { display: flex; min-height: 48px; align-items: center; justify-content: center; border-radius: 6px; padding: 0 12px; font-family: var(--font-sans), sans-serif; font-size: 13px; font-weight: 600; color: #1a1714; border: 1px solid #1a1714; }
+  .kb-bar a.kb-bar__main { flex: 1 1 auto; border: 0; background: #6b1f2a; color: #ffffff; text-transform: uppercase; letter-spacing: 0.1em; transition: background-color 200ms; }
+  .kb-bar a.kb-bar__main:hover { background: #4f1620; }
+  .kb-bar a.kb-bar__wa { min-width: 48px; }
+  /* The bar must not cover the end of the site footer. */
+  body:has(.kb-bar) { padding-bottom: 96px; }
+}

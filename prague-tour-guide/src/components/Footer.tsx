@@ -29,7 +29,8 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   // The home page renders its own full-bleed CTA section, so skip this
   // duplicate dark CTA band there (keep it on every other page).
-  const isHome = usePathname() === '/';
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   return (
     <footer className="w-full">
@@ -123,6 +124,27 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Review prompt for past guests (→ /bewerten); not needed on /bewerten itself. */}
+        {pathname !== '/bewerten' && (
+          <div className="border-t border-stone-200" data-track-section="footer-review">
+            <div className="mx-auto flex max-w-editorial flex-col gap-5 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-10">
+              <div className="flex items-start gap-4">
+                <span className="mt-1 shrink-0 text-base tracking-[0.12em] text-brass" aria-hidden>★★★★★</span>
+                <div>
+                  <p className="font-headline text-lg text-ink">{t('footer.review.title')}</p>
+                  <p className="mt-1 font-body text-sm leading-relaxed text-stone-600">{t('footer.review.text')}</p>
+                </div>
+              </div>
+              <Link
+                href="/bewerten"
+                className="inline-flex min-h-[44px] shrink-0 items-center justify-center rounded-md border border-accent px-6 font-label text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-paper"
+              >
+                {t('footer.review')}
+              </Link>
+            </div>
+          </div>
+        )}
+
         <div className="border-t border-stone-200">
           <div className="mx-auto flex max-w-editorial flex-col items-center justify-between gap-3 px-5 py-5 md:flex-row md:px-10">
             <p className="font-label text-xs text-stone-400">© {currentYear} Zuza Prague Tours – Zuzana Manová. {t('footer.rights')}</p>
@@ -130,8 +152,6 @@ const Footer: React.FC = () => {
               <Link href="/privacy" className="py-[10px] font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline md:py-0">{t('footer.privacy')}</Link>
               <span className="text-stone-300" aria-hidden>·</span>
               <Link href="/terms" className="py-[10px] font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline md:py-0">{t('footer.terms')}</Link>
-              <span className="text-stone-300" aria-hidden>·</span>
-              <Link href="/bewerten" className="py-[10px] font-label text-xs text-stone-400 underline-offset-4 hover:text-ink hover:underline md:py-0">{t('footer.review')}</Link>
             </div>
           </div>
         </div>
