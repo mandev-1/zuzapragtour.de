@@ -35,7 +35,7 @@
   "heroCap": {
     "de": "Der Weihnachtsmarkt auf dem Altstädter Ring, kurz nach Sonnenuntergang. Im Dezember ist das gegen 16 Uhr."
   },
-  "heroCredit": "Zuza Prague Tours",
+  "heroCredit": "Alisa Anton / Unsplash",
   "title": {
     "de": "Prag im Winter: elf Erlebnisse für Genießer und Fotografen – und sieben Mythen im Faktencheck"
   },
@@ -410,7 +410,7 @@
       "cap": {
         "de": "Der Theologische Saal. So sehen Sie ihn von der Tür aus, hinter der Absperrung."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Hieu Vu Minh / Unsplash",
       "aspect": "3/2",
       "focus": {
         "x": 50,
@@ -1280,8 +1280,7 @@
       ],
       "cap": {
         "de": "Zwei Motive für die blaue Stunde: der Veitsdom im Advent und die Karlsbrücke vom Altstädter Brückenturm."
-      },
-      "credit": "Zuza Prague Tours"
+      }
     },
     {
       "t": "facts",
@@ -1371,7 +1370,7 @@
       "cap": {
         "de": "Links das, was Sie vermeiden wollen: Treppen und nasses Pflaster. Rechts die Lösung: Tram 22 oder 23 bis an die Burg, ab 65 Jahren kostenlos."
       },
-      "credit": "Zuza Prague Tours"
+      "credit": "Maksim Kriukov / Unsplash · Denisa-Elena Ficau / Unsplash"
     },
     {
       "t": "list",

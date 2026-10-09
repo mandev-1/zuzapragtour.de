@@ -1,0 +1,117 @@
+{
+  "/images/prague-castle.jpg": {
+    "base": "/images/sized/prague-castle",
+    "widths": [
+      320,
+      640,
+      960,
+      1077
+    ],
+    "w": 1077,
+    "h": 721
+  },
+  "/images/blog-jewish-quarter-2-min.jpg": {
+    "base": "/images/sized/blog-jewish-quarter-2-min",
+    "widths": [
+      320,
+      502
+    ],
+    "w": 502,
+    "h": 750
+  },
+  "/images/blog-night-prague-min.jpg": {
+    "base": "/images/sized/blog-night-prague-min",
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "w": 3472,
+    "h": 4624
+  },
+  "/images/blog-hidden-gems-min.jpg": {
+    "base": "/images/sized/blog-hidden-gems-min",
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "w": 3608,
+    "h": 2736
+  },
+  "/images/prague-castle-cathedral.jpg": {
+    "base": "/images/sized/prague-castle-cathedral",
+    "widths": [
+      320,
+      571
+    ],
+    "w": 571,
+    "h": 855
+  },
+  "/images/havel-tour.jpg": {
+    "base": "/images/sized/havel-tour",
+    "widths": [
+      320,
+      640,
+      747
+    ],
+    "w": 747,
+    "h": 686
+  },
+  "/images/guest-tourguide.jpg": {
+    "base": "/images/sized/guest-tourguide",
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "w": 1600,
+    "h": 1200
+  },
+  "/images/guest-night.jpeg": {
+    "base": "/images/sized/guest-night",
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "w": 1600,
+    "h": 1200
+  },
+  "/images/guest-food.jpeg": {
+    "base": "/images/sized/guest-food",
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "w": 1600,
+    "h": 1200
+  },
+  "/images/boat-vltava.jpg": {
+    "base": "/images/sized/boat-vltava",
+    "widths": [
+      320,
+      640,
+      960,
+      1280
+    ],
+    "w": 1600,
+    "h": 1200
+  },
+  "/images/charles-bridge-statue.jpg": {
+    "base": "/images/sized/charles-bridge-statue",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "w": 2560,
+    "h": 1706
+  }
+}

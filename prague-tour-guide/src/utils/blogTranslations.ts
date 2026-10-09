@@ -203,7 +203,7 @@ export const blogTranslations = {
 
 <p>The two things worth seeking out specifically: the sala terrena at the far end, a three-arched loggia painted with Greek mythology scenes including episodes from the Trojan War; and the stalactite wall (Krápníková stěna) in the so-called Secret Garden to the side — an artificial grotto wall encrusted with demon heads, serpent bodies, owl faces, and stone formations that look like something between geology and nightmare. The bronze sculptures in the garden are 20th-century copies; the originals by Adriaen de Vries were taken as war booty by Swedish troops in 1648 and now stand at Drottningholm Palace near Stockholm.</p>
 
-<p>I have written about this garden in more detail <a href="/blog/wallenstein-garden-prague">in a separate post here</a> if you want the full story.</p>
+<p>I have written about this garden in more detail <a href="/blog/waldstein-garten-prag">in a separate post here</a> if you want the full story.</p>
 
 <h2>How to visit all three in one afternoon</h2>
 

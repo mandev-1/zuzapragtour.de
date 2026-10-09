@@ -20,15 +20,17 @@ import { REVIEWS, GALLERY } from './Home';
 import HomeHeroPicture from './HomeHeroPicture';
 import { Kicker, SHELL } from './site/SiteUI';
 import { Portrait } from './site/Portrait';
+import { ResponsivePicture } from './site/ResponsivePicture';
 
-/** Tour cards in the order of the design, with in-page anchors and thumbnails. */
+/** Tour cards in the order of the design, with in-page anchors and thumbnails
+ *  (responsive variants via ResponsivePicture, see scripts/generate-responsive-images.cjs). */
 const TOUR_CARDS: { id: string; anchor: string; thumb: string }[] = [
-  { id: 'oldtown', anchor: 'tour-altstadt', thumb: '/images/thumbs/blog-jewish-quarter-2-min.jpg' },
-  { id: 'castle', anchor: 'tour-burg', thumb: '/images/thumbs/prague-castle.jpg' },
-  { id: 'german', anchor: 'tour-erbe', thumb: '/images/thumbs/prague-castle-cathedral.jpg' },
-  { id: 'havel', anchor: 'tour-havel', thumb: '/images/thumbs/havel-tour.jpg' },
-  { id: 'hidden', anchor: 'tour-versteckt', thumb: '/images/thumbs/blog-hidden-gems-min.jpg' },
-  { id: 'custom', anchor: 'tour-individuell', thumb: '/images/thumbs/blog-night-prague-min.jpg' },
+  { id: 'oldtown', anchor: 'tour-altstadt', thumb: '/images/blog-jewish-quarter-2-min.jpg' },
+  { id: 'castle', anchor: 'tour-burg', thumb: '/images/prague-castle.jpg' },
+  { id: 'german', anchor: 'tour-erbe', thumb: '/images/prague-castle-cathedral.jpg' },
+  { id: 'havel', anchor: 'tour-havel', thumb: '/images/havel-tour.jpg' },
+  { id: 'hidden', anchor: 'tour-versteckt', thumb: '/images/blog-hidden-gems-min.jpg' },
+  { id: 'custom', anchor: 'tour-individuell', thumb: '/images/blog-night-prague-min.jpg' },
 ];
 
 const AUDIENCE: { key: string; anchor: string }[] = [
@@ -38,12 +40,12 @@ const AUDIENCE: { key: string; anchor: string }[] = [
   { key: 'groups', anchor: 'tour-individuell' },
 ];
 
-/** The 4 guest photos as a strip (480px thumbnails are plenty at 160–220px). */
+/** The 4 guest photos as a strip, 160px high (a 4:3 photo paints ≥214px wide). */
 const STRIP = [
-  { src: '/images/thumbs/guest-tourguide.jpg', w: 220 },
-  { src: '/images/thumbs/guest-night.jpeg', w: 160 },
-  { src: '/images/thumbs/guest-food.jpeg', w: 160 },
-  { src: '/images/thumbs/boat-vltava.jpg', w: 220 },
+  { src: '/images/guest-tourguide.jpg', w: 220 },
+  { src: '/images/guest-night.jpeg', w: 160 },
+  { src: '/images/guest-food.jpeg', w: 160 },
+  { src: '/images/boat-vltava.jpg', w: 220 },
 ];
 
 function Icon({ name, size, fill, className = '' }: { name: string; size: number; fill?: boolean; className?: string }) {
@@ -182,7 +184,7 @@ const HomeMobileV2: React.FC = () => {
                   className="grid scroll-mt-[84px] grid-cols-[104px_minmax(0,1fr)] items-start gap-4 border-b border-rule pb-[14px] pt-5"
                 >
                   <Link href={href} tabIndex={-1} aria-hidden="true">
-                    <img src={card.thumb} alt="" loading="lazy" className="block h-[132px] w-[104px] rounded-[4px] bg-ivory-deep object-cover" />
+                    <ResponsivePicture src={card.thumb} alt="" sizes="200px" className="block h-[132px] w-[104px] rounded-[4px] bg-ivory-deep object-cover" />
                   </Link>
                   <div className="min-w-0">
                     <Link href={href} className="block font-display text-[24px] leading-[1.08] text-ink no-underline">
@@ -250,11 +252,11 @@ const HomeMobileV2: React.FC = () => {
         </div>
         <div className="mt-3 flex gap-[10px] overflow-x-auto px-[clamp(1.5rem,5vw,5rem)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {STRIP.map((img, i) => (
-            <img
+            <ResponsivePicture
               key={img.src}
               src={img.src}
               alt={de ? GALLERY[i].de : GALLERY[i].en}
-              loading="lazy"
+              sizes="220px"
               className="h-[160px] flex-none object-cover"
               style={{ width: img.w }}
             />
@@ -319,11 +321,7 @@ const HomeMobileV2: React.FC = () => {
       {/* ── 6 · Enquiry ──────────────────────────────────────────── */}
       <section id="anfrage" ref={enquiryRef} className="relative overflow-hidden py-[clamp(3.75rem,9vh,6.5rem)] text-ivory">
         <div className="absolute inset-0 z-0">
-          <picture>
-            <source type="image/avif" srcSet="/images/hero/charles-bridge-statue-900.avif" />
-            <source type="image/webp" srcSet="/images/hero/charles-bridge-statue-900.webp" />
-            <img src="/images/thumbs/charles-bridge-statue.jpg" alt="" aria-hidden="true" loading="lazy" className="h-full w-full object-cover" />
-          </picture>
+          <ResponsivePicture src="/images/charles-bridge-statue.jpg" alt="" aria-hidden sizes="100vw" className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(79,22,32,0.86), rgba(20,16,12,0.92))' }} />
         </div>
         <div className={`relative z-[2] ${SHELL}`}>

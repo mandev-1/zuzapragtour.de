@@ -20,6 +20,7 @@ import TourHqWidget from './TourHqWidget';
 import HomeHeroPicture from './HomeHeroPicture';
 import { Kicker, Reveal, Btn, ULink, Stat, SHELL } from './site/SiteUI';
 import { Portrait } from './site/Portrait';
+import { ResponsivePicture } from './site/ResponsivePicture';
 
 /* ─── Static testimonial data ────────────────────────────────── */
 export const REVIEWS = [
@@ -31,11 +32,12 @@ export const REVIEWS = [
     en: { quote: 'Perfect for our family. She fascinated the kids with local legends.', who: 'The Thompsons', src: 'Private Booking' } },
 ];
 
+/* `sizes` = painted width of the 4:3 photos in their object-cover tiles. */
 export const GALLERY = [
-  { src: '/images/guest-tourguide.jpg', de: 'Zuzana mit Gästen', en: 'Zuzana with guests', cls: 'col-span-2 row-span-2', delay: 0 },
-  { src: '/images/guest-night.jpeg', de: 'Prag bei Nacht', en: 'Prague at night', cls: '', delay: 80 },
-  { src: '/images/guest-food.jpeg', de: 'Böhmische Küche', en: 'Bohemian cuisine', cls: '', delay: 160 },
-  { src: '/images/boat-vltava.jpg', de: 'Boot auf der Moldau', en: 'Boat on the Vltava', cls: 'col-span-2', delay: 80 },
+  { src: '/images/guest-tourguide.jpg', de: 'Zuzana mit Gästen', en: 'Zuzana with guests', cls: 'col-span-2 row-span-2', sizes: '(min-width: 760px) 640px, 100vw', delay: 0 },
+  { src: '/images/guest-night.jpeg', de: 'Prag bei Nacht', en: 'Prague at night', cls: '', sizes: '(min-width: 760px) 310px, 50vw', delay: 80 },
+  { src: '/images/guest-food.jpeg', de: 'Böhmische Küche', en: 'Bohemian cuisine', cls: '', sizes: '(min-width: 760px) 310px, 50vw', delay: 160 },
+  { src: '/images/boat-vltava.jpg', de: 'Boot auf der Moldau', en: 'Boat on the Vltava', cls: 'col-span-2', sizes: '(min-width: 760px) 540px, 100vw', delay: 80 },
 ];
 
 const Home: React.FC = () => {
@@ -43,6 +45,10 @@ const Home: React.FC = () => {
   const de = language !== 'en';
   const reviews = REVIEWS.map((r) => (de ? r.de : r.en));
   const [activeTour, setActiveTour] = React.useState(0);
+  // The sticky preview stacks all six tour photos; only the active one is
+  // fetched until the visitor reaches for the list.
+  const [toursWarm, setToursWarm] = React.useState(false);
+  const warmTours = () => setToursWarm(true);
 
   React.useEffect(() => {
     if (window.location.hash === '#about') {
@@ -127,7 +133,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 items-start gap-[clamp(2rem,5vw,4.5rem)] min-[900px]:grid-cols-[1.05fr_0.95fr]">
-            <ul className="m-0 list-none border-t border-rule p-0">
+            <ul className="m-0 list-none border-t border-rule p-0" onPointerEnter={warmTours} onFocus={warmTours}>
               {tours.map((tr, i) => {
                 const active = activeTour === i;
                 const title = t(tr.titleKey as any);
@@ -153,7 +159,9 @@ const Home: React.FC = () => {
             <div aria-hidden className="sticky top-[120px] hidden aspect-[4/5] overflow-hidden rounded-lg bg-ivory-deep shadow-[0_18px_40px_rgba(26,23,20,0.12)] min-[900px]:block">
               {tours.map((tr, i) => (
                 <figure key={tr.id} className={`absolute inset-0 m-0 transition-opacity duration-700 ease-brand ${activeTour === i ? 'opacity-100' : 'opacity-0'}`}>
-                  <img src={tr.image} alt="" className="h-full w-full object-cover" loading="lazy" />
+                  {(toursWarm || activeTour === i) && (
+                    <ResponsivePicture src={tr.image} alt="" sizes="(min-width: 1240px) 800px, 64vw" className="h-full w-full object-cover" />
+                  )}
                   <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[rgba(20,16,12,0.72)] to-transparent px-[1.6rem] pb-[1.4rem] pt-[2.4rem] font-italic text-[1.1rem] italic text-ivory">{t(tr.descriptionKey as any)}</figcaption>
                 </figure>
               ))}
@@ -210,7 +218,7 @@ const Home: React.FC = () => {
           <div className="mt-[clamp(2rem,4vh,3rem)] grid auto-rows-[170px] grid-cols-2 gap-[14px] min-[760px]:auto-rows-[230px] min-[760px]:grid-cols-4">
             {GALLERY.map((g) => (
               <Reveal as="figure" key={g.src} delay={g.delay} className={`group relative m-0 overflow-hidden ${g.cls}`}>
-                <img src={g.src} alt={de ? g.de : g.en} loading="lazy" className="h-full w-full object-cover transition-transform duration-[900ms] ease-brand group-hover:scale-[1.07]" />
+                <ResponsivePicture src={g.src} alt={de ? g.de : g.en} sizes={g.sizes} className="h-full w-full object-cover transition-transform duration-[900ms] ease-brand group-hover:scale-[1.07]" />
               </Reveal>
             ))}
           </div>
@@ -256,7 +264,7 @@ const Home: React.FC = () => {
       {/* ── CTA (full-bleed) ─────────────────────────────────── */}
       <section data-track-section="closing-cta" className="relative overflow-hidden py-[clamp(5rem,13vh,9rem)] text-center text-ivory">
         <div className="absolute inset-0 z-0">
-          <img src="/images/charles-bridge-statue.jpg" alt="" aria-hidden className="h-full w-full object-cover" loading="lazy" />
+          <ResponsivePicture src="/images/charles-bridge-statue.jpg" alt="" aria-hidden sizes="100vw" className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(79,22,32,0.82), rgba(20,16,12,0.86))' }} />
         </div>
         <div className={`relative z-[2] ${SHELL}`}>

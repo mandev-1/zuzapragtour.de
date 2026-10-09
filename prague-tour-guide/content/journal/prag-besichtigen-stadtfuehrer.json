@@ -186,7 +186,8 @@
       "focus": {
         "x": 50,
         "y": 50
-      }
+      },
+      "credit": "Nishank Saini / Unsplash"
     },
     {
       "t": "p",
@@ -227,7 +228,8 @@
       "focus": {
         "x": 50,
         "y": 50
-      }
+      },
+      "credit": "Patrick Pahlke / Unsplash"
     },
     {
       "t": "p",
@@ -262,7 +264,7 @@
       "cap": {
         "de": "Mit der Tram zur Burg: Wer oben anfängt, läuft den Rest des Tages bergab."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Denisa-Elena Ficau / Unsplash",
       "layout": "side"
     },
     {
@@ -292,7 +294,8 @@
       "focus": {
         "x": 50,
         "y": 50
-      }
+      },
+      "credit": "aes / Unsplash"
     },
     {
       "t": "p",

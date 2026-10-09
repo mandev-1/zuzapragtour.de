@@ -30,7 +30,7 @@
   "heroCap": {
     "de": "Die Moldaubrücken mit dem Burgberg. Zwölf der zwanzig Sehenswürdigkeiten liegen in diesem Bild oder knapp daneben."
   },
-  "heroCredit": "Zuza Prague Tours",
+  "heroCredit": "Mikhail | luxkstn / Unsplash",
   "title": {
     "de": "Sehenswürdigkeiten in Prag: die 20 wichtigsten, sortiert von einer Stadtführerin"
   },
@@ -348,7 +348,7 @@
       "cap": {
         "de": "Der Veitsdom im Dritten Burghof."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Alex Aghajanyan / Unsplash",
       "layout": "side"
     },
     {
@@ -384,7 +384,7 @@
       "cap": {
         "de": "Mittags drängen sich auf der Brücke Tausende Besucher."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Park Guapo / Unsplash",
       "layout": "side"
     },
     {
@@ -420,7 +420,7 @@
       "cap": {
         "de": "Der Altstädter Ring mit der Teynkirche."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Getty Images / Unsplash+",
       "layout": "side"
     },
     {
@@ -486,7 +486,8 @@
       "cap": {
         "de": "Kleinseite und Burg, vom anderen Ufer der Moldau aus."
       },
-      "layout": "side"
+      "layout": "side",
+      "credit": "Zichao Zhang / Unsplash"
     },
     {
       "t": "p",
@@ -539,7 +540,7 @@
     {
       "t": "p",
       "html": {
-        "de": "<strong>Zuzanas Tipp:</strong> Der ideale Start für einen Tag auf dem Burgberg, danach geht es nur noch bergab. <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster: Bibliothek, Aussicht, Weg</a>"
+        "de": "<strong>Zuzanas Tipp:</strong> Der ideale Start für einen Tag auf dem Burgberg, danach geht es nur noch bergab. <a href=\"/blog/strahov-kloster-prag\">Strahov-Kloster: Bibliothek, Aussicht, Weg</a>"
       }
     },
     {
@@ -551,7 +552,7 @@
       "cap": {
         "de": "Das Strahov-Kloster über den Dächern der Kleinseite."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Hieu Vu Minh / Unsplash",
       "layout": "side"
     },
     {
@@ -585,7 +586,8 @@
       "focus": {
         "x": 50,
         "y": 50
-      }
+      },
+      "credit": "Lukáš Konvica / Unsplash"
     },
     {
       "t": "p",
@@ -675,7 +677,7 @@
     {
       "t": "p",
       "html": {
-        "de": "<strong>Zuzanas Tipp:</strong> Fünf Minuten von der Burgtreppe und trotzdem fast immer ruhig. <a href=\"/blog/wallenstein-garden-prague\">Der Waldstein-Garten in Prag</a>"
+        "de": "<strong>Zuzanas Tipp:</strong> Fünf Minuten von der Burgtreppe und trotzdem fast immer ruhig. <a href=\"/blog/waldstein-garten-prag\">Der Waldstein-Garten in Prag</a>"
       }
     },
     {
@@ -687,7 +689,7 @@
       "cap": {
         "de": "Das Parterre des Waldstein-Gartens."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "Roman Boed",
       "layout": "side"
     },
     {

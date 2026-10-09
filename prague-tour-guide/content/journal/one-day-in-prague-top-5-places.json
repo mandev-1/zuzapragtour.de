@@ -218,7 +218,8 @@
       "src": "/images/charles-bridge-pretty-picture.jpg",
       "cap": {
         "de": "Die Karlsbrücke — am eindrucksvollsten früh morgens oder nach 18 Uhr."
-      }
+      },
+      "credit": "Martin Krchnacek / Unsplash"
     },
     {
       "t": "p",
@@ -255,7 +256,8 @@
       "src": "/images/old-town-square.jpg",
       "cap": {
         "de": "Staroměstské náměstí — der Altstädter Ring mit der Orloj und der Týnkirche."
-      }
+      },
+      "credit": "Getty Images / Unsplash+"
     },
     {
       "t": "p",

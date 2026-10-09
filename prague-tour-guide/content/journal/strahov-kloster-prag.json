@@ -1,10 +1,12 @@
 {
-  "slug": "strahov-monastery-prague",
-  "slugDe": "strahov-kloster-prag",
+  "slug": "strahov-kloster-prag",
   "languages": [
     "de"
   ],
   "status": "published",
+  "redirectFrom": [
+    "/blog/strahov-monastery-prague"
+  ],
   "layout": "v2",
   "date": "2025-10-18",
   "dateDisplay": {
@@ -32,7 +34,7 @@
   "heroCap": {
     "de": "Der Theologische Saal der Strahover Bibliothek, wie Sie ihn von der Tür aus sehen."
   },
-  "heroCredit": "Zuza Prague Tours",
+  "heroCredit": "Hieu Vu Minh / Unsplash",
   "title": {
     "de": "Strahov-Kloster in Prag: Bibliothek, Aussicht und der ruhige Weg zur Burg"
   },
@@ -308,7 +310,7 @@
     {
       "t": "p",
       "html": {
-        "de": "Wer die stilleren Ecken der Kleinseite sucht, findet unten die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und den <a href=\"/blog/wallenstein-garden-prague\">Waldstein-Garten</a> mit der Tropfsteinwand."
+        "de": "Wer die stilleren Ecken der Kleinseite sucht, findet unten die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und den <a href=\"/blog/waldstein-garten-prag\">Waldstein-Garten</a> mit der Tropfsteinwand."
       }
     },
     {
@@ -470,7 +472,7 @@
           }
         },
         {
-          "href": "/blog/wallenstein-garden-prague",
+          "href": "/blog/waldstein-garten-prag",
           "text": {
             "de": "Waldstein-Garten und Tropfsteinwand"
           }

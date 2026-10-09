@@ -1,10 +1,12 @@
 {
-  "slug": "wallenstein-garden-prague",
-  "slugDe": "waldstein-garten-prag",
+  "slug": "waldstein-garten-prag",
   "languages": [
     "de"
   ],
   "status": "published",
+  "redirectFrom": [
+    "/blog/wallenstein-garden-prague"
+  ],
   "layout": "v2",
   "date": "2026-04-16",
   "dateDisplay": {
@@ -332,7 +334,7 @@
     {
       "t": "p",
       "html": {
-        "de": "Der Waldstein-Garten passt gut zwischen die Burg und die Karlsbrücke. Wer von der Burg über die Alte Schlossstiege herunterkommt, ist in fünf Minuten am Eingang Letenská. Danach liegen die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten unter der Prager Burg</a> und die stillen Ecken aus dem Artikel <a href=\"/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps\">Kleinseite bis Karlsbrücke: Geheimtipps</a> gleich um die Ecke. Wer früh am Tag oben anfangen möchte, beginnt im <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster</a>."
+        "de": "Der Waldstein-Garten passt gut zwischen die Burg und die Karlsbrücke. Wer von der Burg über die Alte Schlossstiege herunterkommt, ist in fünf Minuten am Eingang Letenská. Danach liegen die <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten unter der Prager Burg</a> und die stillen Ecken aus dem Artikel <a href=\"/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps\">Kleinseite bis Karlsbrücke: Geheimtipps</a> gleich um die Ecke. Wer früh am Tag oben anfangen möchte, beginnt im <a href=\"/blog/strahov-kloster-prag\">Strahov-Kloster</a>."
       }
     },
     {

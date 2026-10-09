@@ -31,7 +31,7 @@
   "heroCap": {
     "de": "Der Altstädter Ring mit der Teynkirche."
   },
-  "heroCredit": "Zuza Prague Tours",
+  "heroCredit": "Getty Images / Unsplash+",
   "title": {
     "de": "Was kann man in Prag machen? Zwölf Dinge, die sich wirklich lohnen"
   },
@@ -262,7 +262,8 @@
       "focus": {
         "x": 50,
         "y": 50
-      }
+      },
+      "credit": "Raik Loesche / Unsplash"
     },
     {
       "t": "list",
@@ -281,7 +282,7 @@
     {
       "t": "p",
       "html": {
-        "de": "Das Burgareal selbst betreten Sie kostenlos, für die Innenräume genügt den meisten Besuchern Rundgang B. Wie Sie die Burg ohne Gedränge schaffen, steht im <a href=\"/blog/prager-burg-vollstaendiger-besucher-guide\">Besucher-Guide zur Prager Burg</a>. Mein Tipp: mit der Tram hinauf und über das <a href=\"/blog/strahov-monastery-prague\">Strahov-Kloster</a> anfangen, dann geht es den ganzen Tag bergab."
+        "de": "Das Burgareal selbst betreten Sie kostenlos, für die Innenräume genügt den meisten Besuchern Rundgang B. Wie Sie die Burg ohne Gedränge schaffen, steht im <a href=\"/blog/prager-burg-vollstaendiger-besucher-guide\">Besucher-Guide zur Prager Burg</a>. Mein Tipp: mit der Tram hinauf und über das <a href=\"/blog/strahov-kloster-prag\">Strahov-Kloster</a> anfangen, dann geht es den ganzen Tag bergab."
       }
     },
     {
@@ -314,7 +315,8 @@
       "focus": {
         "x": 50,
         "y": 55
-      }
+      },
+      "credit": "William Zhang / Unsplash"
     },
     {
       "t": "p",
@@ -404,7 +406,7 @@
       "cap": {
         "de": "Josefov: Ohne Erklärung bleiben viele Gebäude hier nur schöne Fassaden."
       },
-      "credit": "Zuza Prague Tours",
+      "credit": "© Jewish Museum in Prague",
       "layout": "side"
     },
     {
@@ -442,7 +444,7 @@
     {
       "t": "p",
       "html": {
-        "de": "Die Insel Kampa ist mein persönlicher Lieblingsort in Prag: ein kleiner Park direkt am Wasser, mit Blick auf die Brückenbögen und fast ohne Souvenirläden. Zwei Minuten entfernt liegt die John-Lennon-Mauer, entstanden nach Lennons Tod 1980, immer wieder übermalt und neu beschrieben. Wer Ruhe sucht, findet sie in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und im <a href=\"/blog/wallenstein-garden-prague\">Waldstein-Garten</a>."
+        "de": "Die Insel Kampa ist mein persönlicher Lieblingsort in Prag: ein kleiner Park direkt am Wasser, mit Blick auf die Brückenbögen und fast ohne Souvenirläden. Zwei Minuten entfernt liegt die John-Lennon-Mauer, entstanden nach Lennons Tod 1980, immer wieder übermalt und neu beschrieben. Wer Ruhe sucht, findet sie in den <a href=\"/blog/three-secret-gardens-mala-strana-prague\">Gärten der Kleinseite</a> und im <a href=\"/blog/waldstein-garten-prag\">Waldstein-Garten</a>."
       }
     },
     {
@@ -695,7 +697,8 @@
       "focus": {
         "x": 50,
         "y": 50
-      }
+      },
+      "credit": "Jiri Hajek / Unsplash"
     },
     {
       "t": "h2",
@@ -729,7 +732,7 @@
             "de": "Was kann man in Prag bei Regen machen?"
           },
           "a": {
-            "de": "Veitsdom und Königspalast, die Synagogen in Josefov, die <a href=\"/blog/strahov-monastery-prague\">Strahover Bibliothek</a>, das Klementinum oder eines der Museen aus der <a href=\"/blog/all-museums-in-prague-complete-guide\">Museumsübersicht</a>."
+            "de": "Veitsdom und Königspalast, die Synagogen in Josefov, die <a href=\"/blog/strahov-kloster-prag\">Strahover Bibliothek</a>, das Klementinum oder eines der Museen aus der <a href=\"/blog/all-museums-in-prague-complete-guide\">Museumsübersicht</a>."
           }
         },
         {

@@ -77,6 +77,20 @@
   status = 301
   force = true
 
+# German-only articles keep one German URL; the old English slug 301s to it.
+# Keep in sync with `redirectFrom` in content/journal/{strahov-kloster-prag,waldstein-garten-prag}.json.
+[[redirects]]
+  from = "/blog/strahov-monastery-prague"
+  to = "/blog/strahov-kloster-prag"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/wallenstein-garden-prague"
+  to = "/blog/waldstein-garten-prag"
+  status = 301
+  force = true
+
 # Internal docs in the images folder (sources/licences) are not public.
 [[redirects]]
   from = "/images/ZDROJE.md"

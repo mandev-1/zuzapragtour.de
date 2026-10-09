@@ -27,9 +27,9 @@ D = lambda v: {'de': v}
 # Design-file links → site URLs.
 LINKS = {
     'Blog Journal v4.dc.html': '/blog',
-    'Blog Strahov Kloster.dc.html': '/blog/strahov-monastery-prague',
+    'Blog Strahov Kloster.dc.html': '/blog/strahov-kloster-prag',
     'Blog Was kann man in Prag machen.dc.html': '/blog/was-kann-man-in-prag-machen',
-    'Blog Waldstein Garten.dc.html': '/blog/wallenstein-garden-prague',
+    'Blog Waldstein Garten.dc.html': '/blog/waldstein-garten-prag',
     'Blog Kleinseite Karlsbruecke Geheimtipps.dc.html': '/blog/tropfsteinwand-mala-strana-karlsbruecke-geheimtipps',
     'Blog Prag im Winter.dc.html': '/blog/prag-im-winter',
     'Blog Prag besichtigen Stadtfuehrer.dc.html': '/blog/prag-besichtigen-stadtfuehrer',

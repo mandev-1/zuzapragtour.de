@@ -73,7 +73,8 @@
     },
     {
       "t": "image",
-      "src": "/images/charles-bridge-2-min.jpg"
+      "src": "/images/charles-bridge-2-min.jpg",
+      "credit": "Cengiz Özarpat / Unsplash"
     },
     {
       "t": "h2",
@@ -140,7 +141,8 @@
     },
     {
       "t": "image",
-      "src": "/images/old-town-square.jpg"
+      "src": "/images/old-town-square.jpg",
+      "credit": "Getty Images / Unsplash+"
     },
     {
       "t": "h2",
@@ -279,5 +281,6 @@
         "en": "That is the whole idea: install Lítačka for tickets and Tramoji for live departures, pay in crowns, validate or tap once, then ride. Both apps are free and take five minutes to set up. Once that is sorted, you can focus on the city instead of the fine print."
       }
     }
-  ]
+  ],
+  "heroCredit": "Maksim Kriukov / Unsplash"
 }

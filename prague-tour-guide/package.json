@@ -7,13 +7,15 @@
   "scripts": {
     "dev": "node scripts/generate-journal.cjs && next dev",
     "start": "next dev",
-    "prebuild": "node scripts/generate-thumbnails.cjs && node scripts/generate-journal.cjs",
+    "prebuild": "node scripts/generate-thumbnails.cjs && node scripts/generate-responsive-images.cjs && node scripts/generate-journal.cjs",
     "build": "next build",
     "postbuild": "node scripts/ping-sitemaps.js",
     "gen:journal": "node scripts/generate-journal.cjs",
     "new:blog": "node scripts/new-blog-post.cjs",
     "thumbs": "node scripts/generate-thumbnails.cjs",
-    "thumbs:force": "node scripts/generate-thumbnails.cjs --force"
+    "thumbs:force": "node scripts/generate-thumbnails.cjs --force",
+    "images": "node scripts/generate-responsive-images.cjs",
+    "images:force": "node scripts/generate-responsive-images.cjs --force"
   },
   "keywords": [
     "Prague tours",
