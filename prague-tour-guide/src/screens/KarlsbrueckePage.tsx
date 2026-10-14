@@ -40,7 +40,15 @@ const KarlsbrueckePage: React.FC = () => (
         <p className="kb-lead">
           Zwei Orte, die fast jeder Prag-Besucher sehen will. Mit einer zertifizierten Expertin sehen Sie dabei mehr als die Fotomotive.
         </p>
-        <div className="kb-byline">Von {BRAND.personName} · Aktualisiert Oktober 2026</div>
+        <div className="kb-byline">
+          <img src="/images/hero/zuzana-avatar-192.jpg" alt="" width={52} height={52} />
+          <div>
+            <div className="kb-byline__by">
+              Von <Link href="/zuzana-manova">{BRAND.personName}</Link>, staatlich geprüfte Stadtführerin
+            </div>
+            <div className="kb-byline__date">Aktualisiert am 9. Oktober 2026</div>
+          </div>
+        </div>
         <figure className="kb-hero">
           <picture>
             <source
@@ -83,7 +91,7 @@ const KarlsbrueckePage: React.FC = () => (
           </li>
           <li className="kb-fact">
             <div className="kb-fact__value">4,9 / 5</div>
-            <p className="kb-fact__text">Bewertung auf TripAdvisor aus 14 Bewertungen.</p>
+            <p className="kb-fact__text">Bewertung auf TripAdvisor aus 19 Bewertungen.</p>
           </li>
         </ul>
       </section>

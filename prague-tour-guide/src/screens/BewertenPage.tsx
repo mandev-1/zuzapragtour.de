@@ -22,8 +22,8 @@ import React from 'react';
 import Link from 'next/link';
 import { BRAND } from '../brand';
 
-const RATING_SHORT = '4,9 ★ · 514 Bewertungen';
-const RATING_LONG = '4,9 / 5 · 514 Bewertungen';
+const RATING_SHORT = '4,9 ★ · 19 Bewertungen';
+const RATING_LONG = '4,9 / 5 · 19 Bewertungen';
 const WHATSAPP = `https://wa.me/${BRAND.phoneRaw.replace(/[^0-9]/g, '')}`;
 const MAIL = `mailto:${BRAND.email}`;
 const TEL = `tel:${BRAND.phoneRaw}`;

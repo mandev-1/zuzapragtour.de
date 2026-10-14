@@ -262,7 +262,7 @@ const TourPage: React.FC = () => {
                   <div className="mb-[0.9rem] flex flex-wrap items-center justify-center gap-[0.5rem]">
                     <Stars size={15} />
                     <span className="font-sans text-[0.92rem] text-ink-soft">
-                      {de ? '5,0 von 5 · über 4.900 Gäste' : '5.0 of 5 · over 4,900 guests'}
+                      {de ? '4,9 von 5 · 19 Bewertungen auf TripAdvisor' : '4.9 of 5 · 19 reviews on TripAdvisor'}
                     </span>
                   </div>
 

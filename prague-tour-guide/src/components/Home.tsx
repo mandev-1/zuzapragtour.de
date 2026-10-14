@@ -196,7 +196,7 @@ const Home: React.FC = () => {
               <div className="mt-[2.4rem] flex flex-wrap gap-[clamp(1.5rem,4vw,3.5rem)] border-t border-rule pt-8">
                 <Stat n="40+" label={de ? 'Jahre Erfahrung' : 'Years guiding'} />
                 <Stat n="4,9k" label={de ? 'Touren kuratiert' : 'Tours curated'} />
-                <Stat n="5,0" label={de ? 'Sterne Bewertung' : 'Star rating'} />
+                <Stat n="4,9" label={de ? 'Sterne Bewertung' : 'Star rating'} />
               </div>
               <div className="mt-8">
                 <ULink href="/zuzana-manova">{de ? 'Mehr über Zuzana' : 'More about Zuzana'}</ULink>

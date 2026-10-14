@@ -195,7 +195,7 @@ export function getTourPageSchema(tour: TourPageSchemaInput) {
           aggregateRating: {
             '@type':       'AggregateRating',
             ratingValue:   '4.9',
-            reviewCount:   '14',
+            reviewCount:   '19',
             bestRating:    '5',
             worstRating:   '1',
           },

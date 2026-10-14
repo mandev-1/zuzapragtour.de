@@ -30,7 +30,7 @@ import { Portrait } from '../components/site/Portrait';
 const STATS: { n: string; de: string; en: string }[] = [
   { n: '40+', de: 'Jahre Erfahrung', en: 'Years guiding' },
   { n: '4,9k', de: 'Touren kuratiert', en: 'Tours curated' },
-  { n: '5,0', de: 'Sterne Bewertung', en: 'Star rating' },
+  { n: '4,9', de: 'Sterne Bewertung', en: 'Star rating' },
   { n: '1986', de: 'Seit dem Jahr', en: 'Guiding since' },
 ];
 

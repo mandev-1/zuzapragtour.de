@@ -54,7 +54,7 @@ const Tours: React.FC = () => {
           <div className="mt-6 flex flex-wrap items-center gap-[0.55rem]">
             <Stars size={16} />
             <span className="font-sans text-[0.98rem] text-ink-soft">
-              {de ? '5,0 von 5 · über 4.900 Gäste seit 1986' : '5.0 of 5 · over 4,900 guests since 1986'}
+              {de ? '4,9 von 5 · 19 Bewertungen auf TripAdvisor' : '4.9 of 5 · 19 reviews on TripAdvisor'}
             </span>
           </div>
         </div>

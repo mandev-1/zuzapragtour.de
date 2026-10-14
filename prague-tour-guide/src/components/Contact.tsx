@@ -375,7 +375,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
                         <div className="flex flex-wrap items-center justify-center gap-[0.55rem]">
                           <Stars size={17} />
                           <span className="font-sans text-[0.98rem] text-ink-soft">
-                            {de ? '5,0 von 5 · über 4.900 Gäste seit 1986' : '5.0 of 5 · over 4,900 guests since 1986'}
+                            {de ? '4,9 von 5 · 19 Bewertungen auf TripAdvisor' : '4.9 of 5 · 19 reviews on TripAdvisor'}
                           </span>
                         </div>
 

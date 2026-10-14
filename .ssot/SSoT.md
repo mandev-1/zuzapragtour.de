@@ -12,7 +12,9 @@ How this repo actually works, verified against the code on **2026-10-09**. If th
 - **Audience:** German-speaking travellers (DE/AT/CH), mostly 45–70 and affluent. **German is the primary language**; English is secondary and uses British spelling.
 - **Voice:** formal German (*Sie*), understated luxury, **no emoji ever**, Material Symbols icons only.
 - **Conversion:** enquiries via WhatsApp (primary), the `/book` form (Netlify Forms), email and phone. Prices are "auf Anfrage" (on request). There is no online payment.
-- **Reviews:** TripAdvisor (the main proof, ~300+ reviews) and the Google Business Profile. `/bewerten` is the post-tour review funnel (QR code + follow-up email), focused on getting Google reviews.
+- **Reviews:** TripAdvisor is the main proof: **4,9 / 5 from 19 reviews** (confirmed by the owner 2026-10-12; update every place when it changes: `translations.ts` ×6, `BewertenPage.tsx`, `Contact.tsx`, `Tours.tsx`, `TourPage.tsx`, `KarlsbrueckePage.tsx`, the "Sterne Bewertung" stats in `Home.tsx` and `ZuzanaManovaPage.tsx`, and `seo.ts`, whose `getTourPageSchema` is currently unused). Also the Google Business Profile.
+  - Don't publish unsourced counts. "über 4.900 Gäste" and "514 Bewertungen" were removed. `TBD.md`'s "312 reviews" is wrong.
+  - "4,9k Touren kuratiert" (stats on `/` and `/zuzana-manova`) is still unverified. `/bewerten` is the post-tour review funnel (QR code + follow-up email), focused on getting Google reviews.
 - **Contact, domains and profile links** live in one place: `prague-tour-guide/src/brand.ts` (`BRAND`). Never hardcode them elsewhere.
 
 ## 2. Repo map
@@ -94,7 +96,11 @@ npm run images       # public/images/sized/ AVIF+WebP (macOS sips + cwebp)
 - **Deviations the handoff itself asks for:**
   - the site's `Header`/`Footer` (the footer's dark band replaces the design's band),
   - a real castle photo instead of the dashed placeholder.
-- **Owner changes on top of the handoff (2026-10-09):** blue accents (`--kb-blue: #11457E`, the site's journal blue, and `--kb-blue-tint: #EEF3F9`) on the breadcrumb, kickers and labels, the fact-card values, the route box (tint and left rule) and the rule above the quote. Burgundy stays on the headline accent and the buttons.
+- **Owner changes on top of the handoff (2026-10-09):**
+  - Forbes-like contrast: white page; bold Newsreader (600) headlines in near-black `#121212` instead of thin Italiana; body text `#1F1F1F` at 1.15rem; larger, bolder sans labels; a byline with avatar, underlined name, date and a rule underneath; grey rules `#DDD`.
+  - Blue accents (`#11457E`): kicker, labels, fact-card values and top border, route box, quote rule.
+  - Burgundy stays on buttons, the headline accent and the CTA block.
+  - All colours are variables at the top of `karlsbruecke-landing.css`.
 - **Mobile sticky bar** (Tour anfragen · WhatsApp · E-Mail): pure CSS, below 768px only. `body:has(.kb-bar)` adds 96px bottom padding so the bar doesn't cover the footer. `BlogPromo` is hidden on `/prag/*` so they don't overlap.
 - **CTAs** go to `/book?tour=Karlsbrücke und Prager Burg#contact-title`, so the form arrives pre-filled.
 - **Images:**

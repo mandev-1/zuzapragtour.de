@@ -323,8 +323,8 @@ export const translations = {
     de: 'Kleine Gruppen & Privattouren',
   },
   'home.meta3': {
-    en: '4.9 · 14 reviews on TripAdvisor',
-    de: '4,9 · 14 Bewertungen auf TripAdvisor',
+    en: '4.9 · 19 reviews on TripAdvisor',
+    de: '4,9 · 19 Bewertungen auf TripAdvisor',
   },
   'home.hero.noPressure': {
     en: 'No commitment · Personal quote',
@@ -359,8 +359,8 @@ export const translations = {
     de: '4,9 von 5',
   },
   'home.tripadvisor.badge.reviewCount': {
-    en: '14 reviews',
-    de: '14 Bewertungen',
+    en: '19 reviews',
+    de: '19 Bewertungen',
   },
   'home.tourhq.sectionTitle': {
     en: 'Reviews on TourHQ',
@@ -1071,8 +1071,8 @@ export const translations = {
     de: 'Teilen Sie mir Ihre Wünsche mit — ich melde mich persönlich innerhalb von 24 Stunden.',
   },
   'contact.trust.rating': {
-    en: '4.9 ★ · 14 reviews on TripAdvisor',
-    de: '4,9 ★ · 14 Bewertungen auf TripAdvisor',
+    en: '4.9 ★ · 19 reviews on TripAdvisor',
+    de: '4,9 ★ · 19 Bewertungen auf TripAdvisor',
   },
   'contact.booking.intro.title': {
     en: 'Ready to book?',
@@ -1233,8 +1233,8 @@ export const translations = {
     de: 'Zertifizierte Prag-Expertin & Spezialistin',
   },
   'footer.reviewCount': {
-    en: '14 reviews',
-    de: '14 Bewertungen',
+    en: '19 reviews',
+    de: '19 Bewertungen',
   },
   'footer.tripadvisor.trustLine': {
     en: '4.9 ★ TripAdvisor',
