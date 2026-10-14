@@ -658,7 +658,7 @@ export const translations = {
   'tourpage.meetingPoint': { en: 'Meeting point', de: 'Treffpunkt' },
   'tourpage.duration': { en: 'Duration', de: 'Dauer' },
   'tourpage.language': { en: 'Language', de: 'Sprache' },
-  'tourpage.languageValue': { en: 'German & English', de: 'Deutsch & Englisch' },
+  'tourpage.languageValue': { en: 'German only', de: 'Ausschließlich Deutsch' },
   'tourpage.groupSize': { en: 'Group size', de: 'Gruppengröße' },
   'tourpage.groupSizeValue': { en: 'Private (your group only)', de: 'Privat (nur Ihre Gruppe)' },
   'tourpage.faq': { en: 'Frequently asked questions', de: 'Häufig gestellte Fragen' },
@@ -669,7 +669,7 @@ export const translations = {
 
   // ─── Castle tour subpage ───────────────────────────────────────────────────
   'tour.castle.seoTitle': {
-    en: 'Prague Castle Private Tour in German & English',
+    en: 'Prague Castle Private Tour in German',
     de: 'Prager Burg – Private Stadtführung Prag auf Deutsch',
   },
   'tour.castle.body1': {
@@ -688,7 +688,7 @@ export const translations = {
     en: 'First Courtyard gate, Hradčanské náměstí (Castle Square) — I will be waiting for you at the main gate.',
     de: 'Tor zum Ersten Burghof, Hradčanské náměstí (Burgplatz) — ich warte am Haupttor auf Sie.',
   },
-  'tour.castle.inc1': { en: 'Personal certified guide (German & English)', de: 'Persönliche zertifizierte Führung (Deutsch & Englisch)' },
+  'tour.castle.inc1': { en: 'Personal certified guide, in German', de: 'Persönliche zertifizierte Führung auf Deutsch' },
   'tour.castle.inc2': { en: 'Skip-the-queue entrance strategy', de: 'Eintrittsstrategie ohne lange Wartezeit' },
   'tour.castle.inc3': { en: 'St. Vitus Cathedral interior visit', de: 'Besuch des Veitsdom-Innenraums' },
   'tour.castle.inc4': { en: 'Golden Lane & hidden viewpoint', de: 'Goldenes Gässchen & versteckter Aussichtspunkt' },
@@ -703,7 +703,7 @@ export const translations = {
 
   // ─── Old Town & Jewish Quarter subpage ────────────────────────────────────
   'tour.oldtown.seoTitle': {
-    en: 'Old Town & Jewish Quarter Private Tour in German & English',
+    en: 'Old Town & Jewish Quarter Private Tour in German',
     de: 'Altstadt & Jüdisches Viertel – Prag Privatführung auf Deutsch',
   },
   'tour.oldtown.body1': {
@@ -722,7 +722,7 @@ export const translations = {
     en: 'Jan Hus Monument, Old Town Square — I will be standing by the monument.',
     de: 'Jan-Hus-Denkmal, Altstädter Ring — ich stehe beim Denkmal.',
   },
-  'tour.oldtown.inc1': { en: 'Personal certified guide (German & English)', de: 'Persönliche zertifizierte Führung (Deutsch & Englisch)' },
+  'tour.oldtown.inc1': { en: 'Personal certified guide, in German', de: 'Persönliche zertifizierte Führung auf Deutsch' },
   'tour.oldtown.inc2': { en: 'Jewish Museum accreditation — specialist insight', de: 'Jüdisches Museum Akkreditierung — Fachkenntnisse' },
   'tour.oldtown.inc3': { en: 'Old Town Square & Astronomical Clock', de: 'Altstädter Ring & Astronomische Uhr' },
   'tour.oldtown.inc4': { en: 'Charles Bridge with historical commentary', de: 'Karlsbrücke mit historischem Kommentar' },
@@ -829,7 +829,7 @@ export const translations = {
   'tour.german.inc3': { en: 'German-speaking rulers and the architecture they built', de: 'Deutschsprachige Herrscher und die Architektur, die sie bauten' },
   'tour.german.inc4': { en: 'Honest account of 20th-century German-Czech history', de: 'Ehrliche Darstellung der deutsch-tschechischen Geschichte des 20. Jahrhunderts' },
   'tour.german.faq1.q': { en: 'Is this tour only for German-speaking visitors?', de: 'Ist diese Tour nur für deutschsprachige Besucher?' },
-  'tour.german.faq1.a': { en: 'No — I conduct it in German or English or both, depending on your group. The tour focuses on German cultural heritage in Prague, but the audience can be anyone with an interest in Central European history.', de: 'Nein — ich führe sie auf Deutsch, Englisch oder beidem durch, je nach Ihrer Gruppe. Die Tour konzentriert sich auf das deutsche Kulturerbe in Prag, aber das Publikum kann jeder sein, der an mitteleuropäischer Geschichte interessiert ist.' },
+  'tour.german.faq1.a': { en: 'Yes — like all my tours, it is guided exclusively in German. You do not need German roots, though: anyone who speaks German and is interested in Central European history is welcome.', de: 'Ja — wie alle meine Touren führe ich sie ausschließlich auf Deutsch. Deutsche Wurzeln brauchen Sie dafür aber nicht: Willkommen ist jeder, der Deutsch spricht und sich für mitteleuropäische Geschichte interessiert.' },
   'tour.german.faq2.q': { en: 'How much does the tour cover about the Sudeten German expulsions?', de: 'Wie viel behandelt die Tour die Vertreibung der Sudetendeutschen?' },
   'tour.german.faq2.a': { en: "I treat it seriously and honestly. The expulsions of 1945–46 are a significant part of Prague's 20th-century history and I do not skip them. I also give context — the occupation, the war — so the full picture is there. It is a tour for people who want to understand, not one that simplifies or avoids difficult history.", de: 'Ich behandle es ernsthaft und ehrlich. Die Vertreibungen von 1945–46 sind ein bedeutender Teil der Prager Geschichte des 20. Jahrhunderts, und ich lasse sie nicht aus. Ich gebe auch Kontext — die Besatzung, den Krieg — damit das vollständige Bild entsteht. Es ist eine Tour für Menschen, die verstehen wollen, keine, die schwierige Geschichte vereinfacht oder vermeidet.' },
   'tour.german.faq3.q': { en: 'Will we visit the places connected to Kafka?', de: 'Besuchen wir die mit Kafka verbundenen Orte?' },
@@ -907,8 +907,8 @@ export const translations = {
     de: 'Sprachen',
   },
   'tourinfo.languages.desc': {
-    en: 'Tours available in German, English, and Czech',
-    de: 'Touren verfügbar auf Deutsch, Englisch und Tschechisch',
+    en: 'All tours exclusively in German',
+    de: 'Alle Touren ausschließlich auf Deutsch',
   },
   'tourinfo.booking.title': {
     en: 'Booking',
@@ -937,8 +937,8 @@ export const translations = {
     de: 'In welchen Sprachen bieten Sie Touren an?',
   },
   'tours.faq.a1': {
-    en: 'I offer tours in German, English, and Czech. German is my primary touring language and most popular with visitors from Germany, Austria, and Switzerland.',
-    de: 'Ich biete Touren auf Deutsch, Englisch und Tschechisch an. Deutsch ist meine Hauptsprache für Führungen und bei Besuchern aus Deutschland, Österreich und der Schweiz am beliebtesten.',
+    en: 'Exclusively in German. My tours are made for German-speaking guests from Germany, Austria and Switzerland; I do not offer tours in English or other languages.',
+    de: 'Ausschließlich auf Deutsch. Meine Touren sind für deutschsprachige Gäste aus Deutschland, Österreich und der Schweiz gemacht; Führungen auf Englisch oder in anderen Sprachen biete ich nicht an.',
   },
   'tours.faq.q2': {
     en: 'How long do the tours last?',
@@ -2081,8 +2081,8 @@ export const translations = {
     de: 'Prag ist nicht nur mein Arbeitsplatz – es ist die Stadt, in der ich aufgewachsen bin, den Kommunismus erlebt habe, an der Revolution teilnahm und meine Familie großgezogen habe. Wenn ich Sie durch die Altstadt, über die Karlsbrücke oder zur Prager Burg führe, teile ich vier Jahrzehnte persönlicher Erinnerungen mit Jahrhunderten von Geschichte.',
   },
   'zm.bio.p3': {
-    en: 'As an accredited guide at the Jewish Museum in Prague, I hold a specialist certification that allows me to offer in-depth tours of the Jewish Quarter – from the Old Jewish Cemetery to the synagogues – with the context and sensitivity the subject deserves. I guide in German and English.',
-    de: 'Als akkreditierte Führerin am Jüdischen Museum in Prag halte ich eine Spezialisierungszertifizierung, die mir ermöglicht, tiefgehende Führungen durch das Jüdische Viertel anzubieten – vom Alten Jüdischen Friedhof bis zu den Synagogen – mit dem Kontext und der Sensibilität, die das Thema verdient. Ich führe auf Deutsch und Englisch.',
+    en: 'As an accredited guide at the Jewish Museum in Prague, I hold a specialist certification that allows me to offer in-depth tours of the Jewish Quarter – from the Old Jewish Cemetery to the synagogues – with the context and sensitivity the subject deserves. I guide exclusively in German.',
+    de: 'Als akkreditierte Führerin am Jüdischen Museum in Prag halte ich eine Spezialisierungszertifizierung, die mir ermöglicht, tiefgehende Führungen durch das Jüdische Viertel anzubieten – vom Alten Jüdischen Friedhof bis zu den Synagogen – mit dem Kontext und der Sensibilität, die das Thema verdient. Ich führe ausschließlich auf Deutsch.',
   },
   'zm.cred.1.title': {
     en: 'Certified Expert Guide',
@@ -2101,12 +2101,12 @@ export const translations = {
     de: 'Akkreditierte Spezialistin des Jüdischen Museums in Prag für tiefgehende Führungen durch alle Synagogen und den Alten Jüdischen Friedhof.',
   },
   'zm.cred.3.title': {
-    en: 'German & English',
-    de: 'Deutsch & Englisch',
+    en: 'Exclusively in German',
+    de: 'Ausschließlich auf Deutsch',
   },
   'zm.cred.3.desc': {
-    en: 'Fluent in both languages with native-level Czech – no interpreter needed.',
-    de: 'Fließend in beiden Sprachen mit muttersprachlichem Tschechisch – kein Dolmetscher nötig.',
+    en: 'Every tour in fluent German. Czech is my native language, so no interpreter is ever needed.',
+    de: 'Jede Führung in fließendem Deutsch. Tschechisch ist meine Muttersprache, ein Dolmetscher ist nie nötig.',
   },
   'zm.offer.title': {
     en: 'What Zuzana Manová Offers',
@@ -2145,16 +2145,16 @@ export const translations = {
     de: 'Wer ist Zuzana Manová?',
   },
   'zm.faq.a1': {
-    en: 'Zuzana Manová (Ing.) is a certified Prague tour guide who has been leading private tours since 1986. She is a native Praguer with accreditation from the Jewish Museum in Prague and offers tours in German and English.',
-    de: 'Zuzana Manová (Ing.) ist eine zertifizierte Prager Stadtführerin, die seit 1986 private Führungen anbietet. Sie ist gebürtige Pragerin mit Akkreditierung am Jüdischen Museum in Prag und führt auf Deutsch und Englisch.',
+    en: 'Zuzana Manová (Ing.) is a certified Prague tour guide who has been leading private tours since 1986. She is a native Praguer with accreditation from the Jewish Museum in Prague and guides exclusively in German.',
+    de: 'Zuzana Manová (Ing.) ist eine zertifizierte Prager Stadtführerin, die seit 1986 private Führungen anbietet. Sie ist gebürtige Pragerin mit Akkreditierung am Jüdischen Museum in Prag und führt ausschließlich auf Deutsch.',
   },
   'zm.faq.q2': {
     en: 'What languages does Zuzana Manová speak?',
     de: 'Welche Sprachen spricht Zuzana Manová?',
   },
   'zm.faq.a2': {
-    en: 'Zuzana Manová offers tours in German and English. She is a native Czech speaker and communicates fluently in all three languages during tours.',
-    de: 'Zuzana Manová bietet Führungen auf Deutsch und Englisch an. Sie ist tschechische Muttersprachlerin und kommuniziert fließend in allen drei Sprachen während der Touren.',
+    en: 'Zuzana Manová guides exclusively in German, which she speaks fluently. Czech is her native language.',
+    de: 'Zuzana Manová führt ausschließlich auf Deutsch, das sie fließend spricht. Tschechisch ist ihre Muttersprache.',
   },
   'zm.faq.q3': {
     en: 'How can I book a tour with Zuzana Manová?',
@@ -2196,7 +2196,7 @@ export const translations = {
   // ── Homepage, mobile v2 (design_handoff_home_mobile · A/B variant B) ──
   'home.m.eyebrow': { en: 'Guiding since 1986', de: 'Stadtführerin seit 1986' },
   'home.m.h1': { en: 'Discover Prague privately.', de: 'Prag privat entdecken.' },
-  'home.m.h1Em': { en: 'In English.', de: 'Auf Deutsch.' },
+  'home.m.h1Em': { en: 'In German.', de: 'Auf Deutsch.' },
   'home.m.sub': {
     en: 'Personally guided by Ing. Zuzana Manová – forty years of stories you won’t find in any guidebook.',
     de: 'Persönlich geführt von Ing. Zuzana Manová – vierzig Jahre Geschichten, die Sie in keinem Reiseführer finden.',

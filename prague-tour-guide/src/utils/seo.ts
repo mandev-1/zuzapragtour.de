@@ -25,7 +25,7 @@ export function getHomePageSchema() {
         name: BRAND.siteName,
         alternateName: 'Zuza Prag Tours',
         description:
-          'Expert and specialist tour guide service in Prague. German- and English-speaking certified guided tours of Prague Castle, Old Town, Jewish Quarter, and more. Deutschsprachige Prag-Expertin Ing. Zuzana Manová since 1986.',
+          'Expert and specialist tour guide service in Prague. Certified private tours of Prague Castle, Old Town, Jewish Quarter, and more, exclusively in German. Deutschsprachige Prag-Expertin Ing. Zuzana Manová since 1986.',
         url: BRAND.domain,
         telephone: BRAND.phoneRaw,
         email: BRAND.email,
@@ -47,7 +47,7 @@ export function getHomePageSchema() {
           name:    'Prague',
           sameAs:  'https://en.wikipedia.org/wiki/Prague',
         },
-        knowsLanguage: ['de', 'en', 'cs'],
+        knowsLanguage: ['de', 'cs'],
         founder: { '@id': BRAND.guideId },
         sameAs: [BRAND.tripadvisor, BRAND.tourhq, BRAND.instagram],
       },
@@ -62,7 +62,7 @@ export function getHomePageSchema() {
         image:     `${BRAND.domain}/images/zuzana-portrait.jpg`,
         telephone: BRAND.phoneRaw,
         email:     BRAND.email,
-        knowsLanguage: ['de', 'en', 'cs'],
+        knowsLanguage: ['de', 'cs'],
         worksFor: { '@id': BRAND.businessId },
         hasCredential: [
           {
@@ -108,7 +108,7 @@ export function getTouristTripSchema(tours: TourSchemaInput[]) {
         description:       tour.description,
         image:             `${BRAND.domain}${tour.image}`,
         touristType:       'Sightseeing',
-        availableLanguage: ['de', 'en'],
+        availableLanguage: ['de'],
         duration:          tour.duration,
         provider: { '@id': BRAND.businessId },
         guide:    { '@id': BRAND.guideId },
@@ -166,10 +166,7 @@ export function getTourPageSchema(tour: TourPageSchemaInput) {
         image:         tour.image,
         url:           tour.url,
         touristType:   { '@type': 'Audience', audienceType: 'Tourists' },
-        availableLanguage: [
-          { '@type': 'Language', name: 'German' },
-          { '@type': 'Language', name: 'English' },
-        ],
+        availableLanguage: [{ '@type': 'Language', name: 'German' }],
         duration: isoPT,
         provider: {
           '@type':    'LocalBusiness',
@@ -191,7 +188,7 @@ export function getTourPageSchema(tour: TourPageSchemaInput) {
             longitude:  BRAND.lng,
           },
           priceRange:    '€€',
-          knowsLanguage: ['de', 'en', 'cs'],
+          knowsLanguage: ['de', 'cs'],
           aggregateRating: {
             '@type':       'AggregateRating',
             ratingValue:   '4.9',

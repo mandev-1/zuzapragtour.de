@@ -40,6 +40,26 @@ const TourPage: React.FC = () => {
 
   const tour = slug ? getTourBySlug(slug) : undefined;
 
+  // Mobile enquiry bar: after the hero, and out of the way while the booking
+  // card (which carries the same buttons) is on screen.
+  const bookingRef = React.useRef<HTMLElement>(null);
+  const [showBar, setShowBar] = React.useState(false);
+  React.useEffect(() => {
+    const update = () => {
+      const vh = window.innerHeight;
+      const card = bookingRef.current?.getBoundingClientRect();
+      const cardVisible = !!card && card.top < vh && card.bottom > 0;
+      setShowBar(window.scrollY > vh * 0.6 && !cardVisible);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, [slug]);
+
   /* ── Not found ─────────────────────────────────────────────── */
   if (!tour) {
     return (
@@ -230,7 +250,7 @@ const TourPage: React.FC = () => {
             </div>
 
             {/* Sticky frosted-glass booking card */}
-            <aside data-track-section="booking-card" className="min-[900px]:sticky min-[900px]:top-[100px]">
+            <aside ref={bookingRef} data-track-section="booking-card" className="min-[900px]:sticky min-[900px]:top-[100px]">
               <Reveal>
                 <div style={GLASS_CARD_STYLE} className="p-[1.8rem]">
                   <span className="mb-[1.1rem] inline-flex items-center gap-[0.45rem] rounded-full border border-[rgba(123,88,0,0.35)] px-[0.85rem] py-[0.4rem] font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-olive">
@@ -354,6 +374,29 @@ const TourPage: React.FC = () => {
             </div>
           </div>
         </section>
+      )}
+
+      {/* ── Mobile enquiry bar ─────────────────────────────────── */}
+      {showBar && (
+        <nav
+          aria-label={de ? 'Tour anfragen' : 'Enquire'}
+          data-track-section="tour-bar"
+          className="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-[rgba(217,207,188,0.9)] bg-[rgba(250,246,236,0.94)] px-[clamp(0.75rem,3vw,1.5rem)] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[10px] backdrop-blur-[12px] min-[900px]:hidden"
+        >
+          <Link
+            href={bookDest}
+            className="flex min-h-[52px] flex-1 items-center justify-center rounded-[4px] bg-burgundy font-sans text-[15px] font-semibold text-white no-underline transition-colors hover:bg-burgundy-deep hover:text-white"
+          >
+            {de ? 'Diese Tour anfragen' : 'Enquire about this tour'}
+          </Link>
+          <a
+            href={`tel:${BRAND.phoneRaw}`}
+            className="flex min-h-[52px] min-w-[96px] flex-col items-center justify-center gap-[2px] rounded-[4px] border border-[#D9D3C9] bg-white font-sans text-[13px] font-semibold text-ink no-underline"
+          >
+            <span className="material-symbols-outlined text-[20px] text-burgundy" aria-hidden>call</span>
+            {de ? 'Anrufen' : 'Call'}
+          </a>
+        </nav>
       )}
     </div>
   );

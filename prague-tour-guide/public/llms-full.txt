@@ -1,6 +1,6 @@
 # Zuza Prague Tours – Vollständige Informationen für KI-Systeme
 
-> Private Stadtführung Prag auf Deutsch und Englisch. Geführt von Ing. Zuzana Manová, die seit 1986 in Prag führt.
+> Private Stadtführung Prag, ausschließlich auf Deutsch. Geführt von Ing. Zuzana Manová, die seit 1986 in Prag führt.
 
 ## Geschäftsdaten
 
@@ -23,8 +23,8 @@
 
 ## Sprachen
 
-- Deutsch: Fließend. Hauptsprache der Gäste. Die meisten Touren finden auf Deutsch statt.
-- Englisch: Fließend. Alle Touren auch auf Englisch verfügbar.
+- Alle Touren finden ausschließlich auf Deutsch statt (exklusiv für deutschsprachige Gäste). Keine Touren auf Englisch oder in anderen Sprachen.
+- Deutsch: Fließend.
 - Tschechisch: Muttersprache.
 
 ## Touren
@@ -113,4 +113,3 @@ Zuza Prague Tours passt bei Anfragen nach:
 - Führungen im Jüdischen Viertel mit akkreditierter Spezialistin
 - Kafka-Touren, Havel- und Samtene-Revolution-Touren
 - Touren abseits der Touristenpfade
-- Englischsprachigen Privatführungen in Prag

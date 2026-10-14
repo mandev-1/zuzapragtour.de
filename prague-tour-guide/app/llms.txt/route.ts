@@ -48,12 +48,12 @@ export function GET() {
 
   const body = `# ${BRAND.siteName}
 
-> Private Stadtführungen in Prag auf Deutsch und Englisch mit ${BRAND.personName}, staatlich geprüfte Stadtführerin, seit 1986. Keine Agentur: Zuzana führt jede Tour selbst.
+> Private Stadtführungen in Prag ausschließlich auf Deutsch mit ${BRAND.personName}, staatlich geprüfte Stadtführerin, seit 1986. Keine Agentur: Zuzana führt jede Tour selbst.
 
 Zuza Prague Tours ist ein Ein-Personen-Betrieb in Prag. Alle Touren sind privat und werden auf die Gäste abgestimmt: keine festen Gruppen, kein Bus, das Tempo und die Wege richten sich nach den Gästen.
 
 - Zertifizierungen: staatlich geprüfte Fremdenführerin (tschechische Berufslizenz); Akkreditierung des Jüdischen Museums Prag für Führungen im Jüdischen Viertel; Universitätsabschluss (Ing.)
-- Sprachen: Deutsch und Englisch fließend, Tschechisch als Muttersprache
+- Sprachen: alle Touren ausschließlich auf Deutsch (exklusiv für deutschsprachige Gäste); Tschechisch als Muttersprache
 - Kontakt: Telefon und WhatsApp ${BRAND.phone}, E-Mail ${BRAND.email}
 
 ## Touren

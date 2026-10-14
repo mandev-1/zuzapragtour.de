@@ -66,6 +66,23 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
   const [submitError, setSubmitError] = useState(false);
   const formCardRef = useRef<HTMLDivElement>(null);
 
+  // The mobile contact bar steps aside while a text field has focus, so it
+  // never sits on top of the field above the on-screen keyboard.
+  const [typing, setTyping] = useState(false);
+  useEffect(() => {
+    const update = () => {
+      const el = document.activeElement as HTMLInputElement | null;
+      setTyping(!!el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) && el.type !== 'radio' && el.type !== 'checkbox');
+    };
+    const later = () => window.setTimeout(update, 0);
+    document.addEventListener('focusin', update);
+    document.addEventListener('focusout', later);
+    return () => {
+      document.removeEventListener('focusin', update);
+      document.removeEventListener('focusout', later);
+    };
+  }, []);
+
   // On desktop, when the guest arrives via the #contact-title anchor (booking
   // CTAs across the site point at /book#contact-title), glide the enquiry card
   // into view a beat after load so the actionable form greets them.
@@ -405,7 +422,7 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
                             {BRAND.phone}
                           </a>
                           <div className="mt-[0.3rem] font-sans text-[0.95rem] text-ink-mute">
-                            {de ? 'Ich spreche Deutsch — auch per ' : 'I speak German & English — also via '}
+                            {de ? 'Ich spreche Deutsch — auch per ' : 'Tours in German only — also via '}
                             <a href={WA} target="_blank" rel="noopener noreferrer" className="text-burgundy">WhatsApp</a>.
                           </div>
                         </div>
@@ -420,6 +437,30 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
         </div>
       </section>
 
+      {/* ── Mobile contact bar: call · WhatsApp · TripAdvisor ─────────── */}
+      {!typing && (
+        <nav
+          aria-label={de ? 'Kontakt' : 'Contact'}
+          data-track-section="contact-bar"
+          className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 gap-2 border-t border-[rgba(217,207,188,0.9)] bg-[rgba(250,246,236,0.94)] px-[clamp(0.75rem,3vw,1.5rem)] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[10px] backdrop-blur-[12px] min-[900px]:hidden"
+        >
+          {[
+            { href: `tel:${BRAND.phoneRaw}`, icon: 'call', label: de ? 'Anrufen' : 'Call', ext: false },
+            { href: WA, icon: 'chat', label: 'WhatsApp', ext: true },
+            { href: BRAND.tripadvisor, icon: 'star', label: 'TripAdvisor', ext: true },
+          ].map((b) => (
+            <a
+              key={b.icon}
+              href={b.href}
+              {...(b.ext ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className="flex min-h-[52px] flex-col items-center justify-center gap-[2px] rounded-[4px] border border-[#D9D3C9] bg-white font-sans text-[13px] font-semibold text-ink no-underline"
+            >
+              <span className="material-symbols-outlined text-[20px] text-burgundy" aria-hidden>{b.icon}</span>
+              {b.label}
+            </a>
+          ))}
+        </nav>
+      )}
     </div>
   );
 };
