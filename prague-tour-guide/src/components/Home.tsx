@@ -50,6 +50,25 @@ const Home: React.FC = () => {
   const [toursWarm, setToursWarm] = React.useState(false);
   const warmTours = () => setToursWarm(true);
 
+  // Mobile sticky enquiry bar (the form counterpart of variant B's WhatsApp
+  // bar): after the hero and until the closing CTA comes into view.
+  const closingRef = React.useRef<HTMLElement>(null);
+  const [showBar, setShowBar] = React.useState(false);
+  React.useEffect(() => {
+    const update = () => {
+      const vh = window.innerHeight;
+      const end = closingRef.current;
+      setShowBar(window.scrollY > vh * 0.7 && (!end || end.getBoundingClientRect().top > vh - 40));
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      window.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, []);
+
   React.useEffect(() => {
     if (window.location.hash === '#about') {
       window.setTimeout(() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
@@ -262,7 +281,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* ── CTA (full-bleed) ─────────────────────────────────── */}
-      <section data-track-section="closing-cta" className="relative overflow-hidden py-[clamp(5rem,13vh,9rem)] text-center text-ivory">
+      <section ref={closingRef} data-track-section="closing-cta" className="relative overflow-hidden py-[clamp(5rem,13vh,9rem)] text-center text-ivory">
         <div className="absolute inset-0 z-0">
           <ResponsivePicture src="/images/charles-bridge-statue.jpg" alt="" aria-hidden sizes="100vw" className="h-full w-full object-cover" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(79,22,32,0.82), rgba(20,16,12,0.86))' }} />
@@ -283,6 +302,18 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Sticky enquiry bar (mobile only) ─────────────────── */}
+      {showBar && (
+        <div data-track-section="sticky-bar" className="fixed inset-x-0 bottom-0 z-40 border-t border-[rgba(217,207,188,0.9)] bg-[rgba(250,246,236,0.94)] px-[clamp(1rem,4vw,1.5rem)] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[10px] backdrop-blur-[12px] min-[900px]:hidden">
+          <Link
+            href="/book#contact-title"
+            className="flex min-h-[52px] items-center justify-center gap-[10px] rounded-[4px] bg-burgundy font-sans text-[15px] font-semibold text-white no-underline transition-colors hover:bg-burgundy-deep hover:text-white"
+          >
+            {t('hero.sendEnquiry')}
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

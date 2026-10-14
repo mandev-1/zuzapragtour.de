@@ -11,7 +11,7 @@ How this repo actually works, verified against the code on **2026-10-09**. If th
 - **Zuza Prague Tours**: the one-person private tour business of **Ing. Zuzana Manová**, a state-certified Prague guide since 1986, accredited by the Jewish Museum for the Jewish Quarter.
 - **Audience:** German-speaking travellers (DE/AT/CH), mostly 45–70 and affluent. **German is the primary language**; English is secondary and uses British spelling.
 - **Voice:** formal German (*Sie*), understated luxury, **no emoji ever**, Material Symbols icons only.
-- **Conversion:** enquiries via WhatsApp (primary), the `/book` form (Netlify Forms), email and phone. Prices are "auf Anfrage" (on request). There is no online payment.
+- **Conversion:** enquiries come mainly by **email**, sometimes via the `/book` form (Netlify Forms). **Nobody writes on WhatsApp** (owner, 2026-10-14; matches the click data: 0 WhatsApp clicks on mobile 2026-10-06…14), although the site still pushes it as the main CTA in places (mobile homepage B, sticky bars). Phone also listed. Prices are "auf Anfrage" (on request). There is no online payment.
 - **Reviews:** TripAdvisor is the main proof: **4,9 / 5 from 19 reviews** (confirmed by the owner 2026-10-12; update every place when it changes: `translations.ts` ×6, `BewertenPage.tsx`, `Contact.tsx`, `Tours.tsx`, `TourPage.tsx`, `KarlsbrueckePage.tsx`, the "Sterne Bewertung" stats in `Home.tsx` and `ZuzanaManovaPage.tsx`, and `seo.ts`, whose `getTourPageSchema` is currently unused). Also the Google Business Profile.
   - Don't publish unsourced counts. "über 4.900 Gäste" and "514 Bewertungen" were removed. `TBD.md`'s "312 reviews" is wrong.
   - "4,9k Touren kuratiert" (stats on `/` and `/zuzana-manova`) is still unverified. `/bewerten` is the post-tour review funnel (QR code + follow-up email), focused on getting Google reviews.
@@ -128,6 +128,7 @@ npm run images       # public/images/sized/ AVIF+WebP (macOS sips + cwebp)
 ### Homepage A/B test (running)
 - Edge function `netlify/edge-functions/ab-home.ts` on `GET /` assigns `a`/`b` 50/50 (cookie `zpt_ab`, 60 days) and sets `<html data-ab>`.
 - Both homepages ship in the same HTML (`src/screens/HomePage.tsx`). CSS in `src/styles/home-ab.css` shows `HomeMobileV2` only for variant B below 900px. Desktop is variant A for everyone.
+- Mobile CTAs since 2026-10-14: **B is WhatsApp-led** (hero, tour cards, sticky bar), **A is form-led** (hero + closing CTA + a sticky "Anfrage senden" bar → `/book`, area `sticky-bar`, no WhatsApp in the page body). So the test now also compares WhatsApp vs form on mobile. The global mobile menu and footer still list WhatsApp on both.
 - Use `?ab=a|b` to preview (sets `zpt_ab_qa`, which keeps the visit out of the counts) and `?ab=off` to reset. Bots always get A.
 - Events go to `POST /api/ab-event` (`netlify/functions/ab-event.mjs`) and are stored in the Netlify Blobs store `ab-home`. They are read by `ab-results.mjs` (needs header `x-ab-key` = `STATS_KEY`).
 - To stop the test, set `ENABLED = false` in the edge function, or ship the winner and delete the losing variant.
