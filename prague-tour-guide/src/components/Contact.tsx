@@ -420,17 +420,6 @@ const Contact: React.FC<ContactProps> = ({ variant = 'default', selectedTourTitl
         </div>
       </section>
 
-      {/* ── Sticky WhatsApp (mobile only) ────────────────────────────── */}
-      <a
-        href={WA}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 rounded-full bg-[#25d366] px-6 py-3 font-sans text-sm font-semibold text-white shadow-lg transition-transform hover:scale-105 md:hidden"
-        aria-label="WhatsApp"
-      >
-        <span className="material-symbols-outlined text-[18px]" aria-hidden>chat</span>
-        {t('contact.whatsapp.sticky')}
-      </a>
     </div>
   );
 };

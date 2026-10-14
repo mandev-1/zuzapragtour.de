@@ -1210,10 +1210,6 @@ export const translations = {
     en: 'TripAdvisor review',
     de: 'TripAdvisor-Bewertung',
   },
-  'contact.whatsapp.sticky': {
-    en: 'Book via WhatsApp',
-    de: 'Per WhatsApp buchen',
-  },
 
   // Footer
   'footer.tagline': {
