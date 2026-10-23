@@ -71,7 +71,7 @@ const CSS = `
 .zml-empty{font-size:13px;color:var(--ink-mute);padding:.6rem 0}
 .zml-uselist{display:flex;flex-direction:column;gap:.4rem;overflow:auto}
 .zml-userow{display:flex;align-items:center;gap:.7rem;border:1px solid var(--rule);border-radius:var(--radius-md);background:#fff;padding:.55rem .7rem;cursor:pointer;text-align:left;transition:border-color var(--dur-fast) var(--ease-out),background var(--dur-fast) var(--ease-out)}
-.zml-userow:hover{border-color:var(--burgundy);background:rgba(107,36,61,.03)}
+.zml-userow:hover{border-color:var(--burgundy);background:rgba(20,66,123,.03)}
 .zml-dot{width:8px;height:8px;border-radius:999px;flex-shrink:0}
 .zml-uinfo{flex:1;min-width:0}
 .zml-uinfo b{display:block;font-family:var(--font-title);font-size:12.9px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:var(--weight-title);letter-spacing:-.025em}

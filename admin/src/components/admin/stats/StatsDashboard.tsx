@@ -25,13 +25,13 @@ const WEEK = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne'];
 const CONTACT = { whatsapp: 1, phone: 1, email: 1 };
 const GOALS = ['enquiry', 'email', 'whatsapp', 'phone'];
 const GM = {
-  enquiry: { l: 'Formulář odeslán', s: 'Formulář', c: '#6B243D', bg: '#F5E9EE', i: 'edit_note' },
+  enquiry: { l: 'Formulář odeslán', s: 'Formulář', c: '#14427B', bg: '#E8EEF6', i: 'edit_note' },
   email: { l: 'E-mail otevřen', s: 'E-mail', c: '#4A3D7A', bg: '#EAE6F3', i: 'mail' },
   whatsapp: { l: 'WhatsApp otevřen', s: 'WhatsApp', c: '#168568', bg: '#E5F5EF', i: 'chat' },
   phone: { l: 'Klepnuto na telefon', s: 'Telefon', c: '#A87833', bg: '#FCF5EA', i: 'call' },
 };
 const OWN = { email: 'otevře e-mailový program', phone: 'otevře aplikaci Telefon', whatsapp: 'otevře WhatsApp' };
-export const SRC = { search: ['Vyhledávače', '#712944'], direct: ['Přímo', '#E3A9B8'], social: ['Sociální sítě', '#C7A878'], review: ['Recenzní weby', '#5E9A85'], ai: ['AI asistenti', '#5B7BA6'], other: ['Ostatní', '#D5D8DF'] };
+export const SRC = { search: ['Vyhledávače', '#194881'], direct: ['Přímo', '#E35D63'], social: ['Sociální sítě', '#C7A878'], review: ['Recenzní weby', '#5E9A85'], ai: ['AI asistenti', '#5B7BA6'], other: ['Ostatní', '#D5D8DF'] };
 const SRC_OPTS = [['all', 'Všechny zdroje'], ['search', 'Vyhledávače'], ['direct', 'Přímo'], ['social', 'Sociální sítě'], ['review', 'Recenze'], ['ai', 'AI']];
 const KIND = { article: 'Článek', tour: 'Prohlídka', home: 'Úvodní stránka', other: 'Ostatní' };
 const TABS = [['overview', 'Přehled', 'space_dashboard'], ['live', 'Živě', 'sensors'], ['content', 'Obsah', 'auto_stories'], ['buttons', 'Tlačítka', 'touch_app'], ['visits', 'Návštěvy', 'groups'], ['flows', 'Cesty a zdroje', 'alt_route']];
@@ -52,14 +52,14 @@ const bfOf = (c) => (CONTACT[c] ? 'contact' : c === 'form' || c === 'tour' || c 
 const isGoal = (e) => e.k === 'enquiry' || (e.k === 'click' && !!CONTACT[e.c]);
 const goalOf = (e) => (e.k === 'enquiry' ? 'enquiry' : e.c);
 const zg = () => ({ enquiry: 0, email: 0, whatsapp: 0, phone: 0 });
-const seg = (opts, cur, set) => opts.map(([k, label], i) => ({ label, bg: k === cur ? '#17191F' : '#FFFFFF', fg: k === cur ? '#F6F4F6' : '#454954', sep: i ? '1px solid #E6E8EE' : '0', onClick: () => set(k) }));
+const seg = (opts, cur, set) => opts.map(([k, label], i) => ({ label, bg: k === cur ? '#17191F' : '#FFFFFF', fg: k === cur ? '#F4F5F6' : '#454954', sep: i ? '1px solid #E6E8EE' : '0', onClick: () => set(k) }));
 const VIEW_PROP = { 'WhatsApp tlačítko': 'wa', 'Formuláře': 'forms', 'Túry': 'tours' };
 const isForm = (p) => p === '/book' || p === '/contact';
 const pgType = (p) => (p === '/' ? 'home' : p.startsWith('/tours/') ? 'tour' : isForm(p) ? 'form' : p.startsWith('/blog/') ? 'article' : 'other');
 const ENTRY_L = { article: 'Článkem', tour: 'Stránkou prohlídky', home: 'Úvodní stránkou', form: 'Rovnou formulářem', other: 'Jinou stránkou' };
 const PT_FROM = { home: 'Z úvodní stránky', tour: 'Z prohlídek', form: 'Z formuláře', article: 'Z článků', other: 'Odjinud' };
 const OUT = {
-  enquiry: ['Odeslali formulář', '#6B243D', '#F5E9EE', '#6B243D', 'Odeslal'],
+  enquiry: ['Odeslali formulář', '#14427B', '#E8EEF6', '#14427B', 'Odeslal'],
   whatsapp: ['Napsali přes WhatsApp', '#168568', '#E5F5EF', '#168568', 'WhatsApp'],
   phone: ['Zavolali', '#A87833', '#FCF5EA', '#A87833', 'Telefon'],
   email: ['Napsali e-mail', '#4A3D7A', '#EAE6F3', '#4A3D7A', 'E-mail'],
@@ -72,7 +72,7 @@ const WEEK_FULL = ['pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sob
 const median = (arr) => { if (!arr.length) return 0; const s = arr.slice().sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; };
 const dedupe = (ps) => ps.filter((p, i) => p !== ps[i - 1]);
 const squeeze = (ps) => (ps.length > 5 ? ps.slice(0, 2).concat(['…'], ps.slice(-2)) : ps);
-const chipF = (on) => ({ bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE' });
+const chipF = (on) => ({ bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F4F5F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE' });
 
 export class StatsDashboard extends React.Component<any, any> {
   static defaultProps = { startTab: 'Přehled', compareDefault: true };
@@ -236,7 +236,7 @@ export class StatsDashboard extends React.Component<any, any> {
       where: one ? S.areaName(p0.area, 'cs') : g.places.length + ' míst',
       whereSub: one ? clip(S.pageName(p0.page, 'cs'), 40) : 'většinou ' + S.areaName(p0.area, 'cs') + ' · ' + clip(S.pageName(p0.page, 'cs'), 26),
       n: fmt(g.n), m: fmt(g.m), d: fmt(g.d), mW: (g.n ? (g.m / g.n) * 100 : 0) + '%',
-      f: cell(g.after.enquiry), fC: col(g.after.enquiry, '#6B243D'), e: cell(g.after.email), eC: col(g.after.email, '#4A3D7A'), wp: cell(wp), wpC: col(wp, '#168568'),
+      f: cell(g.after.enquiry), fC: col(g.after.enquiry, '#14427B'), e: cell(g.after.email), eC: col(g.after.email, '#4A3D7A'), wp: cell(wp), wpC: col(wp, '#168568'),
       open: this.openBtn(g),
     }, own ? this.own() : this.rate(g.conv, g.n, 0.5));
   }
@@ -246,7 +246,7 @@ export class StatsDashboard extends React.Component<any, any> {
     return Object.assign({
       title: r.art.title, meta: r.art.cat + ' · ' + dateCz(r.art.date),
       views: fmt(r.views), spark: this.spark(this.pts(r.days, 30), '#A87833', 100, 22), entries: fmt(r.entries),
-      depthSegs: [0, 1, 2, 3].map((i) => ({ w: (d.n ? (d.b[i] / d.n) * 100 : 0) + '%', bg: ['#ECEEF2', '#C9CCD3', '#B68645', '#6B243D'][i] })),
+      depthSegs: [0, 1, 2, 3].map((i) => ({ w: (d.n ? (d.b[i] / d.n) * 100 : 0) + '%', bg: ['#ECEEF2', '#C9CCD3', '#B68645', '#14427B'][i] })),
       readAll: d.n ? pct(d.b[3], d.n) : '–', avgTime: d.n ? dur(Math.round(d.time / d.n)) : '–',
       tour: fmt(r.tour), form: fmt(r.form), conv: fmt(r.conv), convC: r.conv ? '#17191F' : '#A2A6B0',
       chans: GOALS.filter((g) => r.after[g]).map((g) => ({ t: GM[g].s + ' ' + r.after[g], bg: GM[g].bg, fg: GM[g].c })),
@@ -322,7 +322,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const X = (v) => L + ((Math.log(v) - Math.log(minV)) / (Math.log(maxV) - Math.log(minV))) * (W - L - R);
     const Y = (q) => T + (1 - q / maxR) * (H - T - B);
     const qx = X(med), qy = Y(avg), k = [];
-    k.push(h('rect', { key: 'q1', x: qx, y: T, width: W - R - qx, height: qy - T, fill: '#E5F5EF', opacity: 0.55 }), h('rect', { key: 'q2', x: qx, y: qy, width: W - R - qx, height: H - B - qy, fill: '#F7EDF0', opacity: 0.55 }));
+    k.push(h('rect', { key: 'q1', x: qx, y: T, width: W - R - qx, height: qy - T, fill: '#E5F5EF', opacity: 0.55 }), h('rect', { key: 'q2', x: qx, y: qy, width: W - R - qx, height: H - B - qy, fill: '#ECF1F7', opacity: 0.55 }));
     [0, 0.5, 1].forEach((f, i) => { const yy = Y(maxR * f); k.push(h('line', { key: 'gy' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#ECEEF2' }), h('text', { key: 'ty' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6F747E' }, pc1(maxR * f * 100) + ' %')); });
     [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000].filter((v) => v >= minV && v <= maxV).forEach((v) => k.push(h('text', { key: 'tx' + v, x: X(v), y: H - B + 16, textAnchor: 'middle', fontSize: 10, fill: '#6F747E' }, fmt(v))));
     k.push(h('line', { key: 'qx', x1: qx, x2: qx, y1: T, y2: H - B, stroke: '#A2A6B0', strokeDasharray: '3 4' }), h('line', { key: 'qy', x1: L, x2: W - R, y1: qy, y2: qy, stroke: '#A2A6B0', strokeDasharray: '3 4' }));
@@ -331,7 +331,7 @@ export class StatsDashboard extends React.Component<any, any> {
     let label = null;
     pts.slice().sort((x, y) => x.conv - y.conv).forEach((r) => {
       const on = this.state.scHover === r.art.slug, cx = X(r.views), cy = Y(r.conv / r.views);
-      k.push(h('circle', { key: r.art.slug, cx, cy, r: 4 + Math.sqrt(r.conv) * 3.2, fill: r.conv ? '#6B243D' : '#A2A6B0', fillOpacity: on ? 0.95 : 0.55, stroke: on ? '#17191F' : '#FFFFFF', strokeWidth: on ? 2 : 1, style: { cursor: 'pointer' }, onMouseEnter: () => this.setState({ scHover: r.art.slug }), onClick: this.openArt(r.art.slug) }, h('title', null, r.art.title)));
+      k.push(h('circle', { key: r.art.slug, cx, cy, r: 4 + Math.sqrt(r.conv) * 3.2, fill: r.conv ? '#14427B' : '#A2A6B0', fillOpacity: on ? 0.95 : 0.55, stroke: on ? '#17191F' : '#FFFFFF', strokeWidth: on ? 2 : 1, style: { cursor: 'pointer' }, onMouseEnter: () => this.setState({ scHover: r.art.slug }), onClick: this.openArt(r.art.slug) }, h('title', null, r.art.title)));
       if (on) label = h('text', { key: 'lbl', x: cx > W * 0.7 ? cx - 12 : cx + 12, y: cy - 10, textAnchor: cx > W * 0.7 ? 'end' : 'start', fontSize: 11.5, fontWeight: 600, fill: '#17191F', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, clip(r.art.title, 46));
     });
     if (label) k.push(label);
@@ -369,13 +369,13 @@ export class StatsDashboard extends React.Component<any, any> {
     const out = [], arts = this.articles().filter((r) => r.views > 0), avg = a.visits ? a.conv / a.visits : 0;
     if (p && p.conv) {
       const d = (a.conv - p.conv) / p.conv;
-      out.push({ icon: d >= 0 ? 'trending_up' : 'trending_down', bg: d >= 0 ? '#E5F5EF' : '#F7EDF0', fg: d >= 0 ? '#168568' : '#C65E68', title: 'Kontakty ' + (d >= 0 ? '+' : '−') + pc1(Math.abs(d) * 100) + ' % proti předchozímu období', text: fmt(a.conv) + ' návštěv s kontaktem proti ' + fmt(p.conv) + ' v předchozích ' + a.days + ' dnech. Návštěv je ' + fmt(a.visits) + ' (předtím ' + fmt(p.visits) + ').', action: 'Návštěvy s kontaktem', run: () => this.setState({ tab: 'visits', vf: 'conv' }) });
+      out.push({ icon: d >= 0 ? 'trending_up' : 'trending_down', bg: d >= 0 ? '#E5F5EF' : '#ECF1F7', fg: d >= 0 ? '#168568' : '#C65E68', title: 'Kontakty ' + (d >= 0 ? '+' : '−') + pc1(Math.abs(d) * 100) + ' % proti předchozímu období', text: fmt(a.conv) + ' návštěv s kontaktem proti ' + fmt(p.conv) + ' v předchozích ' + a.days + ' dnech. Návštěv je ' + fmt(a.visits) + ' (předtím ' + fmt(p.visits) + ').', action: 'Návštěvy s kontaktem', run: () => this.setState({ tab: 'visits', vf: 'conv' }) });
     }
     const leak = arts.filter((r) => r.views >= 30).sort((x, y) => x.conv / x.views - y.conv / y.views || y.views - x.views)[0];
-    if (leak) out.push({ icon: 'water_drop', bg: '#F7EDF0', fg: '#C65E68', title: 'Hodně čtenářů, málo kontaktů', text: '„' + clip(leak.art.title, 60) + '“ má ' + fmt(leak.views) + ' zobrazení, ale jen ' + fmt(leak.conv) + ' ' + plural(leak.conv, 'kontakt', 'kontakty', 'kontaktů') + '. Do konce ho dočte ' + pct(leak.depth.b[3], leak.depth.n) + ' čtenářů – výzvu k akci by stálo za to posunout výš.', action: 'Otevřít článek', run: this.openArt(leak.art.slug) });
+    if (leak) out.push({ icon: 'water_drop', bg: '#ECF1F7', fg: '#C65E68', title: 'Hodně čtenářů, málo kontaktů', text: '„' + clip(leak.art.title, 60) + '“ má ' + fmt(leak.views) + ' zobrazení, ale jen ' + fmt(leak.conv) + ' ' + plural(leak.conv, 'kontakt', 'kontakty', 'kontaktů') + '. Do konce ho dočte ' + pct(leak.depth.b[3], leak.depth.n) + ' čtenářů – výzvu k akci by stálo za to posunout výš.', action: 'Otevřít článek', run: this.openArt(leak.art.slug) });
     const star = arts.filter((r) => r.views >= 15 && r.conv > 0).sort((x, y) => y.conv / y.views - x.conv / x.views)[0];
     if (star) out.push({ icon: 'auto_awesome', bg: '#E5F5EF', fg: '#168568', title: 'Článek, který prodává', text: '„' + clip(star.art.title, 60) + '“ převádí ' + pct(star.conv, star.views) + ' čtenářů na kontakt' + (avg ? ', to je ' + pc1(star.conv / star.views / avg) + '× víc než průměr webu' : '') + '.', action: 'Detail článku', run: this.openArt(star.art.slug) });
-    if (a.formViews) out.push({ icon: 'edit_note', bg: '#F5E9EE', fg: '#6B243D', title: 'Formulář dokončí ' + pct(a.formSent, a.formViews), text: fmt(a.formViews) + ' návštěv otevřelo stránku s poptávkou, ' + fmt(a.formSent) + ' formulář odeslalo a ' + fmt(a.formViews - a.formSent) + ' odešlo bez odeslání' + (a.formCopied ? ', z toho ' + fmt(a.formCopied) + ' ' + plural(a.formCopied, 'si zkopíroval', 'si zkopírovali', 'si zkopírovalo') + ' e-mail nebo telefon' : '') + '.', action: 'Návštěvy s formulářem', run: () => this.setState({ tab: 'visits', vf: 'form' }) });
+    if (a.formViews) out.push({ icon: 'edit_note', bg: '#E8EEF6', fg: '#14427B', title: 'Formulář dokončí ' + pct(a.formSent, a.formViews), text: fmt(a.formViews) + ' návštěv otevřelo stránku s poptávkou, ' + fmt(a.formSent) + ' formulář odeslalo a ' + fmt(a.formViews - a.formSent) + ' odešlo bez odeslání' + (a.formCopied ? ', z toho ' + fmt(a.formCopied) + ' ' + plural(a.formCopied, 'si zkopíroval', 'si zkopírovali', 'si zkopírovalo') + ' e-mail nebo telefon' : '') + '.', action: 'Návštěvy s formulářem', run: () => this.setState({ tab: 'visits', vf: 'form' }) });
     if (a.m && a.d) {
       const worse = a.convM / a.m < a.convD / a.d;
       out.push({ icon: 'smartphone', bg: '#F1F2F5', fg: '#454954', title: 'Mobil vs. počítač', text: 'Na mobilu skončí kontaktem ' + pct(a.convM, a.m) + ' návštěv, na počítači ' + pct(a.convD, a.d) + '. ' + (worse ? 'Mobil zaostává – stojí za kontrolu lišta dole a tlačítko WhatsApp.' : 'Mobil převádí lépe než počítač.'), action: 'Mapa kliků', run: () => this.setState({ tab: 'buttons', mapPage: 'home' }) });
@@ -390,9 +390,9 @@ export class StatsDashboard extends React.Component<any, any> {
     const wp = (o) => o.goals.whatsapp + o.goals.phone;
     const K = [
       ['Návštěvy', a.visits, p ? p.visits : null, ser((x) => x.visits), '#A87833', fmt(a.visits), 'mobil ' + pct(a.m, a.visits) + ' · ' + pc1(a.visits ? a.pageviews / a.visits : 0) + ' str. na návštěvu', 0],
-      ['S kontaktem', a.conv, p ? p.conv : null, ser((x) => x.conv), '#6B243D', fmt(a.conv), 'návštěv z ' + fmt(a.visits), 0],
+      ['S kontaktem', a.conv, p ? p.conv : null, ser((x) => x.conv), '#14427B', fmt(a.conv), 'návštěv z ' + fmt(a.visits), 0],
       ['Míra konverze', a.visits ? a.conv / a.visits : 0, p ? (p.visits ? p.conv / p.visits : 0) : null, rateSer, '#454954', pct(a.conv, a.visits), 'návštěv skončí kontaktem', 1],
-      ['Formuláře', a.goals.enquiry, p ? p.goals.enquiry : null, ser((x) => x.goals.enquiry), '#6B243D', fmt(a.goals.enquiry), 'odesláno · ' + pct(a.formSent, a.formViews) + ' otevřených', 0],
+      ['Formuláře', a.goals.enquiry, p ? p.goals.enquiry : null, ser((x) => x.goals.enquiry), '#14427B', fmt(a.goals.enquiry), 'odesláno · ' + pct(a.formSent, a.formViews) + ' otevřených', 0],
       ['E-maily', a.goals.email, p ? p.goals.email : null, ser((x) => x.goals.email), '#4A3D7A', fmt(a.goals.email), (a.copies.email ? 'kliknutí · ' + fmt(a.copies.email) + ' zkopírováno' : 'kliků na e-mailovou adresu'), 0],
       ['WhatsApp a telefon', wp(a), p ? wp(p) : null, ser(wp), '#168568', fmt(wp(a)), 'WhatsApp ' + fmt(a.goals.whatsapp) + (a.copies.phone ? ' · tel. ' + fmt(a.goals.phone) + ' · ' + fmt(a.copies.phone) + ' zkop.' : ' · telefon ' + fmt(a.goals.phone)), 0],
     ];
@@ -400,14 +400,14 @@ export class StatsDashboard extends React.Component<any, any> {
       const o = { label, value, sub, spark: this.spark(s, color), showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6F747E' };
       if (prv != null) {
         const d = isRate ? (cur - prv) * 100 : prv ? ((cur - prv) / prv) * 100 : cur ? 100 : 0, up = d > 0.05, dn = d < -0.05;
-        Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: up ? '#E5F5EF' : dn ? '#F7EDF0' : '#F1F2F5', dfg: up ? '#168568' : dn ? '#C65E68' : '#6F747E' });
+        Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: up ? '#E5F5EF' : dn ? '#ECF1F7' : '#F1F2F5', dfg: up ? '#168568' : dn ? '#C65E68' : '#6F747E' });
       }
       return o;
     });
     const F = [['Návštěvy', a.visits], ['Četli článek nebo prohlídku', a.sawContent], ['Otevřeli stránku s poptávkou', a.formViews], ['Odeslali formulář', a.formSent]];
-    const funnel = F.map(([label, n], i) => ({ label, n: fmt(n), share: pct(n, a.visits), w: Math.max(1.5, Math.sqrt(a.visits ? n / a.visits : 0) * 100) + '%', color: ['#E6E8EE', '#B68645', '#A87833', '#6B243D'][i], step: i ? '→ ' + pct(n, F[i - 1][1]) + ' z předchozího kroku' : 'všechny návštěvy v období' }));
+    const funnel = F.map(([label, n], i) => ({ label, n: fmt(n), share: pct(n, a.visits), w: Math.max(1.5, Math.sqrt(a.visits ? n / a.visits : 0) * 100) + '%', color: ['#E6E8EE', '#B68645', '#A87833', '#14427B'][i], step: i ? '→ ' + pct(n, F[i - 1][1]) + ' z předchozího kroku' : 'všechny návštěvy v období' }));
     const hmData = st.hmMode === 'conv' ? a.hoursConv : a.hours, hmax = Math.max(1, ...hmData.map((r) => Math.max(...r)));
-    const heat = WEEK.map((d, wi) => ({ day: d, cells: hmData[wi].map((v, hr) => ({ bg: v ? 'rgba(107,36,61,' + (0.07 + 0.88 * (v / hmax)).toFixed(3) + ')' : '#F5F6F8', title: d + ' ' + two(hr) + ':00 – ' + fmt(a.hours[wi][hr]) + ' návštěv, ' + fmt(a.hoursConv[wi][hr]) + ' kontaktů' })) }));
+    const heat = WEEK.map((d, wi) => ({ day: d, cells: hmData[wi].map((v, hr) => ({ bg: v ? 'rgba(20,66,123,' + (0.07 + 0.88 * (v / hmax)).toFixed(3) + ')' : '#F5F6F8', title: d + ' ' + two(hr) + ':00 – ' + fmt(a.hours[wi][hr]) + ' návštěv, ' + fmt(a.hoursConv[wi][hr]) + ' kontaktů' })) }));
     const peak = (m) => { let b = [0, 0, -1]; m.forEach((r, wi) => r.forEach((v, hr) => { if (v > b[2]) b = [wi, hr, v]; })); return WEEK[b[0]] + ' kolem ' + b[1] + ':00'; };
     const srcRows = Object.entries(a.src).sort((x, y) => y[1].n - x[1].n);
     return Object.assign({
@@ -432,7 +432,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const today = ds.visits.filter((v) => v.day === 0 && v.hour * 60 + v.minute <= nowMin && v.ev.some(isGoal)).sort((x, y) => y.hour - x.hour || y.minute - x.minute).slice(0, 8)
       .map((v) => { const g = goalOf(v.ev.find(isGoal)); return { time: two(v.hour) + ':' + two(v.minute), label: GM[g].s, bg: GM[g].bg, fg: GM[g].c, sub: (v.ref || 'přímo') + ' · vstup: ' + clip(this.short(v.ev[0].p), 40), open: () => this.setState({ drawer: { type: 'visit', id: v.id, day: v.day } }) }; });
     return {
-      live: st.live.map((x) => { const t = new Date(x.at); return { time: hm(t) + ':' + two(t.getSeconds()), icon: x.icon, color: x.color, ibg: x.ibg, text: x.text, sub: x.sub, dev: x.dev, fw: x.goal ? '700' : '500', bg: x.fresh && now - x.fresh < 1800 ? '#FBF3DD' : x.goal ? '#FBF8F9' : 'transparent' }; }),
+      live: st.live.map((x) => { const t = new Date(x.at); return { time: hm(t) + ':' + two(t.getSeconds()), icon: x.icon, color: x.color, ibg: x.ibg, text: x.text, sub: x.sub, dev: x.dev, fw: x.goal ? '700' : '500', bg: x.fresh && now - x.fresh < 1800 ? '#FBF3DD' : x.goal ? '#F8F9FB' : 'transparent' }; }),
       liveSpark: this.spark(st.liveHist, '#168568', 240, 48), liveWord: plural(st.liveN, 'člověk', 'lidé', 'lidí'),
       livePages: pr.map(([pp, n]) => ({ title: this.short(pp), n, w: (n / pmax) * 100 + '%' })),
       todayContacts: today, todayEmpty: !today.length,
@@ -471,7 +471,7 @@ export class StatsDashboard extends React.Component<any, any> {
     return {
       mapOpts: seg(Object.keys(MAPS).map((k) => [k, MAPS[k].label]), st.mapPage, (k) => this.setState({ mapPage: k, mapArea: null })),
       mapPath: M.path,
-      mapRows: order.map((k) => { const x = by[k] || { n: 0, conv: 0, btn: {} }, f = x.n / max; return { name: S.areaName(k, 'cs'), n: fmt(x.n), share: pct(x.n, total), bg: x.n ? 'rgba(107,36,61,' + (0.05 + f * 0.75).toFixed(3) + ')' : '#FAFAFB', fg: f > 0.55 ? '#FFFFFF' : '#17191F', h: { header: '46px', footer: '52px', 'sticky-bar': '46px', 'blog-promo': '52px', hero: '120px', article: '150px' }[k] || '82px', outline: k === sel ? '2px solid #17191F' : '0 solid transparent', btns: Object.values(x.btn).sort((pp, qq) => qq.n - pp.n).slice(0, 3).map((b) => ({ t: clip(S.clickLabel(b.cat, b.label), 28) + ' · ' + fmt(b.n) })), enter: () => { if (this.state.mapArea !== k) this.setState({ mapArea: k }); } }; }),
+      mapRows: order.map((k) => { const x = by[k] || { n: 0, conv: 0, btn: {} }, f = x.n / max; return { name: S.areaName(k, 'cs'), n: fmt(x.n), share: pct(x.n, total), bg: x.n ? 'rgba(20,66,123,' + (0.05 + f * 0.75).toFixed(3) + ')' : '#FAFAFB', fg: f > 0.55 ? '#FFFFFF' : '#17191F', h: { header: '46px', footer: '52px', 'sticky-bar': '46px', 'blog-promo': '52px', hero: '120px', article: '150px' }[k] || '82px', outline: k === sel ? '2px solid #17191F' : '0 solid transparent', btns: Object.values(x.btn).sort((pp, qq) => qq.n - pp.n).slice(0, 3).map((b) => ({ t: clip(S.clickLabel(b.cat, b.label), 28) + ' · ' + fmt(b.n) })), enter: () => { if (this.state.mapArea !== k) this.setState({ mapArea: k }); } }; }),
       mapSelName: sel ? S.areaName(sel, 'cs') : '–',
       mapSelSub: fmt(sx.n) + ' kliků · ' + pct(sx.n, total) + ' všech kliků na stránce · ' + pct(sx.conv, sx.n) + ' pak kontakt',
       mapSelBtns: Object.values(sx.btn).sort((pp, qq) => qq.n - pp.n).slice(0, 8).map((b) => Object.assign(this.chip(b.cat), { label: clip(S.clickLabel(b.cat, b.label), 40), n: fmt(b.n) }, CONTACT[b.cat] ? this.own() : this.rate(b.conv, b.n, 0.5))),
@@ -489,7 +489,7 @@ export class StatsDashboard extends React.Component<any, any> {
     if (st.bsort === 'form') rows = rows.slice().sort((x, y) => y.after.enquiry - x.after.enquiry || y.n - x.n);
     const rest = Math.max(0, rows.length - st.blimit);
     return {
-      bFilters: BF.map(([k, label]) => { const on = st.bf === k; return { label, count: k === 'all' ? searched.length : counts[k] || 0, bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE', onClick: () => this.setState({ bf: k, blimit: 25 }) }; }),
+      bFilters: BF.map(([k, label]) => { const on = st.bf === k; return { label, count: k === 'all' ? searched.length : counts[k] || 0, bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F4F5F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE', onClick: () => this.setState({ bf: k, blimit: 25 }) }; }),
       bRows: rows.slice(0, st.blimit).map((g) => this.btnRow(g)), bEmpty: !rows.length, bMore: rest > 0,
       bMoreLabel: rest <= 25 ? 'Zobrazit všech ' + rest + ' dalších' : 'Zobrazit dalších 25 (zbývá ' + rest + ')', bShowMore: () => this.setState({ blimit: st.blimit + 25 }),
       bSummary: fmt(rows.length) + (st.bmode === 'label' ? ' tlačítek a odkazů' : ' míst') + ' · ' + fmt(rows.reduce((s, g) => s + g.n, 0)) + ' kliků',
@@ -506,7 +506,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const rows = list.filter(test[st.vf] || test.all);
     const when = (v) => (v.day === 0 ? 'dnes' : v.day === 1 ? 'včera' : dl(ds.dates[v.day])) + ' ' + two(v.hour) + ':' + two(v.minute);
     return {
-      vFilters: VF.map(([k, label]) => { const on = st.vf === k; return { label, count: fmt(list.filter(test[k]).length), bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE', onClick: () => this.setState({ vf: k, vlimit: 40 }) }; }),
+      vFilters: VF.map(([k, label]) => { const on = st.vf === k; return { label, count: fmt(list.filter(test[k]).length), bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F4F5F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE', onClick: () => this.setState({ vf: k, vlimit: 40 }) }; }),
       vRows: rows.slice(0, st.vlimit).map((s) => {
         const o = s.goal ? GM[s.goal] : null, g = S.srcGroup(s.v.ref);
         return { when: when(s.v), dev: s.v.dev === 'm' ? 'smartphone' : 'computer', src: s.v.ref || 'přímo', srcColor: (SRC[g] || SRC.other)[1], steps: s.pages.slice(0, 4).map((e, i) => ({ t: clip(this.short(e.p), 26), arrow: i ? 'inline' : 'none', bg: e.p.startsWith('/blog/') ? '#EEF0F4' : '#F1F2F5' })), more: s.pages.length > 4 ? '+' + (s.pages.length - 4) : '', moreD: s.pages.length > 4 ? 'inline' : 'none', pagesN: fmt(s.pages.length), dur: dur(s.dur), outcome: o ? o.s : s.bounce ? 'Odešel hned' : 'Bez kontaktu', obg: o ? o.bg : '#F5F6F8', ofg: o ? o.c : '#6F747E', open: () => this.setState({ drawer: { type: 'visit', id: s.v.id, day: s.v.day } }) };
@@ -566,7 +566,7 @@ export class StatsDashboard extends React.Component<any, any> {
           { label: 'Kontakt potom', value: fmt(r.conv), note: pct(r.conv, r.views) + ' čtenářů' },
           { label: 'Ø čas čtení', value: d.n ? dur(Math.round(d.time / d.n)) : '–', note: d.n ? 'dočteno ' + pct(d.b[3], d.n) : 'bez dat' },
         ],
-        showDepth: d.n > 0, depth: reached.map((n, i) => ({ label: 'Došli do ' + (i + 1) * 25 + ' %', n: pct(n, d.n), w: (d.n ? (n / d.n) * 100 : 0) + '%', color: ['#C9CCD3', '#B68645', '#A87833', '#6B243D'][i] })),
+        showDepth: d.n > 0, depth: reached.map((n, i) => ({ label: 'Došli do ' + (i + 1) * 25 + ' %', n: pct(n, d.n), w: (d.n ? (n / d.n) * 100 : 0) + '%', color: ['#C9CCD3', '#B68645', '#A87833', '#14427B'][i] })),
         showChart: r.days.length > 1, chart: this.spark(this.pts(r.days, 60), '#A87833', 520, 90),
         showAfter: true, afterTitle: 'Co čtenáři udělali potom', after: afterRows(r.after, r.views, r.conv),
         showList: true, listTitle: 'Na co tu čtenáři klikají', listHead: 'Tlačítko · oblast', list, listEmpty: !list.length,
@@ -607,7 +607,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const res = q ? tabItems.concat(artItems, btnItems).filter((it) => (it.title + ' ' + it.sub).toLowerCase().includes(q)).slice(0, 12) : tabItems.concat(artItems.slice(0, 4), btnItems.slice(0, 4));
     this._pItems = res;
     return {
-      pItems: res.map((it, i) => ({ icon: it.icon, title: it.title, sub: it.sub, run: it.run, bg: i === st.psel ? '#F6F4F6' : 'transparent', enter: () => { if (this.state.psel !== i) this.setState({ psel: i }); } })),
+      pItems: res.map((it, i) => ({ icon: it.icon, title: it.title, sub: it.sub, run: it.run, bg: i === st.psel ? '#F4F5F6' : 'transparent', enter: () => { if (this.state.psel !== i) this.setState({ psel: i }); } })),
       pEmpty: !res.length, pq: st.pq, onPq: (e) => this.setState({ pq: e.target.value, psel: 0 }),
       pRef: (el) => { if (el && document.activeElement !== el) el.focus(); },
     };
@@ -708,7 +708,7 @@ export class StatsDashboard extends React.Component<any, any> {
     ];
     return {
       tKpis,
-      tRows: slugs.map((s) => { const a = by[s], c = conv(a), on = s === sel; return Object.assign({ title: this.tourName(s), url: '/tours/' + s, n: fmt(a.length), w: (a.length / mx) * 100 + '%', entries: fmt(a.filter((x) => x.entry).length), time: dur(median(a.map((x) => x.t))), enq: fmt(a.filter((x) => x.enq).length), enqC: a.some((x) => x.enq) ? '#6B243D' : '#A2A6B0', wa: fmt(a.filter((x) => x.goal === 'whatsapp' || x.goal === 'phone').length), bg: on ? '#FAFAFC' : 'transparent', bl: on ? '#6B243D' : 'transparent', pick: () => this.setState({ tsel: on ? null : s }) }, this.rate(c, uvOf(a), 0.3)); }),
+      tRows: slugs.map((s) => { const a = by[s], c = conv(a), on = s === sel; return Object.assign({ title: this.tourName(s), url: '/tours/' + s, n: fmt(a.length), w: (a.length / mx) * 100 + '%', entries: fmt(a.filter((x) => x.entry).length), time: dur(median(a.map((x) => x.t))), enq: fmt(a.filter((x) => x.enq).length), enqC: a.some((x) => x.enq) ? '#14427B' : '#A2A6B0', wa: fmt(a.filter((x) => x.goal === 'whatsapp' || x.goal === 'phone').length), bg: on ? '#FAFAFC' : 'transparent', bl: on ? '#14427B' : 'transparent', pick: () => this.setState({ tsel: on ? null : s }) }, this.rate(c, uvOf(a), 0.3)); }),
       tEmpty: !slugs.length,
       tSelName: sel ? this.tourName(sel) : 'Všechny prohlídky', tSelSub: fmt(n) + ' zobrazení' + (sel ? ' · klikněte znovu na řádek pro všechny prohlídky' : ' · vyberte řádek v tabulce pro jednu prohlídku'),
       tClear: () => this.setState({ tsel: null }), tClearD: sel ? 'inline-flex' : 'none', tWho,
@@ -726,7 +726,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const o = { label, value, sub, spark: spark || '', showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6F747E' };
     if (prv != null) {
       const d = isRate ? (cur - prv) * 100 : prv ? ((cur - prv) / prv) * 100 : cur ? 100 : 0, up = d > 0.05, dn = d < -0.05, good = invert ? dn : up, bad = invert ? up : dn;
-      Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: good ? '#E5F5EF' : bad ? '#F7EDF0' : '#F1F2F5', dfg: good ? '#168568' : bad ? '#C65E68' : '#6F747E' });
+      Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: good ? '#E5F5EF' : bad ? '#ECF1F7' : '#F1F2F5', dfg: good ? '#168568' : bad ? '#C65E68' : '#6F747E' });
     }
     return o;
   }
@@ -837,12 +837,12 @@ export class StatsDashboard extends React.Component<any, any> {
     F.forEach((f) => { if (f.sent) kinds[f.sent.a] = (kinds[f.sent.a] || 0) + 1; });
     const fKpis = [
       this.kpi('Otevřeli formulář', fmt(s0.opened), pct(s0.opened, D.V) + ' všech návštěv', s0.opened, s1 && s1.opened, 0, this.spark(sO, '#A87833')),
-      this.kpi('Odeslali', fmt(s0.sent), 'Rezervace ' + fmt(kinds.booking) + ' · Kontakt ' + fmt(kinds.contact), s0.sent, s1 && s1.sent, 0, this.spark(sS, '#6B243D')),
+      this.kpi('Odeslali', fmt(s0.sent), 'Rezervace ' + fmt(kinds.booking) + ' · Kontakt ' + fmt(kinds.contact), s0.sent, s1 && s1.sent, 0, this.spark(sS, '#14427B')),
       this.kpi('Dokončení', pct(s0.sent, s0.opened), 'otevřených formulářů odesláno', s0.opened ? s0.sent / s0.opened : 0, s1 && (s1.opened ? s1.sent / s1.opened : 0), 1, this.spark(sS.map((x, i) => (sO[i] ? x / sO[i] : 0)), '#454954')),
       this.kpi('Ozvali se jinak', fmt(s0.direct), 'WhatsApp ' + fmt(by('whatsapp')) + ' · tel. ' + fmt(by('phone')) + ' · e-mail ' + fmt(by('email')), s0.direct, s1 && s1.direct, 0, ''),
       this.kpi('Bez kontaktu', fmt(s0.none), pct(s0.none, s0.opened) + ' otevřených formulářů', s0.none, s1 && s1.none, 0, '', true),
     ];
-    const ch = this.dayChart(dF, P ? this.daySeries(P, 1, (f) => f.v.day, () => 1) : null, { colA: '#C9CCD3', colB: '#6B243D', prevC: '#17191F', say: (a, b) => fmt(a) + ' otevřeli · ' + fmt(b) + ' odeslali', total: 'celkem ' + fmt(s0.opened) + ' otevřeli, ' + fmt(s0.sent) + ' odeslali' });
+    const ch = this.dayChart(dF, P ? this.daySeries(P, 1, (f) => f.v.day, () => 1) : null, { colA: '#C9CCD3', colB: '#14427B', prevC: '#17191F', say: (a, b) => fmt(a) + ' otevřeli · ' + fmt(b) + ' odeslali', total: 'celkem ' + fmt(s0.opened) + ' otevřeli, ' + fmt(s0.sent) + ' odeslali' });
     const byBtn = st.fsMode === 'btn', src = {};
     F.forEach((f) => {
       const k = !f.btn ? '' : byBtn ? f.btn.c + '\t' + f.btn.l + '\t' + f.btn.a : f.from;
@@ -858,7 +858,7 @@ export class StatsDashboard extends React.Component<any, any> {
       if (!g.k) { hd = { catLabel: 'Přímý vstup', chipBg: '#F1F2F5', chipFg: '#454954', label: 'Formulář byl první stránkou návštěvy' }; sub = 'nejčastěji ' + subs.slice(0, 3).join(', '); }
       else if (byBtn) { hd = Object.assign(this.chip(g.btn.c), { label: '„' + S.clickLabel(g.btn.c, g.btn.l) + '“ · ' + S.areaName(g.btn.a, 'cs') }); sub = subs.length === 1 ? S.pageKind(subs[0], 'cs') + ': ' + clip(S.pageName(subs[0], 'cs'), 50) : 'na ' + subs.length + ' stránkách · nejvíc ' + clip(this.short(subs[0]), 40); }
       else { const art = g.page.startsWith('/blog/'); hd = { catLabel: S.pageKind(g.page, 'cs'), chipBg: art ? '#EEF0F4' : '#F1F2F5', chipFg: art ? '#5B5F6B' : '#454954', label: clip(S.pageName(g.page, 'cs'), 70) }; sub = 'přes ' + subs.slice(0, 2).map((x) => '„' + clip(x, 32) + '“').join(', '); }
-      return Object.assign(hd, { sub, n: fmt(g.n), sent: fmt(g.sent), sentC: g.sent ? '#6B243D' : '#A2A6B0', direct: fmt(g.direct), directC: g.direct ? '#168568' : '#A2A6B0' }, this.rate(g.sent, g.n, 0.3));
+      return Object.assign(hd, { sub, n: fmt(g.n), sent: fmt(g.sent), sentC: g.sent ? '#14427B' : '#A2A6B0', direct: fmt(g.direct), directC: g.direct ? '#168568' : '#A2A6B0' }, this.rate(g.sent, g.n, 0.3));
     });
     const segR = (keyOf, lab, order) => { const o = {}; F.forEach((f) => { const k = keyOf(f), g = o[k] || (o[k] = { n: 0, sent: 0 }); g.n++; if (f.outcome === 'enquiry') g.sent++; }); return (order || Object.keys(o).sort((x, y) => o[y].n - o[x].n)).filter((k) => o[k]).map((k) => Object.assign({ label: lab(k), share: pct(o[k].n, s0.opened) + ' otevření', n: fmt(o[k].n), sent: fmt(o[k].sent) }, this.rate(o[k].sent, o[k].n, 0.3))); };
     const OK = ['enquiry', 'whatsapp', 'phone', 'email', 'away', 'left'], omx = Math.max(1, ...OK.map(by));
@@ -880,12 +880,12 @@ export class StatsDashboard extends React.Component<any, any> {
       ],
       fOut: OK.map((k) => ({ label: OUT[k][0], n: fmt(by(k)), share: pct(by(k), s0.opened), w: (by(k) ? Math.max(1.5, (by(k) / omx) * 100) : 0) + '%', color: OUT[k][1] })),
       fOutNote, fOutNoteD: fOutNote ? 'block' : 'none',
-      fTours: tk.map((k) => ({ label: TQ_L[k] || k, n: fmt(tq[k]), share: pct(tq[k], s0.sent), w: (tq[k] / tmx) * 100 + '%', color: TQ_L[k] ? '#C9CCD3' : '#6B243D' })), fToursEmpty: !tk.length,
+      fTours: tk.map((k) => ({ label: TQ_L[k] || k, n: fmt(tq[k]), share: pct(tq[k], s0.sent), w: (tq[k] / tmx) * 100 + '%', color: TQ_L[k] ? '#C9CCD3' : '#14427B' })), fToursEmpty: !tk.length,
       fFilters: FF.map(([k, label]) => Object.assign({ label, count: fmt(F.filter(fTest[k]).length), onClick: () => this.setState({ ff: k, flimit: 30 }) }, chipF(st.ff === k))),
       fRows: list.slice(0, st.flimit).map((f) => {
         const ps = dedupe(f.before.map((e) => e.p)), cut = ps.length > 3, last = ps.slice(-3), g = S.srcGroup(f.v.ref), o = OUT[f.outcome];
         const steps = last.map((p, i) => ({ t: clip(this.short(p), 24), arrow: i || cut ? 'inline' : 'none', bg: p.startsWith('/blog/') ? '#EEF0F4' : '#F1F2F5', fg: '#17191F', fw: '400' }))
-          .concat([{ t: f.page === '/book' ? 'Rezervace' : 'Kontakt', arrow: last.length ? 'inline' : 'none', bg: '#F5E9EE', fg: '#6B243D', fw: '700' }]);
+          .concat([{ t: f.page === '/book' ? 'Rezervace' : 'Kontakt', arrow: last.length ? 'inline' : 'none', bg: '#E8EEF6', fg: '#14427B', fw: '700' }]);
         return {
           when: this.whenV(f.v), dev: f.v.dev === 'm' ? 'smartphone' : 'computer', src: f.v.ref || 'přímo', srcColor: (SRC[g] || SRC.other)[1],
           steps, more: cut ? '+' + (ps.length - 3) : '', moreD: cut ? 'inline' : 'none',
@@ -931,7 +931,7 @@ export class StatsDashboard extends React.Component<any, any> {
 
   renderVals() {
     const st = this.state, tab = this.tab(), view = this.view(), cmpOn = this.cmpOn(), compact = st.w < 980;
-    const sn = (k) => (view === k ? { line: '#B68645', fg: '#F6F4F6', fw: '600', bg: 'rgba(246,244,246,0.08)' } : { line: 'rgba(246,244,246,0.14)', fg: 'rgba(246,244,246,0.62)', fw: '400', bg: 'transparent' });
+    const sn = (k) => (view === k ? { line: '#B68645', fg: '#F4F5F6', fw: '600', bg: 'rgba(244,245,246,0.08)' } : { line: 'rgba(244,245,246,0.14)', fg: 'rgba(244,245,246,0.62)', fw: '400', bg: 'transparent' });
     const vals = {
       sideWide: !compact && !this.props.embedded, sideCompact: compact && !this.props.embedded,
       goAll: this.go('all'), goWa: this.go('wa'), goForms: this.go('forms'),
@@ -940,7 +940,7 @@ export class StatsDashboard extends React.Component<any, any> {
       sn: { all: sn('all'), wa: sn('wa'), forms: sn('forms'), tours: sn('tours') }, goTours: this.go('tours'),
       hAll: view === 'all', hSub: view !== 'all', hWa: view === 'wa', hForms: view === 'forms', hTours: view === 'tours', showTabs: view === 'all', noTabs: view !== 'all',
       showWa: false, showForms: false, showTours: false,
-      tabs: TABS.map(([k, l, i]) => ({ label: l, icon: i, fg: k === tab ? '#17191F' : '#6F747E', line: k === tab ? '#6B243D' : 'transparent', onClick: () => this.setState({ tab: k, drawer: null, hover: -1 }) })),
+      tabs: TABS.map(([k, l, i]) => ({ label: l, icon: i, fg: k === tab ? '#17191F' : '#6F747E', line: k === tab ? '#14427B' : 'transparent', onClick: () => this.setState({ tab: k, drawer: null, hover: -1 }) })),
       devOpts: seg(DEVS, st.dev, (k) => this.setState({ dev: k, hover: -1 })),
       rangeOpts: seg(RANGES, st.range, (k) => this.setState({ range: k, hover: -1 })),
       srcOpts: seg(SRC_OPTS, st.src, (k) => this.setState({ src: k, hover: -1 })),

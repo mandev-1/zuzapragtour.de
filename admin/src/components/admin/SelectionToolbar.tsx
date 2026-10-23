@@ -9,19 +9,19 @@ export interface LinkTarget {
 const CSS = `
 .zst{position:fixed;transform:translate(-50%,-100%);z-index:58;background:var(--ink);border-radius:var(--radius-md);box-shadow:var(--shadow-lg);padding:3px;font-family:var(--font-sans)}
 .zst-row{display:flex;align-items:center;gap:1px}
-.zst-b{min-width:30px;height:30px;padding:0 .4rem;border:0;background:transparent;color:rgba(246,244,246,.85);border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px}
-.zst-b:hover{background:rgba(246,244,246,.16);color:var(--ivory)}
+.zst-b{min-width:30px;height:30px;padding:0 .4rem;border:0;background:transparent;color:rgba(244,245,246,.85);border-radius:var(--radius-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px}
+.zst-b:hover{background:rgba(244,245,246,.16);color:var(--ivory)}
 .zst-b .material-symbols-outlined{font-size:17px}
-.zst-sep{width:1px;height:18px;background:rgba(246,244,246,.2);margin:0 3px}
+.zst-sep{width:1px;height:18px;background:rgba(244,245,246,.2);margin:0 3px}
 .zst-link{display:flex;flex-direction:column;min-width:288px}
-.zst-link input{border:0;outline:0;background:rgba(246,244,246,.1);color:var(--ivory);border-radius:var(--radius-sm);padding:.55rem .6rem;font-family:var(--font-sans);font-size:13px;margin:2px}
-.zst-link input::placeholder{color:rgba(246,244,246,.5)}
+.zst-link input{border:0;outline:0;background:rgba(244,245,246,.1);color:var(--ivory);border-radius:var(--radius-sm);padding:.55rem .6rem;font-family:var(--font-sans);font-size:13px;margin:2px}
+.zst-link input::placeholder{color:rgba(244,245,246,.5)}
 .zst-go{align-self:flex-end;border:0;background:var(--burgundy);color:var(--ivory);border-radius:var(--radius-sm);padding:.45rem .8rem;margin:2px;font-size:12px;font-weight:600;cursor:pointer}
 .zst-list{display:flex;flex-direction:column;max-height:190px;overflow:auto;margin:2px}
-.zst-it{display:flex;align-items:center;gap:.5rem;border:0;background:transparent;color:rgba(246,244,246,.85);padding:.5rem;border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font-sans);font-size:12px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.zst-it:hover{background:rgba(246,244,246,.16);color:var(--ivory)}
+.zst-it{display:flex;align-items:center;gap:.5rem;border:0;background:transparent;color:rgba(244,245,246,.85);padding:.5rem;border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font-sans);font-size:12px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zst-it:hover{background:rgba(244,245,246,.16);color:var(--ivory)}
 .zst-it .material-symbols-outlined{font-size:15px;color:var(--brass);flex-shrink:0}
-.zst-hint{color:rgba(246,244,246,.4);font-size:10px;padding:0 .5rem .35rem}
+.zst-hint{color:rgba(244,245,246,.4);font-size:10px;padding:0 .5rem .35rem}
 `;
 
 function closestEditable(node: Node | null): HTMLElement | null {

@@ -17,7 +17,7 @@ const CSS = `
 .zag-row{display:flex;align-items:center;gap:.6rem}
 .zag-row label{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;color:var(--ink-soft);cursor:pointer}
 .zag-row input{accent-color:var(--burgundy);width:16px;height:16px}
-.zag-err{font-size:12.5px;color:var(--error);background:rgba(194,65,79,.07);border-radius:var(--radius-md);padding:.55rem .8rem}
+.zag-err{font-size:12.5px;color:var(--error);background:rgba(59,122,200,.07);border-radius:var(--radius-md);padding:.55rem .8rem}
 .zag-note{font-size:11.5px;color:var(--ink-mute);line-height:1.5}
 .zag-f{display:flex;align-items:center;justify-content:flex-end;gap:.6rem;padding:.9rem 1.3rem;border-top:1px solid var(--rule);background:var(--stone-50)}
 .zag-btn{display:inline-flex;align-items:center;gap:.45rem;border-radius:var(--radius-md);padding:.6rem 1.1rem;font-family:var(--font-sans);font-size:13px;font-weight:600;cursor:pointer;border:1px solid transparent}
@@ -27,7 +27,7 @@ const CSS = `
 .zag-btn.primary:hover{background:var(--burgundy-deep)}
 .zag-btn.primary:disabled{opacity:.6;cursor:default}
 .zag-btn .material-symbols-outlined{font-size:17px}
-.zag-spin{width:15px;height:15px;border:2px solid rgba(246,244,246,.4);border-top-color:var(--ivory);border-radius:50%;animation:zag-rot .7s linear infinite}
+.zag-spin{width:15px;height:15px;border:2px solid rgba(244,245,246,.4);border-top-color:var(--ivory);border-radius:50%;animation:zag-rot .7s linear infinite}
 @keyframes zag-rot{to{transform:rotate(360deg)}}
 `;
 

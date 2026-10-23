@@ -19,17 +19,17 @@ const CSS = `
 .zab th,.zab td{text-align:right;padding:.5rem .6rem;border-bottom:1px solid var(--rule-soft);font-variant-numeric:tabular-nums}
 .zab th:first-child,.zab td:first-child{text-align:left}
 .zab th{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
-.zab tr.key td{font-weight:700;color:var(--ink);background:rgba(198,147,167,.06)}
+.zab tr.key td{font-weight:700;color:var(--ink);background:rgba(144,170,201,.06)}
 .zab .up{color:#168568}.zab .down{color:var(--burgundy)}
-.zab-verdict{display:flex;gap:.8rem;align-items:flex-start;border-radius:var(--radius-md);padding:.8rem .95rem;font-size:13px;line-height:1.5;background:rgba(198,147,167,.08)}
+.zab-verdict{display:flex;gap:.8rem;align-items:flex-start;border-radius:var(--radius-md);padding:.8rem .95rem;font-size:13px;line-height:1.5;background:rgba(144,170,201,.08)}
 .zab-verdict.win{background:rgba(22,133,104,.1)}
-.zab-verdict.lose{background:rgba(107,36,61,.08)}
+.zab-verdict.lose{background:rgba(20,66,123,.08)}
 .zab-verdict .material-symbols-outlined{font-size:20px;color:var(--brass-deep)}
 .zab-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .zab-btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--rule);background:#fff;border-radius:var(--radius-md);padding:.45rem .75rem;font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--ink-soft);cursor:pointer}
 .zab-btn:hover{border-color:var(--burgundy);color:var(--burgundy)}
 .zab-btn .material-symbols-outlined{font-size:15px}
-.zab-err{border:1px solid rgba(107,36,61,.3);background:rgba(107,36,61,.05);border-radius:var(--radius-md);padding:.8rem 1rem;font-size:13px;color:var(--burgundy)}
+.zab-err{border:1px solid rgba(20,66,123,.3);background:rgba(20,66,123,.05);border-radius:var(--radius-md);padding:.8rem 1rem;font-size:13px;color:var(--burgundy)}
 .zab-note{font-size:12px;color:var(--ink-mute);line-height:1.55}
 .zab-seg{display:inline-flex;border:1px solid var(--rule);border-radius:var(--radius-md);overflow:hidden}
 .zab-seg button{border:0;background:#fff;padding:.45rem .75rem;font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--ink-soft);cursor:pointer}

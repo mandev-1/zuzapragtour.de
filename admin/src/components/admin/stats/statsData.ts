@@ -21,7 +21,7 @@ const ALIAS = { blog: {}, tours: {} };
 
 const GOALS = ['enquiry', 'email', 'whatsapp', 'phone'];
 const GOAL_META = {
-  enquiry: { label: 'Formular gesendet', short: 'Formular', icon: 'edit_note', color: '#6B243D', bg: '#F5E9EE' },
+  enquiry: { label: 'Formular gesendet', short: 'Formular', icon: 'edit_note', color: '#14427B', bg: '#E8EEF6' },
   email: { label: 'E-Mail geöffnet', short: 'E-Mail', icon: 'mail', color: '#4A3D7A', bg: '#EAE6F3' },
   whatsapp: { label: 'WhatsApp geöffnet', short: 'WhatsApp', icon: 'chat', color: '#168568', bg: '#E5F5EF' },
   phone: { label: 'Telefonnummer getippt', short: 'Telefon', icon: 'call', color: '#A87833', bg: '#FCF5EA' },
@@ -30,8 +30,8 @@ const CATS = {
   whatsapp: { label: 'WhatsApp', bg: '#E5F5EF', fg: '#168568' },
   email: { label: 'E-Mail', bg: '#EAE6F3', fg: '#4A3D7A' },
   phone: { label: 'Telefon', bg: '#FCF5EA', fg: '#A87833' },
-  form: { label: 'Zur Anfrage', bg: '#F5E9EE', fg: '#6B243D' },
-  enquiry: { label: 'Formular gesendet', bg: '#6B243D', fg: '#FFFFFF' },
+  form: { label: 'Zur Anfrage', bg: '#E8EEF6', fg: '#14427B' },
+  enquiry: { label: 'Formular gesendet', bg: '#14427B', fg: '#FFFFFF' },
   tour: { label: 'Tour', bg: '#EEF0F4', fg: '#5B5F6B' },
   nav: { label: 'Navigation', bg: '#F1F2F5', fg: '#454954' },
   anchor: { label: 'Sprung', bg: '#F1F2F5', fg: '#454954' },

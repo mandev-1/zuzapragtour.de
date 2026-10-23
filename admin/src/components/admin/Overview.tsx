@@ -38,7 +38,7 @@ const CSS = `
 .zov-flabel{color:#9B9DA5;font-size:11px;font-weight:700}
 .zov-fgroup{display:flex;align-items:center;gap:2px;background:#ECEDF2;border:1px solid #E9EAF0;border-radius:12px;padding:4px}
 .zov-f{background:transparent;border:0;border-radius:8px;padding:7px 12px;color:#8B8E97;font-weight:750;font-size:11px;cursor:pointer;font-family:inherit}
-.zov-f:hover{background:#F9F7F9}
+.zov-f:hover{background:#F7F8F9}
 .zov-f.is-on{color:#2D3038;background:#fff;box-shadow:0 2px 5px #2222220D}
 .zov-live{background:#E5F5EF;color:#16866A;border-radius:100px;padding:8px 11px;font-size:10.5px;font-weight:800;display:flex;align-items:center;gap:6px;border:0;cursor:pointer;font-family:inherit}
 .zov-live::before{content:'';height:6px;width:6px;border-radius:50%;background:#16866A}
@@ -49,7 +49,7 @@ const CSS = `
 .zov-switch{border:0;background:none;display:flex;align-items:center;gap:8px;color:#6F747E;font-size:11px;font-weight:650;padding:5px 0;cursor:pointer;font-family:inherit}
 .zov-track{height:19px;width:32px;background:#DBDDE4;border-radius:15px;padding:3px;transition:background .2s}
 .zov-knob{display:block;width:13px;height:13px;background:#fff;border-radius:50%;box-shadow:0 2px 4px #0002;transition:transform .2s}
-.zov-switch.is-on .zov-track{background:#722C48}
+.zov-switch.is-on .zov-track{background:#1C4A82}
 .zov-switch.is-on .zov-knob{transform:translateX(13px)}
 .zov-err{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #F3D9DD;border-radius:16px;padding:14px 16px;margin-bottom:16px;font-size:12px;color:#8A4A55}
 .zov-err .material-symbols-outlined{color:#C65E68}
@@ -61,7 +61,7 @@ const CSS = `
 .zov-mhead{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;color:#7B808B;font-weight:700}
 .zov-micon{width:30px;height:30px;border-radius:10px;background:#F4F5F8;display:grid;place-items:center;color:#79818D;flex-shrink:0}
 .zov-micon .material-symbols-outlined{font-size:18px}
-.zov-metric.is-primary .zov-micon{background:#F5E9EE;color:#83425E}
+.zov-metric.is-primary .zov-micon{background:#E8EEF6;color:#335E92}
 .zov-mnum{font-size:clamp(25px,2.3vw,35px);font-weight:780;letter-spacing:-1.5px;margin:14px 0 3px;font-variant-numeric:tabular-nums}
 .zov-msub{display:flex;align-items:center;gap:8px;font-size:10px;color:#9A9DA5;position:relative;z-index:1}
 .zov-delta{display:inline-flex;align-items:center;gap:3px;border-radius:6px;padding:4px 6px;font-size:10px;font-weight:800;white-space:nowrap}
@@ -77,22 +77,22 @@ const CSS = `
 .zov-chead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:18px}
 .zov-chead h2{font-size:15px;font-weight:800;letter-spacing:-.36px;margin:0 0 5px}
 .zov-chead p{font-size:11px;color:#989BA5;margin:0;line-height:1.45}
-.zov-caction{display:flex;align-items:center;gap:5px;color:#8A4862;font-size:11px;font-weight:800;background:none;border:0;padding:2px 0;white-space:nowrap;cursor:pointer;font-family:inherit}
+.zov-caction{display:flex;align-items:center;gap:5px;color:#396499;font-size:11px;font-weight:800;background:none;border:0;padding:2px 0;white-space:nowrap;cursor:pointer;font-family:inherit}
 .zov-caction .material-symbols-outlined{font-size:15px}
 .zov-caction:hover{text-decoration:underline}
 .zov-chips{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
 .zov-chip{border:1px solid #E8E9ED;background:#fff;border-radius:8px;padding:6px 9px;font-size:10.5px;font-weight:750;color:#989AA4;cursor:pointer;font-family:inherit}
-.zov-chip.is-on{background:#702E47;border-color:#702E47;color:#fff}
+.zov-chip.is-on{background:#1F4A7F;border-color:#1F4A7F;color:#fff}
 .zov-legend{display:flex;align-items:center;gap:14px;color:#8A8D96;font-size:10px;font-weight:650;margin-top:11px}
-.zov-ldot{height:7px;width:7px;display:inline-block;border-radius:50%;background:#7A334E;margin-right:5px}
+.zov-ldot{height:7px;width:7px;display:inline-block;border-radius:50%;background:#23518A;margin-right:5px}
 .zov-ldot.gray{background:#C6C6CE}
 .zov-chart{position:relative;width:100%;height:229px;min-height:180px}
 .zov-chart svg{width:100%;height:100%;overflow:visible;display:block}
-.zov-marker{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#78314E;border:3px solid #fff;box-shadow:0 2px 6px #78314E40;pointer-events:none}
+.zov-marker{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#214F88;border:3px solid #fff;box-shadow:0 2px 6px #214F8840;pointer-events:none}
 .zov-empty{position:absolute;inset:0;display:grid;place-items:center;color:#A2A6B0;font-size:12px}
 .zov-tip{position:absolute;top:20px;pointer-events:none;background:#1E2027;color:#fff;border-radius:10px;padding:10px 12px;font-size:11px;box-shadow:0 12px 30px #0002;z-index:2;line-height:1.5;white-space:nowrap}
 .zov-tip strong{font-size:13px}
-.zov-tip span{color:#C5BAC1}
+.zov-tip span{color:#B9BFC6}
 .zov-xl{display:flex;justify-content:space-between;margin-top:2px;font-size:10px;color:#AAADB4;padding-left:4px}
 .zov-cfoot{border-top:1px solid #F0F0F2;margin-top:17px;padding-top:14px;display:flex;justify-content:space-between;align-items:center;gap:8px;color:#9A9BA2;font-size:10.5px;flex-wrap:wrap}
 .zov-cfoot>span{display:flex;align-items:center;gap:5px}
@@ -112,14 +112,14 @@ const CSS = `
 .zov-src b{font-size:11px;color:#292C34;white-space:nowrap}
 .zov-sdot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
 .zov-sfoot{display:flex;gap:8px;align-items:center;border-top:1px solid #F0F0F2;padding-top:15px;color:#969BA5;font-size:10.5px;line-height:1.6}
-.zov-sfoot .material-symbols-outlined{font-size:15px;color:#9A6278}
+.zov-sfoot .material-symbols-outlined{font-size:15px;color:#557AA7}
 
 .zov-acts{display:flex;flex-direction:column}
 .zov-act{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #F1F1F3}
 .zov-act:last-child{border-bottom:0;padding-bottom:0}
 .zov-aicon{height:37px;width:37px;display:grid;place-items:center;border-radius:12px;background:#EFF6F2;color:#218B66;flex-shrink:0}
 .zov-aicon .material-symbols-outlined{font-size:18px}
-.zov-aicon.wine{background:#F7EDF0;color:#87445D}
+.zov-aicon.wine{background:#ECF1F7;color:#356196}
 .zov-aicon.gold{background:#FCF5EA;color:#B68645}
 .zov-aicon.gray{background:#F1F2F5;color:#6F747E}
 .zov-ainfo{flex:1;min-width:0}
@@ -128,21 +128,21 @@ const CSS = `
 .zov-atime{font-size:10px;color:#A8ABB2;flex-shrink:0;text-align:right}
 .zov-none{color:#A2A6B0;font-size:12px;padding:14px 0}
 
-.zov-attn{background:linear-gradient(160deg,#32232E,#261D27 80%);color:#fff;border:0;position:relative;overflow:hidden}
-.zov-attn::before{content:'';position:absolute;height:240px;width:240px;border-radius:50%;background:#813C5B;filter:blur(65px);opacity:.22;right:-100px;top:-140px;pointer-events:none}
+.zov-attn{background:linear-gradient(160deg,#173A66,#0E2340 80%);color:#fff;border:0;position:relative;overflow:hidden}
+.zov-attn::before{content:'';position:absolute;height:240px;width:240px;border-radius:50%;background:#D7141A;filter:blur(70px);opacity:.28;right:-100px;top:-140px;pointer-events:none}
 .zov-attn .zov-chead h2{color:#fff}
-.zov-attn .zov-chead p{color:#A59AA4}
-.zov-atag{background:#483440;color:#EDC5D1;border-radius:50px;padding:5px 8px;font-size:9px;font-weight:800;letter-spacing:.06em;white-space:nowrap}
+.zov-attn .zov-chead p{color:#9FB0C8}
+.zov-atag{background:#D7141A;color:#fff;border-radius:50px;padding:5px 8px;font-size:9px;font-weight:800;letter-spacing:.06em;white-space:nowrap}
 .zov-aitems{position:relative;display:flex;flex-direction:column;gap:10px;margin-top:20px}
-.zov-aitem{display:flex;gap:10px;align-items:center;padding:13px;border:1px solid #50404D;background:#3E303B;border-radius:13px;color:inherit;text-align:left;font-family:inherit;cursor:pointer;width:100%;transition:background .2s}
-.zov-aitem:hover{background:#463541}
-.zov-aiicon{height:30px;width:30px;background:#654350;border-radius:9px;display:grid;place-items:center;color:#FFCAD8;flex-shrink:0}
+.zov-aitem{display:flex;gap:10px;align-items:center;padding:13px;border:1px solid #2A4B78;background:#1A3A64;border-radius:13px;color:inherit;text-align:left;font-family:inherit;cursor:pointer;width:100%;transition:background .2s}
+.zov-aitem:hover{background:#21467A}
+.zov-aiicon{height:30px;width:30px;background:#2B5288;border-radius:9px;display:grid;place-items:center;color:#fff;flex-shrink:0}
 .zov-aiicon .material-symbols-outlined{font-size:16px}
 .zov-aitem strong{display:block;color:#fff;font-size:11.5px;font-weight:750;margin-bottom:3px}
-.zov-aitem small{display:block;font-size:10px;color:#BDADB9}
-.zov-aitem .arr{margin-left:auto;color:#B49CA9;font-size:16px}
-.zov-acta{position:relative;width:100%;margin-top:16px;color:#392632;background:#fff;border:0;border-radius:11px;padding:11px;font-weight:800;font-size:11px;display:flex;justify-content:center;align-items:center;gap:7px;cursor:pointer;font-family:inherit}
-.zov-acta:hover{background:#F6EAF0}
+.zov-aitem small{display:block;font-size:10px;color:#A9BBD4}
+.zov-aitem .arr{margin-left:auto;color:#8FA6C6;font-size:16px}
+.zov-acta{position:relative;width:100%;margin-top:16px;color:#0E2340;background:#fff;border:0;border-radius:11px;padding:11px;font-weight:800;font-size:11px;display:flex;justify-content:center;align-items:center;gap:7px;cursor:pointer;font-family:inherit}
+.zov-acta:hover{background:#E9EFF7}
 .zov-acta .material-symbols-outlined{font-size:16px}
 
 @media(max-width:1250px){.zov-donutbox{gap:10px}.zov-donutwrap,.zov-donut{width:124px;height:124px}.zov-srcs{gap:12px}.zov-src{font-size:10.5px}.zov-card{padding:20px}.zov-metrics{gap:11px}.zov-metric{padding:17px 16px}.zov-spark{width:70px;opacity:.55}}
@@ -236,8 +236,8 @@ export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function
   const cards = agg ? (() => {
     const { a, p } = agg;
     return [
-      { key: 'visits', label: 'Návštěvy webu', icon: 'visibility', value: fmt(a.visits), delta: relDelta(a.visits, p.visits), spark: buckets(a.series, 12, (s) => s.visits), color: '#9F7393', run: () => go('analytics') },
-      { key: 'enquiry', label: 'Odeslané poptávky', icon: 'edit_note', value: fmt(a.goals.enquiry), delta: relDelta(a.goals.enquiry, p.goals.enquiry), spark: buckets(a.series, 12, (s) => s.goals.enquiry), color: '#812844', primary: true, run: () => go('enquiries') },
+      { key: 'visits', label: 'Návštěvy webu', icon: 'visibility', value: fmt(a.visits), delta: relDelta(a.visits, p.visits), spark: buckets(a.series, 12, (s) => s.visits), color: '#7187A1', run: () => go('analytics') },
+      { key: 'enquiry', label: 'Odeslané poptávky', icon: 'edit_note', value: fmt(a.goals.enquiry), delta: relDelta(a.goals.enquiry, p.goals.enquiry), spark: buckets(a.series, 12, (s) => s.goals.enquiry), color: '#144E95', primary: true, run: () => go('enquiries') },
       { key: 'contacts', label: 'Klepnutí na kontakt', icon: 'call', value: fmt(contacts(a.goals)), delta: relDelta(contacts(a.goals), contacts(p.goals)), spark: buckets(a.series, 12, (s) => contacts(s.goals)), color: '#60A48B', run: () => go('analytics', 'all', { tab: 'buttons' }) },
       { key: 'rate', label: 'Míra kontaktu', icon: 'percent', value: dec(rate(a)) + ' %', delta: ppDelta(rate(a), rate(p)), spark: buckets(a.series, 12, (s) => s.conv).map((c, i) => { const v = buckets(a.series, 12, (s) => s.visits)[i]; return v ? c / v : 0; }), color: '#A4A6B4', run: () => go('analytics', 'all', { tab: 'visits' }) },
     ];
@@ -412,8 +412,8 @@ export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function
             <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img" aria-label={`${CHART_L[chart][2]} za ${range} dní`}>
               <defs>
                 <linearGradient id="zovFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#A35278" stopOpacity=".24" />
-                  <stop offset="100%" stopColor="#A35278" stopOpacity=".008" />
+                  <stop offset="0%" stopColor="#4075B5" stopOpacity=".24" />
+                  <stop offset="100%" stopColor="#4075B5" stopOpacity=".008" />
                 </linearGradient>
               </defs>
               {[0, 1, 2, 3].map((i) => { const yy = T + ((B - T) * i) / 3; return <line key={i} x1={L} x2={R} y1={yy} y2={yy} stroke="#F0F0F3" strokeWidth="1" vectorEffect="non-scaling-stroke" />; })}
@@ -421,10 +421,10 @@ export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function
                 <>
                   <path d={`${smooth(chartData.pts)} L ${chartData.pts[chartData.pts.length - 1][0]} ${B} L ${chartData.pts[0][0]} ${B} Z`} fill="url(#zovFill)" />
                   {compare && <path d={smooth(chartData.ppts)} fill="none" stroke="#C6C6CE" strokeWidth="2" strokeDasharray="5 6" strokeLinecap="round" vectorEffect="non-scaling-stroke" />}
-                  <path d={smooth(chartData.pts)} fill="none" stroke="#78314E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+                  <path d={smooth(chartData.pts)} fill="none" stroke="#214F88" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
                   {hover >= 0 && (
                     <>
-                      <line x1={chartData.x(hover)} x2={chartData.x(hover)} y1={0} y2={H} stroke="#D4BDC6" strokeDasharray="3 5" vectorEffect="non-scaling-stroke" />
+                      <line x1={chartData.x(hover)} x2={chartData.x(hover)} y1={0} y2={H} stroke="#BCC7D5" strokeDasharray="3 5" vectorEffect="non-scaling-stroke" />
                     </>
                   )}
                 </>

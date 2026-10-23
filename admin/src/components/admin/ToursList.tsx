@@ -8,7 +8,7 @@ const plain = (s: string) => (s || '').replace(/<[^>]+>/g, '');
 const CSS = `
 .ztl{font-family:var(--font-sans);color:var(--ink);max-width:1180px;padding:1.4rem 0 4rem}
 .ztl *{box-sizing:border-box}
-.ztl-note{display:flex;align-items:center;gap:.6rem;background:rgba(198,147,167,.08);border:1px solid var(--rule-soft);border-left:3px solid var(--brass);border-radius:var(--radius-md);padding:.7rem 1rem;font-size:12.5px;color:var(--ink-soft);margin:0 0 1.3rem}
+.ztl-note{display:flex;align-items:center;gap:.6rem;background:rgba(144,170,201,.08);border:1px solid var(--rule-soft);border-left:3px solid var(--brass);border-radius:var(--radius-md);padding:.7rem 1rem;font-size:12.5px;color:var(--ink-soft);margin:0 0 1.3rem}
 .ztl-note .material-symbols-outlined{font-size:18px;color:var(--brass-deep)}
 .ztl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.1rem}
 .ztl-card{border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-xs);display:flex;flex-direction:column}

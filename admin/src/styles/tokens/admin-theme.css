@@ -1,7 +1,8 @@
 /* ============================================================
    Zuza Control Center — admin theme
    Direction: zuza-control-center-v2.html (Concept 02, 2026-10).
-   Cool neutral ground, near-black ink, wine primary, dark sidebar,
+   White ground, near-black ink, Czech-flag blue primary (#11457E),
+   red accents (#D7141A), navy sidebar,
    Inter for all UI. Loaded after the site tokens and overrides them
    for the admin only.
    The article editor canvas keeps --font-display / --font-body /
@@ -13,7 +14,7 @@
 
 :root {
   /* Ground */
-  --ivory: #F6F4F6;          /* text on dark / on wine */
+  --ivory: #F4F5F6;          /* text on dark / on wine */
   --ivory-deep: #EEF0F4;
   --paper: #FAFAFC;
   --paper-warm: #F5F6F8;
@@ -28,18 +29,18 @@
   --ink-mute: #7B808B;
   --ink-warm: #5B5F6B;
 
-  /* Wine (primary) */
-  --burgundy: #6B243D;
-  --burgundy-deep: #4D172B;
-  --accent: #87415E;
-  --accent-hover: #6B243D;
-  --accent-soft: #F7EDF0;
-  --wine-tint: #F5E9EE;
-  --rose: #E9C5CF;
+  /* Blue (primary; token names kept from the site) */
+  --burgundy: #11457E;
+  --burgundy-deep: #0B3260;
+  --accent: #315F97;
+  --accent-hover: #14427B;
+  --accent-soft: #ECF1F7;
+  --wine-tint: #E8EEF6;
+  --rose: #C3D5EB;
 
-  /* Former brass accents become muted rose */
-  --brass: #C693A7;
-  --brass-deep: #9B6A7A;
+  /* Former brass accents become muted blue */
+  --brass: #90AAC9;
+  --brass-deep: #68809D;
   --gold: #B68645;
 
   /* Rules */
@@ -59,8 +60,12 @@
   --stone-900: #181A20;
 
   /* Dark chrome */
-  --aside: #181A20;
-  --aside-2: #24262E;
+  --aside: #0E2340;
+  --aside-2: #183459;
+
+  /* Red (accent, Czech flag) */
+  --red: #D7141A;
+  --red-soft: #FCE8E9;
 
   /* States */
   --error: #C2414F;
@@ -88,7 +93,7 @@
   --shadow-md: 0 8px 24px rgba(21, 25, 38, 0.08);
   --shadow-lg: 0 14px 34px rgba(21, 25, 38, 0.13);
   --shadow-xl: 0 25px 100px rgba(16, 18, 26, 0.2);
-  --shadow-cta: 0 7px 18px rgba(106, 36, 62, 0.13);
+  --shadow-cta: 0 7px 18px rgba(20,66,122, 0.13);
 }
 
 html { color-scheme: light; }
@@ -100,7 +105,7 @@ body {
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
 }
-:focus-visible { outline: 3px solid #C693A7; outline-offset: 2px; }
+:focus-visible { outline: 3px solid #90AAC9; outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }

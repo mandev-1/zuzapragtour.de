@@ -18,7 +18,7 @@ const CSS = `
 .zat-fil span{font-size:9.5px;font-weight:750;color:#9A9DA5;background:rgba(255,255,255,.6);border-radius:6px;padding:1px 6px}
 .zat-fil:hover{color:#2D3038}
 .zat-fil.is-on{background:#fff;color:#2D3038;box-shadow:0 2px 5px #2222220D}
-.zat-fil.is-on span{background:#F5E9EE;color:#83425E}
+.zat-fil.is-on span{background:#E8EEF6;color:#335E92}
 .zat-search{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--rule);border-radius:11px;height:37px;padding:0 .85rem;min-width:240px}
 .zat-search .material-symbols-outlined{font-size:18px;color:var(--ink-mute)}
 .zat-search input{border:0;outline:0;background:transparent;font-family:var(--font-sans);font-size:13px;color:var(--ink);width:100%}
@@ -32,7 +32,7 @@ const CSS = `
 .zat-art{display:flex;align-items:center;gap:1rem;min-width:0;padding:.8rem 0}
 .zat-thumb{width:74px;height:54px;border-radius:12px;flex-shrink:0;background-color:var(--stone-200);background-size:cover;background-position:center;box-shadow:inset 0 0 0 1px rgba(21,25,38,.08)}
 .zat-meta{min-width:0}
-.zat-cat{display:flex;align-items:center;gap:.45rem;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9B6A7A;margin-bottom:4px}
+.zat-cat{display:flex;align-items:center;gap:.45rem;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#68809D;margin-bottom:4px}
 .zat-lang{font-size:8px;letter-spacing:.1em;background:var(--stone-100);color:var(--ink-mute);border-radius:3px;padding:1px 5px}
 .zat-meta b{display:block;font-family:var(--font-title);font-size:14px;color:var(--ink);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zat-meta b em{font-style:normal;color:var(--accent)}
@@ -47,7 +47,7 @@ const CSS = `
 .zat-row:hover .zat-act{opacity:1}
 .zat-act button{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:0;background:transparent;border-radius:var(--radius-md);color:var(--ink-mute);cursor:pointer;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
 .zat-act button:hover{background:var(--stone-100);color:var(--ink)}
-.zat-act button.danger:hover{background:rgba(194,65,79,.1);color:var(--error)}
+.zat-act button.danger:hover{background:rgba(59,122,200,.1);color:var(--error)}
 .zat-act .material-symbols-outlined{font-size:18px}
 .zat-empty{padding:3rem;text-align:center;color:var(--ink-mute);font-size:13px}
 @media(hover:none){.zat-act{opacity:1}}
