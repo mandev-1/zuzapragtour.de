@@ -13,7 +13,7 @@ import { titlePlain } from '../../lib/journal';
    ============================================================ */
 
 const S: any = StatsApi;
-type Range = 7 | 30 | 90;
+export type Range = 7 | 30 | 90;
 type ChartKey = 'visits' | 'conv' | 'enquiry';
 
 export type GoFn = (key: string, sub?: string, opts?: { tab?: string; filter?: string }) => void;
@@ -24,6 +24,9 @@ export interface OverviewProps {
   go: GoFn;
   onOpenArticle: (slug: string) => void;
   onNotify: (msg: string, err?: boolean) => void;
+  /** Period in days, kept in the URL (?obdobi=). */
+  range: Range;
+  onRange: (d: Range) => void;
 }
 
 const CSS = `
@@ -203,8 +206,7 @@ const Icon = ({ n }: { n: string }) => <span className="material-symbols-outline
 
 /* ── component ──────────────────────────────────────────────────── */
 
-export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function Overview({ articles, go, onOpenArticle, onNotify }, ref) {
-  const [range, setRange] = React.useState<Range>(30);
+export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function Overview({ articles, go, onOpenArticle, onNotify, range, onRange: setRange }, ref) {
   const [compare, setCompare] = React.useState(false);
   const [chart, setChart] = React.useState<ChartKey>('visits');
   const [st, setSt] = React.useState<{ ready: boolean; loading: boolean; error: string; stamp: Date | null; ver: number }>({ ready: false, loading: true, error: '', stamp: null, ver: 0 });
@@ -236,8 +238,8 @@ export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function
     return [
       { key: 'visits', label: 'Návštěvy webu', icon: 'visibility', value: fmt(a.visits), delta: relDelta(a.visits, p.visits), spark: buckets(a.series, 12, (s) => s.visits), color: '#9F7393', run: () => go('analytics') },
       { key: 'enquiry', label: 'Odeslané poptávky', icon: 'edit_note', value: fmt(a.goals.enquiry), delta: relDelta(a.goals.enquiry, p.goals.enquiry), spark: buckets(a.series, 12, (s) => s.goals.enquiry), color: '#812844', primary: true, run: () => go('enquiries') },
-      { key: 'contacts', label: 'Klepnutí na kontakt', icon: 'call', value: fmt(contacts(a.goals)), delta: relDelta(contacts(a.goals), contacts(p.goals)), spark: buckets(a.series, 12, (s) => contacts(s.goals)), color: '#60A48B', run: () => go('analytics', 'all', { tab: 'Tlačítka' }) },
-      { key: 'rate', label: 'Míra kontaktu', icon: 'percent', value: dec(rate(a)) + ' %', delta: ppDelta(rate(a), rate(p)), spark: buckets(a.series, 12, (s) => s.conv).map((c, i) => { const v = buckets(a.series, 12, (s) => s.visits)[i]; return v ? c / v : 0; }), color: '#A4A6B4', run: () => go('analytics', 'all', { tab: 'Návštěvy' }) },
+      { key: 'contacts', label: 'Klepnutí na kontakt', icon: 'call', value: fmt(contacts(a.goals)), delta: relDelta(contacts(a.goals), contacts(p.goals)), spark: buckets(a.series, 12, (s) => contacts(s.goals)), color: '#60A48B', run: () => go('analytics', 'all', { tab: 'buttons' }) },
+      { key: 'rate', label: 'Míra kontaktu', icon: 'percent', value: dec(rate(a)) + ' %', delta: ppDelta(rate(a), rate(p)), spark: buckets(a.series, 12, (s) => s.conv).map((c, i) => { const v = buckets(a.series, 12, (s) => s.visits)[i]; return v ? c / v : 0; }), color: '#A4A6B4', run: () => go('analytics', 'all', { tab: 'visits' }) },
     ];
   })() : [
     { key: 'visits', label: 'Návštěvy webu', icon: 'visibility' }, { key: 'enquiry', label: 'Odeslané poptávky', icon: 'edit_note', primary: true },
@@ -453,7 +455,7 @@ export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function
         <section className="zov-card">
           <div className="zov-chead">
             <div><h2>Odkud lidé přicházejí</h2><p>Rozložení zdrojů návštěvnosti</p></div>
-            <button type="button" className="zov-caction" onClick={() => go('analytics', 'all', { tab: 'Cesty a zdroje' })}>Detail <Icon n="arrow_forward" /></button>
+            <button type="button" className="zov-caction" onClick={() => go('analytics', 'all', { tab: 'flows' })}>Detail <Icon n="arrow_forward" /></button>
           </div>
           <div className="zov-donutbox">
             <div className="zov-donutwrap">
@@ -485,7 +487,7 @@ export const Overview = React.forwardRef<OverviewHandle, OverviewProps>(function
         <section className="zov-card">
           <div className="zov-chead">
             <div><h2>Co se právě děje</h2><p>Poslední události a interakce návštěvníků</p></div>
-            <button type="button" className="zov-caction" onClick={() => go('analytics', 'all', { tab: 'Živě' })}>Zobrazit vše <Icon n="arrow_forward" /></button>
+            <button type="button" className="zov-caction" onClick={() => go('analytics', 'all', { tab: 'live' })}>Zobrazit vše <Icon n="arrow_forward" /></button>
           </div>
           <div className="zov-acts">
             {activity.map((x) => (

@@ -76,7 +76,7 @@ const chipF = (on) => ({ bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#
 
 export class StatsDashboard extends React.Component<any, any> {
   static defaultProps = { startTab: 'Přehled', compareDefault: true };
-  state = { ready: false, tab: null, range: 30, dev: 'all', src: 'all', cmp: null, w: 1280, hover: -1, drawer: null, hmMode: 'visits', bf: 'all', bq: '', bmode: 'label', bsort: 'n', blimit: 25, mapPage: 'home', mapArea: null, aq: '', asort: 'views', scHover: null, vf: 'all', vlimit: 40, pconv: true, plimit: 10, skConv: true, palette: false, pq: '', psel: 0, live: [], liveN: 4, liveHist: [3, 4, 4, 5, 4, 3, 4, 5, 6, 5, 4, 4], loading: false, error: '', stamp: new Date(), view: null, navOpen: true, dh: -1, wf: 'all', wlimit: 30, ff: 'all', flimit: 30, fsMode: 'btn', fsLimit: 10, tsel: null };
+  state = { ready: false, tab: null, range: this.props.range || 30, dev: 'all', src: 'all', cmp: null, w: 1280, hover: -1, drawer: null, hmMode: 'visits', bf: 'all', bq: '', bmode: 'label', bsort: 'n', blimit: 25, mapPage: 'home', mapArea: null, aq: '', asort: 'views', scHover: null, vf: 'all', vlimit: 40, pconv: true, plimit: 10, skConv: true, palette: false, pq: '', psel: 0, live: [], liveN: 4, liveHist: [3, 4, 4, 5, 4, 3, 4, 5, 6, 5, 4, 4], loading: false, error: '', stamp: new Date(), view: null, navOpen: true, dh: -1, wf: 'all', wlimit: 30, ff: 'all', flimit: 30, fsMode: 'btn', fsLimit: 10, tsel: null };
 
   componentDidMount() {
     this._resize = () => this.setState({ w: window.innerWidth });
@@ -89,6 +89,11 @@ export class StatsDashboard extends React.Component<any, any> {
   componentDidUpdate(pp, ps) {
     if (pp.view !== this.props.view && this.props.view && this.props.view !== this.state.view) this.setState({ view: this.props.view, drawer: null, hover: -1, dh: -1 });
     else if (ps.view !== this.state.view && this.state.view && this.props.onView && this.state.view !== this.props.view) this.props.onView(this.state.view);
+    // Tab and period are mirrored in the admin URL when embedded (props.tab/onTab, props.range/onRange).
+    if (pp.tab !== this.props.tab && this.props.tab && this.props.tab !== this.tab()) this.setState({ tab: this.props.tab, drawer: null, hover: -1 });
+    else if (ps.tab !== this.state.tab && this.state.tab && this.props.onTab && this.state.tab !== this.props.tab) this.props.onTab(this.state.tab);
+    if (pp.range !== this.props.range && this.props.range && this.props.range !== this.state.range) this.setState({ range: this.props.range, hover: -1 });
+    else if (ps.range !== this.state.range && this.props.onRange && this.state.range !== this.props.range) this.props.onRange(this.state.range);
     if (ps.range !== this.state.range) this.load(false);
     const live = (s) => (s.view || 'all') === 'all' && (s.tab || 'overview') === 'live';
     if (live(ps) !== live(this.state)) this.poll();
@@ -151,7 +156,7 @@ export class StatsDashboard extends React.Component<any, any> {
     return { k: this._lk, at, icon, color, ibg, text, goal, dev: v.dev === 'm' ? 'smartphone' : 'computer', sub: (v.dev === 'm' ? 'Mobil' : 'Počítač') + ' · ' + (v.ref || 'přímo') + ' · návštěva #' + v.id, page: e.k === 'page' ? e.p : null };
   }
   get S() { return Stats; }
-  tab() { return this.state.tab || TAB_PROP[this.props.startTab] || 'overview'; }
+  tab() { return this.state.tab || this.props.tab || TAB_PROP[this.props.startTab] || 'overview'; }
   /** Embedded in the Control Center shell, the shell's sub-navigation and this view stay in sync (props.view / onView). */
   view() { return this.state.view || this.props.view || VIEW_PROP[this.props.startTab] || 'all'; }
   go(view) { return () => this.setState({ view, navOpen: true, drawer: null, hover: -1, dh: -1 }); }

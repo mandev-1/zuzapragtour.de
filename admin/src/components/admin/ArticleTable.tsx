@@ -64,6 +64,8 @@ export interface ArticleTableProps {
   onEdit: (slug: string) => void;
   onDelete: (slug: string) => void;
   onDuplicate: (slug: string) => void;
+  /** Editor address of an article; ⌘/Ctrl- or middle-click on a row opens it in a new tab. */
+  linkOf?: (slug: string) => string;
 }
 
 /**
@@ -72,7 +74,8 @@ export interface ArticleTableProps {
  * Ported 1:1 from the 0004 reference, adapted to the bilingual JournalArticle
  * model (titles/blurbs resolve to German for the dashboard).
  */
-export function ArticleTable({ articles, query, onQuery, filter, onFilter, onEdit, onDelete, onDuplicate }: ArticleTableProps) {
+export function ArticleTable({ articles, query, onQuery, filter, onFilter, onEdit, onDelete, onDuplicate, linkOf }: ArticleTableProps) {
+  const openTab = (slug: string) => { if (linkOf) window.open(linkOf(slug), '_blank', 'noopener'); };
   const counts = articles.reduce(
     (m, a) => {
       m.all += 1;
@@ -122,7 +125,7 @@ export function ArticleTable({ articles, query, onQuery, filter, onFilter, onEdi
         {rows.map((a) => {
           const st = STATUS[a.status] || STATUS.draft;
           return (
-            <div className="zat-row" key={a.slug} onClick={() => onEdit(a.slug)}>
+            <div className="zat-row" key={a.slug} onClick={(e) => (linkOf && (e.metaKey || e.ctrlKey) ? openTab(a.slug) : onEdit(a.slug))} onAuxClick={(e) => { if (e.button === 1) openTab(a.slug); }}>
               <div className="zat-art">
                 <div className="zat-thumb" style={{ backgroundImage: a.hero ? `url(${mediaUrl(a.hero)})` : 'none' }}></div>
                 <div className="zat-meta">

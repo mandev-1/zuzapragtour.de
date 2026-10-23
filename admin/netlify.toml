@@ -19,9 +19,110 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-# No SPA-fallback redirect: the admin is a single page with no client-side routes,
-# so it needs none. (A `/* → /index.html` rewrite here would also be applied by
-# `netlify dev`, swallowing Vite's module requests → blank page. See vite.config.ts.)
+# Client-side routes (admin/src/lib/route.ts) → index.html. Deliberately NO
+# catch-all `/* → /index.html`: `netlify dev` applies redirects too, and a
+# catch-all would swallow Vite's module requests (/src, /@vite, /node_modules)
+# → blank page. Only the app's own Czech path prefixes are rewritten, so dev
+# and production both work. Add a prefix here when adding a route.
+[[redirects]]
+  from = "/analytika"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/analytika/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/poptavky"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/poptavky/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/clanky"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/clanky/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/media"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/media/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/prohlidky"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/prohlidky/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/hodnoceni"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/hodnoceni/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ab-test"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ab-test/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/rezervace"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/rezervace/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/klienti"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/klienti/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/nastaveni"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/nastaveni/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/*"

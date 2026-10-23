@@ -1,4 +1,5 @@
 import React from 'react';
+import { isPlainClick } from '../../lib/route';
 
 /* ============================================================
    AdminShell — "Zuza Control Center" chrome.
@@ -21,6 +22,8 @@ export interface AdminShellProps {
   active: string;
   activeSub?: string;
   onNavigate: (key: string, sub?: string) => void;
+  /** Address of a nav item: items render as real links (⌘/Ctrl-click opens a new tab). */
+  hrefOf: (key: string, sub?: string) => string;
   mobileTabs: MobileTab[];
   crumb: string;
   eyebrow?: string;
@@ -57,13 +60,13 @@ const CSS = `
 .zcc-item:hover{color:#fff;background:#262830}
 .zcc-item.is-on{color:#fff;background:#343039}
 .zcc-item.is-on .material-symbols-outlined{color:#ECB2C5}
-a.zcc-item{text-decoration:none}
+a.zcc-item,a.zcc-subi,a.zcc-tab,a.zcc-brand{text-decoration:none}
 .zcc-ext{margin-left:auto;display:flex}
 .zcc-item .zcc-ext .material-symbols-outlined{font-size:15px;color:#5E616C}
 .zcc-item:hover .zcc-ext .material-symbols-outlined{color:#ECB2C5}
 .zcc-tag{margin-left:auto;background:#2D2F38;color:#7F838C;font-size:9px;font-weight:700;padding:3px 6px;border-radius:5px;letter-spacing:.04em}
 .zcc-subs{display:flex;flex-direction:column;margin:2px 0 6px 25px;padding-left:12px;border-left:1px solid #30323A}
-.zcc-subi{border:0;background:none;color:#8A8C97;text-align:left;font-size:11.5px;font-weight:600;padding:7px 10px;border-radius:9px;cursor:pointer}
+.zcc-subi{display:block;border:0;background:none;color:#8A8C97;text-align:left;font-size:11.5px;font-weight:600;padding:7px 10px;border-radius:9px;cursor:pointer}
 .zcc-subi:hover{color:#fff;background:#262830}
 .zcc-subi.is-on{color:#F7D1DE;background:#2B2A31}
 .zcc-bottom{margin-top:auto;border-top:1px solid #30323A;padding-top:15px}
@@ -192,7 +195,12 @@ a.zcc-item{text-decoration:none}
 
 const Icon = ({ n }: { n: string }) => <span className="material-symbols-outlined" aria-hidden="true">{n}</span>;
 
-function NavGroups({ groups, active, activeSub, go }: { groups: NavGroup[]; active: string; activeSub?: string; go: (k: string, s?: string) => void }) {
+type GoFn = (k: string, s?: string) => void;
+type HrefFn = (k: string, s?: string) => string;
+/** Click handler for an in-app link: plain click navigates in place, modified click is left to the browser. */
+const linkClick = (go: GoFn, k: string, s?: string) => (e: React.MouseEvent) => { if (!isPlainClick(e)) return; e.preventDefault(); go(k, s); };
+
+function NavGroups({ groups, active, activeSub, go, hrefOf }: { groups: NavGroup[]; active: string; activeSub?: string; go: GoFn; hrefOf: HrefFn }) {
   return (
     <>
       {groups.map((g) => (
@@ -207,18 +215,18 @@ function NavGroups({ groups, active, activeSub, go }: { groups: NavGroup[]; acti
                   <span className="zcc-ext"><Icon n="open_in_new" /></span>
                 </a>
               ) : (
-              <button type="button" className={`zcc-item ${active === it.key ? 'is-on' : ''}`} onClick={() => go(it.key)} title={it.label} aria-current={active === it.key ? 'page' : undefined}>
+              <a className={`zcc-item ${active === it.key ? 'is-on' : ''}`} href={hrefOf(it.key)} onClick={linkClick(go, it.key)} title={it.label} aria-current={active === it.key ? 'page' : undefined}>
                 <Icon n={it.icon} />
                 <span className="lbl">{it.label}</span>
                 {it.tag && <span className="zcc-tag">{it.tag}</span>}
-              </button>
+              </a>
               )}
               {it.sub && active === it.key && (
                 <div className="zcc-subs">
                   {it.sub.map((s) => (
-                    <button type="button" key={s.key} className={`zcc-subi ${(activeSub || it.sub![0].key) === s.key ? 'is-on' : ''}`} onClick={() => go(it.key, s.key)}>
+                    <a key={s.key} className={`zcc-subi ${(activeSub || it.sub![0].key) === s.key ? 'is-on' : ''}`} href={hrefOf(it.key, s.key)} onClick={linkClick(go, it.key, s.key)}>
                       {s.label}
-                    </button>
+                    </a>
                   ))}
                 </div>
               )}
@@ -246,7 +254,7 @@ function Profile({ onLogout }: { onLogout: () => void }) {
 }
 
 export function AdminShell(props: AdminShellProps) {
-  const { groups, active, activeSub, onNavigate, mobileTabs, crumb, eyebrow, title, subtitle, actions, back, mode = 'page', onSearch, onLogout, children } = props;
+  const { groups, active, activeSub, onNavigate, hrefOf, mobileTabs, crumb, eyebrow, title, subtitle, actions, back, mode = 'page', onSearch, onLogout, children } = props;
   const [drawer, setDrawer] = React.useState(false);
   const go = (k: string, s?: string) => { setDrawer(false); onNavigate(k, s); };
 
@@ -278,11 +286,11 @@ export function AdminShell(props: AdminShellProps) {
     <div className="zcc">
       <style>{CSS}</style>
       <aside className="zcc-side" aria-label="Hlavní navigace">
-        <button type="button" className="zcc-brand" onClick={() => go('overview')}>
+        <a className="zcc-brand" href={hrefOf('overview')} onClick={linkClick(go, 'overview')}>
           <span className="zcc-mark"><span>z</span></span>
           <span className="zcc-bcopy"><span className="zcc-bname">zuza<i>.</i>control</span><span className="zcc-bsub">PRAGUE TOURS</span></span>
-        </button>
-        <NavGroups groups={groups} active={active} activeSub={activeSub} go={go} />
+        </a>
+        <NavGroups groups={groups} active={active} activeSub={activeSub} go={go} hrefOf={hrefOf} />
         <div className="zcc-bottom">
           <div className="zcc-help">
             <div className="hi"><Icon n="auto_awesome" /></div>
@@ -320,9 +328,11 @@ export function AdminShell(props: AdminShellProps) {
         {mobileTabs.map((t) => {
           const on = t.key === 'more' ? drawer : !drawer && active === t.key && (!t.sub || t.sub === (activeSub || t.sub));
           return (
-            <button type="button" key={t.key + (t.sub || '')} className={`zcc-tab ${on ? 'is-on' : ''}`} onClick={() => (t.key === 'more' ? setDrawer(true) : go(t.key, t.sub))}>
-              <Icon n={t.icon} />{t.label}
-            </button>
+            t.key === 'more' ? (
+              <button type="button" key="more" className={`zcc-tab ${on ? 'is-on' : ''}`} onClick={() => setDrawer(true)}><Icon n={t.icon} />{t.label}</button>
+            ) : (
+              <a key={t.key + (t.sub || '')} className={`zcc-tab ${on ? 'is-on' : ''}`} href={hrefOf(t.key, t.sub)} onClick={linkClick(go, t.key, t.sub)}><Icon n={t.icon} />{t.label}</a>
+            )
           );
         })}
       </nav>
@@ -332,7 +342,7 @@ export function AdminShell(props: AdminShellProps) {
           <div className="zcc-dlogo">zuza<i>.</i>control</div>
           <button type="button" className="zcc-dclose" onClick={() => setDrawer(false)} aria-label="Zavřít menu"><Icon n="close" /></button>
         </div>
-        <NavGroups groups={groups} active={active} activeSub={activeSub} go={go} />
+        <NavGroups groups={groups} active={active} activeSub={activeSub} go={go} hrefOf={hrefOf} />
         <Profile onLogout={onLogout} />
       </div>
     </div>
