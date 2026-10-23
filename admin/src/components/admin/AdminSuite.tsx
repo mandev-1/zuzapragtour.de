@@ -46,6 +46,10 @@ const GROUPS: NavGroup[] = [
     { key: 'reviews', label: 'Hodnocení', icon: 'star' },
     { key: 'abtest', label: 'A/B testy', icon: 'science' },
   ] },
+  { title: 'Vyhledávače', items: [
+    { key: 'ext-google', label: 'Search Console', icon: 'travel_explore', href: 'https://search.google.com/search-console?resource_id=sc-domain%3Azuzapragtour.de' },
+    { key: 'ext-bing', label: 'Bing Webmaster', icon: 'manage_search', href: 'https://www.bing.com/webmasters?tid=8418aeb9-d5a2-4e97-9624-fa821e35e04b' },
+  ] },
   { title: 'Systém', items: [{ key: 'settings', label: 'Nastavení', icon: 'settings', tag: 'PLÁN' }] },
 ];
 const MOBILE_TABS: MobileTab[] = [
@@ -287,7 +291,9 @@ export function AdminSuite({ onLogout, load, save, remove }: AdminSuiteProps) {
     { id: 'act-new', label: 'Nový článek', hint: 'Akce', icon: 'add', run: newArticle },
     { id: 'act-gen', label: 'Článek z klíčových slov', hint: 'Akce · AI koncept', icon: 'auto_awesome', run: () => { setView('journal'); setGen(true); } },
     ...GROUPS.flatMap((g) => g.items.flatMap((it) => [
-      { id: 'nav-' + it.key, label: it.label, hint: 'Sekce · ' + g.title + (it.tag ? ' · v plánu' : ''), icon: it.icon, run: () => navigate(it.key) },
+      it.href
+        ? { id: 'nav-' + it.key, label: it.label, hint: (it.key === 'ext-google' ? 'Google' : 'Bing Webmaster Tools') + ' · otevře novou kartu', icon: it.icon, run: () => { window.open(it.href, '_blank', 'noopener,noreferrer'); } }
+        : { id: 'nav-' + it.key, label: it.label, hint: 'Sekce · ' + g.title + (it.tag ? ' · v plánu' : ''), icon: it.icon, run: () => navigate(it.key) },
       ...(it.sub || []).slice(1).map((s) => ({ id: `nav-${it.key}-${s.key}`, label: s.label, hint: 'Sekce · ' + it.label, icon: it.icon, run: () => navigate(it.key, s.key) })),
     ])),
     ...articles.map((a) => ({ id: 'art-' + a.slug, label: titlePlain(a) || a.slug, hint: `Článek · ${STATUS_LABEL[a.status]} · ${a.date}`, icon: 'article', run: () => openEditor(a.slug) })),

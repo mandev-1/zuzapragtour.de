@@ -11,7 +11,8 @@ import React from 'react';
    ============================================================ */
 
 export interface NavSub { key: string; label: string }
-export interface NavItem { key: string; label: string; icon: string; tag?: string; sub?: NavSub[] }
+/** `href` makes the item an external link that opens in a new tab. */
+export interface NavItem { key: string; label: string; icon: string; tag?: string; sub?: NavSub[]; href?: string }
 export interface NavGroup { title: string; items: NavItem[] }
 export interface MobileTab { key: string; sub?: string; label: string; icon: string }
 
@@ -56,6 +57,10 @@ const CSS = `
 .zcc-item:hover{color:#fff;background:#262830}
 .zcc-item.is-on{color:#fff;background:#343039}
 .zcc-item.is-on .material-symbols-outlined{color:#ECB2C5}
+a.zcc-item{text-decoration:none}
+.zcc-ext{margin-left:auto;display:flex}
+.zcc-item .zcc-ext .material-symbols-outlined{font-size:15px;color:#5E616C}
+.zcc-item:hover .zcc-ext .material-symbols-outlined{color:#ECB2C5}
 .zcc-tag{margin-left:auto;background:#2D2F38;color:#7F838C;font-size:9px;font-weight:700;padding:3px 6px;border-radius:5px;letter-spacing:.04em}
 .zcc-subs{display:flex;flex-direction:column;margin:2px 0 6px 25px;padding-left:12px;border-left:1px solid #30323A}
 .zcc-subi{border:0;background:none;color:#8A8C97;text-align:left;font-size:11.5px;font-weight:600;padding:7px 10px;border-radius:9px;cursor:pointer}
@@ -134,7 +139,7 @@ const CSS = `
 @media(max-width:1080px){
   .zcc-side{width:75px;padding:24px 12px}
   .zcc-side .zcc-brand{padding:0 7px 28px}
-  .zcc-side .zcc-bcopy,.zcc-side .zcc-gtitle,.zcc-side .zcc-item .lbl,.zcc-side .zcc-tag,.zcc-side .zcc-help,.zcc-side .zcc-pcopy,.zcc-side .zcc-subs{display:none}
+  .zcc-side .zcc-bcopy,.zcc-side .zcc-gtitle,.zcc-side .zcc-item .lbl,.zcc-side .zcc-tag,.zcc-side .zcc-ext,.zcc-side .zcc-help,.zcc-side .zcc-pcopy,.zcc-side .zcc-subs{display:none}
   .zcc-side .zcc-item{justify-content:center;padding:11px}
   .zcc-side .zcc-group{margin-bottom:15px}
   .zcc-side .zcc-profile{flex-direction:column}
@@ -195,11 +200,19 @@ function NavGroups({ groups, active, activeSub, go }: { groups: NavGroup[]; acti
           <div className="zcc-gtitle">{g.title}</div>
           {g.items.map((it) => (
             <React.Fragment key={it.key}>
+              {it.href ? (
+                <a className="zcc-item" href={it.href} target="_blank" rel="noopener noreferrer" title={it.label + ' (nová karta)'}>
+                  <Icon n={it.icon} />
+                  <span className="lbl">{it.label}</span>
+                  <span className="zcc-ext"><Icon n="open_in_new" /></span>
+                </a>
+              ) : (
               <button type="button" className={`zcc-item ${active === it.key ? 'is-on' : ''}`} onClick={() => go(it.key)} title={it.label} aria-current={active === it.key ? 'page' : undefined}>
                 <Icon n={it.icon} />
                 <span className="lbl">{it.label}</span>
                 {it.tag && <span className="zcc-tag">{it.tag}</span>}
               </button>
+              )}
               {it.sub && active === it.key && (
                 <div className="zcc-subs">
                   {it.sub.map((s) => (
