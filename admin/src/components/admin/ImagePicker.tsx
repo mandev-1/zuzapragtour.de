@@ -2,10 +2,10 @@ import React from 'react';
 import { listImages, mediaUrl, type MediaItem } from '../../lib/api';
 
 const CSS = `
-.zip-overlay{position:fixed;inset:0;background:rgba(26,23,20,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:70;padding:1.5rem}
+.zip-overlay{position:fixed;inset:0;background:rgba(21,25,38,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:70;padding:1.5rem}
 .zip{width:760px;max-width:100%;max-height:86vh;display:flex;flex-direction:column;background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);overflow:hidden;font-family:var(--font-sans)}
 .zip-h{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;border-bottom:1px solid var(--rule)}
-.zip-h b{font-family:var(--font-display);font-size:1.2rem;font-weight:400}
+.zip-h b{font-family:var(--font-title);font-size:1.03rem;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zip-search{display:inline-flex;align-items:center;gap:.5rem;background:var(--stone-50);border:1px solid var(--rule);border-radius:var(--radius-md);padding:.45rem .7rem;min-width:200px}
 .zip-search input{border:0;outline:0;background:transparent;font-family:var(--font-sans);font-size:13px;width:100%}
 .zip-search .material-symbols-outlined{font-size:17px;color:var(--ink-mute)}

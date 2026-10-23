@@ -8,7 +8,7 @@ const plain = (s: string) => (s || '').replace(/<[^>]+>/g, '');
 const CSS = `
 .ztl{font-family:var(--font-sans);color:var(--ink);max-width:1180px;padding:1.4rem 0 4rem}
 .ztl *{box-sizing:border-box}
-.ztl-note{display:flex;align-items:center;gap:.6rem;background:rgba(168,134,84,.08);border:1px solid var(--rule-soft);border-left:3px solid var(--brass);border-radius:var(--radius-md);padding:.7rem 1rem;font-size:12.5px;color:var(--ink-soft);margin:0 0 1.3rem}
+.ztl-note{display:flex;align-items:center;gap:.6rem;background:rgba(198,147,167,.08);border:1px solid var(--rule-soft);border-left:3px solid var(--brass);border-radius:var(--radius-md);padding:.7rem 1rem;font-size:12.5px;color:var(--ink-soft);margin:0 0 1.3rem}
 .ztl-note .material-symbols-outlined{font-size:18px;color:var(--brass-deep)}
 .ztl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.1rem}
 .ztl-card{border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-xs);display:flex;flex-direction:column}
@@ -18,8 +18,8 @@ const CSS = `
 .ztl-dur{display:inline-flex;align-items:center;gap:.3rem;font-size:11px;font-weight:600;color:var(--brass-deep)}
 .ztl-dur .material-symbols-outlined{font-size:15px}
 .ztl-lang{font-size:8px;letter-spacing:.1em;background:var(--stone-100);color:var(--ink-mute);border-radius:3px;padding:1px 5px}
-.ztl-title{font-family:var(--font-display);font-size:1.25rem;font-weight:400;line-height:1.2;color:var(--ink);margin:0}
-.ztl-title em{font-family:var(--font-italic);font-style:italic;color:var(--burgundy)}
+.ztl-title{font-family:var(--font-title);font-size:1.07rem;line-height:1.2;color:var(--ink);margin:0;font-weight:var(--weight-title);letter-spacing:-.025em}
+.ztl-title em{font-style:normal;color:var(--accent)}
 .ztl-desc{font-size:12.5px;line-height:1.55;color:var(--ink-mute);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .ztl-slugs{display:flex;flex-direction:column;gap:2px;margin-top:.2rem}
 .ztl-slug{font-size:11px;color:var(--ink-mute);font-family:ui-monospace,monospace}

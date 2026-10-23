@@ -28,7 +28,7 @@ const CSS = `
 .zib-stage.is-crop{cursor:crosshair}
 .zib-stage img{display:block;width:100%}
 .zib-stage.is-crop img{position:absolute;inset:0;height:100%;object-fit:cover}
-.zib-focus{position:absolute;width:22px;height:22px;border-radius:999px;border:2px solid #fff;box-shadow:0 0 0 1.5px rgba(107,31,42,.9),0 1px 6px rgba(0,0,0,.4);transform:translate(-50%,-50%);pointer-events:none}
+.zib-focus{position:absolute;width:22px;height:22px;border-radius:999px;border:2px solid #fff;box-shadow:0 0 0 1.5px rgba(107,36,61,.9),0 1px 6px rgba(0,0,0,.4);transform:translate(-50%,-50%);pointer-events:none}
 .zib-focus::after{content:"";position:absolute;inset:7px;border-radius:999px;background:var(--burgundy)}
 .zib-tools{display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap}
 .zib-ars{display:inline-flex;background:var(--stone-100);border-radius:var(--radius-md);padding:3px;gap:2px}

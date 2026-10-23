@@ -159,7 +159,14 @@ npm run images       # public/images/sized/ AVIF+WebP (macOS sips + cwebp)
   - A/B panel and stats dashboard (proxy to the public site's `/api/ab-results` and `/api/visits`)
 - Env (admin site): `ADMIN_PASSWORD`, `SESSION_SECRET`, `GITHUB_TOKEN`, `GITHUB_REPO=mandev-1/zuzapragtour.de`, `GITHUB_BRANCH=zuzapragtour.de`, `STATS_KEY` (same value as on the public site), optional `ANTHROPIC_API_KEY`/`ANTHROPIC_MODEL`, `GOOGLE_PLACES_API_KEY`/`GOOGLE_PLACE_ID`.
 - Local dev: `cd admin && ADMIN_PASSWORD=test SESSION_SECRET=dev npx netlify dev` → http://localhost:8888
-- UI rules: z-index ladder content 10 < sticky bars 50 < modal 60 < toast 90. No emoji.
+- **UI: "Zuza Control Center"** (since 2026-10-21), built from the concept `zuza-control-center-v2.html` (repo root, the visual reference).
+  - Czech chrome: dark grouped sidebar (Pracovní prostor · Správa webu · Systém), sticky topbar with ⌘K quick search (sections + articles), eyebrow + title intro; on phones a bottom tab bar + drawer. Shell: `admin/src/components/admin/AdminShell.tsx`; routing and state: `AdminSuite.tsx` (view state, no URL routes).
+  - **Přehled** (`Overview.tsx`) is the start page. All numbers are real: metric cards, chart, sources and activity come from the anonymous tracking via `stats/statsData.ts`, the "Vyžaduje pozornost" list also from the articles. Nothing is demo data.
+  - "Analytika webu" and "Poptávky" embed the stats dashboard (`StatsDashboard` with `embedded`, its own sidebar hidden; sub-views synced with the shell via `view`/`onView`). "Poptávky" = its Formuláře view; enquiries themselves still arrive by e-mail / Netlify Forms.
+  - Rezervace, Klienti and Nastavení are marked PLÁN and show `PlannedModule.tsx` (what exists today, what the module will do). No backend yet.
+  - Theme: `admin/src/styles/tokens/admin-theme.css` overrides the site tokens (cool greys, wine `#6B243D`, Inter, larger radii). UI headings use `--font-title`; the article editor canvas keeps the site serifs on purpose (it previews the public page). The stats view gets the same palette from the `THEME` step in `admin/scripts/convert-dc-template.py`; regenerate `DashboardView.tsx` with that script, never hand-edit it.
+  - Panel internals (editor, media, reviews, tours, generator, dialogs) still have German labels; shell, overview, article list and login are Czech.
+- UI rules: z-index ladder content 10 < sticky bars 50 < modal 60 < toast 90 (stats drawer/palette 100/120). No emoji.
 
 ## 5. Deploy and environment
 

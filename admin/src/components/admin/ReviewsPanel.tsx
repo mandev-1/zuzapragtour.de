@@ -6,17 +6,17 @@ const stars = (n?: number) => (n ? '★★★★★☆☆☆☆☆'.slice(5 - Ma
 const CSS = `
 .zrv{font-family:var(--font-sans);color:var(--ink);max-width:1000px;padding:1.4rem 0 4rem;display:flex;flex-direction:column;gap:1.8rem}
 .zrv *{box-sizing:border-box}
-.zrv-sec h3{font-family:var(--font-display);font-size:1.3rem;font-weight:400;margin:0 0 .2rem;color:var(--ink)}
+.zrv-sec h3{font-family:var(--font-title);font-size:1.12rem;margin:0 0 .2rem;color:var(--ink);font-weight:var(--weight-title);letter-spacing:-.025em}
 .zrv-sec p.sub{font-size:12.5px;color:var(--ink-mute);margin:0 0 1rem}
 .zrv-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
 .zrv-card{border:1px solid var(--rule);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs);padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem}
 .zrv-ph{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
-.zrv-ph b{font-family:var(--font-display);font-size:1.15rem;font-weight:400}
+.zrv-ph b{font-family:var(--font-title);font-size:0.99rem;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zrv-rating{display:flex;align-items:baseline;gap:.5rem}
-.zrv-rating .n{font-family:var(--font-display);font-size:1.8rem;color:var(--ink)}
+.zrv-rating .n{font-family:var(--font-title);font-size:1.55rem;color:var(--ink);font-weight:var(--weight-title);letter-spacing:-.025em}
 .zrv-rating .s{color:var(--brass);font-size:15px;letter-spacing:1px}
 .zrv-rating .t{font-size:12px;color:var(--ink-mute)}
-.zrv-note{font-size:12px;color:var(--ink-mute);line-height:1.5;background:rgba(168,134,84,.07);border-radius:var(--radius-md);padding:.55rem .7rem}
+.zrv-note{font-size:12px;color:var(--ink-mute);line-height:1.5;background:rgba(198,147,167,.07);border-radius:var(--radius-md);padding:.55rem .7rem}
 .zrv-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.2rem}
 .zrv-btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--rule);background:#fff;border-radius:var(--radius-md);padding:.45rem .75rem;font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--ink-soft);text-decoration:none;cursor:pointer}
 .zrv-btn:hover{border-color:var(--burgundy);color:var(--burgundy)}
@@ -30,7 +30,7 @@ const CSS = `
 .zrv-ask b{display:block;font-size:13px;font-weight:600;color:var(--ink)}
 .zrv-ask small{display:block;font-size:11px;color:var(--ink-mute);font-family:ui-monospace,monospace}
 .zrv-tags{display:flex;gap:.35rem;flex-wrap:wrap}
-.zrv-tag{font-size:10px;font-weight:600;color:var(--brass-deep);background:rgba(168,134,84,.14);border-radius:var(--radius-pill);padding:.15rem .5rem}
+.zrv-tag{font-size:10px;font-weight:600;color:var(--brass-deep);background:rgba(198,147,167,.14);border-radius:var(--radius-pill);padding:.15rem .5rem}
 .zrv-reviews{display:flex;flex-direction:column;gap:.7rem}
 .zrv-review{border:1px solid var(--rule);border-radius:var(--radius-md);background:#fff;padding:.8rem .95rem}
 .zrv-rh{display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem}

@@ -7,7 +7,7 @@ import { checkSession, logout, listArticles, saveArticle, deleteArticle } from '
  * App — auth flow + the journal admin.
  *  null  → checking session (splash)
  *  false → show LoginGate
- *  true  → show AdminSuite (dashboard + bilingual block editor)
+ *  true  → show AdminSuite (Zuza Control Center)
  */
 export default function App() {
   const [authed, setAuthed] = React.useState<boolean | null>(null);
@@ -24,7 +24,7 @@ export default function App() {
   if (authed === null) {
     return (
       <div style={{ position: 'fixed', inset: 0, display: 'grid', placeItems: 'center', background: 'var(--canvas)', fontFamily: 'var(--font-sans)', color: 'var(--ink-mute)', fontSize: 13 }}>
-        Lädt…
+        Načítá se…
       </div>
     );
   }

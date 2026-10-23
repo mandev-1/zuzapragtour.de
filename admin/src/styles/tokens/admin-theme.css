@@ -1,0 +1,106 @@
+/* ============================================================
+   Zuza Control Center — admin theme
+   Direction: zuza-control-center-v2.html (Concept 02, 2026-10).
+   Cool neutral ground, near-black ink, wine primary, dark sidebar,
+   Inter for all UI. Loaded after the site tokens and overrides them
+   for the admin only.
+   The article editor canvas keeps --font-display / --font-body /
+   --font-italic (the site's serif voices), because it previews the
+   public page. UI headings use --font-title instead.
+   Keep the hex values in sync with THEME in
+   admin/scripts/convert-dc-template.py (stats dashboard).
+   ============================================================ */
+
+:root {
+  /* Ground */
+  --ivory: #F6F4F6;          /* text on dark / on wine */
+  --ivory-deep: #EEF0F4;
+  --paper: #FAFAFC;
+  --paper-warm: #F5F6F8;
+  --canvas: #F6F7F9;         /* page background */
+  --canvas-alt: #F1F2F5;
+  --canvas-mute: #ECEDF2;
+
+  /* Ink */
+  --ink: #17191F;
+  --ink-2: #17191F;
+  --ink-soft: #454954;
+  --ink-mute: #7B808B;
+  --ink-warm: #5B5F6B;
+
+  /* Wine (primary) */
+  --burgundy: #6B243D;
+  --burgundy-deep: #4D172B;
+  --accent: #87415E;
+  --accent-hover: #6B243D;
+  --accent-soft: #F7EDF0;
+  --wine-tint: #F5E9EE;
+  --rose: #E9C5CF;
+
+  /* Former brass accents become muted rose */
+  --brass: #C693A7;
+  --brass-deep: #9B6A7A;
+  --gold: #B68645;
+
+  /* Rules */
+  --rule: #E9EBF0;
+  --rule-soft: #F0F1F4;
+
+  /* Cool stone scale */
+  --stone-50:  #FAFAFB;
+  --stone-100: #F1F2F5;
+  --stone-200: #E3E5EA;
+  --stone-300: #C9CCD3;
+  --stone-400: #A2A6B0;
+  --stone-500: #828791;
+  --stone-600: #646973;
+  --stone-700: #43474F;
+  --stone-800: #24262E;
+  --stone-900: #181A20;
+
+  /* Dark chrome */
+  --aside: #181A20;
+  --aside-2: #24262E;
+
+  /* States */
+  --error: #C2414F;
+  --success: #168568;
+  --success-soft: #E5F5EF;
+  --warn: #A87833;
+  --warn-soft: #FFF4E6;
+
+  /* Type */
+  --font-sans: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-title: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --weight-title: 780;
+
+  /* Shape */
+  --radius-sm: 0.5rem;     /* 8 */
+  --radius-md: 0.6875rem;  /* 11 — buttons, inputs */
+  --radius-lg: 0.875rem;   /* 14 */
+  --radius-xl: 1.3125rem;  /* 21 — cards */
+  --radius-2xl: 1.5rem;
+
+  /* Shadows (cool) */
+  --shadow-card: 0 10px 50px rgba(21, 25, 38, 0.035);
+  --shadow-xs: 0 1px 2px rgba(21, 25, 38, 0.05);
+  --shadow-sm: 0 2px 8px rgba(21, 25, 38, 0.05);
+  --shadow-md: 0 8px 24px rgba(21, 25, 38, 0.08);
+  --shadow-lg: 0 14px 34px rgba(21, 25, 38, 0.13);
+  --shadow-xl: 0 25px 100px rgba(16, 18, 26, 0.2);
+  --shadow-cta: 0 7px 18px rgba(106, 36, 62, 0.13);
+}
+
+html { color-scheme: light; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 3px solid #C693A7; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

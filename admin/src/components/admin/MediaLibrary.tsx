@@ -6,7 +6,7 @@ import { titlePlain } from '../../lib/journal';
 const PUBLIC_ORIGIN = 'https://zuzapragtour.de';
 const fmtSize = (b: number) => (b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB');
 
-const STATUS_DOT: Record<string, string> = { published: '#3F6B4A', draft: 'var(--stone-500)', scheduled: 'var(--brass-deep)' };
+const STATUS_DOT: Record<string, string> = { published: '#168568', draft: 'var(--stone-500)', scheduled: 'var(--brass-deep)' };
 const STATUS_LABEL: Record<string, string> = { published: 'Veröffentlicht', draft: 'Entwurf', scheduled: 'Geplant' };
 
 interface Usage {
@@ -41,19 +41,19 @@ const CSS = `
 .zml-card{position:relative;border:1px solid var(--rule);border-radius:var(--radius-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-xs);transition:border-color var(--dur-fast) var(--ease-out),transform var(--dur-fast) var(--ease-out)}
 .zml-card:hover{border-color:var(--brass);transform:translateY(-1px)}
 .zml-thumb{position:relative;width:100%;aspect-ratio:3/2;background:var(--stone-200) center/cover;cursor:pointer}
-.zml-badge{position:absolute;left:8px;bottom:8px;display:inline-flex;align-items:center;gap:.3rem;background:rgba(26,23,20,.78);color:var(--ivory);border-radius:var(--radius-pill);padding:.15rem .5rem;font-size:10px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.zml-badge{position:absolute;left:8px;bottom:8px;display:inline-flex;align-items:center;gap:.3rem;background:rgba(21,25,38,.78);color:var(--ivory);border-radius:var(--radius-pill);padding:.15rem .5rem;font-size:10px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .zml-badge .material-symbols-outlined{font-size:12px}
 .zml-cap{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.55rem .7rem}
 .zml-name{font-size:12px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
 .zml-size{font-size:10px;color:var(--ink-mute);flex-shrink:0}
 .zml-actions{position:absolute;top:8px;right:8px;display:flex;gap:4px;opacity:0;transition:opacity var(--dur-fast) var(--ease-out)}
 .zml-card:hover .zml-actions{opacity:1}
-.zml-actions a,.zml-actions button{width:30px;height:30px;border:0;border-radius:var(--radius-md);background:rgba(26,23,20,.78);color:var(--ivory);display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);text-decoration:none}
+.zml-actions a,.zml-actions button{width:30px;height:30px;border:0;border-radius:var(--radius-md);background:rgba(21,25,38,.78);color:var(--ivory);display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);text-decoration:none}
 .zml-actions a:hover,.zml-actions button:hover{background:var(--burgundy)}
 .zml-actions .material-symbols-outlined{font-size:16px}
 .zml-state{padding:3rem;text-align:center;color:var(--ink-mute);font-size:13px;border:1px dashed var(--rule);border-radius:var(--radius-lg);background:#fff}
 /* detail modal */
-.zml-overlay{position:fixed;inset:0;background:rgba(26,23,20,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:70;padding:1.5rem}
+.zml-overlay{position:fixed;inset:0;background:rgba(21,25,38,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:70;padding:1.5rem}
 .zml-modal{width:720px;max-width:100%;max-height:88vh;display:flex;flex-direction:column;background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);overflow:hidden}
 .zml-mh{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;border-bottom:1px solid var(--rule)}
 .zml-mh b{font-family:ui-monospace,monospace;font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -71,10 +71,10 @@ const CSS = `
 .zml-empty{font-size:13px;color:var(--ink-mute);padding:.6rem 0}
 .zml-uselist{display:flex;flex-direction:column;gap:.4rem;overflow:auto}
 .zml-userow{display:flex;align-items:center;gap:.7rem;border:1px solid var(--rule);border-radius:var(--radius-md);background:#fff;padding:.55rem .7rem;cursor:pointer;text-align:left;transition:border-color var(--dur-fast) var(--ease-out),background var(--dur-fast) var(--ease-out)}
-.zml-userow:hover{border-color:var(--burgundy);background:rgba(107,31,42,.03)}
+.zml-userow:hover{border-color:var(--burgundy);background:rgba(107,36,61,.03)}
 .zml-dot{width:8px;height:8px;border-radius:999px;flex-shrink:0}
 .zml-uinfo{flex:1;min-width:0}
-.zml-uinfo b{display:block;font-family:var(--font-display);font-size:15px;font-weight:400;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zml-uinfo b{display:block;font-family:var(--font-title);font-size:12.9px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zml-uinfo small{display:block;font-size:11px;color:var(--ink-mute)}
 .zml-ucount{font-size:11px;font-weight:600;color:var(--brass-deep);flex-shrink:0}
 .zml-userow .go{font-size:17px;color:var(--ink-mute);flex-shrink:0}

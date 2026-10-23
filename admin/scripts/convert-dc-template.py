@@ -3,7 +3,8 @@
 
 Converts the DC template of 'Admin Dashboard v2.dc.html' into a React TSX view.
 
-Kept 1:1: every element, inline style, text and binding. sc-if / sc-for become
+Kept 1:1: every element, layout, text and binding. Colours, display fonts and
+radii are mapped to the Control Center theme (THEME step below). sc-if / sc-for become
 conditionals / maps, {{ x }} becomes V.x (or the loop variable), style-hover /
 style-focus become generated CSS classes. Only the deliberate changes listed in
 PATCHES are applied before conversion.
@@ -37,6 +38,50 @@ PATCHES = [
 for a, b in PATCHES:
     assert tpl.count(a) == 1, a[:60]
     tpl = tpl.replace(a, b)
+
+# ── Control Center theme (zuza-control-center-v2.html) ──────────────────
+# The prototype's warm editorial palette and serif display type are mapped to
+# the admin's cool "control center" look. The layout stays 1:1. Keep this map
+# in sync with THEME in StatsDashboard.tsx and admin/src/styles/tokens/admin-theme.css.
+THEME = {
+    '#1A1714': '#17191F', '#3A332C': '#454954', '#6B6055': '#6F747E', '#A89880': '#A2A6B0',
+    '#C7BBA6': '#C9CCD3', '#D9CFBC': '#E6E8EE', '#E0D8C9': '#E3E5EA', '#E8DFCC': '#ECEEF2',
+    '#EDE4D3': '#EEF0F4', '#F0EBE2': '#F1F2F5', '#F5F1EA': '#F5F6F8', '#FAF6EC': '#FAFAFC',
+    '#FAF8F4': '#FAFAFB', '#FBF9F5': '#F6F7F9', '#F5EFE4': '#F6F4F6', '#6B1F2A': '#6B243D',
+    '#4F1620': '#4D172B', '#A88654': '#B68645', '#8C6A3C': '#A87833', '#25633A': '#168568',
+    '#CFE3D4': '#CDEBDF', '#F1F8F3': '#EEF8F4', '#4A3D7A': '#4A3D7A',
+}
+RGBA = {
+    'rgba(26,23,20,': 'rgba(21,25,38,', 'rgba(245,239,228,': 'rgba(246,244,246,',
+    'rgba(252,251,248,0.94)': 'rgba(255,255,255,0.86)', 'rgba(168,134,84,0.16)': 'rgba(236,178,197,0.14)',
+    'rgba(107,31,42,': 'rgba(107,36,61,', 'rgba(37,99,58,': 'rgba(22,133,104,',
+}
+RADIUS = {'10px': '18px', '8px': '14px', '6px': '10px', '12px': '18px'}
+SANS = "Inter, 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+
+def theme(css):
+    css = re.sub(r'#[0-9A-Fa-f]{6}\b', lambda m: THEME.get(m.group(0).upper(), m.group(0)), css)
+    for a, b in RGBA.items(): css = css.replace(a, b)
+    css = css.replace("'Inter Tight', 'Helvetica Neue', system-ui, sans-serif", SANS)
+    return css
+
+def theme_style(m):
+    st = m.group(1)
+    if "'Italiana'" in st:
+        st = re.sub(r"font-family:\s*'Italiana'[^;]*", 'font-family:' + SANS, st)
+        st = re.sub(r'font-size:\s*(\d+(?:\.\d+)?)px', lambda x: 'font-size:%gpx' % round(float(x.group(1)) * .86), st)
+        st = re.sub(r'font-weight:\s*400', 'font-weight:760', st) if 'font-weight' in st else st.rstrip().rstrip(';') + '; font-weight:760'
+        if 'letter-spacing' not in st: st = st.rstrip().rstrip(';') + '; letter-spacing:-0.035em'
+    if "font-family:'Cormorant Garamond', serif" in st:
+        st = st.replace("font-family:'Cormorant Garamond', serif", 'font-family:inherit').replace('font-style:italic', 'font-style:normal').replace('font-weight:500', 'font-weight:inherit')
+    st = re.sub(r'border-radius:\s*(\d+px)(?=\s*;|\s*$)', lambda x: 'border-radius:' + RADIUS.get(x.group(1), x.group(1)), st)
+    # The header sits under the Control Center topbar when embedded.
+    st = st.replace('position:sticky; top:0; z-index:50;', 'position:sticky; top:var(--zcc-sticky-top, 0px); z-index:40;')
+    return 'style="' + theme(st) + '"'
+
+tpl = re.sub(r'style="([^"]*)"', theme_style, tpl)
+tpl = re.sub(r'(style-(?:hover|focus)="[^"]*")', lambda m: theme(m.group(1)), tpl)
+helmet_css = theme(helmet_css)
 
 ATTR = {'onclick': 'onClick', 'onchange': 'onChange', 'onmouseenter': 'onMouseEnter', 'aria-label': 'aria-label', 'data-screen-label': 'data-screen-label'}
 VOID = {'input', 'br', 'img'}
@@ -136,7 +181,7 @@ assert not p.stack, p.stack
 
 body = ''.join(out)
 # Global rules of the prototype's <helmet>, scoped to the dashboard root.
-scoped = (helmet_css.replace('<style>', '').replace('</style>', '').replace('html, body { margin: 0; background: #FBF9F5; }', '')
+scoped = (helmet_css.replace('<style>', '').replace('</style>', '').replace('html, body { margin: 0; background: #F6F7F9; }', '')
           .replace('*, *::before, *::after', '.zkd, .zkd *, .zkd *::before, .zkd *::after')
           .replace('button, input', '.zkd button, .zkd input').replace('a {', '.zkd a {').replace('a:hover', '.zkd a:hover'))
 css = scoped.strip() + '\n' + '\n'.join(hover_rules)

@@ -21,22 +21,22 @@ const ALIAS = { blog: {}, tours: {} };
 
 const GOALS = ['enquiry', 'email', 'whatsapp', 'phone'];
 const GOAL_META = {
-  enquiry: { label: 'Formular gesendet', short: 'Formular', icon: 'edit_note', color: '#6B1F2A', bg: '#F6E7E2' },
+  enquiry: { label: 'Formular gesendet', short: 'Formular', icon: 'edit_note', color: '#6B243D', bg: '#F5E9EE' },
   email: { label: 'E-Mail geöffnet', short: 'E-Mail', icon: 'mail', color: '#4A3D7A', bg: '#EAE6F3' },
-  whatsapp: { label: 'WhatsApp geöffnet', short: 'WhatsApp', icon: 'chat', color: '#25633A', bg: '#E3F1E6' },
-  phone: { label: 'Telefonnummer getippt', short: 'Telefon', icon: 'call', color: '#8C6A3C', bg: '#F3ECDD' },
+  whatsapp: { label: 'WhatsApp geöffnet', short: 'WhatsApp', icon: 'chat', color: '#168568', bg: '#E5F5EF' },
+  phone: { label: 'Telefonnummer getippt', short: 'Telefon', icon: 'call', color: '#A87833', bg: '#FCF5EA' },
 };
 const CATS = {
-  whatsapp: { label: 'WhatsApp', bg: '#E3F1E6', fg: '#25633A' },
+  whatsapp: { label: 'WhatsApp', bg: '#E5F5EF', fg: '#168568' },
   email: { label: 'E-Mail', bg: '#EAE6F3', fg: '#4A3D7A' },
-  phone: { label: 'Telefon', bg: '#F3ECDD', fg: '#8C6A3C' },
-  form: { label: 'Zur Anfrage', bg: '#F6E7E2', fg: '#6B1F2A' },
-  enquiry: { label: 'Formular gesendet', bg: '#6B1F2A', fg: '#FFFFFF' },
-  tour: { label: 'Tour', bg: '#EDE4D3', fg: '#58413F' },
-  nav: { label: 'Navigation', bg: '#F0EBE2', fg: '#3A332C' },
-  anchor: { label: 'Sprung', bg: '#F0EBE2', fg: '#3A332C' },
-  external: { label: 'Extern', bg: '#F0EBE2', fg: '#645849' },
-  button: { label: 'Schaltfläche', bg: '#F0EBE2', fg: '#645849' },
+  phone: { label: 'Telefon', bg: '#FCF5EA', fg: '#A87833' },
+  form: { label: 'Zur Anfrage', bg: '#F5E9EE', fg: '#6B243D' },
+  enquiry: { label: 'Formular gesendet', bg: '#6B243D', fg: '#FFFFFF' },
+  tour: { label: 'Tour', bg: '#EEF0F4', fg: '#5B5F6B' },
+  nav: { label: 'Navigation', bg: '#F1F2F5', fg: '#454954' },
+  anchor: { label: 'Sprung', bg: '#F1F2F5', fg: '#454954' },
+  external: { label: 'Extern', bg: '#F1F2F5', fg: '#645849' },
+  button: { label: 'Schaltfläche', bg: '#F1F2F5', fg: '#645849' },
 };
 // Page areas = data-track-section names, or the id of the nearest section on the site.
 const AREAS = {

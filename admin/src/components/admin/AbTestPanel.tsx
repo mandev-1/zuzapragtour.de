@@ -12,24 +12,24 @@ import { getAbResults, type AbCounts, type AbResults, type AbVariantCounts } fro
 const CSS = `
 .zab{font-family:var(--font-sans);color:var(--ink);max-width:1000px;padding:1.4rem 0 4rem;display:flex;flex-direction:column;gap:1.6rem}
 .zab *{box-sizing:border-box}
-.zab h3{font-family:var(--font-display);font-size:1.3rem;font-weight:400;margin:0 0 .2rem}
+.zab h3{font-family:var(--font-title);font-size:1.12rem;margin:0 0 .2rem;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zab p.sub{font-size:12.5px;color:var(--ink-mute);margin:0 0 .9rem;line-height:1.5}
 .zab-card{border:1px solid var(--rule);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-xs);padding:1.1rem 1.2rem}
 .zab table{width:100%;border-collapse:collapse;font-size:13px}
 .zab th,.zab td{text-align:right;padding:.5rem .6rem;border-bottom:1px solid var(--rule-soft);font-variant-numeric:tabular-nums}
 .zab th:first-child,.zab td:first-child{text-align:left}
 .zab th{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
-.zab tr.key td{font-weight:700;color:var(--ink);background:rgba(168,134,84,.06)}
-.zab .up{color:#3F6B4A}.zab .down{color:var(--burgundy)}
-.zab-verdict{display:flex;gap:.8rem;align-items:flex-start;border-radius:var(--radius-md);padding:.8rem .95rem;font-size:13px;line-height:1.5;background:rgba(168,134,84,.08)}
-.zab-verdict.win{background:rgba(63,107,74,.1)}
-.zab-verdict.lose{background:rgba(107,31,42,.08)}
+.zab tr.key td{font-weight:700;color:var(--ink);background:rgba(198,147,167,.06)}
+.zab .up{color:#168568}.zab .down{color:var(--burgundy)}
+.zab-verdict{display:flex;gap:.8rem;align-items:flex-start;border-radius:var(--radius-md);padding:.8rem .95rem;font-size:13px;line-height:1.5;background:rgba(198,147,167,.08)}
+.zab-verdict.win{background:rgba(22,133,104,.1)}
+.zab-verdict.lose{background:rgba(107,36,61,.08)}
 .zab-verdict .material-symbols-outlined{font-size:20px;color:var(--brass-deep)}
 .zab-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .zab-btn{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--rule);background:#fff;border-radius:var(--radius-md);padding:.45rem .75rem;font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--ink-soft);cursor:pointer}
 .zab-btn:hover{border-color:var(--burgundy);color:var(--burgundy)}
 .zab-btn .material-symbols-outlined{font-size:15px}
-.zab-err{border:1px solid rgba(107,31,42,.3);background:rgba(107,31,42,.05);border-radius:var(--radius-md);padding:.8rem 1rem;font-size:13px;color:var(--burgundy)}
+.zab-err{border:1px solid rgba(107,36,61,.3);background:rgba(107,36,61,.05);border-radius:var(--radius-md);padding:.8rem 1rem;font-size:13px;color:var(--burgundy)}
 .zab-note{font-size:12px;color:var(--ink-mute);line-height:1.55}
 .zab-seg{display:inline-flex;border:1px solid var(--rule);border-radius:var(--radius-md);overflow:hidden}
 .zab-seg button{border:0;background:#fff;padding:.45rem .75rem;font-family:var(--font-sans);font-size:12px;font-weight:600;color:var(--ink-soft);cursor:pointer}

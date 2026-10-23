@@ -7,10 +7,10 @@ const slugify = (s: string) =>
     .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 const CSS = `
-.zdup-overlay{position:fixed;inset:0;background:rgba(26,23,20,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:72;padding:1.5rem}
+.zdup-overlay{position:fixed;inset:0;background:rgba(21,25,38,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:72;padding:1.5rem}
 .zdup{width:500px;max-width:100%;background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);overflow:hidden;font-family:var(--font-sans)}
 .zdup-h{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.3rem;border-bottom:1px solid var(--rule)}
-.zdup-h b{font-family:var(--font-display);font-size:1.3rem;font-weight:400}
+.zdup-h b{font-family:var(--font-title);font-size:1.12rem;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zdup-iconbtn{width:32px;height:32px;border:0;background:transparent;border-radius:var(--radius-md);color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center}
 .zdup-iconbtn:hover{background:var(--stone-100);color:var(--ink)}
 .zdup-b{padding:1.1rem 1.3rem;display:flex;flex-direction:column;gap:.9rem}

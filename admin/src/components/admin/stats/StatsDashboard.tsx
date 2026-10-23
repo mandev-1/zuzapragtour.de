@@ -25,13 +25,13 @@ const WEEK = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne'];
 const CONTACT = { whatsapp: 1, phone: 1, email: 1 };
 const GOALS = ['enquiry', 'email', 'whatsapp', 'phone'];
 const GM = {
-  enquiry: { l: 'Formulář odeslán', s: 'Formulář', c: '#6B1F2A', bg: '#F6E7E2', i: 'edit_note' },
+  enquiry: { l: 'Formulář odeslán', s: 'Formulář', c: '#6B243D', bg: '#F5E9EE', i: 'edit_note' },
   email: { l: 'E-mail otevřen', s: 'E-mail', c: '#4A3D7A', bg: '#EAE6F3', i: 'mail' },
-  whatsapp: { l: 'WhatsApp otevřen', s: 'WhatsApp', c: '#25633A', bg: '#E3F1E6', i: 'chat' },
-  phone: { l: 'Klepnuto na telefon', s: 'Telefon', c: '#8C6A3C', bg: '#F3ECDD', i: 'call' },
+  whatsapp: { l: 'WhatsApp otevřen', s: 'WhatsApp', c: '#168568', bg: '#E5F5EF', i: 'chat' },
+  phone: { l: 'Klepnuto na telefon', s: 'Telefon', c: '#A87833', bg: '#FCF5EA', i: 'call' },
 };
 const OWN = { email: 'otevře e-mailový program', phone: 'otevře aplikaci Telefon', whatsapp: 'otevře WhatsApp' };
-const SRC = { search: ['Vyhledávače', '#1A1714'], direct: ['Přímo', '#A89880'], social: ['Sociální sítě', '#B5654A'], review: ['Recenzní weby', '#5E7A5A'], ai: ['AI asistenti', '#3D5A80'], other: ['Ostatní', '#D9CFBC'] };
+export const SRC = { search: ['Vyhledávače', '#712944'], direct: ['Přímo', '#E3A9B8'], social: ['Sociální sítě', '#C7A878'], review: ['Recenzní weby', '#5E9A85'], ai: ['AI asistenti', '#5B7BA6'], other: ['Ostatní', '#D5D8DF'] };
 const SRC_OPTS = [['all', 'Všechny zdroje'], ['search', 'Vyhledávače'], ['direct', 'Přímo'], ['social', 'Sociální sítě'], ['review', 'Recenze'], ['ai', 'AI']];
 const KIND = { article: 'Článek', tour: 'Prohlídka', home: 'Úvodní stránka', other: 'Ostatní' };
 const TABS = [['overview', 'Přehled', 'space_dashboard'], ['live', 'Živě', 'sensors'], ['content', 'Obsah', 'auto_stories'], ['buttons', 'Tlačítka', 'touch_app'], ['visits', 'Návštěvy', 'groups'], ['flows', 'Cesty a zdroje', 'alt_route']];
@@ -52,19 +52,19 @@ const bfOf = (c) => (CONTACT[c] ? 'contact' : c === 'form' || c === 'tour' || c 
 const isGoal = (e) => e.k === 'enquiry' || (e.k === 'click' && !!CONTACT[e.c]);
 const goalOf = (e) => (e.k === 'enquiry' ? 'enquiry' : e.c);
 const zg = () => ({ enquiry: 0, email: 0, whatsapp: 0, phone: 0 });
-const seg = (opts, cur, set) => opts.map(([k, label], i) => ({ label, bg: k === cur ? '#1A1714' : '#FFFFFF', fg: k === cur ? '#F5EFE4' : '#3A332C', sep: i ? '1px solid #D9CFBC' : '0', onClick: () => set(k) }));
+const seg = (opts, cur, set) => opts.map(([k, label], i) => ({ label, bg: k === cur ? '#17191F' : '#FFFFFF', fg: k === cur ? '#F6F4F6' : '#454954', sep: i ? '1px solid #E6E8EE' : '0', onClick: () => set(k) }));
 const VIEW_PROP = { 'WhatsApp tlačítko': 'wa', 'Formuláře': 'forms', 'Túry': 'tours' };
 const isForm = (p) => p === '/book' || p === '/contact';
 const pgType = (p) => (p === '/' ? 'home' : p.startsWith('/tours/') ? 'tour' : isForm(p) ? 'form' : p.startsWith('/blog/') ? 'article' : 'other');
 const ENTRY_L = { article: 'Článkem', tour: 'Stránkou prohlídky', home: 'Úvodní stránkou', form: 'Rovnou formulářem', other: 'Jinou stránkou' };
 const PT_FROM = { home: 'Z úvodní stránky', tour: 'Z prohlídek', form: 'Z formuláře', article: 'Z článků', other: 'Odjinud' };
 const OUT = {
-  enquiry: ['Odeslali formulář', '#6B1F2A', '#F6E7E2', '#6B1F2A', 'Odeslal'],
-  whatsapp: ['Napsali přes WhatsApp', '#25633A', '#E3F1E6', '#25633A', 'WhatsApp'],
-  phone: ['Zavolali', '#8C6A3C', '#F3ECDD', '#8C6A3C', 'Telefon'],
+  enquiry: ['Odeslali formulář', '#6B243D', '#F5E9EE', '#6B243D', 'Odeslal'],
+  whatsapp: ['Napsali přes WhatsApp', '#168568', '#E5F5EF', '#168568', 'WhatsApp'],
+  phone: ['Zavolali', '#A87833', '#FCF5EA', '#A87833', 'Telefon'],
   email: ['Napsali e-mail', '#4A3D7A', '#EAE6F3', '#4A3D7A', 'E-mail'],
-  away: ['Pokračovali jinam, bez kontaktu', '#A89880', '#F0EBE2', '#6B6055', 'Odešel jinam'],
-  left: ['Zavřeli web rovnou na formuláři', '#D9CFBC', '#F5F1EA', '#6B6055', 'Zavřel web'],
+  away: ['Pokračovali jinam, bez kontaktu', '#A2A6B0', '#F1F2F5', '#6F747E', 'Odešel jinam'],
+  left: ['Zavřeli web rovnou na formuláři', '#E6E8EE', '#F5F6F8', '#6F747E', 'Zavřel web'],
 };
 const FF = [['all', 'Vše'], ['sent', 'Odeslali'], ['direct', 'Ozvali se jinak'], ['none', 'Bez kontaktu']];
 const TQ_L = { 'Ich bin noch unentschlossen': 'Ještě neví', '(ohne Tour)': 'Bez prohlídky' };
@@ -72,7 +72,7 @@ const WEEK_FULL = ['pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sob
 const median = (arr) => { if (!arr.length) return 0; const s = arr.slice().sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; };
 const dedupe = (ps) => ps.filter((p, i) => p !== ps[i - 1]);
 const squeeze = (ps) => (ps.length > 5 ? ps.slice(0, 2).concat(['…'], ps.slice(-2)) : ps);
-const chipF = (on) => ({ bg: on ? '#1A1714' : '#FFFFFF', fg: on ? '#F5EFE4' : '#3A332C', bd: on ? '#1A1714' : '#D9CFBC' });
+const chipF = (on) => ({ bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE' });
 
 export class StatsDashboard extends React.Component<any, any> {
   static defaultProps = { startTab: 'Přehled', compareDefault: true };
@@ -86,7 +86,9 @@ export class StatsDashboard extends React.Component<any, any> {
     this._resize();
     this.load(false);
   }
-  componentDidUpdate(_pp, ps) {
+  componentDidUpdate(pp, ps) {
+    if (pp.view !== this.props.view && this.props.view && this.props.view !== this.state.view) this.setState({ view: this.props.view, drawer: null, hover: -1, dh: -1 });
+    else if (ps.view !== this.state.view && this.state.view && this.props.onView && this.state.view !== this.props.view) this.props.onView(this.state.view);
     if (ps.range !== this.state.range) this.load(false);
     const live = (s) => (s.view || 'all') === 'all' && (s.tab || 'overview') === 'live';
     if (live(ps) !== live(this.state)) this.poll();
@@ -141,16 +143,17 @@ export class StatsDashboard extends React.Component<any, any> {
   liveItem(x, at) {
     const S = Stats, v = x.v, e = x.e, goal = isGoal(e);
     let icon, color, ibg, text;
-    if (e.k === 'page') { const art = e.p.startsWith('/blog/'); icon = art ? 'menu_book' : 'visibility'; color = '#3A332C'; ibg = '#F0EBE2'; text = (art ? 'Čte „' : 'Prohlíží „') + clip(S.pageName(e.p, 'cs'), 58) + '“'; }
+    if (e.k === 'page') { const art = e.p.startsWith('/blog/'); icon = art ? 'menu_book' : 'visibility'; color = '#454954'; ibg = '#F1F2F5'; text = (art ? 'Čte „' : 'Prohlíží „') + clip(S.pageName(e.p, 'cs'), 58) + '“'; }
     else if (goal) { const g = goalOf(e); icon = GM[g].i; color = GM[g].c; ibg = GM[g].bg; text = g === 'enquiry' ? 'Odeslal formulář · ' + e.l : GM[g].l + ' · ' + S.areaName(e.a, 'cs'); }
     else if (e.k === 'copy') { icon = 'content_copy'; color = GM[e.c].c; ibg = GM[e.c].bg; text = (e.c === 'email' ? 'Zkopíroval e-mail' : 'Zkopíroval telefon') + ' · ' + S.areaName(e.a, 'cs'); }
-    else { icon = 'ads_click'; color = '#8C6A3C'; ibg = '#F3ECDD'; text = 'Klikl na „' + clip(S.clickLabel(e.c, e.l), 40) + '“ · ' + S.areaName(e.a, 'cs'); }
+    else { icon = 'ads_click'; color = '#A87833'; ibg = '#FCF5EA'; text = 'Klikl na „' + clip(S.clickLabel(e.c, e.l), 40) + '“ · ' + S.areaName(e.a, 'cs'); }
     this._lk = (this._lk || 0) + 1;
     return { k: this._lk, at, icon, color, ibg, text, goal, dev: v.dev === 'm' ? 'smartphone' : 'computer', sub: (v.dev === 'm' ? 'Mobil' : 'Počítač') + ' · ' + (v.ref || 'přímo') + ' · návštěva #' + v.id, page: e.k === 'page' ? e.p : null };
   }
   get S() { return Stats; }
   tab() { return this.state.tab || TAB_PROP[this.props.startTab] || 'overview'; }
-  view() { return this.state.view || VIEW_PROP[this.props.startTab] || 'all'; }
+  /** Embedded in the Control Center shell, the shell's sub-navigation and this view stay in sync (props.view / onView). */
+  view() { return this.state.view || this.props.view || VIEW_PROP[this.props.startTab] || 'all'; }
   go(view) { return () => this.setState({ view, navOpen: true, drawer: null, hover: -1, dh: -1 }); }
   cmpOn() { const st = this.state; return st.range < 365 && (st.cmp != null ? st.cmp : this.props.compareDefault !== false); }
   filt() { const s = this.state.src; return s === 'all' ? null : (v) => this.S.srcGroup(v.ref) === s; }
@@ -210,11 +213,11 @@ export class StatsDashboard extends React.Component<any, any> {
   }
 
   rate(conv, n, max) {
-    if (!n) return { rate: '–', rateW: '0px', rateColor: '#A89880', rateBar: '#E0D8C9', rateTitle: '' };
+    if (!n) return { rate: '–', rateW: '0px', rateColor: '#A2A6B0', rateBar: '#E3E5EA', rateTitle: '' };
     const weak = n < 10;
-    return { rate: pct(conv, n), rateW: Math.max(2, Math.min(conv / n / max, 1) * 48) + 'px', rateColor: weak ? '#A89880' : '#1A1714', rateBar: weak ? '#E0D8C9' : '#A88654', rateTitle: conv + ' z ' + n + (weak ? ' – zatím málo vypovídající' : '') };
+    return { rate: pct(conv, n), rateW: Math.max(2, Math.min(conv / n / max, 1) * 48) + 'px', rateColor: weak ? '#A2A6B0' : '#17191F', rateBar: weak ? '#E3E5EA' : '#B68645', rateTitle: conv + ' z ' + n + (weak ? ' – zatím málo vypovídající' : '') };
   }
-  own() { return { rate: 'je kontakt', rateW: '0px', rateColor: '#6B6055', rateBar: 'transparent', rateTitle: 'Tento klik je sám kontaktem' }; }
+  own() { return { rate: 'je kontakt', rateW: '0px', rateColor: '#6F747E', rateBar: 'transparent', rateTitle: 'Tento klik je sám kontaktem' }; }
   chip(cat) { const S = this.S, c = S.CATS[cat] || S.CATS.button; return { catLabel: S.CAT_L.cs[cat] || S.CAT_L.cs.button, chipBg: c.bg, chipFg: c.fg }; }
   short(p) { return (p.startsWith('/tours/') ? 'Prohlídka: ' : '') + this.S.pageName(p, 'cs'); }
   openBtn(g) { return () => this.setState({ drawer: { type: 'button', key: g.key, mode: g.mode } }); }
@@ -222,25 +225,25 @@ export class StatsDashboard extends React.Component<any, any> {
 
   btnRow(g) {
     const S = this.S, own = !!CONTACT[g.cat], p0 = g.places[0], one = g.places.length === 1, wp = g.after.whatsapp + g.after.phone;
-    const cell = (v) => (own ? '–' : fmt(v)), col = (v, c) => (own || !v ? '#A89880' : c);
+    const cell = (v) => (own ? '–' : fmt(v)), col = (v, c) => (own || !v ? '#A2A6B0' : c);
     return Object.assign(this.chip(g.cat), {
       label: clip(S.clickLabel(g.cat, g.label), 64),
       where: one ? S.areaName(p0.area, 'cs') : g.places.length + ' míst',
       whereSub: one ? clip(S.pageName(p0.page, 'cs'), 40) : 'většinou ' + S.areaName(p0.area, 'cs') + ' · ' + clip(S.pageName(p0.page, 'cs'), 26),
       n: fmt(g.n), m: fmt(g.m), d: fmt(g.d), mW: (g.n ? (g.m / g.n) * 100 : 0) + '%',
-      f: cell(g.after.enquiry), fC: col(g.after.enquiry, '#6B1F2A'), e: cell(g.after.email), eC: col(g.after.email, '#4A3D7A'), wp: cell(wp), wpC: col(wp, '#25633A'),
+      f: cell(g.after.enquiry), fC: col(g.after.enquiry, '#6B243D'), e: cell(g.after.email), eC: col(g.after.email, '#4A3D7A'), wp: cell(wp), wpC: col(wp, '#168568'),
       open: this.openBtn(g),
     }, own ? this.own() : this.rate(g.conv, g.n, 0.5));
   }
-  artLite(r) { return Object.assign({ title: clip(r.art.title, 70), meta: r.art.cat, views: fmt(r.views), conv: fmt(r.conv), convC: r.conv ? '#1A1714' : '#A89880', open: this.openArt(r.art.slug) }, this.rate(r.conv, r.views, 0.1)); }
+  artLite(r) { return Object.assign({ title: clip(r.art.title, 70), meta: r.art.cat, views: fmt(r.views), conv: fmt(r.conv), convC: r.conv ? '#17191F' : '#A2A6B0', open: this.openArt(r.art.slug) }, this.rate(r.conv, r.views, 0.1)); }
   artRow(r) {
     const d = r.depth;
     return Object.assign({
       title: r.art.title, meta: r.art.cat + ' · ' + dateCz(r.art.date),
-      views: fmt(r.views), spark: this.spark(this.pts(r.days, 30), '#8C6A3C', 100, 22), entries: fmt(r.entries),
-      depthSegs: [0, 1, 2, 3].map((i) => ({ w: (d.n ? (d.b[i] / d.n) * 100 : 0) + '%', bg: ['#E8DFCC', '#C7BBA6', '#A88654', '#6B1F2A'][i] })),
+      views: fmt(r.views), spark: this.spark(this.pts(r.days, 30), '#A87833', 100, 22), entries: fmt(r.entries),
+      depthSegs: [0, 1, 2, 3].map((i) => ({ w: (d.n ? (d.b[i] / d.n) * 100 : 0) + '%', bg: ['#ECEEF2', '#C9CCD3', '#B68645', '#6B243D'][i] })),
       readAll: d.n ? pct(d.b[3], d.n) : '–', avgTime: d.n ? dur(Math.round(d.time / d.n)) : '–',
-      tour: fmt(r.tour), form: fmt(r.form), conv: fmt(r.conv), convC: r.conv ? '#1A1714' : '#A89880',
+      tour: fmt(r.tour), form: fmt(r.form), conv: fmt(r.conv), convC: r.conv ? '#17191F' : '#A2A6B0',
       chans: GOALS.filter((g) => r.after[g]).map((g) => ({ t: GM[g].s + ' ' + r.after[g], bg: GM[g].bg, fg: GM[g].c })),
       open: this.openArt(r.art.slug),
     }, this.rate(r.conv, r.views, 0.1));
@@ -249,7 +252,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const S = this.S;
     return key.split(' › ').map((s, i) => {
       const g = GOAL_STEP[s], ell = s === '…', me = s === mark;
-      return { arrow: i ? 'inline' : 'none', text: g ? '✓ ' + GM[g].s : ell ? '…' : clip(this.short(s), 34), full: g ? GM[g].l : ell ? 'zkráceno' : S.pageName(s, 'cs') + ' — ' + s, bg: g ? GM[g].bg : ell ? 'transparent' : me ? '#EDE4D3' : '#F0EBE2', fg: g ? GM[g].c : '#1A1714', fw: g || me ? '700' : '400' };
+      return { arrow: i ? 'inline' : 'none', text: g ? '✓ ' + GM[g].s : ell ? '…' : clip(this.short(s), 34), full: g ? GM[g].l : ell ? 'zkráceno' : S.pageName(s, 'cs') + ' — ' + s, bg: g ? GM[g].bg : ell ? 'transparent' : me ? '#EEF0F4' : '#F1F2F5', fg: g ? GM[g].c : '#17191F', fw: g || me ? '700' : '400' };
     });
   }
 
@@ -272,18 +275,18 @@ export class StatsDashboard extends React.Component<any, any> {
     const xw = (W - L - R) / n, x = (i) => L + xw * (i + 0.5), y = (v) => T + A - (v / maxV) * A;
     const line = (vals) => vals.map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(' ');
     const hov = this.state.hover, k = [];
-    [0, 0.5, 1].forEach((f, i) => { const yy = T + A - f * A; k.push(h('line', { key: 'g' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#E8DFCC' }), h('text', { key: 't' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6B6055' }, fmt(maxV * f))); });
+    [0, 0.5, 1].forEach((f, i) => { const yy = T + A - f * A; k.push(h('line', { key: 'g' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#ECEEF2' }), h('text', { key: 't' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6F747E' }, fmt(maxV * f))); });
     const vl = line(B.map((b) => b.v));
-    k.push(h('path', { key: 'area', d: vl + ' L' + x(n - 1).toFixed(1) + ' ' + (T + A) + ' L' + x(0).toFixed(1) + ' ' + (T + A) + ' Z', fill: '#A88654', opacity: 0.13 }));
-    if (P) k.push(h('path', { key: 'prev', d: line(P.slice(0, n)), fill: 'none', stroke: '#A89880', strokeWidth: 1.5, strokeDasharray: '4 4' }));
-    k.push(h('path', { key: 'line', d: vl, fill: 'none', stroke: '#8C6A3C', strokeWidth: 2, strokeLinejoin: 'round' }));
+    k.push(h('path', { key: 'area', d: vl + ' L' + x(n - 1).toFixed(1) + ' ' + (T + A) + ' L' + x(0).toFixed(1) + ' ' + (T + A) + ' Z', fill: '#B68645', opacity: 0.13 }));
+    if (P) k.push(h('path', { key: 'prev', d: line(P.slice(0, n)), fill: 'none', stroke: '#A2A6B0', strokeWidth: 1.5, strokeDasharray: '4 4' }));
+    k.push(h('path', { key: 'line', d: vl, fill: 'none', stroke: '#A87833', strokeWidth: 2, strokeLinejoin: 'round' }));
     const cb = T + A + G;
-    k.push(h('line', { key: 'cb', x1: L, x2: W - R, y1: cb, y2: cb, stroke: '#C7BBA6' }), h('text', { key: 'cbl', x: L - 6, y: cb + 12, textAnchor: 'end', fontSize: 10, fill: '#6B6055' }, 'kont.'));
+    k.push(h('line', { key: 'cb', x1: L, x2: W - R, y1: cb, y2: cb, stroke: '#C9CCD3' }), h('text', { key: 'cbl', x: L - 6, y: cb + 12, textAnchor: 'end', fontSize: 10, fill: '#6F747E' }, 'kont.'));
     const bw = Math.max(1, xw - (n > 60 ? 1 : 3));
     B.forEach((b, i) => { let yy = cb + 1; GOALS.forEach((g) => { const hh = (b.g[g] / maxG) * CB; if (hh > 0) { k.push(h('rect', { key: 'c' + i + g, x: x(i) - bw / 2, y: yy, width: bw, height: hh, fill: GM[g].c, opacity: hov < 0 || hov === i ? 1 : 0.35 })); yy += hh; } }); });
-    if (B[hov]) k.push(h('line', { key: 'xh', x1: x(hov), x2: x(hov), y1: T, y2: cb + CB, stroke: '#1A1714', strokeDasharray: '2 3' }), h('circle', { key: 'dot', cx: x(hov), cy: y(B[hov].v), r: 4.5, fill: '#FFFFFF', stroke: '#8C6A3C', strokeWidth: 2 }));
+    if (B[hov]) k.push(h('line', { key: 'xh', x1: x(hov), x2: x(hov), y1: T, y2: cb + CB, stroke: '#17191F', strokeDasharray: '2 3' }), h('circle', { key: 'dot', cx: x(hov), cy: y(B[hov].v), r: 4.5, fill: '#FFFFFF', stroke: '#A87833', strokeWidth: 2 }));
     B.forEach((b, i) => k.push(h('rect', { key: 'h' + i, x: L + xw * i, y: 0, width: xw, height: H, fill: 'transparent', onMouseEnter: () => { if (this.state.hover !== i) this.setState({ hover: i }); } })));
-    [0, Math.floor(n / 2), n - 1].forEach((i, j) => k.push(h('text', { key: 'x' + j, x: x(i), y: H - 2, textAnchor: j === 0 ? 'start' : j === 2 ? 'end' : 'middle', fontSize: 10, fill: '#6B6055' }, j === 2 && step === 1 ? 'dnes' : dl(B[i].from))));
+    [0, Math.floor(n / 2), n - 1].forEach((i, j) => k.push(h('text', { key: 'x' + j, x: x(i), y: H - 2, textAnchor: j === 0 ? 'start' : j === 2 ? 'end' : 'middle', fontSize: 10, fill: '#6F747E' }, j === 2 && step === 1 ? 'dnes' : dl(B[i].from))));
     const hb = B[hov];
     let info;
     if (hb) {
@@ -314,17 +317,17 @@ export class StatsDashboard extends React.Component<any, any> {
     const X = (v) => L + ((Math.log(v) - Math.log(minV)) / (Math.log(maxV) - Math.log(minV))) * (W - L - R);
     const Y = (q) => T + (1 - q / maxR) * (H - T - B);
     const qx = X(med), qy = Y(avg), k = [];
-    k.push(h('rect', { key: 'q1', x: qx, y: T, width: W - R - qx, height: qy - T, fill: '#E3F1E6', opacity: 0.55 }), h('rect', { key: 'q2', x: qx, y: qy, width: W - R - qx, height: H - B - qy, fill: '#F5E6E6', opacity: 0.55 }));
-    [0, 0.5, 1].forEach((f, i) => { const yy = Y(maxR * f); k.push(h('line', { key: 'gy' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#E8DFCC' }), h('text', { key: 'ty' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6B6055' }, pc1(maxR * f * 100) + ' %')); });
-    [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000].filter((v) => v >= minV && v <= maxV).forEach((v) => k.push(h('text', { key: 'tx' + v, x: X(v), y: H - B + 16, textAnchor: 'middle', fontSize: 10, fill: '#6B6055' }, fmt(v))));
-    k.push(h('line', { key: 'qx', x1: qx, x2: qx, y1: T, y2: H - B, stroke: '#A89880', strokeDasharray: '3 4' }), h('line', { key: 'qy', x1: L, x2: W - R, y1: qy, y2: qy, stroke: '#A89880', strokeDasharray: '3 4' }));
-    [['Skryté poklady', L + 8, T + 14, 'start'], ['Hvězdy', W - R - 8, T + 14, 'end'], ['Provoz bez efektu', W - R - 8, H - B - 8, 'end'], ['Zatím slabé', L + 8, H - B - 8, 'start']].forEach(([t, xx, yy, an], i) => k.push(h('text', { key: 'ql' + i, x: xx, y: yy, textAnchor: an, fontSize: 10.5, fontWeight: 700, letterSpacing: '0.08em', fill: '#8C6A3C' }, t.toUpperCase())));
-    k.push(h('text', { key: 'ax', x: W - R, y: H - 2, textAnchor: 'end', fontSize: 10, fill: '#6B6055' }, 'zobrazení →'), h('text', { key: 'ay', x: 2, y: 10, fontSize: 10, fill: '#6B6055' }, '↑ míra kontaktu'));
+    k.push(h('rect', { key: 'q1', x: qx, y: T, width: W - R - qx, height: qy - T, fill: '#E5F5EF', opacity: 0.55 }), h('rect', { key: 'q2', x: qx, y: qy, width: W - R - qx, height: H - B - qy, fill: '#F7EDF0', opacity: 0.55 }));
+    [0, 0.5, 1].forEach((f, i) => { const yy = Y(maxR * f); k.push(h('line', { key: 'gy' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#ECEEF2' }), h('text', { key: 'ty' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6F747E' }, pc1(maxR * f * 100) + ' %')); });
+    [5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000].filter((v) => v >= minV && v <= maxV).forEach((v) => k.push(h('text', { key: 'tx' + v, x: X(v), y: H - B + 16, textAnchor: 'middle', fontSize: 10, fill: '#6F747E' }, fmt(v))));
+    k.push(h('line', { key: 'qx', x1: qx, x2: qx, y1: T, y2: H - B, stroke: '#A2A6B0', strokeDasharray: '3 4' }), h('line', { key: 'qy', x1: L, x2: W - R, y1: qy, y2: qy, stroke: '#A2A6B0', strokeDasharray: '3 4' }));
+    [['Skryté poklady', L + 8, T + 14, 'start'], ['Hvězdy', W - R - 8, T + 14, 'end'], ['Provoz bez efektu', W - R - 8, H - B - 8, 'end'], ['Zatím slabé', L + 8, H - B - 8, 'start']].forEach(([t, xx, yy, an], i) => k.push(h('text', { key: 'ql' + i, x: xx, y: yy, textAnchor: an, fontSize: 10.5, fontWeight: 700, letterSpacing: '0.08em', fill: '#A87833' }, t.toUpperCase())));
+    k.push(h('text', { key: 'ax', x: W - R, y: H - 2, textAnchor: 'end', fontSize: 10, fill: '#6F747E' }, 'zobrazení →'), h('text', { key: 'ay', x: 2, y: 10, fontSize: 10, fill: '#6F747E' }, '↑ míra kontaktu'));
     let label = null;
     pts.slice().sort((x, y) => x.conv - y.conv).forEach((r) => {
       const on = this.state.scHover === r.art.slug, cx = X(r.views), cy = Y(r.conv / r.views);
-      k.push(h('circle', { key: r.art.slug, cx, cy, r: 4 + Math.sqrt(r.conv) * 3.2, fill: r.conv ? '#6B1F2A' : '#A89880', fillOpacity: on ? 0.95 : 0.55, stroke: on ? '#1A1714' : '#FFFFFF', strokeWidth: on ? 2 : 1, style: { cursor: 'pointer' }, onMouseEnter: () => this.setState({ scHover: r.art.slug }), onClick: this.openArt(r.art.slug) }, h('title', null, r.art.title)));
-      if (on) label = h('text', { key: 'lbl', x: cx > W * 0.7 ? cx - 12 : cx + 12, y: cy - 10, textAnchor: cx > W * 0.7 ? 'end' : 'start', fontSize: 11.5, fontWeight: 600, fill: '#1A1714', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, clip(r.art.title, 46));
+      k.push(h('circle', { key: r.art.slug, cx, cy, r: 4 + Math.sqrt(r.conv) * 3.2, fill: r.conv ? '#6B243D' : '#A2A6B0', fillOpacity: on ? 0.95 : 0.55, stroke: on ? '#17191F' : '#FFFFFF', strokeWidth: on ? 2 : 1, style: { cursor: 'pointer' }, onMouseEnter: () => this.setState({ scHover: r.art.slug }), onClick: this.openArt(r.art.slug) }, h('title', null, r.art.title)));
+      if (on) label = h('text', { key: 'lbl', x: cx > W * 0.7 ? cx - 12 : cx + 12, y: cy - 10, textAnchor: cx > W * 0.7 ? 'end' : 'start', fontSize: 11.5, fontWeight: 600, fill: '#17191F', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, clip(r.art.title, 46));
     });
     if (label) k.push(label);
     return h('svg', { viewBox: '0 0 ' + W + ' ' + H, style: { width: '100%', height: 'auto', display: 'block' }, onMouseLeave: () => this.setState({ scHover: null }) }, k);
@@ -332,7 +335,7 @@ export class StatsDashboard extends React.Component<any, any> {
   sankey(a, onlyConv) {
     const fl = Object.entries(a.flows).map(([key, n]) => { const [s, e, o] = key.split('|'); return { s, e, o, n }; }).filter((f) => !onlyConv || f.o !== 'none');
     const total = fl.reduce((x, f) => x + f.n, 0);
-    if (!total) return h('div', { style: { padding: '16px 0', fontSize: 12.5, color: '#A89880' } }, 'V tomto období žádná data.');
+    if (!total) return h('div', { style: { padding: '16px 0', fontSize: 12.5, color: '#A2A6B0' } }, 'V tomto období žádná data.');
     const KEYS = [['search', 'direct', 'social', 'review', 'ai', 'other'], ['article', 'tour', 'home', 'other'], ['enquiry', 'email', 'whatsapp', 'phone', 'none']];
     const W = 880, NW = 12, GAP = 14, MINH = 28, X = [170, 440, 700], scale = 300 / total;
     const cols = KEYS.map((keys, ci) => { const tot = {}; fl.forEach((f) => { const kk = [f.s, f.e, f.o][ci]; tot[kk] = (tot[kk] || 0) + f.n; }); return { ks: keys.filter((kk) => tot[kk]), tot }; });
@@ -343,17 +346,17 @@ export class StatsDashboard extends React.Component<any, any> {
     const band = (key, x0, y0, x1, y1, hh, color, title) => { const xm = (x0 + x1) / 2; k.push(h('path', { key, d: 'M' + x0 + ' ' + y0 + ' C' + xm + ' ' + y0 + ' ' + xm + ' ' + y1 + ' ' + x1 + ' ' + y1 + ' L' + x1 + ' ' + (y1 + hh) + ' C' + xm + ' ' + (y1 + hh) + ' ' + xm + ' ' + (y0 + hh) + ' ' + x0 + ' ' + (y0 + hh) + ' Z', fill: color, opacity: 0.35 }, h('title', null, title))); };
     const sum = (fn) => { const m = {}; fl.forEach((f) => { const kk = fn(f); m[kk] = (m[kk] || 0) + f.n; }); return m; };
     const l1 = sum((f) => f.s + '|' + f.e), l2 = sum((f) => f.e + '|' + f.o);
-    const oName = (o) => (o === 'none' ? 'Bez kontaktu' : GM[o].s), oColor = (o) => (o === 'none' ? '#C7BBA6' : GM[o].c);
+    const oName = (o) => (o === 'none' ? 'Bez kontaktu' : GM[o].s), oColor = (o) => (o === 'none' ? '#C9CCD3' : GM[o].c);
     cols[0].ks.forEach((s) => cols[1].ks.forEach((e) => { const n = l1[s + '|' + e]; if (!n) return; const hh = n * scale, A = pos[0].o[s], Bn = pos[1].o[e]; band('a' + s + e, X[0] + NW, A.y + A.outO, X[1], Bn.y + Bn.inO, hh, SRC[s][1], SRC[s][0] + ' → ' + KIND[e] + ': ' + fmt(n)); A.outO += hh; Bn.inO += hh; }));
     cols[1].ks.forEach((e) => cols[2].ks.forEach((o) => { const n = l2[e + '|' + o]; if (!n) return; const hh = n * scale, A = pos[1].o[e], Bn = pos[2].o[o]; band('b' + e + o, X[1] + NW, A.y + A.outO, X[2], Bn.y + Bn.inO, hh, oColor(o), KIND[e] + ' → ' + oName(o) + ': ' + fmt(n)); A.outO += hh; Bn.inO += hh; }));
-    const lab = [(kk) => SRC[kk][0], (kk) => KIND[kk], oName], colr = [(kk) => SRC[kk][1], () => '#8C6A3C', oColor];
+    const lab = [(kk) => SRC[kk][0], (kk) => KIND[kk], oName], colr = [(kk) => SRC[kk][1], () => '#A87833', oColor];
     cols.forEach((c, ci) => c.ks.forEach((kk) => {
       const nd = pos[ci].o[kk], tx = ci === 0 ? X[0] - 8 : X[ci] + NW + 8, an = ci === 0 ? 'end' : 'start', cy = nd.y + nd.h / 2;
       k.push(h('rect', { key: 'n' + ci + kk, x: X[ci], y: nd.y, width: NW, height: nd.h, rx: 2, fill: colr[ci](kk) }),
-        h('text', { key: 'l' + ci + kk, x: tx, y: cy - 1, textAnchor: an, fontSize: 12, fontWeight: 600, fill: '#1A1714', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, lab[ci](kk)),
-        h('text', { key: 'v' + ci + kk, x: tx, y: cy + 13, textAnchor: an, fontSize: 11, fill: '#6B6055', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, fmt(c.tot[kk]) + ' · ' + pct(c.tot[kk], total)));
+        h('text', { key: 'l' + ci + kk, x: tx, y: cy - 1, textAnchor: an, fontSize: 12, fontWeight: 600, fill: '#17191F', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, lab[ci](kk)),
+        h('text', { key: 'v' + ci + kk, x: tx, y: cy + 13, textAnchor: an, fontSize: 11, fill: '#6F747E', stroke: '#FFFFFF', strokeWidth: 3, paintOrder: 'stroke' }, fmt(c.tot[kk]) + ' · ' + pct(c.tot[kk], total)));
     }));
-    ['ZDROJ', 'PRVNÍ STRÁNKA', 'VÝSLEDEK'].forEach((t, i) => k.push(h('text', { key: 'ct' + i, x: i === 0 ? X[0] + NW : X[i], y: -12, textAnchor: i === 0 ? 'end' : 'start', fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', fill: '#8C6A3C' }, t)));
+    ['ZDROJ', 'PRVNÍ STRÁNKA', 'VÝSLEDEK'].forEach((t, i) => k.push(h('text', { key: 'ct' + i, x: i === 0 ? X[0] + NW : X[i], y: -12, textAnchor: i === 0 ? 'end' : 'start', fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', fill: '#A87833' }, t)));
     return h('svg', { viewBox: '0 -28 ' + W + ' ' + (H + 44), style: { width: '100%', minWidth: 640, height: 'auto', display: 'block' } }, k);
   }
 
@@ -361,16 +364,16 @@ export class StatsDashboard extends React.Component<any, any> {
     const out = [], arts = this.articles().filter((r) => r.views > 0), avg = a.visits ? a.conv / a.visits : 0;
     if (p && p.conv) {
       const d = (a.conv - p.conv) / p.conv;
-      out.push({ icon: d >= 0 ? 'trending_up' : 'trending_down', bg: d >= 0 ? '#E3F1E6' : '#F5E6E6', fg: d >= 0 ? '#25633A' : '#8A1F1F', title: 'Kontakty ' + (d >= 0 ? '+' : '−') + pc1(Math.abs(d) * 100) + ' % proti předchozímu období', text: fmt(a.conv) + ' návštěv s kontaktem proti ' + fmt(p.conv) + ' v předchozích ' + a.days + ' dnech. Návštěv je ' + fmt(a.visits) + ' (předtím ' + fmt(p.visits) + ').', action: 'Návštěvy s kontaktem', run: () => this.setState({ tab: 'visits', vf: 'conv' }) });
+      out.push({ icon: d >= 0 ? 'trending_up' : 'trending_down', bg: d >= 0 ? '#E5F5EF' : '#F7EDF0', fg: d >= 0 ? '#168568' : '#C65E68', title: 'Kontakty ' + (d >= 0 ? '+' : '−') + pc1(Math.abs(d) * 100) + ' % proti předchozímu období', text: fmt(a.conv) + ' návštěv s kontaktem proti ' + fmt(p.conv) + ' v předchozích ' + a.days + ' dnech. Návštěv je ' + fmt(a.visits) + ' (předtím ' + fmt(p.visits) + ').', action: 'Návštěvy s kontaktem', run: () => this.setState({ tab: 'visits', vf: 'conv' }) });
     }
     const leak = arts.filter((r) => r.views >= 30).sort((x, y) => x.conv / x.views - y.conv / y.views || y.views - x.views)[0];
-    if (leak) out.push({ icon: 'water_drop', bg: '#F5E6E6', fg: '#8A1F1F', title: 'Hodně čtenářů, málo kontaktů', text: '„' + clip(leak.art.title, 60) + '“ má ' + fmt(leak.views) + ' zobrazení, ale jen ' + fmt(leak.conv) + ' ' + plural(leak.conv, 'kontakt', 'kontakty', 'kontaktů') + '. Do konce ho dočte ' + pct(leak.depth.b[3], leak.depth.n) + ' čtenářů – výzvu k akci by stálo za to posunout výš.', action: 'Otevřít článek', run: this.openArt(leak.art.slug) });
+    if (leak) out.push({ icon: 'water_drop', bg: '#F7EDF0', fg: '#C65E68', title: 'Hodně čtenářů, málo kontaktů', text: '„' + clip(leak.art.title, 60) + '“ má ' + fmt(leak.views) + ' zobrazení, ale jen ' + fmt(leak.conv) + ' ' + plural(leak.conv, 'kontakt', 'kontakty', 'kontaktů') + '. Do konce ho dočte ' + pct(leak.depth.b[3], leak.depth.n) + ' čtenářů – výzvu k akci by stálo za to posunout výš.', action: 'Otevřít článek', run: this.openArt(leak.art.slug) });
     const star = arts.filter((r) => r.views >= 15 && r.conv > 0).sort((x, y) => y.conv / y.views - x.conv / x.views)[0];
-    if (star) out.push({ icon: 'auto_awesome', bg: '#E3F1E6', fg: '#25633A', title: 'Článek, který prodává', text: '„' + clip(star.art.title, 60) + '“ převádí ' + pct(star.conv, star.views) + ' čtenářů na kontakt' + (avg ? ', to je ' + pc1(star.conv / star.views / avg) + '× víc než průměr webu' : '') + '.', action: 'Detail článku', run: this.openArt(star.art.slug) });
-    if (a.formViews) out.push({ icon: 'edit_note', bg: '#F6E7E2', fg: '#6B1F2A', title: 'Formulář dokončí ' + pct(a.formSent, a.formViews), text: fmt(a.formViews) + ' návštěv otevřelo stránku s poptávkou, ' + fmt(a.formSent) + ' formulář odeslalo a ' + fmt(a.formViews - a.formSent) + ' odešlo bez odeslání' + (a.formCopied ? ', z toho ' + fmt(a.formCopied) + ' ' + plural(a.formCopied, 'si zkopíroval', 'si zkopírovali', 'si zkopírovalo') + ' e-mail nebo telefon' : '') + '.', action: 'Návštěvy s formulářem', run: () => this.setState({ tab: 'visits', vf: 'form' }) });
+    if (star) out.push({ icon: 'auto_awesome', bg: '#E5F5EF', fg: '#168568', title: 'Článek, který prodává', text: '„' + clip(star.art.title, 60) + '“ převádí ' + pct(star.conv, star.views) + ' čtenářů na kontakt' + (avg ? ', to je ' + pc1(star.conv / star.views / avg) + '× víc než průměr webu' : '') + '.', action: 'Detail článku', run: this.openArt(star.art.slug) });
+    if (a.formViews) out.push({ icon: 'edit_note', bg: '#F5E9EE', fg: '#6B243D', title: 'Formulář dokončí ' + pct(a.formSent, a.formViews), text: fmt(a.formViews) + ' návštěv otevřelo stránku s poptávkou, ' + fmt(a.formSent) + ' formulář odeslalo a ' + fmt(a.formViews - a.formSent) + ' odešlo bez odeslání' + (a.formCopied ? ', z toho ' + fmt(a.formCopied) + ' ' + plural(a.formCopied, 'si zkopíroval', 'si zkopírovali', 'si zkopírovalo') + ' e-mail nebo telefon' : '') + '.', action: 'Návštěvy s formulářem', run: () => this.setState({ tab: 'visits', vf: 'form' }) });
     if (a.m && a.d) {
       const worse = a.convM / a.m < a.convD / a.d;
-      out.push({ icon: 'smartphone', bg: '#F0EBE2', fg: '#3A332C', title: 'Mobil vs. počítač', text: 'Na mobilu skončí kontaktem ' + pct(a.convM, a.m) + ' návštěv, na počítači ' + pct(a.convD, a.d) + '. ' + (worse ? 'Mobil zaostává – stojí za kontrolu lišta dole a tlačítko WhatsApp.' : 'Mobil převádí lépe než počítač.'), action: 'Mapa kliků', run: () => this.setState({ tab: 'buttons', mapPage: 'home' }) });
+      out.push({ icon: 'smartphone', bg: '#F1F2F5', fg: '#454954', title: 'Mobil vs. počítač', text: 'Na mobilu skončí kontaktem ' + pct(a.convM, a.m) + ' návštěv, na počítači ' + pct(a.convD, a.d) + '. ' + (worse ? 'Mobil zaostává – stojí za kontrolu lišta dole a tlačítko WhatsApp.' : 'Mobil převádí lépe než počítač.'), action: 'Mapa kliků', run: () => this.setState({ tab: 'buttons', mapPage: 'home' }) });
     }
     return out.slice(0, 4);
   }
@@ -381,25 +384,25 @@ export class StatsDashboard extends React.Component<any, any> {
     const rateSer = chunk(a.series, step).map((b) => { const v = b.reduce((s, x) => s + x.visits, 0); return v ? b.reduce((s, x) => s + x.conv, 0) / v : 0; });
     const wp = (o) => o.goals.whatsapp + o.goals.phone;
     const K = [
-      ['Návštěvy', a.visits, p ? p.visits : null, ser((x) => x.visits), '#8C6A3C', fmt(a.visits), 'mobil ' + pct(a.m, a.visits) + ' · ' + pc1(a.visits ? a.pageviews / a.visits : 0) + ' str. na návštěvu', 0],
-      ['S kontaktem', a.conv, p ? p.conv : null, ser((x) => x.conv), '#6B1F2A', fmt(a.conv), 'návštěv z ' + fmt(a.visits), 0],
-      ['Míra konverze', a.visits ? a.conv / a.visits : 0, p ? (p.visits ? p.conv / p.visits : 0) : null, rateSer, '#3A332C', pct(a.conv, a.visits), 'návštěv skončí kontaktem', 1],
-      ['Formuláře', a.goals.enquiry, p ? p.goals.enquiry : null, ser((x) => x.goals.enquiry), '#6B1F2A', fmt(a.goals.enquiry), 'odesláno · ' + pct(a.formSent, a.formViews) + ' otevřených', 0],
+      ['Návštěvy', a.visits, p ? p.visits : null, ser((x) => x.visits), '#A87833', fmt(a.visits), 'mobil ' + pct(a.m, a.visits) + ' · ' + pc1(a.visits ? a.pageviews / a.visits : 0) + ' str. na návštěvu', 0],
+      ['S kontaktem', a.conv, p ? p.conv : null, ser((x) => x.conv), '#6B243D', fmt(a.conv), 'návštěv z ' + fmt(a.visits), 0],
+      ['Míra konverze', a.visits ? a.conv / a.visits : 0, p ? (p.visits ? p.conv / p.visits : 0) : null, rateSer, '#454954', pct(a.conv, a.visits), 'návštěv skončí kontaktem', 1],
+      ['Formuláře', a.goals.enquiry, p ? p.goals.enquiry : null, ser((x) => x.goals.enquiry), '#6B243D', fmt(a.goals.enquiry), 'odesláno · ' + pct(a.formSent, a.formViews) + ' otevřených', 0],
       ['E-maily', a.goals.email, p ? p.goals.email : null, ser((x) => x.goals.email), '#4A3D7A', fmt(a.goals.email), (a.copies.email ? 'kliknutí · ' + fmt(a.copies.email) + ' zkopírováno' : 'kliků na e-mailovou adresu'), 0],
-      ['WhatsApp a telefon', wp(a), p ? wp(p) : null, ser(wp), '#25633A', fmt(wp(a)), 'WhatsApp ' + fmt(a.goals.whatsapp) + (a.copies.phone ? ' · tel. ' + fmt(a.goals.phone) + ' · ' + fmt(a.copies.phone) + ' zkop.' : ' · telefon ' + fmt(a.goals.phone)), 0],
+      ['WhatsApp a telefon', wp(a), p ? wp(p) : null, ser(wp), '#168568', fmt(wp(a)), 'WhatsApp ' + fmt(a.goals.whatsapp) + (a.copies.phone ? ' · tel. ' + fmt(a.goals.phone) + ' · ' + fmt(a.copies.phone) + ' zkop.' : ' · telefon ' + fmt(a.goals.phone)), 0],
     ];
     const kpis = K.map(([label, cur, prv, s, color, value, sub, isRate]) => {
-      const o = { label, value, sub, spark: this.spark(s, color), showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6B6055' };
+      const o = { label, value, sub, spark: this.spark(s, color), showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6F747E' };
       if (prv != null) {
         const d = isRate ? (cur - prv) * 100 : prv ? ((cur - prv) / prv) * 100 : cur ? 100 : 0, up = d > 0.05, dn = d < -0.05;
-        Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: up ? '#E3F1E6' : dn ? '#F5E6E6' : '#F0EBE2', dfg: up ? '#25633A' : dn ? '#8A1F1F' : '#6B6055' });
+        Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: up ? '#E5F5EF' : dn ? '#F7EDF0' : '#F1F2F5', dfg: up ? '#168568' : dn ? '#C65E68' : '#6F747E' });
       }
       return o;
     });
     const F = [['Návštěvy', a.visits], ['Četli článek nebo prohlídku', a.sawContent], ['Otevřeli stránku s poptávkou', a.formViews], ['Odeslali formulář', a.formSent]];
-    const funnel = F.map(([label, n], i) => ({ label, n: fmt(n), share: pct(n, a.visits), w: Math.max(1.5, Math.sqrt(a.visits ? n / a.visits : 0) * 100) + '%', color: ['#D9CFBC', '#A88654', '#8C6A3C', '#6B1F2A'][i], step: i ? '→ ' + pct(n, F[i - 1][1]) + ' z předchozího kroku' : 'všechny návštěvy v období' }));
+    const funnel = F.map(([label, n], i) => ({ label, n: fmt(n), share: pct(n, a.visits), w: Math.max(1.5, Math.sqrt(a.visits ? n / a.visits : 0) * 100) + '%', color: ['#E6E8EE', '#B68645', '#A87833', '#6B243D'][i], step: i ? '→ ' + pct(n, F[i - 1][1]) + ' z předchozího kroku' : 'všechny návštěvy v období' }));
     const hmData = st.hmMode === 'conv' ? a.hoursConv : a.hours, hmax = Math.max(1, ...hmData.map((r) => Math.max(...r)));
-    const heat = WEEK.map((d, wi) => ({ day: d, cells: hmData[wi].map((v, hr) => ({ bg: v ? 'rgba(107,31,42,' + (0.07 + 0.88 * (v / hmax)).toFixed(3) + ')' : '#F5F1EA', title: d + ' ' + two(hr) + ':00 – ' + fmt(a.hours[wi][hr]) + ' návštěv, ' + fmt(a.hoursConv[wi][hr]) + ' kontaktů' })) }));
+    const heat = WEEK.map((d, wi) => ({ day: d, cells: hmData[wi].map((v, hr) => ({ bg: v ? 'rgba(107,36,61,' + (0.07 + 0.88 * (v / hmax)).toFixed(3) + ')' : '#F5F6F8', title: d + ' ' + two(hr) + ':00 – ' + fmt(a.hours[wi][hr]) + ' návštěv, ' + fmt(a.hoursConv[wi][hr]) + ' kontaktů' })) }));
     const peak = (m) => { let b = [0, 0, -1]; m.forEach((r, wi) => r.forEach((v, hr) => { if (v > b[2]) b = [wi, hr, v]; })); return WEEK[b[0]] + ' kolem ' + b[1] + ':00'; };
     const srcRows = Object.entries(a.src).sort((x, y) => y[1].n - x[1].n);
     return Object.assign({
@@ -424,8 +427,8 @@ export class StatsDashboard extends React.Component<any, any> {
     const today = ds.visits.filter((v) => v.day === 0 && v.hour * 60 + v.minute <= nowMin && v.ev.some(isGoal)).sort((x, y) => y.hour - x.hour || y.minute - x.minute).slice(0, 8)
       .map((v) => { const g = goalOf(v.ev.find(isGoal)); return { time: two(v.hour) + ':' + two(v.minute), label: GM[g].s, bg: GM[g].bg, fg: GM[g].c, sub: (v.ref || 'přímo') + ' · vstup: ' + clip(this.short(v.ev[0].p), 40), open: () => this.setState({ drawer: { type: 'visit', id: v.id, day: v.day } }) }; });
     return {
-      live: st.live.map((x) => { const t = new Date(x.at); return { time: hm(t) + ':' + two(t.getSeconds()), icon: x.icon, color: x.color, ibg: x.ibg, text: x.text, sub: x.sub, dev: x.dev, fw: x.goal ? '700' : '500', bg: x.fresh && now - x.fresh < 1800 ? '#FBF3DD' : x.goal ? '#FBF7F4' : 'transparent' }; }),
-      liveSpark: this.spark(st.liveHist, '#25633A', 240, 48), liveWord: plural(st.liveN, 'člověk', 'lidé', 'lidí'),
+      live: st.live.map((x) => { const t = new Date(x.at); return { time: hm(t) + ':' + two(t.getSeconds()), icon: x.icon, color: x.color, ibg: x.ibg, text: x.text, sub: x.sub, dev: x.dev, fw: x.goal ? '700' : '500', bg: x.fresh && now - x.fresh < 1800 ? '#FBF3DD' : x.goal ? '#FBF8F9' : 'transparent' }; }),
+      liveSpark: this.spark(st.liveHist, '#168568', 240, 48), liveWord: plural(st.liveN, 'člověk', 'lidé', 'lidí'),
       livePages: pr.map(([pp, n]) => ({ title: this.short(pp), n, w: (n / pmax) * 100 + '%' })),
       todayContacts: today, todayEmpty: !today.length,
     };
@@ -463,7 +466,7 @@ export class StatsDashboard extends React.Component<any, any> {
     return {
       mapOpts: seg(Object.keys(MAPS).map((k) => [k, MAPS[k].label]), st.mapPage, (k) => this.setState({ mapPage: k, mapArea: null })),
       mapPath: M.path,
-      mapRows: order.map((k) => { const x = by[k] || { n: 0, conv: 0, btn: {} }, f = x.n / max; return { name: S.areaName(k, 'cs'), n: fmt(x.n), share: pct(x.n, total), bg: x.n ? 'rgba(107,31,42,' + (0.05 + f * 0.75).toFixed(3) + ')' : '#FAF8F4', fg: f > 0.55 ? '#FFFFFF' : '#1A1714', h: { header: '46px', footer: '52px', 'sticky-bar': '46px', 'blog-promo': '52px', hero: '120px', article: '150px' }[k] || '82px', outline: k === sel ? '2px solid #1A1714' : '0 solid transparent', btns: Object.values(x.btn).sort((pp, qq) => qq.n - pp.n).slice(0, 3).map((b) => ({ t: clip(S.clickLabel(b.cat, b.label), 28) + ' · ' + fmt(b.n) })), enter: () => { if (this.state.mapArea !== k) this.setState({ mapArea: k }); } }; }),
+      mapRows: order.map((k) => { const x = by[k] || { n: 0, conv: 0, btn: {} }, f = x.n / max; return { name: S.areaName(k, 'cs'), n: fmt(x.n), share: pct(x.n, total), bg: x.n ? 'rgba(107,36,61,' + (0.05 + f * 0.75).toFixed(3) + ')' : '#FAFAFB', fg: f > 0.55 ? '#FFFFFF' : '#17191F', h: { header: '46px', footer: '52px', 'sticky-bar': '46px', 'blog-promo': '52px', hero: '120px', article: '150px' }[k] || '82px', outline: k === sel ? '2px solid #17191F' : '0 solid transparent', btns: Object.values(x.btn).sort((pp, qq) => qq.n - pp.n).slice(0, 3).map((b) => ({ t: clip(S.clickLabel(b.cat, b.label), 28) + ' · ' + fmt(b.n) })), enter: () => { if (this.state.mapArea !== k) this.setState({ mapArea: k }); } }; }),
       mapSelName: sel ? S.areaName(sel, 'cs') : '–',
       mapSelSub: fmt(sx.n) + ' kliků · ' + pct(sx.n, total) + ' všech kliků na stránce · ' + pct(sx.conv, sx.n) + ' pak kontakt',
       mapSelBtns: Object.values(sx.btn).sort((pp, qq) => qq.n - pp.n).slice(0, 8).map((b) => Object.assign(this.chip(b.cat), { label: clip(S.clickLabel(b.cat, b.label), 40), n: fmt(b.n) }, CONTACT[b.cat] ? this.own() : this.rate(b.conv, b.n, 0.5))),
@@ -481,7 +484,7 @@ export class StatsDashboard extends React.Component<any, any> {
     if (st.bsort === 'form') rows = rows.slice().sort((x, y) => y.after.enquiry - x.after.enquiry || y.n - x.n);
     const rest = Math.max(0, rows.length - st.blimit);
     return {
-      bFilters: BF.map(([k, label]) => { const on = st.bf === k; return { label, count: k === 'all' ? searched.length : counts[k] || 0, bg: on ? '#1A1714' : '#FFFFFF', fg: on ? '#F5EFE4' : '#3A332C', bd: on ? '#1A1714' : '#D9CFBC', onClick: () => this.setState({ bf: k, blimit: 25 }) }; }),
+      bFilters: BF.map(([k, label]) => { const on = st.bf === k; return { label, count: k === 'all' ? searched.length : counts[k] || 0, bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE', onClick: () => this.setState({ bf: k, blimit: 25 }) }; }),
       bRows: rows.slice(0, st.blimit).map((g) => this.btnRow(g)), bEmpty: !rows.length, bMore: rest > 0,
       bMoreLabel: rest <= 25 ? 'Zobrazit všech ' + rest + ' dalších' : 'Zobrazit dalších 25 (zbývá ' + rest + ')', bShowMore: () => this.setState({ blimit: st.blimit + 25 }),
       bSummary: fmt(rows.length) + (st.bmode === 'label' ? ' tlačítek a odkazů' : ' míst') + ' · ' + fmt(rows.reduce((s, g) => s + g.n, 0)) + ' kliků',
@@ -498,10 +501,10 @@ export class StatsDashboard extends React.Component<any, any> {
     const rows = list.filter(test[st.vf] || test.all);
     const when = (v) => (v.day === 0 ? 'dnes' : v.day === 1 ? 'včera' : dl(ds.dates[v.day])) + ' ' + two(v.hour) + ':' + two(v.minute);
     return {
-      vFilters: VF.map(([k, label]) => { const on = st.vf === k; return { label, count: fmt(list.filter(test[k]).length), bg: on ? '#1A1714' : '#FFFFFF', fg: on ? '#F5EFE4' : '#3A332C', bd: on ? '#1A1714' : '#D9CFBC', onClick: () => this.setState({ vf: k, vlimit: 40 }) }; }),
+      vFilters: VF.map(([k, label]) => { const on = st.vf === k; return { label, count: fmt(list.filter(test[k]).length), bg: on ? '#17191F' : '#FFFFFF', fg: on ? '#F6F4F6' : '#454954', bd: on ? '#17191F' : '#E6E8EE', onClick: () => this.setState({ vf: k, vlimit: 40 }) }; }),
       vRows: rows.slice(0, st.vlimit).map((s) => {
         const o = s.goal ? GM[s.goal] : null, g = S.srcGroup(s.v.ref);
-        return { when: when(s.v), dev: s.v.dev === 'm' ? 'smartphone' : 'computer', src: s.v.ref || 'přímo', srcColor: (SRC[g] || SRC.other)[1], steps: s.pages.slice(0, 4).map((e, i) => ({ t: clip(this.short(e.p), 26), arrow: i ? 'inline' : 'none', bg: e.p.startsWith('/blog/') ? '#EDE4D3' : '#F0EBE2' })), more: s.pages.length > 4 ? '+' + (s.pages.length - 4) : '', moreD: s.pages.length > 4 ? 'inline' : 'none', pagesN: fmt(s.pages.length), dur: dur(s.dur), outcome: o ? o.s : s.bounce ? 'Odešel hned' : 'Bez kontaktu', obg: o ? o.bg : '#F5F1EA', ofg: o ? o.c : '#6B6055', open: () => this.setState({ drawer: { type: 'visit', id: s.v.id, day: s.v.day } }) };
+        return { when: when(s.v), dev: s.v.dev === 'm' ? 'smartphone' : 'computer', src: s.v.ref || 'přímo', srcColor: (SRC[g] || SRC.other)[1], steps: s.pages.slice(0, 4).map((e, i) => ({ t: clip(this.short(e.p), 26), arrow: i ? 'inline' : 'none', bg: e.p.startsWith('/blog/') ? '#EEF0F4' : '#F1F2F5' })), more: s.pages.length > 4 ? '+' + (s.pages.length - 4) : '', moreD: s.pages.length > 4 ? 'inline' : 'none', pagesN: fmt(s.pages.length), dur: dur(s.dur), outcome: o ? o.s : s.bounce ? 'Odešel hned' : 'Bez kontaktu', obg: o ? o.bg : '#F5F6F8', ofg: o ? o.c : '#6F747E', open: () => this.setState({ drawer: { type: 'visit', id: s.v.id, day: s.v.day } }) };
       }),
       vEmpty: !rows.length, vMore: rows.length > st.vlimit, vMoreLabel: 'Zobrazit dalších 40 (zbývá ' + fmt(rows.length - st.vlimit) + ')', vShowMore: () => this.setState({ vlimit: st.vlimit + 40 }),
       vSummary: fmt(rows.length) + ' návštěv · ' + fmt(rows.filter((s) => s.goal).length) + ' s kontaktem',
@@ -528,10 +531,10 @@ export class StatsDashboard extends React.Component<any, any> {
     if (!dr) return null;
     const S = this.S, a = this._a;
     const base = { showAfter: false, after: [], showList: false, list: [], listEmpty: false, showPaths: false, paths: [], pathsEmpty: false, showDepth: false, depth: [], showChart: false, chart: null, showTimeline: false, timeline: [], hasLink: false, href: '', kpis: [] };
-    const afterRows = (after, total, conv) => GOALS.map((g) => ({ label: GM[g].l, n: fmt(after[g]), w: (total ? (after[g] / total) * 100 : 0) + '%', color: GM[g].c })).concat([{ label: 'Bez kontaktu', n: fmt(total - conv), w: (total ? ((total - conv) / total) * 100 : 0) + '%', color: '#C7BBA6' }]);
+    const afterRows = (after, total, conv) => GOALS.map((g) => ({ label: GM[g].l, n: fmt(after[g]), w: (total ? (after[g] / total) * 100 : 0) + '%', color: GM[g].c })).concat([{ label: 'Bez kontaktu', n: fmt(total - conv), w: (total ? ((total - conv) / total) * 100 : 0) + '%', color: '#C9CCD3' }]);
     if (dr.type === 'button') {
       const g = this.groups(dr.mode).find((x) => x.key === dr.key);
-      if (!g) return Object.assign(base, { catLabel: 'Tlačítko', chipBg: '#F0EBE2', chipFg: '#3A332C', title: 'V tomto období žádné kliky', sub: 'Zvolte delší období nebo jiný filtr.' });
+      if (!g) return Object.assign(base, { catLabel: 'Tlačítko', chipBg: '#F1F2F5', chipFg: '#454954', title: 'V tomto období žádné kliky', sub: 'Zvolte delší období nebo jiný filtr.' });
       const own = !!CONTACT[g.cat], p0 = g.places[0], one = g.places.length === 1;
       return Object.assign(base, this.chip(g.cat), {
         title: S.clickLabel(g.cat, g.label), sub: one ? S.areaName(p0.area, 'cs') + ' · ' + S.pageName(p0.page, 'cs') : 'Na ' + g.places.length + ' místech webu',
@@ -552,14 +555,14 @@ export class StatsDashboard extends React.Component<any, any> {
       const paths = Object.entries(a.paths).filter(([k]) => k.split(' › ').indexOf(r.p) >= 0).sort((x, y) => (y[1].conv > 0) - (x[1].conv > 0) || y[1].n - x[1].n).slice(0, 6).map(([k, v]) => ({ n: fmt(v.n), steps: this.steps(k, r.p) }));
       const list = r.list.slice().sort((x, y) => y.n - x.n).slice(0, 12).map((c) => Object.assign(this.chip(c.cat), { chipDisplay: 'inline-block', title: clip(S.clickLabel(c.cat, c.label), 52), sub: S.areaName(c.area, 'cs'), n: fmt(c.n) }, CONTACT[c.cat] ? this.own() : this.rate(c.conv, c.n, 0.5)));
       return Object.assign(base, {
-        catLabel: 'Článek', chipBg: '#EDE4D3', chipFg: '#58413F', title: r.art.title, sub: r.art.cat + ' · publikováno ' + dateCz(r.art.date), hasLink: true, href: 'https://zuzapragtour.de/blog/' + r.art.slug,
+        catLabel: 'Článek', chipBg: '#EEF0F4', chipFg: '#5B5F6B', title: r.art.title, sub: r.art.cat + ' · publikováno ' + dateCz(r.art.date), hasLink: true, href: 'https://zuzapragtour.de/blog/' + r.art.slug,
         kpis: [
           { label: 'Zobrazení', value: fmt(r.views), note: 'z toho ' + fmt(r.entries) + ' jako vstup' },
           { label: 'Kontakt potom', value: fmt(r.conv), note: pct(r.conv, r.views) + ' čtenářů' },
           { label: 'Ø čas čtení', value: d.n ? dur(Math.round(d.time / d.n)) : '–', note: d.n ? 'dočteno ' + pct(d.b[3], d.n) : 'bez dat' },
         ],
-        showDepth: d.n > 0, depth: reached.map((n, i) => ({ label: 'Došli do ' + (i + 1) * 25 + ' %', n: pct(n, d.n), w: (d.n ? (n / d.n) * 100 : 0) + '%', color: ['#C7BBA6', '#A88654', '#8C6A3C', '#6B1F2A'][i] })),
-        showChart: r.days.length > 1, chart: this.spark(this.pts(r.days, 60), '#8C6A3C', 520, 90),
+        showDepth: d.n > 0, depth: reached.map((n, i) => ({ label: 'Došli do ' + (i + 1) * 25 + ' %', n: pct(n, d.n), w: (d.n ? (n / d.n) * 100 : 0) + '%', color: ['#C9CCD3', '#B68645', '#A87833', '#6B243D'][i] })),
+        showChart: r.days.length > 1, chart: this.spark(this.pts(r.days, 60), '#A87833', 520, 90),
         showAfter: true, afterTitle: 'Co čtenáři udělali potom', after: afterRows(r.after, r.views, r.conv),
         showList: true, listTitle: 'Na co tu čtenáři klikají', listHead: 'Tlačítko · oblast', list, listEmpty: !list.length,
         showPaths: true, paths, pathsEmpty: !paths.length,
@@ -572,18 +575,18 @@ export class StatsDashboard extends React.Component<any, any> {
     v.ev.forEach((e) => {
       if (e.k === 'page') {
         pStart = e.at != null ? Math.max(sec, e.at) : sec; pT = e.t || 10; sec = pStart + pT;
-        tl.push({ at: mmss(pStart), icon: e.p.startsWith('/blog/') ? 'menu_book' : 'description', color: '#3A332C', ibg: '#F0EBE2', fw: '600', title: S.pageName(e.p, 'cs'), sub: S.pageKind(e.p, 'cs') + ' · ' + dur(pT) + (e.depth ? ' · dočteno ' + e.depth + ' %' : ''), showDepth: e.depth ? 'block' : 'none', depthW: (e.depth || 0) + '%' });
+        tl.push({ at: mmss(pStart), icon: e.p.startsWith('/blog/') ? 'menu_book' : 'description', color: '#454954', ibg: '#F1F2F5', fw: '600', title: S.pageName(e.p, 'cs'), sub: S.pageKind(e.p, 'cs') + ' · ' + dur(pT) + (e.depth ? ' · dočteno ' + e.depth + ' %' : ''), showDepth: e.depth ? 'block' : 'none', depthW: (e.depth || 0) + '%' });
       } else {
         const at = mmss(e.at != null ? e.at : Math.min(sec, pStart + Math.round(pT * 0.75)));
         if (isGoal(e)) { const g = goalOf(e); tl.push(Object.assign({ at, icon: GM[g].i, color: GM[g].c, ibg: GM[g].bg, fw: '700', title: g === 'enquiry' ? 'Odeslal formulář' : GM[g].l, sub: g === 'enquiry' ? 'Prohlídka: ' + e.l + ' · ' + S.areaName(e.a, 'cs') : S.areaName(e.a, 'cs') + ' · „' + clip(e.l, 40) + '“' }, blank)); }
         else if (e.k === 'copy') tl.push(Object.assign({ at, icon: 'content_copy', color: GM[e.c].c, ibg: GM[e.c].bg, fw: '600', title: e.c === 'email' ? 'Zkopíroval e-mailovou adresu' : 'Zkopíroval telefonní číslo', sub: S.areaName(e.a, 'cs') + ' · označil a zkopíroval, neklikl' }, blank));
-        else tl.push(Object.assign({ at, icon: 'ads_click', color: '#8C6A3C', ibg: '#F3ECDD', fw: '500', title: 'Klik: „' + clip(S.clickLabel(e.c, e.l), 50) + '“', sub: S.areaName(e.a, 'cs') + ' · ' + (S.CAT_L.cs[e.c] || '') }, blank));
+        else tl.push(Object.assign({ at, icon: 'ads_click', color: '#A87833', ibg: '#FCF5EA', fw: '500', title: 'Klik: „' + clip(S.clickLabel(e.c, e.l), 50) + '“', sub: S.areaName(e.a, 'cs') + ' · ' + (S.CAT_L.cs[e.c] || '') }, blank));
       }
     });
     const g0 = v.ev.find(isGoal), goal = g0 ? goalOf(g0) : null, pages = v.ev.filter((e) => e.k === 'page').length;
-    tl.push(Object.assign({ at: mmss(sec), icon: goal ? 'check_circle' : 'logout', color: goal ? '#25633A' : '#A89880', ibg: goal ? '#E3F1E6' : '#F5F1EA', fw: '600', title: goal ? 'Konec návštěvy · kontakt navázán' : 'Odešel z webu', sub: '' }, blank));
+    tl.push(Object.assign({ at: mmss(sec), icon: goal ? 'check_circle' : 'logout', color: goal ? '#168568' : '#A2A6B0', ibg: goal ? '#E5F5EF' : '#F5F6F8', fw: '600', title: goal ? 'Konec návštěvy · kontakt navázán' : 'Odešel z webu', sub: '' }, blank));
     return Object.assign(base, {
-      catLabel: 'Návštěva', chipBg: '#F0EBE2', chipFg: '#3A332C', title: 'Návštěva #' + v.id,
+      catLabel: 'Návštěva', chipBg: '#F1F2F5', chipFg: '#454954', title: 'Návštěva #' + v.id,
       sub: (v.dev === 'm' ? 'Mobil' : 'Počítač') + ' · ' + (v.ref || 'přímo') + ' · ' + (v.day === 0 ? 'dnes' : v.day === 1 ? 'včera' : dl(ds.dates[v.day])) + ' v ' + two(v.hour) + ':' + two(v.minute),
       kpis: [{ label: 'Stránky', value: fmt(pages), note: 'zobrazeno' }, { label: 'Doba', value: dur(sec), note: 'na webu celkem' }, { label: 'Výsledek', value: goal ? GM[goal].s : '–', note: goal ? 'první kontakt' : 'bez kontaktu' }],
       showTimeline: true, timeline: tl,
@@ -599,7 +602,7 @@ export class StatsDashboard extends React.Component<any, any> {
     const res = q ? tabItems.concat(artItems, btnItems).filter((it) => (it.title + ' ' + it.sub).toLowerCase().includes(q)).slice(0, 12) : tabItems.concat(artItems.slice(0, 4), btnItems.slice(0, 4));
     this._pItems = res;
     return {
-      pItems: res.map((it, i) => ({ icon: it.icon, title: it.title, sub: it.sub, run: it.run, bg: i === st.psel ? '#F5EFE4' : 'transparent', enter: () => { if (this.state.psel !== i) this.setState({ psel: i }); } })),
+      pItems: res.map((it, i) => ({ icon: it.icon, title: it.title, sub: it.sub, run: it.run, bg: i === st.psel ? '#F6F4F6' : 'transparent', enter: () => { if (this.state.psel !== i) this.setState({ psel: i }); } })),
       pEmpty: !res.length, pq: st.pq, onPq: (e) => this.setState({ pq: e.target.value, psel: 0 }),
       pRef: (el) => { if (el && document.activeElement !== el) el.focus(); },
     };
@@ -689,18 +692,18 @@ export class StatsDashboard extends React.Component<any, any> {
     const block = (title, keyOf, lab, col, sub, lim) => { const o = {}; L.forEach((x) => { const k = keyOf(x); (o[k] || (o[k] = [])).push(x); }); const ks = Object.keys(o).sort((a, b) => o[b].length - o[a].length).slice(0, lim || 8), m = ks.length ? o[ks[0]].length : 1; return { title, rows: ks.map((k) => bar(lab(k), o[k].length, m, col(k), sub ? sub(k, o[k]) : '')) }; };
     const fromKey = (x) => (x.entry ? '' : x.from || '?');
     const fromLab = (k) => (!k ? 'Přímo na stránku prohlídky' : k === '?' ? 'Neznámé' : k.startsWith('/tours/') ? 'Jiná prohlídka: ' + this.tourName(k.slice(7)) : clip(S.pageName(k, 'cs'), 56));
-    const fromCol = (k) => (!k ? '#1A1714' : k.startsWith('/blog/') ? '#A88654' : k.startsWith('/tours/') ? '#58413F' : '#8C6A3C');
+    const fromCol = (k) => (!k ? '#17191F' : k.startsWith('/blog/') ? '#B68645' : k.startsWith('/tours/') ? '#5B5F6B' : '#A87833');
     const goalK = (x) => x.goal || 'none';
     const tWho = [
       block('Z jaké stránky přišli', fromKey, fromLab, fromCol, (k, arr) => (!k ? 'první stránka návštěvy · nejčastěji ' + (arr[0].v.ref ? Object.entries(arr.reduce((o, x) => ((o[x.v.ref || 'přímo'] = (o[x.v.ref || 'přímo'] || 0) + 1), o), {})).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([h]) => h).join(', ') : 'přímo') : S.pageKind(k, 'cs'))),
-      block('Přes jaké tlačítko', (x) => (x.btn ? x.btn.l + '\t' + x.btn.a : ''), (k) => (k ? '„' + clip(S.clickLabel('tour', k.split('\t')[0]), 40) + '“ · ' + S.areaName(k.split('\t')[1], 'cs') : 'Bez kliku – vstup z vyhledávače, odkazu…'), (k) => (k ? '#8C6A3C' : '#D9CFBC')),
+      block('Přes jaké tlačítko', (x) => (x.btn ? x.btn.l + '\t' + x.btn.a : ''), (k) => (k ? '„' + clip(S.clickLabel('tour', k.split('\t')[0]), 40) + '“ · ' + S.areaName(k.split('\t')[1], 'cs') : 'Bez kliku – vstup z vyhledávače, odkazu…'), (k) => (k ? '#A87833' : '#E6E8EE')),
       block('Zdroj návštěvy', (x) => S.srcGroup(x.v.ref), (k) => (SRC[k] || SRC.other)[0], (k) => (SRC[k] || SRC.other)[1], null, 6),
-      block('Co udělali potom', goalK, (k) => (k === 'none' ? 'Bez kontaktu' : GM[k].l), (k) => (k === 'none' ? '#D9CFBC' : GM[k].c), null, 5),
-      block('Zařízení', (x) => x.v.dev, (k) => (k === 'm' ? 'Mobil' : 'Počítač'), (k) => (k === 'm' ? '#25633A' : '#3A332C')),
+      block('Co udělali potom', goalK, (k) => (k === 'none' ? 'Bez kontaktu' : GM[k].l), (k) => (k === 'none' ? '#E6E8EE' : GM[k].c), null, 5),
+      block('Zařízení', (x) => x.v.dev, (k) => (k === 'm' ? 'Mobil' : 'Počítač'), (k) => (k === 'm' ? '#168568' : '#454954')),
     ];
     return {
       tKpis,
-      tRows: slugs.map((s) => { const a = by[s], c = conv(a), on = s === sel; return Object.assign({ title: this.tourName(s), url: '/tours/' + s, n: fmt(a.length), w: (a.length / mx) * 100 + '%', entries: fmt(a.filter((x) => x.entry).length), time: dur(median(a.map((x) => x.t))), enq: fmt(a.filter((x) => x.enq).length), enqC: a.some((x) => x.enq) ? '#6B1F2A' : '#A89880', wa: fmt(a.filter((x) => x.goal === 'whatsapp' || x.goal === 'phone').length), bg: on ? '#FAF6EC' : 'transparent', bl: on ? '#6B1F2A' : 'transparent', pick: () => this.setState({ tsel: on ? null : s }) }, this.rate(c, uvOf(a), 0.3)); }),
+      tRows: slugs.map((s) => { const a = by[s], c = conv(a), on = s === sel; return Object.assign({ title: this.tourName(s), url: '/tours/' + s, n: fmt(a.length), w: (a.length / mx) * 100 + '%', entries: fmt(a.filter((x) => x.entry).length), time: dur(median(a.map((x) => x.t))), enq: fmt(a.filter((x) => x.enq).length), enqC: a.some((x) => x.enq) ? '#6B243D' : '#A2A6B0', wa: fmt(a.filter((x) => x.goal === 'whatsapp' || x.goal === 'phone').length), bg: on ? '#FAFAFC' : 'transparent', bl: on ? '#6B243D' : 'transparent', pick: () => this.setState({ tsel: on ? null : s }) }, this.rate(c, uvOf(a), 0.3)); }),
       tEmpty: !slugs.length,
       tSelName: sel ? this.tourName(sel) : 'Všechny prohlídky', tSelSub: fmt(n) + ' zobrazení' + (sel ? ' · klikněte znovu na řádek pro všechny prohlídky' : ' · vyberte řádek v tabulce pro jednu prohlídku'),
       tClear: () => this.setState({ tsel: null }), tClearD: sel ? 'inline-flex' : 'none', tWho,
@@ -715,10 +718,10 @@ export class StatsDashboard extends React.Component<any, any> {
     return arr;
   }
   kpi(label, value, sub, cur, prv, isRate, spark, invert) {
-    const o = { label, value, sub, spark: spark || '', showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6B6055' };
+    const o = { label, value, sub, spark: spark || '', showDelta: 'none', delta: '', dbg: 'transparent', dfg: '#6F747E' };
     if (prv != null) {
       const d = isRate ? (cur - prv) * 100 : prv ? ((cur - prv) / prv) * 100 : cur ? 100 : 0, up = d > 0.05, dn = d < -0.05, good = invert ? dn : up, bad = invert ? up : dn;
-      Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: good ? '#E3F1E6' : bad ? '#F5E6E6' : '#F0EBE2', dfg: good ? '#25633A' : bad ? '#8A1F1F' : '#6B6055' });
+      Object.assign(o, { showDelta: 'inline-flex', delta: (up ? '▲ ' : dn ? '▼ ' : '') + pc1(Math.abs(d)) + (isRate ? ' p. b.' : ' %'), dbg: good ? '#E5F5EF' : bad ? '#F7EDF0' : '#F1F2F5', dfg: good ? '#168568' : bad ? '#C65E68' : '#6F747E' });
     }
     return o;
   }
@@ -730,15 +733,15 @@ export class StatsDashboard extends React.Component<any, any> {
     const max = Math.max(1, ...B.map((b) => b.a), ...(P || [0]));
     const xw = (W - L - R) / n, x = (i) => L + xw * (i + 0.5), y = (v) => T + A - (v / max) * A, bw = Math.min(46, Math.max(1, xw - (n > 60 ? 1 : 3)));
     const hov = this.state.dh, k = [];
-    [0, 0.5, 1].forEach((f, i) => { const yy = T + A - f * A; k.push(h('line', { key: 'g' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#E8DFCC' }), h('text', { key: 't' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6B6055' }, fmt(max * f))); });
+    [0, 0.5, 1].forEach((f, i) => { const yy = T + A - f * A; k.push(h('line', { key: 'g' + i, x1: L, x2: W - R, y1: yy, y2: yy, stroke: '#ECEEF2' }), h('text', { key: 't' + i, x: L - 6, y: yy + 3.5, textAnchor: 'end', fontSize: 10, fill: '#6F747E' }, fmt(max * f))); });
     B.forEach((b, i) => {
       const op = hov < 0 || hov === i ? 1 : 0.4;
       if (b.a) k.push(h('rect', { key: 'a' + i, x: x(i) - bw / 2, y: y(b.a), width: bw, height: T + A - y(b.a), fill: o.colA, opacity: op }));
       if (o.colB && b.b) k.push(h('rect', { key: 'b' + i, x: x(i) - bw / 2, y: y(b.b), width: bw, height: T + A - y(b.b), fill: o.colB, opacity: op }));
     });
-    if (P) k.push(h('path', { key: 'prev', d: P.slice(0, n).map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(' '), fill: 'none', stroke: o.prevC || '#A89880', strokeWidth: 1.4, strokeDasharray: '4 4' }));
+    if (P) k.push(h('path', { key: 'prev', d: P.slice(0, n).map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(' '), fill: 'none', stroke: o.prevC || '#A2A6B0', strokeWidth: 1.4, strokeDasharray: '4 4' }));
     B.forEach((b, i) => k.push(h('rect', { key: 'h' + i, x: L + xw * i, y: 0, width: xw, height: H, fill: 'transparent', onMouseEnter: () => { if (this.state.dh !== i) this.setState({ dh: i }); } })));
-    [0, Math.floor(n / 2), n - 1].forEach((i, j) => k.push(h('text', { key: 'x' + j, x: x(i), y: H - 2, textAnchor: j === 0 ? 'start' : j === 2 ? 'end' : 'middle', fontSize: 10, fill: '#6B6055' }, j === 2 && step === 1 ? 'dnes' : dl(B[i].from))));
+    [0, Math.floor(n / 2), n - 1].forEach((i, j) => k.push(h('text', { key: 'x' + j, x: x(i), y: H - 2, textAnchor: j === 0 ? 'start' : j === 2 ? 'end' : 'middle', fontSize: 10, fill: '#6F747E' }, j === 2 && step === 1 ? 'dnes' : dl(B[i].from))));
     const hb = B[hov], when = (b) => (step === 1 ? DOW[b.from.getDay()] + ' ' + dl(b.from) : dl(b.from) + ' – ' + dl(b.to));
     const info = hb ? when(hb) + ': ' + o.say(hb.a, hb.b) + (P && P[hov] != null ? ' (předtím ' + fmt(P[hov]) + ')' : '') : (step === 1 ? 'Po dnech' : 'Po týdnech') + ' · ' + o.total + (P ? ' · přerušovaná čára = předchozí období' : '') + '. Najeďte myší na graf.';
     return { svg: h('svg', { viewBox: '0 0 ' + W + ' ' + H, style: { width: '100%', height: 'auto', display: 'block' }, onMouseLeave: () => this.setState({ dh: -1 }) }, k), info };
@@ -754,13 +757,13 @@ export class StatsDashboard extends React.Component<any, any> {
     const dA = this.daySeries(A, 0, (c) => c.v.day, () => 1, (c) => (c.firstWa ? 1 : 0)), dV = this.memo('dayV', () => this.daySeries(this.visitsIn(0), 0, (v) => v.day, () => 1));
     const sA = sum(dA, 'a'), sU = sum(dA, 'b'), sV = sum(dV, 'a');
     const waKpis = [
-      this.kpi('Kliky na WhatsApp', fmt(n), uv ? 'v ' + fmt(uv) + ' ' + plural(uv, 'návštěvě', 'návštěvách', 'návštěvách') : 'žádná návštěva', n, p1 && p1.n, 0, this.spark(sA, '#25633A')),
-      this.kpi('Míra kliku', pct(uv, D.V), 'návštěv klikne na WhatsApp', D.V ? uv / D.V : 0, p1 && p1.rate, 1, this.spark(sU.map((u, i) => (sV[i] ? u / sV[i] : 0)), '#3A332C')),
+      this.kpi('Kliky na WhatsApp', fmt(n), uv ? 'v ' + fmt(uv) + ' ' + plural(uv, 'návštěvě', 'návštěvách', 'návštěvách') : 'žádná návštěva', n, p1 && p1.n, 0, this.spark(sA, '#168568')),
+      this.kpi('Míra kliku', pct(uv, D.V), 'návštěv klikne na WhatsApp', D.V ? uv / D.V : 0, p1 && p1.rate, 1, this.spark(sU.map((u, i) => (sV[i] ? u / sV[i] : 0)), '#454954')),
       this.kpi('Podíl na kontaktech', pct(uv, D.cv), 'návštěv s kontaktem kliklo na WhatsApp', D.cv ? uv / D.cv : 0, p1 && p1.share, 1, ''),
       this.kpi('Z mobilu', pct(m, n), 'mobil ' + fmt(m) + ' · počítač ' + fmt(n - m), 0, null, 0, ''),
       this.kpi('Doba do kliku', firsts.length ? dur(median(firsts.map((c) => c.at))) : '–', 'medián od příchodu na web', 0, null, 0, ''),
     ];
-    const ch = this.dayChart(dA, P ? this.daySeries(P, 1, (c) => c.v.day, () => 1) : null, { colA: '#25633A', say: (a) => fmt(a) + ' ' + kl(a), total: 'celkem ' + fmt(n) + ' ' + kl(n) });
+    const ch = this.dayChart(dA, P ? this.daySeries(P, 1, (c) => c.v.day, () => 1) : null, { colA: '#168568', say: (a) => fmt(a) + ' ' + kl(a), total: 'celkem ' + fmt(n) + ' ' + kl(n) });
     const pl = {};
     A.forEach((c) => { const k = c.e.l + '\t' + c.e.a + '\t' + c.e.p, g = pl[k] || (pl[k] = { label: c.e.l, area: c.e.a, page: c.e.p, n: 0, m: 0, vs: new Set() }); g.n++; if (c.v.dev === 'm') g.m++; g.vs.add(c.v); });
     const places = Object.values(pl).sort((x, y) => y.n - x.n), pmax = places.length ? places[0].n : 1;
@@ -775,16 +778,16 @@ export class StatsDashboard extends React.Component<any, any> {
     const pb = [0, 0, 0, 0]; A.forEach((c) => pb[Math.min(3, Math.max(0, c.pages.length - 1))]++);
     const formSeen = A.filter((c) => c.formSeen).length;
     const waWho = [
-      { title: 'Zařízení', rows: rows(byDev, ['m', 'd'], (k) => (k === 'm' ? 'Mobil' : 'Počítač'), (k) => (k === 'm' ? '#25633A' : '#3A332C'), (k, arr) => 'klikne ' + pct(uvOf(arr), D.dev[k] || 0) + ' návštěv z ' + (k === 'm' ? 'mobilu' : 'počítače')) },
+      { title: 'Zařízení', rows: rows(byDev, ['m', 'd'], (k) => (k === 'm' ? 'Mobil' : 'Počítač'), (k) => (k === 'm' ? '#168568' : '#454954'), (k, arr) => 'klikne ' + pct(uvOf(arr), D.dev[k] || 0) + ' návštěv z ' + (k === 'm' ? 'mobilu' : 'počítače')) },
       { title: 'Odkud přišli', rows: rows(bySrc, null, (k) => (SRC[k] || SRC.other)[0], (k) => (SRC[k] || SRC.other)[1], (k, arr) => { const hs = top(arr, (c) => c.v.ref, 2).join(', '); return (hs ? hs + ' · ' : '') + 'klikne ' + pct(uvOf(arr), D.src[k] || 0) + ' návštěv'; }) },
-      { title: 'Čím návštěva začala', rows: rows(byEnt, null, (k) => ENTRY_L[k], () => '#8C6A3C', (k, arr) => { const t = top(arr, (c) => c.v.ev[0].p, 1)[0]; return (k !== 'home' && k !== 'form' && t ? clip(this.short(t), 38) + ' · ' : '') + 'klikne ' + pct(uvOf(arr), D.ent[k] || 0) + ' návštěv'; }) },
-      { title: 'Prohlídka, kterou si předtím prohlíželi', rows: rows(byTour, null, (k) => (k ? this.tourName(k) : 'Žádnou prohlídku neotevřeli'), (k) => (k ? '#A88654' : '#D9CFBC'), (k, arr) => { if (!k) return ''; const here = arr.filter((c) => c.e.p === '/tours/' + k).length; return here ? 'z toho ' + fmt(here) + ' přímo na její stránce' : ''; }) },
-      { title: 'Co předtím četli', rows: artK.map((k) => bar(clip(S.pageName(k, 'cs'), 56), artN[k], amx, '#A88654')).concat(noArt ? [bar('Žádný článek', noArt, amx, '#D9CFBC')] : []) },
-      { title: 'Na kolikáté stránce klikli', rows: ['Hned na první stránce', 'Na druhé', 'Na třetí', 'Na čtvrté a další'].map((l, i) => bar(l, pb[i], Math.max(...pb), '#3A332C')) },
+      { title: 'Čím návštěva začala', rows: rows(byEnt, null, (k) => ENTRY_L[k], () => '#A87833', (k, arr) => { const t = top(arr, (c) => c.v.ev[0].p, 1)[0]; return (k !== 'home' && k !== 'form' && t ? clip(this.short(t), 38) + ' · ' : '') + 'klikne ' + pct(uvOf(arr), D.ent[k] || 0) + ' návštěv'; }) },
+      { title: 'Prohlídka, kterou si předtím prohlíželi', rows: rows(byTour, null, (k) => (k ? this.tourName(k) : 'Žádnou prohlídku neotevřeli'), (k) => (k ? '#B68645' : '#E6E8EE'), (k, arr) => { if (!k) return ''; const here = arr.filter((c) => c.e.p === '/tours/' + k).length; return here ? 'z toho ' + fmt(here) + ' přímo na její stránce' : ''; }) },
+      { title: 'Co předtím četli', rows: artK.map((k) => bar(clip(S.pageName(k, 'cs'), 56), artN[k], amx, '#B68645')).concat(noArt ? [bar('Žádný článek', noArt, amx, '#E6E8EE')] : []) },
+      { title: 'Na kolikáté stránce klikli', rows: ['Hned na první stránce', 'Na druhé', 'Na třetí', 'Na čtvrté a další'].map((l, i) => bar(l, pb[i], Math.max(...pb), '#454954')) },
     ].map((c, i) => Object.assign(c, { note: i === 5 && formSeen ? fmt(formSeen) + ' ' + kl(formSeen) + ' přišlo od návštěv, které předtím otevřely formulář.' : '', noteD: i === 5 && formSeen ? 'block' : 'none' }));
     const hrs = new Array(24).fill(0), wds = new Array(7).fill(0);
     A.forEach((c) => { hrs[c.v.hour]++; wds[(ds.dates[c.v.day].getDay() + 6) % 7]++; });
-    const hmx = Math.max(1, ...hrs), wmx = Math.max(1, ...wds), barOf = (v, mx) => ({ h: v ? Math.max(4, (v / mx) * 100) + '%' : '2px', bg: v ? 'rgba(37,99,58,' + (0.3 + 0.7 * (v / mx)).toFixed(3) + ')' : '#E8DFCC' });
+    const hmx = Math.max(1, ...hrs), wmx = Math.max(1, ...wds), barOf = (v, mx) => ({ h: v ? Math.max(4, (v / mx) * 100) + '%' : '2px', bg: v ? 'rgba(22,133,104,' + (0.3 + 0.7 * (v / mx)).toFixed(3) + ')' : '#ECEEF2' });
     let bh = 0, bs = -1;
     for (let hh = 0; hh < 24; hh++) { const s3 = hrs[hh] + hrs[(hh + 1) % 24] + hrs[(hh + 2) % 24]; if (s3 > bs) { bs = s3; bh = hh; } }
     const bd = wds.indexOf(Math.max(...wds));
@@ -808,9 +811,9 @@ export class StatsDashboard extends React.Component<any, any> {
         return {
           when: this.whenV(c.v), dev: c.v.dev === 'm' ? 'smartphone' : 'computer', src: c.v.ref || 'přímo', srcColor: (SRC[g] || SRC.other)[1],
           more: cut ? '+' + (ps.length - 4) : '', moreD: cut ? 'inline' : 'none',
-          steps: last.map((p, i) => { const end = i === last.length - 1; return { t: clip(this.short(p), 26), arrow: i || cut ? 'inline' : 'none', bg: end ? '#E3F1E6' : p.startsWith('/blog/') ? '#EDE4D3' : '#F0EBE2', fg: end ? '#25633A' : '#1A1714', fw: end ? '700' : '400' }; }),
+          steps: last.map((p, i) => { const end = i === last.length - 1; return { t: clip(this.short(p), 26), arrow: i || cut ? 'inline' : 'none', bg: end ? '#E5F5EF' : p.startsWith('/blog/') ? '#EEF0F4' : '#F1F2F5', fg: end ? '#168568' : '#17191F', fw: end ? '700' : '400' }; }),
           btn: S.areaName(c.e.a, 'cs'), btnSub: '„' + c.e.l + '“', after: dur(c.at),
-          tour: c.tour ? this.tourName(c.tour) : '–', tourC: c.tour ? '#1A1714' : '#A89880',
+          tour: c.tour ? this.tourName(c.tour) : '–', tourC: c.tour ? '#17191F' : '#A2A6B0',
           open: () => this.setState({ drawer: { type: 'visit', id: c.v.id, day: c.v.day } }),
         };
       }),
@@ -828,13 +831,13 @@ export class StatsDashboard extends React.Component<any, any> {
     const kinds = { booking: 0, contact: 0 };
     F.forEach((f) => { if (f.sent) kinds[f.sent.a] = (kinds[f.sent.a] || 0) + 1; });
     const fKpis = [
-      this.kpi('Otevřeli formulář', fmt(s0.opened), pct(s0.opened, D.V) + ' všech návštěv', s0.opened, s1 && s1.opened, 0, this.spark(sO, '#8C6A3C')),
-      this.kpi('Odeslali', fmt(s0.sent), 'Rezervace ' + fmt(kinds.booking) + ' · Kontakt ' + fmt(kinds.contact), s0.sent, s1 && s1.sent, 0, this.spark(sS, '#6B1F2A')),
-      this.kpi('Dokončení', pct(s0.sent, s0.opened), 'otevřených formulářů odesláno', s0.opened ? s0.sent / s0.opened : 0, s1 && (s1.opened ? s1.sent / s1.opened : 0), 1, this.spark(sS.map((x, i) => (sO[i] ? x / sO[i] : 0)), '#3A332C')),
+      this.kpi('Otevřeli formulář', fmt(s0.opened), pct(s0.opened, D.V) + ' všech návštěv', s0.opened, s1 && s1.opened, 0, this.spark(sO, '#A87833')),
+      this.kpi('Odeslali', fmt(s0.sent), 'Rezervace ' + fmt(kinds.booking) + ' · Kontakt ' + fmt(kinds.contact), s0.sent, s1 && s1.sent, 0, this.spark(sS, '#6B243D')),
+      this.kpi('Dokončení', pct(s0.sent, s0.opened), 'otevřených formulářů odesláno', s0.opened ? s0.sent / s0.opened : 0, s1 && (s1.opened ? s1.sent / s1.opened : 0), 1, this.spark(sS.map((x, i) => (sO[i] ? x / sO[i] : 0)), '#454954')),
       this.kpi('Ozvali se jinak', fmt(s0.direct), 'WhatsApp ' + fmt(by('whatsapp')) + ' · tel. ' + fmt(by('phone')) + ' · e-mail ' + fmt(by('email')), s0.direct, s1 && s1.direct, 0, ''),
       this.kpi('Bez kontaktu', fmt(s0.none), pct(s0.none, s0.opened) + ' otevřených formulářů', s0.none, s1 && s1.none, 0, '', true),
     ];
-    const ch = this.dayChart(dF, P ? this.daySeries(P, 1, (f) => f.v.day, () => 1) : null, { colA: '#C7BBA6', colB: '#6B1F2A', prevC: '#1A1714', say: (a, b) => fmt(a) + ' otevřeli · ' + fmt(b) + ' odeslali', total: 'celkem ' + fmt(s0.opened) + ' otevřeli, ' + fmt(s0.sent) + ' odeslali' });
+    const ch = this.dayChart(dF, P ? this.daySeries(P, 1, (f) => f.v.day, () => 1) : null, { colA: '#C9CCD3', colB: '#6B243D', prevC: '#17191F', say: (a, b) => fmt(a) + ' otevřeli · ' + fmt(b) + ' odeslali', total: 'celkem ' + fmt(s0.opened) + ' otevřeli, ' + fmt(s0.sent) + ' odeslali' });
     const byBtn = st.fsMode === 'btn', src = {};
     F.forEach((f) => {
       const k = !f.btn ? '' : byBtn ? f.btn.c + '\t' + f.btn.l + '\t' + f.btn.a : f.from;
@@ -847,10 +850,10 @@ export class StatsDashboard extends React.Component<any, any> {
     const fSrcRows = srcRows.slice(0, st.fsLimit).map((g) => {
       const subs = Object.keys(g.sub).sort((x, y) => g.sub[y] - g.sub[x]);
       let hd, sub;
-      if (!g.k) { hd = { catLabel: 'Přímý vstup', chipBg: '#F0EBE2', chipFg: '#3A332C', label: 'Formulář byl první stránkou návštěvy' }; sub = 'nejčastěji ' + subs.slice(0, 3).join(', '); }
+      if (!g.k) { hd = { catLabel: 'Přímý vstup', chipBg: '#F1F2F5', chipFg: '#454954', label: 'Formulář byl první stránkou návštěvy' }; sub = 'nejčastěji ' + subs.slice(0, 3).join(', '); }
       else if (byBtn) { hd = Object.assign(this.chip(g.btn.c), { label: '„' + S.clickLabel(g.btn.c, g.btn.l) + '“ · ' + S.areaName(g.btn.a, 'cs') }); sub = subs.length === 1 ? S.pageKind(subs[0], 'cs') + ': ' + clip(S.pageName(subs[0], 'cs'), 50) : 'na ' + subs.length + ' stránkách · nejvíc ' + clip(this.short(subs[0]), 40); }
-      else { const art = g.page.startsWith('/blog/'); hd = { catLabel: S.pageKind(g.page, 'cs'), chipBg: art ? '#EDE4D3' : '#F0EBE2', chipFg: art ? '#58413F' : '#3A332C', label: clip(S.pageName(g.page, 'cs'), 70) }; sub = 'přes ' + subs.slice(0, 2).map((x) => '„' + clip(x, 32) + '“').join(', '); }
-      return Object.assign(hd, { sub, n: fmt(g.n), sent: fmt(g.sent), sentC: g.sent ? '#6B1F2A' : '#A89880', direct: fmt(g.direct), directC: g.direct ? '#25633A' : '#A89880' }, this.rate(g.sent, g.n, 0.3));
+      else { const art = g.page.startsWith('/blog/'); hd = { catLabel: S.pageKind(g.page, 'cs'), chipBg: art ? '#EEF0F4' : '#F1F2F5', chipFg: art ? '#5B5F6B' : '#454954', label: clip(S.pageName(g.page, 'cs'), 70) }; sub = 'přes ' + subs.slice(0, 2).map((x) => '„' + clip(x, 32) + '“').join(', '); }
+      return Object.assign(hd, { sub, n: fmt(g.n), sent: fmt(g.sent), sentC: g.sent ? '#6B243D' : '#A2A6B0', direct: fmt(g.direct), directC: g.direct ? '#168568' : '#A2A6B0' }, this.rate(g.sent, g.n, 0.3));
     });
     const segR = (keyOf, lab, order) => { const o = {}; F.forEach((f) => { const k = keyOf(f), g = o[k] || (o[k] = { n: 0, sent: 0 }); g.n++; if (f.outcome === 'enquiry') g.sent++; }); return (order || Object.keys(o).sort((x, y) => o[y].n - o[x].n)).filter((k) => o[k]).map((k) => Object.assign({ label: lab(k), share: pct(o[k].n, s0.opened) + ' otevření', n: fmt(o[k].n), sent: fmt(o[k].sent) }, this.rate(o[k].sent, o[k].n, 0.3))); };
     const OK = ['enquiry', 'whatsapp', 'phone', 'email', 'away', 'left'], omx = Math.max(1, ...OK.map(by));
@@ -872,17 +875,17 @@ export class StatsDashboard extends React.Component<any, any> {
       ],
       fOut: OK.map((k) => ({ label: OUT[k][0], n: fmt(by(k)), share: pct(by(k), s0.opened), w: (by(k) ? Math.max(1.5, (by(k) / omx) * 100) : 0) + '%', color: OUT[k][1] })),
       fOutNote, fOutNoteD: fOutNote ? 'block' : 'none',
-      fTours: tk.map((k) => ({ label: TQ_L[k] || k, n: fmt(tq[k]), share: pct(tq[k], s0.sent), w: (tq[k] / tmx) * 100 + '%', color: TQ_L[k] ? '#C7BBA6' : '#6B1F2A' })), fToursEmpty: !tk.length,
+      fTours: tk.map((k) => ({ label: TQ_L[k] || k, n: fmt(tq[k]), share: pct(tq[k], s0.sent), w: (tq[k] / tmx) * 100 + '%', color: TQ_L[k] ? '#C9CCD3' : '#6B243D' })), fToursEmpty: !tk.length,
       fFilters: FF.map(([k, label]) => Object.assign({ label, count: fmt(F.filter(fTest[k]).length), onClick: () => this.setState({ ff: k, flimit: 30 }) }, chipF(st.ff === k))),
       fRows: list.slice(0, st.flimit).map((f) => {
         const ps = dedupe(f.before.map((e) => e.p)), cut = ps.length > 3, last = ps.slice(-3), g = S.srcGroup(f.v.ref), o = OUT[f.outcome];
-        const steps = last.map((p, i) => ({ t: clip(this.short(p), 24), arrow: i || cut ? 'inline' : 'none', bg: p.startsWith('/blog/') ? '#EDE4D3' : '#F0EBE2', fg: '#1A1714', fw: '400' }))
-          .concat([{ t: f.page === '/book' ? 'Rezervace' : 'Kontakt', arrow: last.length ? 'inline' : 'none', bg: '#F6E7E2', fg: '#6B1F2A', fw: '700' }]);
+        const steps = last.map((p, i) => ({ t: clip(this.short(p), 24), arrow: i || cut ? 'inline' : 'none', bg: p.startsWith('/blog/') ? '#EEF0F4' : '#F1F2F5', fg: '#17191F', fw: '400' }))
+          .concat([{ t: f.page === '/book' ? 'Rezervace' : 'Kontakt', arrow: last.length ? 'inline' : 'none', bg: '#F5E9EE', fg: '#6B243D', fw: '700' }]);
         return {
           when: this.whenV(f.v), dev: f.v.dev === 'm' ? 'smartphone' : 'computer', src: f.v.ref || 'přímo', srcColor: (SRC[g] || SRC.other)[1],
           steps, more: cut ? '+' + (ps.length - 3) : '', moreD: cut ? 'inline' : 'none',
           via: f.btn ? 'přes „' + clip(S.clickLabel(f.btn.c, f.btn.l), 36) + '“ · ' + S.areaName(f.btn.a, 'cs') : 'přímý vstup' + (f.v.ref ? ' z ' + f.v.ref : ''),
-          tour: f.sent ? TQ_L[f.sent.l] || f.sent.l : f.tour ? this.tourName(f.tour) : '–', tourSub: f.sent ? 've formuláři' : f.tour ? 'prohlížel si' : '', tourSubD: f.sent || f.tour ? 'block' : 'none', tourC: f.sent || f.tour ? '#1A1714' : '#A89880',
+          tour: f.sent ? TQ_L[f.sent.l] || f.sent.l : f.tour ? this.tourName(f.tour) : '–', tourSub: f.sent ? 've formuláři' : f.tour ? 'prohlížel si' : '', tourSubD: f.sent || f.tour ? 'block' : 'none', tourC: f.sent || f.tour ? '#17191F' : '#A2A6B0',
           t: dur(f.t), outcome: o[4], obg: o[2], ofg: o[3],
           open: () => this.setState({ drawer: { type: 'visit', id: f.v.id, day: f.v.day } }),
         };
@@ -923,23 +926,23 @@ export class StatsDashboard extends React.Component<any, any> {
 
   renderVals() {
     const st = this.state, tab = this.tab(), view = this.view(), cmpOn = this.cmpOn(), compact = st.w < 980;
-    const sn = (k) => (view === k ? { line: '#A88654', fg: '#F5EFE4', fw: '600', bg: 'rgba(245,239,228,0.08)' } : { line: 'rgba(245,239,228,0.14)', fg: 'rgba(245,239,228,0.62)', fw: '400', bg: 'transparent' });
+    const sn = (k) => (view === k ? { line: '#B68645', fg: '#F6F4F6', fw: '600', bg: 'rgba(246,244,246,0.08)' } : { line: 'rgba(246,244,246,0.14)', fg: 'rgba(246,244,246,0.62)', fw: '400', bg: 'transparent' });
     const vals = {
-      sideWide: !compact, sideCompact: compact,
+      sideWide: !compact && !this.props.embedded, sideCompact: compact && !this.props.embedded,
       goAll: this.go('all'), goWa: this.go('wa'), goForms: this.go('forms'),
       toggleNav: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this.setState({ navOpen: !this.state.navOpen }); },
       navOpen: st.navOpen, navChevron: st.navOpen ? 'expand_less' : 'expand_more',
       sn: { all: sn('all'), wa: sn('wa'), forms: sn('forms'), tours: sn('tours') }, goTours: this.go('tours'),
       hAll: view === 'all', hSub: view !== 'all', hWa: view === 'wa', hForms: view === 'forms', hTours: view === 'tours', showTabs: view === 'all', noTabs: view !== 'all',
       showWa: false, showForms: false, showTours: false,
-      tabs: TABS.map(([k, l, i]) => ({ label: l, icon: i, fg: k === tab ? '#1A1714' : '#6B6055', line: k === tab ? '#6B1F2A' : 'transparent', onClick: () => this.setState({ tab: k, drawer: null, hover: -1 }) })),
+      tabs: TABS.map(([k, l, i]) => ({ label: l, icon: i, fg: k === tab ? '#17191F' : '#6F747E', line: k === tab ? '#6B243D' : 'transparent', onClick: () => this.setState({ tab: k, drawer: null, hover: -1 }) })),
       devOpts: seg(DEVS, st.dev, (k) => this.setState({ dev: k, hover: -1 })),
       rangeOpts: seg(RANGES, st.range, (k) => this.setState({ range: k, hover: -1 })),
       srcOpts: seg(SRC_OPTS, st.src, (k) => this.setState({ src: k, hover: -1 })),
-      cmpTrack: cmpOn ? '#25633A' : '#D9CFBC', cmpKnob: cmpOn ? '15px' : '2px', cmpFg: st.range === 365 ? '#A89880' : '#3A332C',
+      cmpTrack: cmpOn ? '#168568' : '#E6E8EE', cmpKnob: cmpOn ? '15px' : '2px', cmpFg: st.range === 365 ? '#A2A6B0' : '#454954',
       cmpTitle: st.range === 365 ? 'Pro 1 rok není předchozí období v datech' : 'Změna proti stejně dlouhému předchozímu období',
       toggleCmp: () => { if (this.state.range < 365) this.setState({ cmp: !this.cmpOn() }); },
-      liveDot: h('span', { style: { width: 8, height: 8, borderRadius: 999, background: '#25633A', display: 'inline-block', flexShrink: 0, animation: 'zptPulse 1.8s ease-out infinite' } }),
+      liveDot: h('span', { style: { width: 8, height: 8, borderRadius: 999, background: '#168568', display: 'inline-block', flexShrink: 0, animation: 'zptPulse 1.8s ease-out infinite' } }),
       liveN: st.liveN, liveLabel: st.liveN + ' ' + plural(st.liveN, 'člověk', 'lidé', 'lidí') + ' právě na webu',
       goLive: () => this.setState({ view: 'all', tab: 'live', drawer: null }),
       openPalette: () => this.setState({ palette: true, pq: '', psel: 0 }),

@@ -3,10 +3,10 @@ import { generateArticle } from '../../lib/api';
 import type { JournalArticle } from '../../types/journal';
 
 const CSS = `
-.zag-overlay{position:fixed;inset:0;background:rgba(26,23,20,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:70;padding:1.5rem}
+.zag-overlay{position:fixed;inset:0;background:rgba(21,25,38,.42);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:70;padding:1.5rem}
 .zag{width:560px;max-width:100%;background:#fff;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);overflow:hidden;font-family:var(--font-sans)}
 .zag-h{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.3rem;border-bottom:1px solid var(--rule)}
-.zag-h b{font-family:var(--font-display);font-size:1.35rem;font-weight:400}
+.zag-h b{font-family:var(--font-title);font-size:1.16rem;font-weight:var(--weight-title);letter-spacing:-.025em}
 .zag-h .material-symbols-outlined{color:var(--brass-deep)}
 .zag-iconbtn{width:32px;height:32px;border:0;background:transparent;border-radius:var(--radius-md);color:var(--ink-mute);cursor:pointer;display:flex;align-items:center;justify-content:center}
 .zag-iconbtn:hover{background:var(--stone-100);color:var(--ink)}
@@ -17,7 +17,7 @@ const CSS = `
 .zag-row{display:flex;align-items:center;gap:.6rem}
 .zag-row label{display:inline-flex;align-items:center;gap:.5rem;font-size:13px;color:var(--ink-soft);cursor:pointer}
 .zag-row input{accent-color:var(--burgundy);width:16px;height:16px}
-.zag-err{font-size:12.5px;color:var(--error);background:rgba(186,26,26,.07);border-radius:var(--radius-md);padding:.55rem .8rem}
+.zag-err{font-size:12.5px;color:var(--error);background:rgba(194,65,79,.07);border-radius:var(--radius-md);padding:.55rem .8rem}
 .zag-note{font-size:11.5px;color:var(--ink-mute);line-height:1.5}
 .zag-f{display:flex;align-items:center;justify-content:flex-end;gap:.6rem;padding:.9rem 1.3rem;border-top:1px solid var(--rule);background:var(--stone-50)}
 .zag-btn{display:inline-flex;align-items:center;gap:.45rem;border-radius:var(--radius-md);padding:.6rem 1.1rem;font-family:var(--font-sans);font-size:13px;font-weight:600;cursor:pointer;border:1px solid transparent}
@@ -27,7 +27,7 @@ const CSS = `
 .zag-btn.primary:hover{background:var(--burgundy-deep)}
 .zag-btn.primary:disabled{opacity:.6;cursor:default}
 .zag-btn .material-symbols-outlined{font-size:17px}
-.zag-spin{width:15px;height:15px;border:2px solid rgba(245,239,228,.4);border-top-color:var(--ivory);border-radius:50%;animation:zag-rot .7s linear infinite}
+.zag-spin{width:15px;height:15px;border:2px solid rgba(246,244,246,.4);border-top-color:var(--ivory);border-radius:50%;animation:zag-rot .7s linear infinite}
 @keyframes zag-rot{to{transform:rotate(360deg)}}
 `;
 
